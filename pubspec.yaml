@@ -1,9 +1,9 @@
 # 文件规范
-name: "dart_get_started"
+name : "dart_get_started"
 # 这里的名字的命名是 [a-z0-9_]
 
-environment:
-    sdk: '>=2.10.0 <3.0.0'
+environment :
+  sdk : '>=2.10.0 <3.0.0'
 
-dev_dependencies:
-    test: ^1.22.1
+dev_dependencies :
+  test : ^1.22.1
