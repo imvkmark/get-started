@@ -15,7 +15,7 @@ $ dart pub get test --dev
 
 测试使用顶级的 `test()` 函数, 测试断言使用 `expect()`
 
-[1-write.dart](https://github.com/imvkmark/dart-get-started/blob/58626365d1ca8b56e62d03eb8d1bc067e826f830/7_tests/src/1-write.dart#L57-L57)
+[1-write.dart](src/1-write.dart)
 ```dart
 import 'package:test/test.dart';
 
