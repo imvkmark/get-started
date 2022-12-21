@@ -684,7 +684,23 @@ platforms : [ chrome ]
 
 ## Debugging
 
+使用平台内置的开发工具，可以交互式调试测试。在浏览器上运行的测试可以使用浏览器的开发控制台来检查文档、设置断点并逐步调试代码。在Dart VM上运行的测试可以使用Dart
+Observatory的测试。
+
+调试时的第一步是将 `--pause-after-load` 标志传递给测试运行器。这会在每个测试套件加载后暂停浏览器，这样您就有时间打开开发工具并设置断点。对于Dart VM，它会打印远程调试器URL。
+
+设置断点后，单击网页中间的大箭头或在终端中按Enter开始运行测试。遇到断点时，运行器会在控制测试运行的终端中打开自己的调试控制台。您可以在其中输入 `restart`
+，以便尽可能多地重新运行测试，以便弄清楚发生了什么。
+
+通常，浏览器测试在隐藏的 iframe 中运行。但是，在调试时，当前测试套件的 iframe 将扩展填满浏览器窗口，以便您可以查看并与它呈现的任何HTML交互。请注意，Dart动画可能仍然在iframe后面可见；要隐藏它，只需将背景颜色添加到页面的HTML中即可。
+
 ## 浏览器/虚拟机 混合测试
+
+为浏览器编写的代码通常需要与某种类型的服务器进行通信。也许你正在测试你的应用程序提供的HTML，也许你正在编写一个使用WebSockets进行通信的库。我们称运行在浏览器和VM上的代码的测试为混合测试。
+
+混合测试使用两个函数之一 `spawnHybridCode()` 和 `spawnHybridUri()`.这两个函数都会产生 Dart VM 隔离区，可以导入 `dart:io` 和其他 VM-only
+库。唯一的区别是隔离区的代码来自哪里:
+`spawnHybridCode()` 接受实际的Dart代码，而 `spawnHybridUri()` 接受URL。它们都返回一个与混合隔离区进行通信的 StreamChannel。例如:
 
 ```dart
 // ## test/web_socket_server.dart
@@ -735,10 +751,23 @@ void main() {
 
 ![](https://rawgit.flutter-io.cn/dart-lang/test/master/pkgs/test/image/hybrid.png)
 
+注意 : 一旦你开始编写混合测试, 确保添加依赖 `stream_channel`
+
 ## 对其他包的支持
 
 ### build_runner
 
+如果您使用 `package:build_runner` 构建包，则需要在 `dev_dependencies` 中添加对 `build_test` 的依赖，然后就可以使用 `pub run build_runner test` 命令运行测试。
+
+要向 `package:test` 提供参数，您需要使用 `--`
+参数将它们与构建参数分开。例如，在发布模式下运行所有Web测试看起来像这样 `pub run build_runner test --release -- -p vm`
+
 ### term_glyph
 
+term_glyph 包提供了带有 ASCII 替代方案的 Unicode 符号的 getter。test确保在使用Windows运行时配置为生成ASCII，其中不支持Unicode。这确保测试库可以在POSIX操作系统上使用Unicode而不会破坏Windows用户
+
 ## 深度阅读
+
+查看 API 文档以获取有关所有可用于测试的函数的详细信息。
+
+测试运行器还支持基于 JSON 的机器可读报告器。这个报告器允许将测试运行器包装，并以自定义方式呈现其进度(例如，在IDE中)。有关更多详细信息，请参阅协议文档。
