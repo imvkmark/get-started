@@ -6,3 +6,5 @@ void main() {
     expect(string.trim(), equals('foo'));
   });
 }
+
+
