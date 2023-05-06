@@ -1,4 +1,14 @@
+# idea
+#-------------------
 .idea
-.fleet
+
+# dart
+#-------------------
 .dart_tool
-pubspec.lock
+docs/dart/pubspec.lock
+
+# vitepress
+#-------------------
+pnpm-lock.yaml
+docs/.vitepress/cache
+node_modules
