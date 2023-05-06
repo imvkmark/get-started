@@ -15,18 +15,7 @@ $ dart pub get test --dev
 
 测试使用顶级的 `test()` 函数, 测试断言使用 `expect()`
 
-[1-write.dart](src/1-write.dart)
-
-```dart
-import 'package:test/test.dart';
-
-void main() {
-  test('String.trim() removes surrounding whitespace', () {
-    var string = '  foo ';
-    expect(string.trim(), equals('foo'));
-  });
-}
-```
+<<< @/dart/7_tests/src/1-write.dart
 
 运行结果:
 
@@ -37,23 +26,7 @@ void main() {
 
 测试支持分组函数 `group()`, 每个分组的描述都会添加到测试描述的开头
 
-[1-write-group.dart](src/1-write-group.dart)
-
-```dart
-import 'package:test/test.dart';
-
-void main() {
-  group('int', () {
-    test('.remainder() returns the remainder of division', () {
-      expect(11.remainder(3), equals(2));
-    });
-
-    test('.toRadixString() returns a hex string', () {
-      expect(11.toRadixString(16), equals('b'));
-    });
-  });
-}
-```
+<<< @/dart/7_tests/src/1-write-group.dart
 
 运行结果:
 
@@ -63,20 +36,10 @@ void main() {
 00:00 +2: All tests passed!
 ```
 
-任何来自 [matcher](https://pub.flutter-io.cn/documentation/matcher/latest/matcher/matcher-library.html) 包的匹配器都可以与 `expect()` 一起使用来进行复杂的验证：
+任何来自 [matcher](https://pub.flutter-io.cn/documentation/matcher/latest/matcher/matcher-library.html)
+包的匹配器都可以与 `expect()` 一起使用来进行复杂的验证：
 
-[1-write-complex.dart](src/1-write-complex.dart)
-
-```dart
-import 'package:test/test.dart';
-
-void main() {
-  test('.split() splits the string on the delimiter', () {
-    expect('foo,bar,baz',
-        allOf([contains('foo'), isNot(startsWith('bar')), endsWith('baz')]));
-  });
-}
-```
+<<< @/dart/7_tests/src/1-write-complex.dart
 
 运行结果:
 
@@ -87,17 +50,7 @@ void main() {
 
 同时还还可以使用 `throwsA()` 函数或 `throwsFormatException` 等匹配器来测试异常：
 
-[1-write-exception.dart](src/1-write-exception.dart)
-
-```dart
-import 'package:test/test.dart';
-
-void main() {
-  test('.parse() fails on invalid input', () {
-    expect(() => int.parse('X'), throwsFormatException);
-  });
-}
-```
+<<< @/dart/7_tests/src/1-write-exception.dart
 
 运行结果:
 
@@ -106,7 +59,8 @@ void main() {
 00:00 +1: All tests passed!
 ```
 
-可以使用 `setUp()` 和 `tearDown()` 函数在测试之间处理/关闭共享代码。 `setUp()` 回调将在组或测试套件中的每个测试之前运行，`tearDown()`
+可以使用 `setUp()` 和 `tearDown()` 函数在测试之间处理/关闭共享代码。 `setUp()`
+回调将在组或测试套件中的每个测试之前运行，`tearDown()`
 将在测试之后运行。即使测试失败，`tearDown()` 也将运行，以确保正确清理
 
 ```dart
@@ -132,7 +86,8 @@ void main() {
 
 ## 运行测试
 
-可以使用 `dart test path/to/test.dart` 在单个测试文件上运行（Dart 2.10 以上版本 - 以前的 sdk 版本必须使用 `pub run test` 代替 `dart test`）。
+可以使用 `dart test path/to/test.dart` 在单个测试文件上运行（Dart 2.10 以上版本 - 以前的 sdk 版本必须使用 `pub run test`
+代替 `dart test`）。
 
 ![](https://rawgit.flutter-io.cn/dart-lang/test/master/pkgs/test/image/test1.gif)
 
@@ -145,9 +100,11 @@ void main() {
 测试运行器将任何以 `_test.dart` 结尾的文件视为测试文件。如果不传递任何路径，它将运行 `test/` 目录中的所有测试文件，可以一次性测试整个应用程序
 
 可以使用 `dart test -n "test name"`
-通过名称选择要运行的特定测试用例。将字符串解释为正则表达式，并且只会运行描述（包括任何组描述）与该正则表达式匹配的测试。另外还可以使用 `-N` 标志来运行名称包含纯文本字符串的测试。
+通过名称选择要运行的特定测试用例。将字符串解释为正则表达式，并且只会运行描述（包括任何组描述）与该正则表达式匹配的测试。另外还可以使用 `-N`
+标志来运行名称包含纯文本字符串的测试。
 
-默认情况下，测试在 Dart VM 中运行，但也可以通过传递 `dart test -p chrome path/to/test.dart` 在浏览器中运行它们. test 会负责启动浏览器并加载测试，所有结果都将在命令行上报告，就像
+默认情况下，测试在 Dart VM 中运行，但也可以通过传递 `dart test -p chrome path/to/test.dart` 在浏览器中运行它们. test
+会负责启动浏览器并加载测试，所有结果都将在命令行上报告，就像
 VM 测试一样。实际上，甚至可以使用单个命令在两个平台上运行测试：`dart test -p "chrome,vm" path/to/test.dart`
 
 ### 测试路径查询
@@ -171,7 +128,8 @@ line 和 col 过滤器针对从调用测试函数的当前堆栈跟踪进行匹�
 
 ### 分片测试
 
-还可以使用 `--total-shards` 和 `--shard-index` 参数将测试分片，从而将测试套件拆分并分开运行。例如，如果想要运行测试套件的 3 个分片，可以如下运行它们：
+还可以使用 `--total-shards` 和 `--shard-index` 参数将测试分片，从而将测试套件拆分并分开运行。例如，如果想要运行测试套件的 3
+个分片，可以如下运行它们：
 
 ```
 dart test --total-shards 3 --shard-index 0 path/to/test.dart
@@ -194,7 +152,8 @@ dart test --test-randomize-ordering-seed=random
 
 ### 选择测试报告
 
-可以使用 `--reporter=<option>` 命令行选项调整测试结果的输出格式。默认格式是 `compact` 紧凑输出格式(单行输出)，随着测试运行而持续更新。但是，当在 GitHub Actions CI
+可以使用 `--reporter=<option>` 命令行选项调整测试结果的输出格式。默认格式是 `compact` 紧凑输出格式(单行输出)
+，随着测试运行而持续更新。但是，当在 GitHub Actions CI
 上运行（通过检查
 GITHUB_ACTIONS 环境变量是否为 true 检测到）时，默认格式更改为 github 输出格式 - 为该 CI/CD 系统定制的报告者。
 
@@ -209,7 +168,8 @@ GITHUB_ACTIONS 环境变量是否为 true 检测到）时，默认格式更改�
 
 要收集代码覆盖率，可以使用 `--coverage <directory>` 参数运行测试。指定的目录可以是绝对路径或相对路径。如果指定路径处不存在目录，将创建目录。如果存在目录并冲突，则会被覆盖
 
-此选项将在套件级别启用代码覆盖率收集，并在指定的目录中输出结果覆盖率文件。然后可以使用 `package:coverage` `format_coverage` 文件格式化这些文件
+此选项将在套件级别启用代码覆盖率收集，并在指定的目录中输出结果覆盖率文件。然后可以使用 `package:coverage` `format_coverage`
+文件格式化这些文件
 
 目前仅为在 Dart VM 或 Chrome 上运行的测试实现了覆盖率收集
 
@@ -251,7 +211,8 @@ format_coverage -i coverage -o lcov.info --lcov
 
 ### 限制在特定平台上测试
 
-有些测试文件只有在特定平台上才有意义。它们可能使用 `dart:html` 或 `dart:io`，可能测试 Windows 的特定文件系统行为，或者可能使用仅在 Chrome 中可用的功能。`@TestOn`
+有些测试文件只有在特定平台上才有意义。它们可能使用 `dart:html` 或 `dart:io`，可能测试 Windows 的特定文件系统行为，或者可能使用仅在
+Chrome 中可用的功能。`@TestOn`
 注释很容易声明测试文件应在哪些平台上运行。只需在文件顶部放置它，在任何库或导入声明之前：
 
 ```
@@ -266,13 +227,16 @@ void main() {
 }
 ```
 
-`@TestOn` 所传递的字符串被称为 `平台选择器`，它指定测试可在哪些平台上运行。它可以是平台名称，也可以是更复杂的像涉及这些平台名称的 Dart 的布尔表达式
+`@TestOn` 所传递的字符串被称为 `平台选择器`，它指定测试可在哪些平台上运行。它可以是平台名称，也可以是更复杂的像涉及这些平台名称的
+Dart 的布尔表达式
 
-还可以通过在包配置文件中添加 [test_on](https://github.com/dart-lang/test/blob/master/pkgs/test/doc/configuration.md#test_on) 字段来声明整个包只在特定平台上工作
+还可以通过在包配置文件中添加 [test_on](https://github.com/dart-lang/test/blob/master/pkgs/test/doc/configuration.md#test_on)
+字段来声明整个包只在特定平台上工作
 
 ### 平台选择器
 
-平台选择器使用 [boolean_selector](https://pub.flutter-io.cn/packages/boolean_selector) 包定义的布尔选择器(boolean selector syntax)语法，这是 Dart
+平台选择器使用 [boolean_selector](https://pub.flutter-io.cn/packages/boolean_selector) 包定义的布尔选择器(boolean
+selector syntax)语法，这是 Dart
 表达式语法的子集，仅支持布尔运算。定义了以下标识符：
 
 - `vm`：测试是否在命令行 Dart VM 上运行。
@@ -296,11 +260,14 @@ void main() {
 
 ### 在 Node.js 上运行测试
 
-测试运行器还支持通过传递 `--platform node` 将测试编译成 JavaScript 并在 Node.js 上运行。请注意，Node 既无法访问 `dart:html` 也无法访问 `dart:io`，因此将使用 js
+测试运行器还支持通过传递 `--platform node` 将测试编译成 JavaScript 并在 Node.js 上运行。请注意，Node
+既无法访问 `dart:html` 也无法访问 `dart:io`，因此将使用 js
 包调用任何特定于平台的 API。但是，当测试用于 JavaScript 代码的 API 时，它可能很有用。
 
-测试运行器在系统路径上查找名为 node（在 Mac OS 或 Linux 上）或 node.exe（在 Windows 上）的可执行文件。在编译 Node.js 测试时，它传递 `-Dnode=true`
-， 因此测试可以使用 `const bool.fromEnvironment('node')` 确定是否在 Node 上运行。它还会设置 `--server-mode`，这将告诉编译器 `dart:html` 不可用。
+测试运行器在系统路径上查找名为 node（在 Mac OS 或 Linux 上）或 node.exe（在 Windows 上）的可执行文件。在编译 Node.js
+测试时，它传递 `-Dnode=true`
+， 因此测试可以使用 `const bool.fromEnvironment('node')` 确定是否在 Node 上运行。它还会设置 `--server-mode`
+，这将告诉编译器 `dart:html` 不可用。
 
 如果存在顶级 node_modules 目录，则在 Node.js 上运行的测试可以从该目录导入模块。
 
@@ -330,7 +297,8 @@ void main() {
 
 ### Future 匹配器
 
-对于更高级的异步性，有许多有用的函数和匹配器。`completion()` 匹配器可用于测试 `Futures`；它确保测试在 `Future` 完成之前不会结束，并对该 `Future` 的值运行匹配器。
+对于更高级的异步性，有许多有用的函数和匹配器。`completion()` 匹配器可用于测试 `Futures`；它确保测试在 `Future`
+完成之前不会结束，并对该 `Future` 的值运行匹配器。
 
 ```dart
 import 'dart:async';
@@ -456,10 +424,12 @@ void main() {
 - [emitsError()](https://pub.flutter-io.cn/documentation/test_api/latest/expect/emitsError.html) 匹配单个错误事件
 - [emitsDone](https://pub.flutter-io.cn/documentation/test_api/latest/expect/emitsDone.html) 匹配单个完成事件
 - [mayEmit()](https://pub.flutter-io.cn/documentation/test_api/latest/expect/mayEmit.html) 在不需要匹配的情况下消费匹配内部匹配器的事件
-- [mayEmitMultiple()](https://pub.flutter-io.cn/documentation/test_api/latest/expect/mayEmitMultiple.html) 与 mayEmit() 类似，但它尽可能多地将事件与匹配器匹配
+- [mayEmitMultiple()](https://pub.flutter-io.cn/documentation/test_api/latest/expect/mayEmitMultiple.html) 与 mayEmit()
+  类似，但它尽可能多地将事件与匹配器匹配
 - [emitsAnyOf()](https://pub.flutter-io.cn/documentation/test_api/latest/expect/emitsAnyOf.html) 消费与几个可能的匹配器之一（或多个）匹配的事件
 - [emitsInOrder()](https://pub.flutter-io.cn/documentation/test_api/latest/expect/emitsInOrder.html) 消费连续匹配多个匹配器的事件
-- [emitsInAnyOrder()](https://pub.flutter-io.cn/documentation/test_api/latest/expect/emitsInAnyOrder.html) 与 emitsInOrder() 类似，但允许匹配器以任意顺序匹配
+- [emitsInAnyOrder()](https://pub.flutter-io.cn/documentation/test_api/latest/expect/emitsInAnyOrder.html) 与
+  emitsInOrder() 类似，但允许匹配器以任意顺序匹配
 - [neverEmits()](https://pub.flutter-io.cn/documentation/test_api/latest/expect/neverEmits.html) 匹配在不匹配内部匹配器的情况下完成的流
 
 另外还可以使用 StreamMatcher() 定义自定义流匹配器
@@ -504,7 +474,7 @@ void main() {
 例如 :
 
 ```yaml
-custom_html_template_path : html_template.html.tpl
+custom_html_template_path: html_template.html.tpl
 ```
 
 ```html
@@ -575,7 +545,8 @@ void main() {
 }
 ```
 
-除了设置绝对超时之外，还可以使用 `@Timeout.factor` 设置相对于默认值的超时。例如，`@Timeout.factor(1.5)` 将超时设置为默认值的一倍半，即 45 秒。
+除了设置绝对超时之外，还可以使用 `@Timeout.factor` 设置相对于默认值的超时。例如，`@Timeout.factor(1.5)` 将超时设置为默认值的一倍半，即
+45 秒。
 
 可以使用 `timeout` 参数为测试和组设置超时。该参数采用与注释相同的 `Timeout` 对象。例如：
 
@@ -597,7 +568,8 @@ void main() {
 
 ### 指定平台的配置
 
-有时测试可能需要对不同平台进行不同的配置。Windows 可能会比其他平台慢得多，或者您的 DOM 操作可能在 Safari 上尚未正常工作。对于这些情况，可以使用 `@OnPlatform`
+有时测试可能需要对不同平台进行不同的配置。Windows 可能会比其他平台慢得多，或者您的 DOM 操作可能在 Safari
+上尚未正常工作。对于这些情况，可以使用 `@OnPlatform`
 注释和在`test()` 和 `group()` 上使用 `onPlatform` 参数
 
 例如：
@@ -618,7 +590,8 @@ void main() {
 }
 ```
 
-注释和参数都需要一个映射。映射的键是平台选择器，它们描述了专用配置适用的平台。他的值是可用于套件的一些相同注释类的实例：Skip 和 Timeout。值也可以是这些值的列表。
+注释和参数都需要一个映射。映射的键是平台选择器，它们描述了专用配置适用的平台。他的值是可用于套件的一些相同注释类的实例：Skip
+和 Timeout。值也可以是这些值的列表。
 
 如果有多个平台匹配，则从第一个到最后一个按顺序应用配置，就像它们在嵌套组中一样。这意味着对于基于持续时间的超时这样的配置，最后一个匹配的值会得到匹配
 
@@ -649,7 +622,8 @@ void main() {
 
 如果测试在运行过程中遇到在包配置文件中未声明的标签，它将打印警告，因此请确保在该文件中包含所有标签。另外还可以使用该文件为标签提供默认配置，例如超时前将所有浏览器测试时间加倍。
 
-可以通过传递命令行标志来基于标签过滤测试。 `--tags` 或 `-t` 标志将导致测试运行器仅运行具有给定标签的测试，`--exclude-tags` 或 `-x` 标志将导致测试运行器仅运行没有给定标签的测试,
+可以通过传递命令行标志来基于标签过滤测试。 `--tags` 或 `-t` 标志将导致测试运行器仅运行具有给定标签的测试，`--exclude-tags`
+或 `-x` 标志将导致测试运行器仅运行没有给定标签的测试,
 例如, 你可以使用 `--tags "(chrome || firefox) && !slow"` 来选择更快的 chrome/firefox 测试.
 
 请注意，标签必须是有效的 Dart 标识符，尽管它们也可以包含连字符
@@ -660,20 +634,22 @@ void main() {
 
 ```yaml
 # This package's tests are very slow. Double the default timeout.
-timeout : 2x
+timeout: 2x
 
 # This is a browser-only package, so test on chrome by default.
-platforms : [ chrome ]
+platforms: [ chrome ]
 ```
 
-配置文件设置了新的默认值。这些默认值仍然可以通过命令行参数覆盖，就像内置默认值一样。在上面的示例中，您仍可以传递 `--platform firefox` 以在 Firefox 上运行。
+配置文件设置了新的默认值。这些默认值仍然可以通过命令行参数覆盖，就像内置默认值一样。在上面的示例中，您仍可以传递 `--platform firefox`
+以在 Firefox 上运行。
 
 配置文件可以做得比仅仅设置全局默认值更多。有关更多详细信息，请参阅[完整文档](https://github.com/dart-lang/test/blob/master/pkgs/test/doc/configuration.md)
 
 ### 编译标记
 
 测试运行不支持用于控制编译的通用标志，例如 `-D` 定义或像 `--no-sound-null-safety`
-这样的标志。在大多数情况下，最好避免编写依赖于细粒度编译器配置的测试。例如，要在声音和无声空安全之间选择，请优先为每个测试选择一个具有默认期望行为的语言版本 - 选择小于
+这样的标志。在大多数情况下，最好避免编写依赖于细粒度编译器配置的测试。例如，要在声音和无声空安全之间选择，请优先为每个测试选择一个具有默认期望行为的语言版本 -
+选择小于
 2.12 的语言版本以禁用声音空安全，选择大于 2.12 的语言版本以启用声音空安全。在细粒度配置无法避免的情况下，方法因平台而异。
 
 在浏览器和 node 测试的编译中，可以通过向 `dart compile js` 传递参数（使用 `--dart2js-args` 选项）来配置编译。
@@ -684,23 +660,28 @@ platforms : [ chrome ]
 
 ## Debugging
 
-使用平台内置的开发工具，可以交互式调试测试。在浏览器上运行的测试可以使用浏览器的开发控制台来检查文档、设置断点并逐步调试代码。在Dart VM上运行的测试可以使用Dart
+使用平台内置的开发工具，可以交互式调试测试。在浏览器上运行的测试可以使用浏览器的开发控制台来检查文档、设置断点并逐步调试代码。在Dart
+VM上运行的测试可以使用Dart
 Observatory的测试。
 
-调试时的第一步是将 `--pause-after-load` 标志传递给测试运行器。这会在每个测试套件加载后暂停浏览器，这样您就有时间打开开发工具并设置断点。对于Dart VM，它会打印远程调试器URL。
+调试时的第一步是将 `--pause-after-load` 标志传递给测试运行器。这会在每个测试套件加载后暂停浏览器，这样您就有时间打开开发工具并设置断点。对于Dart
+VM，它会打印远程调试器URL。
 
 设置断点后，单击网页中间的大箭头或在终端中按Enter开始运行测试。遇到断点时，运行器会在控制测试运行的终端中打开自己的调试控制台。您可以在其中输入 `restart`
 ，以便尽可能多地重新运行测试，以便弄清楚发生了什么。
 
-通常，浏览器测试在隐藏的 iframe 中运行。但是，在调试时，当前测试套件的 iframe 将扩展填满浏览器窗口，以便您可以查看并与它呈现的任何HTML交互。请注意，Dart动画可能仍然在iframe后面可见；要隐藏它，只需将背景颜色添加到页面的HTML中即可。
+通常，浏览器测试在隐藏的 iframe 中运行。但是，在调试时，当前测试套件的 iframe
+将扩展填满浏览器窗口，以便您可以查看并与它呈现的任何HTML交互。请注意，Dart动画可能仍然在iframe后面可见；要隐藏它，只需将背景颜色添加到页面的HTML中即可。
 
 ## 浏览器/虚拟机 混合测试
 
 为浏览器编写的代码通常需要与某种类型的服务器进行通信。也许你正在测试你的应用程序提供的HTML，也许你正在编写一个使用WebSockets进行通信的库。我们称运行在浏览器和VM上的代码的测试为混合测试。
 
-混合测试使用两个函数之一 `spawnHybridCode()` 和 `spawnHybridUri()`.这两个函数都会产生 Dart VM 隔离区，可以导入 `dart:io` 和其他 VM-only
+混合测试使用两个函数之一 `spawnHybridCode()` 和 `spawnHybridUri()`.这两个函数都会产生 Dart VM 隔离区，可以导入 `dart:io`
+和其他 VM-only
 库。唯一的区别是隔离区的代码来自哪里:
-`spawnHybridCode()` 接受实际的Dart代码，而 `spawnHybridUri()` 接受URL。它们都返回一个与混合隔离区进行通信的 StreamChannel。例如:
+`spawnHybridCode()` 接受实际的Dart代码，而 `spawnHybridUri()` 接受URL。它们都返回一个与混合隔离区进行通信的
+StreamChannel。例如:
 
 ```dart
 // ## test/web_socket_server.dart
@@ -757,17 +738,20 @@ void main() {
 
 ### build_runner
 
-如果您使用 `package:build_runner` 构建包，则需要在 `dev_dependencies` 中添加对 `build_test` 的依赖，然后就可以使用 `pub run build_runner test` 命令运行测试。
+如果您使用 `package:build_runner` 构建包，则需要在 `dev_dependencies` 中添加对 `build_test`
+的依赖，然后就可以使用 `pub run build_runner test` 命令运行测试。
 
 要向 `package:test` 提供参数，您需要使用 `--`
 参数将它们与构建参数分开。例如，在发布模式下运行所有Web测试看起来像这样 `pub run build_runner test --release -- -p vm`
 
 ### term_glyph
 
-term_glyph 包提供了带有 ASCII 替代方案的 Unicode 符号的 getter。test确保在使用Windows运行时配置为生成ASCII，其中不支持Unicode。这确保测试库可以在POSIX操作系统上使用Unicode而不会破坏Windows用户
+term_glyph 包提供了带有 ASCII 替代方案的 Unicode 符号的
+getter。test确保在使用Windows运行时配置为生成ASCII，其中不支持Unicode。这确保测试库可以在POSIX操作系统上使用Unicode而不会破坏Windows用户
 
 ## 深度阅读
 
 查看 API 文档以获取有关所有可用于测试的函数的详细信息。
 
-测试运行器还支持基于 JSON 的机器可读报告器。这个报告器允许将测试运行器包装，并以自定义方式呈现其进度(例如，在IDE中)。有关更多详细信息，请参阅协议文档。
+测试运行器还支持基于 JSON 的机器可读报告器。这个报告器允许将测试运行器包装，并以自定义方式呈现其进度(例如，在IDE中)
+。有关更多详细信息，请参阅协议文档。
