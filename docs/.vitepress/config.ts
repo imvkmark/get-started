@@ -6,6 +6,7 @@ const createLink = (title: string, url: string) => {
 
 const nav = [
 	{ text: "Dart", link: "/dart/" },
+	{ text: "Python", link: "/python/" },
 	{ text: "Javascript", link: "/javascript/" },
 	{ text: "Vitepress", link: "/vitepress/markdown-examples" },
 ];
@@ -26,10 +27,38 @@ const sidebar = {
 			items: [createLink("说明", "/javascript/")],
 		},
 	],
-	"/dart": [
+	"/python": [
+		{
+			text: "介绍",
+			items: [createLink("说明", "/python/")],
+		},
 		{
 			text: "入门",
 			items: [
+				createLink("问答环节", "/python/1_intro/1-qa.md"),
+				createLink("如何运行", "/python/1_intro/2-run.md"),
+			],
+		},
+		{
+			text: "类型和运算",
+			items: [
+				createLink("介绍 python 对象类型", "/python/2_types/4-types.md"),
+				createLink("数值类型", "/python/2_types/5-number.md"),
+			],
+		},
+		{
+			text: "Awesome",
+			items: [
+				createLink("Pydash 中文文档", "/python/a_vendor/pydash.md"),
+			],
+		},
+	],
+	"/dart": [
+		{
+			text: "介绍",
+			items: [
+				createLink("说明", "/dart/"),
+				createLink("入门", "/dart/1_intro/"),
 				createLink("介绍", "/dart/1_intro/intro"),
 				createLink("命令", "/dart/1_intro/dart-command"),
 				createLink("pubspec", "/dart/1_intro/pubspec"),
