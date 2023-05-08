@@ -5,9 +5,16 @@ const createLink = (title: string, url: string) => {
 };
 
 const nav = [
-	{ text: "Dart", link: "/dart/" },
-	{ text: "Python", link: "/python/" },
-	{ text: "Javascript", link: "/javascript/" },
+	{
+		text: "语言",
+		activeMatch: `^/(dart)|(python)|(javascript)/`,
+		items: [
+			{ text: "Dart", link: "/dart/" },
+			{ text: "Python", link: "/python/" },
+			{ text: "Javascript", link: "/javascript/" },
+		],
+	},
+	{ text: "Web开发", link: "/web/" },
 	{ text: "Vitepress", link: "/vitepress/markdown-examples" },
 ];
 
@@ -21,12 +28,20 @@ const sidebar = {
 			],
 		},
 	],
+	"/web": [
+		{ text: "Web开发", link: "/web/" },
+		{
+			text: "Http",
+			items: [createLink("FAQ", "/web/http/faq.md")],
+		},
+	],
 	"/javascript": [
 		{
 			text: "入门",
 			items: [createLink("说明", "/javascript/")],
 		},
 	],
+
 	"/python": [
 		{
 			text: "介绍",
@@ -48,9 +63,7 @@ const sidebar = {
 		},
 		{
 			text: "Awesome",
-			items: [
-				createLink("Pydash 中文文档", "/python/a_vendor/pydash.md"),
-			],
+			items: [createLink("Pydash 中文文档", "/python/a_vendor/pydash.md")],
 		},
 	],
 	"/dart": [
