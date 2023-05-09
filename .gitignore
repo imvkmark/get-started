@@ -17,3 +17,8 @@ node_modules
 #-------------------
 Pipfile.lock
 *.pyc
+
+
+# java
+#-------------------
+*.class

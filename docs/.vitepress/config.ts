@@ -12,6 +12,7 @@ const nav = [
             { text: "Dart", link: "/dart/" },
             { text: "Python", link: "/python/" },
             { text: "Javascript", link: "/javascript/" },
+            { text: "Java", link: "/java/" },
         ],
     },
     {
@@ -49,6 +50,19 @@ const sidebar = {
             items: [createLink("说明", "/javascript/")],
         },
     ],
+    "/java": [
+        {
+            text: "入门",
+            items: [createLink("说明", "/java/")],
+        },
+        {
+            text: "基础版",
+            items: [
+                createLink("1. Java 程序设计概述", "/java/core-basic/1-lang.md"),
+                createLink("2. Java 程序设计环境", "/java/core-basic/2-design-env.md"),
+            ],
+        },
+    ],
     "/php": [
         {
             text: 'Hyperf',
@@ -56,6 +70,7 @@ const sidebar = {
                 { text: '入门', link: '/php/hyperf/' },
                 { text: '注解', link: '/php/hyperf/core-annotation' },
                 { text: 'Aop', link: '/php/hyperf/core-aop' },
+                { text: 'FAQ', link: '/php/hyperf/faq' },
             ]
         },
         {
@@ -87,7 +102,7 @@ const sidebar = {
         },
         {
             text: "Awesome",
-            items: [createLink("Pydash 中文文档", "/python/a_vendor/pydash.md")],
+            items: [createLink("Pydash 中文文档", "/python/a_vendor/pydash.md")],
         },
     ],
     "/dart": [

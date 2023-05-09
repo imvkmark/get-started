@@ -13,7 +13,6 @@ $ pecl install swoole
 ![](https://file.wulicode.com/doc/20230508/1683541593696.png)
 
 
-
 ```
 $ pecl install swoole-4.8.13
 ```
