@@ -58,9 +58,15 @@ const sidebar = {
         {
             text: "基础版",
             items: [
-                createLink("1. Java 程序设计概述", "/java/core-basic/1-lang.md"),
-                createLink("2. Java 程序设计环境", "/java/core-basic/2-design-env.md"),
+                createLink("1. Java 概述", "/java/core-basic/1-lang.md"),
+                createLink("2. Java 运行环境", "/java/core-basic/2-design-env.md"),
+                createLink("3. Java 基本结构", "/java/core-basic/3-basic-struct.md"),
+                createLink("4. 对象和类", "/java/core-basic/4-class-object.md"),
             ],
+        },
+        {
+            text: "FAQ",
+            items: [createLink("FAQ", "/java/faq.md")],
         },
     ],
     "/php": [
