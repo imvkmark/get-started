@@ -303,46 +303,229 @@ java tech.weiran.blog.Welcome          // 类名
 **变量**
 和包一样, 建议加上修饰符, 因为默认情况下会破坏封装
 
-
 ### 4.7.6 类路径
 
 - 存在目录中和路径和包名匹配
 - 放在 jar 包中
 
 多程序共享
+
 - 如果类可以被共享, 需要把类文件放到同一个目录中
 - 如果是 jar 包, 把包放在另一个目录并设置类路径 (class path), 支持通配符
+- 类路径中必须要包含当前目录 `.` , 如果没有编译不会报错但无法运行
 
-// page 161
+### 4.7.7 设置类路径
 
+最好使用 `-class-path` 来指定类路径, 或者通过设置 `CLASSPATH` 环境变量来指定, 在 Java 9 中, 还可以从模块路径加载类.
 
+## 4.8 Jar 文件
 
+对文件打 jar 包用来给用户提供功能
 
+### 4.8.1 创建 jar 文件
 
+```
+jar -cvf jarFileName file1, file2
 
+// 例如
 
+jar cvf CalculatorClasses.jar *.class icon.gif
+```
 
+![](https://file.wulicode.com/doc/20230510/1683729875381.png)
+![](https://file.wulicode.com/doc/20230510/1683729896379.png)
 
+### 4.8.2 清单文件
 
+jar 包包含的文件 ` MANIFEST.MF`, 用来描述归档文件的特殊特性, 位于 `META-INF` 子目录中
 
+https://docs.oracle.com/en/java/javase/17/docs/specs/jar/jar.html
 
+```
+Manifest-Version: 1.0
+lines describing this archive
+Name: Woozle.class
+lines describing this file 
+Name: com/mycompany/mypkq/
+iines describing this package
+```
 
+要想编辑清单文件，需要将希望添加到清单文件中的行放到文本文件中，然后运行:
 
+```
+jar cfm jarFileName manifestFileName . .
+```
 
+例如，要创建 一个包含清单文件的JAR文件，应该运行:
 
+```
+jar cfm MyArchive.jar manifest.mf com/mycompany/mypkg/*.class
+```
 
+要想更新一个已有的JAR文件的清单，则需要将增加的部分放置到一个文本文件中，然后执行以下命令:
 
+```
+jar ufm MyArchive.jar manifest-additions.mf
+```
 
+### 4.8.3 可执行的 jar 文件
 
+使用 e 选项指定入口点
 
+```
+jar cvfe MyProgram.jar com.mycompany.mypkg.MainAppClass files to add
+```
 
+或者在清单文件中指定程序的主类
 
+```
+Main-Class : com.mycompany.mypkg.MainAppClass
+```
 
+不要为主类名增加扩展名 `.class`
 
+启动
 
+```
+java -jar MyProgram.jar
+```
 
+对于可执行的文件在 windows 上可以使用 [launch4J](https://launch4j.sourceforge.net/) 和 [IzPack](http://izpack.org/) 来对 windows 进行打包
 
+### 4.8.4 多版本的 Jar 文件
 
+对于不同版本之间的 API 不同, Java 9 引入了多版本 Jar(multi-release JAR), 因为 Java 8 不知道这个新增功能, 所以只会加载默认类, 9 则会加载新版本类. 文件结构如下
+
+```
+
+Application.class 
+BuildingBlocks.class 
+Util.class
+META-INF
+├── MANFIESTM.MF
+├── versions
+├── 9
+│  └─ Application.class
+└── 10
+```
+
+要增加不同的版本使用 --release 标志
+
+```
+jar uf MyProgram.jar --release 9 Application.class
+```
+
+要从头构建一个多版本的 jar 文件, 可以使用 -C 选项, 对应不同版本切换到不同的目录
+
+```
+jar cf MyProgram.jar -C bin/8. --release 9 -C bin/9 Aplication.class
+```
+
+面向不同版本编译时, 要使用 --release 标志和 -d 标志来指定输出目录
+
+```
+javac -d bin/8 --release 8 ...
+```
+
+`--release` 是 java 9 新增, 较早的版本中需要使用 `-source`, `-target`, `-boot-classpath`
+
+多版本的库仅仅对 java 自带的 api 适用, 如果涉及到三方的 api, 不会支持
+
+### 4.8.5 命令行选项的说明
+
+对于命令行选项, Java 9 之后支持长命令 例如 `--class-path` 而不是 `-classpath`
+
+为了简短可以使用短命令
+
+```
+jar -c -v -f ...
+jar -cvf     # 此项目可能会容易混淆, 例如 -c, -p, -cp(短线是 java 经典表示方法, 不同于 shell)
+jar --create--verbose --file jarFileName file1 file2
+```
+
+## 4.9 文档注释
+
+使用 javadoc 来生成文档
+
+### 4.9.1 注释的插入
+
+javadoc 从一下几项中抽取信息
+
+- 模块
+- 包
+- 公共类/接口
+- 公共的或者受保护的字段
+- 公共的和受保护的构造器以及方法
+
+一般的写法和 php 一致
+
+- 对于代码可以使用 `{@code Code}` 来生成, 一般来讲 IDE 都会自动生成
+- 对于链接可以使用 `{@link package.class#feature label}` 可以放到注释中, 用来链接到指定的类/参数
+
+对于注释来讲, 比 php 优秀的点是, 因为代码是强类型, 就没必要再文档中再标识类型了
+
+### 4.9.2 类注释
+
+import 之后, 类之前
+
+### 4.9.3 方法注释
+
+### 4.9.4 字段注释
+
+### 4.9.5 通用注释
+
+- `@author name` : 作者条目
+- `@since 1.7.1` : 开始于
+- `@version name` : 版本条目
+- `@see name` : 推荐
+- `@link name` : 文档
+
+### 4.9.6 包注释
+
+**方法 1(推荐)**
+提供一个 `package-info.java` 文件,这个文件必须包含一个初始的以`/**` 和 `*/` 界定的Javadoc 注释，后面是一个 package 语句。它不能包含更多的代码或注释
+
+**方法 2**
+提供一个 `package.html` 文件, 内容放到 body 中
+
+### 4.9.7 生成文档
+
+```shell
+# 单个包
+javadoc - d docDirectory nameOPackage
+
+# 多个包
+javadoc - d docDirector nameOpPackage1 nameOpPackage2.
+
+# 没有包
+javadoc -d docDirectory *.java
+```
+
+其他选项
+
+- `-link`
+
+标准类库链接到 oracle 网站
+
+- `-linksource`
+
+源文件转换为 html
+
+- `-overview filename`
+
+提供预览入口
+
+更多查看 : https://docs.oracle.com/en/java/javase/11/tools/javadoc.html
+
+## 4.10 类设计技巧
+
+- 一定要保证数据私有
+- 一定要对数据进行初始化
+- 不要在类中使用过多的基本类型
+- 不是所有的字段都需要单独的访问器和字段更改器
+- 分解有过多指责的类
+- 类名和方法名要能够体现他们的职责
+- 有限使用不可变的类
 
 
 
