@@ -63,6 +63,8 @@ const sidebar = {
                 createLink("3. Java 基本结构", "/java/core-basic/3-basic-struct.md"),
                 createLink("4. 对象和类", "/java/core-basic/4-class-object.md"),
                 createLink("5. 继承", "/java/core-basic/5-extend.md"),
+                createLink("6. 接口, lambda, 内部类", "/java/core-basic/6-interface-lambda-inner.md"),
+                createLink("7. 异常断言和日志", "/java/core-basic/7-exception-assert-log.md"),
             ],
         },
         {

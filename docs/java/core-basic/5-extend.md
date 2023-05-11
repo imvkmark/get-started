@@ -223,3 +223,87 @@ list.add(Integer.value0f(3));
 ```
 
 这种变换称为自动装箱 (autoboxing)
+
+## 5.5 参数数量可变的方法
+
+```
+public class PrintStream
+{
+    public Printstream printf(String fnt, Object... args){
+        return format(fnt,args);
+    }
+}
+```
+
+这里的 args 表示可以接收任意数量的对象, 这里的 `Object...` 和 `Object[]` 完全一样
+
+我们可以通过类似的方式设置变参
+
+## 5.6 枚举类
+
+```java
+public enum Size
+{
+    SMALL("S"), MEDIUM("M"), LARGE("L"), EXTRA_LARGE("XL");
+    private String abbreviation;
+    
+    // 枚举的构造器总是私有的
+    private Size(String abbreviation) { this.abbreviation = abbreviation; }
+    public String getAbbreviation() { return abbreviation; } 
+}
+```
+
+```java
+Size.SMALL.toString()                // 返回字符串
+Enum.valueof(Size.class, "SMALL")    // 静态方法返回数据
+
+// 获取所有的值
+Size.values();
+```
+
+## 5.7 反射[WIP]
+
+能够分析类能力的程序称为反射, 这个和 php 的 reflection 有关系
+
+## 5.8 继承的设计技巧
+
+- 将公共操作和字段放在超类中
+- 不要使用受保护的字段(包访问和子级访问会破坏封装)
+- 使用继承使用 `is-a` 关系
+- 除非所有的继承的方法都有意义, 否则不要使用继承
+- 在覆盖方法时, 不要改变预期的行为
+- 使用多态, 而不要使用类型信息
+- 不要滥用反射
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
