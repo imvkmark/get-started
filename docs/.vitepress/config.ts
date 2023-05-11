@@ -9,7 +9,7 @@ const nav = [
         text: "语言",
         activeMatch: `^/(dart)|(python)|(javascript)/`,
         items: [
-            { text: "Dart", link: "/dart/" },
+            { text: "Dart", link: "/dart/guides/1-lang" },
             { text: "Python", link: "/python/" },
             { text: "Javascript", link: "/javascript/" },
             { text: "Java", link: "/java/" },
@@ -116,14 +116,10 @@ const sidebar = {
     ],
     "/dart": [
         {
-            text: "介绍",
+            text: "语言",
             items: [
-                createLink("说明", "/dart/"),
-                createLink("入门", "/dart/1_intro/"),
-                createLink("介绍", "/dart/1_intro/intro"),
-                createLink("命令", "/dart/1_intro/dart-command"),
-                createLink("pubspec", "/dart/1_intro/pubspec"),
-                createLink("FAQ", "/dart/1_intro/faq"),
+                createLink("1. 语言介绍", "/dart/guides/1-lang.md"),
+                createLink("2. 语法概览", "/dart/guides/2-lang-tour.md"),
             ],
         },
         {
