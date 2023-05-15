@@ -4,17 +4,77 @@ outline : 'deep'
 
 # 2. 语法概览
 
-## 语言概览
-
-### Hello, World
+## 2.1 Hello, World
 
 <<< @/dart/guides/src/hello.dart
 
-### 变量
+## 2.2 变量定义
 
 不需要显式的生命类型
 
 <<< @/dart/guides/src/variables.dart
+
+### 2.2.1 变量的定义
+
+除了 null 之外, 所有的类型都是对象, 以下是建议的定义方式
+
+```dart
+var name = 'duoli';
+```
+
+### 2.2.2 空安全
+
+定义空的变量(未启用空安全)
+
+```dart
+int? lineNumber;
+
+// assert 在生产环境会被忽略, 开发过程中如果数据不符会抛出异常
+assert(lineCount == null);
+```
+
+启用空安全之后所有的变量必须设置初始值
+
+```dart
+int lineNumber = 1;
+```
+
+### 2.2.3 延迟初始化变量
+
+延迟初始化变量使用 `late` 修饰符
+
+- 声明非空但不在声明时候初始化(例如有一些耗费资源的操作)
+- 延迟初始化
+
+```
+late String description;
+```
+
+### 2.2.4 final 和 const
+
+定义之后均不可更改
+final 可以用在实例变量(类属性)中, const 则不可以
+
+```dart{2}
+class Point{
+    final x;
+    
+    // 创建常量值
+    final bar = const 3.14;
+    final foo = const [];
+}
+
+```
+
+```dart
+const bar = 10000;
+const foo = bar * 3.14;
+
+// 可以被更改
+var foo = const 3.14;
+```
+
+> [WIP] 如果使用 const 修饰类中的变量，则必须加上 static 关键字，即 static const
 
 ### 流程控制
 

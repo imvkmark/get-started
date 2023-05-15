@@ -13,6 +13,7 @@ const nav = [
             { text: "Python", link: "/python/" },
             { text: "Javascript", link: "/javascript/" },
             { text: "Java", link: "/java/" },
+            { text: "Flutter", link: "/flutter/" },
         ],
     },
     {
@@ -125,6 +126,15 @@ const sidebar = {
         {
             text: "测试",
             items: [createLink("单元测试", "/dart/7_tests/")],
+        },
+    ],
+    "/flutter": [
+        {
+            text: "入门",
+            items: [
+                createLink("1. 介绍", "/flutter/"),
+                createLink("2. 安装", "/flutter/install"),
+            ],
         },
     ],
 };
