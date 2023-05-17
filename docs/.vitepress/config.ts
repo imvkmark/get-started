@@ -126,14 +126,14 @@ const sidebar = {
             items: [
                 { text: 'DBA', link: '/php/refs/database/dba' },
                 { text: 'PDO', link: '/php/refs/database/pdo' },
-                { text: 'MySQLi', link: '/php/refs/cryptography/db-mysqli' },
+                { text: 'MySQLi', link: '/php/refs/database/db-mysqli' },
             ]
         },
         {
             text: '日期与时间相关扩展',
             items: [
                 { text: 'Calendar', link: '/php/refs/date-time/calendar' },
-                { text: 'DateTime', link: '/php/refs/database/datetime' },
+                { text: 'DateTime', link: '/php/refs/date-time/datetime' },
             ]
         },
         {
@@ -178,7 +178,7 @@ const sidebar = {
                 { text: 'SPL-其他类和接口', link: '/php/refs/other-basic/spl-misc-classes-interfaces' },
                 { text: 'Urls', link: '/php/refs/other-basic/urls' },
                 { text: 'Yaml', link: '/php/refs/other-basic/yaml' },
-                { text: 'Pecl', link: '/php/refs/pecl' },
+                { text: 'Pecl', link: '/php/refs/pecl/' },
             ]
         },
         {
