@@ -20,6 +20,7 @@ const nav = [
         text: "Php",
         activeMatch: `^/php/(swoole|hyperf)/`,
         items: [
+            { text: "函数参考", link: "/php/refs/affect-php-behaviour/error-handling" },
             { text: "Swoole", link: "/php/swoole/" },
             { text: "Hyperf", link: "/php/hyperf/" },
         ],
@@ -66,6 +67,8 @@ const sidebar = {
                 createLink("5. 继承", "/java/core-basic/5-extend.md"),
                 createLink("6. 接口, lambda, 内部类", "/java/core-basic/6-interface-lambda-inner.md"),
                 createLink("7. 异常断言和日志", "/java/core-basic/7-exception-assert-log.md"),
+                createLink("8. 泛型", "/java/core-basic/8-generic.md"),
+                createLink("9. 集合", "/java/core-basic/9-collection.md"),
             ],
         },
         {
@@ -90,7 +93,145 @@ const sidebar = {
             ]
         }
     ],
-
+    "/php/refs": [
+        {
+            text: '影响 PHP 行为的扩展',
+            items: [
+                { text: '错误处理', link: '/php/refs/affect-php-behaviour/error-handling' },
+                { text: '输出控制', link: '/php/refs/affect-php-behaviour/output-control' },
+            ]
+        },
+        {
+            text: '压缩与归档扩展',
+            items: [
+                { text: 'Bzip2', link: '/php/refs/compress-archive/bzip2' },
+                { text: 'LZF', link: '/php/refs/compress-archive/lzf' },
+                { text: 'Phar', link: '/php/refs/compress-archive/phar' },
+                { text: 'Rar', link: '/php/refs/compress-archive/rar' },
+                { text: 'Zip', link: '/php/refs/compress-archive/zip' },
+                { text: 'Zlib', link: '/php/refs/compress-archive/zlib' },
+            ]
+        },
+        {
+            text: '加密扩展',
+            items: [
+                { text: 'Hash', link: '/php/refs/cryptography/hash' },
+                { text: 'Mcrypt', link: '/php/refs/cryptography/mcrypt' },
+                { text: 'MHash', link: '/php/refs/cryptography/mhash' },
+                { text: 'OpenSSL', link: '/php/refs/cryptography/openssl' },
+            ]
+        },
+        {
+            text: '数据库扩展',
+            items: [
+                { text: 'DBA', link: '/php/refs/database/dba' },
+                { text: 'PDO', link: '/php/refs/database/pdo' },
+                { text: 'MySQLi', link: '/php/refs/cryptography/db-mysqli' },
+            ]
+        },
+        {
+            text: '日期与时间相关扩展',
+            items: [
+                { text: 'Calendar', link: '/php/refs/date-time/calendar' },
+                { text: 'DateTime', link: '/php/refs/database/datetime' },
+            ]
+        },
+        {
+            text: '文件系统相关扩展',
+            items: [
+                { text: 'Direct IO', link: '/php/refs/filesystem/direct-io' },
+                { text: '目录', link: '/php/refs/filesystem/directories' },
+                { text: 'Fileinfo', link: '/php/refs/filesystem/fileinfo' },
+                { text: '文件系统', link: '/php/refs/filesystem/filesystem' },
+            ]
+        },
+        {
+            text: '图像生成和处理',
+            items: [
+                { text: 'Exif', link: '/php/refs/filesystem/direct-io' },
+            ]
+        },
+        {
+            text: '国际化',
+            items: [
+                { text: 'Enchant', link: '/php/refs/international/enchant' },
+                { text: 'Gettext', link: '/php/refs/international/gettext' },
+                { text: 'iconv', link: '/php/refs/international/iconv' },
+                { text: 'intl', link: '/php/refs/international/intl' },
+            ]
+        },
+        {
+            text: '数学扩展',
+            items: [
+                { text: 'BC Math', link: '/php/refs/mathematical/bcmath' },
+                { text: 'Math', link: '/php/refs/mathematical/math' },
+            ]
+        },
+        {
+            text: '其他基本扩展',
+            items: [
+                { text: 'Json', link: '/php/refs/other-basic/json' },
+                { text: 'Misc 杂项', link: '/php/refs/other-basic/misc' },
+                { text: 'SPL', link: '/php/refs/other-basic/spl' },
+                { text: 'SPL-interfaces', link: '/php/refs/other-basic/spl-interfaces' },
+                { text: 'SPL-迭代器', link: '/php/refs/other-basic/spl-iterators' },
+                { text: 'SPL-其他类和接口', link: '/php/refs/other-basic/spl-misc-classes-interfaces' },
+                { text: 'Urls', link: '/php/refs/other-basic/urls' },
+                { text: 'Yaml', link: '/php/refs/other-basic/yaml' },
+                { text: 'Pecl', link: '/php/refs/pecl' },
+            ]
+        },
+        {
+            text: '其他服务',
+            items: [
+                { text: 'CURL', link: '/php/refs/other-services/curl' },
+                { text: '网络', link: '/php/refs/other-services/network' },
+            ]
+        },
+        {
+            text: '预定义类和接口',
+            items: [
+                { text: 'WeakReference', link: '/php/refs/predefined-interfaces-classes/weakreference' },
+            ]
+        },
+        {
+            text: '进程控制',
+            items: [
+                { text: 'EIO', link: '/php/refs/process-control/eio' },
+            ]
+        },
+        {
+            text: '服务器指定扩展',
+            items: [
+                { text: 'Apache', link: '/php/refs/server-specific/apache' },
+            ]
+        },
+        {
+            text: '文本处理',
+            items: [
+                { text: 'BBCode', link: '/php/refs/text-processing/bbcode' },
+                { text: 'PCRE', link: '/php/refs/text-processing/pcre' },
+                { text: 'POSIX', link: '/php/refs/text-processing/posix' },
+                { text: '字符串', link: '/php/refs/text-processing/string' },
+            ]
+        },
+        {
+            text: '变量和类型',
+            items: [
+                { text: '数组', link: '/php/refs/variables-types/array' },
+                { text: 'CType', link: '/php/refs/variables-types/ctype' },
+                { text: 'Filter', link: '/php/refs/variables-types/filter' },
+                { text: '函数处理', link: '/php/refs/variables-types/function-handling' },
+                { text: '变量处理', link: '/php/refs/variables-types/variable-handling' },
+            ]
+        },
+        {
+            text: 'XML',
+            items: [
+                { text: 'DOM', link: '/php/refs/xml/dom' },
+            ]
+        },
+    ],
     "/python": [
         {
             text: "介绍",
