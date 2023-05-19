@@ -1,0 +1,10 @@
+---
+title: "phpcms2008 栏目页分页"
+date: 2022-04-14 22:13:17
+toc: true
+categories:
+- ["Php","源码阅读","phpcms2008"]
+---
+
+现在将方法描述如下：<br />修改 ./include/html.class.php ，将第 58 行提至 51 行前，整个从 49 行到 61 行由<br />if($type == 0)<br />   {<br />    if($child==1) <br />    { <br />     $arrchildid = subcat('phpcms',$catid); <br />     $template = $template_category; <br />    } <br />    else <br />    { <br />     if($page == 0) $page = 1; <br />     $template = $template_list; <br />    } <br />   }<br />变为<br />if($type == 0)<br />   {<br />    if($page == 0) $page = 1; <br />    if($child==1) <br />    { <br />     $arrchildid = subcat('phpcms',$catid); <br />     $template = $template_category; <br />    } <br />    else <br />    { <br />     $template = $template_list; <br />    } <br />   }<br />此为第一步，接着修改 ./admin/html.inc.php ，将从 61 行到 80 行由<br />if($CATEGORY[$catid]['child'])<br />     { <br />      $pages = 1; <br />      $html->category($catid); <br />     } <br />     else <br />     { <br />      $offset = $pagesize*($page-1); <br />      if($page == 1) <br />      { <br />       $contents = cache_count("SELECT COUNT(*) AS `count` FROM `".DB_PRE."content` WHERE catid=$catid AND status=99"); <br />       $total = ceil($contents/$PHPCMS['pagesize']); <br />       $pages = ceil($total/$pagesize); <br />      } <br />      $max = min($offset+$pagesize, $total); <br />      for($i=$offset; $i<=$max; $i++) <br />      { <br />       $html->category($catid, $i); <br />      } <br />     } <br />修改为<br />$offset = $pagesize*($page-1);<br />     if($page == 1) <br />     { <br />      $condition=get_sql_catid($catid); <br />      $contents = cache_count("SELECT COUNT(*) AS `count` FROM `".DB_PRE."content` WHERE status=99 $condition"); <br />      $total = ceil($contents/$PHPCMS['pagesize'])+1; <br />      $pages = ceil($total/$pagesize); <br />     } <br />     $max = min($offset+$pagesize, $total); <br />     for($i=$offset; $i<$max; $i++) <br />     { <br />      $html->category($catid, $i); <br />     } <br />变成了 61 行到 73行，如此，重新生成 html，一级栏目如果使用 tag 标签调用（开启了分页）就应该可以出现分页了。
+

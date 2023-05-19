@@ -1,7 +1,3 @@
----
-outline : 'deep'
----
-
 # Flutter 安装和环境设置
 
 ## 安装

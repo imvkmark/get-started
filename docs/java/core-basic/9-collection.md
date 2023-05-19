@@ -1,7 +1,3 @@
----
-outline : 'deep'
----
-
 # 9.集合
 
 ## 9.1 Java 集合框架
@@ -100,7 +96,19 @@ iterator.forEachRemaining(element -> do something with element);
 
 ### 9.3.6 优先队列
 
+将最小的数据从队列中移除
 
+## 9.4 映射
+
+### 9.4.1 基本映射操作
+
+HashMap , TreeMap 都实现了 Map 接口
+
+### 9.4.2 更新映射条目
+
+### 9.4.3 映射视图
+
+### 9.4.4 弱散列映射
 
 
 

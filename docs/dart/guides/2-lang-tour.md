@@ -1,7 +1,3 @@
----
-outline : 'deep'
----
-
 # 2. 语法概览
 
 ## 2.1 Hello, World

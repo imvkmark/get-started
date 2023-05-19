@@ -7,38 +7,56 @@ const createLink = (title: string, url: string) => {
 const nav = [
     {
         text: "语言",
-        activeMatch: `^/(dart)|(python)|(javascript)/`,
+        activeMatch: `^/dart|python|javascript|php|java|flutter/`,
         items: [
             { text: "Dart", link: "/dart/guides/1-lang" },
             { text: "Python", link: "/python/" },
             { text: "Javascript", link: "/javascript/" },
             { text: "Java", link: "/java/" },
             { text: "Flutter", link: "/flutter/" },
+            {
+                text: "Php",
+                activeMatch: `^/php/`,
+                items: [
+                    { text: "函数参考", link: "/php/refs/affect-php-behaviour/error-handling" },
+                    { text: "Swoole", link: "/php/swoole/" },
+                    { text: "Hyperf", link: "/php/hyperf/" },
+                ],
+            },
         ],
     },
     {
-        text: "Php",
-        activeMatch: `^/php/(swoole|hyperf)/`,
+        text: "开发",
+        activeMatch: `^/web|development/`,
         items: [
-            { text: "函数参考", link: "/php/refs/affect-php-behaviour/error-handling" },
-            { text: "Swoole", link: "/php/swoole/" },
-            { text: "Hyperf", link: "/php/hyperf/" },
+            { text: "Web", link: "/web/" },
+            { text: "资源", link: "/development/tools/sdkman" },
         ],
     },
-    { text: "Web开发", link: "/web/" },
-    { text: "Vitepress", link: "/vitepress/markdown-examples" },
+    { text: "Awesome", link: "/awesome/" },
+    {
+        text: "更多",
+        items: [
+            {
+                text: 'Wulicode',
+                items: [
+                    { text: 'Tools', link: 'https://tools.wulicode.com' },
+                    { text: 'Poppy Framework', link: 'https://weiran.tech' }
+                ]
+            },
+            {
+                text: '项目',
+                items: [
+                    { text: 'UniStory·优映', link: 'https://unistory.cn/' },
+                    { text: '产品大牛', link: 'https://pmdaniu.com' },
+                    { text: 'Wulihub', link: 'https://wulihub.com.cn' },
+                ]
+            }
+        ],
+    },
 ];
 
 const sidebar = {
-    "/vitepress": [
-        {
-            text: "Examples",
-            items: [
-                createLink("Markdown", "/vitepress/markdown-examples"),
-                createLink("Api", "/vitepress/api-examples"),
-            ],
-        },
-    ],
     "/web": [
         { text: "Web开发", link: "/web/" },
         {
@@ -278,21 +296,49 @@ const sidebar = {
             ],
         },
     ],
+    "/development": [
+        {
+            text: "开发工具",
+            items: [
+                createLink("SDKMAN!", "/development/tools/sdkman"),
+                createLink("ApiDoc", "/development/tools/apidoc"),
+            ],
+        },
+        {
+            text: "正则表达式",
+            items: [
+                createLink("正则手册", "/development/regex/"),
+                createLink("正则匹配中文", "/development/regex/zh-match"),
+            ],
+        },
+    ],
+    "awesome/development-environment": [
+        {
+            text: "开发环境",
+            items: [createLink("Git Add-ons", "/development-environment/git-addons")],
+        },
+    ],
 };
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    title: "语言学习",
+    title: "Wulicode",
     description: "语言语法学习站",
     themeConfig: {
+        logo: '/logo.png',
+        siteTitle: false,
+        outline: {
+            level: 'deep',
+            label: '大纲'
+        },
         search: {
             provider: "local",
         },
-        // https://vitepress.dev/reference/default-theme-config
         nav,
-
         sidebar,
-
-        socialLinks: [{ icon: "github", link: "https://github.com/vuejs/vitepress" }],
+        socialLinks: [{ icon: "github", link: "https://github.com/imvkmark" }],
+        editLink: {
+            pattern: "https://github.com/imvkmark/get-started/edit/master/docs/:path",
+        },
     },
 });

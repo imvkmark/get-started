@@ -1,3 +1,9 @@
-# 语法学习记录
+# 学习记录
 
-https://lang.wulicode.com
+https://wulicode.com
+
+## 语言学习
+
+## 开发支持
+
+## 优秀资源
