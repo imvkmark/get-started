@@ -11,6 +11,7 @@ docs/dart/pubspec.lock
 #-------------------
 pnpm-lock.yaml
 docs/.vitepress/cache
+docs/.vitepress/dist
 node_modules
 
 # python
