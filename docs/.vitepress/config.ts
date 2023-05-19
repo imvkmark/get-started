@@ -41,7 +41,7 @@ const nav = [
                 text: 'Wulicode',
                 items: [
                     { text: 'Tools', link: 'https://tools.wulicode.com' },
-                    { text: 'Blog(Temp)', link: 'https://blog.wulicode.com' },
+                    { text: 'Blog(Temp)', link: 'http://blog.wulicode.com' },
                     { text: 'Poppy Framework', link: 'https://weiran.tech' }
                 ]
             },
