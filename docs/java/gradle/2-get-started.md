@@ -1,4 +1,4 @@
-# 2. 开始
+# 2. 快速开始
 
 ## 开始
 
@@ -45,16 +45,25 @@ Android Studio 和 IntelliJ Idea 的用户在编辑它们时，应该考虑使�
 
 以下是一些可以遵循的有用步骤：
 
-- 1.确定项目是否有 Gradle Wrapper，如果有就使用, --主流的 IDE 默认在包装器可用时使用它
-- 2.发现项目结构
-  使用 IDE 导入构建或从命令行运行 `gradle projects`。如果只列出了根项目则是单项目构建。否则是一个多项目构建
-- 3.找出可以运行的任务
-  如果已将构建导入到 IDE 中，则应该可以访问显示所有可用任务的视图。从命令行运行 `gradle tasks`
-- 4.通过 `gradle help --task <taskname>` 了解有关任务的更多信息
-  `help` 可以显示有关任务额外信息，包括哪些项目包含该信息, 任务以及该任务支持哪些选项
-- 5.运行你感兴趣的任务
-  许多基于约定的构建与Gradle的生命周期任务集成在一起，所以当没有更具体的东西想要使用构建时使用它们。例如，大多数生成都有 `clean`, `check`, `assemble` 和 `build` 任务
-  在命令行中，只需运行 `gradle <taskname>` 即可执行特定任务。您可以在相应的用户手册章节中了解有关命令行执行的更多信息。如果您使用的是IDE，请查看其文档以了解如何运行任务。
+1.确定项目是否有 Gradle Wrapper，如果有就使用, --主流的 IDE 默认在包装器可用时使用它
+
+2.发现项目结构
+
+使用 IDE 导入构建或从命令行运行 `gradle projects`。如果只列出了根项目则是单项目构建。否则是一个多项目构建
+
+3.找出可以运行的任务
+
+如果已将构建导入到 IDE 中，则应该可以访问显示所有可用任务的视图。从命令行运行 `gradle tasks`
+
+4.通过 `gradle help --task <taskname>` 了解有关任务的更多信息
+
+`help` 可以显示有关任务额外信息，包括哪些项目包含该信息, 任务以及该任务支持哪些选项
+
+5.运行你感兴趣的任务
+
+许多基于约定的构建与Gradle的生命周期任务集成在一起，所以当没有更具体的东西想要使用构建时使用它们。例如，大多数生成都有 `clean`, `check`, `assemble` 和 `build` 任务
+
+在命令行中，只需运行 `gradle <taskname>` 即可执行特定任务。您可以在相应的用户手册章节中了解有关命令行执行的更多信息。如果您使用的是IDE，请查看其文档以了解如何运行任务。
 
 Gradle构建通常遵循项目结构和任务的标准约定，所以如果您熟悉对于相同类型的其他构建: 例如Java、Android或 原生构建 -- 构建的文件和目录结构以及许多任务和项目属性都应该很相似
 
@@ -66,10 +75,15 @@ Gradle构建通常遵循项目结构和任务的标准约定，所以如果您�
 以下是你在 Gradle之旅 的一些有用的步骤：
 
 1.尝试一两个基本教程，看看Gradle版本是什么样子，特别是那些与您所使用的项目类型(Java、Native、Android等)相匹配的版本。
+
 2.确保你已经读过什么是Gradle？
+
 3.了解Gradle构建的基本元素：项目、任务和文件API。
+
 4.如果您正在为 JVM 构建软件，请务必阅读在构建 Java 和 JVM项目 以及在 Java 和 JVM项目 中测试中有关这些类型项目的详细信息
+
 5.熟悉Gradle附带的核心插件，因为它们提供了许多开箱即用的有用功能
+
 6.了解如何编写可维护的构建脚本并最好地组织您的Gradle项目
 
 用户手册包含许多其他有用的信息，你可以在其中找到示例和演示样例页面上的各种Gradle功能
@@ -91,6 +105,52 @@ Gradle的灵活性意味着它可以很容易地与其他工具配合使用，�
 - 需要 java
 - java version 在 8 以上
 - 设定 `JAVA_HOME` 环境变量
+
+### 安装
+
+这里推荐使用 [SDKMAN!](../../development/tools/sdkman.md#安装) 安装
+
+```shell
+$ sdk install gradle
+```
+
+### 验证安装
+
+```
+$ gradle -v
+
+------------------------------------------------------------
+Gradle 8.1.1
+------------------------------------------------------------
+
+Build time:   2023-04-21 12:31:26 UTC
+Revision:     1cf537a851c635c364a4214885f8b9798051175b
+
+Kotlin:       1.8.10
+Groovy:       3.0.15
+Ant:          Apache Ant(TM) version 1.10.11 compiled on July 10 2021
+JVM:          17.0.7 (Eclipse Adoptium 17.0.7+7)
+OS:           Mac OS X 13.3.1 x86_64
+
+```
+
+### 尝试搭建
+
+**下载示例代码**
+
+https://docs.gradle.org/current/samples/zips/sample_building_android_apps-groovy-dsl.zip
+
+**使用 Android Studio 导入**
+
+`File > New > Import Project` , 打开之后下载并编制索引
+
+**运行**
+
+![](https://file.wulicode.com/doc/20230519/1684511415892.png)
+
+**源码地址**
+> 之前的内容运行时候有部分需调整, 以下是调整之后的
+> 源码地址 : https://github.com/imvkmark/gradle-get-started-android-app
 
 ## 故障排除
 

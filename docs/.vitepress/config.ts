@@ -42,6 +42,13 @@ const nav = [
                 items: [
                     { text: 'Tools', link: 'https://tools.wulicode.com' },
                     { text: 'Blog(Temp)', link: 'http://blog.wulicode.com' },
+                    { text: 'Vant Demo', link: 'https://vant-demo.wulicode.com' },
+                    { text: 'Html Get Started', link: 'https://html-get-started.wulicode.com/' },
+                ]
+            },
+            {
+                text: 'Framework',
+                items: [
                     { text: 'Poppy Framework', link: 'https://weiran.tech' }
                 ]
             },
@@ -79,15 +86,22 @@ const sidebar = {
         {
             text: "基础版",
             items: [
-                createLink("1. Java 概述", "/java/core-basic/1-lang.md"),
-                createLink("2. Java 运行环境", "/java/core-basic/2-design-env.md"),
-                createLink("3. Java 基本结构", "/java/core-basic/3-basic-struct.md"),
-                createLink("4. 对象和类", "/java/core-basic/4-class-object.md"),
-                createLink("5. 继承", "/java/core-basic/5-extend.md"),
-                createLink("6. 接口, lambda, 内部类", "/java/core-basic/6-interface-lambda-inner.md"),
-                createLink("7. 异常断言和日志", "/java/core-basic/7-exception-assert-log.md"),
-                createLink("8. 泛型", "/java/core-basic/8-generic.md"),
-                createLink("9. 集合", "/java/core-basic/9-collection.md"),
+                createLink("1. Java 概述", "/java/core-basic/1-lang"),
+                createLink("2. Java 运行环境", "/java/core-basic/2-design-env"),
+                createLink("3. Java 基本结构", "/java/core-basic/3-basic-struct"),
+                createLink("4. 对象和类", "/java/core-basic/4-class-object"),
+                createLink("5. 继承", "/java/core-basic/5-extend"),
+                createLink("6. 接口, lambda, 内部类", "/java/core-basic/6-interface-lambda-inner"),
+                createLink("7. 异常断言和日志", "/java/core-basic/7-exception-assert-log"),
+                createLink("8. 泛型", "/java/core-basic/8-generic"),
+                createLink("9. 集合", "/java/core-basic/9-collection"),
+            ],
+        },
+        {
+            text: "Gradle",
+            items: [
+                createLink("1. 关于 Gradle", "/java/gradle/1-intro"),
+                createLink("2. 开始使用", "/java/gradle/2-get-started"),
             ],
         },
         {
@@ -303,6 +317,7 @@ const sidebar = {
             items: [
                 createLink("SDKMAN!", "/development/tools/sdkman"),
                 createLink("ApiDoc", "/development/tools/apidoc"),
+                createLink("jenv - 管理 Java 环境", "/development/tools/jenv"),
             ],
         },
         {
