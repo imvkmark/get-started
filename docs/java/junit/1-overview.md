@@ -1,9 +1,9 @@
-# 1. 概览
+# 概览
 
 本文档的目标是为编写测试的程序员、扩展作者、引擎作者以及构建工具和IDE供应商提供全面的参考文档
 本文档也可下载为[PDF格式](https://junit.org/junit5/docs/current/user-guide/junit-user-guide-5.9.3.pdf)
 
-## 1.1 什么是 JUnit5
+## 什么是 JUnit5
 
 与以前版本的JUnit5不同，JUnit5由来自三个不同子项目的几个不同模块组成
 
@@ -22,24 +22,24 @@ API。此外，该平台提供了一个 [Console Launcher(命令行启动器)](h
 **JUnit Vintage** 提供了一个 `TestEngine`，用于在平台上运行基于 JUnit3 和 JUnit4 的测试。它要求类路径或模块路径上存在
 JUnit4.12 或更高版本
 
-## 1.2 支持的 Java 版本
+## 支持的 Java 版本
 
 JUnit5 在运行时需要Java 8(或更高版本)。但是，你仍然可以测试使用早期版本的JDK编译的代码
 
-## 1.3 帮助
+## 帮助
 
 在 [Stack Overflow](https://stackoverflow.com/questions/tagged/junit5) 上询问 JUnit5
 相关问题，或在 [Gitter](https://gitter.im/junit-team/junit5) 上与社区聊天
 
-## 1.4 开始
+## 开始
 
-### 1.4.1 下载 Junit 构件
+### 下载 Junit 构件
 
 要找出哪些构件可供下载并包含在项目中，请参阅 [依赖项元数据](https://junit.org/junit5/docs/current/user-guide/#dependency-metadata)
 。要为你的构件设置依赖项管理，请参阅 [构建支持](https://junit.org/junit5/docs/current/user-guide/#running-tests-build)
 和 [示例项目](https://junit.org/junit5/docs/current/user-guide/#overview-getting-started-example-projects)
 
-### 1.4.2 JUnit5 特点
+### JUnit5 特点
 
 要了解 JUnit5 中提供了哪些功能以及如何使用这些功能，请阅读本用户指南中按主题组织的相应部分
 
@@ -51,7 +51,7 @@ JUnit5 在运行时需要Java 8(或更高版本)。但是，你仍然可以测�
     - JUnit Platform 启动器 API
     - JUnit Platform 测试包
 
-### 1.4.3 示例项目
+### 示例项目
 
 要查看项目的完整运行示例可以复制和体验[junit5-samples](https://github.com/junit-team/junit5-samples)
 ,这个库是一个很好的入门示例。它托管了一系列基于 JUnit Jupiter、JUnit Vintage
@@ -74,7 +74,7 @@ JUnit5 在运行时需要Java 8(或更高版本)。但是，你仍然可以测�
   查看 [junit5-jupiter-starter-ant](https://github.com/junit-team/junit5-samples/tree/r5.9.3/junit5-jupiter-starter-ant)
   项目.
 
-## [ps]本项目说明
+## 本项目说明(ps)
 
 本项目测试示例来自于 [gradle + java](https://github.com/junit-team/junit5-samples/blob/main/junit5-jupiter-starter-gradle/build.gradle)
 

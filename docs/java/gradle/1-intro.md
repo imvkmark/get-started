@@ -1,4 +1,4 @@
-# 1. 关于 Gradle
+# 关于 Gradle
 
 ## 什么是 Gradle
 

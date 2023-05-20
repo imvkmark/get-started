@@ -39,6 +39,8 @@
 ## JUnit 单元测试
 
 > 参考与[官方文档](https://junit.org/junit5/docs/current/user-guide/)
+> 
+> [中文文档](https://doczhcn.gitbook.io/junit5/)
 
 1. [[O]概览](./junit/1-overview.md)
 2. 编写测试 
@@ -46,7 +48,7 @@
 4. 运行测试
 5. 扩展模型
 6. 高级话题
-7. API 进阶
+7. API 发展
 8. 贡献者
 9. 版本更新
 10. 附录
