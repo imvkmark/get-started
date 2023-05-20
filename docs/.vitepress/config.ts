@@ -105,6 +105,13 @@ const sidebar = {
             ],
         },
         {
+            text: "JUnit",
+            items: [
+                createLink("1. 概览", "/java/junit/1-overview"),
+                createLink("2. 编写测试", "/java/junit/2-write-tests"),
+            ],
+        },
+        {
             text: "FAQ",
             items: [createLink("FAQ", "/java/faq.md")],
         },
@@ -273,28 +280,28 @@ const sidebar = {
         {
             text: "入门",
             items: [
-                createLink("问答环节", "/python/1_intro/1-qa.md"),
-                createLink("如何运行", "/python/1_intro/2-run.md"),
+                createLink("问答环节", "/python/1_intro/1-qa"),
+                createLink("如何运行", "/python/1_intro/2-run"),
             ],
         },
         {
             text: "类型和运算",
             items: [
-                createLink("介绍 python 对象类型", "/python/2_types/4-types.md"),
-                createLink("数值类型", "/python/2_types/5-number.md"),
+                createLink("介绍 python 对象类型", "/python/2_types/4-types"),
+                createLink("数值类型", "/python/2_types/5-number"),
             ],
         },
         {
             text: "Awesome",
-            items: [createLink("Pydash 中文文档", "/python/a_vendor/pydash.md")],
+            items: [createLink("Pydash 中文文档", "/python/a_vendor/pydash")],
         },
     ],
     "/dart": [
         {
             text: "语言",
             items: [
-                createLink("1. 语言介绍", "/dart/guides/1-lang.md"),
-                createLink("2. 语法概览", "/dart/guides/2-lang-tour.md"),
+                createLink("1. 语言介绍", "/dart/guides/1-lang"),
+                createLink("2. 语法概览", "/dart/guides/2-lang-tour"),
             ],
         },
         {

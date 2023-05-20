@@ -28,7 +28,8 @@
 
 第 9 章 : 讨论 Java平台的集合框架，以及如何充分利用内建的标准集合;
 
-第 10 章 : 介绍GUI程序设计(包括如何建立窗口、如何在窗口中绘阁、如何利用几何图形绘图 、如何采用多种字体格式化文本，以及如何显示图像)和编写代码来响应事件(
+第 10 章 : 介绍GUI程序设计(包括如何建立窗口、如何在窗口中绘阁、如何利用几何图形绘图
+、如何采用多种字体格式化文本，以及如何显示图像)和编写代码来响应事件(
 如鼠标点击事件和按键事件) ;
 
 第 11 章 详细讨论 Swing GUI工具包， 以建立跨平台的图形用户界面，包括各种按钮、文本组件、边框 、滑块 、列表框、菜单以及对话框的有关内容;
@@ -37,10 +38,24 @@
 
 ## JUnit 单元测试
 
+> 参考与[官方文档](https://junit.org/junit5/docs/current/user-guide/)
+
+1. [[O]概览](./junit/1-overview.md)
+2. 编写测试 
+3. 和 JUnit 4 集成
+4. 运行测试
+5. 扩展模型
+6. 高级话题
+7. API 进阶
+8. 贡献者
+9. 版本更新
+10. 附录
+
+
 ## Gradle
 
 > 依托于[官方文档](https://docs.gradle.org/current/userguide/userguide.html)
-> 依托于文章 [Gradle User Manual](https://docs.gradle.org/current/userguide/userguide.pdf)
+>
 > 参考[中文文档](https://doc.yonyoucloud.com/doc/wiki/project/GradleUserGuide-Wiki/index.html)
 
 1. 关于 Gradle

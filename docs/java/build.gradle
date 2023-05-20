@@ -1,7 +1,6 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
+plugins {
+    id 'java'
+    id 'idea'
 }
 
 repositories {
@@ -10,25 +9,14 @@ repositories {
 
 test {
     useJUnitPlatform()
+
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
 }
-
-//apply plugin: 'java'
-//apply plugin: 'idea'
-
-
-compileTestJava {
-    sourceCompatibility = 17
-    targetCompatibility = 17
-    options.compilerArgs += '-parameters'
-}
-
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testImplementation("org.junit.jupiter:junit-jupiter")
+    testImplementation(platform('org.junit:junit-bom:5.9.3'))
 }
 
-task wrapper(type: Wrapper) {
-    description = 'Generates gradlew[.bat] scripts'
-    gradleVersion = '8.1'
-}

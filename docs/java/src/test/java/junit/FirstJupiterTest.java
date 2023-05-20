@@ -1,14 +1,15 @@
-package test.java;
+package test.java.junit;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class GradleExampleTest
+class FirstJupiterTest
 {
+
     @Test
-    public void testAdd()
+    public void addition()
     {
-        assertEquals(42, Integer.sum(19, 23));
+        assertEquals(3, Integer.sum(1, 2));
     }
 }
