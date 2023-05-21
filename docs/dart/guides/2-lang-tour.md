@@ -1,14 +1,16 @@
 # 2. 语法概览
 
+> https://dart.cn/guides/language/language-tour
+
 ## 2.1 Hello, World
 
-<<< @/dart/guides/src/hello.dart
+<<< @/dart/src/guides/lang/hello.dart
 
 ## 2.2 变量定义
 
 不需要显式的生命类型
 
-<<< @/dart/guides/src/variables.dart
+<<< @/dart/src/guides/lang/variables.dart
 
 ### 2.2.1 变量的定义
 

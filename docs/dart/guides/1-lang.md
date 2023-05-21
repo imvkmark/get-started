@@ -1,5 +1,7 @@
 # 1. 语言介绍
 
+> https://dart.cn/samples
+
 Dart 定义为客户端语言, 可以跨平台, 高性能开发, 是 Flutter 基础
 
 ## 1.1 语言优势
@@ -9,7 +11,7 @@ Dart 定义为客户端语言, 可以跨平台, 高性能开发, 是 Flutter 基
 
 查看一个实例
 
-<<< @/dart/guides/src/hello.dart
+<<< @/dart/src/guides/lang/hello.dart
 
 资源网站
 

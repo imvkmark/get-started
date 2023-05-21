@@ -29,8 +29,8 @@ const nav = [
         text: "开发",
         activeMatch: `^/web|development/`,
         items: [
-            { text: "Web", link: "/web/" },
-            { text: "资源", link: "/development/tools/sdkman" },
+            { text: "Web开发", link: "/web/" },
+            { text: "工具资源", link: "/development/tools/sdkman" },
         ],
     },
     { text: "Awesome", link: "/awesome/" },
@@ -117,6 +117,13 @@ const sidebar = {
         },
     ],
     "/php": [
+        {
+            text: '安装',
+            items: [
+                { text: 'Mac 安装 LNMP', link: '/php/install/mac-lnmp' },
+                { text: '使用 PECL 安装扩展', link: '/php/install/pecl-install-extension' },
+            ]
+        },
         {
             text: 'Hyperf',
             items: [
@@ -306,7 +313,7 @@ const sidebar = {
         },
         {
             text: "测试",
-            items: [createLink("单元测试", "/dart/7_tests/")],
+            items: [createLink("单元测试", "/dart/tests/")],
         },
     ],
     "/flutter": [
@@ -323,6 +330,7 @@ const sidebar = {
             text: "开发工具",
             items: [
                 createLink("SDKMAN!", "/development/tools/sdkman"),
+                createLink("Homebrew", "/development/tools/homebrew"),
                 createLink("ApiDoc", "/development/tools/apidoc"),
                 createLink("jenv - 管理 Java 环境", "/development/tools/jenv"),
             ],

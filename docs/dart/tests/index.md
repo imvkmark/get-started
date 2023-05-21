@@ -1,11 +1,9 @@
-# [WIP]单元测试
+# 单元测试
+
+- 文档地址 : https://pub.dev/documentation/test/latest/
+- 安装步骤 : https://pub.dev/packages/test/install
 
 > `test` 提供了在 dart 中编写和运行测试的方法
-> ----[test 包文档](https://pub.flutter-io.cn/documentation/test/latest/)
-
-安装
-
-详细步骤 : https://pub.flutter-io.cn/packages/test/install
 
 ```
 $ dart pub get test --dev
@@ -15,7 +13,7 @@ $ dart pub get test --dev
 
 测试使用顶级的 `test()` 函数, 测试断言使用 `expect()`
 
-<<< @/dart/7_tests/src/1-write.dart
+<<< @/dart/src/tests/write/sample.dart
 
 运行结果:
 
@@ -26,7 +24,7 @@ $ dart pub get test --dev
 
 测试支持分组函数 `group()`, 每个分组的描述都会添加到测试描述的开头
 
-<<< @/dart/7_tests/src/1-write-group.dart
+<<< @/dart/src/tests/write/group.dart
 
 运行结果:
 
@@ -39,7 +37,7 @@ $ dart pub get test --dev
 任何来自 [matcher](https://pub.flutter-io.cn/documentation/matcher/latest/matcher/matcher-library.html)
 包的匹配器都可以与 `expect()` 一起使用来进行复杂的验证：
 
-<<< @/dart/7_tests/src/1-write-complex.dart
+<<< @/dart/src/tests/write/complex.dart
 
 运行结果:
 
@@ -50,7 +48,7 @@ $ dart pub get test --dev
 
 同时还还可以使用 `throwsA()` 函数或 `throwsFormatException` 等匹配器来测试异常：
 
-<<< @/dart/7_tests/src/1-write-exception.dart
+<<< @/dart/src/tests/write/exception.dart
 
 运行结果:
 
@@ -207,7 +205,7 @@ format_coverage -i coverage -o lcov.info --lcov
 - 有关 Homebrew LCOV 公式，请参阅：https://formulae.brew.sh/formula/lcov
 
 > ps: 图示
-![lcov-sample.png](assets/lcov-sample.png)
+![](https://file.wulicode.com/note/2023/5-21/lcov-sample.png)
 
 ### 限制在特定平台上测试
 

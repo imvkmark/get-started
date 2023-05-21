@@ -2,11 +2,6 @@
 #-------------------
 .idea
 
-# dart
-#-------------------
-.dart_tool
-docs/dart/pubspec.lock
-
 # vitepress
 #-------------------
 pnpm-lock.yaml
