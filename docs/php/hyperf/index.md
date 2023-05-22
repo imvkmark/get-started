@@ -2,6 +2,8 @@
 
 ## 安装
 
+- [安装 Swoole](../install/pecl-install-extension.md#安装-swoole)
+
 这里的安装是根据推送来进行测试运行的环境需要
 
 ```

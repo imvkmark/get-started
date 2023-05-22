@@ -19,7 +19,6 @@ const nav = [
                 activeMatch: `^/php/`,
                 items: [
                     { text: "函数参考", link: "/php/refs/affect-php-behaviour/error-handling" },
-                    { text: "Swoole", link: "/php/swoole/" },
                     { text: "Hyperf", link: "/php/hyperf/" },
                 ],
             },
@@ -133,12 +132,6 @@ const sidebar = {
                 { text: 'FAQ', link: '/php/hyperf/faq' },
             ]
         },
-        {
-            text: 'Swoole',
-            items: [
-                { text: '入门', link: '/php/swoole/' },
-            ]
-        }
     ],
     "/php/refs": [
         {
@@ -355,6 +348,25 @@ const sidebar = {
 export default defineConfig({
     title: "Wulicode",
     description: "语言语法学习站",
+    head: [
+        [
+            'script',
+            {
+                "async": "true",
+                'src': 'https://www.googletagmanager.com/gtag/js?id=G-6STKYFNBZK'
+            }
+        ],
+        [
+            'script',
+            {},
+            `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-6STKYFNBZK');
+          `
+        ]
+    ],
     themeConfig: {
         logo: '/logo.png',
         siteTitle: false,
