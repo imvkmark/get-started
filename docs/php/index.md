@@ -6,10 +6,6 @@ hero :
   text : "中小型站点最优选型"
   actions :
     -
-      theme : brand
-      text : Poppy Framework
-      link : https://weiran.tech/
-    -
       theme : alt
       text : 函数参考
       link : /php/refs/affect-php-behaviour/error-handling

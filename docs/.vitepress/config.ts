@@ -14,14 +14,7 @@ const nav = [
             { text: "Javascript", link: "/javascript/" },
             { text: "Java", link: "/java/" },
             { text: "Flutter", link: "/flutter/" },
-            {
-                text: "Php",
-                activeMatch: `^/php/`,
-                items: [
-                    { text: "函数参考", link: "/php/refs/affect-php-behaviour/error-handling" },
-                    { text: "Hyperf", link: "/php/hyperf/" },
-                ],
-            },
+            { text: "Php", link: "/php/" },
         ],
     },
     {
@@ -30,6 +23,8 @@ const nav = [
         items: [
             { text: "Web开发", link: "/web/" },
             { text: "工具资源", link: "/development/tools/sdkman" },
+            { text: "手机端", link: "/mobile/design/site" },
+            { text: "运维", link: "/ops/centos/upgrade-at-7" },
         ],
     },
     { text: "Awesome", link: "/awesome/" },
@@ -42,7 +37,8 @@ const nav = [
                     { text: 'Tools', link: 'https://tools.wulicode.com' },
                     { text: 'Blog(Temp)', link: 'http://blog.wulicode.com' },
                     { text: 'Vant Demo', link: 'https://vant-demo.wulicode.com' },
-                    { text: 'Html Get Started', link: 'https://html-get-started.wulicode.com/' },
+                    { text: 'Element Plus Demo', link: 'https://element-plus-demo.wulicode.com' },
+                    { text: 'Html Get Started', link: 'https://html-get-started.wulicode.com' },
                 ]
             },
             {
@@ -120,6 +116,7 @@ const sidebar = {
             text: '安装',
             items: [
                 { text: 'Mac 安装 LNMP', link: '/php/install/mac-lnmp' },
+                { text: 'CentOS 安装 LNMP+', link: '/php/install/centos7-lnmp-plus' },
                 { text: '使用 PECL 安装扩展', link: '/php/install/pecl-install-extension' },
             ]
         },
@@ -275,7 +272,10 @@ const sidebar = {
     "/python": [
         {
             text: "介绍",
-            items: [createLink("说明", "/python/")],
+            items: [
+                createLink("说明", "/python/"),
+                createLink("使用镜像, 加速安装", "/python/install/use-mirror-to-speed"),
+            ],
         },
         {
             text: "入门",
@@ -342,6 +342,33 @@ const sidebar = {
             items: [createLink("Git Add-ons", "/development-environment/git-addons")],
         },
     ],
+    "mobile": [
+        {
+            text: "设计",
+            items: [createLink("设计站点", "/mobile/design/site")],
+        },
+    ],
+    "ops": [
+        {
+            text: "CentOS",
+            items: [
+                createLink("升级和完善 CentOS 7", "/ops/centos/upgrade-at-7"),
+                createLink("常用脚本", "/ops/centos/tools"),
+            ],
+        },
+        {
+            text: "Curl",
+            items: [
+                createLink("安装最新的 cURL ", "/ops/curl/install-latest-at-centos"),
+            ],
+        },
+        {
+            text: "Supervisor",
+            items: [
+                createLink("安装/升级 supervisor", "/ops/supervisor/install-supervisor-at-centos"),
+            ],
+        },
+    ],
 };
 
 // https://vitepress.dev/reference/site-config
@@ -368,7 +395,7 @@ export default defineConfig({
         ]
     ],
     themeConfig: {
-        logo: '/logo.png',
+        logo: 'https://file.wulicode.com/static/images/logo.png',
         siteTitle: false,
         outline: {
             level: 'deep',
