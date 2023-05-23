@@ -7,7 +7,7 @@ const createLink = (title: string, url: string) => {
 const nav = [
     {
         text: "语言",
-        activeMatch: `^/dart|python|javascript|php|java|flutter/`,
+        activeMatch: `^/dart|python|javascript|php|java|flutter|man/`,
         items: [
             { text: "Dart", link: "/dart/guides/1-lang" },
             { text: "Python", link: "/python/" },
@@ -15,6 +15,7 @@ const nav = [
             { text: "Java", link: "/java/" },
             { text: "Flutter", link: "/flutter/" },
             { text: "Php", link: "/php/" },
+            { text: "Man", link: "/man/" },
         ],
     },
     {
@@ -25,6 +26,7 @@ const nav = [
             { text: "工具资源", link: "/development/tools/sdkman" },
             { text: "手机端", link: "/mobile/design/site" },
             { text: "运维", link: "/ops/centos/upgrade-at-7" },
+            { text: "部门", link: "/department/test/auto-seldom" },
         ],
     },
     { text: "Awesome", link: "/awesome/" },
@@ -336,19 +338,71 @@ const sidebar = {
             ],
         },
     ],
-    "awesome/development-environment": [
+    "/department": [
+        {
+            text: "测试",
+            items: [
+                createLink("Seldom 自动化测试", "/department/test/auto-seldom"),
+            ],
+        },
+    ],
+    "/awesome/development-environment": [
         {
             text: "开发环境",
             items: [createLink("Git Add-ons", "/development-environment/git-addons")],
         },
     ],
-    "mobile": [
+    "/mobile": [
         {
             text: "设计",
             items: [createLink("设计站点", "/mobile/design/site")],
         },
+        {
+            text: "iOS",
+            items: [createLink("iOS - FAQ", "/mobile/ios/faq")],
+        },
     ],
-    "ops": [
+    "/man/command": [
+        {
+            text: "命令",
+            items: [
+                createLink("ab", "/man/command/ab.1"),
+                createLink("ac", "/man/command/ac.1"),
+                createLink("autojump", "/man/command/autojump.1"),
+                createLink("chmod", "/man/command/chmod.1"),
+                createLink("chown", "/man/command/chown.1"),
+                createLink("localectl", "/man/command/localectl.1"),
+                createLink("ssh-keygen", "/man/command/ssh-keygen.1"),
+                createLink("truncate", "/man/command/truncate.1"),
+            ],
+        },
+    ],
+    "/man/conf": [
+        {
+            text: "配置(5)",
+            items: [
+                createLink("conf", "/man/conf/nscd.conf.5"),
+            ],
+        },
+    ],
+    "/man/other": [
+        {
+            text: "其他(5)",
+            items: [
+                createLink("conf", "/man/other/wrk.9"),
+            ],
+        },
+    ],
+    "/man/system": [
+        {
+            text: "系统(8)",
+            items: [
+                createLink("nscd", "/man/system/nscd.8"),
+                createLink("useradd", "/man/system/useradd.8"),
+            ],
+        },
+    ],
+    "/ops": [
         {
             text: "CentOS",
             items: [
