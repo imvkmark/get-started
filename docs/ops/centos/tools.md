@@ -4,4 +4,4 @@
 
 url : https://i.wulicode.com/op/file/centos-curl.sh
 
-`version` : 版本号,默认(8.1.0)
+`version` : 版本号,默认(8.1.1)

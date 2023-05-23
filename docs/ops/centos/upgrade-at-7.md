@@ -22,14 +22,14 @@ $ yum install zip unzip
 > 快捷安装命令, 此命令不对系统进行强制性更新
 
 ```shell
-/bin/bash -c "$(curl -fsSL https://i.wulicode.com/op/file/centos-curl.sh?version=8.1.0)"
+/bin/bash -c "$(curl -fsSL https://i.wulicode.com/op/file/centos-curl.sh?version=8.1.1)"
 ```
 
 安装完成, 查看版本
 
 ```
 # curl -V
-curl 8.1.0 (x86_64-pc-linux-gnu) libcurl/8.1.0 OpenSSL/1.0.2k-fips zlib/1.2.7
+curl 8.1.1 (x86_64-pc-linux-gnu) libcurl/8.1.0 OpenSSL/1.0.2k-fips zlib/1.2.7
 Release-Date: 2023-05-17
 Protocols: dict file ftp ftps gopher gophers http https imap imaps mqtt pop3 pop3s rtsp smb smbs smtp smtps telnet tftp
 Features: alt-svc AsynchDNS HSTS HTTPS-proxy IPv6 Largefile libz NTLM NTLM_WB SSL UnixSockets

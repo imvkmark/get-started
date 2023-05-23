@@ -7,7 +7,7 @@
 curl official site: https://curl.se/download/
 
 ```shell
-/bin/bash -c "$(curl -fsSL https://i.wulicode.com/op/file/centos-curl.sh?version=8.1.0)"
+/bin/bash -c "$(curl -fsSL https://i.wulicode.com/op/file/centos-curl.sh?version=8.1.1)"
 ```
 
 ## 以下是正文
