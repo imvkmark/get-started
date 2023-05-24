@@ -16,6 +16,7 @@ const nav = [
             { text: "Flutter", link: "/flutter/" },
             { text: "Php", link: "/php/" },
             { text: "Man", link: "/man/" },
+            { text: "C++", link: "/cpp/cpp-qt5-cookbook/0-tree" },
         ],
     },
     {
@@ -311,6 +312,16 @@ const sidebar = {
             items: [createLink("单元测试", "/dart/tests/")],
         },
     ],
+    "/cpp": [
+        {
+            text: "C++ / Qt5 Cookbook",
+            items: [
+                createLink("目录", "/cpp/cpp-qt5-cookbook/0-tree"),
+                createLink("1. 外观和自定义", "/cpp/cpp-qt5-cookbook/1-appearance-custom"),
+                createLink("2. 状态和特效", "/cpp/cpp-qt5-cookbook/2-property"),
+            ],
+        },
+    ],
     "/flutter": [
         {
             text: "入门",
@@ -350,6 +361,12 @@ const sidebar = {
         {
             text: "开发环境",
             items: [createLink("Git Add-ons", "/development-environment/git-addons")],
+        },
+    ],
+    "/awesome/language": [
+        {
+            text: "编程语言",
+            items: [createLink("Php", "/language/php")],
         },
     ],
     "/mobile": [
