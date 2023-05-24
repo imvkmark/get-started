@@ -29,11 +29,15 @@ $ node -v
 - `「译」`为翻译的文档, 翻译的文档必须附有原文地址, 如果对翻译进行修改标记为 `「译+」`
 - 未标记任何标记的为原创
 
+### 版权
+
+本项目采用 [CC BY](https://creativecommons.org/licenses/by/4.0/) 版权, 如需引用请保留来源及署名
+
+如果本项目引用内容无意侵犯了您的版权, 请通过以下联系方式联系我, 并得到妥善处理.
+
 ## 联系方式
 
 **微信**
-
-> 项目开发, 二次开发, 技术讨论均可加此微信, 来源备注 `wulicode`
 
 ![image.png](https://file.wulicode.com/yuque/202208/14/18/2011XIIBW44D.png?x-oss-process=image/resize,h_215)
 

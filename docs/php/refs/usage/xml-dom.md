@@ -1,14 +1,6 @@
----
-title: "[译] 在 PHP 中使用 Dom"
-date: 2022-04-14 22:26:32
-toc: true
-categories:
-- ["Php","语言参考"]
----
+# 「译」在 PHP 中使用 Dom
 
 PHP 中的 HTML 解析是使用的 [DOM模块](https://www.php.net/manual/zh/book.dom.php)
-
-
 
 ```php
 $dom = new DOMDocument;
@@ -19,7 +11,9 @@ foreach ($images as $image) {
 }
 $html = $dom->saveHTML();
 ```
+
 这里列举所有包含 `nofollow` 属性的  `<a>`  标签:
+
 ```php
 $doc = new DOMDocument();
 libxml_use_internal_errors(true);
@@ -28,11 +22,13 @@ $xpath = new DOMXPath($doc);
 // returns a list of all links with rel=nofollow
 $nlist = $xpath->query("//a[@rel='nofollow']");
 ```
+
 提取谷歌结果的 dom 程序.
+
 ```php
 <?php
-  # Use the Curl extension to query Google and get back a page of results
-  $url = "http://www.google.com";
+# Use the Curl extension to query Google and get back a page of results
+$url = "https://www.google.com";
 $ch = curl_init();
 $timeout = 5;
 curl_setopt($ch, CURLOPT_URL, $url);
@@ -50,9 +46,7 @@ $dom = new DOMDocument();
 foreach($dom->getElementsByTagName('a') as $link) {
   # Show the <a href>
   echo $link->getAttribute('href');
-  echo "
-
-";
+  echo "";
 }
 ?>
 ```
@@ -60,7 +54,9 @@ foreach($dom->getElementsByTagName('a') as $link) {
 ## FAQ
 
 ### DOMDocument::loadHTML(): Unexpected end tag : p in Entity
+
 当分析 html 代码的时候如果嵌套类型不正确, 则会报这个错误, 因为 `<ol>` 是一个块级元素, `p`之内是不能存放任何块级元素的
+
 ```php
 $html = '<p>
   <ol>
@@ -72,6 +68,7 @@ $Dom->loadHTML($html);
 $Xpath = new DOMXPath($Dom);
 $Xpath->query('//p');
 ```
+
 这个 `$html`在 [https://validator.w3.org/](https://validator.w3.org/) 中进行验证会有如下错误
 > No `p` element in scope but a `p` end tag seen.
 

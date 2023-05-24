@@ -209,10 +209,11 @@ _持续集成的库和应用_
 
 _生成项目文档的库_
 
-* [Sami](https://github.com/fabpot/Sami): 一个API文档生成器
+* [Doctum](https://github.com/code-lts/doctum): 一个API文档生成器, Fork of Sami
 * [APIGen](https://github.com/apigen/apigen): 另一个API文档生成器
 * [PHP Documentor 2](https://github.com/phpDocumentor/phpDocumentor2): 一个API文档生成器
 * [phpDox](http://phpdox.de/): 一个PHP项目的文档生成器（不限于API文档）
+* ~~[Sami](https://github.com/fabpot/Sami)~~: 一个API文档生成器
 
 ## 安全
 
@@ -359,12 +360,14 @@ _处理支付和构建在线电子商务商店的库和应用_
 * [Sebastian Money](https://github.com/sebastianbergmann/money): 另一个处理货币值的库
 * [Swap](https://github.com/florianv/swap): 一个汇率库
 
-## PDF
+## PDF/文档
 
 _处理PDF文件的库和软件_
 
+* [mPDF](https://mpdf.github.io/): 一个PDF生成器库
 * [Snappy](https://github.com/KnpLabs/snappy): 一个PDF和图像生成器库
 * [WKHTMLToPDF](https://github.com/antialize/wkhtmltopdf): 一个将HTML转换为PDF的工具
+* ~~[php-excel-reader](https://github.com/amade/php-excel-reader)~~: 简单的excel 读取类
 
 ## 数据库
 
@@ -791,7 +794,8 @@ _阅读PHP内核或性能相关的资料_
 * [How Big Are PHP Arrays (And Values) Really?](http://nikic.github.com/2011/12/12/How-big-are-PHP-arrays-really-Hint-BIG.html)：一篇关于数组原理的文章
 * [Why Objects (Usually) Use Less Memory Than Arrays](https://gist.github.com/nikic/5015323)
 * [PHP Evaluation Order](https://gist.github.com/nikic/6699370)：一篇关于对象和数组原理的文章, 一篇关于PHP评估顺序的文章
-* 开发人员的PHP源代码： [1](http://blog.ircmaxell.com/2012/03/phps-source-code-for-php-developers.html) [2](http://nikic.github.com/2012/03/16/Understanding-PHPs-internal-function-definitions.html) [3](http://blog.ircmaxell.com/2012/03/phps-source-code-for-php-developers_21.html) [4](http://nikic.github.com/2012/03/28/Understanding-PHPs-internal-array-implementation.html)
+*
+开发人员的PHP源代码： [1](http://blog.ircmaxell.com/2012/03/phps-source-code-for-php-developers.html) [2](http://nikic.github.com/2012/03/16/Understanding-PHPs-internal-function-definitions.html) [3](http://blog.ircmaxell.com/2012/03/phps-source-code-for-php-developers_21.html) [4](http://nikic.github.com/2012/03/28/Understanding-PHPs-internal-array-implementation.html)
 * 关于PHP源代码的系列 -
   垃圾收集： [1](http://www.php.net/manual/en/features.gc.refcounting-basics.php) [2](http://www.php.net/manual/en/features.gc.collecting-cycles.php) [3](http://www.php.net/manual/en/features.gc.performance-considerations.php)
   关于PHP垃圾收集原理的系列

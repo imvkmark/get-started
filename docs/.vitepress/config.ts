@@ -152,6 +152,26 @@ const sidebar = {
             ]
         },
         {
+            text: 'IDE',
+            items: [
+                { text: 'PHPUnit 在 PhpStorm 中的使用', link: '/php/ide/phpstorm-run-phpunit.md' },
+                { text: 'PhpStorm 使用 Xdebug 调试', link: '/php/ide/phpstorm-use-xdebug.md' },
+                { text: 'PhpStorm 中运行 TestSuit', link: '/php/ide/phpstorm-run-testsuit.md' },
+            ]
+        },
+        {
+            text: 'Packages',
+            items: [
+                { text: 'Carbon', link: '/php/packages/carbon-carbon' },
+            ]
+        },
+        {
+            text: '其他',
+            items: [
+                { text: '使用 Clockwork 调试 Php 应用', link: '/php/tech/using-clockwork-extension-for-debug.md' },
+            ]
+        },
+        {
             text: 'Hyperf',
             items: [
                 { text: '入门', link: '/php/hyperf/' },
@@ -396,13 +416,16 @@ const sidebar = {
     "/awesome/development-environment": [
         {
             text: "开发环境",
-            items: [createLink("Git Add-ons", "/development-environment/git-addons")],
+            items: [createLink("Git Add-ons", "/awesome/development-environment/git-addons")],
         },
     ],
     "/awesome/language": [
         {
             text: "编程语言",
-            items: [createLink("Php", "/language/php")],
+            items: [
+                createLink("Php", "/awesome/language/php"),
+                createLink("&nbsp;&nbsp;└ Laravel", "/awesome/language/php-laravel")
+            ],
         },
     ],
     "/mobile": [

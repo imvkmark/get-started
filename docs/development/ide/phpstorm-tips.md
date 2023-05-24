@@ -1,4 +1,4 @@
-# [译+] 常用 Phpstorm tips
+# 「译+」 常用 Phpstorm tips
 
 摘自: [Phpstorm Tips](https://phpstorm.tips)
 

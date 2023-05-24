@@ -2,6 +2,10 @@
 
 这个DOM扩展允许你操作 XML 文档通过 PHP 5 的DOM API
 
+:::info 扩展阅读
+[「译」在 PHP 中使用 Dom](../usage/xml-dom.md)
+:::
+
 ## 安装
 
 此扩展需要libxml PHP扩展
