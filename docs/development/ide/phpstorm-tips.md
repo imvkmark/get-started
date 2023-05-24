@@ -1,11 +1,3 @@
----
-title : "[译+] 常用 Phpstorm tips"
-date : 2022-04-20 18:58:28
-toc : true
-categories :
-  - [ "Php","环境搭建" ]
----
-
 # [译+] 常用 Phpstorm tips
 
 摘自: [Phpstorm Tips](https://phpstorm.tips)

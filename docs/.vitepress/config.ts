@@ -146,6 +146,7 @@ const sidebar = {
             items: [
                 { text: 'Mac 安装 LNMP', link: '/php/install/mac-lnmp' },
                 { text: 'CentOS 安装 LNMP+', link: '/php/install/centos7-lnmp-plus' },
+                { text: 'RockyLinux 安装 RNMP+', link: '/php/install/rockylinux-rnmp' },
                 { text: '使用 PECL 安装扩展', link: '/php/install/pecl-install-extension' },
             ]
         },
@@ -370,7 +371,9 @@ const sidebar = {
         {
             text: "IDE",
             items: [
+                createLink("Jetbrains 系常用扩展", "/development/ide/jetbrains-plugins"),
                 createLink("PhpStorm Tips", "/development/ide/phpstorm-tips"),
+                createLink("WebStorm Tips", "/development/ide/webstorm-tips"),
             ],
         },
         {
