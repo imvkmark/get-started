@@ -1,5 +1,5 @@
 ---
-title: "[转+] 运维中的日志切割(logrotate)操作梳理"
+title: " 「转+」 运维中的日志切割(logrotate)操作梳理"
 date: 2022-04-20 19:00:55
 toc: true
 categories:

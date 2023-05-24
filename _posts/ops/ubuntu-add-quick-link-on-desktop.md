@@ -1,5 +1,5 @@
 ---
-title: "[转+] 将程序桌面图标加到ubuntu启动器的方法"
+title: " 「转+」 将程序桌面图标加到ubuntu启动器的方法"
 date: 2022-04-14 22:26:41
 toc: true
 categories:

@@ -1,16 +1,6 @@
----
-title: "Laravel Eloquent 和 Migrate"
-date: 2023-03-05 20:36:35
-toc: true
-categories:
-- ["Php","Laravel","数据库 \/ 模型"]
----
+# Laravel Eloquent 和 Migrate
 
 ## Eloquent 技巧
-
-
-
-
 
 ### 1. 获取并更新更改为直接更新
 
@@ -49,7 +39,6 @@ PamAccount::whereKey(1)->increment('login_times');
 +---------------------------------------------------------------------------------------------------------------------------------------------+------+
 ```
 
-
 ### 2. 带条件的关联关系模型
 
 - **多条件**
@@ -87,7 +76,6 @@ public function latestPost(){
     return $this->hasOne(\App\Post::class)->withDefault();
 }
 ```
-
 
 ### 3. 模型中的附加属性 appends
 
@@ -143,14 +131,12 @@ class PhpDemo extends Model
 }
 ```
 
-
 ### 4. find 查找多个
 
 ```php
 // 返回 Collection 类型
 PhpDemo::find([1, 2]);
 ```
-
 
 ### 5. whereX 魔术方法
 
@@ -170,7 +156,6 @@ $query->when(request('role', false), function ($q, $role) {
 $authors = $query->get();
 ```
 
-
 ### 6. when 方法
 
 是不是感觉高大上和优雅了一些
@@ -189,7 +174,6 @@ $query->when(request('role', false), function ($q, $role) {
 $authors = $query->get();
 ```
 
-
 ### 7. 全局范围
 
 这里使用到了 Eloquent 的 boot 静态方法来注册全局范围查询条件
@@ -206,7 +190,6 @@ protected static function boot()
 }
 ```
 
-
 ### 8. 数据副本
 
 ```php
@@ -214,7 +197,6 @@ $task = Tasks::find(1);
 $newTask = $task->replicate();
 $newTask->save();
 ```
-
 
 ### 9. 模型 chunk 方法
 
@@ -239,7 +221,6 @@ PhpDemo::chunk(50, function ($users) {
 +--------------------------------------------------------------------------+-------+
 ```
 
-
 ### 10 在保存的时候可以按照我们的预期更新 updated_at 字段么
 
 通过 save 传递参数忽略模型自己填充的更新数据
@@ -249,7 +230,6 @@ $product = Product::find($id);
 $product->updated_at = '2019-01-01 10:00:00';
 $product->save(['timestamps' => false]);
 ```
-
 
 ### 11. Model 的几个使用方式
 
@@ -277,9 +257,7 @@ if ($kw) {
 }
 ```
 
-
 ## 数据库 Migrate 和 Seeder
-
 
 ### 数据库配置
 
@@ -310,10 +288,10 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-
 ### 创建模型
 
-Laravel最为强大的部分，Eloquent ORM, 现在，Artisan 帮我们在 `~/app/Models` 下创建了文件 `Article.php` ，这是 Model 类，他们都继承了 Laravel Eloquent 提供的 Model 类 Illuminate，且都在 `\App\Models` 命名空间下。这里需要强调一下，用命令行的方式创建文件，和自己手动创建文件没有任何区别，你也可以尝试自己创建这两个 Model 类。
+Laravel最为强大的部分，Eloquent ORM, 现在，Artisan 帮我们在 `~/app/Models` 下创建了文件 `Article.php` ，这是 Model 类，他们都继承了 Laravel Eloquent 提供的 Model 类
+Illuminate，且都在 `\App\Models` 命名空间下。这里需要强调一下，用命令行的方式创建文件，和自己手动创建文件没有任何区别，你也可以尝试自己创建这两个 Model 类。
 
 Model 即为 MVC 中的 M，翻译为模型，负责跟数据库交互。在 Eloquent 中，数据库中每一张表对应着一个 Model 类（当然也可以对应多个）。
 
@@ -323,7 +301,6 @@ $ php artisan make:model Article
 # 创建模型的时候可以创建出 migration 文件
 $ php artisan make:model Article -m
 ```
-
 
 ### 创建 Migration
 
@@ -344,7 +321,6 @@ Schema::create('articles', function(Blueprint $table)
 });
 ```
 
-
 ### 数据表建立
 
 接下来进行 Article 对应的 articles 表数据库迁移，运行以下命令执行数据库迁移操作：
@@ -356,7 +332,6 @@ Migrated: 2014_10_12_000000_create_articles_table
 ```
 
 数据表进入数据库
-
 
 ### 填充数据
 
@@ -398,17 +373,17 @@ php artisan db:seed             # 将种子种进数据库
 
 这样数据就可以进入数据库.
 
-
 ## 导出 Laravel 迁移文件
-
 
 ### 在 Sequel Pro 中已存在的数据表导出
 
 ![](https://file.wulicode.com/yuque/202212/06/14/30100vLNXyar.png#id=Pk9JR&originHeight=456&originWidth=900&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
-对 [Laravel](http://laravelacademy.org/tags/laravel) 开发者来说，主要有两种方式创建数据表，一种是通过 MySQL 客户端工具，比如 [Sequel Pro](http://laravelacademy.org/tags/sequel-pro)（Mac 环境下比较流行的 MySQL 客户端软件），另一种是通过 Laravel 提供的 Artisan 命令生成迁移文件。
+对 [Laravel](http://laravelacademy.org/tags/laravel) 开发者来说，主要有两种方式创建数据表，一种是通过 MySQL
+客户端工具，比如 [Sequel Pro](http://laravelacademy.org/tags/sequel-pro)（Mac 环境下比较流行的 MySQL 客户端软件），另一种是通过 Laravel 提供的 Artisan 命令生成迁移文件。
 
-如果之前的项目不是通过 Laravel 构建的，现在要迁移到 Laravel，或者之前不是通过迁移文件生成的数据表，想要将已存在的数据表转化为 Laravel 迁移文件怎么办，由 Colin Viebrock 为 Sequel Pro 开发的[Laravel 迁移导出工具](https://github.com/cviebrock/sequel-pro-laravel-export)为我们提供了方便。
+如果之前的项目不是通过 Laravel 构建的，现在要迁移到 Laravel，或者之前不是通过迁移文件生成的数据表，想要将已存在的数据表转化为 Laravel 迁移文件怎么办，由 Colin
+Viebrock 为 Sequel Pro 开发的[Laravel 迁移导出工具](https://github.com/cviebrock/sequel-pro-laravel-export)为我们提供了方便。
 
 我们从 github（[https://github.com/cviebrock/sequel-pro-laravel-export](https://github.com/cviebrock/sequel-pro-laravel-export)）将代码克隆本地：
 
@@ -416,7 +391,8 @@ php artisan db:seed             # 将种子种进数据库
 git clone https://github.com/cviebrock/sequel-pro-laravel-export.git
 ```
 
-然后进入项目目录，双击`ExportToLaravelMigration.spBundle`文件，接下来在打开的页面连接到数据库，在左侧选中一张数据表，在菜单栏选择`Bundles › Export › Export`将数据表导出为迁移文件（或者使用快捷命令`⌃⌥⌘M`）：
+然后进入项目目录，双击`ExportToLaravelMigration.spBundle`文件，接下来在打开的页面连接到数据库，在左侧选中一张数据表，在菜单栏选择`Bundles › Export › Export`
+将数据表导出为迁移文件（或者使用快捷命令`⌃⌥⌘M`）：
 
 ![](https://file.wulicode.com/yuque/202212/06/14/3010OcydaW0i.png#id=hzsUK&originHeight=309&originWidth=998&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
@@ -462,7 +438,6 @@ class CreateUsersTable extends Migration {
 ```
 
 我们可以将其拷贝到 Laravel 项目的数据库迁移目录，以便后续使用该文件进行后续操作。
-
 
 ## 参考
 

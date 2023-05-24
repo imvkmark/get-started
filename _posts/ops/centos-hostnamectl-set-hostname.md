@@ -1,5 +1,5 @@
 ---
-title: "[转+] 如何在 CentOS/RockyLinux 上修改主机名"
+title: " 「转+」 如何在 CentOS/RockyLinux 上修改主机名"
 date: 2022-04-20 19:00:53
 toc: true
 categories:

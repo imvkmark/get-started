@@ -152,6 +152,13 @@ const sidebar = {
             ]
         },
         {
+            text: 'Laravel ',
+            items: [
+                { text: 'Eloquent 和 Migrate', link: '/php/laravel/eloquent-migrate.md' },
+                { text: '升级记录 FAQ', link: '/php/laravel/upgrade-faq.md' },
+            ]
+        },
+        {
             text: 'IDE',
             items: [
                 { text: 'PHPUnit 在 PhpStorm 中的使用', link: '/php/ide/phpstorm-run-phpunit.md' },
@@ -403,6 +410,12 @@ const sidebar = {
             items: [
                 createLink("正则手册", "/development/regex/"),
                 createLink("正则匹配中文", "/development/regex/zh-match"),
+            ],
+        },
+        {
+            text: "运营相关",
+            items: [
+                createLink("robots 文档", "/development/op/robots"),
             ],
         },
     ],

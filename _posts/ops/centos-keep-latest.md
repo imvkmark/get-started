@@ -22,7 +22,7 @@ $ yum install zip unzip
 ```
 
 ### 升级 curl 为最新版本
-[[转+] CentOS 7 更新 curl 为最新版本](https://www.yuque.com/go/doc/74347798?view=doc_embed)
+[ 「转+」 CentOS 7 更新 curl 为最新版本](https://www.yuque.com/go/doc/74347798?view=doc_embed)
 
 ## 源添加和更换
 **CentOS 镜像**

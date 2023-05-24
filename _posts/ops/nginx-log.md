@@ -9,7 +9,7 @@ categories:
 ## 日志切割
 > logrotate 程序是一个日志文件管理工具。用于分割日志文件，删除旧的日志文件，并创建新的日志文件，起到“转储”作用
 
-这里参考另一篇文章 [[转+] 运维中的日志切割(https://wulicode.com/ops/1384b4fda4dc9e9f26de439073721eb8.html)
+这里参考另一篇文章 [ 「转+」 运维中的日志切割(https://wulicode.com/ops/1384b4fda4dc9e9f26de439073721eb8.html)
 
 
 

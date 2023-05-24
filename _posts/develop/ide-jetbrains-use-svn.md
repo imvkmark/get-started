@@ -30,7 +30,7 @@ categories:
 ## 常见问题
 
 
-### [转+] IDEA SVN报 E170013和E230001错误:Server SSL certificate verification
+###  「转+」 IDEA SVN报 E170013和E230001错误:Server SSL certificate verification
 
 **问题描述：**
 

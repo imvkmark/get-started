@@ -1,5 +1,5 @@
 ---
-title: "[转+] yum check报错Error: check all 解决办法"
+title: " 「转+」 yum check报错Error: check all 解决办法"
 date: 2021-06-26 10:30:12
 toc: true
 categories:

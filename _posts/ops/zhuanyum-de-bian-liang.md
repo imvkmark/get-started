@@ -1,5 +1,5 @@
 ---
-title: "[转+]Yum 的变量"
+title: " 「转+」Yum 的变量"
 date: 2021-06-26 10:31:24
 toc: true
 categories:

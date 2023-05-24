@@ -27,9 +27,9 @@ hero :
 
 ### Supervisor
 
-[安装](./supervisor/install-supervisor-at-centos.md)
+[安装](./supervisor/install-at-centos.md)
 
-### Curl
+### cURL
 
 [安装/升级](./curl/install-latest-at-centos.md)
 

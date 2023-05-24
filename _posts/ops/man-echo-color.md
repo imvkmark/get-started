@@ -1,5 +1,5 @@
 ---
-title: "[转+] shell 脚本中 echo 显示内容带颜色"
+title: " 「转+」 shell 脚本中 echo 显示内容带颜色"
 date: 2019-05-05 18:35:51
 toc: true
 categories:

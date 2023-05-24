@@ -1,4 +1,4 @@
-# [转+] 用 JSDOC 编写 JavaScript 文档
+# 「转+」 用 JSDOC 编写 JavaScript 文档
 
 JSDOC 是一个 API 文档生成器，你只需要在代码中添加特定格式的注释，它就可以从注释中为你生成 HTML 文档。
 

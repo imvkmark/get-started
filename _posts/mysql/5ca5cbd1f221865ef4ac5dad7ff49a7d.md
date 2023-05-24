@@ -1,5 +1,5 @@
 ---
-title: "[转+]解决Java程序连接不上MySQL 但是Navicat可以连接的问题!"
+title: " 「转+」解决Java程序连接不上MySQL 但是Navicat可以连接的问题!"
 date: 2022-04-14 22:26:41
 toc: true
 categories:

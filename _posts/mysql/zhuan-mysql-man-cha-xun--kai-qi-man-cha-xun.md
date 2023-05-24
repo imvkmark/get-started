@@ -1,5 +1,5 @@
 ---
-title: "[转+] MySQL慢查询 - 开启慢查询"
+title: " 「转+」 MySQL慢查询 - 开启慢查询"
 date: 2021-06-26 10:36:11
 toc: true
 categories:

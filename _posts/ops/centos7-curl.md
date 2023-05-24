@@ -1,5 +1,5 @@
 ---
-title: "[转+] CentOS 7 更新 curl 为最新版本"
+title: " 「转+」 CentOS 7 更新 curl 为最新版本"
 date: 2022-04-20 19:00:53
 toc: true
 categories:
