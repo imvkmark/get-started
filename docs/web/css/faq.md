@@ -21,3 +21,9 @@ document.documentElement.setAttribute('theme', 'dark');
 参考
 
 [点击查看【codepen】](https://codepen.io/SitePoint/embed/eLBzxJ)
+
+## 代练通的一个活动背景画背景方案
+
+同时支持手机端和电脑端页面的访问
+
+http://www.dailiantong.com/activity/halloween.asp

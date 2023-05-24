@@ -77,10 +77,6 @@ const sidebar = {
             items: [createLink("Favicon", "/web/html/favicon")],
         },
         {
-            text: "Javascript",
-            items: [createLink("使用 jsdoc 编写 api 文档", "/web/javascript/use-jsdoc-write-document.md")],
-        },
-        {
             text: "Api",
             items: [createLink("ClientHeight/OffsetHeight 解释", "/web/api/element-client-offset")],
         },
@@ -100,6 +96,10 @@ const sidebar = {
         {
             text: "入门",
             items: [createLink("说明", "/javascript/")],
+        },
+        {
+            text: "文档",
+            items: [createLink("使用 jsdoc 编写 api 文档", "/javascript/tech/use-jsdoc-write-document.md")],
         },
     ],
     "/java": [
@@ -365,6 +365,12 @@ const sidebar = {
                 createLink("Homebrew", "/development/tools/homebrew"),
                 createLink("ApiDoc", "/development/tools/apidoc"),
                 createLink("jenv - 管理 Java 环境", "/development/tools/jenv"),
+            ],
+        },
+        {
+            text: "IDE",
+            items: [
+                createLink("PhpStorm Tips", "/development/ide/phpstorm-tips"),
             ],
         },
         {
