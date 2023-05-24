@@ -76,6 +76,25 @@ const sidebar = {
             text: "Html",
             items: [createLink("Favicon", "/web/html/favicon")],
         },
+        {
+            text: "Javascript",
+            items: [createLink("使用 jsdoc 编写 api 文档", "/web/javascript/use-jsdoc-write-document.md")],
+        },
+        {
+            text: "Api",
+            items: [createLink("ClientHeight/OffsetHeight 解释", "/web/api/element-client-offset")],
+        },
+        {
+            text: "Css",
+            items: [createLink("FAQ", "/web/css/faq")],
+        },
+        {
+            text: "技术",
+            items: [
+                createLink("请求加速最佳实践", "/web/tech/best-practice"),
+                createLink("安装 Sentry 进行错误/性能跟踪", "/web/tech/use-sentry-collect-trace-and-exception")
+            ],
+        },
     ],
     "/javascript": [
         {
