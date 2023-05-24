@@ -1,20 +1,13 @@
----
-title: " 「转+」 运维中的日志切割(logrotate)操作梳理"
-date: 2022-04-20 19:00:55
-toc: true
-categories:
-- ["Ops","Linux"]
----
+# 「转+」 运维中的日志切割(logrotate)操作梳理
 
-对于 Linux 系统安全来说，日志文件是极其重要的工具. 
+对于 Linux 系统安全来说，日志文件是极其重要的工具.
 
 logrotate 程序是一个日志文件管理工具。用于分割日志文件，删除旧的日志文件，并创建新的日志文件，起到“转储”作用。可以节省磁盘空间。下面就对 logrotate 日志轮转操作做一梳理记录：
 
-
-
-
 ## 介绍
+
 显而易见，Logrotate 是基于 CRON 来运行的，其脚本是`/etc/cron.daily/logrotate`
+
 ```
 #!/bin/sh
 /usr/sbin/logrotate /etc/logrotate.conf
@@ -24,7 +17,9 @@ if [ $EXITVALUE != 0 ]; then
 fi
 exit 0
 ```
+
 实际运行时，Logrotate 会调用配置文件 `/etc/logrotate.conf`
+
 ```
 # see "man logrotate" for details
 # rotate log files weekly
@@ -46,23 +41,29 @@ include /etc/logrotate.d
 }
 # system-specific logs may be also be configured here.
 ```
+
 这里的设置可以理解为 Logrotate 的缺省值，当然了，可以我们在`/etc/logrotate.d`目录里放置自己的配置文件，用来覆盖 Logrotate 的缺省值。
 
 ## 配置文件
+
 Linux 系统默认安装 logrotate 工具，它默认的配置文件在：
+
 ```
 /etc/logrotate.conf
 /etc/logrotate.d/
 ```
+
 logrotate.conf 才主要的配置文件，logrotate.d 是一个目录，该目录里的所有文件都会被主动的读入/etc/logrotate.conf 中执行。
 
 另外，如果 /etc/logrotate.d/ 里面的文件中没有设定一些细节，则会以/etc/logrotate.conf 这个文件的设定来作为默认值。
 
 如果等不及 cron 自动执行日志轮转，想手动强制切割日志，需要加-f 参数；不过正式执行前最好通过 Debug 选项来验证一下（-d 参数），这对调试也很重要
+
 ```
 # /usr/sbin/logrotate -f /etc/logrotate.d/nginx
 # /usr/sbin/logrotate -d -f /etc/logrotate.d/nginx
 ```
+
 logrotate 命令格式：
 
 logrotate [OPTION...]
@@ -78,21 +79,27 @@ logrotate [OPTION...]
 `-v`, `--verbose` ：显示转储过程。
 
 根据日志切割设置进行操作，并显示详细信息
+
 ```
 $ /usr/sbin/logrotate -v /etc/logrotate.conf 
 $ /usr/sbin/logrotate -v /etc/logrotate.d/php
 ```
+
 根据日志切割设置进行执行，并显示详细信息,但是不进行具体操作，debug 模式
+
 ```
 $ /usr/sbin/logrotate -d /etc/logrotate.conf 
 $ /usr/sbin/logrotate -d /etc/logrotate.d/nginx
 ```
+
 查看各 log 文件的具体执行情况
+
 ```
 $ cat /var/lib/logrotate.status
 ```
 
 ## 切割
+
 比如以系统日志/var/log/message 做切割来简单说明下：
 
 第一次执行完 rotate(轮转)之后，原本的 messages 会变成 messages.1，而且会制造一个空的 messages 给系统来储存日志；
@@ -104,6 +111,7 @@ $ cat /var/lib/logrotate.status
 日志究竟轮换几次，这个是根据配置文件中的 dateext 参数来判定的。
 
 看下 logrotate.conf 配置：
+
 ```
 $ cat /etc/logrotate.conf
 # 底下的设定是 "logrotate 的默认值" ，如果別的文件设定了其他的值，
@@ -124,11 +132,14 @@ include /etc/logrotate.d
 # 这个 wtmp 可记录用户登录系统及系统重启的时间
 # 因为有 minsize 的参数，因此不见得每个月一定会执行一次喔.要看文件大小。
 ```
-由这个文件的设定可以知道/etc/logrotate.d 其实就是由/etc/logrotate.conf 所规划出来的目录，虽然可以将所有的配置都写入/etc/logrotate.conf ，但是这样一来这个文件就实在是太复杂了，尤其是当使用很多的服务在系统上面时， 每个服务都要去修改/etc/logrotate.conf 的设定也似乎不太合理了。 
+
+由这个文件的设定可以知道/etc/logrotate.d 其实就是由/etc/logrotate.conf 所规划出来的目录，虽然可以将所有的配置都写入/etc/logrotate.conf
+，但是这样一来这个文件就实在是太复杂了，尤其是当使用很多的服务在系统上面时， 每个服务都要去修改/etc/logrotate.conf 的设定也似乎不太合理了。
 
 所以，如果独立出来一个目录，那么每个要切割日志的服务， 就可以独自成为一个文件，并且放置到 /etc/logrotate.d/ 当中
 
 ## 参数说明
+
 ```
 compress                           // 通过gzip 压缩转储以后的日志
 nocompress                         // 不做gzip压缩处理
@@ -161,7 +172,9 @@ size = 5 或 size 5 （>= 5 个字节就转储）
 size = 100k 或 size 100k
 size = 100M 或 size 100M
 ```
+
 小示例：下面一个切割 nginx 日志的配置
+
 ```
 $ vim /etc/logrotate.d/nginx
 /usr/local/nginx/logs/*.log {

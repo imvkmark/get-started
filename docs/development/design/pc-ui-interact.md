@@ -1,24 +1,19 @@
----
-title: "UI交互手册"
-date: 2022-04-14 22:11:53
-toc: true
-categories:
-- ["开发","产品\/设计"]
----
+# UI交互手册
 
-![](https://file.wulicode.com/yuque/202208/04/15/0159bdpvINT7.jpg?x-oss-process=image/resize,h_200)
+![](https://file.wulicode.com/yuque/202208/04/15/0159bdpvINT7.jpg)
 
-Good UI是一家研究用户体验的设计机构。我们知道成功的页面设计不仅有很高的转化率更便于用户使用，既能满足商业目标更能为用户带来良好的体验。今天为大家分享一些Good UI 在一些项目中获取的设计以及运营策略等方面的经验。
+Good UI是一家研究用户体验的设计机构。我们知道成功的页面设计不仅有很高的转化率更便于用户使用，既能满足商业目标更能为用户带来良好的体验。今天为大家分享一些Good UI
+在一些项目中获取的设计以及运营策略等方面的经验。
 
-1. 用通栏布局代替多栏布局
+1.用通栏布局代替多栏布局
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0159aHs5Ir0t.png?x-oss-process=image/resize,h_329)
 
-2. 给用户些好处，别急着做生意
+2.给用户些好处，别急着做生意
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0200GebGQWNn.png?x-oss-process=image/resize,h_329)
 
-3. 整合相似的功能，去掉零碎的UI元素
+3.整合相似的功能，去掉零碎的UI元素
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0200oi0sVLKL.png?x-oss-process=image/resize,h_329)
 
@@ -38,11 +33,11 @@ Good UI是一家研究用户体验的设计机构。我们知道成功的页面�
 
 ![](https://file.wulicode.com/yuque/202208/04/15/020160HgBf8y.png?x-oss-process=image/resize,h_329)
 
-8. 允许用户撤销操作而不是使用弹窗需要用户确认
+8.允许用户撤销操作而不是使用弹窗需要用户确认
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0202OLGbxUKK.png?x-oss-process=image/resize,h_329)
 
-9. 明确的告知用户适用人群而不是简单的面向所用用户
+9.明确的告知用户适用人群而不是简单的面向所用用户
 
 10.简洁明了，直接了当
 
@@ -76,7 +71,7 @@ Good UI是一家研究用户体验的设计机构。我们知道成功的页面�
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0204XAC5tm99.png?x-oss-process=image/resize,h_329)
 
-18. 在动作按钮上增加些吸引人的诱惑
+18.在动作按钮上增加些吸引人的诱惑
 
 ![](https://file.wulicode.com/yuque/202208/04/15/02052wZpDyAk.png?x-oss-process=image/resize,h_329)
 
@@ -88,11 +83,11 @@ Good UI是一家研究用户体验的设计机构。我们知道成功的页面�
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0205WY9Ys2Os.png?x-oss-process=image/resize,h_329)
 
-21. 用一些动效过度而不用立即显示变化
+21.用一些动效过度而不用立即显示变化
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0206EXn6sITu.png?x-oss-process=image/resize,h_329)
 
-22. 循序渐进的引导用户而非生硬的要求用户注册
+22.循序渐进的引导用户而非生硬的要求用户注册
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0206hTDLDRPt.png?x-oss-process=image/resize,h_329)
 
@@ -104,11 +99,11 @@ Good UI是一家研究用户体验的设计机构。我们知道成功的页面�
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0207Z4B5fVzJ.png?x-oss-process=image/resize,h_329)
 
-25. 用户没有使用记录的时候要善于引导
+25.用户没有使用记录的时候要善于引导
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0207hNqseIX4.png?x-oss-process=image/resize,h_329)
 
-26. 给出默认的选项而不需要用户选择
+26.给出默认的选项而不需要用户选择
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0207hqHZYTrb.png?x-oss-process=image/resize,h_329)
 
@@ -116,23 +111,23 @@ Good UI是一家研究用户体验的设计机构。我们知道成功的页面�
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0208eeFZ1vns.png?x-oss-process=image/resize,h_329)
 
-28. 自动补全一些数据，降低用户的操作负担
+28.自动补全一些数据，降低用户的操作负担
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0208QC0bxcG8.png?x-oss-process=image/resize,h_329)
 
-29. 尊重用户的使用习惯而不是创造新的规则
+29.尊重用户的使用习惯而不是创造新的规则
 
 ![](https://file.wulicode.com/yuque/202208/04/15/02080p6XWBIs.png?x-oss-process=image/resize,h_329)
 
-30. 提示用户如何规避风险，而不是总想着如何获利
+30.提示用户如何规避风险，而不是总想着如何获利
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0209qcLZZ1m9.png?x-oss-process=image/resize,h_329)
 
-31. 善于引导用户的视觉浏览线，而非单一布局
+31.善于引导用户的视觉浏览线，而非单一布局
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0209gjZqp1tU.png?x-oss-process=image/resize,h_329)
 
-32. 将相关的条目分组，不要杂乱无章的排列
+32.将相关的条目分组，不要杂乱无章的排列
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0209T6wTf53a.png?x-oss-process=image/resize,h_329)
 
@@ -148,31 +143,31 @@ Good UI是一家研究用户体验的设计机构。我们知道成功的页面�
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0210XKwUvZur.png?x-oss-process=image/resize,h_329)
 
-36. 适当尝试饥饿营销
+36.适当尝试饥饿营销
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0211UU4ckSSI.png?x-oss-process=image/resize,h_329)
 
-37. 帮助用户识别
+37.帮助用户识别
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0211eFzO50Q3.png?x-oss-process=image/resize,h_329)
 
-38. 使用更大的点击区域
+38.使用更大的点击区域
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0211YdEQpeH1.png?x-oss-process=image/resize,h_329)
 
-39. 增加加载的速度，别让用户等太久
+39.增加加载的速度，别让用户等太久
 
 ![](https://file.wulicode.com/yuque/202208/04/15/02124ZNVpxRs.png?x-oss-process=image/resize,h_329)
 
-40. 可以给用户提供一些快捷操作
+40.可以给用户提供一些快捷操作
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0212aa0CV22j.png?x-oss-process=image/resize,h_329)
 
-41. 使用一些对比
+41.使用一些对比
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0212txYzDxn4.png?x-oss-process=image/resize,h_329)
 
-42. 初始化的时候给用户一些激励
+42.初始化的时候给用户一些激励
 
 ![](https://file.wulicode.com/yuque/202208/04/15/02135JGdSZ3l.png?x-oss-process=image/resize,h_329)
 

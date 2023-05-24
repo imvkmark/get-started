@@ -405,17 +405,24 @@ const sidebar = {
                 createLink("WebStorm Tips", "/development/ide/webstorm-tips"),
             ],
         },
+
+        {
+            text: "运营相关",
+            items: [
+                createLink("robots 文档", "/development/op/robots"),
+            ],
+        },
+        {
+            text: "设计",
+            items: [
+                createLink("UI 交互手册", "/development/design/pc-ui-interact"),
+            ],
+        },
         {
             text: "正则表达式",
             items: [
                 createLink("正则手册", "/development/regex/"),
                 createLink("正则匹配中文", "/development/regex/zh-match"),
-            ],
-        },
-        {
-            text: "运营相关",
-            items: [
-                createLink("robots 文档", "/development/op/robots"),
             ],
         },
         {
@@ -518,6 +525,7 @@ const sidebar = {
             text: "Curl",
             items: [
                 createLink("安装最新的 cURL ", "/ops/curl/install-latest-at-centos"),
+                createLink("curl 请求另外一台机器", "/ops/curl/visit-another-host.md"),
             ],
         },
         {
@@ -530,6 +538,12 @@ const sidebar = {
             text: "Svn",
             items: [
                 createLink("在 CentOS 上安装 Svn", "/ops/svn/install-at-centos"),
+            ],
+        },
+        {
+            text: "软件",
+            items: [
+                createLink("日志切割(logrotate)操作梳理", "/ops/logrotate/introduction.md"),
             ],
         },
     ],
