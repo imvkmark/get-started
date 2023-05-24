@@ -418,6 +418,12 @@ const sidebar = {
                 createLink("robots 文档", "/development/op/robots"),
             ],
         },
+        {
+            text: "其他",
+            items: [
+                createLink("开发常用术语", "/development/tech/knowledge"),
+            ],
+        },
     ],
     "/department": [
         {
@@ -448,8 +454,16 @@ const sidebar = {
             items: [createLink("设计站点", "/mobile/design/site")],
         },
         {
+            text: "Android",
+            items: [createLink("MAC 下安装和配置 android-sdk", "/mobile/android/install-sdk-at-mac.md")],
+        },
+        {
             text: "iOS",
             items: [createLink("iOS - FAQ", "/mobile/ios/faq")],
+        },
+        {
+            text: "其他",
+            items: [createLink("使用模拟器调试手机浏览器", "/mobile/tech/debug-with-chrome.md")],
         },
     ],
     "/man/command": [
