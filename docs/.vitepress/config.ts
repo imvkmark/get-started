@@ -67,7 +67,14 @@ const sidebar = {
         { text: "Web开发", link: "/web/" },
         {
             text: "Http",
-            items: [createLink("FAQ", "/web/http/faq.md")],
+            items: [
+                createLink("缓存策略说明", "/web/http/cache"),
+                createLink("FAQ", "/web/http/faq"),
+            ],
+        },
+        {
+            text: "Html",
+            items: [createLink("Favicon", "/web/html/favicon")],
         },
     ],
     "/javascript": [
