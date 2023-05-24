@@ -5,3 +5,10 @@
 1. notion.so
 
 2. wulicode.com
+
+# 一些好的网站
+
+可以用来学习的
+
+- https://skyao.io/learning-macos/docs/programing/common/sdkman.html
+

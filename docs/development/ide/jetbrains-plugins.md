@@ -53,6 +53,16 @@
 > 
 > ---- [github](https://github.com/kalessil/phpinspectionsea)
 
+### 2. PHP Annotations - Php 注解
+
+> 让 phpstorm 支持注解
+> 
+—— [PHP Annotations - IntelliJ IDEA & PhpStorm Plugin | Marketplace](https://plugins.jetbrains.com/plugin/7320-php-annotations)
+
+
+![](https://file.wulicode.com/doc/20230524/1684924534862.png)
+
+
 ## 参考 & 相关阅读
 
 - [phpStorm 的常用插件收集](http://yzone.net/blog/140)

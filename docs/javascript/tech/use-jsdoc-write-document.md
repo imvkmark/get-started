@@ -251,7 +251,7 @@ jsdoc -c ./jsdoc-conf.json
 3. 推荐配置 markdown 插件，这对详细注释很有帮助。
 4. 遇到错误或奇怪的问题时，多查阅官方文档。[JSDoc 中文文档](http://www.css88.com/doc/jsdoc/)
 5. 理解名称路径，有利于书写和生成更合适的文档。
-6. ES6 模块化方式，某些情况下对导出模块的声明，可借助 [@alisas ](/alisas) 标签。示例
+6. ES6 模块化方式，某些情况下对导出模块的声明，可借助 `@alias` 标签。示例
 ```javascript
 /**
  * @file test

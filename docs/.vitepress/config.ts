@@ -60,6 +60,7 @@ const nav = [
             }
         ],
     },
+    { text: "关于", link: "/about-me" },
 ];
 
 const sidebar = {
@@ -516,5 +517,9 @@ export default defineConfig({
         editLink: {
             pattern: "https://github.com/imvkmark/get-started/edit/master/docs/:path",
         },
+        footer: {
+            message: 'Released under the CC License.<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">鲁ICP备13016276号-7</a>',
+            copyright: 'Copyright © 2015-present 多厘'
+        }
     },
 });
