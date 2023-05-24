@@ -1,16 +1,10 @@
----
-title: "扩展 : 异或加密 Xor"
-date: 2022-06-17 09:15:57
-toc: true
-categories:
-- ["Php","语言参考"]
----
+# 异或加密 Xor
 
-[异或加密[维基百科]](https://zh.m.wikipedia.org/zh-cn/%E5%BC%82%E6%88%96%E5%AF%86%E7%A0%81)
+::: info WIKI
+[异或加密](https://zh.m.wikipedia.org/zh-cn/%E5%BC%82%E6%88%96%E5%AF%86%E7%A0%81)
+:::
 
-![image.png](https://file.wulicode.com/yuque/202208/04/15/3354U9jBQ0h6.png?x-oss-process=image/resize,h_219)
-
-
+![image.png](https://file.wulicode.com/yuque/202208/04/15/3354U9jBQ0h6.png)
 
 ```php
 class XorEncrypt
@@ -27,6 +21,4 @@ class XorEncrypt
         return $str;
     }
 }
-
 ```
-

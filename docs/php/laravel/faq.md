@@ -1,10 +1,4 @@
----
-title: "Laravel Faq"
-date: 2022-04-20 19:01:04
-toc: true
-categories:
-- ["Php","Laravel"]
----
+# Laravel - FAQ
 
 ## Laravel 错误 Class log does not exist ...
 > Fatal error: Uncaught exception 'ReflectionException' with message 'Class log does not exist' in /Users/freek/dev/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php:776
@@ -33,4 +27,3 @@ categories:
 ## 参考文章:
 
 - [Class log does not exist](https://laracasts.com/discuss/channels/general-discussion/class-log-does-not-exist)
-

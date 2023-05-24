@@ -1,5 +1,12 @@
 # 加密扩展 - Mcrypt
 
+::: info 扩展阅读
+
+- [异或加密 Xor](../usage/cryptography-xor.md)
+- [使用 RSA 非对称加密进行数据加密传输](../usage/cryptography-rsa.md)
+
+:::
+
 mcrypt 库, 支持很大范围的算法, 如 TripleDES, Blowfish, 3-WAY, SAFER-SK64, SAFER-SK128, TWOFISH, TEA, C2, GOST IN CBC, OFB,CFB,ECB , RC6, IDEA,
 
 ## 安装
@@ -27,7 +34,8 @@ MCRYPT_DEV_RANDOM /dev/random MCRYPT_DEV_URANDOM /dev/urandom
 
 `string mcrypt_decrypt ( string $cipher , string $key , string $data , string $mode [, string $iv ] )`
 
-解密函数 - $cipher 解密 - $key 加密key - $data 需要解密的数据 - $mode 模式变量 ecb, cbc, cfb, ofb, nofb, stream - $iv CBC, CFB, OFB 或者 STREAM 的部分算法.如果一个算法需要一个 IV, 但是函数没有提供,将产生一个 警告,并且使用iv设置为 \0
+解密函数 - $cipher 解密 - $key 加密key - $data 需要解密的数据 - $mode 模式变量 ecb, cbc, cfb, ofb, nofb, stream - $iv CBC, CFB, OFB 或者 STREAM 的部分算法.如果一个算法需要一个
+IV, 但是函数没有提供,将产生一个 警告,并且使用iv设置为 \0
 
 `string mcrypt_enc_get_algorithms_name ( resource $td )`
 

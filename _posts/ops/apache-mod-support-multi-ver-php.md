@@ -39,7 +39,7 @@ php-fpm.conf
 
 修改配置目录下 `/php-fpm.d/www.conf`
 
-```conf
+```
 ; 进程池名称, 之前是 www
 [php56-fpm]
 ...

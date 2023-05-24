@@ -1,13 +1,6 @@
----
-title: "Snippets"
-date: 2022-04-14 23:18:12
-toc: true
-categories:
-- ["Php","语言参考"]
----
+# Php - FAQ
 
 ## _GET,_POST, _COOKIE的同名变量的处理
-
 
 
 ```php
@@ -74,4 +67,3 @@ if (count($rst) == 1) {
     }
 }
 ```
-

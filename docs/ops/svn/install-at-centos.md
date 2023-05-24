@@ -1,18 +1,8 @@
----
-title: "[转+] CentOS 7搭建SVN服务器"
-date: 2021-06-26 10:31:02
-toc: true
-categories:
-- ["Ops","CentOS"]
----
+# 「转+」 CentOS 7 搭建 SVN 服务器
 
 原文地址:[CentOS 7搭建SVN服务器](http://www.centoscn.com/CentosServer/ftp/2015/0622/5708.html)
 
 安装步骤如下：
-
-
-
-
 
 ### 安装 subversion
 
@@ -37,7 +27,6 @@ The following repository back-end (FS) modules are available:
 
 Cyrus SASL authentication is available.
 ```
-
 
 ### 创建版本库
 
@@ -91,7 +80,6 @@ $ svnadmin create /data/svn/tech
 └── README.txt
 ```
 
-
 ### 配置账号密码
 
 设置帐号密码
@@ -118,7 +106,6 @@ user01=rw
 
 这里的意思是根目录对 `user01` 用户可写,
 
-
 添加完成之后代码如下所示
 
 ```
@@ -129,7 +116,6 @@ user01=rw
 [/]  
 user01=rw
 ```
-
 
 ### 配置服务器信息
 
@@ -148,7 +134,6 @@ authz-db = authz      # 使用哪个文件作为权限文件
 realm = My Svn Repo   # 认证空间名
 ```
 
-
 ### 启动svn版本库
 
 ```
@@ -161,7 +146,6 @@ $ killall svnserve
 
 **（停止SVN命令  **killall svnserve**）
 
-
 ### 修改启动的端口号
 
 基于svnserve的，默认端口为3690，有时候，我们会因为防火墙或其它原因，需要修改这些默认端口。
@@ -173,7 +157,6 @@ $ killall svnserve
 为 `svnserve` 加上 `--listen-port` 参数，比如 `svnserve -d -r /data/svn/repos --listen-port 81`(注：--listen-port中间无隔)
 
 到此，在CentOS 7上搭建SVN服务器已经完成
-
 
 ## 安装 apache / dav 模块支持 apache 访问
 
@@ -202,7 +185,6 @@ svn 配置
     Require valid-user
 </Location>
 ```
-
 
 ### 附录
 

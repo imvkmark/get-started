@@ -169,6 +169,7 @@ const sidebar = {
             text: '其他',
             items: [
                 { text: '使用 Clockwork 调试 Php 应用', link: '/php/tech/using-clockwork-extension-for-debug.md' },
+                { text: 'FAQ', link: '/php/tech/faq.md' },
             ]
         },
         {
@@ -495,7 +496,13 @@ const sidebar = {
         {
             text: "Supervisor",
             items: [
-                createLink("安装/升级 supervisor", "/ops/supervisor/install-supervisor-at-centos"),
+                createLink("安装/升级 supervisor", "/ops/supervisor/install-at-centos"),
+            ],
+        },
+        {
+            text: "Svn",
+            items: [
+                createLink("在 CentOS 上安装 Svn", "/ops/svn/install-at-centos"),
             ],
         },
     ],
