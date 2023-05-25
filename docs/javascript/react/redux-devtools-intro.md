@@ -1,10 +1,4 @@
----
-title: "Redux DevTools 扩展的使用说明"
-date: 2021-06-26 10:44:57
-toc: true
-categories:
-- ["前端","React"]
----
+# 「译」Redux DevTools 扩展的使用说明
 
 > 原文：[Redux DevTools extension](https://github.com/zalmoxisus/redux-devtools-extension#usage)
 
@@ -14,16 +8,9 @@ categories:
 
 there is a warning ("Unresolved variable REDUX_DEVTOOLS_EXTENSION and REDUX_DEVTOOLS_EXTENSION) in webstorm
 
-
 类似这样的报错
 
-
-
-
-
-
 ## 安装
-
 
 ### 1. Chrome、Firefox
 
@@ -32,17 +19,13 @@ there is a warning ("Unresolved variable REDUX_DEVTOOLS_EXTENSION and REDUX_DEVT
 - [Chrome](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
 - [Firefox](https://addons.mozilla.org/en-US/firefox/addon/reduxdevtools/)
 
-
 ### 2. 其它浏览器和非浏览器环境
 
 - 使用[remote-redux-devtools](https://github.com/zalmoxisus/remote-redux-devtools)
 
-
 ## 用法
 
-
 ### 使用Redux
-
 
 #### 1). store普通用法 对于基础的redux store只加添加：
 
@@ -70,8 +53,6 @@ there is a warning ("Unresolved variable REDUX_DEVTOOLS_EXTENSION and REDUX_DEVT
 ```
 
 > 支持redux>=3.1.0 版本
-
-
 
 #### 2). store高级用法 如果store使用了中间件 `middleware` 和增强器 `enhaners`，代码要修改下：
 
@@ -102,7 +83,6 @@ const enhancer = composeEnhancers(
 
 const store = createStore(reducer, enhancer);
 ```
-
 
 #### 3). 使用`redux-devtools-extension`包 为了简化操作需要安装个npm包 `npm install --save-dev redux-devtools-extension` 使用
 
@@ -143,7 +123,6 @@ const store = createStore(reducer, /* preloadedState, */ devToolsEnhancer(
 ));
 ```
 
-
 #### 4). 在生产环境中使用 这个扩展在生产环境也是有用的，但一般都是在开发环境中使用它。 如果你想限制它的使用，可以用 `redux-devtools-extension/logOnlyInProduction`：
 
 ```
@@ -173,26 +152,25 @@ const store = createStore(reducer, /* preloadedState, */ composeEnhancers(
 > 你将不得不在 webpack 的生产环境打包配置中加上`process.env.NODE_ENV': JSON.stringify('production')`。如果你用的是`create-react-app`，那么它已经帮你配置好了
 
 
-如果你在创建store时检查过`process.env.NODE_ENV`，那么也包括了生产环境的`redux-devtools-extension/logOnly` 如果不想在生产环境使用扩展，那就只开启`redux-devtools-extension/developmentOnly`就好
+如果你在创建store时检查过`process.env.NODE_ENV`，那么也包括了生产环境的`redux-devtools-extension/logOnly`
+如果不想在生产环境使用扩展，那就只开启`redux-devtools-extension/developmentOnly`就好
 
 > 点击[文章](https://medium.com/@zalmoxis/using-redux-devtools-in-production-4c5b56c5600f)查看更多细节
 
-
-
 #### 5). 对于`react-native`, `hybrid`, `desktop` 和 服务端的redux应用程序
 
-- 
+-
+
 `react-native` 可以用和redux DevTools Extension一样api的react-native-debugger工具。
 
-- 
+-
+
 大多数平台，包括`remote redux devtool's` 的store增强器，可以通过扩展上下文的菜单中选择`'open remote devtools'` 来远程监控。
-
-
 
 ### 没有使用Redux
 
-关于怎么使用体系结构的扩展，请参考以下[集合链接](https://github.com/zalmoxisus/redux-devtools-extension/blob/master/docs/Integrations.md)和[博客文章](https://medium.com/@zalmoxis/redux-devtools-without-redux-or-how-to-have-a-predictable-state-with-any-architecture-61c5f5a7716f)
-
+关于怎么使用体系结构的扩展，请参考以下[集合链接](https://github.com/zalmoxisus/redux-devtools-extension/blob/master/docs/Integrations.md)
+和[博客文章](https://medium.com/@zalmoxis/redux-devtools-without-redux-or-how-to-have-a-predictable-state-with-any-architecture-61c5f5a7716f)
 
 ## 备注
 

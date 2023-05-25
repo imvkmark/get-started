@@ -1,16 +1,6 @@
----
-title: "基于 Umi & Ant Design Pro 的最佳实践"
-date: 2021-06-16 18:22:07
-toc: true
-categories:
-- ["前端","React"]
----
+# 基于 Umi & Ant Design Pro 的最佳实践
 
-本文是基于 : [https://www.yuque.com/duoli/web-fe/umi-best-practice](https://wulicode.com/web-fe/umi-best-practice.html) 的基础上发展出来的规范, 本文原则旨在之前文章的补充
-
-
-
-
+本文是基于 : [基于 Umi 的最佳实践](./umi-best-practice.md) 的基础上发展出来的规范, 本文原则旨在之前文章的补充
 
 ## 注意
 
@@ -40,7 +30,8 @@ $ yarn start
 ## 组件变化
 
 ### 移除 i18n 国际化组件
-```shell
+
+```
 $ yarn i18n-remove
 yarn run v1.22.5
 $ pro i18n-remove --locale=zh-CN --write
@@ -51,12 +42,14 @@ $ pro i18n-remove --locale=zh-CN --write
 ```
 
 ### 配置其支持加密和 Token
+
 在 app.tsx 中配置使用拦截器
 
 _app.tsx_
+
 ```javascript
 export const request: RequestConfig = {
-    ...
+    // ...
     requestInterceptors: [
         requestHeaderInterceptor
     ]
@@ -82,11 +75,12 @@ const requestHeaderInterceptor = (url: string, options: any) => {
     }
     return {
         url: `${url}`,
-        options: {...options, interceptors: true, headers}
+        options: { ...options, interceptors: true, headers }
     };
 }
 ```
-请求参考地址 : 
+
+请求参考地址 :
 
 - [Umi-Request @Github](https://github.com/umijs/umi-request/blob/master/README_zh-CN.md)
 - [@umijs/plugin-request](https://umijs.org/zh-CN/plugins/plugin-request)
@@ -95,5 +89,6 @@ const requestHeaderInterceptor = (url: string, options: any) => {
 - [ProV5 的开始使用](https://pro.ant.design/docs/getting-started-cn)
 
 ### 关于布局的联合使用
+
 Url : [https://procomponents.ant.design/components/layout](https://procomponents.ant.design/components/layout)
 

@@ -1,12 +1,4 @@
----
-title : "[转] 图解scrollHeight, clientHeight, offsetHeight, scrollTop 以及获取方法"
-date : 2021-06-14 15:06:00
-toc : true
-categories :
-  - [ "前端","其他" ]
----
-
-# [转] 图解scrollHeight, clientHeight, offsetHeight, scrollTop 以及获取方法
+# 「转」 图解scrollHeight, clientHeight, offsetHeight, scrollTop 以及获取方法
 
 原文地址 : ~~[图解scrollHeight, clientHeight, offsetHeight, scrollTop以及获取方法](https://www.jianshu.com/p/d267456ebc0d)~~
 
@@ -18,13 +10,9 @@ categories :
 
 ## 高度定义以及获取
 
-<a name="scrollHeight"></a>
-
 ### scrollHeight
 
 所有的内容（指图一图中有文字的红色框框内）和内边距，这个 **内容** 包括肉眼看不见、溢出、被窗口遮挡的部分；
-
-<a name="clientHeight"></a>
 
 ### clientHeight
 
@@ -56,4 +44,32 @@ const scrollTop = Math.max(document.documentElement.scrollTop, document.body.scr
 **原因**：
 
 用`Math.max()`方法是因为获取方法不兼容时，`scrollTop`始终为0，其他属性同理；
+
+## 补充说明
+
+### Client*
+
+clientHeight : 元素内部的高度(单位像素)，包含内边距，但不包括水平滚动条、边框和外边距
+
+clientWidth: 表示元素的内部宽度，以像素计。该属性包括内边距 padding，但不包括边框 border、外边距 margin 和垂直滚动条
+
+![image.png](https://file.wulicode.com/yuque/202208/04/23/1022LVjNi2SY.png?x-oss-process=image/resize,h_247)
+
+### Offset*
+
+offsetWidth :  包含元素的边框(border)、水平线上的内边距(padding)、竖直方向滚动条(scrollbar)（如果存在的话）、以及CSS设置的宽度(width)的值
+
+offsetHeight: 包括元素的边框、内边距和元素的水平滚动条（如果存在且渲染的话），不包含:before或:after等伪类元素的高度
+
+![image.png](https://file.wulicode.com/yuque/202208/04/23/1022e1KEPyi7.png?x-oss-process=image/resize,h_247)
+
+### Scroll*
+
+**scrollHeight : **一个元素内容高度的度量，包括由于溢出导致的视图中不可见内容, 在不使用滚动条的情况下为了适应视口中所用内容所需的最小高度
+
+![image.png](https://file.wulicode.com/yuque/202208/04/23/1023gW4vYe5y.png?x-oss-process=image/resize,h_413)
+
+### clientHeight, clientWidth, offSetHeight, offsetWidth, scrollHeight, scrollWidth, scrollTop, scrollLeft
+
+![image.png](https://file.wulicode.com/yuque/202208/04/23/1024momX0rqM.png?x-oss-process=image/resize,h_625)
 

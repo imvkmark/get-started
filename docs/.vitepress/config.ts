@@ -64,35 +64,6 @@ const nav = [
 ];
 
 const sidebar = {
-    "/web": [
-        { text: "Web开发", link: "/web/" },
-        {
-            text: "Http",
-            items: [
-                createLink("缓存策略说明", "/web/http/cache"),
-                createLink("FAQ", "/web/http/faq"),
-            ],
-        },
-        {
-            text: "Html",
-            items: [createLink("Favicon", "/web/html/favicon")],
-        },
-        {
-            text: "Api",
-            items: [createLink("ClientHeight/OffsetHeight 解释", "/web/api/element-client-offset")],
-        },
-        {
-            text: "Css",
-            items: [createLink("FAQ", "/web/css/faq")],
-        },
-        {
-            text: "技术",
-            items: [
-                createLink("请求加速最佳实践", "/web/tech/best-practice"),
-                createLink("安装 Sentry 进行错误/性能跟踪", "/web/tech/use-sentry-collect-trace-and-exception")
-            ],
-        },
-    ],
     "/javascript": [
         {
             text: "入门",
@@ -104,7 +75,29 @@ const sidebar = {
         },
         {
             text: "文档",
-            items: [createLink("使用 jsdoc 编写 api 文档", "/javascript/tech/use-jsdoc-write-document.md")],
+            items: [
+                createLink("使用 jsdoc 编写 api 文档", "/javascript/tech/use-jsdoc-write-document.md"),
+                createLink("怎样在 JavaScript 中检测 null", "/javascript/core/usage/type-null-how-to-check.md")
+            ],
+        },
+        {
+            text: "Npm/包管理",
+            items: [
+                createLink("RHEL8 安装 nodejs", "/javascript/npm/install-at-rhel8.md"),
+                createLink("Node 更换源使用国内镜像", "/javascript/npm/pkg-use-mirror.md"),
+                createLink("使用 pnpm 替代 yarn, npm", "/javascript/npm/pkg-use-pnpm.md"),
+                createLink("发布 npm 包 - FAQ", "/javascript/npm/publish-faq.md"),
+                createLink("NPM 版本控制", "/javascript/npm/version-intro.md"),
+                createLink("nvm：管理 Node.js 版本", "/javascript/npm/version-manager-nvm.md"),
+            ],
+        },
+        {
+            text: "React",
+            items: [
+                createLink("Redux DevTool 工具", "/javascript/react/redux-devtools-intro"),
+                createLink("基于 Umi 的最佳实践", "/javascript/react/umi-best-practice.md"),
+                createLink("基于 Umi/AntDesign 的最佳实践", "/javascript/react/umi-antd-best-practice.md"),
+            ],
         },
     ],
     "/java": [
@@ -344,6 +337,7 @@ const sidebar = {
             items: [
                 createLink("说明", "/python/"),
                 createLink("使用镜像, 加速安装", "/python/install/use-mirror-to-speed"),
+                createLink("CentOS 安装 Python", "/python/install/at-centos"),
             ],
         },
         {
@@ -480,7 +474,10 @@ const sidebar = {
         },
         {
             text: "其他",
-            items: [createLink("使用模拟器调试手机浏览器", "/mobile/tech/debug-with-chrome.md")],
+            items: [
+                createLink("使用模拟器调试手机浏览器", "/mobile/tech/debug-with-chrome.md"),
+                createLink("App 的崩溃率标准", "/mobile/tech/standard-for-best-app.md"),
+            ],
         },
     ],
     "/man/command": [
@@ -547,6 +544,36 @@ const sidebar = {
             text: "Nginx",
             items: [
                 createLink("在 RockyLinux9 上安装 Nginx", "/ops/nginx/install-at-rockylinux9.md"),
+            ],
+        },
+    ],
+    "/web": [
+        { text: "Web开发", link: "/web/" },
+        {
+            text: "Http",
+            items: [
+                createLink("缓存策略说明", "/web/http/cache"),
+                createLink("前端跨域整理", "/web/http/cors-intro"),
+                createLink("FAQ", "/web/http/faq"),
+            ],
+        },
+        {
+            text: "Html",
+            items: [createLink("Favicon", "/web/html/favicon")],
+        },
+        {
+            text: "Api",
+            items: [createLink("ClientHeight/OffsetHeight 解释", "/web/api/element-client-offset")],
+        },
+        {
+            text: "Css",
+            items: [createLink("FAQ", "/web/css/faq")],
+        },
+        {
+            text: "技术",
+            items: [
+                createLink("请求加速最佳实践", "/web/tech/best-practice"),
+                createLink("安装 Sentry 进行错误/性能跟踪", "/web/tech/use-sentry-collect-trace-and-exception")
             ],
         },
     ],

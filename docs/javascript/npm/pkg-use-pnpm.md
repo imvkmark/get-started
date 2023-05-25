@@ -1,10 +1,4 @@
----
-title: "使用 pnpm 替代 yarn, npm"
-date: 2022-04-20 19:01:14
-toc: true
-categories:
-- ["前端","包管理"]
----
+# 使用 pnpm 替代 yarn, npm
 
 pnpm 的优势不用多说, 懂得自然了解了, 不懂的去官网看下他们的介绍 [项目初衷 | pnpm](https://pnpm.io/zh/motivation) 这里主要的目的是使用 pnpm 替换掉 yarn 和 npm
 

@@ -1,15 +1,14 @@
 ---
-title: "在 CentOS7 中安装和切换 Java"
-date: 2022-09-22 21:22:24
-toc: true
-categories:
-- ["Lang","Java","安装"]
+title : "在 CentOS7 中安装和切换 Java"
+date : 2022-09-22 21:22:24
+toc : true
+categories :
+  - [ "Lang","Java","安装" ]
 ---
 
 ## 安装
+
 搜寻可用的 Java SDK
-
-
 
 ```
 # yum search openjdk 
@@ -26,7 +25,9 @@ java-11-openjdk.x86_64 : OpenJDK 11 Runtime Environment
 java-latest-openjdk.x86_64 : OpenJDK 18 Runtime Environment
 ...
 ```
+
 安装指定的版本
+
 ```
 # yum install java-11-openjdk
 ...
@@ -42,7 +43,9 @@ java-latest-openjdk.x86_64 : OpenJDK 18 Runtime Environment
 
 完毕！
 ```
+
 切换不同的 Java 版本
+
 ```
 # alternatives --config java
 
@@ -57,9 +60,11 @@ java-latest-openjdk.x86_64 : OpenJDK 18 Runtime Environment
 ```
 
 ## 卸载
+
 找到安装的 java 以及相关的包, 仅仅使用 `yum remove java-11-openjdk`是删除不掉执行包的, 执行包的位置在 `/usr/lib/jvm/`目录, 所以我们匹配出来安装的包, 然后进行移除
 
 找到已经安装的包
+
 ```
 # rpm -qa | grep java
 javapackages-tools-3.4.1-11.el7.noarch
@@ -70,7 +75,9 @@ python-javapackages-3.4.1-11.el7.noarch
 tzdata-java-2022c-1.el7.noarch
 java-11-openjdk-headless-11.0.16.1.1-1.el7_9.x86_64
 ```
+
 移除相关的包
+
 ```
 # yum remove java-11-openjdk
 # yum remove java-11-openjdk-headless
