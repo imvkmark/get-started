@@ -191,6 +191,12 @@ const sidebar = {
     ],
     "/php/refs": [
         {
+            text: '语言参考',
+            items: [
+                { text: '流程控制', link: '/php/refs/language/control-structures' },
+            ]
+        },
+        {
             text: '影响 PHP 行为的扩展',
             items: [
                 { text: '错误处理', link: '/php/refs/affect-php-behaviour/error-handling' },
@@ -522,28 +528,21 @@ const sidebar = {
             ],
         },
         {
-            text: "Curl",
+            text: "软件",
             items: [
                 createLink("安装最新的 cURL ", "/ops/curl/install-latest-at-centos"),
                 createLink("curl 请求另外一台机器", "/ops/curl/visit-another-host.md"),
-            ],
-        },
-        {
-            text: "Supervisor",
-            items: [
-                createLink("安装/升级 supervisor", "/ops/supervisor/install-at-centos"),
-            ],
-        },
-        {
-            text: "Svn",
-            items: [
+                createLink("supervisor 介绍", "/ops/supervisor/introduction"),
+                createLink("CentOS 安装/升级 supervisor", "/ops/supervisor/install-at-centos"),
+                createLink("Mac 安装 supervisor", "/ops/supervisor/install-at-mac"),
                 createLink("在 CentOS 上安装 Svn", "/ops/svn/install-at-centos"),
+                createLink("日志切割(logrotate)操作梳理", "/ops/logrotate/introduction.md"),
             ],
         },
         {
-            text: "软件",
+            text: "Nginx",
             items: [
-                createLink("日志切割(logrotate)操作梳理", "/ops/logrotate/introduction.md"),
+                createLink("在 RockyLinux9 上安装 Nginx", "/ops/nginx/install-at-rockylinux9.md"),
             ],
         },
     ],

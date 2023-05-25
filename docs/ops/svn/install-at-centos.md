@@ -190,7 +190,7 @@ svn 配置
 
 `conf/svnserve.conf` 文件
 
-```conf
+```
 ### This file controls the configuration of the svnserve daemon, if you
 ### use it to allow access to this repository.  (If you only allow
 ### access through http: and/or file: URLs, then this file is

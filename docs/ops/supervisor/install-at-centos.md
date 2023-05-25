@@ -1,4 +1,4 @@
-# Centos 使用 pip3 安装-升级 supervisor
+# Centos 使用 pip3 安装/升级 supervisor
 
 > 安装的时候, 因为国内外访问环境不同, 可能会出现国内访问速度慢情况,
 > 可以考虑更换源 —- [更换镜像源 , 加速 python 安装](../../python/install/use-mirror-to-speed.md)
@@ -135,7 +135,7 @@ username=your_username
 password=your_password
 ```
 
-Nginx默认的http协议为http 1.0，其中http 1.0与1.1最大的区别在于1.0 是不支持keep-alive的，但是supervisor的输出日志是需要keep-alive，所以需要启用 http
+Nginx 默认的 http 协议为 http 1.0，其中http 1.0与1.1最大的区别在于1.0 是不支持keep-alive的，但是supervisor的输出日志是需要keep-alive，所以需要启用 http
 1.1，同时要支持keep-alive
 
 ```
