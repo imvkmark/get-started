@@ -99,6 +99,10 @@ const sidebar = {
             items: [createLink("说明", "/javascript/")],
         },
         {
+            text: "数据类型",
+            items: [createLink("null, undefined, bool", "/javascript/core/2-types/2-null-undefined-bool.md")],
+        },
+        {
             text: "文档",
             items: [createLink("使用 jsdoc 编写 api 文档", "/javascript/tech/use-jsdoc-write-document.md")],
         },

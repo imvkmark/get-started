@@ -66,5 +66,5 @@
 ## 参考 & 相关阅读
 
 - [phpStorm 的常用插件收集](http://yzone.net/blog/140)
-- [[译] 常用 Phpstorm tips](https://wulicode.com/php/jetbrains-tips.html)
+- [「译」 常用 Phpstorm tips](https://wulicode.com/php/jetbrains-tips.html)
 

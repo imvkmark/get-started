@@ -6,7 +6,7 @@ categories:
 - ["前端","包管理"]
 ---
 
-关于如何发布可以查看  [[译] 创建并发布一个小而美的 npm 包 - 掘金](https://juejin.im/post/6844903751833092104)
+关于如何发布可以查看  [「译」 创建并发布一个小而美的 npm 包 - 掘金](https://juejin.im/post/6844903751833092104)
 
 关于如何搭建一个 npm 包并进行单元测试, 这里有个解决方案 [jslib-base](https://github.com/yanhaijing/jslib-base/blob/master/README.zh-CN.md)
 

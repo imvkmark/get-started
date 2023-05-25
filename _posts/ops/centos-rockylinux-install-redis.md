@@ -1,5 +1,5 @@
 ---
-title: "[译] 在 CentOS 7/RockyLinux 上安装和配置 Redis"
+title: "「译」 在 CentOS 7/RockyLinux 上安装和配置 Redis"
 date: 2022-04-20 19:00:53
 toc: true
 categories:

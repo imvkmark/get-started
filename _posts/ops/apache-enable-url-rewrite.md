@@ -1,5 +1,5 @@
 ---
-title: "[译] Apache 使用 MOD_REWRITE 启用 url rewrite/url重写"
+title: "「译」 Apache 使用 MOD_REWRITE 启用 url rewrite/url重写"
 date: 2022-04-14 22:26:29
 toc: true
 categories:

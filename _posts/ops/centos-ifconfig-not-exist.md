@@ -1,5 +1,5 @@
 ---
-title: "[译] ifconfig 命令在 CentOS 7 中不存在"
+title: "「译」 ifconfig 命令在 CentOS 7 中不存在"
 date: 2021-06-26 10:31:19
 toc: true
 categories:
