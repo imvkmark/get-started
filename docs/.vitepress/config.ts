@@ -99,6 +99,12 @@ const sidebar = {
                 createLink("基于 Umi/AntDesign 的最佳实践", "/javascript/react/umi-antd-best-practice.md"),
             ],
         },
+        {
+            text: "Taro",
+            items: [
+                createLink("FAQ", "/javascript/taro/faq"),
+            ],
+        },
     ],
     "/java": [
         {
