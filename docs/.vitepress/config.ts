@@ -497,6 +497,7 @@ const sidebar = {
                 createLink("chown", "/man/command/chown.1"),
                 createLink("localectl", "/man/command/localectl.1"),
                 createLink("ssh-keygen", "/man/command/ssh-keygen.1"),
+                createLink("tee", "/man/command/tee.1"),
                 createLink("truncate", "/man/command/truncate.1"),
             ],
         },
