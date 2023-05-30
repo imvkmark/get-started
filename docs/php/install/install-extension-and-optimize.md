@@ -1,4 +1,4 @@
-# 使用 pecl 安装 Php 扩展
+# Php 安装扩展和优化
 
 > 环境: 当前执行环境为 7.4, 同时也适用于 8
 >
@@ -86,7 +86,6 @@ $ pecl install swoole
 
 ![](https://file.wulicode.com/doc/20230508/1683541593696.png)
 
-
 ```
 $ pecl install swoole-4.8.13
 ```
@@ -101,7 +100,7 @@ install ok: channel://pecl.php.net/swoole-4.8.12
 Extension swoole enabled in php.ini
 ```
 
-### 相关支持
+**相关支持**
 
 在安装的时候会询问是否安装相关支持
 
@@ -115,7 +114,7 @@ enable curl support? [no] :
 enable cares support? [no] : 
 ```
 
-### 报错信息
+**报错信息**
 
 **openssl/ssl.h 缺失**
 
@@ -137,3 +136,48 @@ ERROR: `make' failed
 ```
 enable openssl support? [no] : yes --with-openssl-dir=/usr/local/opt/openssl@1.1
 ```
+
+## 性能优化
+
+### 开启脚本缓存(opcode)
+
+安装 opcache
+
+### 安装应用缓存/内容缓存
+
+安装 redis 缓存数据库
+
+### 使用 imagemagick 替代 gd
+
+用以提升性能
+
+### Swap 推荐值
+
+| 物理内存 | Swap  |
+|------|-------|
+| 512M | 1024M |
+| 1GB  | 1500M |
+| 2GB  | 2048M |
+| 4GB  | 4096M |
+| 6GB+ | 4096M |
+
+### PHP 并发建议
+
+| CPU/内存  | 单站点     | 多站点     |
+|---------|---------|---------|
+| 1H/512M | 20-30   | 10-20   |
+| 1H/1G   | 30-50   | 20-30   |
+| 2H/2G   | 50-80   | 30-50   |
+| 2H/4G   | 60-100  | 30-50   |
+| 4H/4G   | 100-150 | 30-80   |
+| 4H/8G   | 100-200 | 30-80   |
+| 6H/6G   | 100-200 | 30-80   |
+| 8H/8G   | 100-300 | 50-100  |
+| 8H/16G  | 100-300 | 100-150 |
+| 16H/16G | 100-300 | 100-150 |
+
+### MySQL 数据库版本建议
+
+| CPU/内存  | 数据库              |
+|---------|------------------|
+| 4H/4G+  | MySQL5.5/5.6/5.7 |

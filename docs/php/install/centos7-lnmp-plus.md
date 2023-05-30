@@ -264,7 +264,7 @@ server{
 $ yum install --enablerepo=remi-php74 php php-pdo php-fpm php-mbstring php-pecl-mcrypt php-gd php-mysqli php-zip php-bcmath php-xml
 ```
 
-如果需要安装其他扩展可以参考 [使用 pecl 安装 Php 扩展](./pecl-install-extension.md)
+如果需要安装其他扩展可以参考 [安装 Php 扩展和优化](./install-extension-and-optimize.md)
 
 **配置 php-fpm 权限**
 
