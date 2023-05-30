@@ -1,0 +1,23 @@
+{
+    "autoload": {
+        "classmap": [
+        ],
+        "psr-4": {
+            "Php\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+        ],
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "require": {
+        "ext-json": "*",
+        "bramus/router": "^1.6",
+        "nesbot/carbon": "^2.64",
+        "symfony/finder": "^5.4",
+        "laravel/helpers": "^1.6"
+    }
+}

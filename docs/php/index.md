@@ -8,13 +8,17 @@ hero :
     -
       theme : alt
       text : 函数参考
-      link : /php/refs/affect-php-behaviour/error-handling
+      link : /php/refs/language/intro
     -
       theme : alt
       text : 入门
-      link : /php/install/mac-lnmp
+      link : /php/_started/readme
     -
       theme : alt
-      text : Awesome
-      link : #
+      text : Awesome Php
+      link : /awesome/language/php
+    -
+      theme : alt
+      text : Awesome Laravel
+      link : /awesome/language/php-laravel
 ---

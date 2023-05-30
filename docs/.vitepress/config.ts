@@ -153,6 +153,10 @@ const sidebar = {
     ],
     "/php": [
         {
+            text: 'Get Started',
+            link: '/php/get-started/readme'
+        },
+        {
             text: '安装',
             items: [
                 { text: 'Mac 安装 LNMP', link: '/php/install/mac-lnmp' },
@@ -203,6 +207,7 @@ const sidebar = {
         {
             text: '语言参考',
             items: [
+                { text: '入门', link: '/php/refs/language/intro' },
                 { text: '流程控制', link: '/php/refs/language/control-structures' },
             ]
         },
