@@ -1,7 +1,8 @@
 ---
-#layout : page
+layout : doc
 
-aside : 'left'
+#aside : false
+#outline: false
 
 hero :
   name : "运维"
@@ -13,6 +14,7 @@ hero :
       link : /ops/centos/upgrade-at-7
 ---
 
+
 # 运维
 
 ## Mac
@@ -21,7 +23,7 @@ hero :
 
 ## CentOS
 
-- [升级和完善系统]
+- [升级和完善系统](./centos/upgrade-at-7.md)
 
 ## 软件
 
@@ -32,4 +34,7 @@ hero :
 ### cURL
 
 [安装/升级](./curl/install-latest-at-centos.md)
+
+## Solution
+
 

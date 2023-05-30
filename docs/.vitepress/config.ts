@@ -23,8 +23,8 @@ const nav = [
         text: "开发",
         activeMatch: `^/web|development/`,
         items: [
-            { text: "Web开发", link: "/web/" },
-            { text: "工具资源", link: "/development/tools/sdkman" },
+            { text: "Web", link: "/web/" },
+            { text: "资源", link: "/development/tools/sdkman" },
             { text: "手机端", link: "/mobile/design/site" },
             { text: "运维", link: "/ops/centos/upgrade-at-7" },
             { text: "部门", link: "/department/test/auto-seldom" },
@@ -57,6 +57,12 @@ const nav = [
                     { text: '产品大牛', link: 'https://pmdaniu.com' },
                     { text: 'Wulihub', link: 'https://wulihub.com.cn' },
                 ]
+            },
+            {
+                text: 'Wait List',
+                items: [
+                    { text: 'WIP', link: '/wait-list' },
+                ]
             }
         ],
     },
@@ -83,6 +89,7 @@ const sidebar = {
         {
             text: "Npm/包管理",
             items: [
+                createLink("说明", "/javascript/npm/"),
                 createLink("RHEL8 安装 nodejs", "/javascript/npm/install-at-rhel8.md"),
                 createLink("Node 更换源使用国内镜像", "/javascript/npm/pkg-use-mirror.md"),
                 createLink("使用 pnpm 替代 yarn, npm", "/javascript/npm/pkg-use-pnpm.md"),
@@ -476,7 +483,10 @@ const sidebar = {
         },
         {
             text: "iOS",
-            items: [createLink("iOS - FAQ", "/mobile/ios/faq")],
+            items: [
+                createLink("iOS - 介绍", "/mobile/ios/"),
+                createLink("iOS - FAQ", "/mobile/ios/faq"),
+            ],
         },
         {
             text: "其他",
