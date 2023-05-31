@@ -1,16 +1,7 @@
----
-title : ""
-date : 2022-08-06 17:30:29
-toc : true
-categories :
-  - [ "手机端","Android" ]
----
-
 # MAC OS下使用 Homebrew 安装和配置 android-sdk
 
 之前的方式是使用 brew 进行安装, 但是之后官方好像不进行维护了
 > android-sdk has been officially discontinued upstream. It may stop working correctly (or at all) in recent versions of macOS.
-
 
 ## 安装 Android Studio
 
@@ -18,8 +9,7 @@ categories :
 
 打开之后要求设置 sdk 的位置, 我们根据他的要求进行设定
 
-[![](https://file.wulicode.com/yuque/202208/24/23/1947o9vWdBA4.png?x-oss-process=image/resize,h_155)](https://cdn.nlark.com/yuque/0/2022/png/87644/1659778228592-db085051-3bf2-4b5f-9cb2-0375e2e7fb9c.png)
-<a name="c7d77a32-9e14-4243-bece-47e3f9974170"></a>
+![](https://file.wulicode.com/yuque/202208/24/23/1947o9vWdBA4.png?x-oss-process=image/resize,h_155)
 
 ## 配置 bash/zshrc
 

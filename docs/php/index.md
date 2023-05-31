@@ -12,7 +12,7 @@ hero :
     -
       theme : alt
       text : 入门
-      link : /php/_started/readme
+      link : /php/install/mac-lnmp
     -
       theme : alt
       text : Awesome Php

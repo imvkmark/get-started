@@ -1,12 +1,6 @@
----
-title: "Cocoa and Object-C Cookbook"
-date: 2022-04-14 22:08:55
-toc: true
-categories:
-- ["手机端","ios","CocoaPods"]
----
+# Cocoa and Object-C Cookbook
 
-![](https://file.wulicode.com/yuque/202208/04/15/0124ru0Voi4Y.png?x-oss-process=image/resize,h_186)
+![](https://file.wulicode.com/yuque/202208/04/15/0124ru0Voi4Y.png)
 
 cocoa and Oc Cookbook
 

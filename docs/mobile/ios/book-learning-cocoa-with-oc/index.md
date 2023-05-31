@@ -1,12 +1,6 @@
----
-title: "Learning Cocoa with Objective-C"
-date: 2022-04-14 22:11:55
-toc: true
-categories:
-- ["手机端","ios","CocoaPods"]
----
+# Learning Cocoa with Objective-C
 
-![](https://file.wulicode.com/yuque/202208/04/23/0911UQuS6mlc.png?x-oss-process=image/resize,h_592)
+![](https://file.wulicode.com/yuque/202208/04/23/0911UQuS6mlc.png)
 
 1. Cocoa 开发工具
 

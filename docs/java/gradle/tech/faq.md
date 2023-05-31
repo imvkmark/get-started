@@ -47,7 +47,7 @@ org.gradle.jvmargs=-DsocksProxyHost=127.0.0.1 -DsocksProxyPort=1087
 $ ~/.gradle/wrapper/dists/gradle-5.1.1-all/97z1ksx6lirer3kbvdnh7jtjg/
 ```
 
-### 耐心等待
+**耐心等待**
 
 等待构建
 

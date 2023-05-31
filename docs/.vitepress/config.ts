@@ -153,10 +153,6 @@ const sidebar = {
     ],
     "/php": [
         {
-            text: 'Get Started',
-            link: '/php/get-started/readme'
-        },
-        {
             text: '安装',
             items: [
                 { text: 'Mac 安装 LNMP', link: '/php/install/mac-lnmp' },
@@ -484,13 +480,19 @@ const sidebar = {
         },
         {
             text: "Android",
-            items: [createLink("MAC 下安装和配置 android-sdk", "/mobile/android/install-sdk-at-mac.md")],
+            items: [
+                createLink("MAC 下安装和配置 android-sdk", "/mobile/android/install-sdk-at-mac.md"),
+                createLink("Android Gradle 自动化打包", "/mobile/android/auto-build-use-gradle.md"),
+                createLink("面试题 v1", "/mobile/android/interview-question-v1.md"),
+            ],
         },
         {
             text: "iOS",
             items: [
                 createLink("iOS - 介绍", "/mobile/ios/"),
                 createLink("iOS - FAQ", "/mobile/ios/faq"),
+                createLink("Universal Links", "/mobile/ios/universal-links"),
+                createLink("CocoaPods 介绍", "/mobile/ios/cocoapods"),
             ],
         },
         {
@@ -498,6 +500,8 @@ const sidebar = {
             items: [
                 createLink("使用模拟器调试手机浏览器", "/mobile/tech/debug-with-chrome.md"),
                 createLink("App 的崩溃率标准", "/mobile/tech/standard-for-best-app.md"),
+                createLink("「Cocoa and Object-C Cookbook」", "/mobile/ios/book-cocoa-and-oc-cookbook/"),
+                createLink("「Learning Cocoa with Objective-C」", "/mobile/ios/book-learning-cocoa-with-oc/"),
             ],
         },
     ],
