@@ -640,7 +640,7 @@ export default defineConfig({
         },
         nav,
         sidebar,
-        socialLinks: [{ icon: "github", link: "https://github.com/imvkmark" }],
+        socialLinks: [{ icon: "github", link: "https://github.com/imvkmark/get-started" }],
         editLink: {
             pattern: "https://github.com/imvkmark/get-started/edit/master/docs/:path",
         },
