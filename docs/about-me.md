@@ -37,7 +37,7 @@ $ node -v
 
 ## 赞赏
 
-![](https://file.wulicode.com/doc/20230531/1685531579752.png)
+![](https://file.wulicode.com/doc/20230531/1685531579752.png?x-oss-process=image/resize,h_315)
 
 
 ## 联系方式
