@@ -9,7 +9,7 @@ source : [awesome](https://github.com/sindresorhus/awesome)
 ## 编程语言
 
 - [PHP](./language/php.md)
-  - [Laravel](./language/php-laravel.md)
+    - [Laravel](./language/php-laravel.md)
 
 ## 前端开发
 
@@ -29,6 +29,7 @@ source : [awesome](https://github.com/sindresorhus/awesome)
 
 ## 开发环境
 
+- [Github](./development-environment/github.md) - Git 仓库托管服务
 - [Git Add-ons](./development-environment/git-addons.md) - `git` 命令行增强
 
 ## 娱乐
@@ -60,5 +61,7 @@ source : [awesome](https://github.com/sindresorhus/awesome)
 ## 测试
 
 ## 杂项
+
+- [Vitepress](./miscellaneous/vitepress.md)
 
 ## 相关
