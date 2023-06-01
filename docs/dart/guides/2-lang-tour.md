@@ -17,6 +17,7 @@
 除了 null 之外, 所有的类型都是对象, 以下是建议的定义方式
 
 ```dart
+
 var name = 'duoli';
 ```
 
@@ -28,12 +29,17 @@ var name = 'duoli';
 int? lineNumber;
 
 // assert 在生产环境会被忽略, 开发过程中如果数据不符会抛出异常
-assert(lineCount == null);
+assert(
+lineCount
+==
+null
+);
 ```
 
 启用空安全之后所有的变量必须设置初始值
 
 ```dart
+
 int lineNumber = 1;
 ```
 
@@ -65,20 +71,104 @@ class Point{
 ```
 
 ```dart
+
 const bar = 10000;
 const foo = bar * 3.14;
 
 // 可以被更改
-var foo = const 3.14;
+var foo = const
+3.14;
 ```
 
-> [WIP] 如果使用 const 修饰类中的变量，则必须加上 static 关键字，即 static const
+> 如果使用 const 修饰类中的变量，则必须加上 static 关键字，即 static const
+
+## 2.3 内置类型
+
+### 2.3.1 Numbers
+
+```dart
+
+var x = 1;
+var hex = 0xEABCDE;
+
+var f = 1.1;
+var exp = 1.42e5;
+
+num x = 1; // x 同时有 int 和 double 两个 value
+x += 2.5;
+
+// 整数字面量可以赋值给 double
+double z = 1;
+```
+
+下面是数字和字符串的转换
+
+```
+// String -> int
+var one = int.parse('1');
+assert(one == 1);
+
+// String -> double
+var onePointOne = double.parse('1.1');
+assert(onePointOne == 1.1);
+
+// int -> String
+String oneAsString = 1.toString();
+assert(oneAsString == '1');
+
+// double -> String
+String piAsString = 3.14159.toStringAsFixed(2);
+assert(piAsString == '3.14');
+```
+
+常量的定义, 操作数是常量, 则结果也是编译时常量, 也是说只有常量的拼合才能为常量
+
+```
+const msPerSecond = 1000;
+const secondsUntilRetry = 5;
+const msUntilRetry = secondsUntilRetry * msPerSecond;
+```
+
+### 2.3.2 字符串
+
+```
+var s = 'string'
+
+var s = "hello world"
+
+var h = 'hello'
+var s = '$h world'
+
+var s = '${h.substring(1, 2)} world' 
+
+var h = s + 'some' // + 拼合
+
+var mlines = """
+多行的数据
+"""
+
+var mlines = '''
+多行的数据
+'''
+
+var s = r'I am raw string \n, not escaped'
+```
+
+### 2.3.3 布尔类型
+
+布尔值需要显示的调用, 而不允许, `if(nonbooleanValue)` 此类的调用
+
+### 2.3.4 Lists
+
+```
+var list = [1, 2, 3]
+```
 
 ### 流程控制
 
 ```dart
 for (final object in flybyObjects) {
-  print(object);
+print(object);
 }
 ```
 
@@ -145,7 +235,10 @@ class Spacecraft {
     // Type promotion doesn't work on getters.
     var launchDate = this.launchDate;
     if (launchDate != null) {
-      int years = DateTime.now().difference(launchDate).inDays ~/ 365;
+      int years = DateTime
+          .now()
+          .difference(launchDate)
+          .inDays ~/ 365;
       print('Launched: $launchYear ($years years ago)');
     } else {
       print('Unlaunched');
@@ -172,8 +265,7 @@ enum Planet {
   neptune(planetType: PlanetType.ice, moons: 14, hasRings: true);
 
   /// 实例生成器
-  const Planet(
-      {required this.planetType, required this.moons, required this.hasRings});
+  const Planet({required this.planetType, required this.moons, required this.hasRings});
 
   /// 所有实例变量都是 final 类型
   final PlanetType planetType;
@@ -189,10 +281,11 @@ enum Planet {
 增强型枚举的引用
 
 ```dart
+
 final yourPlanet = Planet.earth;
 
 if (!yourPlanet.isGiant) {
-  print('Your planet is not a "giant planet".');
+print('Your planet is not a "giant planet".');
 }
 ```
 
@@ -257,6 +350,7 @@ abstract class Describable {
 使用 `async` 和 `await` 可以避免回调地狱, 并使代码具有可读性
 
 ```dart
+
 const oneSecond = Duration(seconds: 1);
 // ···
 Future<void> printWithDelay(String message) async {
@@ -304,7 +398,7 @@ Stream<String> report(Spacecraft craft, Iterable<String> objects) async* {
 
 ```dart
 if (astronauts == 0) {
-  throw StateError('No astronauts.');
+throw StateError('No astronauts.');
 }
 ```
 

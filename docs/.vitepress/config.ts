@@ -369,8 +369,11 @@ const sidebar = {
             ],
         },
         {
-            text: "Awesome",
-            items: [createLink("Pydash 中文文档", "/python/a_vendor/pydash")],
+            text: "模块",
+            items: [
+                createLink("urllib - Url 处理模块", "/python/library/internet-urllib"),
+                createLink("Pydash 中文文档", "/python/package/pydash"),
+            ],
         },
     ],
     "/dart": [
