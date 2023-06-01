@@ -83,6 +83,7 @@ const sidebar = {
             text: "文档",
             items: [
                 createLink("使用 jsdoc 编写 api 文档", "/javascript/tech/use-jsdoc-write-document.md"),
+                createLink("Eslint 入门", "/javascript/tech/eslint"),
                 createLink("怎样在 JavaScript 中检测 null", "/javascript/core/usage/type-null-how-to-check.md")
             ],
         },
