@@ -583,6 +583,7 @@ const sidebar = {
                 createLink("Mac 安装 supervisor", "/ops/supervisor/install-at-mac"),
                 createLink("在 CentOS 上安装 Svn", "/ops/svn/install-at-centos"),
                 createLink("日志切割(logrotate)操作梳理", "/ops/logrotate/introduction.md"),
+                createLink("设置 SSH 安全通过密钥,免密码登录服务器或拉取代码", "/ops/ssh/use-ssh-login-and-deploy.md"),
             ],
         },
     ],

@@ -1,26 +1,21 @@
----
-title: "设置 SSH 安全通过密钥,免密码登录服务器或拉取代码"
-date: 2022-05-06 19:54:19
-toc: true
-categories:
-- ["Ops","Linux","SSH "]
----
+# 设置 SSH 安全通过密钥,免密码登录服务器或拉取代码
 
-我们一般使用 PuTTY 等 SSH 客户端来远程管理 Linux 服务器。但是，一般的密码方式登录，容易有密码被暴力破解的问题。所以，一般我们会将 SSH 的端口设置为默认的 22 以外的端口，或者禁用 root 账户登录。其实，有一个更好的办法来保证安全，而且让你可以放心地用 root 账户从远程登录——那就是通过密钥方式登录。
+我们一般使用 PuTTY 等 SSH 客户端来远程管理 Linux 服务器。但是，一般的密码方式登录，容易有密码被暴力破解的问题。所以，一般我们会将 SSH 的端口设置为默认的 22
+以外的端口，或者禁用 root 账户登录。其实，有一个更好的办法来保证安全，而且让你可以放心地用 root 账户从远程登录——那就是通过密钥方式登录。
 
-密钥形式登录的原理是：利用密钥生成器制作一对密钥——一只公钥和一只私钥。将公钥添加到服务器的某个账户上，然后在客户端利用私钥即可完成认证并登录。这样一来，没有私钥，任何人都无法通过 SSH 暴力破解你的密码来远程登录到系统。此外，如果将公钥复制到其他账户甚至主机，利用私钥也可以登录。
+密钥形式登录的原理是：利用密钥生成器制作一对密钥——一只公钥和一只私钥。将公钥添加到服务器的某个账户上，然后在客户端利用私钥即可完成认证并登录。这样一来，没有私钥，任何人都无法通过
+SSH 暴力破解你的密码来远程登录到系统。此外，如果将公钥复制到其他账户甚至主机，利用私钥也可以登录。
 > 这个方式同样可以拉取 git 代码, 后续会附上如何在 coding 中配置公钥
 
-
-
-
-
 ## 1. 制作密钥
+
 下面来讲解如何在 Linux 服务器上制作密钥对，将公钥添加给账户，设置 SSH，最后通过客户端登录。
 
 ### 1) 制作密钥对
-首先在服务器上制作密钥对。首先用密码登录到你打算使用密钥登录的账户，然后执行以下命令： 
-> 对于 Centos 版本比较高的系统, 需要使用长度较长的密钥, 可能比较弱的密钥在高版本系统中根本无法通过授权 userauth-request for user liexiang service ssh-connection method none [preauth] 可能是无法找到匹配的方法,不安全的密钥已经不支持了
+
+首先在服务器上制作密钥对。首先用密码登录到你打算使用密钥登录的账户，然后执行以下命令：
+> 对于 Centos 版本比较高的系统, 需要使用长度较长的密钥, 可能比较弱的密钥在高版本系统中根本无法通过授权 userauth-request for user liexiang service ssh-connection
+> method none [preauth] 可能是无法找到匹配的方法,不安全的密钥已经不支持了
 
 ```
 # 使用给定的 email 注释 public/private rsa 密钥
@@ -37,10 +32,9 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 ### 2) 在服务器上安装公钥
 
-**方法一 : 使用 **`**ssh-copy-id**`** 命令安装 **
+**方法一 : 使用 `ssh-copy-id` 命令安装**
 
 > 公钥复制到远程机器, 并自动配置好权限密钥
-
 
 ```
 $ ssh-copy-id -i {dir-of-keys}/rsa2.pub user@host
@@ -62,13 +56,11 @@ $ chmod 600 authorized_keys
 $ chmod 700 ~/.ssh
 ```
 
-
 ### 3) 设置 SSH，打开密钥登录功能
 
 编辑 `/etc/ssh/sshd_config` 文件，进行如下设置：
 
-> RSAAuthentication yes  这个选项在 centos 7.4 以后已经废弃, 无需配置此选项
-
+> RSAAuthentication yes 这个选项在 centos 7.4 以后已经废弃, 无需配置此选项
 
 ```
 PubkeyAuthentication yes
@@ -92,10 +84,10 @@ PasswordAuthentication no
 $ systemctl restart sshd
 ```
 
-
 ## 2. 客户端配置私钥 config 配置
 
-很多时候，我们开发可能需要连接多台远程服务器，并且需要配置 git 服务器的私钥。那么这么多的服务器不能共用一套私钥，不同的服务器应该使用不同的私钥。但是我们从上面的连接流程可以看到，ssh 默认是去读取 `$HOME/.ssh/id_rsa` 文件作为私钥登录的。如果想要不同的服务器使用不同的私钥进行登录，那么需要在 `.ssh` 目录下编写 `config` 文件来进行配置。
+很多时候，我们开发可能需要连接多台远程服务器，并且需要配置 git 服务器的私钥。那么这么多的服务器不能共用一套私钥，不同的服务器应该使用不同的私钥。但是我们从上面的连接流程可以看到，ssh
+默认是去读取 `$HOME/.ssh/id_rsa` 文件作为私钥登录的。如果想要不同的服务器使用不同的私钥进行登录，那么需要在 `.ssh` 目录下编写 `config` 文件来进行配置。
 
 `config` 的配置很简单，只要指明哪个用户登录哪台远程服务器需要使用哪个私钥即可。下面给出一个配置示例。
 
@@ -131,7 +123,6 @@ Host test
 - [SSH 密钥登录流程分析](https://juejin.im/post/5a2941ad6fb9a045030ffc95)
 - [Github ssh key 生成，免密登录服务器方法](https://deepzz.com/post/github-generate-ssh-key.html)
 
-
 ## 3. Git 无密码进行拉取或者代码推送
 
 所谓部署， 我的理解就是在用户保证代码质量的前提下, 将代码能够快速的自动部署到目标服务器上的一种手段.
@@ -139,9 +130,10 @@ Host test
 具体步骤参照 [配置 SSH 公钥](https://help.coding.net/docs/project-settings/ssh.html)
 > 主机配置同上
 
-
 ### 1). 在 coding 中添加公钥
+
 输出部署公玥
+
 ```
 $ cat coding.pub
 ```
@@ -150,8 +142,8 @@ $ cat coding.pub
 
 ![](https://file.wulicode.com/note/2021/10-23/11-14-35507.png#id=omXj0&originHeight=500&originWidth=1600&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
-
 ### 2). 测试是否可以链接到 [git@e.coding.net](mailto:git@e.coding.net) 服务器
+
 > 注意 e.coding.net 接入到 CDN 上所以会解析多个不同的 host ip
 
 ```
@@ -164,7 +156,9 @@ III，你好，你已经通过 SSH 协议认证 coding.net 服务，这是一个
 这样便算是连接成功
 
 ### 3). 克隆代码
+
 在 coding 网站找到 ssh 对应地址
+
 ```
 $ git clone git@e.coding.com:user/project.git
 ```
@@ -172,6 +166,7 @@ $ git clone git@e.coding.com:user/project.git
 这样便可以进行代码的无密码更新了
 
 ## 4. QA:
+
 在配置登录的时候如果遇到了登录问题可以以下几个方式跟踪下
 
 ### 1) 使用 ssh 登录服务器的时候可以使用 verbose 模式调试
@@ -210,7 +205,6 @@ Jun  9 12:05:11 23 sshd[26890]: debug1: Could not open authorized keys '/home/us
 Jun  9 12:05:11 23 sshd[26890]: debug1: restore_uid: 0/0
 ```
 
-
 ### 2) ssh 登录慢，卡顿在 pledge: network 之后
 
 当 ssh 登录缓慢的时候我们需要 使用
@@ -240,7 +234,6 @@ $ ssh -v user@host
 ```
 lastb | awk ‘{ print $3}’ | sort | uniq -c | sort -n
 ```
-
 
 ### 3) 修改 ssh 默认登录的端口
 
