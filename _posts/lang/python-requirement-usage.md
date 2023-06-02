@@ -9,7 +9,7 @@ categories:
 [https://zhuanlan.zhihu.com/p/69058584](https://zhuanlan.zhihu.com/p/69058584)
 
 ![image.png](https://file.wulicode.com/yuque/202208/04/15/0149Xpg08rEr.png?x-oss-process=image/resize,h_540)
-<a name="a6a8759c-4229-4521-86e9-7815313ffeaa"></a>
+
 
 
 
@@ -32,7 +32,7 @@ defusedxml==0.6.0
 entrypoints==0.3
 ...
 ```
-<a name="358cac99-bde5-49f3-ae50-7284323548da"></a>
+
 ## 如何使用？
 那么 requirement.txt 究竟如何使用呢？
 
@@ -44,7 +44,7 @@ pip install -r requirement.txt
 ```
 pip freeze >requirements.txt
 ```
-<a name="33aed391-f20c-4895-be21-ddde6d5de4bc"></a>
+
 ## 环境混用怎么办？
 在导出依赖到 requirement.txt 文件时会有一种尴尬的情况。
 

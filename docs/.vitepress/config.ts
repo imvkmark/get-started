@@ -16,7 +16,7 @@ const nav = [
             { text: "Flutter", link: "/flutter/" },
             { text: "Php", link: "/php/" },
             { text: "Man", link: "/man/" },
-            { text: "C++", link: "/cpp/cpp-qt5-cookbook/0-tree" },
+            { text: "C++", link: "/cpp/" },
         ],
     },
     {
@@ -366,17 +366,13 @@ const sidebar = {
             ],
         },
         {
-            text: "入门",
-            items: [
-                createLink("问答环节", "/python/1_intro/1-qa"),
-                createLink("如何运行", "/python/1_intro/2-run"),
-            ],
-        },
-        {
             text: "类型和运算",
             items: [
-                createLink("介绍 python 对象类型", "/python/2_types/4-types"),
-                createLink("数值类型", "/python/2_types/5-number"),
+                createLink("目录", "/python/python-manual/toc"),
+                createLink("第一章 : 问答环节", "/python/python-manual/1-qa"),
+                createLink("第二 三章 运行程序", "/python/python-manual/2-3-run"),
+                createLink("第四章 介绍 python 对象类型", "/python/python-manual/4-object-type"),
+                createLink("第五章 数值类型", "/python/python-manual/5-int"),
             ],
         },
         {
@@ -404,9 +400,21 @@ const sidebar = {
         {
             text: "C++ / Qt5 Cookbook",
             items: [
-                createLink("目录", "/cpp/cpp-qt5-cookbook/0-tree"),
+                createLink("目录", "/cpp/cpp-qt5-cookbook/toc"),
                 createLink("1. 外观和自定义", "/cpp/cpp-qt5-cookbook/1-appearance-custom"),
                 createLink("2. 状态和特效", "/cpp/cpp-qt5-cookbook/2-property"),
+            ],
+        },
+        {
+            text: "C++ Primer",
+            items: [
+                createLink("目录", "/cpp/cpp-primer/toc"),
+                createLink("1. 开始", "/cpp/cpp-primer/1-start"),
+                createLink("2. 变量和基本类型", "/cpp/cpp-primer/2-vars"),
+                createLink("3. 字符串, 向量和数组", "/cpp/cpp-primer/3-string-vector-array.md"),
+                createLink("4. 表达式", "/cpp/cpp-primer/4-expression"),
+                createLink("5. 语句", "/cpp/cpp-primer/5-sentence"),
+                createLink("6. 函数", "/cpp/cpp-primer/6-function"),
             ],
         },
     ],

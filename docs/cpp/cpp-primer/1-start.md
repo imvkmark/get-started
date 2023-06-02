@@ -1,17 +1,11 @@
----
-title: "C++ Primer - 1. 开始"
-date: 2022-04-14 22:14:18
-toc: true
-categories:
-- ["Lang","C++","阅读: C++ Primer"]
----
+# C++ Primer - 1. 开始
 
-### 1.1 简单的 C++ 程序
+## 1.1 简单的 C++ 程序
 
 
 
 
-#### 程序范式
+### 程序范式
 
 - 返回类型
 - 函数名称 `main`
@@ -25,12 +19,12 @@ int main()
 }
 ```
 
-#### 后缀名
+### 后缀名
 `.cc`, `.cxx`, `.cpp`, `.cp`, `.C`
 
-### 1.2 输入, 输出
+## 1.2 输入, 输出
 
-#### 标准输出
+### 标准输出
 iostream 包含 istream, ostream,
 ```
 // 输入
@@ -39,7 +33,7 @@ std::cin >> v1;
 std::cout << v1;
 ```
 
-#### 命名空间
+### 命名空间
 ```
 #include "iostream"
 use std::cout 
@@ -49,7 +43,7 @@ int main
 }
 ```
 
-### 1.3 注释
+## 1.3 注释
 ```
 // 单行注释
 /* 
@@ -58,9 +52,9 @@ int main
  */
 ```
 
-### 1.4 控制语句
+## 1.4 控制语句
 
-#### 1.4.1 while
+### 1.4.1 while
 ```
 #include "iostream"
 int main 
@@ -74,7 +68,7 @@ int main
 }
 ```
 
-#### 1.4.2 for
+### 1.4.2 for
 ```
 #include "iostream"
 int main 
@@ -87,7 +81,7 @@ int main
 }
 ```
 
-#### 1.4.3 读取不定量的数据
+### 1.4.3 读取不定量的数据
 ```
 #include "iostream"
 int main 
@@ -100,7 +94,7 @@ int main
 }
 ```
 
-#### 1.4.4 if
+### 1.4.4 if
 ```
 #include "iostream"
 int main 
@@ -127,9 +121,9 @@ int main
 }
 ```
 
-### 1.5 类
+## 1.5 类
 
-#### 头文件
+### 头文件
 **后缀名**
 
 `.h` 后缀名

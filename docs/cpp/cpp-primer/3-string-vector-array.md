@@ -1,12 +1,6 @@
----
-title: "C++ Primer - 3. 字符串, 向量和数组"
-date: 2022-04-14 22:14:19
-toc: true
-categories:
-- ["Lang","C++","阅读: C++ Primer"]
----
+# C++ Primer - 3. 字符串, 向量和数组
 
-### 3.1 using 声明
+## 3.1 using 声明
 声明格式
 
 
@@ -18,14 +12,14 @@ using namespace::name;
 
 头文件不应该包含 using 声明;
 
-### 3.2 标准库类型 string
+## 3.2 标准库类型 string
 使用
 ```
 #include <string>
 using std::string;
 ```
 
-#### 定义和初始化 string 对象
+### 定义和初始化 string 对象
 ```
 string s1;           默认初始化
 string s2(s1);       s2 = s1
@@ -35,7 +29,7 @@ string s3 = "value"
 string s4(10,'s')    重复 10 次 s
 ```
 
-#### string 对象上的操作
+### string 对象上的操作
 ```
 os<<s           将 s 写入到输出流 os 中, 返回os
 is>>s           从 is 中读取字符串赋给 s, 字符串以空白分割, 返回is
@@ -82,7 +76,7 @@ auto len = s.size();
 
 当把string对象和字符字面值及字符串字面值混在一条语句中使用时, 必须确保每个加法运算符(+)的两侧的运算对象至少有一个是 `string`
 
-#### 处理string对象中的字符
+### 处理string对象中的字符
 C++标准库头文件将 c 中的 `name.h` 命名为 `cname`, 一般来说, c++程序应该使用名为 `cname` 的头文件而不是 `name.h` 的形式, 标准库的名字总能在命名空间 `std` 中找到
 
 cctype 头文件的函数
@@ -108,10 +102,10 @@ for (auto c : str) {
 }
 ```
 
-### 3.3 标准库类型 vector
+## 3.3 标准库类型 vector
 这里按照我的意思可以把他理解成多维数组
 
-#### 定义和初始化 vector 对象
+### 定义和初始化 vector 对象
 ```
 vector<T> v1                空 vector, 执行默认初始化
 vector<T> v2(v1)            复制, v1 复制给 v2
@@ -122,7 +116,7 @@ vector<T> v5{a,b,c...}      通过枚举来初始化
 vector<T> v5={a,b,c...}     同上
 ```
 
-#### vector 支持的操作
+### vector 支持的操作
 vector 对象的下标运算符可以用来访问已经存在的元素, 但是不能用于添加元素, 添加元素可以使用 `v.push_back()`
 ```
 v.empty()               检测是否包含元素
@@ -136,21 +130,21 @@ v1 != v2                比较
 <, <=, >, >=            比较
 ```
 
-#### size_type 的写法
+### size_type 的写法
 要使用 size_type, 需首先指定它是由那种类型定义的. vector 对象的类型总是包含着元素的类型
 ```
 vector<int>::size_type
 ```
 
-#### ? 疑问
+### ? 疑问
 以下这句话在报错误
 > too few template argements
 > `vector<unsigned> scores(11, 0);`
 
 
-### 3.4 迭代器
+## 3.4 迭代器
 
-#### 使用迭代器
+### 使用迭代器
 **标准迭代器的运算符**
 ```
 *iter                   返回迭代器所指类型的引用(解引用)      
@@ -170,7 +164,7 @@ string::const_iterator it4      常量指针, 能读, 不能写
 > 但凡是使用了迭代器的循环体, 都不要向迭代器所属的容器添加元素
 
 
-#### 迭代器运算
+### 迭代器运算
 ```
 iter + n                前移多少个元素
 iter - n                后移若干元素
@@ -181,10 +175,10 @@ iter1 - iter2           相减结果是他们之间的距离
 ```
 迭代器的差的类型名是 `difference_type` , 这是一个带符号的整形数值.
 
-### 3.5 数组
+## 3.5 数组
 数组是存在相同对象的容器, 并且大小固定
 
-#### 定义和初始化
+### 定义和初始化
 形如 a[b], a 是数组的名字, b 是数量, b必须大于 0, b必须是一个常量表达式, 默认初始化会令数组含有未定义的值.
 ```
 constexpr unsigned sz = 42;
@@ -202,6 +196,6 @@ string id[3] = {"Hello", "World"}
     等价于 {"Hello", "World", ""}
 ```
 
-#### 访问数组元素
+### 访问数组元素
 数组下标类型一般是 `size_t` 类型
 

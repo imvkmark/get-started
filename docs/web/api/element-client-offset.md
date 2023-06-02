@@ -19,7 +19,7 @@
 1. 图二中视野内可见的内容和内边距，不包括x轴的滚动条高度、边框、外边距；
 2. 同一种型号的手机上是不变的，比如iPhone 6上就是667px；
 
-<a name="offsetHeight"></a>
+
 
 ### offsetHeight
 

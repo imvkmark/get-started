@@ -1,12 +1,6 @@
----
-title: "C++ Primer - 6. 函数"
-date: 2022-04-14 22:14:19
-toc: true
-categories:
-- ["Lang","C++","阅读: C++ Primer"]
----
+# C++ Primer - 6. 函数
 
-### 6.1 函数基础
+## 6.1 函数基础
 **形参列表**
 
 

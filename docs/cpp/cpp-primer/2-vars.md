@@ -1,17 +1,11 @@
----
-title: "C++ Primer - 2. 变量和基本类型"
-date: 2022-04-14 22:14:19
-toc: true
-categories:
-- ["Lang","C++","阅读: C++ Primer"]
----
+# C++ Primer - 2. 变量和基本类型
 
-### 2.1 基本内置类型
+## 2.1 基本内置类型
 
 
 
 
-#### 2.1.1 算术类型
+### 2.1.1 算术类型
 **类型**
 
 算术类型包含 整形(整数,字符, 布尔类型) 和浮点型
@@ -39,12 +33,12 @@ long double : 扩展精度浮点数 (10 位有效数字)
 > 和其他整形不同, 字符型被分为3种 ,`char`, `signed char`, `unsigned char`, 但是字符串
 
 
-#### 2.1.2 类型转换
+### 2.1.2 类型转换
 
 - 赋值给无符号类型的值超过表示的范围, 结果是初始值对无符号类型表示数值总数取模后的余数.
 - 复制给带符号类型一个超出它标识范围的值时候, 结果是 `未定义(undefined)`;
 
-#### 2.1.3 字面值常量
+### 2.1.3 字面值常量
 **整形和浮点型**
 ```
 20       /* 整数 */
@@ -99,16 +93,16 @@ l/L       long
 ll/LL     long long
 ```
 
-### 2.2 变量
+## 2.2 变量
 
-#### 2.2.1 变量定义
+### 2.2.1 变量定义
 初始化不是复制, 初始化的含义是创建变量时赋予其一个初始值, 复制的含义是把当前的值擦除, 而以新的值来替代
 
 C++11 中可以使用花括号来初始化变量 `{}`, 但是如果我们使用列表初始化且初始值存在丢失信息的风险时候编译器将报错.
 
 定义于任何函数在函数体内的内置类型变量`不被初始化(uninitialized)`
 
-#### 2.2.2 变量声明和定义的关系
+### 2.2.2 变量声明和定义的关系
 `声明(declaration)` 使得名字为程序所知, 一个文件如果想使用别处定义的名字必须包含对那个名字的声明. 而`定义(defination)`负责创建与名字关联的实体.
 ```
 // declaration
@@ -118,7 +112,7 @@ extern int a = 1024; // Error 这个是定义, 不是声明
 int j;
 ```
 
-#### 2.2.3 标识符
+### 2.2.3 标识符
 关键字
 ```
 alignas
@@ -210,7 +204,7 @@ or
 xor
 ```
 
-#### 2.2.4 名字的作用域
+### 2.2.4 名字的作用域
 作用域访问示例, 主要学到的是 `::reused` 可以访问全局变量
 ```
 #include <iostream>
@@ -226,17 +220,17 @@ int main
 }
 ```
 
-### 2.3 符合类型
+## 2.3 符合类型
 复合类型是基于其他类型定义的类型.
 
-#### 2.3.1 引用
+### 2.3.1 引用
 引用形如 `&var` 的形式, 并且必须被初始化
 
 引用类型的初始值必须是一个对象
 
 引用类型的初始值必须和被引用着类型相同
 
-#### 2.3.2 指针
+### 2.3.2 指针
 定义指针类型的方法将声明符号写成 `*var` 的形式;
 
 获取对象的地址采用 `&` 取址符;
@@ -260,10 +254,10 @@ int *p3 = null;        // 等价于 int *p3 = 0;
 > 非法指针会引发不可预计的效果, 所以不要使用非法指针.
 
 
-#### 2.3.3 理解符合类型的声明
+### 2.3.3 理解符合类型的声明
 从右向左读
 
-### 2.4 Const 限定符
+## 2.4 Const 限定符
 const  相比来说是常量, 并且必须要初始化(这点和PHP不同), 运行过程中不得变更.
 
 const 默认在本文件内有效.
@@ -272,22 +266,22 @@ const 默认在本文件内有效.
 
 常量可以被引用
 
-#### 2.4.1 const 的引用 (待复习)
+### 2.4.1 const 的引用 (待复习)
 
-#### 2.4.2 指针和 const (待复习)
+### 2.4.2 指针和 const (待复习)
 
-#### 2.4.3 顶层 const   (待复习)
+### 2.4.3 顶层 const   (待复习)
 
-#### 2.4.4 常量表达式
+### 2.4.4 常量表达式
 常量表达式指的是 值不会改变并且在编译过程就能得到计算结果的表达式.
 
 允许将变量声明为 `constexpr` 类型来由编译器来验证变量的值是否是一个常量表达式
 
 `constexpr` 声明中如果定义了一个指针, 限定符 `constexpr` 仅仅对指针有效
 
-### 2.5 处理类型
+## 2.5 处理类型
 
-#### 2.5.1 类型别名
+### 2.5.1 类型别名
 定义
 ```
 // 类型别名
@@ -296,22 +290,22 @@ typedef double wages;
 using SI = Sales_item;
 ```
 
-#### 2.5.2 auto 类型说明符
+### 2.5.2 auto 类型说明符
 auto 类型说明符, 让编译器替我们去分析表达式所属的类型.
 
-#### 2.5.3 decltype 类型指示符
+### 2.5.3 decltype 类型指示符
 选择并返回操作数的数据类型.
 
-### 2.6 自定义数据结构
+## 2.6 自定义数据结构
 
-#### 2.6.1 定义Sales_data 类型
+### 2.6.1 定义Sales_data 类型
 ```
 struct Sales_data {
     std::string bookNo;
 }
 ```
 
-#### 2.6.2 编写自己的头文件
+### 2.6.2 编写自己的头文件
 预处理器中使用头文件保护符
 ```
 #ifndef SALE_DATA_H
@@ -322,3 +316,102 @@ struct Sales_data {
 #endif
 ```
 
+## PS.基本程序实例
+
+## 基本文件
+
+
+
+```c
+// 头文件
+#include <iostream>
+// 命名空间
+using namespace std;
+// 程序从这里开始执行
+int main() {
+    // 输出内容
+    cout << "Hello, World!" << endl;
+    // 终止函数, 并且返回 0
+    return 0;
+}
+```
+
+## 分号和块
+`;` 语句结束符号
+
+`{}` 逻辑连接语句
+
+## 标识符
+标识符不允许出现 @, $, %
+
+## 保留字
+```
+asm		       
+auto	       
+bool	       
+break	       
+case	       
+catch	       
+char	       
+class	       
+const	       
+const_cast	   
+continue	   
+default	       
+delete	       
+do	           
+double	       
+dynamic_cast
+else	    
+enum	    
+explicit	
+export	    
+extern  	
+false	    
+float	    
+for	    
+friend	    
+goto	    
+if	        
+inline	    
+int	    
+long	    
+mutable	
+namespace	
+new	                
+operator	        
+private	            
+protected	        
+public	            
+register	        
+reinterpret_cast	
+return	            
+short	            
+signed	            
+sizeof	            
+static	            
+static_cast	        
+struct	            
+switch	            
+template
+this
+throw
+true
+try
+typedef
+typeid
+typename
+union
+unsigned
+using
+virtual
+void
+volatile
+wchar_t
+while
+```
+
+## 注释
+单行注释 //
+
+多行注释 /* ...  */

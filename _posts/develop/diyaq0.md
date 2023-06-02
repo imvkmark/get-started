@@ -7,7 +7,7 @@ categories:
 ---
 
 From 澎涛
-<a name="ES"></a>
+
 
 
 
@@ -54,7 +54,7 @@ POST `/<index>/_doc`
 }
 ```
 
-<a name="put"></a>
+
 #### put
 
 **put方式需指定id**

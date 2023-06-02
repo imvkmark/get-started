@@ -1,15 +1,8 @@
----
-title: "第五章 数值类型"
-date: 2022-04-20 22:52:49
-toc: true
-categories:
-- ["Lang","Python","Python 学习手册"]
----
+# 第五章 数值类型
 
 ## 基础知识
+
 数值并不是真的只是一种对象类型, 而是一组相似类型的分类, 完整的数值类型工具包括
-
-
 
 ```
 整数和浮点对象
@@ -22,24 +15,33 @@ categories:
 表达式; 无限整数精度, 位运算, 十六进制, 八进制, 二进制
 三方扩展 : 向量, 库, 可视化, 作图
 ```
+
 🪞
 
 无理数 :  1. 不能写成两个数的比例 2. 小数部分无线延续而不重复
-<a name="0ae04829-1645-4c73-8110-28a7916009fc"></a>
+
+
 ## 数值字面量
+
 ![image.png](https://file.wulicode.com/yuque/202208/04/15/3512lkvZwS5f.png?x-oss-process=image/resize,h_295)
-<a name="820d96cd-fa48-46d8-bf86-3b19726ba34e"></a>
+
+
 ## 运算符及程序
+
 ![image.png](https://file.wulicode.com/yuque/202208/04/15/3513rnJhyDLa.png?x-oss-process=image/resize,h_966)
 
-<a name="b7f1d881-7c2c-4cba-98a5-4111475336a9"></a>
+
+
 ### 运算符优先级
 
 1. 遵循自然语言 `*` 高于 `+`
 2. 使用括号来标明优先级
 3. 混合类型向上转换 `30+12.8=42.8`
-<a name="6cc58821-0fc4-4b14-bc4b-580f3bbc628b"></a>
+   
+
 ## 数字的实际应用
-<a name="4bd328c4-ff12-45b3-83eb-522456327378"></a>
+
+
+
 ### 基础表达式
 

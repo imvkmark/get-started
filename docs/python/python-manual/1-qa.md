@@ -1,22 +1,15 @@
----
-title: "第一章 : 问答环节"
-date: 2022-04-20 22:52:48
-toc: true
-categories:
-- ["Lang","Python","Python 学习手册"]
----
-
-<a name="cb5a06f8-0270-4c11-9926-fe99e7e1504d"></a>
-
+# 第一章 : 问答环节
 
 
 ### Python 的优点
+
 - 软件质量 : 易于维护, 可读性强
 - 开发效率优于Java/C/C++
 - 平台之间的可移植性强
 - 标准库支持模块众多
 - 可与其他组件进行通信,C/C++/Java/.net/com 组件
-<a name="e58c5a22-ce14-4f92-91a9-b1ea58f435ef"></a>
+  
+
 ### 可以做什么
 
 - 系统编程
@@ -33,7 +26,8 @@ Django, TurboGears,Web2py, pylons, zope, webware
 - 快速原型, 对于 C 来讲可以用简单的代码来编写复杂的应用
 - 科学计算, NumPy, SciPy, ScientificPython
 - 游戏, 图像, AI, XML, 机器人
-<a name="3a708854-7bf5-498e-b40b-c75aef042058"></a>
+  
+
 ### Python 的技术优点
 
 - 面向对象
@@ -47,6 +41,7 @@ Django, TurboGears,Web2py, pylons, zope, webware
 - 简单易用
 
 一个彩蛋
+
 ```
 $ python -c 'import this'
 The Zen of Python, by Tim Peters
