@@ -26,7 +26,14 @@ const nav = [
             { text: "Web", link: "/web/" },
             { text: "资源", link: "/development/tools/sdkman" },
             { text: "手机端", link: "/mobile/design/site" },
-            { text: "运维", link: "/ops/centos/upgrade-at-7" },
+            { text: "运维", link: "/ops/centos/" },
+            {
+                text: 'Ops',
+                items: [
+                    { text: '运维', link: '/ops/' },
+                    { text: 'Nginx', link: '/ops/nginx/' },
+                ]
+            },
             { text: "部门", link: "/department/test/auto-seldom" },
         ],
     },
@@ -84,13 +91,15 @@ const sidebar = {
             items: [
                 createLink("使用 jsdoc 编写 api 文档", "/javascript/tech/use-jsdoc-write-document.md"),
                 createLink("Eslint 入门", "/javascript/tech/eslint"),
-                createLink("怎样在 JavaScript 中检测 null", "/javascript/core/usage/type-null-how-to-check.md")
+                createLink("怎样在 JavaScript 中检测 null", "/javascript/core/usage/type-null-how-to-check.md"),
+                createLink("Axios 入门", "/javascript/core/tech/axios")
             ],
         },
         {
             text: "Npm/包管理",
             items: [
                 createLink("说明", "/javascript/npm/"),
+                createLink("npm 和 package.json", "/javascript/npm/npm-and-package-json"),
                 createLink("RHEL8 安装 nodejs", "/javascript/npm/install-at-rhel8.md"),
                 createLink("Node 更换源使用国内镜像", "/javascript/npm/pkg-use-mirror.md"),
                 createLink("使用 pnpm 替代 yarn, npm", "/javascript/npm/pkg-use-pnpm.md"),
@@ -552,10 +561,15 @@ const sidebar = {
     ],
     "/ops": [
         {
+            text: "运维",
+            link: '/ops/'
+        },
+        {
             text: "CentOS",
             items: [
                 createLink("升级和完善 CentOS 7", "/ops/centos/upgrade-at-7"),
                 createLink("常用脚本", "/ops/centos/tools"),
+                createLink("firewalld 常用命令", "/ops/centos/firewalld"),
             ],
         },
         {
@@ -570,12 +584,33 @@ const sidebar = {
                 createLink("日志切割(logrotate)操作梳理", "/ops/logrotate/introduction.md"),
             ],
         },
-        {
-            text: "Nginx",
-            items: [
-                createLink("在 RockyLinux9 上安装 Nginx", "/ops/nginx/install-at-rockylinux9.md"),
-            ],
-        },
+    ],
+    "/ops/nginx": [
+        createLink("介绍", "/ops/nginx/"),
+        createLink("在 RockyLinux9 上安装 Nginx", "/ops/nginx/install-at-rockylinux9.md"),
+        createLink('add_header 指令技巧', '/ops/nginx/add-header.md'),
+        createLink('阻止无意义的请求', '/ops/nginx/block-known-bad-requests.md'),
+        createLink('配置缓存', '/ops/nginx/cache-control.md'),
+        createLink('主域 - 添加或者移除 www', '/ops/nginx/canonicalize-host-name-add-remove-www.md'),
+        createLink('Nginx 编译参数', '/ops/nginx/compile.md'),
+        createLink('nginx 优化连接数', '/ops/nginx/connection-num.md'),
+        createLink('配置 CORS 跨域', '/ops/nginx/cors.md'),
+        createLink('Nginx 目录建议', '/ops/nginx/directory-suggest.md'),
+        createLink('学习使用 echo 模块', '/ops/nginx/echo.md'),
+        createLink('强制使用小写的 url 地址', '/ops/nginx/enforce-lower-case-urls.md'),
+        createLink('使用 nginx-http-concat', '/ops/nginx/http-concat.md'),
+        createLink('配置默认主页、目录浏览', '/ops/nginx/http-index.md'),
+        createLink('状态码配置和错误文件', '/ops/nginx/http-status.md'),
+        createLink('配置 HTTPS', '/ops/nginx/https.md'),
+        createLink('Nginx 日志', '/ops/nginx/log.md'),
+        createLink('stub_status : 提供访问基础信息', '/ops/nginx/module-stub-status.md'),
+        createLink('OpenResty 介绍', '/ops/nginx/openresty.md'),
+        createLink('配置泛域名转发', '/ops/nginx/pan-domain.md'),
+        createLink('proxy_pass url 反向代理', '/ops/nginx/proxy_pass.md'),
+        createLink('统计 Nginx 访问量', '/ops/nginx/pv.md'),
+        createLink('屏蔽指定的 user_agent 的访问', '/ops/nginx/shield-agent.md'),
+        createLink('配置图片防盗链', '/ops/nginx/verify-referer.md'),
+        createLink('常见问题', '/ops/nginx/faq.md'),
     ],
     "/web": [
         { text: "Web开发", link: "/web/" },
@@ -584,28 +619,36 @@ const sidebar = {
             items: [
                 createLink("缓存策略说明", "/web/http/cache"),
                 createLink("前端跨域整理", "/web/http/cors-intro"),
-                createLink("FAQ", "/web/http/faq"),
             ],
         },
         {
             text: "Html",
-            items: [createLink("Favicon", "/web/html/favicon")],
+            items: [
+                createLink("Favicon", "/web/html/favicon")
+            ],
         },
         {
             text: "Api",
-            items: [createLink("ClientHeight/OffsetHeight 解释", "/web/api/element-client-offset")],
+            items: [
+                createLink("ClientHeight/OffsetHeight 解释", "/web/api/element-client-offset")
+            ],
         },
         {
             text: "Css",
-            items: [createLink("FAQ", "/web/css/faq")],
+            items: [
+                createLink("从浏览器的渲染原理讲CSS性能", "/web/css/css-performance-from-the-browsers-rendering"),
+                createLink("FAQ", "/web/css/faq"),
+            ],
         },
         {
             text: "技术",
             items: [
+                createLink("使用 BrowserSync 来实现内容变动之后的实时刷新", "/web/tech/browser-sync"),
                 createLink("请求加速最佳实践", "/web/tech/best-practice"),
                 createLink("安装 Sentry 进行错误/性能跟踪", "/web/tech/use-sentry-collect-trace-and-exception")
             ],
         },
+        { text: "FAQ", link: "/web/faq" },
     ],
 };
 

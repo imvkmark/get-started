@@ -1,7 +1,7 @@
 # nscd (8) - 名称服务缓存守护程序
 
-Nscd 是一个守护程序，它为最常见的名称服务请求提供缓存。默认配置文件 `/etc/nscd.conf` 确定缓存守护程序的行为。参见 [
-nscd.conf (https://wulicode.com/man/nscd_conf.html)
+Nscd 是一个守护程序，它为最常见的名称服务请求提供缓存。默认配置文件 `/etc/nscd.conf` 确定缓存守护程序的行为。参见
+[nscd.conf](../conf/nscd.conf.5.md)
 
 Nscd 通过标准的 libc 接口（如 getpwnam（3）、getpwuid（3）、getgrnam（3）、getgrnam（3）、getgrgid（3）、gethostbyname（3）等）为 passwd（5）、group（5） 和 hosts（5） 数据库的访问提供缓存。
 

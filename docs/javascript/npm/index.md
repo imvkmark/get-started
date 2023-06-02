@@ -24,3 +24,11 @@
 > 一个 Vue 3 组件来创建 Moveable, Draggable, Resizable, Scalable, Rotatable, Warpable, Pinchable, Groupable, Snappable
 >
 > https://www.npmjs.com/package/vue3-moveable
+
+## 其他
+
+### 搭建一个可以写前端代码的无刷新框架
+
+> 无刷新框架
+> 
+> https://github.com/imvkmark/fe-refresh-demo
