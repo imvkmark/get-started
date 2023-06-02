@@ -70,6 +70,7 @@ const nav = [
                 text: 'Wait List',
                 items: [
                     { text: 'WIP', link: '/wait-list' },
+                    { text: '学习指南', link: '/guide' },
                 ]
             }
         ],
