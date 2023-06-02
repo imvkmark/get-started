@@ -478,12 +478,6 @@ const sidebar = {
                 createLink("开发常用术语", "/development/tech/knowledge"),
             ],
         },
-        {
-            text: "Docker 开发指南",
-            items: [
-                createLink("目录", "/development/docker-guide/toc"),
-            ],
-        },
     ],
     "/department": [
         {
@@ -595,6 +589,30 @@ const sidebar = {
             ],
         },
         {
+            text: "Rocky Linux",
+            items: [
+                createLink("RockyLinux 设置中文语言支持", "/ops/rockylinux/install-zh-cn-langpack.md"),
+            ],
+        },
+        {
+            text: "Ubuntu",
+            items: [
+                createLink("FAQ", "/ops/ubuntu/faq"),
+            ],
+        },
+        {
+            text: "Docker",
+            items: [
+                createLink("在 CentOS7 中使用 Docker", "/ops/docker/install-at-centos7.md"),
+            ],
+        },
+        {
+            text: "Docker 开发指南",
+            items: [
+                createLink("目录", "/ops/docker-guide/toc"),
+            ],
+        },
+        {
             text: "软件",
             items: [
                 createLink("安装最新的 cURL ", "/ops/curl/install-latest-at-centos"),
@@ -605,6 +623,7 @@ const sidebar = {
                 createLink("在 CentOS 上安装 Svn", "/ops/svn/install-at-centos"),
                 createLink("日志切割(logrotate)操作梳理", "/ops/logrotate/introduction.md"),
                 createLink("设置 SSH 安全通过密钥,免密码登录服务器或拉取代码", "/ops/ssh/use-ssh-login-and-deploy.md"),
+                createLink("CentOS 使用 docker 安装 sentry", "/ops/sentry/install-use-docker-at-centos.md"),
             ],
         },
     ],

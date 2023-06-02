@@ -1,25 +1,18 @@
----
-title: "RockyLinux 设置中文语言支持"
-date: 2022-09-19 11:21:51
-toc: true
-categories:
-- ["Ops","RockyLinux"]
----
+# RockyLinux 设置中文语言支持
 
 在默认的 rocky linux 是没有中文语言包的, 这样在某些情况下查看中文会产生乱码, 如下是查看 git 日志时候出现的乱码
 
 ![83b16820-193b-45ac-9f34-68c3b57d6787.png](https://file.wulicode.com/yuque/202209/19/12/1011Uuue5pOf.png?x-oss-process=image/resize,h_317)
 
 可能不同的发行方对系统做了一些更新导致会存在中文语言包
-> 参考命令 :  [localectl(https://wulicode.com/man/localectl.1.html)
+> 参考命令 :  [localectl](../../man/command/localectl.1.md)
 
 为了解决类似的这种问题, 我们需要安装我们需要的语言包
 
-
-
-
 ## 查看当前支持的语言包
+
 查看是否存在中文语言, 可以看到没有中文语言
+
 ```
 [root@duoli]# localectl list-locales |grep zh
 C.utf8
@@ -41,7 +34,9 @@ en_ZM
 en_ZW
 en_ZW.utf8
 ```
+
 查看可用的语言包
+
 ```
 [root@duoli ~]# dnf list |grep glibc-langpack
 Failed to set locale, defaulting to C.UTF-8
@@ -55,7 +50,9 @@ glibc-langpack-zh.x86_64                                          2.28-189.5.el8
 ```
 
 ## 安装并设置中文语言
+
 安装中文语言包
+
 ```
 [root@duoli ~]# dnf install glibc-langpack-zh
 ...
@@ -65,7 +62,9 @@ Installed:
 
 Complete!
 ```
+
 查看可用的中文语言包
+
 ```
 [root@duoli ~]# localectl list-locales |grep zh
 zh_CN
@@ -81,13 +80,17 @@ zh_TW
 zh_TW.euctw
 zh_TW.utf8
 ```
+
 设置当前的语言包
+
 ```
 [root@ ~]# localectl set-locale LANG="zh_CN.utf8"
 ```
 
 ## 验证
+
 这样, 我们就可以看到语言是正确的了, bingo
+
 ```
 [root@duoli web]# git log
 commit ae59cb3ff6533612f435c679b3c34bf7b602212a (HEAD -> master, origin/master, origin/HEAD)

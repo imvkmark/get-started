@@ -1,10 +1,4 @@
----
-title: "Ubuntu Faq"
-date: 2022-10-25 09:11:35
-toc: true
-categories:
-- ["Ops","Ubuntu"]
----
+# Ubuntu Faq
 
 ## do-release-upgrade 之后出现的无官方镜像源的提示
 我们为了加速云机的软件更新速度, 常常将三方源更新为清华或者阿里云, 并同时禁用掉官方的源, 于是在升级的时候便会有这样的提示
@@ -27,7 +21,7 @@ for the current list of configured software sources.
 In the case of an overloaded mirror, you may want to try the upgrade
 again later.
 ```
-解决: 
+解决:
 
 在 `/etc/apt/sources.list`中添加一行
 ```
@@ -37,4 +31,3 @@ deb http://archive.ubuntu.com/ubuntu bionic universe main
 ```
 # do-release-upgrade
 ```
-

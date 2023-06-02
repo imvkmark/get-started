@@ -37,17 +37,13 @@ $ node -v
 
 本项目采用 [CC BY](https://creativecommons.org/licenses/by/4.0/) 版权, 如需引用请保留来源及署名
 
-如果本项目引用内容无意侵犯了您的版权, 请通过以下联系方式联系我, 并得到妥善处理.
+如果本项目引用内容无意侵犯了您的版权, 请通过以下联系方式或者留言联系我, 并得到妥善处理.
 
 ## 联系方式
 
 **微信**
 
 ![image.png](https://file.wulicode.com/yuque/202208/14/18/2011XIIBW44D.png?x-oss-process=image/resize,h_215)
-
-**邮箱**
-
-zhaody901[at]126.com
 
 **Github**
 
