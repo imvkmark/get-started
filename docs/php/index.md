@@ -1,24 +1,10 @@
----
-layout : home
+# Php
 
-hero :
-  name : "PHP"
-  text : "中小型站点最优选型"
-  actions :
-    -
-      theme : alt
-      text : 函数参考
-      link : /php/refs/language/intro
-    -
-      theme : alt
-      text : 入门
-      link : /php/install/mac-lnmp
-    -
-      theme : alt
-      text : Awesome Php
-      link : /awesome/language/php
-    -
-      theme : alt
-      text : Awesome Laravel
-      link : /awesome/language/php-laravel
----
+## Awesome
+
+- [Awesome Php](../awesome/language/php.md)
+- [Awesome Laravel](../awesome/language/php-laravel.md)
+
+## 包管理
+
+- [composer 命令行](http://docs.phpcomposer.com/03-cli.html)

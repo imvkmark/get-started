@@ -14,11 +14,11 @@ categories:
 ## 添加版权 Copyright
 进入设置
 
-![](https://file.wulicode.com/note/2021/11-11/16-04-32270.png#height=677&id=oUJSj&originHeight=1140&originWidth=534&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=317)
+![](https://file.wulicode.com/note/2021/11-11/16-04-32270.png)
 
 搜索并且找到版权设置项目(新版 IDE 已经集成, 不需要安装), 如果是老版本需要搜索并且安装 copyright 插件
 
-![](https://file.wulicode.com/note/2021/11-11/16-04-42488.png#id=MgoAb&originHeight=686&originWidth=997&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/11-11/16-04-42488.png)
 
 版权的参数可以查看官方链接:
 
@@ -29,30 +29,30 @@ Copyright Profiles
 
 首先设置范围并且设置为共享模式
 
-![](https://file.wulicode.com/note/2021/11-11/16-04-52265.png#id=C5Hx0&originHeight=686&originWidth=997&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/11-11/16-04-52265.png)
 
 搜索 scope, 找到设置项目, 根据文件夹来进行选择, 排除等设置,最后勾选底部的 `Share Scope`
 
 ## 设置版权和 Scope 关联
 找到 Copyright 主设置项目, 添加并且关联
 
-![](https://file.wulicode.com/note/2021/11-11/16-05-03728.png#id=o6zdo&originHeight=686&originWidth=997&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/11-11/16-05-03728.png)
 
 ## 更新版权
 这里需要注意的是在版权设置中有个查找位置.
 
-![](https://file.wulicode.com/note/2021/11-11/16-05-12545.png#id=CH4Nr&originHeight=198&originWidth=579&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/11-11/16-05-12545.png)
 
 这一行的意思是在注释中根据正则来查找符合此规则的注释并且更新为当前版权. 默认是 `Copyright` 因为每个版权声明中肯定存在 `Copyright` 这个字串, 如果你的文件中没有这个匹配项目, 则会在文件底部添加版权信息.
 
 我们右键需要更新版权信息的文件夹, 这样则版权信息就更新了.
 
-![](https://file.wulicode.com/note/2021/11-11/16-05-20870.png#height=527&id=zfyVY&originHeight=1016&originWidth=586&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=304)
+![](https://file.wulicode.com/note/2021/11-11/16-05-20870.png)
 
 ## 不同语种的设置
 在不同的语种中会有不同的版权信息格式, 注释格式, 在菜单项目中可以根据多语种来设置不同的格式化信息.体验很好
 
-![](https://file.wulicode.com/note/2021/11-11/16-05-29707.png#id=TU9is&originHeight=383&originWidth=169&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/11-11/16-05-29707.png)
 
 ## 参考文章
 

@@ -37,7 +37,7 @@ $ gpg --dry-run --quiet --import --import-options import-show /usr/share/keyring
 ```
 
 ### 2、添加 Nginx 官方提供的源
-```shell
+```
 # 加入源列表 @ 稳定版
 $ echo "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] \
 http://nginx.org/packages/ubuntu `lsb_release -cs` nginx" \

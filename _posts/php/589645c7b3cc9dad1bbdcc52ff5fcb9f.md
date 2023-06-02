@@ -17,7 +17,7 @@ Laravel 自带了一些中间件，包括身份验证、CSRF 保护等。所有�
 
 
 ## 中间件的执行顺序说明
-![](https://file.wulicode.com/note/2021/11-11/15-49-50888.png#id=K01T5&originHeight=416&originWidth=950&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/11-11/15-49-50888.png)
 
 ## 定义中间件
 通过运行 `make:middleware` Artisan 命令来创建新的中间件：

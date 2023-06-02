@@ -14,7 +14,12 @@ const nav = [
             { text: "Javascript", link: "/javascript/" },
             { text: "Java", link: "/java/" },
             { text: "Flutter", link: "/flutter/" },
-            { text: "Php", link: "/php/" },
+            {
+                text: "Php", items: [
+                    createLink('介绍', '/php/'),
+                    createLink('函数参考', '/php/refs/language/intro'),
+                ]
+            },
             { text: "Man", link: "/man/" },
             { text: "C++", link: "/cpp/" },
         ],
@@ -30,8 +35,8 @@ const nav = [
             {
                 text: 'Ops',
                 items: [
-                    { text: '运维', link: '/ops/' },
-                    { text: 'Nginx', link: '/ops/nginx/' },
+                    createLink('运维', '/ops/'),
+                    createLink('Nginx', '/ops/nginx'),
                 ]
             },
             { text: "部门", link: "/department/test/auto-seldom" },
@@ -176,7 +181,7 @@ const sidebar = {
             text: 'Laravel ',
             items: [
                 { text: 'Eloquent 和 Migrate', link: '/php/laravel/eloquent-migrate.md' },
-                { text: '升级记录 FAQ', link: '/php/laravel/upgrade-faq.md' },
+                { text: 'FAQ', link: '/php/laravel/faq.md' },
             ]
         },
         {
@@ -185,12 +190,14 @@ const sidebar = {
                 { text: 'PHPUnit 在 PhpStorm 中的使用', link: '/php/ide/phpstorm-run-phpunit.md' },
                 { text: 'PhpStorm 使用 Xdebug 调试', link: '/php/ide/phpstorm-use-xdebug.md' },
                 { text: 'PhpStorm 中运行 TestSuit', link: '/php/ide/phpstorm-run-testsuit.md' },
+                { text: '使用 PhpStorm 开发 Laravel', link: '/php/ide/phpstorm-develop-laravel.md' },
             ]
         },
         {
             text: 'Packages',
             items: [
                 { text: 'Carbon', link: '/php/packages/carbon-carbon' },
+                { text: 'dotenv - PHP 版本的 .env', link: '/php/packages/vlucas-phpdotenv.md' },
             ]
         },
         {

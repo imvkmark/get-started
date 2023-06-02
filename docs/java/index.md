@@ -39,11 +39,11 @@
 ## JUnit 单元测试
 
 > 参考与[官方文档](https://junit.org/junit5/docs/current/user-guide/)
-> 
+>
 > [中文文档](https://doczhcn.gitbook.io/junit5/)
 
 1. [[O]概览](./junit/1-overview.md)
-2. 编写测试 
+2. 编写测试
 3. 和 JUnit 4 集成
 4. 运行测试
 5. 扩展模型
@@ -52,7 +52,6 @@
 8. 贡献者
 9. 版本更新
 10. 附录
-
 
 ## Gradle
 
