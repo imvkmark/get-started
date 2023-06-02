@@ -1,10 +1,4 @@
----
-title: "C++ Cookbook - 目录"
-date: 2022-04-14 22:08:48
-toc: true
-categories:
-- ["Lang","C++","阅读 : C++ Cookbook"]
----
+# C++ Cookbook - 目录
 
 ## 1. 创建 C++ 程序
 1.1 获取和安装 gcc

@@ -1,10 +1,4 @@
----
-title : "Readme"
-date : 2022-12-14 01:45:39
-toc : true
-categories :
-  - [ "Lang","Ruby" ]
----
+# Ruby
 
 ## 版本管理
 
