@@ -1,40 +1,37 @@
----
-title: "[转] 索引优化分析：性能分析"
-date: 2023-01-03 23:33:58
-toc: true
-categories:
-- ["Mysql","优化"]
----
+# 索引优化分析：性能分析
 
 ## 一、MySQL常见瓶颈
 
-
-
-
 ### 1.CPU
+
 CPU在饱和的时候一般发生在数据装入内存或从磁盘上读取数据时候。
 
 SQL中对大量数据进行比较、关联、排序、分组。最大的压力在于比较。
 
 ### 2.IO
+
 磁盘I/O瓶颈放生在装入数据远大于内存容量的时候。
 
 实例内存满足不了缓存数据或排序等需要，导致产生大量物理 IO。查询执行效率低，扫描过多数据行。
 
 ### 3.锁
+
 不适宜的锁的设置，导致线程阻塞，性能下降。
 
 死锁，线程之间交叉调用资源，导致死锁，程序卡住。
 
 ### 4.服务器硬件
+
 top，free，iostat和vmstat来查看系统的状态。
 
 ## 二、Explain
 
 ### 1.Explain简介
+
 使用EXPLAIN关键字可以模拟优化器执行SQL查询语句，从而知道MySQL是如何处理你的SQL语句的。分析你的查询语句或是表结构的性能瓶颈。
 
 ### 2.Explain用途
+
 ①表的读取顺序
 
 通过id查阅；
@@ -50,25 +47,26 @@ top，free，iostat和vmstat来查看系统的状态。
 ⑥每张表有多少行被优化器查询
 
 ### 3.Explain用法
+
 Explain + SQL语句
 
 ![image.png](https://file.wulicode.com/yuque/202301/03/23/4009gjvSHpUW.png?x-oss-process=image/resize,h_40)
 
-| 列名 | 说明 |
-| --- | --- |
-| id | 执行编号，标识select所属的行。如果在语句中没子查询或关联查询，只有唯一的select，每行都将显示1。否则，内层的select语句一般会顺序编号，对应于其在原始语句中的位置 |
-| select_type | 显示本行是简单或复杂select。如果查询有任何复杂的子查询，则最外层标记为PRIMARY（DERIVED、UNION、UNION RESUlT） |
-| table | 访问引用哪个表（引用某个查询，如“derived3”） |
-| type | 数据访问/读取操作类型（ALL、index、range、ref、eq_ref、const/system、NULL） |
-| possible_keys | 揭示哪一些索引可能有利于高效的查找 |
-| key | 显示mysql决定采用哪个索引来优化查询 |
-| key_len | 显示mysql在索引里使用的字节数 |
-| ref | 显示了之前的表在key列记录的索引中查找值所用的列或常量 |
-| rows | 为了找到所需的行而需要读取的行数，估算值，不精确。通过把所有rows列值相乘，可粗略估算整个查询会检查的行数 |
-| Extra | 额外信息，如using index、filesort等 |
-
+| 列名            | 说明                                                                                        |
+|---------------|-------------------------------------------------------------------------------------------|
+| id            | 执行编号，标识select所属的行。如果在语句中没子查询或关联查询，只有唯一的select，每行都将显示1。否则，内层的select语句一般会顺序编号，对应于其在原始语句中的位置 |
+| select_type   | 显示本行是简单或复杂select。如果查询有任何复杂的子查询，则最外层标记为PRIMARY（DERIVED、UNION、UNION RESUlT）                 |
+| table         | 访问引用哪个表（引用某个查询，如“derived3”）                                                               |
+| type          | 数据访问/读取操作类型（ALL、index、range、ref、eq_ref、const/system、NULL）                                 |
+| possible_keys | 揭示哪一些索引可能有利于高效的查找                                                                         |
+| key           | 显示mysql决定采用哪个索引来优化查询                                                                      |
+| key_len       | 显示mysql在索引里使用的字节数                                                                         |
+| ref           | 显示了之前的表在key列记录的索引中查找值所用的列或常量                                                              |
+| rows          | 为了找到所需的行而需要读取的行数，估算值，不精确。通过把所有rows列值相乘，可粗略估算整个查询会检查的行数                                    |
+| Extra         | 额外信息，如using index、filesort等                                                               |
 
 #### (1)id
+
 select查询的序列号,包含一组数字，表示查询中执行select子句或操作表的顺序。
 
 三种情况
@@ -93,22 +91,21 @@ id如果相同，可以认为是一组，从上往下顺序执行；
 
 ![image.png](https://file.wulicode.com/yuque/202301/03/23/4010Ap4Cr0Rx.png)
 
-
-
 #### (2)select_type
+
 ![image.png](https://file.wulicode.com/yuque/202301/03/23/4011IEpQGQLG.png)
 
-| 类型 | 说明 |
-| --- | --- |
-| simple | 简单子查询，不包含子查询和 union |
-| primary | 包含 union 或者子查询，最外层的部分标记为 primary [或包含任何复杂的子部分] |
-| subquery | 一般子查询中的子查询被标记为 subquery，也就是位于select列表中的查询 |
-| derived | 派生表——该临时表是从子查询派生出来的，位于form中的子查询 |
-| union | 位于union中第二个及其以后的子查询被标记为union，第一个就被标记为primary如果是union位于from中则标记为derived |
-| union result | 用来从匿名临时表里检索结果的select被标记为union result |
-| dependent union | 顾名思义，首先需要满足UNION的条件，及UNION中第二个以及后面的SELECT语句，同时该语句依赖外部的查询 |
-| subquery | 子查询中第一个SELECT语句 |
-| dependent subquery | 和DEPENDENT UNION相对UNION一样 |
+| 类型                 | 说明                                                                     |
+|--------------------|------------------------------------------------------------------------|
+| simple             | 简单子查询，不包含子查询和 union                                                    |
+| primary            | 包含 union 或者子查询，最外层的部分标记为 primary [或包含任何复杂的子部分]                         |
+| subquery           | 一般子查询中的子查询被标记为 subquery，也就是位于select列表中的查询                              |
+| derived            | 派生表——该临时表是从子查询派生出来的，位于form中的子查询                                        |
+| union              | 位于union中第二个及其以后的子查询被标记为union，第一个就被标记为primary如果是union位于from中则标记为derived |
+| union result       | 用来从匿名临时表里检索结果的select被标记为union result                                   |
+| dependent union    | 顾名思义，首先需要满足UNION的条件，及UNION中第二个以及后面的SELECT语句，同时该语句依赖外部的查询               |
+| subquery           | 子查询中第一个SELECT语句                                                        |
+| dependent subquery | 和DEPENDENT UNION相对UNION一样                                              |
 
 ①simple
 
@@ -144,12 +141,12 @@ id如果相同，可以认为是一组，从上往下顺序执行；
 
 从UNION表获取结果的SELECT。
 
-
 #### (3)table
+
 显示这一行的数据是关于哪张表的.
 
-
 #### (4)type
+
 ![image.png](https://file.wulicode.com/yuque/202301/03/23/4011cCoSTyxq.png)
 
 访问类型排列
@@ -204,15 +201,14 @@ Full Table Scan，将遍历全表以找到匹配的行。
 
 ![image.png](https://file.wulicode.com/yuque/202301/03/23/4511gfpJMqVm.png)
 
-
-
 #### (5)possible_keys
+
 显示可能应用在这张表中的索引，一个或多个。
 
 查询涉及到的字段上若存在索引，则该索引将被列出，但不一定被查询实际使用 。
 
-
 #### (6)key
+
 实际使用的索引。如果为NULL，则没有使用索引。
 
 ![image.png](https://file.wulicode.com/yuque/202301/03/23/4511aJmviK88.png)
@@ -222,6 +218,7 @@ Full Table Scan，将遍历全表以找到匹配的行。
 ![image.png](https://file.wulicode.com/yuque/202301/03/23/4511A2JhuT2H.png)
 
 #### (7)key_len
+
 表示索引中使用的字节数，可通过该列计算查询中使用的索引的长度。
 
 key_len字段显示的值为索引字段的最大可能长度，并非实际使用长度，能够帮你检查是否充分的利用上了索引。
@@ -244,20 +241,20 @@ key_len字段显示的值为索引字段的最大可能长度，并非实际使�
 
 第二组：key_len=deptno(int)+null=4+1=5
 
-
 #### (8)ref
+
 显示索引的哪一列被使用了，如果可能的话，是一个常数。哪些列或常量被用于查找索引列上的值。
 
 ![image.png](https://file.wulicode.com/yuque/202301/03/23/4512VrXmkoQu.png)
 
-
 #### (9)row
+
 rows列显示MySQL认为它执行查询时必须检查的行数，越少越好。
 
 ![image.png](https://file.wulicode.com/yuque/202301/03/23/4513RebdNWHr.png)
 
-
 #### (10)Extra
+
 包含不适合在其他列中显示但十分重要的额外信息。
 
 Using filesort
@@ -296,7 +293,8 @@ USING index
 
 理解1：就是select的数据列只用从索引中就能够取得，不必读取数据行，MySQL可以利用索引返回select列表中的字段，而不必根据索引再次读取数据文件，换句话说查询列要被所建的索引覆盖。
 
-理解2：索引是高效找到行的一个方法，但是一般数据库也能使用索引找到一个列的数据，因此它不必读取整个行。毕竟索引叶子节点存储了它们索引的数据;当能通过读取索引就可以得到想要的数据，那就不需要读取行了。①一个索引 ②包含了(或覆盖了)[select子句]与查询条件[Where子句]中 ③所有需要的字段就叫做覆盖索引。
+理解2：索引是高效找到行的一个方法，但是一般数据库也能使用索引找到一个列的数据，因此它不必读取整个行。毕竟索引叶子节点存储了它们索引的数据;当能通过读取索引就可以得到想要的数据，那就不需要读取行了。①一个索引
+②包含了(或覆盖了)[select子句]与查询条件[Where子句]中 ③所有需要的字段就叫做覆盖索引。
 
 注意：
 
@@ -327,5 +325,6 @@ distinct
 优化distinct操作，在找到第一匹配的元组后即停止找同样值的动作。
 
 ## 引用
+
 原文地址: [【数据库】-索引优化分析：性能分析](https://wulicode.com/mysql/mswl33.html)
 

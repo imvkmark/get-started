@@ -26,6 +26,7 @@ const nav = [
             { text: "Web", link: "/web/" },
             { text: "资源", link: "/development/tools/sdkman" },
             { text: "手机端", link: "/mobile/design/site" },
+            { text: "MySQL", link: "/mysql/" },
             { text: "运维", link: "/ops/centos/" },
             {
                 text: 'Ops',
@@ -582,6 +583,18 @@ const sidebar = {
                 createLink("Mac 安装 supervisor", "/ops/supervisor/install-at-mac"),
                 createLink("在 CentOS 上安装 Svn", "/ops/svn/install-at-centos"),
                 createLink("日志切割(logrotate)操作梳理", "/ops/logrotate/introduction.md"),
+            ],
+        },
+    ],
+    "/mysql": [
+        {
+            text: "介绍",
+            link: '/mysql/'
+        },
+        {
+            text: "优化",
+            items: [
+                createLink("索引优化分析：性能分析", "/mysql/optimize/optimize-explain.md"),
             ],
         },
     ],
