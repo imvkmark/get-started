@@ -49,32 +49,32 @@ const nav = [
             {
                 text: 'Wulicode',
                 items: [
-                    { text: 'Tools', link: 'https://tools.wulicode.com' },
-                    { text: 'Blog(Temp)', link: 'http://blog.wulicode.com' },
-                    { text: 'Vant Demo', link: 'https://vant-demo.wulicode.com' },
-                    { text: 'Element Plus Demo', link: 'https://element-plus-demo.wulicode.com' },
-                    { text: 'Html Get Started', link: 'https://html-get-started.wulicode.com' },
+                    createLink('Tools', 'https://tools.wulicode.com'),
+                    createLink('Blog(Temp)', 'http://blog.wulicode.com'),
+                    createLink('Vant Demo', 'https://vant-demo.wulicode.com'),
+                    createLink('Element Plus Demo', 'https://element-plus-demo.wulicode.com'),
+                    createLink('Html Get Started', 'https://html-get-started.wulicode.com'),
                 ]
             },
             {
                 text: 'Framework',
                 items: [
-                    { text: 'Poppy Framework', link: 'https://weiran.tech' }
+                    createLink('Poppy Framework', 'https://weiran.tech')
                 ]
             },
             {
                 text: '项目',
                 items: [
-                    { text: 'UniStory·优映', link: 'https://unistory.cn/' },
-                    { text: '产品大牛', link: 'https://pmdaniu.com' },
-                    { text: 'Wulihub', link: 'https://wulihub.com.cn' },
+                    createLink('UniStory·优映', 'https://unistory.cn/'),
+                    createLink('产品大牛', 'https://pmdaniu.com'),
+                    createLink('Wulihub', 'https://wulihub.com.cn'),
                 ]
             },
             {
                 text: 'Wait List',
                 items: [
-                    { text: 'WIP', link: '/wait-list' },
-                    { text: '学习指南', link: '/guide' },
+                    createLink('WIP', '/wait-list'),
+                    createLink('学习指南', '/guide'),
                 ]
             }
         ],
@@ -171,49 +171,49 @@ const sidebar = {
         {
             text: '安装',
             items: [
-                { text: 'Mac 安装 LNMP', link: '/php/install/mac-lnmp' },
-                { text: 'CentOS 安装 LNMP+', link: '/php/install/centos7-lnmp-plus' },
-                { text: 'RockyLinux 安装 RNMP+', link: '/php/install/rockylinux-rnmp' },
-                { text: '使用 PECL 安装扩展', link: '/php/install/pecl-install-extension' },
+                createLink('Mac 安装 LNMP', '/php/install/mac-lnmp'),
+                createLink('CentOS 安装 LNMP+', '/php/install/centos7-lnmp-plus'),
+                createLink('RockyLinux 安装 RNMP+', '/php/install/rockylinux-rnmp'),
+                createLink('使用 PECL 安装扩展', '/php/install/pecl-install-extension'),
             ]
         },
         {
             text: 'Laravel ',
             items: [
-                { text: 'Eloquent 和 Migrate', link: '/php/laravel/eloquent-migrate.md' },
-                { text: 'FAQ', link: '/php/laravel/faq.md' },
+                createLink('Eloquent 和 Migrate', '/php/laravel/eloquent-migrate.md'),
+                createLink('FAQ', '/php/laravel/faq.md'),
             ]
         },
         {
             text: 'IDE',
             items: [
-                { text: 'PHPUnit 在 PhpStorm 中的使用', link: '/php/ide/phpstorm-run-phpunit.md' },
-                { text: 'PhpStorm 使用 Xdebug 调试', link: '/php/ide/phpstorm-use-xdebug.md' },
-                { text: 'PhpStorm 中运行 TestSuit', link: '/php/ide/phpstorm-run-testsuit.md' },
-                { text: '使用 PhpStorm 开发 Laravel', link: '/php/ide/phpstorm-develop-laravel.md' },
+                createLink('PHPUnit 在 PhpStorm 中的使用', '/php/ide/phpstorm-run-phpunit.md'),
+                createLink('PhpStorm 使用 Xdebug 调试', '/php/ide/phpstorm-use-xdebug.md'),
+                createLink('PhpStorm 中运行 TestSuit', '/php/ide/phpstorm-run-testsuit.md'),
+                createLink('使用 PhpStorm 开发 Laravel', '/php/ide/phpstorm-develop-laravel.md'),
             ]
         },
         {
             text: 'Packages',
             items: [
-                { text: 'Carbon', link: '/php/packages/carbon-carbon' },
-                { text: 'dotenv - PHP 版本的 .env', link: '/php/packages/vlucas-phpdotenv.md' },
+                createLink('Carbon', '/php/packages/carbon-carbon'),
+                createLink('dotenv - PHP 版本的 .env', '/php/packages/vlucas-phpdotenv.md'),
             ]
         },
         {
             text: '其他',
             items: [
-                { text: '使用 Clockwork 调试 Php 应用', link: '/php/tech/using-clockwork-extension-for-debug.md' },
-                { text: 'FAQ', link: '/php/tech/faq.md' },
+                createLink('使用 Clockwork 调试 Php 应用', '/php/tech/using-clockwork-extension-for-debug.md'),
+                createLink('FAQ', '/php/faq.md'),
             ]
         },
         {
             text: 'Hyperf',
             items: [
-                { text: '入门', link: '/php/hyperf/' },
-                { text: '注解', link: '/php/hyperf/core-annotation' },
-                { text: 'Aop', link: '/php/hyperf/core-aop' },
-                { text: 'FAQ', link: '/php/hyperf/faq' },
+                createLink('入门', '/php/hyperf/'),
+                createLink('注解', '/php/hyperf/core-annotation'),
+                createLink('Aop', '/php/hyperf/core-aop'),
+                createLink('FAQ', '/php/hyperf/faq'),
             ]
         },
     ],
@@ -221,145 +221,145 @@ const sidebar = {
         {
             text: '语言参考',
             items: [
-                { text: '入门', link: '/php/refs/language/intro' },
-                { text: '流程控制', link: '/php/refs/language/control-structures' },
+                createLink('入门', '/php/refs/language/intro'),
+                createLink('流程控制', '/php/refs/language/control-structures'),
             ]
         },
         {
             text: '影响 PHP 行为的扩展',
             items: [
-                { text: '错误处理', link: '/php/refs/affect-php-behaviour/error-handling' },
-                { text: '输出控制', link: '/php/refs/affect-php-behaviour/output-control' },
+                createLink('错误处理', '/php/refs/affect-php-behaviour/error-handling'),
+                createLink('输出控制', '/php/refs/affect-php-behaviour/output-control'),
             ]
         },
         {
             text: '压缩与归档扩展',
             items: [
-                { text: 'Bzip2', link: '/php/refs/compress-archive/bzip2' },
-                { text: 'LZF', link: '/php/refs/compress-archive/lzf' },
-                { text: 'Phar', link: '/php/refs/compress-archive/phar' },
-                { text: 'Rar', link: '/php/refs/compress-archive/rar' },
-                { text: 'Zip', link: '/php/refs/compress-archive/zip' },
-                { text: 'Zlib', link: '/php/refs/compress-archive/zlib' },
+                createLink('Bzip2', '/php/refs/compress-archive/bzip2'),
+                createLink('LZF', '/php/refs/compress-archive/lzf'),
+                createLink('Phar', '/php/refs/compress-archive/phar'),
+                createLink('Rar', '/php/refs/compress-archive/rar'),
+                createLink('Zip', '/php/refs/compress-archive/zip'),
+                createLink('Zlib', '/php/refs/compress-archive/zlib'),
             ]
         },
         {
             text: '加密扩展',
             items: [
-                { text: 'Hash', link: '/php/refs/cryptography/hash' },
-                { text: 'Mcrypt', link: '/php/refs/cryptography/mcrypt' },
-                { text: 'MHash', link: '/php/refs/cryptography/mhash' },
-                { text: 'OpenSSL', link: '/php/refs/cryptography/openssl' },
+                createLink('Hash', '/php/refs/cryptography/hash'),
+                createLink('Mcrypt', '/php/refs/cryptography/mcrypt'),
+                createLink('MHash', '/php/refs/cryptography/mhash'),
+                createLink('OpenSSL', '/php/refs/cryptography/openssl'),
             ]
         },
         {
             text: '数据库扩展',
             items: [
-                { text: 'DBA', link: '/php/refs/database/dba' },
-                { text: 'PDO', link: '/php/refs/database/pdo' },
-                { text: 'MySQLi', link: '/php/refs/database/db-mysqli' },
+                createLink('DBA', '/php/refs/database/dba'),
+                createLink('PDO', '/php/refs/database/pdo'),
+                createLink('MySQLi', '/php/refs/database/db-mysqli'),
             ]
         },
         {
             text: '日期与时间相关扩展',
             items: [
-                { text: 'Calendar', link: '/php/refs/date-time/calendar' },
-                { text: 'DateTime', link: '/php/refs/date-time/datetime' },
+                createLink('Calendar', '/php/refs/date-time/calendar'),
+                createLink('DateTime', '/php/refs/date-time/datetime'),
             ]
         },
         {
             text: '文件系统相关扩展',
             items: [
-                { text: 'Direct IO', link: '/php/refs/filesystem/direct-io' },
-                { text: '目录', link: '/php/refs/filesystem/directories' },
-                { text: 'Fileinfo', link: '/php/refs/filesystem/fileinfo' },
-                { text: '文件系统', link: '/php/refs/filesystem/filesystem' },
+                createLink('Direct IO', '/php/refs/filesystem/direct-io'),
+                createLink('目录', '/php/refs/filesystem/directories'),
+                createLink('Fileinfo', '/php/refs/filesystem/fileinfo'),
+                createLink('文件系统', '/php/refs/filesystem/filesystem'),
             ]
         },
         {
             text: '图像生成和处理',
             items: [
-                { text: 'Exif', link: '/php/refs/filesystem/direct-io' },
+                createLink('Exif', '/php/refs/filesystem/direct-io'),
             ]
         },
         {
             text: '国际化',
             items: [
-                { text: 'Enchant', link: '/php/refs/international/enchant' },
-                { text: 'Gettext', link: '/php/refs/international/gettext' },
-                { text: 'iconv', link: '/php/refs/international/iconv' },
-                { text: 'intl', link: '/php/refs/international/intl' },
+                createLink('Enchant', '/php/refs/international/enchant'),
+                createLink('Gettext', '/php/refs/international/gettext'),
+                createLink('iconv', '/php/refs/international/iconv'),
+                createLink('intl', '/php/refs/international/intl'),
             ]
         },
         {
             text: '数学扩展',
             items: [
-                { text: 'BC Math', link: '/php/refs/mathematical/bcmath' },
-                { text: 'Math', link: '/php/refs/mathematical/math' },
+                createLink('BC Math', '/php/refs/mathematical/bcmath'),
+                createLink('Math', '/php/refs/mathematical/math'),
             ]
         },
         {
             text: '其他基本扩展',
             items: [
-                { text: 'Json', link: '/php/refs/other-basic/json' },
-                { text: 'Misc 杂项', link: '/php/refs/other-basic/misc' },
-                { text: 'SPL', link: '/php/refs/other-basic/spl' },
-                { text: 'SPL-interfaces', link: '/php/refs/other-basic/spl-interfaces' },
-                { text: 'SPL-迭代器', link: '/php/refs/other-basic/spl-iterators' },
-                { text: 'SPL-其他类和接口', link: '/php/refs/other-basic/spl-misc-classes-interfaces' },
-                { text: 'Urls', link: '/php/refs/other-basic/urls' },
-                { text: 'Yaml', link: '/php/refs/other-basic/yaml' },
-                { text: 'Pecl', link: '/php/refs/pecl/' },
+                createLink('Json', '/php/refs/other-basic/json'),
+                createLink('Misc 杂项', '/php/refs/other-basic/misc'),
+                createLink('SPL', '/php/refs/other-basic/spl'),
+                createLink('SPL-interfaces', '/php/refs/other-basic/spl-interfaces'),
+                createLink('SPL-迭代器', '/php/refs/other-basic/spl-iterators'),
+                createLink('SPL-其他类和接口', '/php/refs/other-basic/spl-misc-classes-interfaces'),
+                createLink('Urls', '/php/refs/other-basic/urls'),
+                createLink('Yaml', '/php/refs/other-basic/yaml'),
+                createLink('Pecl', '/php/refs/pecl/'),
             ]
         },
         {
             text: '其他服务',
             items: [
-                { text: 'CURL', link: '/php/refs/other-services/curl' },
-                { text: '网络', link: '/php/refs/other-services/network' },
+                createLink('CURL', '/php/refs/other-services/curl'),
+                createLink('网络', '/php/refs/other-services/network'),
             ]
         },
         {
             text: '预定义类和接口',
             items: [
-                { text: 'WeakReference', link: '/php/refs/predefined-interfaces-classes/weakreference' },
+                createLink('WeakReference', '/php/refs/predefined-interfaces-classes/weakreference'),
             ]
         },
         {
             text: '进程控制',
             items: [
-                { text: 'EIO', link: '/php/refs/process-control/eio' },
+                createLink('EIO', '/php/refs/process-control/eio'),
             ]
         },
         {
             text: '服务器指定扩展',
             items: [
-                { text: 'Apache', link: '/php/refs/server-specific/apache' },
+                createLink('Apache', '/php/refs/server-specific/apache'),
             ]
         },
         {
             text: '文本处理',
             items: [
-                { text: 'BBCode', link: '/php/refs/text-processing/bbcode' },
-                { text: 'PCRE', link: '/php/refs/text-processing/pcre' },
-                { text: 'POSIX', link: '/php/refs/text-processing/posix' },
-                { text: '字符串', link: '/php/refs/text-processing/string' },
+                createLink('BBCode', '/php/refs/text-processing/bbcode'),
+                createLink('PCRE', '/php/refs/text-processing/pcre'),
+                createLink('POSIX', '/php/refs/text-processing/posix'),
+                createLink('字符串', '/php/refs/text-processing/string'),
             ]
         },
         {
             text: '变量和类型',
             items: [
-                { text: '数组', link: '/php/refs/variables-types/array' },
-                { text: 'CType', link: '/php/refs/variables-types/ctype' },
-                { text: 'Filter', link: '/php/refs/variables-types/filter' },
-                { text: '函数处理', link: '/php/refs/variables-types/function-handling' },
-                { text: '变量处理', link: '/php/refs/variables-types/variable-handling' },
+                createLink('数组', '/php/refs/variables-types/array'),
+                createLink('CType', '/php/refs/variables-types/ctype'),
+                createLink('Filter', '/php/refs/variables-types/filter'),
+                createLink('函数处理', '/php/refs/variables-types/function-handling'),
+                createLink('变量处理', '/php/refs/variables-types/variable-handling'),
             ]
         },
         {
             text: 'XML',
             items: [
-                { text: 'DOM', link: '/php/refs/xml/dom' },
+                createLink('DOM', '/php/refs/xml/dom'),
             ]
         },
     ],
@@ -476,6 +476,12 @@ const sidebar = {
             text: "其他",
             items: [
                 createLink("开发常用术语", "/development/tech/knowledge"),
+            ],
+        },
+        {
+            text: "Docker 开发指南",
+            items: [
+                createLink("目录", "/development/docker-guide/toc"),
             ],
         },
     ],
@@ -611,6 +617,18 @@ const sidebar = {
             text: "优化",
             items: [
                 createLink("索引优化分析：性能分析", "/mysql/optimize/optimize-explain.md"),
+            ],
+        },
+        {
+            text: "MySQL CookBook",
+            items: [
+                createLink("使用 Mysql 客户端", "/mysql/mysql-cookbook/1-2-client"),
+                createLink("从表中查询数据", "/mysql/mysql-cookbook/3-7-table-query"),
+                createLink("表管理", "/mysql/mysql-cookbook/4-table-mgr"),
+                createLink("与字符串共舞", "/mysql/mysql-cookbook/5-string"),
+                createLink("使用日期和时间", "/mysql/mysql-cookbook/6-date-time"),
+                createLink("聚合函数", "/mysql/mysql-cookbook/8-9-aggregate-function"),
+                createLink("数据导入导出", "/mysql/mysql-cookbook/10-dump-import"),
             ],
         },
     ],
