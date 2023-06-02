@@ -27,7 +27,6 @@ const nav = [
             { text: "资源", link: "/development/tools/sdkman" },
             { text: "手机端", link: "/mobile/design/site" },
             { text: "MySQL", link: "/mysql/" },
-            { text: "运维", link: "/ops/centos/" },
             {
                 text: 'Ops',
                 items: [
