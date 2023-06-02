@@ -4,6 +4,10 @@
 
 ![公众号说明.png](https://file.wulicode.com/doc/20230524/1684926306080.png)
 
+::: tip 如果感觉本站帮助了你, 可以给站长买一杯咖啡~
+![](https://file.wulicode.com/doc/20230531/1685531579752.png?x-oss-process=image/resize,h_315)
+:::
+
 ## 标准
 
 ### 笔记标准
@@ -35,11 +39,6 @@ $ node -v
 
 如果本项目引用内容无意侵犯了您的版权, 请通过以下联系方式联系我, 并得到妥善处理.
 
-## 赞赏
-
-![](https://file.wulicode.com/doc/20230531/1685531579752.png?x-oss-process=image/resize,h_315)
-
-
 ## 联系方式
 
 **微信**
@@ -54,12 +53,6 @@ zhaody901[at]126.com
 
 [https://github.com/imvkmark](https://github.com/imvkmark)
 
-## 更新记录
-
-**2023年05月24日**
-
-- 移动到 vitepress
-- 加入公众号
-- 废弃语雀
-
-
+::: info 说明
+本项目自 2023年05月24日 迁移至 vitepress
+:::
