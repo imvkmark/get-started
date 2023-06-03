@@ -10,13 +10,13 @@
 
 ## 什么是Pipenv
 
-[Pipenv](https://link.zhihu.com/?target=https%3A//docs.pipenv.org/)是Kenneth
-Reitz在2017年1月发布的Python依赖管理工具，现在由PyPA维护。你可以把它看做是pip和virtualenv的组合体，而它基于的[Pipfile](https://link.zhihu.com/?target=https%3A//github.com/pypa/pipfile)
+[Pipenv](https://docs.pipenv.org/)是Kenneth
+Reitz在2017年1月发布的Python依赖管理工具，现在由PyPA维护。你可以把它看做是pip和virtualenv的组合体，而它基于的[Pipfile](target=https://github.com/pypa/pipfile)
 则用来替代旧的依赖记录方式（requirements.txt）。
 
-在这篇文章里，我将会以旧的依赖管理工作流程作为对比来介绍Pipenv的基本用法，更详细的用法可以参考[Pipenv文档](https://link.zhihu.com/?target=https%3A//docs.pipenv.org/)
+在这篇文章里，我将会以旧的依赖管理工作流程作为对比来介绍Pipenv的基本用法，更详细的用法可以参考[Pipenv文档](https://docs.pipenv.org/)
 ，或是Kenneth Reitz在PyCon
-2018的演讲[《Pipenv: The Future of Python Dependency Management》](https://link.zhihu.com/?target=https%3A//www.youtube.com/watch%3Fv%3DGBQAKldqgZs)。
+2018的演讲[《Pipenv: The Future of Python Dependency Management》](https://www.youtube.com/watch%3Fv%3DGBQAKldqgZs)。
 
 顺便说一句，[《Flask Web开发实战》](https://zhuanlan.zhihu.com/p/29907260)中所有示例程序都使用了Pipenv进行依赖管理。
 
@@ -24,7 +24,7 @@ Reitz在2017年1月发布的Python依赖管理工具，现在由PyPA维护。你
 
 ## 为什么使用Pipenv
 
-Pipenv会自动帮你管理虚拟环境和依赖文件，并且提供了一系列命令和选项来帮助你实现各种依赖和环境管理相关的操作。简而言之，它更方便、完善和安全。你可以通过[Pipenv文档](https://link.zhihu.com/?target=https%3A//docs.pipenv.org/)
+Pipenv会自动帮你管理虚拟环境和依赖文件，并且提供了一系列命令和选项来帮助你实现各种依赖和环境管理相关的操作。简而言之，它更方便、完善和安全。你可以通过[Pipenv文档](https://docs.pipenv.org/)
 开头的介绍来了解它的详细特性。Pipenv的slogan是“Python Dev Workflow for Humans”，作为人类，当然应该尝试一下……
 
 ## 如何使用Pipenv

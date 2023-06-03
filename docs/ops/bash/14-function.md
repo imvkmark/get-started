@@ -1,10 +1,4 @@
----
-title : "函数"
-date : 2022-08-24 21:40:52
-toc : true
-categories :
-  - [ "Lang","Shell","Shell 入门","语法" ]
----
+# 函数
 
 bash 函数定义语法如下：
 
@@ -20,53 +14,7 @@ bash 函数定义语法如下：
 3. 函数返回值在调用该函数后通过 `$?` 来获得。
 4. 所有函数在使用前必须定义。这意味着必须将函数放在脚本开始部分，直至 shell 解释器首次发现它时，才可以使用。调用函数仅使用其函数名即可。
 
-[Code](https://github.com/imvkmark/shell-get-started/blob/5c513c88f36bf6b9c474e12333d0d6776fa93b70/3_lang_ref/6_function/operation.sh)
-
-```shell
-#!/usr/bin/env bash
-
-calc() {
-    PS3="choose the oper: "
-    select oper in + - \* /; do                # 生成操作符选择菜单
-        echo -n "enter first num: " && read x  # 读取输入参数
-        echo -n "enter second num: " && read y # 读取输入参数
-        exec
-        case ${oper} in
-        "+")
-            return $((${x} + ${y}))
-            ;;
-        "-")
-            return $((${x} - ${y}))
-            ;;
-        "*")
-            return $((${x} * ${y}))
-            ;;
-        "/")
-            return $((${x} / ${y}))
-            ;;
-        *)
-            echo "${oper} is not support!"
-            return 0
-            ;;
-        esac
-        break
-    done
-}
-calc
-
-# $? 获取 calc 函数返回值
-echo "the result is: $?"
-
-# Output: (注: 这个是交互数据, 需要命令行运行)
-# 1) +
-# 2) -
-# 3) *
-# 4) /
-# choose the oper: 1
-# enter first num: 2
-# enter second num: 3
-# the result is: 5
-```
+<<< @/ops/bash/3_lang_ref/6_function/operation.sh
 
 ## 位置参数
 
@@ -83,40 +31,7 @@ echo "the result is: $?"
 | `$#`           | 不包括`$0`在内的位置参数的个数 |
 | `$FUNCNAME`    | 函数名称（仅在函数内部有值）    |
 
-[Code](https://github.com/imvkmark/shell-get-started/blob/5c513c88f36bf6b9c474e12333d0d6776fa93b70/3_lang_ref/6_function/run.sh)
-
-```shell
-#!/usr/bin/env bash
-
-x=0
-if [[ -n $1 ]]; then
-    echo "第一个参数为：$1"
-    x=$1
-else
-    echo "第一个参数为空"
-fi
-
-y=0
-if [[ -n $2 ]]; then
-    echo "第二个参数为：$2"
-    y=$2
-else
-    echo "第二个参数为空"
-fi
-
-paramsFunction() {
-    echo "函数第一个入参：$1"
-    echo "函数第二个入参：$2"
-}
-paramsFunction ${x} ${y}
-
-# Output:
-# ./run.sh hello world
-# 第一个参数为：hello
-# 第二个参数为：world
-# 函数第一个入参：hello
-# 函数第二个入参：world
-```
+<<< @/ops/bash/3_lang_ref/6_function/run.sh
 
 执行 `./run.sh hello world` ，然后在脚本中通过 `$1` 、 `$2` ... 读取第
 
@@ -144,16 +59,6 @@ paramsFunction ${x} ${y}
 
 ## 运行结果
 
-[Code](https://github.com/imvkmark/shell-get-started/blob/5c513c88f36bf6b9c474e12333d0d6776fa93b70/3_lang_ref/6_function/result.sh)
+<<< @/ops/bash/3_lang_ref/6_function/result.sh
 
-```shell
-#!/usr/bin/env bash
-
-# 获取运行结果
-# ----------------------------------------
-grep <"$(dirname "$0")"/_tmp.txt 'duoli'
-
-echo $?
-# Output : 0
-```
 
