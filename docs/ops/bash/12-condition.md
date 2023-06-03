@@ -13,15 +13,15 @@
 
 `fi` 之间的代码会被执行。 `fi` 标志着条件代码块的结束。
 
-<<< @/ops/bash/12-condition/if.sh
+<<< @/ops/bash/src/12-condition/if.sh
 
 同样，可以使用 `if..else` 语句 或者 `if..elif..else` ，使用起来也很方便。
 
-<<< @/ops/bash/12-condition/if-el.sh
+<<< @/ops/bash/src/12-condition/if-el.sh
 
 拆解 if command
 
-<<< @/ops/bash/12-condition/if-cmd.sh
+<<< @/ops/bash/src/12-condition/if-cmd.sh
 
 `[]` 和 `[[]]` 的区别
 
@@ -61,7 +61,7 @@ f.  `[[]]` 是bash keyword：`[[` is a shell keyword
 
 `if` 更有用。使用 `case` 来解决复杂的条件判断，看起来像下面这样：
 
-<<< @/ops/bash/12-condition/case.sh
+<<< @/ops/bash/src/12-condition/case.sh
 
 每种情况都是匹配了某个模式的表达式。 `|` 用来分割多个模式， `)` 用来结束一个模式序列。第一个匹配上的模式对应的命令将会被执行。 `*`
 代表任何不匹配以上给定模式的模式。命令块儿之间要用 `;;` 分隔。

@@ -101,7 +101,7 @@ chmod +x /path/to/script.sh #使脚本具有执行权限
 
 这种方式要求脚本文件的第一行必须指明运行该脚本的程序，比如：
 
-<<< @/ops/bash/1-intro/hello-world.sh
+<<< @/ops/bash/src/1-intro/hello-world.sh
 
 
 上面的例子中，我们使用了一个很有用的命令 `echo` 来输出字符串到屏幕上。

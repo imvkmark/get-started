@@ -19,7 +19,7 @@
 
 是错误的，必须写成 `[ $x == $y ]` 。
 
-<<< @/ops/bash/3_lang_ref/4_operator/math.sh
+<<< @/ops/bash/src/7-arithmetic/math.sh
 
 
 ## 关系运算符
@@ -37,7 +37,7 @@
 | `-ge` | 检测左边的数是否大于等于右边的，如果是，则返回 true。 | `[ $a -ge $b ]`  返回 false。 |
 | `-le` | 检测左边的数是否小于等于右边的，如果是，则返回 true。 | `[ $a -le $b ]` 返回 true。   |
 
-<<< @/ops/bash/3_lang_ref/4_operator/relation.sh
+<<< @/ops/bash/src/7-arithmetic/relation.sh
 
 
 ## 布尔运算符
@@ -50,7 +50,7 @@
 | `-o` | 或运算，有一个表达式为 true 则返回 true。         | `[ $a -lt 20 -o $b -gt 100 ]`  返回 true。  |
 | `-a` | 与运算，两个表达式都为 true 才返回 true。         | `[ $a -lt 20 -a $b -gt 100 ]`  返回 false。 |
 
-<<< @/ops/bash/3_lang_ref/4_operator/bool.sh
+<<< @/ops/bash/src/7-arithmetic/bool.sh
 
 
 ## 逻辑运算符
@@ -62,7 +62,7 @@
 | `&&`               | 逻辑的 AND | `[[ ${x} -lt 100 && ${y} -gt 100 ]]`  返回 false          |
 | `\\&#124;\\&#124;` | 逻辑的 OR  | `[[ $a -lt 100 \\&#124;\\&#124; $b -gt 100 ]]`  返回 true |
 
-<<< @/ops/bash/3_lang_ref/4_operator/xor.sh
+<<< @/ops/bash/src/7-arithmetic/xor.sh
 
 
 ## 字符串运算符
@@ -77,7 +77,7 @@
 | `-n`  | 检测字符串长度是否为 0，不为 0 返回 true。 | `[ -n $a ]`  返回 true。    |
 | `str` | 检测字符串是否为空，不为空返回 true。      | `[ $a ]`  返回 true。       |
 
-<<< @/ops/bash/3_lang_ref/4_operator/string.sh
+<<< @/ops/bash/src/7-arithmetic/string.sh
 
 
 ## 文件测试运算符
@@ -102,11 +102,11 @@
 | -s file | 检测文件是否为空（文件大小是否大于 0），不为空返回 true。         | `[ -s $file ]`  返回 true。  |
 | -e file | 检测文件（包括目录）是否存在，如果是，则返回 true。             | `[ -e $file ]`  返回 true。  |
 
-<<< @/ops/bash/3_lang_ref/4_operator/file.sh
+<<< @/ops/bash/src/7-arithmetic/file.sh
 
 
 ## `!` 运算符
 
-<<< @/ops/bash/3_lang_ref/4_operator/not.sh
+<<< @/ops/bash/src/7-arithmetic/not.sh
 
 

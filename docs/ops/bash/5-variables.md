@@ -27,14 +27,14 @@ echo ${word}
 
 使用 readonly 命令可以将变量定义为只读变量，只读变量的值不能被改变。
 
-<<< @/ops/bash/3_lang_ref/3_variables/readonly.sh
+<<< @/ops/bash/src/5-variables/readonly.sh
 
 
 ## 删除变量
 
 使用 unset 命令可以删除变量。变量被删除后不能再次使用。unset 命令不能删除只读变量。
 
-<<< @/ops/bash/3_lang_ref/3_variables/delete.sh
+<<< @/ops/bash/src/5-variables/delete.sh
 
 
 ## 变量类型
@@ -56,7 +56,7 @@ echo ${word}
 | `$PS1`    | 主要系统输入提示符                    |
 | `$PS2`    | 次要系统输入提示符                    |
 
-<<< @/ops/bash/3_lang_ref/3_variables/env.sh
+<<< @/ops/bash/src/5-variables/env.sh
 
 [这里](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html#sect_03_02_04) 有一张更全面的 Bash 环境变量列表。
 

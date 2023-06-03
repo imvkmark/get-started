@@ -42,7 +42,7 @@ done
 # 将 /home/zp 目录下所有 sh 文件拷贝到 /home/zp/scripts
 ```
 
-<<< @/ops/bash/13-loop/for.sh
+<<< @/ops/bash/src/13-loop/for.sh
 
 ### `while` 循环
 
@@ -124,7 +124,7 @@ done
 
 `until` 循环跟 `while` 循环正好相反。它跟 `while` 一样也需要检测一个测试条件，但不同的是，只要该条件为 _假 _ 就一直执行循环：
 
-<<< @/ops/bash/13-loop/until.sh
+<<< @/ops/bash/src/13-loop/until.sh
 
 ### `select` 循环
 
@@ -144,7 +144,7 @@ done
 
 一个可能的实例可能会是这样：
 
-<<< @/ops/bash/13-loop/select.sh
+<<< @/ops/bash/src/13-loop/select.sh
 
 这个例子，先询问用户他想使用什么包管理器。接着，又询问了想安装什么包，最后执行安装操作。
 
@@ -166,9 +166,9 @@ Enter the package name: gitbook-cli
 > `break` 语句用来提前结束当前循环。
 > `continue` 语句用来跳过某次迭代。
 
-<<< @/ops/bash/13-loop/break.sh
+<<< @/ops/bash/src/13-loop/break.sh
 
-<<< @/ops/bash/13-loop/continue.sh
+<<< @/ops/bash/src/13-loop/continue.sh
 
 ## 参考
 

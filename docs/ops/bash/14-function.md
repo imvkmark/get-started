@@ -14,7 +14,7 @@ bash 函数定义语法如下：
 3. 函数返回值在调用该函数后通过 `$?` 来获得。
 4. 所有函数在使用前必须定义。这意味着必须将函数放在脚本开始部分，直至 shell 解释器首次发现它时，才可以使用。调用函数仅使用其函数名即可。
 
-<<< @/ops/bash/3_lang_ref/6_function/operation.sh
+<<< @/ops/bash/src/14-function/operation.sh
 
 ## 位置参数
 
@@ -31,7 +31,7 @@ bash 函数定义语法如下：
 | `$#`           | 不包括`$0`在内的位置参数的个数 |
 | `$FUNCNAME`    | 函数名称（仅在函数内部有值）    |
 
-<<< @/ops/bash/3_lang_ref/6_function/run.sh
+<<< @/ops/bash/src/14-function/run.sh
 
 执行 `./run.sh hello world` ，然后在脚本中通过 `$1` 、 `$2` ... 读取第
 
@@ -59,6 +59,6 @@ bash 函数定义语法如下：
 
 ## 运行结果
 
-<<< @/ops/bash/3_lang_ref/6_function/result.sh
+<<< @/ops/bash/src/14-function/result.sh
 
 

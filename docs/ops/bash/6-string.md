@@ -15,19 +15,19 @@ shell 字符串可以用单引号 `'` ，也可以用双引号 `"` ，也可以�
 
 ## 拼接字符串
 
-<<< @/ops/bash/3_lang_ref/2_types/string/join.sh
+<<< @/ops/bash/src/6-string/join.sh
 
 ## 获取字符串长度
 
-<<< @/ops/bash/3_lang_ref/2_types/string/length.sh
+<<< @/ops/bash/src/6-string/length.sh
 
 ## 截取子字符串
 
-<<< @/ops/bash/3_lang_ref/2_types/string/sub.sh
+<<< @/ops/bash/src/6-string/sub.sh
 
 ## 查找子字符串
 
-<<< @/ops/bash/3_lang_ref/2_types/string/find.sh
+<<< @/ops/bash/src/6-string/find.sh
 
 
 > mac 下会出现语法错误
