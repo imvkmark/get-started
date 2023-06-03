@@ -463,6 +463,7 @@ const sidebar = {
             text: "运营相关",
             items: [
                 createLink("robots 文档", "/development/op/robots"),
+                createLink("SEO 和 蜘蛛", "/development/op/seo-and-crawler"),
             ],
         },
         {
