@@ -1,10 +1,4 @@
----
-title: "Client Adapter"
-date: 2022-08-20 16:15:43
-toc: true
-categories:
-- ["Ops","软件","Canal"]
----
+# Client Adapter
 
 ## 基本说明
 

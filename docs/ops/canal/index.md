@@ -1,11 +1,4 @@
----
-title: "Canal 简介"
-date: 2022-08-20 15:44:44
-toc: true
-categories:
-- ["Ops","软件","Canal"]
----
-
+# Canal 简介
 ![](https://file.wulicode.com/yuque/202208/20/15/5010w6lYDRCw.png)
 
 **canal [kə'næl]**，译意为水道/管道/沟渠，主要用途是基于 MySQL 数据库增量日志解析，提供增量数据订阅和消费

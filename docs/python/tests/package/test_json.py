@@ -8,7 +8,7 @@ class TestJson(unittest.TestCase):
         # python: object 转换为 string
         json_object = {
             'name': 'duoli',
-            'site': 'https://wulicode.com'
+            'site': 'https://domain.com'
         }
         json_str = json.dumps(json_object)
         # true

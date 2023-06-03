@@ -1,10 +1,4 @@
----
-title: "Canal For ElasticSearch 适配器"
-date: 2022-08-20 16:18:53
-toc: true
-categories:
-- ["Ops","软件","Canal"]
----
+# Canal For ElasticSearch 适配器
 
 canal 1.1.1版本之后, 内置增加客户端数据同步功能, Client适配器整体介绍: [ClientAdapter](https://github.com/alibaba/canal/wiki/ClientAdapter)
 

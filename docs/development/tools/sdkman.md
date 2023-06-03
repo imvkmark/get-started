@@ -475,9 +475,8 @@ Liberica Native Image Kit是一个实用程序，它可以在封闭的假设下�
 Mandrel专注于 GraalVM 的本机映像组件，以便为Quarkus用户为其应用程序生成本机映像提供一种简单的方法。
 使用Quarkus的开发人员应该能够从Java源代码一直到Linux上运行的精简、本机、平台相关的应用程序。此功能对于在云本地应用程序开发模型中部署到容器至关重要。
 
-    `$ sdk install java x.y.z-mandrel`
+`$ sdk install java x.y.z-mandrel`
 
-    * * *
 
 ### [OpenJDK](https://jdk.java.net/) (jdk.java.net)
 
@@ -486,7 +485,7 @@ OpenJDK(Open Java Development Kit)是Java平台标准版(Java SE)的免费开源
 该实现在GNU通用公共许可证(GNU GPL)版本2下获得许可，但有一个链接例外。如果没有GPL链接例外，链接到Java类库的组件将受到GPL许可证条款的约束。
 OpenJDK是从版本7开始的Java SE的官方参考实现。
 
-    `$ sdk install java x.y.z-open`
+`$ sdk install java x.y.z-open`
 
 ### [OpenJDK](https://www.microsoft.com/openjdk) (Microsoft)
 

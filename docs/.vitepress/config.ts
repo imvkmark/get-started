@@ -132,7 +132,10 @@ const sidebar = {
     "/java": [
         {
             text: "入门",
-            items: [createLink("说明", "/java/")],
+            items: [
+                createLink("说明", "/java/"),
+                createLink("安装 JDK", "/java/tech/install"),
+            ],
         },
         {
             text: "基础版",
@@ -622,6 +625,16 @@ const sidebar = {
                 createLink("ES 语法", "/ops/elk/es-query-schema"),
                 createLink("在 Docker 上安装", "/ops/elk/install-use-docker"),
                 createLink("使用 filebeat 搜集日志", "/ops/elk/use-filebeat-collect-nginx-log"),
+            ],
+        },
+        {
+            text: "Canal",
+            items: [
+                createLink("Canal 简介", "/ops/canal/"),
+                createLink("Canal 快速入门", "/ops/canal/quickstart"),
+                createLink("Deployer", "/ops/canal/deployer"),
+                createLink("Canal For ElasticSearch 适配器", "/ops/canal/client-sync-es"),
+                createLink("Client Adapter", "/ops/canal/client-adapter"),
             ],
         },
         {

@@ -324,7 +324,5 @@ distinct
 
 优化distinct操作，在找到第一匹配的元组后即停止找同样值的动作。
 
-## 引用
 
-原文地址: [【数据库】-索引优化分析：性能分析](https://wulicode.com/mysql/mswl33.html)
 

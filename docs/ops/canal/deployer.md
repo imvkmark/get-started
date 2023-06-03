@@ -1,10 +1,4 @@
----
-title: "Deployer"
-date: 2022-08-20 16:37:58
-toc: true
-categories:
-- ["Ops","软件","Canal"]
----
+# Deployer
 
 原文地址 : [https://github.com/alibaba/canal/wiki/AdminGuide](https://github.com/alibaba/canal/wiki/AdminGuide)
 
