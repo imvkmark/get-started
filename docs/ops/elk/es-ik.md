@@ -1,10 +1,4 @@
----
-title: "ES 插件 : ElasticSearch 分词/IK"
-date: 2022-08-19 18:46:30
-toc: true
-categories:
-- ["Ops","软件","ELK"]
----
+# ES 插件 : ElasticSearch 分词/IK
 
 ## 安装
 地址  : [https://github.com/medcl/elasticsearch-analysis-ik](https://github.com/medcl/elasticsearch-analysis-ik)

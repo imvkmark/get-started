@@ -613,6 +613,16 @@ const sidebar = {
             ],
         },
         {
+            text: "ELK",
+            items: [
+                createLink("在 CentOS 7 上安装", "/ops/elk/install-at-centos7"),
+                createLink("ES 插件 : IK 中文分词", "/ops/elk/es-ik"),
+                createLink("ES 语法", "/ops/elk/es-query-schema"),
+                createLink("在 Docker 上安装", "/ops/elk/install-use-docker"),
+                createLink("使用 filebeat 搜集日志", "/ops/elk/use-filebeat-collect-nginx-log"),
+            ],
+        },
+        {
             text: "软件",
             items: [
                 createLink("安装最新的 cURL ", "/ops/curl/install-latest-at-centos"),
