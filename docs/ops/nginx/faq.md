@@ -35,7 +35,8 @@ server {
 **查看日志**
 > 2020/07/14 11:32:23 [crit] 16348#0: *1508 open() "/var/lib/nginx/tmp/proxy/3/28/0000000283" failed (13: Permission denied) while reading upstream, client:
 > 60.216.119.220, server: sentry.liex.sour-lemon.com, request: "GET /_static/1594691975/sentry/dist/app.js HTTP/1.1",
-> upstream: "http://127.0.0.1:9080/_static/1594691975/sentry/dist/app.js", host: "sentry.liex.sour-lemon.com", referrer: "http://example.com/join-request/sentry/"
+> upstream: "http://127.0.0.1:9080/_static/1594691975/sentry/dist/app.js", host: "sentry.liex.sour-lemon.com",
+> referrer: "http://example.com/join-request/sentry/"
 
 **解决方案**
 
