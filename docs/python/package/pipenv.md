@@ -1,16 +1,14 @@
----
-title : "[转] Pipenv：新一代Python项目环境与依赖管理工具"
-date : 2022-10-11 15:16:59
-toc : true
-categories :
-  - [ "Lang","Python" ]
----
+# 「转」Pipenv：新一代Python项目环境与依赖管理工具
+
+::: info 原作者
+
+[李辉](https://www.zhihu.com/people/im-greyli)
+
+:::
 
 ![image.png](https://file.wulicode.com/yuque/202210/11/15/2012TuU5AA8p.png?x-oss-process=image/resize,h_232)
 
-大家好，这是[专栏恢复更新](https://zhuanlan.zhihu.com/p/37563501)的第一篇文章。以后如果没有意外的话，会每周更新一篇文章。
-
-## **什么是Pipenv**
+## 什么是Pipenv
 
 [Pipenv](https://link.zhihu.com/?target=https%3A//docs.pipenv.org/)是Kenneth
 Reitz在2017年1月发布的Python依赖管理工具，现在由PyPA维护。你可以把它看做是pip和virtualenv的组合体，而它基于的[Pipfile](https://link.zhihu.com/?target=https%3A//github.com/pypa/pipfile)
@@ -24,12 +22,12 @@ Reitz在2017年1月发布的Python依赖管理工具，现在由PyPA维护。你
 
 提示 如果你对virtualenv的用法以及虚拟环境的概念不熟悉的话，可以通过专栏的旧文[《Flask出发之旅》](https://zhuanlan.zhihu.com/p/23299058)进行简单的认识。
 
-## **为什么使用Pipenv**
+## 为什么使用Pipenv
 
 Pipenv会自动帮你管理虚拟环境和依赖文件，并且提供了一系列命令和选项来帮助你实现各种依赖和环境管理相关的操作。简而言之，它更方便、完善和安全。你可以通过[Pipenv文档](https://link.zhihu.com/?target=https%3A//docs.pipenv.org/)
 开头的介绍来了解它的详细特性。Pipenv的slogan是“Python Dev Workflow for Humans”，作为人类，当然应该尝试一下……
 
-## **如何使用Pipenv**
+## 如何使用Pipenv
 
 假设我们要编写一个博客程序，项目的依赖是Flask和Flask-WTF。顺便说一句，可以使用下面的命令安装Pipenv：
 
@@ -167,12 +165,12 @@ $ pipenv install pytest --dev
 $ pipenv install --dev
 ```
 
-## **总结**
+## 总结
 
 为了让你更轻松的过渡，`Pipenv`甚至提供了读取和生成`requirements.txt`文件的功能（在使用pipenv install命令时它会自动读取`requirements.txt`
 文件安装依赖并生成`Pipfile`文件）。希望这篇文章可以让你更快的上手`Pipenv`。
 
-## **评论区Q&A**
+## 评论区Q&A
 
 ### Q：安装Python包太慢？
 

@@ -387,6 +387,8 @@ const sidebar = {
             items: [
                 createLink("urllib - Url 处理模块", "/python/library/internet-urllib"),
                 createLink("Pydash 中文文档", "/python/package/pydash"),
+                createLink("Pipenv 管理环境", "/python/package/pipenv"),
+                createLink("requirement.txt 介绍", "/python/tech/requirement-usage"),
             ],
         },
     ],
