@@ -11,7 +11,7 @@
 ## 什么是Pipenv
 
 [Pipenv](https://docs.pipenv.org/)是Kenneth
-Reitz在2017年1月发布的Python依赖管理工具，现在由PyPA维护。你可以把它看做是pip和virtualenv的组合体，而它基于的[Pipfile](target=https://github.com/pypa/pipfile)
+Reitz在2017年1月发布的Python依赖管理工具，现在由PyPA维护。你可以把它看做是pip和virtualenv的组合体，而它基于的[Pipfile](https://github.com/pypa/pipfile)
 则用来替代旧的依赖记录方式（requirements.txt）。
 
 在这篇文章里，我将会以旧的依赖管理工作流程作为对比来介绍Pipenv的基本用法，更详细的用法可以参考[Pipenv文档](https://docs.pipenv.org/)
