@@ -191,10 +191,7 @@ const sidebar = {
         {
             text: 'IDE',
             items: [
-                createLink('PHPUnit 在 PhpStorm 中的使用', '/php/ide/phpstorm-run-phpunit.md'),
-                createLink('PhpStorm 使用 Xdebug 调试', '/php/ide/phpstorm-use-xdebug.md'),
-                createLink('PhpStorm 中运行 TestSuit', '/php/ide/phpstorm-run-testsuit.md'),
-                createLink('使用 PhpStorm 开发 Laravel', '/php/ide/phpstorm-develop-laravel.md'),
+
             ]
         },
         {
@@ -456,6 +453,10 @@ const sidebar = {
                 createLink("Jetbrains 系常用扩展", "/development/ide/jetbrains-plugins"),
                 createLink("PhpStorm Tips", "/development/ide/phpstorm-tips"),
                 createLink("WebStorm Tips", "/development/ide/webstorm-tips"),
+                createLink('PHPUnit 在 PhpStorm 中的使用', '/development/ide/phpstorm-run-phpunit.md'),
+                createLink('PhpStorm 使用 Xdebug 调试', '/development/ide/phpstorm-use-xdebug.md'),
+                createLink('PhpStorm 中运行 TestSuit', '/development/ide/phpstorm-run-testsuit.md'),
+                createLink('使用 PhpStorm 开发 Laravel', '/development/ide/phpstorm-develop-laravel.md'),
             ],
         },
 
@@ -676,6 +677,10 @@ const sidebar = {
                 createLink("聚合函数", "/mysql/mysql-cookbook/8-9-aggregate-function"),
                 createLink("数据导入导出", "/mysql/mysql-cookbook/10-dump-import"),
             ],
+        },
+        {
+            text: "介绍",
+            link: '/mysql/faq'
         },
     ],
     "/ops/nginx": [

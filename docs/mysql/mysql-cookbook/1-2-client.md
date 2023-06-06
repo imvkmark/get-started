@@ -2,7 +2,7 @@
 
 ### 1.1 建立 mysql 用户账号
 
-```mysql
+```sql
 # 创建用户
 CREATE
     USER 'cbuser'@'%' IDENTIFIED WITH mysql_native_password AS 'cbpass';
@@ -18,7 +18,7 @@ GRANT ALL ON daniu.* TO 'cbuser' @'localhost' IDENTIFIED BY 'cbpass';
 
 ### 1.2 创建数据库和样表
 
-```mysql
+```sql
 CREATE
     DATABASE cookbook;
 USE
