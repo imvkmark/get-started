@@ -1,11 +1,10 @@
 # 5. 与字符串共舞
 
-### 5.1 字符串属性
+## 5.1 字符串属性
+
 **字符集**
 
-
-
-```shell
+```
 # 看看系统中有哪些字符集
 mysql > Show Character Set;
 +----------+---------------------------------+---------------------+--------+
@@ -22,7 +21,9 @@ mysql > Show Character Set;
 | ucs2     | UCS-2 Unicode                   | ucs2_general_ci     |      2 |
 ...
 ```
+
 **Length 和 Char_Length 差别**
+
 ```
 mysql> Set @s = Convert('abc' Using ucs2);
 mysql> Select Length(@s), Char_Length(@s);
@@ -39,9 +40,19 @@ mysql> Select Length(@s), Char_Length(@s);
 |          3 |               3 |
 +------------+-----------------+
 ```
+
 **Collation**
 
 如果没有指明哪种 Collation, 则 Default 为 Yes 的则为默认的字符集.
+
+显示字符集
+
+```
+mysql> show collation;
+```
+
+显示匹配的字符集
+
 ```
 mysql> Show Collation Like 'utf8\_%';
 +--------------------------+---------+-----+---------+----------+---------+
@@ -77,6 +88,7 @@ mysql> Show Collation Like 'utf8\_%';
 +--------------------------+---------+-----+---------+----------+---------+
 27 rows in set (0.01 sec)
 ```
+
 名称后缀的说明
 
 - ci : (case insensitive) 大小写不敏感
@@ -84,6 +96,7 @@ mysql> Show Collation Like 'utf8\_%';
 - bin: (binary) 二进制
 
 对于不同的语种也有不同的排序方法.
+
 ```
 # 排序 A, a, b, B (大小写不敏感, a 在 b 前边即可)
 Select c From tb_name Order By c Collate latin_swedish_ci;
@@ -93,7 +106,8 @@ Select c From tb_name Order By c Collate latin_swedish_ci;
 .... Collate latin_swedish_bin;
 ```
 
-### 5.2 选择字符串数据类型
+## 5.2 选择字符串数据类型
+
 **根据这几个来进行判定**
 
 - 是否二进制
@@ -105,46 +119,56 @@ Select c From tb_name Order By c Collate latin_swedish_ci;
 
 **字串长度**
 
-| 二进制数据类型 | 普通文本 | 最大长度 | 说明 |
-| --- | --- | --- | --- |
-| Binary | Char | 255 | 2^8 |
-| VarBinary | VarChar | 65535 | 2^16 |
-| TinyBlob | TinyText | 255 | 2^8 |
-| Blob | Text | 65535 | 2^16 |
-| MediumBlob | MediumText | 16777215 | 2^24 |
-| LongBlob | LongText | 4294967295 | 2^32 |
+| 二进制数据类型    | 普通文本       | 最大长度       | 说明   |
+|------------|------------|------------|------|
+| Binary     | Char       | 255        | 2^8  |
+| VarBinary  | VarChar    | 65535      | 2^16 |
+| TinyBlob   | TinyText   | 255        | 2^8  |
+| Blob       | Text       | 65535      | 2^16 |
+| MediumBlob | MediumText | 16777215   | 2^24 |
+| LongBlob   | LongText   | 4294967295 | 2^32 |
 
 **字串空格保留**
 
-如果你想保留出现在储存的原始字符串尾部的填充值, 那就应该使用一个没有截除动作发生的数据类型, 例如, 如果你正存储可能以空格结尾的字串(普通文本), 并且想保留这个空格, 就应该使用 `VarChar` 或者 `Text` 数据类型之一.
+如果你想保留出现在储存的原始字符串尾部的填充值, 那就应该使用一个没有截除动作发生的数据类型, 例如, 如果你正存储可能以空格结尾的字串(普通文本), 并且想保留这个空格,
+就应该使用 `VarChar` 或者 `Text` 数据类型之一.
 
-### 5.3 正确设置连接字符集
+## 5.3 正确设置连接字符集
+
 **配置文件**
+
 ```properties
 [mysql]
 default-character-set=utf8
 ```
+
 **应用程序中使用**
+
 ```
 mysql> Set Names 'utf8';
 mysql> Set Names 'utf8' Collate 'utf8-general_ci'
 ```
+
 **连接时候指定**
+
 ```
 jdbc:mysql://{host}/{db}?characterEncoding=UTF-8
 ```
 
-### 5.4 查询字符串
+## 5.4 查询字符串
+
 **字串放在单引号或者双引号内**
 
 启用 `ANSI_QUOTES` SQL 模式时候不得使用双引号, 一般来讲使用单引号会比较保险
 
 **16 进制字符的表示**
+
 ```
 0x61625ad43
 x'61625ad43'
 X'61625ad43'
 ```
+
 ```
 mysql> select 0x61;
 +------+
@@ -153,20 +177,26 @@ mysql> select 0x61;
 | a    |
 +------+
 ```
+
 **使用由字符集加下划线('_') 前缀组成的引入器**
+
 ```
 _latin1 'abcd'
 _ucs2 'abcd'
 ```
+
 **查询过程中使用转义**
+
 ```
 Select "He said, \"Boo!\"";
 ```
 
-### 5.5 检查字符集和字符排序
+## 5.5 检查字符集和字符排序
+
 使用 `Charset()` 或 `Collation()` 函数来检查字符集和排序
 
 使用 `Convert()` 转换字符串的字符集
+
 ```
 mysql> Set @s1 = 'my';
 mysql> Set @s2 = Convert(@s1 Using latin1);
@@ -178,13 +208,17 @@ mysql> Select Charset(@s1), Charset(@s2);
 +--------------+--------------+
 1 row in set (0.00 sec)
 ```
+
 使用 `Collate` 操作符改变字符串的 Collation
+
 ```
 mysql> Set @s2 = @s1 Collate latin1_spanish_ci;
 ```
+
 使用 `Binary` 操作符来进行二进制转换, 同 `Convert(@s1 Using binary)` 相同.
 
-### 5.6 字串操作函数
+## 5.6 字串操作函数
+
 `Upper()` : 更改为大写
 
 `Lower()` : 更改为小写
@@ -203,7 +237,8 @@ mysql> Set @s2 = @s1 Collate latin1_spanish_ci;
 
 `Locate(search, subject)` : 确定一个字串中是否含有另一个字串
 
-### 5.7 使用 SQL 模式进行匹配
+## 5.7 使用 SQL 模式进行匹配
+
 ```
 # Like
 ... Like 'co%';     # 开头
@@ -219,7 +254,8 @@ str Like 'abc%'      Left(str, 3) = 'abc'
 str Like '%abc'      Right(str, 3) = 'abc'
 ```
 
-### 5.8 使用正则表达式进行匹配
+## 5.8 使用正则表达式进行匹配
+
 ```
 ^         : 开始
 $         : 结束
@@ -232,31 +268,36 @@ p1|p2|p3  : 多选1
 {n}       : 匹配 n 次
 {m, n}    : 最少 m, 最多 n 个
 ```
+
 使用方法, 使用 `Regexp` 关键词进行匹配
+
 ```
 ... Regexp '^co';
 ```
+
 支持 Posix 类
 
-| 类 | 对应说明 |
-| --- | --- |
-| [:alnum:] | Alphanumeric characters |
-| [:alpha:] | Alphabetic characters |
-| [:blank:] | Whitespace characters |
-| [:cntrl:] | Control characters |
-| [:digit:] | Digit characters |
-| [:graph:] | Graphic characters |
-| [:lower:] | Lowercase alphabetic characters |
-| [:print:] | Graphic or space characters |
-| [:punct:] | Punctuation characters |
-| [:space:] | Space, tab, newline, and carriage return |
-| [:upper:] | Uppercase alphabetic characters |
-| [:xdigit:] | Hexadecimal digit characters |
+| 类          | 对应说明                                     |
+|------------|------------------------------------------|
+| [:alnum:]  | Alphanumeric characters                  |
+| [:alpha:]  | Alphabetic characters                    |
+| [:blank:]  | Whitespace characters                    |
+| [:cntrl:]  | Control characters                       |
+| [:digit:]  | Digit characters                         |
+| [:graph:]  | Graphic characters                       |
+| [:lower:]  | Lowercase alphabetic characters          |
+| [:print:]  | Graphic or space characters              |
+| [:punct:]  | Punctuation characters                   |
+| [:space:]  | Space, tab, newline, and carriage return |
+| [:upper:]  | Uppercase alphabetic characters          |
+| [:xdigit:] | Hexadecimal digit characters             |
 
 正则表达式匹配不要求目标串与模式串完全匹配
 
-### 5.9 使用 FullText 查询
+## 5.9 使用 FullText 查询
+
 **标准语法**
+
 ```
 # 单列
 ... Match (Column) Against ('str');
@@ -265,22 +306,30 @@ p1|p2|p3  : 多选1
 # 多列, 多词
 ... Match (Column, Column2) Against ('str1 str2 str3')
 ```
+
 **配置最小单词**
+
 ```
 [mysqld]
 ft_min_word_len=3
 ```
+
 **禁止搜索的单词**
 
 这种方法可以匹配多词, 单词, 移除部分单词
+
 ```
 ... Match(Column) Against('+David -Mark' In Boolean Mode)
 ```
+
 **特殊字符匹配**
+
 ```
 ... Match(Column) Against('David*' In Boolean Mode)
 ```
+
 **词组查询**
+
 ```
 ... Match(Column) Against('"Disk Path"' In Boolean Mode)
 ```

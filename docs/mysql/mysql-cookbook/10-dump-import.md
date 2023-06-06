@@ -1,6 +1,6 @@
 # 10. 数据导入导出
 
-### 10.1 使用 Load Data 和 mysqlimport 导入数据
+## 10.1 使用 Load Data 和 mysqlimport 导入数据
 
 ```
 Load Data Local InFile 'file.txt' Into Table tbl_name
@@ -30,7 +30,7 @@ $ mysqlimport --local tbl_name file.txt
     --columns=a,b,c
 ```
 
-### 10.2 导入时候对数据进行预处理
+## 10.2 导入时候对数据进行预处理
 
 ```
 Load Data Local InFile 'file.txt' Into Table tbl_name
@@ -41,18 +41,18 @@ Load Data Local InFile 'file.txt' Into Table tbl_name
         ...;
 ```
 
-### 10.3 mysql 导出
+## 10.3 mysql 导出
 
 ```
 $ mysql -e "select ...." --skip-column-names tbl_name
     >> data.txt
 ```
 
-### 10.4 SQLMode
+## 10.4 SQLMode
 
 通过设置 sql_mode 变量来开启输入数据接收限制.
 
-### 11.1 生成和使用序列
+## 11.1 生成和使用序列
 
 ```
 Auto_Increment # 列
@@ -60,7 +60,7 @@ id Int Unsigned Not Null Auto_Increment,
 Primary Key(id)
 ```
 
-### 12.1 在表中找到与另一个表中的行相匹配的行
+## 12.1 在表中找到与另一个表中的行相匹配的行
 
 使用 join
 

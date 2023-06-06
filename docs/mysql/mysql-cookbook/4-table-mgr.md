@@ -1,6 +1,6 @@
 # 4. 表管理
 
-### 4.1 克隆表结构和数据
+## 4.1 克隆表结构和数据
 
 
 
@@ -22,7 +22,7 @@ Alt Table new_table Modify id Int Unsigned Not Null Auto_Increment;
 alter table tb_name AUTO_INCREMENT = 100000;
 ```
 
-### 4.2 使用临时表
+## 4.2 使用临时表
 ```
 # 创建临时表
 Create Temporary Table tbl_name (...col define ...)
@@ -39,7 +39,7 @@ Drop Temporary Table If Exists tbl_name
 Select Connection_Id();
 ```
 
-### 4.3 检查或者改变某个表的搜索引擎
+## 4.3 检查或者改变某个表的搜索引擎
 ```
 # 显示引擎
 # From Information_Schema

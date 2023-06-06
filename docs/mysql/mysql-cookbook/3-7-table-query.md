@@ -1,13 +1,13 @@
 # 3, 7. 从表中查询数据
 
-### 3.1 列查询
+## 3.1 列查询
 
 ```
 mysql > select * from mail;
 mysql > select mail, name from mail;
 ```
 
-### 3.2 指定行查询(条件筛选)
+## 3.2 指定行查询(条件筛选)
 
 ```
 mysql > select mail, name from mail where name='zhao';
@@ -15,7 +15,7 @@ mysql > select mail, name from mail where name like 'zh%';
 mysql > select mail, name from mail where name='zhao' and area ='beijing';
 ```
 
-### 3.3 格式化显示查询结果
+## 3.3 格式化显示查询结果
 
 > 这里利用各种的函数来格式化相应的位置
 
@@ -31,14 +31,14 @@ DateFormat   : 日期格式化
 > 列别名在 `where` 中不可用
 > 使用 `distinct` 进行唯一性处理
 
-### 3.4 调试比较表达式
+## 3.4 调试比较表达式
 
 ```
 # 这里的 name='good' 便是表达式
 mysql > select mail, name = 'good' from name
 ```
 
-### 3.5 null 值的比较
+## 3.5 null 值的比较
 
 对于 null 值使用 null 的比较操作符
 
@@ -53,7 +53,7 @@ IfNull(expr1, expr2)
 
 这两个函数等价.
 
-### 3.6 排序/视图/多表查询
+## 3.6 排序/视图/多表查询
 
 ```
 ... order by a;
@@ -94,7 +94,7 @@ select * from
    order by birth asc;
 ```
 
-### 7.1 使用 `Order By`
+## 7.1 使用 `Order By`
 
 ```
 # 标准
@@ -107,21 +107,21 @@ select * from
 ... Order By SubString_Index(bsn, '-', -3)
 ```
 
-### 7.2 查询条件
+## 7.2 查询条件
 
 ```
 # If
 ... Order By If(a=b, 0, 1);
 ```
 
-### 7.3 按照用户自定义排序
+## 7.3 按照用户自定义排序
 
 ```
 # Field
 ... Order By Field(name, 'Zhang', 'Li', 'Wang')
 ```
 
-### 7.4 Enum 排序
+## 7.4 Enum 排序
 
 ```
 # 使用 Cast 进行转换为字串

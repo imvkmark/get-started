@@ -1,6 +1,6 @@
 # 8, 9. 聚合函数
 
-### 8.1 各种统计函数
+## 8.1 各种统计函数
 
 ```
 # 总数
@@ -25,7 +25,7 @@ Distinct()
 ... Group By trav_date Having Count(*) > 3
 ```
 
-### 8.2 With RollUp 进行汇总统计
+## 8.2 With RollUp 进行汇总统计
 
 在分组统计数据的基础上再进行统计汇总，即用来得到 group by 的汇总信息
 
@@ -37,7 +37,7 @@ Distinct()
 | Tables               | Show Tables   |
 | Columns              | Show Columns  |
 
-### 9.1 如何正确的使用元数据
+## 9.1 如何正确的使用元数据
 
 ```
 # 确定数据库是否存在
@@ -55,7 +55,7 @@ Select *
         And Column_Name = ?
 ```
 
-### 9.2 显示创建数据表结构
+## 9.2 显示创建数据表结构
 
 ```
 # 显示创建数据表结构
@@ -64,7 +64,7 @@ Show Create Table tbl_name;
 Show Columns From tbl_name;
 ```
 
-### 9.3 获取服务器元数据
+## 9.3 获取服务器元数据
 
 | 语句                      | 语句生成的信息                     |
 |-------------------------|-----------------------------|
@@ -75,7 +75,7 @@ Show Columns From tbl_name;
 | `Show [Global] Status`  | 服务器的全局状态指示器, 没有 Global 显示当前 |
 | `Show Variables`        | 服务器配置变量                     |
 
-### 9.4 确定服务器支持的存储引擎
+## 9.4 确定服务器支持的存储引擎
 
 ```
 Show Engines;

@@ -679,7 +679,7 @@ const sidebar = {
             ],
         },
         {
-            text: "介绍",
+            text: "FAQ",
             link: '/mysql/faq'
         },
     ],

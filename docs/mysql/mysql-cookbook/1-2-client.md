@@ -1,6 +1,6 @@
 # 1, 2. 使用 Mysql 客户端
 
-### 1.1 建立 mysql 用户账号
+## 1.1 建立 mysql 用户账号
 
 ```sql
 # 创建用户
@@ -16,7 +16,7 @@ FLUSH
 GRANT ALL ON daniu.* TO 'cbuser' @'localhost' IDENTIFIED BY 'cbpass';
 ```
 
-### 1.2 创建数据库和样表
+## 1.2 创建数据库和样表
 
 ```sql
 CREATE
@@ -35,7 +35,7 @@ SELECT *
 FROM limbs;
 ```
 
-### 1.3 启动和停止 MySQL
+## 1.3 启动和停止 MySQL
 
 ```
 # 启动
@@ -46,7 +46,7 @@ $ mysqldump -h localhost -p -u cbuser cookbook > cookbook.sql
 $ mysqladmin -p -uroot shutdown
 ```
 
-### 1.4 使用可选项文件来指定链接
+## 1.4 使用可选项文件来指定链接
 
 my.ini / my.cnf 可以进行相应的配置
 
@@ -68,21 +68,21 @@ host=localhost
 skip-auto-rehash
 ```
 
-### 1.5 保护选项文件不被其他用户读取
+## 1.5 保护选项文件不被其他用户读取
 
 ```shell
 $ chmod 600 my.cnf
 ```
 
-### 1.6 混合使用命令行参数和选项文件参数
+## 1.6 混合使用命令行参数和选项文件参数
 
 命令行参数的优先级比选项文件中参数优先级高
 
-### 1.7 找不到 mysql 应该怎么做
+## 1.7 找不到 mysql 应该怎么做
 
 将 mysql 安装目录放到环境变量中.
 
-### 1.8 发起 sql 语句
+## 1.8 发起 sql 语句
 
 ```
 ;     # 作为末尾输入
@@ -93,7 +93,7 @@ $ chmod 600 my.cnf
 /*>   # 需要输入 */ 来结束
 ```
 
-### 1.9 从文件中读取语句
+## 1.9 从文件中读取语句
 
 ```
 $ mysql cookbook < filename.sql
@@ -102,14 +102,14 @@ $ use cookbook
 $ source filename.sql
 ```
 
-### 1.10 打印错误
+## 1.10 打印错误
 
 ```
 $ perror 24
 OS error code  24:  Too many open files
 ```
 
-### 1.11 让 mysql 读取其他程序的 数据
+## 1.11 让 mysql 读取其他程序的 数据
 
 ```
 # 从文件读取sql
@@ -122,7 +122,7 @@ $ mysqldump cookbook | mysql -h other.host.com cookbook
 $ gen-test-data.sh | mysql cookbook
 ```
 
-### 1.12 一行输入所有 sql
+## 1.12 一行输入所有 sql
 
 ```
 $ mysql -uroot -e "select count(*) from mk_pam_account" daniu
@@ -140,7 +140,7 @@ $ mysql -uroot -e "select count(*) from mk_pam_account;select now()" daniu
 +---------------------+
 ```
 
-### 1.13 预防查询输出超出屏幕范围
+## 1.13 预防查询输出超出屏幕范围
 
 ```
 # 指定 --pager 使其每次都显示一行输出
@@ -156,7 +156,7 @@ mysql> \P /usr/bin/less
 mysql> \n
 ```
 
-### 1.14 查询结果输出
+## 1.14 查询结果输出
 
 **交互模式**
 
@@ -186,11 +186,11 @@ mysql> \n
 
 不在查询中输出包含列头部
 
-### 1.15 查询结果二次转换
+## 1.15 查询结果二次转换
 
 如果查询结果并不能按照我们的期望输出, 可以使用 `sed`, `tr` 来进行二次转换
 
-### 1.16 使长输出行更具可读性
+## 1.16 使长输出行更具可读性
 
 ```
 mysql> show full columns from limbs\G
@@ -200,7 +200,7 @@ mysql> show full columns from limbs\G
 
 进行垂直输出
 
-### 1.17 冗长输出和简介输出
+## 1.17 冗长输出和简介输出
 
 `-v` or `-vv` or `-vvv`
 
@@ -210,13 +210,13 @@ mysql> show full columns from limbs\G
 
 进行简洁输出
 
-### 1.18 记录操作步骤
+## 1.18 记录操作步骤
 
 `-tee` or `\T` or `\t`
 
 进行脚本记录的输出, 这些输出可供记录并且可以用作批处理文件
 
-### 1.19 用户自定义变量
+## 1.19 用户自定义变量
 
 ```
 # 从执行过程中获取值
@@ -226,13 +226,13 @@ mysql > select * from abcolumsn where id = @id;
 mysql > set @sum = 4+7;
 ```
 
-### 1.20 mysql 数学函数
+## 1.20 mysql 数学函数
 
 ```
 select 20/sqrt(64);
 ```
 
-### 1.21 shell 脚本中使用 mysql
+## 1.21 shell 脚本中使用 mysql
 
 ```
 # 多行文本的输入并且支持变量
