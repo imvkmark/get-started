@@ -95,6 +95,31 @@ source ~/.bashrc
 
 此外 Flutter 开发中还需要用到 Dart 语言的包管理器 Pub，其镜像使用方法参见Pub 镜像安装帮助。
 
+### 升级和频道切换
+
+升级
+
+```
+# 列出所有的频道
+$ flutter channel
+Flutter channels:
+* master
+  beta
+  stable
+
+# 更换频道
+$ flutter channel stable
+git: 分支 'stable' 设置为跟踪 'origin/stable'。
+Successfully switched to flutter channel 'stable'.
+To ensure that you're on the latest build from this channel, run 'flutter upgrade'
+
+# 升级
+$ flutter upgrade
+
+# 自检
+$ flutter doctor -v
+```
+
 ## Android
 
 ### 设置 Android SDK
@@ -172,47 +197,6 @@ $ brew reinstall cocoapods
 $ brew link --overwrite cocoapods
 ```
 
-## 升级和频道切换
-
-升级
-
-```
-# 列出所有的频道
-$ flutter channel
-Flutter channels:
-* master
-  beta
-  stable
-
-# 更换频道
-$ flutter channel stable
-git: 分支 'stable' 设置为跟踪 'origin/stable'。
-Successfully switched to flutter channel 'stable'.
-To ensure that you're on the latest build from this channel, run 'flutter upgrade'
-
-# 升级
-$ flutter upgrade
-
-# 自检
-$ flutter doctor -v
-```
-
-## Dash Document
-
-Dash 是一个优秀的本地文档查询工具, 通过添加 feed 就可以在本地添加快速搜索
-
-```
-https://master-api.flutter.dev/offline/flutter.xml
-```
-
-位置 `Dash → Setting → Download → Add Feed Xml`
-
-![](https://file.wulicode.com/doc/20230515/1684121504320.png)
-
-查询结果如下所示
-
-![](https://file.wulicode.com/doc/20230515/1684121485979.png)
-
 ## FAQ
 
 ### Flutter 编译时Running Gradle task ‘assembleDebug’… 卡住
@@ -236,3 +220,19 @@ allprojects {
     }
 }
 ```
+
+### Dash Document
+
+Dash 是一个优秀的本地文档查询工具, 通过添加 feed 就可以在本地添加快速搜索
+
+```
+https://master-api.flutter.dev/offline/flutter.xml
+```
+
+位置 `Dash → Setting → Download → Add Feed Xml`
+
+![](https://file.wulicode.com/doc/20230515/1684121504320.png)
+
+查询结果如下所示
+
+![](https://file.wulicode.com/doc/20230515/1684121485979.png)
