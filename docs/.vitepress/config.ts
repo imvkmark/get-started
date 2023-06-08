@@ -709,16 +709,23 @@ const sidebar = {
         createLink('常见问题', '/ops/nginx/faq.md'),
     ],
     "/ops/bash": [
-        createLink("介绍", "/ops/bash/"),
-        createLink('1.简介', '/ops/bash/1-intro.md'),
-        createLink('2.基本语法', '/ops/bash/2-basic.md'),
-        createLink('5.变量', '/ops/bash/5-variables.md'),
-        createLink('6.字符串', '/ops/bash/6-string.md'),
-        createLink('7.运算符', '/ops/bash/7-arithmetic.md'),
-        createLink('12.条件判断', '/ops/bash/12-condition.md'),
-        createLink('13.循环语句', '/ops/bash/13-loop.md'),
-        createLink('14.函数', '/ops/bash/14-function.md'),
-        createLink('15.数组', '/ops/bash/15-array.md'),
+        {
+            text: "教程",
+            items: [
+                createLink("介绍", "/ops/bash/"),
+                createLink('1.简介', '/ops/bash/1-intro.md'),
+                createLink('2.基本语法', '/ops/bash/2-basic.md'),
+                createLink('5.变量', '/ops/bash/5-variables.md'),
+                createLink('6.字符串', '/ops/bash/6-string.md'),
+                createLink('7.运算符', '/ops/bash/7-arithmetic.md'),
+                createLink('12.条件判断', '/ops/bash/12-condition.md'),
+                createLink('13.循环语句', '/ops/bash/13-loop.md'),
+                createLink('14.函数', '/ops/bash/14-function.md'),
+                createLink('15.数组', '/ops/bash/15-array.md'),
+            ],
+        },
+        createLink("FAQ", "/ops/bash/faq"),
+
     ],
     "/web": [
         { text: "Web开发", link: "/web/" },
