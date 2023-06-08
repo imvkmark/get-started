@@ -190,9 +190,7 @@ const sidebar = {
         },
         {
             text: 'IDE',
-            items: [
-
-            ]
+            items: []
         },
         {
             text: 'Packages',
