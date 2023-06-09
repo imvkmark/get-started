@@ -1,14 +1,22 @@
 # 「转+」 运维中的日志切割(logrotate)操作梳理
 
+::: info 原文
+
+[~~logrotate 日志分割工具使用介绍~~](https://www.centos.bz/2017/09/logrotate-log-cut/)
+
+:::
+
 对于 Linux 系统安全来说，日志文件是极其重要的工具.
 
-logrotate 程序是一个日志文件管理工具。用于分割日志文件，删除旧的日志文件，并创建新的日志文件，起到“转储”作用。可以节省磁盘空间。下面就对 logrotate 日志轮转操作做一梳理记录：
+logrotate 程序是一个日志文件管理工具。用于分割日志文件，删除旧的日志文件，并创建新的日志文件，起到“转储”作用。可以节省磁盘空间。
+
+下面就对 logrotate 日志轮转操作做一梳理记录：
 
 ## 介绍
 
 显而易见，Logrotate 是基于 CRON 来运行的，其脚本是`/etc/cron.daily/logrotate`
 
-```
+```bash
 #!/bin/sh
 /usr/sbin/logrotate /etc/logrotate.conf
 EXITVALUE=$?
@@ -100,7 +108,7 @@ $ cat /var/lib/logrotate.status
 
 ## 切割
 
-比如以系统日志/var/log/message 做切割来简单说明下：
+比如以系统日志 `/var/log/message` 做切割来简单说明下：
 
 第一次执行完 rotate(轮转)之后，原本的 messages 会变成 messages.1，而且会制造一个空的 messages 给系统来储存日志；
 
@@ -189,10 +197,3 @@ $ vim /etc/logrotate.d/nginx
     endscript
 }
 ```
-
-## 备注
-
-### 参考文章
-
-- [~~logrotate 日志分割工具使用介绍~~](https://www.centos.bz/2017/09/logrotate-log-cut/)
-

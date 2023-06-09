@@ -62,7 +62,7 @@ $ npm install npm@latest  -g
 > `package.json` 文件非常重要，因此需要单独一小节介绍。
 
 
-**管理本地安装 npm 包的最好方式就是创建 **`**package.json**`** 文件。**
+**管理本地安装 npm 包的最好方式就是创建 `package.json` 文件。**
 
 一个 `package.json` 文件可以有以下几点作用：
 
