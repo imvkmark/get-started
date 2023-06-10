@@ -7,7 +7,7 @@ https://github.com/TimothyDJones/awesome-laravel
 A curated list of delightful [Laravel](http://laravel.com/) PHP framework [packages](#packages) and [resources](#resources). Inspired by
 other [awesome lists](https://github.com/bayandin/awesome-awesomeness).
 
-## Packages
+## 包
 
 - [DuckDuckGo Packagist Search](https://duck.co/ia/view/packagist) - Search for Laravel packages from [DuckDuckGo](https://duckduckgo.com/) by including '
   packagist' as first search term. \[06/29/2015\]
@@ -335,7 +335,8 @@ other [awesome lists](https://github.com/bayandin/awesome-awesomeness).
 - [Laravel Identify](https://github.com/unicodeveloper/laravel-identify) - Package to identify client configuration, such as browser, device, operating system
   and more. \[01/07/2017\]
 - [Laravel iDoc](https://github.com/ovac/idoc) - Automatically generate interactive API documentation from your existing Laravel routes. Take a look at
-  the [example documentation](https://www.ovac4u.com/idoc/live). Inspired by [Laravel API Documentation Generator](https://github.com/mpociot/laravel-apidoc-generator)(2020.11)
+  the [example documentation](https://www.ovac4u.com/idoc/live). Inspired
+  by [Laravel API Documentation Generator](https://github.com/mpociot/laravel-apidoc-generator)(2020.11)
 - [Laravel Inspector](https://github.com/lsrur/inspector/) - Comprehensive debugging and profiling tool with full logging capabilities that outputs errors and
   logged actions to browser JavaScript console. \[08/03/2016\]
 - [Laravel Log Viewer](https://github.com/rap2hpoutre/laravel-log-viewer) - Add on which allows you to view your Laravel 4.2/5.0 log file within the application
@@ -620,6 +621,7 @@ other [awesome lists](https://github.com/bayandin/awesome-awesomeness).
 - [Laravel Scene](https://github.com/AeonAxan/laravel-scene) - Transformer which converts Laravel models into API responses. \[12/05/2017\]
 - [Laravel OpenAPI](https://github.com/jeandormehl/openapi-gen) - Laravel wrapper for OpenAPI Documentation
   for [OpenApi/Swagger](https://github.com/OAI/OpenAPI-Specification). \[23/10/2019\]
+- [Laravel Trusted Proxies](https://github.com/fideloper/TrustedProxy) - Laravel 可信代理, 用于设置可信任代理 (2022)
 
 ### Views
 
@@ -671,7 +673,7 @@ other [awesome lists](https://github.com/bayandin/awesome-awesomeness).
 - [w.eloquent](https://github.com/bruno-barros/w.eloquent) - Wordpress integrated with Laravel via Composer. \[11/19/2016\]
 - [WordPress Laravel Bootstrap](https://github.com/golr/wl-bootstrap) - Use any functions, methods, libraries of Laravel in WordPress projects. \[03/15/2017\]
 
-## Tutorials
+## 教程
 
 ### Tutorials (General)
 
@@ -729,7 +731,7 @@ other [awesome lists](https://github.com/bayandin/awesome-awesomeness).
   Laravel Homestead (or *[other Vagrant Laravel environment](https://github.com/TimothyDJones/laravel-precise32-php5.4)*) that you want to share with others,
   these instructions will help you get it going.
 
-## Resources
+## 资源
 
 - [Awesome Laravel Repos](https://awesomerepos.com/laravel) - Directory of popular (based on stars) GitHub repositories for Laravel packages/resources.
   \[11/06/2017\]
@@ -1016,7 +1018,8 @@ other [awesome lists](https://github.com/bayandin/awesome-awesomeness).
   API, and demonstrates how to deploy a Laravel app to [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/). \[05/09/2016\]
 - [Laravel and AngularJS Blog](https://github.com/RachidLaasri/Blog) - Simple blogging application with AngularJS front-end that uses Markdown files for posts.
   \[08/11/2015\]
-- ~~[Laravel and AngularJS CMS](https://github.com/DimiMikadze/laravel-angular-cms)~~ - CMS built on Laravel 5.1, AngularJS 1.4.7 and Responsive Material Design with REST API. (2019.10)
+- ~~[Laravel and AngularJS CMS](https://github.com/DimiMikadze/laravel-angular-cms)~~ - CMS built on Laravel 5.1, AngularJS 1.4.7 and Responsive Material Design
+  with REST API. (2019.10)
 - [Laravel Blog](https://github.com/FbF/Laravel-Blog) - A Laravel 4 package to add a simple blog to a site.
 - [Laravel Blog](https://github.com/lufficc/laravel-blog) - A fast and powerful blog system powed by Laravel 5.3. \[09/21/2016\]
 - [Laravel Blog](https://github.com/summerblue/laravel-blog) - A complete blog application, with admin features, implemented in Laravel 4.2.
