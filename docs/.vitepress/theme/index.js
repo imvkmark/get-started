@@ -1,7 +1,5 @@
 import DefaultTheme from 'vitepress/theme';
 import giscusTalk from 'vitepress-plugin-comment-with-giscus';
-import codeblocksFold from 'vitepress-plugin-codeblocks-fold'; // import method
-import 'vitepress-plugin-codeblocks-fold/style/index.scss'; // import style
 import 'viewerjs/dist/viewer.min.css';
 import './index.scss'
 import imageViewer from 'vitepress-plugin-image-viewer';
@@ -27,9 +25,6 @@ export default {
         }, {
             frontmatter, route
         });
-
-        // basic use
-        codeblocksFold({ route, frontmatter }, true, 400);
 
         imageViewer(route);
     }

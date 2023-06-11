@@ -1,10 +1,4 @@
----
-title: "Git 使用 subtree 管理多个项目代码"
-date: 2021-05-20 16:02:30
-toc: true
-categories:
-- ["开发","Git"]
----
+# 使用 subtree 管理多个项目代码
 
 ![](https://file.wulicode.com/yuque/202208/04/15/3448OMZadLMj.jpeg?x-oss-process=image/resize,h_278)
 
@@ -15,9 +9,6 @@ categories:
 例如上面 poppy project 为一个项目, 其他几个为不同的包, 每个包有唯一的 git 仓库地址
 
 一开始使用子树的方式去进行提交
-
-
-
 
 ```
 $ git subtree push --prefix=poppy/system system 3.0
@@ -59,22 +50,18 @@ $ git push system `git subtree split --prefix=poppy/system feature/3.0`:3.0 --fo
 会报
 
 > error: unable to push to unqualified destination: 3.0
-
-The destination refspec neither matches an existing ref on the remote nor
-
-begins with refs/, and we are unable to guess a prefix based on the source ref.
-
-error: failed to push some refs to '[https://github.com/imvkmark/poppy-system.git](https://github.com/imvkmark/poppy-system.git)'
-
-Script git push system-github `git subtree split --prefix=poppy/system feature/3.0`:3.0 --force handling the py-system event returned with error code 1
-
+> The destination refspec neither matches an existing ref on the remote nor
+> begins with refs/, and we are unable to guess a prefix based on the source ref.
+>
+> error: failed to push some refs to '[https://github.com/imvkmark/poppy-system.git](https://github.com/imvkmark/poppy-system.git)'
+>
+> Script git push system-github `git subtree split --prefix=poppy/system feature/3.0`:3.0 --force handling the py-system event returned with error code 1
 
 解决方法
 
 ```
 $ git push system-github 5187723bd023a009363fdba2b224ca0fefd0ed7b:refs/heads/3.0 --force
 ```
-
 
 ## 参考文章
 

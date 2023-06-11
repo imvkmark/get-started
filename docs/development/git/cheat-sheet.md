@@ -1,10 +1,10 @@
----
-title : "Git 常用命令清单(Cheet-Sheet)"
-date : 2022-04-14 22:09:15
-toc : true
-categories :
-  - [ "开发","Git" ]
----
+# 「转」Git 常用命令清单(Cheat-Sheet)
+
+::: info 原文
+
+[常用 Git 命令清单](https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
+
+:::
 
 一般来说，日常使用只要记住下图6个命令即可。但是熟练使用，恐怕要记住60～100个命令。
 
@@ -264,8 +264,4 @@ $ git fetch && git reset --hard && git pull
 ```
 
 [End]
-
-## 参考
-
-- [常用 Git 命令清单](https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
 

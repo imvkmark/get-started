@@ -51,7 +51,7 @@ hotfix版本号用4位，如 1.0.0 版本的第一个hotfix版本应为 `hotfix/
 
 
 ### 1. 查看所有版本号
-```json
+```
 git tag|sort -V
 ```
 

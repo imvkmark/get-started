@@ -29,7 +29,6 @@ const nav = [
         activeMatch: `^/web|development/`,
         items: [
             { text: "Web", link: "/web/" },
-            { text: "资源", link: "/development/tools/sdkman" },
             { text: "手机端", link: "/mobile/design/site" },
             { text: "MySQL", link: "/mysql/" },
             {
@@ -38,6 +37,14 @@ const nav = [
                     createLink('运维', '/ops/'),
                     createLink('Nginx', '/ops/nginx/'),
                     createLink('Bash', '/ops/bash/'),
+                ]
+            },
+            {
+                text: '开发',
+                items: [
+                    createLink('Git', '/development/git/faq'),
+                    createLink('IDE', '/development/ide/jetbrains-plugins'),
+                    createLink('相关', '/development/tools/sdkman'),
                 ]
             },
             { text: "部门", link: "/department/test/auto-seldom" },
@@ -447,19 +454,7 @@ const sidebar = {
                 createLink("jenv - 管理 Java 环境", "/development/tools/jenv"),
             ],
         },
-        {
-            text: "IDE",
-            items: [
-                createLink("Jetbrains 系常用扩展", "/development/ide/jetbrains-plugins"),
-                createLink("PhpStorm Tips", "/development/ide/phpstorm-tips"),
-                createLink("WebStorm Tips", "/development/ide/webstorm-tips"),
-                createLink('PHPUnit 在 PhpStorm 中的使用', '/development/ide/phpstorm-run-phpunit.md'),
-                createLink('PhpStorm 使用 Xdebug 调试', '/development/ide/phpstorm-use-xdebug.md'),
-                createLink('PhpStorm 中运行 TestSuit', '/development/ide/phpstorm-run-testsuit.md'),
-                createLink('使用 PhpStorm 开发 Laravel', '/development/ide/phpstorm-develop-laravel.md'),
-                createLink('VsCode 常用插件', '/development/ide/vscode-plugins'),
-            ],
-        },
+
 
         {
             text: "运营相关",
@@ -482,17 +477,57 @@ const sidebar = {
             ],
         },
         {
-            text: "GIT",
-            items: [
-                createLink("FAQ", "/development/git/faq"),
-            ],
-        },
-        {
             text: "其他",
             items: [
                 createLink("开发常用术语", "/development/tech/knowledge"),
                 createLink("代码审核", "/development/tech/code-review"),
                 createLink("Ip, 掩码, IP 段", "/development/tech/ip-mask-range"),
+                createLink("FAQ", "/development/tech/faq"),
+            ],
+        },
+    ],
+    "/development/git": [
+        createLink("Cheat Sheet", "/development/git/cheat-sheet"),
+        createLink("使用 husky 让代码更优雅规范", "/development/git/commit-grace-use-husky.md"),
+        {
+            text: "Git Flow",
+            items: [
+                createLink("一个成功的 Git 分支模型", "/development/git/flow-branch-model.md"),
+                createLink("Git-Flow 工作规范流程", "/development/git/flow-intro"),
+            ],
+        },
+        createLink(".gitignore 文件说明", "/development/git/gitignore"),
+        createLink("使用 subtree 管理多包", "/development/git/subtree-to-multi-packages.md"),
+        createLink("FAQ", "/development/git/faq"),
+    ],
+    "/development/ide": [
+        {
+            text: "Jetbrains",
+            items: [
+                createLink("Jetbrains 系常用扩展", "/development/ide/jetbrains-plugins"),
+                createLink("WebStorm Tips", "/development/ide/webstorm-tips"),
+            ],
+        },
+        {
+            text: "PhpStorm",
+            items: [
+                createLink("PhpStorm Tips", "/development/ide/phpstorm-tips"),
+                createLink('PHPUnit 在 PhpStorm 中的使用', '/development/ide/phpstorm-run-phpunit.md'),
+                createLink('PhpStorm 使用 Xdebug 调试', '/development/ide/phpstorm-use-xdebug.md'),
+                createLink('PhpStorm 中运行 TestSuit', '/development/ide/phpstorm-run-testsuit.md'),
+                createLink('使用 PhpStorm 开发 Laravel', '/development/ide/phpstorm-develop-laravel.md'),
+            ],
+        },
+        {
+            text: "WebStorm",
+            items: [
+                createLink("WebStorm Tips", "/development/ide/webstorm-tips"),
+            ],
+        },
+        {
+            text: "VsCode",
+            items: [
+                createLink('VsCode 常用插件', '/development/ide/vscode-plugins'),
             ],
         },
     ],

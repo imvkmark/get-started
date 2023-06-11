@@ -1,10 +1,4 @@
----
-title: "Git .gitignore 文件规则和示例"
-date: 2021-05-20 16:01:15
-toc: true
-categories:
-- ["开发","Git"]
----
+# .gitignore 文件规则和示例
 
 ## 一、文件规则
 
@@ -26,11 +20,7 @@ gitignore其实就是在glob匹配的基础上添加了路径匹配和`!`、`#`�
 
 **! 取消忽略说明**
 
-
 `!*-ui`就是重新匹配当前目录下的以‘-ui’结尾的文件夹。这里需要注意，如果父级目录被忽略了，子集目录是无法取消忽略的。例：
-
-
-
 
 ```
 *-ui
@@ -69,29 +59,24 @@ log/**/*            # 特定目录下的所有文件(log本身扔被跟踪)
 
 > 由于git不会加入空目录，所以下面做法会导致tmp不存在
 
-
 ```
 tmp/*                    #不加入tmp下所有文件
 ```
 
 > 在tmp下也加个`.gitignore`，其內容为
 
-
 ```
 *
 !.gitignore
 ```
 
-
 ## 二、添加忽略规则的方式
 
 [添加忽略规则](https://help.github.com/en/github/using-git/ignoring-files)
 
-
 [GitHub .gitignore 集合](https://github.com/github/gitignore)
 
 有时候，有一些文件你不希望 Git 检入 仓库。有几种方法可以告诉 Git 忽略哪些文件。
-
 
 ### 1. 局部方式(项目中)
 
@@ -99,7 +84,8 @@ tmp/*                    #不加入tmp下所有文件
 
 一个 `.gitignore` 文件应该提交到仓库中，以便与任何其他克隆仓库的用户共享这个忽略规则。
 
-GitHub在 [.gitignore](https://github.com/github/gitignore) 公共仓库中维护了一个官方的列表，(列表里面包含了在使用)许多流行的操作系统、环境和语言时的推荐的 `.gitignore` 文件。
+GitHub在 [.gitignore](https://github.com/github/gitignore) 公共仓库中维护了一个官方的列表，(列表里面包含了在使用)
+许多流行的操作系统、环境和语言时的推荐的 `.gitignore` 文件。
 
 如果你想忽略一个已经出于检入状态的文件，即使你稍后添加了一个(忽略)规则，Git也将不会忽略这个文件。在这种情况下，您必须先在终端中运行以下命令，以解除文件：
 
@@ -107,7 +93,6 @@ GitHub在 [.gitignore](https://github.com/github/gitignore) 公共仓库中维�
 # 停止追踪指定文件，但该文件会保留在工作区
 git rm --cached FILENAME
 ```
-
 
 ### 2. 全局文件(用户配置)
 
@@ -119,13 +104,11 @@ git rm --cached FILENAME
 git config --global core.excludesfile ~/.gitignore_global
 ```
 
-
 ### 3. 个人方式(项目 git-exclude)
 
 如果您不想创建一个与其他人共享的 `.gitignore` 文件，那么你可以创建一些不与仓库一起提交的规则。您可以将此技术用于不希望其他用户生成的本地生成的文件，例如编辑器创建的文件。
 
 使用文本编辑器打开Git仓库根目录下名为 `.git/info/exclude` 的文件。您在此处添加的任何规则都不会被检入，并且只会忽略本地仓库的文件。
-
 
 ## 三、示例的 `.gitignore` 文件
 
@@ -173,7 +156,6 @@ Thumbs.db
 # Project #
 ###########
 ```
-
 
 ## 四、参考
 

@@ -1,12 +1,8 @@
----
-title : "邮箱 IMAP, SMTP 设置信息"
-date : 2022-04-14 22:27:22
-toc : true
-categories :
-  - [ "开发","开发" ]
----
+# FAQ
 
 ## IMAP, SMTP 配置信息
+
+> 126, aliyun, 腾讯云 等常见 pop, smtp 配置
 
 ```
 服务器名称 : 服务器地址      ssl协议端口号   非ssl协议端口号
@@ -37,8 +33,3 @@ IMAP协议
 接收邮件服务器：hwimap.exmail.qq.com ，使用SSL，端口号993
 发送邮件服务器：hwsmtp.exmail.qq.com ，使用SSL，端口号465
 ```
-
-## 说明
-
-阿里云提供smtp 服务, 腾讯因为有垃圾邮件防护, 使用不甚方便
-
