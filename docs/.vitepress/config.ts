@@ -457,6 +457,7 @@ const sidebar = {
                 createLink('PhpStorm 使用 Xdebug 调试', '/development/ide/phpstorm-use-xdebug.md'),
                 createLink('PhpStorm 中运行 TestSuit', '/development/ide/phpstorm-run-testsuit.md'),
                 createLink('使用 PhpStorm 开发 Laravel', '/development/ide/phpstorm-develop-laravel.md'),
+                createLink('VsCode 常用插件', '/development/ide/vscode-plugins'),
             ],
         },
 
@@ -478,6 +479,12 @@ const sidebar = {
             items: [
                 createLink("正则手册", "/development/regex/"),
                 createLink("正则匹配中文", "/development/regex/zh-match"),
+            ],
+        },
+        {
+            text: "GIT",
+            items: [
+                createLink("FAQ", "/development/git/faq"),
             ],
         },
         {
