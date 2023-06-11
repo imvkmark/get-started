@@ -353,7 +353,7 @@ group-instance.xml介绍：
 允许进行自定义扩展，比如实现了基于数据库的位点管理后，可以自定义一份自己的instance.xml，整个canal设计中最大的灵活性在于此
 
 
-### **HA模式配置**
+### HA模式配置
 
 1.  机器准备
 
@@ -445,7 +445,7 @@ sh bin/stop.sh
 与此同时，客户端也会随着canal server的切换，通过获取zookeeper中的最新地址，与新的canal server建立链接，继续消费数据，整个过程自动完成
 
 
-#### **触发HA自动切换场景 (server/client HA模式都有效)**
+#### 触发HA自动切换场景 (server/client HA模式都有效)
 
 1. 正常场景
 
@@ -470,7 +470,7 @@ b.  canal server所在的网络出现闪断，导致zookeeper认为session失效
 ps. 为了保护假死状态的canal server，避免因瞬间runing失效导致instance重新分布，所以做了一个策略：canal server在收到running节点释放后，延迟一段时间抢占running，原本running节点的拥有者可以不需要等待延迟，优先取得running节点，可以保证假死状态下尽可能不无谓的释放资源。 目前延迟时间的默认值为5秒，即running节点针对假死状态的保护期为5秒.
 
 
-### **mysql多节点解析配置(parse解析自动切换)**
+### mysql多节点解析配置(parse解析自动切换)
 
 1.  mysql机器准备
 

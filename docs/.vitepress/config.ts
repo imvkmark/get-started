@@ -157,6 +157,7 @@ const sidebar = {
             items: [
                 createLink("1. 关于 Gradle", "/java/gradle/1-intro"),
                 createLink("2. 开始使用", "/java/gradle/2-get-started"),
+                createLink("6. 使用依赖项", "/java/gradle/6-working-with-dependencies"),
             ],
         },
         {
@@ -203,6 +204,7 @@ const sidebar = {
             text: '其他',
             items: [
                 createLink('使用 Clockwork 调试 Php 应用', '/php/tech/using-clockwork-extension-for-debug.md'),
+                createLink('Php 获取到的 Headers', '/php/tech/http-headers'),
                 createLink('FAQ', '/php/faq.md'),
             ]
         },
@@ -482,6 +484,8 @@ const sidebar = {
             text: "其他",
             items: [
                 createLink("开发常用术语", "/development/tech/knowledge"),
+                createLink("代码审核", "/development/tech/code-review"),
+                createLink("Ip, 掩码, IP 段", "/development/tech/ip-mask-range"),
             ],
         },
     ],

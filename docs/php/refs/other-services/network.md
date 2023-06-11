@@ -1,14 +1,14 @@
 # 其他服务 - 网络函数(network)
 
-# **介绍**
+# 介绍
 
 预定义的网络函数
 
-# **安装**
+# 安装
 
 无需安装 函数 `checkdnsrr()`, `getmxrr()` 和 `dns_get_record()` 需要基于 Linux 运行
 
-# **日志**
+# 日志
 
 ### openlog
 
@@ -34,7 +34,7 @@ bool closelog ( void )
 
 ```
 
-# **sock**
+# sock
 
 ### fsockopen
 
@@ -52,7 +52,7 @@ resource pfsockopen ( string $hostname [, int $port = -1 [, int &$errno [, strin
 
 ```
 
-# **域名解析相关**
+# 域名解析相关
 
 ### checkdnsrr
 
@@ -236,7 +236,7 @@ getservbyport(80, 'tcp')   // http
 
 ```
 
-# **IP转换**
+# IP转换
 
 ### ip2long
 
@@ -272,7 +272,7 @@ string inet_pton ( string $address )
 
 ```
 
-# **Header 头处理函数**
+# Header 头处理函数
 
 ### header_register_callback
 
@@ -348,7 +348,7 @@ bool setrawcookie ( string $name [, string $value [, int $expire = 0 [, string $
 
 ```
 
-# **socket**
+# socket
 
 ### socket_get_status
 

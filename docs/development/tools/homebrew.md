@@ -275,7 +275,7 @@ $ brew upgrade -vvv
 $ git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
 ```
 
-### ****Permission denied @ apply2files - /usr/local/lib/docker/cli-plugins****
+### Permission denied @ apply2files - /usr/local/lib/docker/cli-plugins
 
 解决方法
 
