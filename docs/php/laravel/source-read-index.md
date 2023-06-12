@@ -1,14 +1,6 @@
----
-title: "源码阅读 - 初始 : (1) 入口文件 index"
-date: 2022-04-20 19:01:08
-toc: true
-categories:
-- ["Php","源码阅读","Laravel"]
----
+# 源码阅读 - 初始 : (1) 入口文件 index
 
 **入口文件 public/index.php**
-
-
 
 ```php
 // 1) Composer 自动加载: 无需关心类库是如何被引入的
@@ -30,16 +22,20 @@ $kernel->terminate($request, $response);
 ```
 
 ## 1) 自动加载
+
 **bootstrap/autoload.php**
+
 ```php
 // 定义 LARAVEL_START
 define('LARAVEL_START', microtime(true));
 // 1) 加载 bootstrap 下的自动加载
 require __DIR__.'/../vendor/autoload.php';
 ```
+
 bootstrap 下的 自动加载
 
 **~/vendor/autoload.php**
+
 ```php
 # 加载指定定义文件
 vendor/composer/autoload_real.php
@@ -55,7 +51,9 @@ ComposerAutoloaderInitXX::getLoader();
 ```
 
 ## 2) 应用程序加载
+
 **bootstrap/app.php**
+
 ```php
 // 1) 初始化 app
 $app = new Illuminate\Foundation\Application(
@@ -84,10 +82,12 @@ return $app;
 ```
 
 ## 3) 生成加载器
+
 ```php
 // 创建 Kernel
 $app->make(Illuminate\Contracts\Http\Kernel::class)
 ```
+
 ```php
 // 获取引用
 $abstract = $this->getAlias($abstract);
@@ -101,6 +101,7 @@ return parent::make($abstract, $parameters);
 ```
 
 ## 4) 处理请求
+
 ```php
 try {
     // 启用 Http 方法重写
@@ -124,6 +125,7 @@ return $response;
 ```
 
 ## 5) 发送响应
+
 ```php
 // 1) 发送 Header
 $this->sendHeaders();
@@ -138,6 +140,7 @@ return $this;
 ```
 
 ## 6) 终止程序
+
 ```php
 // 1) 终止中间件
 $this->terminateMiddleware($request, $response);

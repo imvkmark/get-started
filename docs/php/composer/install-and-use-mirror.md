@@ -1,10 +1,4 @@
----
-title: "Composer 安装 / 加速"
-date: 2022-05-09 16:06:33
-toc: true
-categories:
-- ["Php","composer"]
----
+# Composer 安装 / 加速
 
 ## 安装
 **方法 1 : 官方方式**

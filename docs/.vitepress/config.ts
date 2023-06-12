@@ -17,6 +17,7 @@ const nav = [
             {
                 text: "Php", items: [
                     createLink('介绍', '/php/'),
+                    createLink('Laravel', '/php/laravel/faq'),
                     createLink('函数参考', '/php/refs/language/intro'),
                 ]
             },
@@ -190,15 +191,11 @@ const sidebar = {
             ]
         },
         {
-            text: 'Laravel ',
+            text: 'Composer',
             items: [
-                createLink('Eloquent 和 Migrate', '/php/laravel/eloquent-migrate.md'),
-                createLink('FAQ', '/php/laravel/faq.md'),
+                createLink('安装和加速', '/php/composer/install-and-use-mirror'),
+                createLink('怎样创建 PSR-4 的 Php 包', '/php/composer/create-psr4-package.md'),
             ]
-        },
-        {
-            text: 'IDE',
-            items: []
         },
         {
             text: 'Packages',
@@ -224,6 +221,24 @@ const sidebar = {
                 createLink('FAQ', '/php/hyperf/faq'),
             ]
         },
+    ],
+    "/php/laravel": [
+        {
+            text: 'Laravel 学习',
+            items: [
+                createLink('入门笔记', '/php/laravel/learn-note'),
+                createLink('Eloquent 和 Migrate', '/php/laravel/eloquent-migrate.md'),
+                createLink('表单验证类 (Form Requests)', '/php/laravel/form-requests.md'),
+            ]
+        },
+        {
+            text: '源码阅读',
+            items: [
+                createLink('初始 : (1) 入口文件 index', '/php/laravel/source-read-index'),
+            ]
+        },
+
+        createLink('FAQ', '/php/laravel/faq.md'),
     ],
     "/php/refs": [
         {
@@ -505,7 +520,6 @@ const sidebar = {
             text: "Jetbrains",
             items: [
                 createLink("Jetbrains 系常用扩展", "/development/ide/jetbrains-plugins"),
-                createLink("WebStorm Tips", "/development/ide/webstorm-tips"),
             ],
         },
         {
