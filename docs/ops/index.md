@@ -14,7 +14,6 @@ hero :
       link : /ops/centos/upgrade-at-7
 ---
 
-
 # 运维
 
 ## Mac
@@ -29,12 +28,11 @@ hero :
 
 ### Supervisor
 
-[安装](./supervisor/install-at-centos.md)
+[安装](./software/supervisor/install-at-centos.md)
 
 ### cURL
 
-[安装/升级](./curl/install-latest-at-centos.md)
-
+[安装/升级](./software/curl/install-latest-at-centos.md)
 
 ## Solution
 

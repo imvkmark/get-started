@@ -652,6 +652,7 @@ const sidebar = {
                 createLink("升级和完善 CentOS 7", "/ops/centos/upgrade-at-7"),
                 createLink("常用脚本", "/ops/centos/tools"),
                 createLink("firewalld 常用命令", "/ops/centos/firewalld"),
+                createLink("FAQ", "/ops/centos/faq"),
             ],
         },
         {
@@ -688,28 +689,41 @@ const sidebar = {
                 createLink("使用 filebeat 搜集日志", "/ops/elk/use-filebeat-collect-nginx-log"),
             ],
         },
+    ],
+    "/ops/software": [
+        {
+            text: "Supervisor",
+            items: [
+                createLink("supervisor 介绍", "/ops/software/supervisor/introduction"),
+                createLink("CentOS 安装/升级 supervisor", "/ops/software/supervisor/install-at-centos"),
+                createLink("Mac 安装 supervisor", "/ops/software/supervisor/install-at-mac"),
+            ],
+        },
         {
             text: "Canal",
             items: [
-                createLink("Canal 简介", "/ops/canal/"),
-                createLink("Canal 快速入门", "/ops/canal/quickstart"),
-                createLink("Deployer", "/ops/canal/deployer"),
-                createLink("Canal For ElasticSearch 适配器", "/ops/canal/client-sync-es"),
-                createLink("Client Adapter", "/ops/canal/client-adapter"),
+                createLink("Canal 简介", "/ops/software/canal/"),
+                createLink("Canal 快速入门", "/ops/software/canal/quickstart"),
+                createLink("Deployer", "/ops/software/canal/deployer"),
+                createLink("Canal For ElasticSearch 适配器", "/ops/software/canal/client-sync-es"),
+                createLink("Client Adapter", "/ops/software/canal/client-adapter"),
+            ],
+        },
+        {
+            text: "Curl",
+            items: [
+                createLink("安装最新的 cURL ", "/ops/software/curl/install-latest-at-centos"),
+                createLink("curl 请求另外一台机器", "/ops/software/curl/visit-another-host.md"),
             ],
         },
         {
             text: "软件",
             items: [
-                createLink("安装最新的 cURL ", "/ops/curl/install-latest-at-centos"),
-                createLink("curl 请求另外一台机器", "/ops/curl/visit-another-host.md"),
-                createLink("supervisor 介绍", "/ops/supervisor/introduction"),
-                createLink("CentOS 安装/升级 supervisor", "/ops/supervisor/install-at-centos"),
-                createLink("Mac 安装 supervisor", "/ops/supervisor/install-at-mac"),
-                createLink("在 CentOS 上安装 Svn", "/ops/svn/install-at-centos"),
-                createLink("日志切割(logrotate)操作梳理", "/ops/logrotate/introduction.md"),
-                createLink("设置 SSH 安全通过密钥,免密码登录服务器或拉取代码", "/ops/ssh/use-ssh-login-and-deploy.md"),
-                createLink("CentOS 使用 docker 安装 sentry", "/ops/sentry/install-use-docker-at-centos.md"),
+                createLink("在 CentOS 上安装 Svn", "/ops/software/svn/install-at-centos"),
+                createLink("日志切割(logrotate)操作梳理", "/ops/software/logrotate/introduction.md"),
+                createLink("设置 SSH 免密码访问服务器", "/ops/software/ssh/use-ssh-login-and-deploy.md"),
+                createLink("使用 docker 安装 sentry", "/ops/software/sentry/install-use-docker-at-centos.md"),
+                createLink("expect 介绍", "/ops/software/expect/introduction.md"),
             ],
         },
     ],

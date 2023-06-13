@@ -4,7 +4,7 @@
 
 > logrotate 程序是一个日志文件管理工具。用于分割日志文件，删除旧的日志文件，并创建新的日志文件，起到“转储”作用
 
-这里参考另一篇文章 [「转+」 运维中的日志切割](./../logrotate/introduction.md)
+这里参考另一篇文章 [「转+」 运维中的日志切割](./../software/logrotate/introduction.md)
 
 ## 关闭 access log
 

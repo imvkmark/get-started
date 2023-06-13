@@ -1,7 +1,7 @@
 # Centos 使用 pip3 安装/升级 supervisor
 
 > 安装的时候, 因为国内外访问环境不同, 可能会出现国内访问速度慢情况,
-> 可以考虑更换源 —- [更换镜像源 , 加速 python 安装](../../python/install/use-mirror-to-speed.md)
+> 可以考虑更换源 —- [更换镜像源 , 加速 python 安装](../../../python/install/use-mirror-to-speed.md)
 
 ## 安装 Python3
 

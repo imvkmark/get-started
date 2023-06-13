@@ -36,7 +36,7 @@ Features: alt-svc AsynchDNS HSTS HTTPS-proxy IPv6 Largefile libz NTLM NTLM_WB SS
 ```
 
 ::: info 补充阅读
-[如何在 CentOS 中构建和安装最新的 cURL](../curl/install-latest-at-centos.md)
+[如何在 CentOS 中构建和安装最新的 cURL](../software/curl/install-latest-at-centos.md)
 :::
 
 ## 源添加和更换

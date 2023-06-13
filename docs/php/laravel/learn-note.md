@@ -114,7 +114,7 @@ php artisan serve
 # Laravel development server started on http://localhost:8000
 ```
 
-然后运行 http://localhost:8000/ 也会访问到这个位置, 以后我使用Apache方式运行
+然后运行 `http://localhost:8000/` 也会访问到这个位置, 以后我使用Apache方式运行
 
 ### 使用 nginx 配置 Laravel
 

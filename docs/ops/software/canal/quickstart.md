@@ -493,7 +493,7 @@ Error: A fatal exception has occurred. Program will exit.
 ### es7 - transport client is closed
 
 >
-参考文章 : [在 CentOS 7 上安装 ElasticSearch 和 Kibana](../../ops/elk/install-at-centos7.md)
+参考文章 : [在 CentOS 7 上安装 ElasticSearch 和 Kibana](../../../ops/elk/install-at-centos7.md)
 
 这是 es7 / transport 模式会出现错误
 

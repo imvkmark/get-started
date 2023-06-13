@@ -186,6 +186,6 @@ $ git flow hotfix finish missing-link
 
 其次，定义一个固定的工作流程会使得团队协作更加简单容易。无论是一个 “版本控制的新手” 还是 “Git 专家”，每一个人都知道如何来正确地完成某个任务。
 
-- [一个成功的 Git 分支模型](develop_git_success-git-branch-model)
+- [一个成功的 Git 分支模型](./flow-branch-model.md)
 - [git-flow 的工作流程](https://www.git-tower.com/learn/git/ebook/cn/command-line/advanced-topics/git-flow)
 

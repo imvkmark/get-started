@@ -46,7 +46,7 @@ $ sudo chmod -R 775 /var/lib/nginx/
 
 ## 日志切割
 
-关于日志切割参考 [运维中的日志切割(logrotate)](../logrotate/introduction.md)
+关于日志切割参考 [运维中的日志切割(logrotate)](../software/logrotate/introduction.md)
 
 ## nginx: [error] invalid PID number "" in "/run/nginx.pid"
 
