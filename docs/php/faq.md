@@ -119,7 +119,6 @@ $ composer config --global process-timeout 3000
 $ composer config -g -- disable-tls false
 ```
 
-
 ## _GET,_POST, _COOKIE的同名变量的处理
 
 ```php
@@ -217,5 +216,16 @@ echo escapeshellarg('中文');
 <?php
 // 此行需要加入到文档前
 setlocale(LC_CTYPE, "UTF8", "en_US.UTF-8");
+```
+
+## 应用
+
+### PhpMyAdmin
+
+_config.inc.php _一定要填写 blowfish_secret
+
+```php
+<?php
+$cfg['blowfish_secret'] = 'xxx'; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
 ```
 

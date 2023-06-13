@@ -520,6 +520,9 @@ const sidebar = {
             text: "Jetbrains",
             items: [
                 createLink("Jetbrains 系常用扩展", "/development/ide/jetbrains-plugins"),
+                createLink("使用 Copyright", "/development/ide/jetbrains-copyright"),
+                createLink("使用 Upsource", "/development/ide/jetbrains-upsource-to-cr"),
+                createLink("在 IDE 中使用 SVN", "/development/ide/jetbrains-use-svn"),
             ],
         },
         {

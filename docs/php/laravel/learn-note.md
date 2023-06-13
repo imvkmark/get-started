@@ -145,8 +145,6 @@ server {
 }
 ```
 
-
-
 ## 事件监听
 
 ### 设置监听事件
@@ -192,8 +190,6 @@ class LoginIpBannedLog {
 在需要触发的时候触发条件, 并用数组传入需要传递的值
 
 `\Event::fire('admin.login_ip_banned', [$this->ip, \Auth::user()]);`
-
-
 
 ## 配置文件
 
@@ -322,7 +318,6 @@ laravel
   ├contracts   主要组件实现所用的接口
 ```
 
-
 ## 集合
 
 ### macro 示例
@@ -340,4 +335,45 @@ echo $coll->someMethod(1, 2);
 echo $coll->someMethod();
 // 5      = 3 + (1 + 1)
 ```
+
+## 事件调度(定时任务)
+
+Laravel 5 新增了一个框架内置的 cron 风格的令人难以置信的调度程序（与  [Indatus 的 Dispatcher](https://github.com/indatus/dispatcher)
+类似）。只要在服务器上设置一个每分钟调用  `artisan schedule:run`  的 cron job, 一切就准备就绪了。
+
+```
+* * * * * php /path/to/artisan schedule:run
+```
+
+举个例子，通过绑定下面的事件，可以实现每天自动清理密码提示记录：
+
+```
+$schedule
+    ->command('auth:clear-reminders') // 清理密码提示
+    ->daily() // 每天执行
+    ->sendOutputTo($logPath) // 把输出写入日志
+    ->emailOutputTo('me@me.com'); // 把输出发到指定邮箱
+```
+
+你可以通过  `command()`  来调用 artisan 命令,  `call`  来调用方法或函数， 或者  `terminal()`  来执行单行命令脚本：
+
+```
+$schedule->call('YourClass@someMethod')->twiceDaily();
+ 
+$schedule->call(function() {
+    // Do stuff
+})->everyFiveMinutes();
+```
+
+还可以借助回调来决定什么时候执行或不执行某些操作，通过  `when()`  或者  `skip()`  实现：
+
+```
+$schedule
+    ->call('Mailer@BusinessDayMailer') // 执行类方法
+    ->weekdays() // 周一到周五执行
+    ->skip(function(TypeHintedDeciderClass $decider) { // 如果是节假日则跳过
+        return $decider->isHoliday();
+    });
+```
+
 

@@ -1,18 +1,11 @@
----
-title: "在 Jetbrains 系IDE中使用 SVN"
-date: 2022-04-14 22:15:08
-toc: true
-categories:
-- ["开发","IDE","JetBrains"]
----
+# 在 Jetbrains 系IDE中使用 SVN
 
 ## 准备
+
 机器上需要有 svn 命令行
 
-
-
-
 ## 操作
+
 检出
 
 ![](https://file.wulicode.com/yuque/202208/04/23/1952T9dC5UyZ.png?x-oss-process=image/resize,h_413)
@@ -29,14 +22,14 @@ categories:
 
 ## 常见问题
 
-
-###  「转+」 IDEA SVN报 E170013和E230001错误:Server SSL certificate verification
+### 「转+」 IDEA SVN报 E170013和E230001错误:Server SSL certificate verification
 
 **问题描述：**
 
 在IDEA的 `Version Control` 中，Incoming 下，右击 refresh 时，报出了以下错误：
 
-> svn: E170013: Unable to connect to a repository at URL 'https://......' svn: E230001: Server SSL certificate verification failed: certificate has expired, certificate issued for a different hostname, issuer is not trusted
+> svn: E170013: Unable to connect to a repository at URL 'https://......' svn: E230001: Server SSL certificate verification failed: certificate has expired,
+> certificate issued for a different hostname, issuer is not trusted
 
 
 **解决方案：**
@@ -63,7 +56,6 @@ $ svn checkout https://{ip}/svn/{project}/
 这样就可以下载了
 
 ![image.png](https://file.wulicode.com/yuque/202208/04/23/1954UU6qQENx.png?x-oss-process=image/resize,h_118)
-
 
 ## 参考 :
 

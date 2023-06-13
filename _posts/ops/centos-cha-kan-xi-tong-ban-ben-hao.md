@@ -1,38 +1,32 @@
 ---
-title: "CentOS 查看系统版本号"
-date: 2021-06-26 10:31:14
-toc: true
-categories:
-- ["Ops","CentOS"]
+title : "CentOS 查看系统版本号"
+date : 2021-06-26 10:31:14
+toc : true
+categories :
+  - [ "Ops","CentOS" ]
 ---
 
 ## 查看内核版本命令：
 
-- 
-`cat /proc/version`
+-
 
+`cat /proc/version`
 
 Linux version 2.6.9-22.ELsmp ([bhcompile@crowe.devel.redhat.com](mailto:bhcompile@crowe.devel.redhat.com)) (gcc version 3.4.4 20050721
 
-
 3.4.4-2)) #1 SMP Mon Sep 19 18:00:54 EDT 2005
 
-- 
-`uname -a`
+-
 
+`uname -a`
 
 Linux q1test01 2.6.9-22.ELsmp #1 SMP Mon Sep 19 18:00:54 EDT 2005 x86_64 x86_64 x86_64 GNU/Linux
 
-- 
+-
+
 `uname -r`
 
-
 2.6.9-22.ELsmp
-
-
-
-
-
 
 ## 查看linux版本
 
@@ -68,13 +62,11 @@ Kernel \r on an \m
 
 这种方式下可以直接看到具体的版本号，比如 AS4 Update 1
 
-
 Red Hat Enterprise Linux AS release 4 (Nahant Update 2)
 
 - `rpm -q redhat-release`
 
 这种方式下可看到一个所谓的release号
-
 
 redhat-release-4AS-3
 
@@ -82,9 +74,7 @@ redhat-release-4AS-3
 
 `getconf LONG_BIT` 或者 `getconf WORD_BIT`
 
-
 `file /bin/ls`
-
 
 `lsb_release -a`
 

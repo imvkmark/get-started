@@ -1,17 +1,9 @@
----
-title: "使用 Upsource 实现代码审查/CodeReview - jetbrains 系列"
-date: 2022-04-20 22:42:02
-toc: true
-categories:
-- ["开发","IDE","JetBrains"]
----
+# 使用 Upsource 实现代码审查/CodeReview
 
 ## 安装
 
-
-
-
 ### Upsource 是什么
+
 Upsource 作为一个代码审查工具, 有很多有益的特性.
 
 - 执行高效的代码审查
@@ -25,6 +17,7 @@ Upsource 作为一个代码审查工具, 有很多有益的特性.
 - 不用担心团队成员人数, 团队项目, 不限量~
 
 ### 下载
+
 [下载](https://www.jetbrains.com/upsource/)
 
 ### 安装
@@ -98,6 +91,7 @@ Upsource is running
 ```
 
 ### 配置项目
+
 根据在命令行显示的信息, 我们打开这个地址 http://macbook-pro.local:8080?wizard_token=UwxfxNH1OxGS75l3DO9p, 如果在服务器上
 
 ![image.png](https://file.wulicode.com/yuque/202208/04/22/5411FjDE0ftf.png)
@@ -125,9 +119,11 @@ Upsource is running
 ![image.png](https://file.wulicode.com/yuque/202208/04/22/54142yUtmp1r.png)
 
 ## 在 phpstorm/jetbrains 系列中集成
+
 这里我只是在 phpstorm 中进行测试的, 但是是支持全系的, 只不过对代码部分的支持可能不太完善
 
 ### 配置代码审查项目
+
 这里以 git 作为版本控制
 
 **配置基础信息**
@@ -143,11 +139,13 @@ Upsource is running
 初始化完成后可以在项目中进行集成了.
 
 ### 安装 upsource plugin
+
 Settings -> 搜索 Plugin -> Browse repositories -> 搜索 upsource 安装并重启
 
 ![image.png](https://file.wulicode.com/yuque/202208/04/22/5415sd3Ns8Pt.png)
 
 ### 关联项目
+
 重启之后在设置中搜索 UpSource , 在 Connection 菜单中填写 Server Url 为安装完成访问的根目录. 点击 Test Connection 来进行填写账号密码授权, 授权成功后我们便可以在项目中使用了
 
 设置完成后在右下角有个标识代表已经启动了 Upsource 服务
@@ -161,6 +159,7 @@ Settings -> 搜索 Plugin -> Browse repositories -> 搜索 upsource 安装并重
 这样我们就可以在 IDE 中进行代码的 review 和标识了. 这里的标识和 upsource 系统中的显示的数据是实时同步的. 并且支持 @ 某个人.
 
 ### 使用和查看
+
 这里的这里的快捷键是 ctrl + alt + /, 我们选中指定的行, 填写 review 代码
 
 ![image.png](https://file.wulicode.com/yuque/202208/04/22/5417gkdtbsJ5.png)
@@ -188,15 +187,19 @@ Settings -> 搜索 Plugin -> Browse repositories -> 搜索 upsource 安装并重
 ## 其他
 
 ### 错误 : 无法将数据保存到数据库
-Updating project : An error occurred during flushing data to database  upsource
+
+Updating project : An error occurred during flushing data to database upsource
 
 这里内存必须在 8G 以上, 否则会报上面的错误.
 
 ### 错误 : 用户没有看到这个项目
+
 一般来讲就是没有把这个用户添加到所属项目中.
 
 ### 更换 Upsource 的地址
+
 正确方式
+
 ```html
 ./bin/upsource.sh stop
 ./bin/upsource.sh configure --base-url=http://(server-name).com:(port) --listen-port=(port)
@@ -209,11 +212,13 @@ Updating project : An error occurred during flushing data to database  upsource
 - [如何使代码审查更高效](http://www.infoq.com/cn/articles/effective-code-reviews)
 
 ### 特性 : 支持自定义标签
+
 这些标签可以同步到 IDE 中.
 
 ![image.png](https://file.wulicode.com/yuque/202208/04/22/5420s4agUQGT.png)
 
 ### 特性 : 多用户账户可以归到一个用户下进行管理
+
 比如一个用户有多个 git global 标识, 可能是不同时期的用户的昵称, 这里可以识别为一个账户, 更方便进行管理
 
 ![image.png](https://file.wulicode.com/yuque/202208/04/22/5420zPy1top7.png)

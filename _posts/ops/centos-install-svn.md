@@ -1,24 +1,18 @@
 ---
-title: "CentOS下使用yum安装配置和使用svn"
-date: 2021-06-26 10:31:08
-toc: true
-categories:
-- ["Ops","CentOS"]
+title : "CentOS 下使用 yum 安装配置和使用 svn"
+date : 2021-06-26 10:31:08
+toc : true
+categories :
+  - [ "Ops","CentOS" ]
 ---
 
 ### 安装说明
 
 系统环境：CentOS-6.7
 
-
 安装方式：yum install （源码安装容易产生版本兼容的问题）
 
-
 安装软件：系统自动下载SVN软件
-
-
-
-
 
 ### 检查已安装版本
 
@@ -35,7 +29,6 @@ $ ls | grep svn
 mod_authz_svn.so
 mod_dav_svn.so
 ```
-
 
 ### 验证安装
 
@@ -56,7 +49,6 @@ Subversion 是开放源代码软件，请参阅 [http://subversion.tigris.org/](
 Cyrus SASL 认证可用。
 ```
 
-
 ### 代码库创建
 
 SVN软件安装完成后还需要建立SVN库
@@ -68,14 +60,11 @@ SVN软件安装完成后还需要建立SVN库
 
 执行上面的命令后，自动建立repositories库，查看/opt/svn/repositories 文件夹发现包含了conf, db,format,hooks, locks, README.txt等文件，说明一个SVN库已经建立。
 
-
 ### 配置代码库
 
 进入上面生成的文件夹conf下，进行配置
 
-
-[root[@zck ](/zck ) modules]# cd /opt/svn/repositories/conf 
-
+[root[@zck ](/zck ) modules]# cd /opt/svn/repositories/conf
 
 ### 用户密码passwd配置
 
@@ -92,7 +81,6 @@ SVN软件安装完成后还需要建立SVN库
 # sally = sallyssecret
 zhoulf=123456
 ```
-
 
 ### 权限控制authz配置
 
@@ -122,7 +110,6 @@ authz-db=authz
 #认证命名空间，subversion会在认证提示里显示，并且作为凭证缓存的关键字
 realm=/opt/svn/repositories
 ```
-
 
 ### 配置防火墙端口
 
@@ -161,17 +148,13 @@ tcp 0 0 0.0.0.0:3690 0.0.0.0:* LISTEN
 [root@zck password]# svnserve -d -r /opt/svn/repositories // 启动
 ```
 
-
 ### 测试
 
 SVN服务已经启动，使用客户端测试连接。
 
-
 客户端连接地址：svn://192.168.15.231
 
-
 用户名/密码： zhoulf/123456
-
 
 测试创建文件夹等操作。
 
