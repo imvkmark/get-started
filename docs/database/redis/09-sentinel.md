@@ -1,10 +1,4 @@
----
-title: "[转] 高可用Redis(九)：Redis Sentinel"
-date: 2021-06-26 10:24:08
-toc: true
-categories:
-- ["开发","Redis"]
----
+# Redis Sentinel
 
 [高可用Redis(九)：Redis Sentinel](https://www.cnblogs.com/renpingsheng/p/9803838.html)
 

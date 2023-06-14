@@ -1,10 +1,4 @@
----
-title: "[转] 高可用Redis(十二)：Redis Cluster"
-date: 2021-06-26 10:25:25
-toc: true
-categories:
-- ["开发","Redis"]
----
+# Redis Cluster
 
 [高可用Redis(十二)：Redis Cluster](https://www.cnblogs.com/renpingsheng/p/9862485.html)
 

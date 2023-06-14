@@ -1,10 +1,4 @@
----
-title: "[转] 高可用Redis(一)：通用命令，数据结构和内部编码，单线程架构"
-date: 2021-06-26 10:20:49
-toc: true
-categories:
-- ["开发","Redis"]
----
+# 通用命令，数据结构和内部编码，单线程架构
 
 原文地址 : [高可用Redis(一)：通用命令，数据结构和内部编码，单线程架构](https://www.cnblogs.com/renpingsheng/p/9773913.html)
 

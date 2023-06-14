@@ -1,10 +1,4 @@
----
-title: "[转] 高可用Redis(三)：Hash类型"
-date: 2021-06-26 10:21:22
-toc: true
-categories:
-- ["开发","Redis"]
----
+# Hash类型
 
 [高可用Redis(三)：Hash类型](https://www.cnblogs.com/renpingsheng/p/9774526.html)
 

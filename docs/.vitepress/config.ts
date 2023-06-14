@@ -31,7 +31,7 @@ const nav = [
         items: [
             { text: "Web", link: "/web/" },
             { text: "手机端", link: "/mobile/design/site" },
-            { text: "MySQL", link: "/mysql/" },
+
             {
                 text: 'Ops',
                 items: [
@@ -50,6 +50,12 @@ const nav = [
             },
             { text: "部门", link: "/department/test/auto-seldom" },
         ],
+    },
+    {
+        text: "数据库", activeMatch: `^/database/`, items: [
+            createLink('MySQL', '/database/mysql/'),
+            createLink('Redis', '/database/redis/01-command-data.md'),
+        ]
     },
     { text: "Awesome", link: "/awesome/" },
     {
@@ -730,11 +736,8 @@ const sidebar = {
             ],
         },
     ],
-    "/mysql": [
-        {
-            text: "介绍",
-            link: '/mysql/'
-        },
+    "/database/mysql": [
+        createLink('介绍', '/mysql/'),
         {
             text: "优化",
             items: [
@@ -744,19 +747,31 @@ const sidebar = {
         {
             text: "MySQL CookBook",
             items: [
-                createLink("使用 Mysql 客户端", "/mysql/mysql-cookbook/1-2-client"),
-                createLink("从表中查询数据", "/mysql/mysql-cookbook/3-7-table-query"),
-                createLink("表管理", "/mysql/mysql-cookbook/4-table-mgr"),
-                createLink("与字符串共舞", "/mysql/mysql-cookbook/5-string"),
-                createLink("使用日期和时间", "/mysql/mysql-cookbook/6-date-time"),
-                createLink("聚合函数", "/mysql/mysql-cookbook/8-9-aggregate-function"),
-                createLink("数据导入导出", "/mysql/mysql-cookbook/10-dump-import"),
+                createLink("使用 Mysql 客户端", "/database/mysql/mysql-cookbook/1-2-client"),
+                createLink("从表中查询数据", "/database/mysql/mysql-cookbook/3-7-table-query"),
+                createLink("表管理", "/database/mysql/mysql-cookbook/4-table-mgr"),
+                createLink("与字符串共舞", "/database/mysql/mysql-cookbook/5-string"),
+                createLink("使用日期和时间", "/database/mysql/mysql-cookbook/6-date-time"),
+                createLink("聚合函数", "/database/mysql/mysql-cookbook/8-9-aggregate-function"),
+                createLink("数据导入导出", "/database/mysql/mysql-cookbook/10-dump-import"),
             ],
         },
-        {
-            text: "FAQ",
-            link: '/mysql/faq'
-        },
+        createLink('FAQ', '/database/mysql/faq'),
+    ],
+    "/database/redis": [
+        createLink('通用命令，数据结构和内部编码，单线程架构', '/database/redis/01-command-data.md'),
+        createLink('字符串类型', '/database/redis/02-string.md'),
+        createLink('Hash类型', '/database/redis/03-hash.md'),
+        createLink('列表，集合与有序集合', '/database/redis/04-list-collection.md'),
+        createLink('瑞士军刀之慢查询，Pipeline和发布订阅', '/database/redis/05-slow-pipeline-subscribe.md'),
+        createLink('瑞士军刀之bitmap，HyperLoglog和GEO', '/database/redis/06-bitmap-hll-geo.md'),
+        createLink('Redis持久化', '/database/redis/07-persist.md'),
+        createLink('Redis主从复制', '/database/redis/08-redis-main-copy.md'),
+        createLink('Redis Sentinel', '/database/redis/09-sentinel.md'),
+        createLink('Redis原生命令搭建集群', '/database/redis/10-cluster-building.md'),
+        createLink('使用redis-trib.rb工具搭建集群', '/database/redis/11-cluster-trib.md'),
+        createLink('Redis Cluster', '/database/redis/12-cluster.md'),
+        createLink('Redis缓存的使用和设计', '/database/redis/13-cache.md'),
     ],
     "/ops/nginx": [
         createLink("介绍", "/ops/nginx/"),

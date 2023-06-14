@@ -1,10 +1,4 @@
----
-title: "[转] 高可用Redis(五)：瑞士军刀之慢查询，Pipeline和发布订阅"
-date: 2021-06-26 10:22:08
-toc: true
-categories:
-- ["开发","Redis"]
----
+# 瑞士军刀之慢查询，Pipeline和发布订阅
 
 [高可用Redis(五)：瑞士军刀之慢查询，Pipeline和发布订阅](https://www.cnblogs.com/renpingsheng/p/9779926.html)
 

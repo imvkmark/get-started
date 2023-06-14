@@ -1,10 +1,4 @@
----
-title: "[转] 高可用Redis(十一)：使用redis-trib.rb工具搭建集群"
-date: 2021-06-26 10:24:57
-toc: true
-categories:
-- ["开发","Redis"]
----
+# 使用redis-trib.rb工具搭建集群
 
 [高可用Redis(十一)：使用redis-trib.rb工具搭建集群](https://www.cnblogs.com/renpingsheng/p/9833740.html)
 

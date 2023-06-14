@@ -1,10 +1,4 @@
----
-title: "[转] 高可用Redis(十)：Redis原生命令搭建集群"
-date: 2021-06-26 10:24:41
-toc: true
-categories:
-- ["开发","Redis"]
----
+# Redis原生命令搭建集群
 
 [高可用Redis(十)：Redis原生命令搭建集群](https://www.cnblogs.com/renpingsheng/p/9813959.html)
 

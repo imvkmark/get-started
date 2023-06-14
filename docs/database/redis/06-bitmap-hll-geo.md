@@ -1,10 +1,4 @@
----
-title: "[转] 高可用Redis(六)：瑞士军刀之bitmap，HyperLoglog和GEO"
-date: 2021-06-26 10:22:20
-toc: true
-categories:
-- ["开发","Redis"]
----
+# 瑞士军刀之bitmap，HyperLoglog和GEO
 
 [高可用Redis(六)：瑞士军刀之bitmap，HyperLoglog和GEO](https://www.cnblogs.com/renpingsheng/p/9783834.html)
 

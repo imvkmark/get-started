@@ -1,10 +1,4 @@
----
-title: "[转] 高可用Redis(七)：Redis持久化"
-date: 2021-06-26 10:22:35
-toc: true
-categories:
-- ["开发","Redis"]
----
+# Redis持久化
 
 [高可用Redis(七)：Redis持久化](https://www.cnblogs.com/renpingsheng/p/9786806.html)
 

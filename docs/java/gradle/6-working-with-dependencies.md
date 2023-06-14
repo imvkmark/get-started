@@ -507,15 +507,377 @@ repositories {
 
 有关身份验证选项，请参阅支持的存储库传输协议
 
-#### 存储库内容过滤(todo)
+#### 存储库内容过滤
 
-#### 支持的元数据源
+Gradle 公开了一个 API 来声明存储库可以包含或不包含什么。它有不同的使用场景:
+
+- 性能: 当你知道依赖项永远不会在特定的存储库中找到时
+- 安全: 避免泄漏在私有项目中使用的依赖项
+- 可靠: 当某些存储库包含损坏的元数据或工件时
+
+考虑到声明存储库的顺序很重要，这一点就更加重要了
+
+**声明仓库过滤器**
+
+::: code-group
+
+```groovy [build.gradle]
+repositories {
+    maven {
+        url "https://repo.mycompany.com/maven2"
+        content {
+            // this repository *only* contains artifacts with group "my.company"
+            includeGroup "my.company"
+        }
+    }
+    mavenCentral {
+        content {
+            // this repository contains everything BUT artifacts with group starting with "my.company"
+            excludeGroupByRegex "my\\.company.*"
+        }
+    }
+}
+```
+
+```kotlin [build.gradle.kts]
+repositories {
+    maven {
+        url = uri("https://repo.mycompany.com/maven2")
+        content {
+            // this repository *only* contains artifacts with group "my.company"
+            includeGroup("my.company")
+        }
+    }
+    mavenCentral {
+        content {
+            // this repository contains everything BUT artifacts with group starting with "my.company"
+            excludeGroupByRegex("my\\.company.*")
+        }
+    }
+}
+```
+
+:::
+
+默认情况下，存储库包含所有内容，不排除任何内容:
+
+- 如果声明了一个 include，那么它会排除除了包含的内容之外的所有内容。
+- 如果声明了一个exclude，那么它就包含除了被排除的内容之外的所有内容。
+- 如果同时声明 include 和 exclude ，那么它只包含 include 的内容，而不包含 exclude 的内容
+
+可以通过显式 组、模块或版本进行过滤，可以严格过滤，也可以使用正则表达式。当使用严格版本时，可以使用Gradle支持的格式来使用版本范围。此外，还有按解析上下文筛选的选项:
+配置名称甚至配置属性。详情参见RepositoryContentDescriptor
+
+**声明只在一个存储库中找到的内容**
+
+使用存储库级内容筛选器声明的筛选器不是排他性的。这意味着声明一个存储库包含一个工件并不意味着其他存储库也不能拥有它:您必须声明每个存储库在扩展中包含什么。
+
+另外，Gradle 提供了一个API，可以让你声明一个存储库只包含一个工件。如果您这样做:
+
+- 在存储库中声明的工件不能在任何其他存储库中找到
+- 排他性存储库内容必须在扩展中声明(就像存储库级别的内容一样)
+
+_声明排他性仓库内容_
+
+::: code-group
+
+```groovy [build.gradle]
+repositories {
+    // This repository will _not_ be searched for artifacts in my.company
+    // despite being declared first
+    mavenCentral()
+    exclusiveContent {
+        forRepository {
+            maven {
+                url "https://repo.mycompany.com/maven2"
+            }
+        }
+        filter {
+            // this repository *only* contains artifacts with group "my.company"
+            includeGroup "my.company"
+        }
+    }
+}
+```
+
+```kotlin [build.gradle.kts]
+repositories {
+    // This repository will _not_ be searched for artifacts in my.company
+    // despite being declared first
+    mavenCentral()
+    exclusiveContent {
+        forRepository {
+            maven {
+                url = uri("https://repo.mycompany.com/maven2")
+            }
+        }
+        filter {
+            // this repository *only* contains artifacts with group "my.company"
+            includeGroup("my.company")
+        }
+    }
+}
+```
+
+:::
+
+可以通过显式组、模块或版本进行过滤，可以严格过滤，也可以使用正则表达式。详情请参见 InclusiveRepositoryContentDescriptor
+
+::: info
+
+如果你在 `settings.gradle(.kts)` 的 pluginManagement 部分中使用排他内容过滤，那么通过项目 `buildscript.repositories` 添加更多存储库就会变得不合法。在这种情况下，构建配置将失败
+
+您可以选择在设置中声明所有存储库，或者使用非排他性内容过滤。
+
+:::
+
+**Maven存储库筛选**
+
+对于 Maven 存储库，通常情况下存储库要么包含发布版，要么包含快照。Gradle允许你使用下面的DSL来声明在存储库中找到的构件类型:
+
+::: code-group
+
+```groovy [build.gradle]
+repositories {
+    maven {
+        url "https://repo.mycompany.com/releases"
+        mavenContent {
+            releasesOnly()
+        }
+    }
+    maven {
+        url "https://repo.mycompany.com/snapshots"
+        mavenContent {
+            snapshotsOnly()
+        }
+    }
+}
+```
+
+```kotlin [build.gradle.kts]
+repositories {
+    maven {
+        url = uri("https://repo.mycompany.com/releases")
+        mavenContent {
+            releasesOnly()
+        }
+    }
+    maven {
+        url = uri("https://repo.mycompany.com/snapshots")
+        mavenContent {
+            snapshotsOnly()
+        }
+    }
+}
+```
+
+:::
+
+#### 支持的元数据来源
+
+当在存储库中搜索模块时，Gradle 默认会检查该存储库中支持的元数据文件格式。在 Maven 存储库中，Gradle 查找 `.pom` 文件，在ivy存储库中查找 `ivy.xml`
+文件，在扁平目录存储库中直接查找 `.jar` 文件，因为它不需要任何元数据。从5.0开始，Gradle还会查找.module (Gradle模块元数据)文件。
+
+但是，如果您定义了自定义存储库，则可能需要配置此行为。例如，您可以定义一个没有.pom文件而只有jar文件的Maven存储库。为此，您可以为任何存储库配置元数据源
+
+_支持没有元数据的工件的Maven存储库_
+
+::: code-group
+
+```groovy [build.gradle]
+repositories {
+    maven {
+        url "http://repo.mycompany.com/repo"
+        metadataSources {
+            mavenPom()
+            artifact()
+        }
+    }
+}
+```
+
+```kotlin [build.gradle.kts]
+repositories {
+    maven {
+        url = uri("http://repo.mycompany.com/repo")
+        metadataSources {
+            mavenPom()
+            artifact()
+        }
+    }
+}
+```
+
+:::
+
+你可以指定多个源，告诉 Gradle 在没有找到文件时继续查找。在这种情况下，检查源的顺序是预定义的。
+
+支持以下元数据来源:
+
+_支持的元数据来源_
+
+| Metadata source    | Description                     | Order | Maven | Ivy / flat dir |
+|--------------------|---------------------------------|-------|-------|----------------|
+| `gradleMetadata()` | Look for Gradle `.module` files | 1st   | yes   | yes            | 
+| `mavenPom()`       | Look for Maven `.pom` files     | 2nd   | yes   | yes            |
+| `ivyDescriptor()`  | Look for `ivy.xml` files        | 2nd   | no    | yes            | 
+| `artifact()`       | Look directly for artifact      | 3rd   | yes   | yes            |
+
+::: info
+Ivy 和 Maven 存储库的默认值随着 Gradle 6.0而改变。在6.0之前，artifact()包含在默认值中。当模块完全丢失时，会导致一些效率低下。为了恢复这种行为，例如，对于Maven
+central，你可以使用`mavenCentral {metadataSources {mavenPom();Artifact()}}`。以类似的方式，你可以使用 `mavenCentral {metadataSources {mavenPom()}}`
+在旧版本的Gradle中选择新的特性
+:::
+
+从Gradle 5.3开始，当解析元数据文件时，不管是Ivy还是Maven, Gradle都会寻找一个标记，表明存在匹配的 Gradle Module 元数据文件。如果找到它，将使用它代替 Ivy 或 Maven 文件
+
+从Gradle 5.6开始，你可以通过在元数据源声明中添加 `ignoreGradleMetadataRedirection()` 来禁用这种行为
+
+_不使用gradle元数据重定向的Maven存储库_
+
+::: code-group
+
+```groovy [build.gradle]
+repositories {
+    maven {
+        url "http://repo.mycompany.com/repo"
+        metadataSources {
+            mavenPom()
+            artifact()
+            ignoreGradleMetadataRedirection()
+        }
+    }
+}
+```
+
+```kotlin [build.gradle.kts]
+repositories {
+    maven {
+        url = uri("http://repo.mycompany.com/repo")
+        metadataSources {
+            mavenPom()
+            artifact()
+            ignoreGradleMetadataRedirection()
+        }
+    }
+}
+```
+
+:::
 
 #### 插件存储库与构建存储库
 
+Gradle 将在构建过程中的两个不同阶段使用存储库
+
+第一个阶段是配置构建并加载它所应用的插件。为此，Gradle将使用一组特殊的存储库。
+
+第二个阶段是在依赖性解析期间。此时，Gradle将使用项目中声明的存储库，如前几节所示。
+
+**插件存储库**
+
+默认情况下，Gradle 将使用 [Gradle插件中心](https://plugins.gradle.org/) 来查找插件。
+
+然而，由于不同的原因，在其他(无论是否公开)存储库中都有可用的插件。当构建需要其中一个插件时，需要指定额外的存储库，以便Gradle知道在哪里搜索。
+
+由于声明存储库的方式以及它们期望包含的内容取决于应用插件的方式，因此最好参考自定义插件存储库。
+
 #### 集中存储库声明
 
-#### 支持的存储库传输协议
+Gradle 提供了一种在所有项目的中心位置声明存储库的方法，而不是在构建的每个子项目中或通过一个 `allprojects` 块来声明存储库
+
+::: info
+
+存储库的中心声明是一个实验性特性
+
+:::
+
+每个子项目按照约定使用的存储库可以在 `settings.gradle(.kts)` 文件中声明:
+
+_在设置中声明Maven存储库_
+
+::: code-group
+
+```groovy [setting.gradle]
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+    }
+}
+```
+
+```kotlin [setting.gradle.kts]
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+    }
+}
+```
+
+:::
+
+`dependencyResolutionManagement` 存储库块接受与项目中相同的标记，其中包括 Maven 或 Ivy 存储库，带或不带凭据等
+
+默认情况下，项目声明的存储库将覆盖在设置中声明的任何内容。您可以更改此行为以确保始终使用设置存储库:
+
+_首选设置存储库_
+
+::: code-group
+
+```groovy [setting.gradle]
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+}
+```
+
+```kotlin [setting.gradle.kts]
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+}
+```
+
+:::
+
+如果，由于某种原因，一个项目或插件在项目中声明了一个存储库，Gradle会警告你。但是，如果您想强制只使用设置存储库，则可以使其构建失败:
+
+_强制设置存储库_
+
+::: code-group
+
+```groovy [setting.gradle]
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+}
+```
+
+```kotlin [setting.gradle.kts]
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+}
+```
+
+:::
+
+最终，默认值相当于设置 `PREFER_PROJECT`
+
+_首选项目存储库_
+
+::: code-group
+
+```groovy [setting.gradle]
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+}
+```
+
+```kotlin [setting.gradle.kts]
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+}
+```
+
+:::
+
+#### 支持的存储库传输协议[WIP]
 
 #### HTTP(S)身份验证方案配置
 

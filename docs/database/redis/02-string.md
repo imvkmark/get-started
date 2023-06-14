@@ -1,10 +1,4 @@
----
-title: "[转] 高可用Redis(二)：字符串类型"
-date: 2021-06-26 10:21:10
-toc: true
-categories:
-- ["开发","Redis"]
----
+# 字符串类型
 
 [高可用Redis(二)：字符串类型](https://www.cnblogs.com/renpingsheng/p/9774352.html)
 

@@ -1,10 +1,4 @@
----
-title: "[转] 高可用Redis(十三)：Redis缓存的使用和设计"
-date: 2021-06-26 10:26:20
-toc: true
-categories:
-- ["开发","Redis"]
----
+# Redis缓存的使用和设计
 
 [高可用Redis(十三)：Redis缓存的使用和设计](https://www.cnblogs.com/renpingsheng/p/10202914.html)
 

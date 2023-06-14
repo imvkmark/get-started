@@ -1,10 +1,4 @@
----
-title: "[转]高可用Redis(八)：Redis主从复制"
-date: 2021-06-26 10:23:25
-toc: true
-categories:
-- ["开发","Redis"]
----
+# Redis主从复制
 
 [高可用Redis(八)：Redis主从复制](https://www.cnblogs.com/renpingsheng/p/9796899.html)
 

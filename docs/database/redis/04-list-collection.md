@@ -1,10 +1,4 @@
----
-title: "[转] 高可用Redis(四)：列表，集合与有序集合"
-date: 2021-06-26 10:21:34
-toc: true
-categories:
-- ["开发","Redis"]
----
+# 列表，集合与有序集合
 
 [高可用Redis(四)：列表，集合与有序集合](https://www.cnblogs.com/renpingsheng/p/9778433.html)
 
