@@ -2,4 +2,4 @@
 
 ## IDE
 
-- [DataGrip - FAQ](../development/ide/datagrip-faq.md)
+- [DataGrip - FAQ](../../development/ide/datagrip-faq.md)
