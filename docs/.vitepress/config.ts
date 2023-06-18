@@ -191,8 +191,8 @@ const sidebar = {
             text: '安装',
             items: [
                 createLink('Mac 安装 LNMP', '/php/install/mac-lnmp'),
-                createLink('CentOS 安装 LNMP+', '/php/install/centos7-lnmp-plus'),
-                createLink('RockyLinux 安装 RNMP+', '/php/install/rockylinux-rnmp'),
+                createLink('CentOS 7 安装 LNMP', '/php/install/centos7-lnmp-plus'),
+                createLink('RockyLinux 安装 LNMP', '/php/install/rocky-lnmp'),
                 createLink('使用 PECL 安装扩展', '/php/install/pecl-install-extension'),
             ]
         },
@@ -529,6 +529,7 @@ const sidebar = {
                 createLink("使用 Copyright", "/development/ide/jetbrains-copyright"),
                 createLink("使用 Upsource", "/development/ide/jetbrains-upsource-to-cr"),
                 createLink("在 IDE 中使用 SVN", "/development/ide/jetbrains-use-svn"),
+                createLink("Jetbrains - FAQ", "/development/ide/jetbrains-faq"),
             ],
         },
         {
@@ -544,7 +545,13 @@ const sidebar = {
         {
             text: "WebStorm",
             items: [
-                createLink("WebStorm Tips", "/development/ide/webstorm-tips"),
+                createLink("WebStorm Tips", "/development/ide/webstorm-faq"),
+            ],
+        },
+        {
+            text: "DataGrip",
+            items: [
+                createLink("DataGrip FAQ", "/development/ide/datagrip-faq"),
             ],
         },
         {

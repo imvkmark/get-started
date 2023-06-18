@@ -1,5 +1,4 @@
-# RockyLinux (RHEL 8) 安装 nginx, php,mysql
-
+# RockyLinux 8/9 安装 nginx, php,mysql
 
 这里以 rocky linux 为例, 使用的用户是 duoli:duoli
 
@@ -8,15 +7,33 @@
 ### 更新系统
 
 ```shell
-# dnf update
+$ dnf update
 ```
 
 ### 安装 epel
 
-EPEL (Extra Packages for Enterprise Linux)是基于Fedora的一个项目，为“红帽系”的操作系统提供额外的软件包，适用于RHEL、CentOS和Scientific Linux.
+[EPEL (Extra Packages for Enterprise Linux)](https://docs.fedoraproject.org/en-US/epel/)是基于Fedora的一个项目，为“红帽系”的操作系统提供额外的软件包，适用于RHEL、CentOS和Scientific
+Linux.
+
+_RHEL 8_
 
 ```shell
-# dnf install https://mirrors.aliyun.com/epel/epel-release-latest-8.noarch.rpm
+subscription-manager repos --enable codeready-builder-for-rhel-8-$(arch)-rpms
+dnf install https://mirrors.aliyun.com/epel/epel-release-latest-8.noarch.rpm
+```
+
+_Rocky Linux 8_
+
+```shell
+dnf config-manager --set-enabled powertools
+dnf install epel-release
+```
+
+_Rocky Linux 9_
+
+```shell
+dnf config-manager --set-enabled crb
+dnf install epel-release
 ```
 
 这会将存储库文件下载到 `/etc/yum.repos.d/epel.repo`并启用它
@@ -43,8 +60,16 @@ EPEL (Extra Packages for Enterprise Linux)是基于Fedora的一个项目，为�
 
 安装 remi, 这里使用的是 aliyun 源
 
+_Rocky Linux 8_
+
 ```shell
-# dnf -y install https://mirrors.aliyun.com/remi/enterprise/remi-release-8.rpm
+dnf -y install https://mirrors.aliyun.com/remi/enterprise/remi-release-8.rpm
+```
+
+_Rocky Linux 9_
+
+```shell
+dnf -y install https://mirrors.aliyun.com/remi/enterprise/remi-release-9.rpm
 ```
 
 启用之后需要更换源地址

@@ -23,7 +23,7 @@ categories:
 添加白名的位置 : `开发 -> 基本配置 -> 公众号开发信息 -> IP白名单` 
 
 PHP 代码吊起
-```json
+```
 $appId     = sys_setting('cash.wx_service_app_id');
 $appSecret = sys_setting('cash.wx_service_app_secret');
 self::$instance = Factory::officialAccount([

@@ -1,4 +1,5 @@
 # Centos 7 - firewalld 常用命令
+
 原文地址： [Centos 7 firewalld常用命令](https://xiaoguo.net/wiki/centos-7-firewalld.html)
 
 参考地址： [firewall-cmd - firewalld command line client](http://linuxmanpages.net/manpages/fedora20/man1/firewall-cmd.1.html)
@@ -6,9 +7,6 @@
 firewalld是centos7的一大特性，最大的好处有两个：支持动态更新，不用重启服务；第二个就是加入了防火墙的“zone”概念。
 
 - 打开端口 / 关闭端口
-
-
-
 
 ```shell
 # 永久打开一个端口

@@ -1,14 +1,12 @@
 ---
-title: "Jetbrains 使用"
-date: 2022-04-14 22:15:00
-toc: true
-categories:
-- ["开发","IDE","JetBrains"]
+title : "Jetbrains 使用"
+date : 2022-04-14 22:15:00
+toc : true
+categories :
+  - [ "开发","IDE","JetBrains" ]
 ---
 
 ## 快捷键
-
-
 
 ```
 ctrl+tab:         switcher,在已打开文件之间或者工具窗口间切换
@@ -39,7 +37,6 @@ ctrl+`:           选择主题，不常用
 ctrl+g            跳转到指定行号
 ```
 
-
 ## phpstorm 设置注释风格
 
 怎样设置在按下 Ctrl + / 时 PHPStrom 的注释风格是为`at indentation level` 而非 `at first column` ？
@@ -56,10 +53,9 @@ indentation level
 
 这是`PHPStorm 8`才有的功能。
 
-
 ## 操作
 
-```xml
+```
 编辑器操作
      ctrl+shift+A
           查找动作
@@ -242,10 +238,10 @@ ctrl+'-'
           内联变量
 ```
 
-
 ## 技巧 & Question
 
 ### 1. 为什么PhpStorm不建议在一个字符串变量的名称
+
 为了不分散的实际字符串编辑，你必须按Ctrl + Space来调用代码完成：
 
 ![image.png](https://file.wulicode.com/yuque/202208/04/15/34554S8JwUQV.png?x-oss-process=image/resize,h_345)
@@ -259,9 +255,12 @@ ctrl+'-'
 2. 链接数据表写法  `jdbc:mysql://localhost/tablename`
 
 ### 3. 隐藏不想被搜到的缓存文件
-由于项目采用的CI框架,目录结构分离得也比较清晰,加之项目前后台也规划分离得挺合理,所以在开发过程中完全可以在windows资源管理器下隐藏不相关的目录以及在IDE下排除之`( PhpStorm - File - Make Dicrectory As - Excluded )`,这样可以在一定程度上减少干扰提高开发效率。如果想将Excluded的目录再Include到项目中可以在 `(File | Settings | Directories )`选择对应目录取消掉Excluded即可.
+
+由于项目采用的CI框架,目录结构分离得也比较清晰,加之项目前后台也规划分离得挺合理,所以在开发过程中完全可以在windows资源管理器下隐藏不相关的目录以及在IDE下排除之`( PhpStorm - File - Make Dicrectory As - Excluded )`
+,这样可以在一定程度上减少干扰提高开发效率。如果想将Excluded的目录再Include到项目中可以在 `(File | Settings | Directories )`选择对应目录取消掉Excluded即可.
 
 ### 4. PyCharm 的侧边切换提交人的信息
+
 ![image.png](https://file.wulicode.com/yuque/202212/08/23/1436UvYKrnWC.png?x-oss-process=image/resize,h_149)
 
 这里配置名称叫 `inlay hints`
