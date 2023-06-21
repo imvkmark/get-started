@@ -27,6 +27,11 @@ hero :
 
 - [升级和完善系统](./centos/upgrade-at-7.md)
 
+**替代系统**
+
+- [Rocky Linux](https://rockylinux.org/)
+- [AlmaLinux OS](https://almalinux.org/)
+
 ## 软件
 
 ### Supervisor

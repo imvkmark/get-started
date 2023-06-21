@@ -209,7 +209,7 @@ $ cat /var/lib/jenkins/secrets/initialAdminPassword
 
 ![](https://file.wulicode.com/yuque/202208/04/14/50430QsGtRru.jpeg)
 
-## 安装问题
+## FAQ
 
 ### 1. [Errno 12] Timeout on https://pkg.jenkins.io/redhat-stable/repodata/repomd.xml
 
