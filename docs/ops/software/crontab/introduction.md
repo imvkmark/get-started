@@ -1,20 +1,10 @@
----
-title: "crontab 定时任务"
-date: 2021-06-11 09:13:01
-toc: true
-categories:
-- ["Ops","Linux","crontab"]
----
+# crontab 定时任务
 
 Linux中，周期执行的任务一般由cron这个守护进程来处理  `ps -ef | grep cron`
 
 cron读取一个或多个配置文件，这些配置文件中包含了命令行及其调用时间。
 
 cron的配置文件称为 `crontab`，是 `cron table`的简写。
-
-
-
-
 
 ## 一、 cron在3个地方查找配置文件（设置shell脚本）：
 
@@ -60,7 +50,6 @@ command：所要执行的指令。
 
 - `/etc/cron.d/` 这个目录用来存放任何要执行的crontab文件或脚本。
 
-
 ## 二、 权限
 
 crontab 权限问题到 /var/adm/cron/ 下一看，文件 cron.allow 和 cron.deny 是否存在
@@ -78,7 +67,6 @@ AIX 中 普通用户默认都有 crontab 权限，如果要限制用户使用 cr
 
 HP-UNIX 中默认普通用户没得crontab 权限 ，要想放开普通用户的crontab 权限可以编
 
-
 ## 三、 创建cron脚本
 
 第一步：写cron脚本文件,命名为crontest.cron
@@ -92,7 +80,6 @@ HP-UNIX 中默认普通用户没得crontab 权限 ，要想放开普通用户的
 第二步：添加定时任务。执行命令  `crontab crontest.cron`。搞定
 
 第三步：`crontab -l` 查看定时任务是否成功或者检测 `/var/spool/cron`下是否生成对应cron脚本
-
 
 ## 四、 cron 服务和日志
 
@@ -113,10 +100,11 @@ sudo service cron stop
 sudo service cron start
 ```
 
-CentOS 的 cron 日志默认位置在 `/var/log/cron` 中。这个文件仅记录命令的执行，而不记录结果或退出状态。默认情况下，已执行命令的输出进入用户的邮件。可以通过 crontab 内的 MAILTO 变量指定电子邮件地址。
+CentOS 的 cron 日志默认位置在 `/var/log/cron` 中。这个文件仅记录命令的执行，而不记录结果或退出状态。默认情况下，已执行命令的输出进入用户的邮件。可以通过 crontab 内的
+MAILTO 变量指定电子邮件地址。
 
-你可能应该调整 `logrotate` 规则，因为它会删除 `/var/log/ secure` 日志 [:链接:](https://unix.stackexchange.com/questions/176229/where-to-find-the-crontab-logs-in-centos)。
-
+你可能应该调整 `logrotate` 规则，因为它会删除 `/var/log/ secure`
+日志 [:链接:](https://unix.stackexchange.com/questions/176229/where-to-find-the-crontab-logs-in-centos)。
 
 ## 五、 crontab用法
 
@@ -197,10 +185,10 @@ minute hour day-of-month month-of-year day-of-week commands
 12,553 4-91,4 * /bin/rm -f expire.1st>>mm.txt
 ```
 
-
 ## 补充
 
 ### crontab 编辑
+
 输入编辑命令： `crontab -e`
 
 ```
@@ -218,7 +206,6 @@ SHELL=/bin/bash
 SHELL=/bin/bash
 30 * * * * cd /home/barry/top800/top10/top10_fruits/ && ./top10_all.sh（建议使用此方式）
 ```
-
 
 ### 语法错误
 
@@ -242,7 +229,7 @@ Syntax error: "(" unexpected
 
 是因为你在crontab中使用了绝对路径执行脚本 top10_all.sh，因此在脚本 top10_all.sh 中引用的其它脚本也都需要使用绝对路径，才能被crontab找到并执行
 
-如何避免绝对路径复杂的设置呢，如上文 六、几个问题  所示，采用如下格式：
+如何避免绝对路径复杂的设置呢，如上文 六、几个问题 所示，采用如下格式：
 
 ```
 30 * * * * cd /home/barry/top800/top10/top10_fruits/ && ./top10_all.sh
@@ -250,15 +237,20 @@ Syntax error: "(" unexpected
 ```
 
 ### 输出执行日志
+
 在命令末尾添加 `2>&1`, ‎‎这会将 stderr 输出重定向到标准输出。然后再确认你正在记录 crontab 的日志
+
 ```
 0 0,12 1 */2 * ( /sbin/ping -c 1 192.168.0.1; ls -la ) >>/var/log/cronrun 2>&1
 ```
 
 ### 假如命令行中包含 %
-%（百分号）在 crontab 中是一个特殊字符，相当于回车，如果在命令（command）字段中包含 %，那么只有第一个百分号前的文本才会包含在实际命令中，之后的内容将作为标准输入赋值给前面的命令。如果命令行中需要 %，必须得在 %前面加一个反斜线""来转义，即“%”, 如
+
+%（百分号）在 crontab 中是一个特殊字符，相当于回车，如果在命令（command）字段中包含 %，那么只有第一个百分号前的文本才会包含在实际命令中，之后的内容将作为标准输入赋值给前面的命令。如果命令行中需要
+%，必须得在 %前面加一个反斜线""来转义，即“%”, 如
 
 在 Linux 系统中执行 man 5 crontab 就可以找到如下描述
+
 ```
 The  "sixth"  field  (the rest of the line) specifies the command to be
 run.  The entire command portion of the line, up  to  a  newline  or  %
@@ -273,10 +265,11 @@ standard input.
 非以反斜线 “\” 转义，否则会被转换为换行符，第一个%后的所有数据会被发送给命令作为标准输入
 
 ```
+
 如果你的命令行中存在  `%`, 请记得加上 `\`进行转义
 
 ### 按秒来执行计划任务
-[[转] 让crond以秒为单位执行任务的方法(https://wulicode.com/ops/zhuan-rangcrond-yi-miao-wei-dan-wei-zhi-xing-ren-w?view=doc_embed.html)
+
 ```
 * * * * * sleep 9 &&  /home/somedir/scripts.sh
 * * * * * sleep 12 &&  /home/somedir/scripts.sh
@@ -286,5 +279,4 @@ standard input.
 ## 参考文章
 
 - [https://stackoverflow.com/questions/4883069/debugging-crontab-jobs](https://stackoverflow.com/questions/4883069/debugging-crontab-jobs)
--
 

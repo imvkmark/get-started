@@ -740,6 +740,7 @@ const sidebar = {
                 createLink("设置 SSH 免密码访问服务器", "/ops/software/ssh/use-ssh-login-and-deploy.md"),
                 createLink("使用 docker 安装 sentry", "/ops/software/sentry/install-use-docker-at-centos.md"),
                 createLink("expect 介绍", "/ops/software/expect/introduction.md"),
+                createLink("crontab 介绍", "/ops/software/crontab/introduction.md"),
             ],
         },
     ],
