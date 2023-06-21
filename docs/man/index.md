@@ -41,7 +41,7 @@ Linux 的 man 很强大，该手册分成很多 section，使用 man 时可以�
 
 附件还有一些变量,比如向 environ 这种全局变量在这里就有说明
 
-[8 - system management commands](./other/wrk.9.md)
+[8 - system management commands](./system/useradd.8.md)
 
 系统管理用的命令,这些命令只能由 root 使用,如 ifconfig
 

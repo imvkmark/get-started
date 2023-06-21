@@ -652,6 +652,7 @@ const sidebar = {
         {
             text: "系统(8)",
             items: [
+                createLink("alternatives", "/man/system/alternatives.8"),
                 createLink("nscd", "/man/system/nscd.8"),
                 createLink("useradd", "/man/system/useradd.8"),
             ],

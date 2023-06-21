@@ -2,14 +2,28 @@
 
 了解更多关于 [JDK 发行版的介绍](../../development/tools/sdkman.md#可用的-jdk)
 
-## CentOS 7
+## CentOS 7 / RockyLinux8/9
 
 ### 安装
 
 搜寻可用的 Java SDK
 
+::: code-group
+
+```shell [Rocky Linux8/9]
+dnf search openjdk
+# or
+dnf search openjdk 17
 ```
-# yum search openjdk 
+
+```shell [CentOS 7 ]
+yum search openjdk 
+```
+
+:::
+
+
+```
 ...
 ======================================= N/S matched: openjdk =======================================
 java-1.6.0-openjdk.x86_64 : OpenJDK Runtime Environment
@@ -21,13 +35,24 @@ java-1.8.0-openjdk.x86_64 : OpenJDK 8 Runtime Environment
 java-11-openjdk.x86_64 : OpenJDK 11 Runtime Environment
 ...
 java-latest-openjdk.x86_64 : OpenJDK 18 Runtime Environment
-...
 ```
 
 安装指定的版本
 
+::: code-group
+
+```shell [Rocky Linux8/9]
+dnf install java-17-openjdk
 ```
-# yum install java-11-openjdk
+
+```shell [CentOS 7 ]
+yum install java-17-openjdk
+```
+
+:::
+
+
+```
 ...
 ...
 已安装:
@@ -42,11 +67,13 @@ java-latest-openjdk.x86_64 : OpenJDK 18 Runtime Environment
 完毕！
 ```
 
-切换不同的 Java 版本
+切换不同的 Java 版本 [alternative.8](../../man/system/alternatives.8.md)
+
+```shell
+alternatives --config java
+```
 
 ```
-# alternatives --config java
-
 共有 2 个提供“java”的程序。
 
   选项    命令
@@ -76,10 +103,19 @@ java-11-openjdk-headless-11.0.16.1.1-1.el7_9.x86_64
 
 移除相关的包
 
+::: code-group
+
+```shell [Rocky Linux8/9]
+dnf remove java-17-openjdk
 ```
-# yum remove java-11-openjdk
-# yum remove java-11-openjdk-headless
+
+```shell [CentOS 7 ]
+yum remove java-17-openjdk
 ```
+
+:::
+
+
 
 ## Ubuntu 安装 oracle java
 
@@ -87,8 +123,8 @@ java-11-openjdk-headless-11.0.16.1.1-1.el7_9.x86_64
 
 速度快, 官方维护问题
 
-```
-$ apt install default-jre
+```shell
+apt install default-jre
 ```
 
 ### 使用 ppa 安装(速度慢, 好断网)
