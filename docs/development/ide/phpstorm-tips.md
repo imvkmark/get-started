@@ -423,13 +423,13 @@ PhpStorm 可以在整个项目中找到标识符的所有使用位置; 这包括
 ![](https://file.wulicode.com/note/topic/phpstorm-tips/16349770156237.gif)
 
 在编写 foreach 循环时，PhpStorm
-将根据数组的名称为数组项建议合适的变量名。因此，如果您的数组被称为  ![](https://file.wulicode.com/yuque/202208/24/23/1748sH0Dzq8F.svg)item 单项形式的条目。
+将根据数组的名称为数组项建议合适的变量名。因此，如果您的数组被称为 `$items` phpstorm 会把变量建议成 `$item` 单项形式的条目。
 
 PhpStorm 足够聪明，能够找出像 _people_, _octopi_ 和 _oxen_ 这样的单词形式; 这个单词的复数形式我还没搞清楚呢((⊙﹏⊙)b)。
 
-奖金
+**技巧**
 
-您可以通过 phpSuggestVariableName 在实时模板变量中合并表达式函数，在自定义实时模板中使用此功能 。
+可以通过 `phpSuggestVariableName` 在实时模板变量中合并表达式函数，在自定义实时模板中使用此功能
 
 ### 拓展
 
