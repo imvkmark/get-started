@@ -697,6 +697,13 @@ const sidebar = {
             ],
         },
         {
+            text: "CI",
+            items: [
+                createLink("php + Laravel 实现部署自动化", "/ops/ci/use-php-laravel"),
+                createLink("Jenkins 安装和 FAQ", "/ops/ci/jenkins"),
+            ],
+        },
+        {
             text: "ELK",
             items: [
                 createLink("在 CentOS 7 上安装", "/ops/elk/install-at-centos7"),
@@ -826,7 +833,6 @@ const sidebar = {
             ],
         },
         createLink("FAQ", "/ops/bash/faq"),
-
     ],
     "/web": [
         { text: "Web开发", link: "/web/" },
