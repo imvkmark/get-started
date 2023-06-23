@@ -429,11 +429,7 @@ PhpStorm 足够聪明，能够找出像 _people_, _octopi_ 和 _oxen_ 这样的�
 
 **技巧**
 
-可以通过 `phpSuggestVariableName` 在实时模板变量中合并表达式函数，在自定义实时模板中使用此功能
-
-### 拓展
-
-您可以通过 `phpSuggestVariableName` 表达式在实时模板变量使用，在自定义实时模板中使用此功能以便 PhpStorm 给你建议的单词写法。
+可以通过 `phpSuggestVariableName` 在实时模板变量中合并表达式函数，在自定义实时模板中使用此功能以便 PhpStorm 给你建议的单词写法
 
 - Creating and Editing Template Variables
 

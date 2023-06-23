@@ -2,21 +2,22 @@
 
 Linux中，周期执行的任务一般由cron这个守护进程来处理  `ps -ef | grep cron`
 
-cron读取一个或多个配置文件，这些配置文件中包含了命令行及其调用时间。
+cron 读取一个或多个配置文件，这些配置文件中包含了命令行及其调用时间。
 
-cron的配置文件称为 `crontab`，是 `cron table`的简写。
+cron 的配置文件称为 `crontab`，是 `cron table`的简写。
 
 ## 一、 cron在3个地方查找配置文件（设置shell脚本）：
 
-- `/var/spool/cron/` 这个目录下存放的是每个用户（包括root）的crontab任务，每个任务以创建者的名字命名，比如用户tom建的crontab任务对应的文件就是 `/var/spool/cron/tom`
+- `/var/spool/cron/` 这个目录下存放的是每个用户（包括root）的 crontab 任务，每个任务以创建者的名字命名，比如用户 tom 建的 crontab
+  任务对应的文件就是 `/var/spool/cron/tom`
 
 ```
 sudo ls -l /var/spool/cron/（或有时是 /var/spool/cron/crontabs/）
 -rw------- 1 root     crontab 1071 2011-09-19 17:20 root
--rw------- 1 yanggang crontab 1176 2011-09-24 11:07 yanggang
+-rw------- 1 duoli    crontab 1176 2011-09-24 11:07 duoli
 ```
 
-一般一个用户最多只有一个crontab文件（如：root, yanggang等），其对应日志在 `/var/spool/mail/root`（或 `/var/spool/mail/yanggang`）文件里
+一般一个用户最多只有一个crontab文件（如：root, duoli 等），其对应日志在 `/var/spool/mail/root`（或 `/var/spool/mail/duoli`）文件里
 
 - `/etc/crontab` 这个文件负责安排由系统管理员制定的维护系统以及其他任务的crontab。
 
@@ -63,13 +64,13 @@ crontab 权限问题到 /var/adm/cron/ 下一看，文件 cron.allow 和 cron.de
 
 以cron.allow文件里面是否有该用户为准，如果cron.allow中有该用户，则可以使用crontab命令。
 
-AIX 中 普通用户默认都有 crontab 权限，如果要限制用户使用 crontab ,就需要编辑/var/adm/cron/cron.deny
+AIX 中 普通用户默认都有 crontab 权限，如果要限制用户使用 crontab ,就需要编辑 /var/adm/cron/cron.deny
 
 HP-UNIX 中默认普通用户没得crontab 权限 ，要想放开普通用户的crontab 权限可以编
 
 ## 三、 创建cron脚本
 
-第一步：写cron脚本文件,命名为crontest.cron
+第一步：写 cron 脚本文件,命名为 crontest.cron
 
 ```
 15,30,45,59 * * * * echo "xgmtest....." >> xgmtest.txt
@@ -103,8 +104,8 @@ sudo service cron start
 CentOS 的 cron 日志默认位置在 `/var/log/cron` 中。这个文件仅记录命令的执行，而不记录结果或退出状态。默认情况下，已执行命令的输出进入用户的邮件。可以通过 crontab 内的
 MAILTO 变量指定电子邮件地址。
 
-你可能应该调整 `logrotate` 规则，因为它会删除 `/var/log/ secure`
-日志 [:链接:](https://unix.stackexchange.com/questions/176229/where-to-find-the-crontab-logs-in-centos)。
+你可能应该调整 `logrotate` 规则，因为它会删除 `/var/log/secure`
+日志 [链接](https://unix.stackexchange.com/questions/176229/where-to-find-the-crontab-logs-in-centos)。
 
 ## 五、 crontab用法
 
@@ -185,7 +186,7 @@ minute hour day-of-month month-of-year day-of-week commands
 12,553 4-91,4 * /bin/rm -f expire.1st>>mm.txt
 ```
 
-## 补充
+## FAQ
 
 ### crontab 编辑
 
@@ -219,7 +220,7 @@ Syntax error: "(" unexpected
 
 路径错误：
 
-在 /var/spool/crontab/yanggang 中，添加了如下命令，在日志文件 /var/spool/mail/yanggang 中提示找不到 xxx.sh 路径
+在 /var/spool/crontab/duoli 中，添加了如下命令，在日志文件 /var/spool/mail/duoli 中提示找不到 xxx.sh 路径
 
 ```
 30 * * * *  /home/barry/top800/top10/top10_fruits/top10_all.sh
@@ -229,7 +230,7 @@ Syntax error: "(" unexpected
 
 是因为你在crontab中使用了绝对路径执行脚本 top10_all.sh，因此在脚本 top10_all.sh 中引用的其它脚本也都需要使用绝对路径，才能被crontab找到并执行
 
-如何避免绝对路径复杂的设置呢，如上文 六、几个问题 所示，采用如下格式：
+如何避免绝对路径复杂的设置呢，如上文几个问题 所示，采用如下格式：
 
 ```
 30 * * * * cd /home/barry/top800/top10/top10_fruits/ && ./top10_all.sh
@@ -245,6 +246,8 @@ Syntax error: "(" unexpected
 ```
 
 ### 假如命令行中包含 %
+
+在使用 date 的时候常常会用到 `%` 来格式化日期, 但是在 crontab 中, `%` 是一个特殊字符, 需要进行转移
 
 %（百分号）在 crontab 中是一个特殊字符，相当于回车，如果在命令（command）字段中包含 %，那么只有第一个百分号前的文本才会包含在实际命令中，之后的内容将作为标准输入赋值给前面的命令。如果命令行中需要
 %，必须得在 %前面加一个反斜线""来转义，即“%”, 如
