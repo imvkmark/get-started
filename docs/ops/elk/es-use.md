@@ -198,7 +198,7 @@ DELETE `/<index>/_doc/<id>`
 
 搜索`name:乌拉`或者`sex:female`, 计算分值
 
-```json
+```
 GET /search/_search
 {
   "query": {

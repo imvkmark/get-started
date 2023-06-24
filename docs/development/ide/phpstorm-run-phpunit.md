@@ -220,9 +220,9 @@ $ pecl install xdebug
 # php.ini 文件
 xdebug.mode = coverage
 ```
-![](https://file.wulicode.com/note/2022/3-28/1648409643623.png#height=117&id=OUJGp&originHeight=234&originWidth=1188&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=594)
+![](https://file.wulicode.com/note/2022/3-28/1648409643623.png)
 
-![](https://file.wulicode.com/note/2022/3-28/1648409623315.png#height=603&id=nFsCn&originHeight=1206&originWidth=714&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=357)
+![](https://file.wulicode.com/note/2022/3-28/1648409623315.png)
 
 ### 数据支持 @dataProvider
 `@dataProvider`是 PHPUnit 的一个注解, 用于生成和验证批量数据以及结果, 这样我们便可以批量测试提供数据是否正常

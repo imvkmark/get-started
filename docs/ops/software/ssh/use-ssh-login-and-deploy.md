@@ -7,7 +7,7 @@
 SSH 暴力破解你的密码来远程登录到系统。此外，如果将公钥复制到其他账户甚至主机，利用私钥也可以登录。
 > 这个方式同样可以拉取 git 代码, 后续会附上如何在 coding 中配置公钥
 
-## 1. 制作密钥
+## 制作密钥
 
 下面来讲解如何在 Linux 服务器上制作密钥对，将公钥添加给账户，设置 SSH，最后通过客户端登录。
 
@@ -84,7 +84,7 @@ PasswordAuthentication no
 $ systemctl restart sshd
 ```
 
-## 2. 客户端配置私钥 config 配置
+## 客户端配置私钥 & config 配置
 
 很多时候，我们开发可能需要连接多台远程服务器，并且需要配置 git 服务器的私钥。那么这么多的服务器不能共用一套私钥，不同的服务器应该使用不同的私钥。但是我们从上面的连接流程可以看到，ssh
 默认是去读取 `$HOME/.ssh/id_rsa` 文件作为私钥登录的。如果想要不同的服务器使用不同的私钥进行登录，那么需要在 `.ssh` 目录下编写 `config` 文件来进行配置。
@@ -123,7 +123,7 @@ Host test
 - [SSH 密钥登录流程分析](https://juejin.im/post/5a2941ad6fb9a045030ffc95)
 - [Github ssh key 生成，免密登录服务器方法](https://deepzz.com/post/github-generate-ssh-key.html)
 
-## 3. Git 无密码进行拉取或者代码推送
+## Git 无密码进行拉取或者代码推送
 
 所谓部署， 我的理解就是在用户保证代码质量的前提下, 将代码能够快速的自动部署到目标服务器上的一种手段.
 
@@ -165,7 +165,7 @@ $ git clone git@e.coding.com:user/project.git
 
 这样便可以进行代码的无密码更新了
 
-## 4. QA:
+## QA:
 
 在配置登录的时候如果遇到了登录问题可以以下几个方式跟踪下
 
@@ -227,7 +227,7 @@ $ ssh -v user@host
 
 参考地址 : [ssh connection takes forever to initiate, stuck at “pledge: network”](https://serverfault.com/questions/792486/ssh-connection-takes-forever-to-initiate-stuck-at-pledge-network)
 
-![](https://file.wulicode.com/note/2021/10-23/11-14-13819.png#height=192&id=UhHBF&originHeight=440&originWidth=1332&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=581)
+![](https://file.wulicode.com/note/2021/10-23/11-14-13819.png)
 
 我们可以通过如下命令查看恶意 ip 试图登录次数：
 
@@ -265,6 +265,33 @@ $ firewall-cmd --reload
 ```
 
 如果是 Aliyun 主机, 则需要在对应的安全组打开端口访问权限, 否则一样无法访问主机
+
+### 4) 保持 ssh 链接不断开
+
+> 通过ssh连接后，客户端和服务端长时间没响应时，在两方机器设置中均没任何限制，但在各自的防火墙，或是中转网络连接路由的防火墙中，出现了「闲置超时断开」的缺省机制！
+>
+> ---- [Linux使用ssh超时断开连接的真正原因](http://bluebiu.com/blog/linux-ssh-session-alive.html)
+
+```shell
+vim ~/.ssh/config
+```
+
+```
+Host *
+    ServerAliveInterval 60
+```
+
+- `Host *`
+
+表示需要启用该规则的服务端（域名或ip）
+
+- `ServerAliveInterval 60`
+
+表示没60秒去给服务端发起一次请求消息（这个设置好就行了）
+
+- `ServerAliveCountMax 3`
+
+表示最大连续尝试连接次数（这个基本不用设置）
 
 ## 参考
 

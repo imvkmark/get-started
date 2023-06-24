@@ -87,18 +87,11 @@ HP-UNIX 中默认普通用户没得crontab 权限 ，要想放开普通用户的
 cron是一个linux下 的定时执行工具，可以在无需人工干预的情况下运行作业。
 
 ```
-/sbin/service crond start    //启动服务
-/sbin/service crond stop     //关闭服务
-/sbin/service crond restart  //重启服务
-/sbin/service crond reload   //重新载入配置
-/sbin/service crond status   //查看服务状态
-```
-
-例如： 使用sudo停止与启动服务
-
-```
-sudo service cron stop
-sudo service cron start
+systemctl start crond    // 启动服务
+systemctl stop crond     // 关闭服务
+systemctl restart crond  // 重启服务
+systemctl reload crond   // 重新载入配置
+systemctl status crond   // 查看服务状态
 ```
 
 CentOS 的 cron 日志默认位置在 `/var/log/cron` 中。这个文件仅记录命令的执行，而不记录结果或退出状态。默认情况下，已执行命令的输出进入用户的邮件。可以通过 crontab 内的
@@ -111,7 +104,7 @@ MAILTO 变量指定电子邮件地址。
 
 crontab 命令用于安装、删除或者列出用于驱动 cron 后台进程的表格，用户把需要执行的命令序列放到crontab文件中以获得执行。
 
-每个用户都可以有自己的crontab文件，`/var/spool/cron`下的crontab文件不可以直接创建或者直接修改，该crontab文件是通过`crontab -e`命令创建的
+每个用户都可以有自己的crontab文件，`/var/spool/cron` 下的crontab文件不可以直接创建或者直接修改，该crontab文件是通过 `crontab -e`命令创建的
 
 在crontab文件中如何输入需要执行的命令和时间，该文件中每行都包括六个域，其中前五个域是指定命令被执行的时间，最后一个域是要被执行的命令。
 
