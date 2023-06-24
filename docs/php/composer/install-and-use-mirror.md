@@ -3,14 +3,30 @@
 ## 安装
 
 **方法 1 : 官方方式**
+
+```shell
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'e21205b207c3ff031906575712edab6f13eb0b361f2085f1f1237b7126d785e826a450292b6cfd1d64d92e6563bbde02') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+```
+
 > 参考官方文档 : [https://getcomposer.org/download/](https://getcomposer.org/download/)
 
 **方法 2 : 下载并给予权限**
 
+```shell
+wget https://mirrors.aliyun.com/composer/composer.phar
+chmod +x composer.phar
+mv composer.phar /usr/local/bin/composer
 ```
-$ wget https://mirrors.aliyun.com/composer/composer.phar
-$ chmod +x composer.phar
-$ mv composer.phar /usr/local/bin/composer
+
+**Mac**
+
+使用 brew 安装
+
+```
+brew install composer
 ```
 
 ## 加速
@@ -85,3 +101,12 @@ $ composer repo:use aliyun
 
 可以看到 aliyun 前面有一个 * 号，代表当前使用的是 aliyun 的源
 
+## 徽标
+
+```
+______
+  / ____/___  ____ ___  ____  ____  ________  _____
+ / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
+\____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
+```

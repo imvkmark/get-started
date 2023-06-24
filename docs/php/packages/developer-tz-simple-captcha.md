@@ -1,20 +1,25 @@
 ---
-title: "Simple Captcha 包 (developer-tz/laravel-5-simple-captcha)"
-date: 2022-04-14 22:14:48
-toc: true
-categories:
-- ["Php","Laravel","vendor"]
+title : "Simple Captcha 包 (developer-tz/laravel-5-simple-captcha)"
+date : 2022-04-14 22:14:48
+toc : true
+categories :
+  - [ "Php","Laravel","vendor" ]
 ---
+
+# Simple Captcha 包 (developer-tz/simple-captcha)
+
+::: danger 已过时
+For Laravel 5
+:::
 
 一个简单的 [Laravel 5](http://laravel.com/) 包是 [Simple Captcha for Laravel 5](https://github.com/developer-tz/laravel-5-simple-captcha).
 
-
-
-
 ## 安装
+
 这个 Simple Captcha 服务提供者通过 [Composer](http://getcomposer.org) 安装 ,在 `composer.json` 中的 require 分支中配置
 
 `developer-tz/simple-captcha` 包并且设置 `minimum-stability` 为 `dev` .
+
 ```
 {
     "require": {
@@ -24,23 +29,28 @@ categories:
     "minimum-stability": "dev"
 }
 ```
+
 运行  `composer update` 或者 `composer install`.
 
 Windows 平台下, 你需要配置php支持  `php_gd2.dll`.
 
 ## Usage / 使用
+
 使用 Simple Captcha 服务, 你需要在 Laravel 启动时候注册服务.
 
 这里有两种方式来设置.
 
 在 `config/app.php` 找到 `providers` 部分, 按照如下注册服务提供者.
+
 ```
 'providers' => array(
     // ...
     'DeveloperTz\SimpleCaptcha\SimpleCaptchaServiceProvider',
 )
 ```
+
 找到 `config/app.php` 的  `aliases` key .
+
 ```
 'aliases' => array(
     // ...
@@ -49,14 +59,17 @@ Windows 平台下, 你需要配置php支持  `php_gd2.dll`.
 ```
 
 ## Configuration / 配置
+
 使用自己的配置需要首先发布下.
 
 To use your own settings, publish config.
+
 ```
 $ php artisan vendor:publish
 ```
 
 ## Example Usage / 示例
+
 > 译注: 不起作用
 
 ```
@@ -84,6 +97,7 @@ Route::any('/simple-captcha-test', function()
     return $content;
 });
 ```
+
 `^_^`
 
 ## Links / 链接

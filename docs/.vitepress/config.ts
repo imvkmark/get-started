@@ -208,6 +208,8 @@ const sidebar = {
             items: [
                 createLink('Carbon', '/php/packages/carbon-carbon'),
                 createLink('dotenv - PHP 版本的 .env', '/php/packages/vlucas-phpdotenv.md'),
+                createLink('Roave 安全建议', '/php/packages/roave-security-advisories.md'),
+                createLink('Simple Captcha For Laravel 5', '/php/packages/developer-tz-simple-captcha.md'),
             ]
         },
         {

@@ -1,6 +1,6 @@
 # 注解
 
-![](https://file.wulicode.com/doc/20230508/1683539592503.png)
+![](https://file.wulicode.com/note/2021/11-11/15-49-27263.png)
 
 这个图是基于丝路项目的流程逻辑, 并不和下边的类相符, 下边的类是用 Hyperf 原生进行定义的
 
@@ -113,7 +113,7 @@ class AnClass extends AbstractAnnotation
 
 ### @Inject 标记属性, Hyperf 会自动注入对应的对象和值
 
-### *@*AutoController **以及控制器相关的代码 路由的注解
+### @AutoController 以及控制器相关的代码 路由的注解
 
 ```
 @Controller : 表明当前类是一个控制器类 
@@ -131,3 +131,19 @@ class AnClass extends AbstractAnnotation
 >
 
 ### @Listener
+
+## 切面 (Aspect)
+
+通过动态代理等技术实现程序功能的统一维护的一种技术.
+
+使用 Aop 扩展业务逻辑, 并使耦合度降低, 提高程序的可重用性
+
+## Socket
+
+### @SocketIONamespace("/")
+
+socket 命名空间定义, 这里的命名空间和 socket.io 指定的相符, 也可以通过相关的路由来添加
+
+### @Event
+
+以方法名作为事件名来分发事件, 如果写在控制器中则自动进行方法的映射.
