@@ -1,16 +1,6 @@
----
-title: "Docker 方式 安装 ElasticSearch / Kibana 安装"
-date: 2021-02-07 22:52:00
-toc: true
-categories:
-- ["Ops","软件","ELK"]
----
-
 # Docker 方式 安装 ElasticSearch / Kibana 安装
 
 ## 安装 elasticsearch
-
-
 
 ```
 $ docker pull docker.elastic.co/elasticsearch/elasticsearch:7.10.2
@@ -33,6 +23,7 @@ $ docker rename 2249f918cc81 es7
 ![image.png](https://file.wulicode.com/yuque/202208/04/14/5902hlULEHBp.png?x-oss-process=image/resize,h_89)
 
 ## 安装 Kibana
+
 ```
 $ docker pull docker.elastic.co/kibana/kibana:7.10.2
 $ docker run --link YOUR_ELASTICSEARCH_CONTAINER_NAME_OR_ID:elasticsearch -p 5601:5601 docker.elastic.co/kibana/kibana:7.10.2
@@ -44,6 +35,7 @@ CONTAINER ID   IMAGE                                                  COMMAND   
 
 $ docker rename 65a5e4739050 kibana7
 ```
+
 `YOUR_ELASTICSEARCH_CONTAINER_NAME_OR_ID` 这个地方写自己的 container_id 或者 name
 
 运行结果

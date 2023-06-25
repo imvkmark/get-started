@@ -1,7 +1,7 @@
-import { defineConfig } from "vitepress";
+import {defineConfig} from "vitepress";
 
 const createLink = (title: string, url: string) => {
-    return { text: title, link: url };
+    return {text: title, link: url};
 };
 
 const nav = [
@@ -9,46 +9,25 @@ const nav = [
         text: "语言",
         activeMatch: `^/dart|python|javascript|php|java|flutter|man/`,
         items: [
-            { text: "Dart", link: "/dart/guides/1-lang" },
-            { text: "Python", link: "/python/" },
-            { text: "Javascript", link: "/javascript/" },
-            { text: "Java", link: "/java/" },
-            { text: "Flutter", link: "/flutter/" },
-            {
-                text: "Php", items: [
-                    createLink('介绍', '/php/'),
-                    createLink('Laravel', '/php/laravel/faq'),
-                    createLink('函数参考', '/php/refs/language/intro'),
-                ]
-            },
-            { text: "Man", link: "/man/" },
-            { text: "C++", link: "/cpp/" },
+            {text: "Dart", link: "/dart/guides/1-lang"},
+            {text: "Python", link: "/python/"},
+            {text: "Javascript", link: "/javascript/"},
+            {text: "Java", link: "/java/"},
+            {text: "Flutter", link: "/flutter/"},
+            {text: "Php", link: "/php/"},
+            {text: "Man", link: "/man/"},
+            {text: "C++", link: "/cpp/"},
         ],
     },
     {
-        text: "开发",
+        text: "方案",
         activeMatch: `^/web|development/`,
         items: [
-            { text: "Web", link: "/web/" },
-            { text: "手机端", link: "/mobile/design/site" },
-
-            {
-                text: 'Ops',
-                items: [
-                    createLink('运维', '/ops/'),
-                    createLink('Nginx', '/ops/nginx/'),
-                    createLink('Bash', '/ops/bash/'),
-                ]
-            },
-            {
-                text: '开发',
-                items: [
-                    createLink('Git', '/development/git/faq'),
-                    createLink('IDE', '/development/ide/jetbrains-plugins'),
-                    createLink('相关', '/development/tools/sdkman'),
-                ]
-            },
-            { text: "部门", link: "/department/test/auto-seldom" },
+            {text: "Web", link: "/web/"},
+            {text: "手机端", link: "/mobile/design/site"},
+            {text: "运维", link: "/ops/"},
+            {text: "开发", link: "/development/"},
+            {text: "部门", link: "/department/test/auto-seldom"},
         ],
     },
     {
@@ -57,7 +36,7 @@ const nav = [
             createLink('Redis', '/database/redis/01-command-data.md'),
         ]
     },
-    { text: "Awesome", link: "/awesome/" },
+    {text: "Awesome", link: "/awesome/"},
     {
         text: "更多",
         items: [
@@ -94,7 +73,7 @@ const nav = [
             }
         ],
     },
-    { text: "关于", link: "/about-me" },
+    {text: "关于", link: "/about-me"},
 ];
 
 const sidebar = {
@@ -184,50 +163,6 @@ const sidebar = {
         {
             text: "FAQ",
             items: [createLink("FAQ", "/java/faq.md")],
-        },
-    ],
-    "/php": [
-        {
-            text: '安装',
-            items: [
-                createLink('Mac 安装 LNMP', '/php/install/mac-lnmp'),
-                createLink('CentOS 7 安装 LNMP', '/php/install/centos7-lnmp-plus'),
-                createLink('RockyLinux 安装 LNMP', '/php/install/rocky-lnmp'),
-                createLink('使用 PECL 安装扩展', '/php/install/pecl-install-extension'),
-            ]
-        },
-        {
-            text: 'Composer',
-            items: [
-                createLink('安装和加速', '/php/composer/install-and-use-mirror'),
-                createLink('怎样创建 PSR-4 的 Php 包', '/php/composer/create-psr4-package.md'),
-            ]
-        },
-        {
-            text: 'Packages',
-            items: [
-                createLink('Carbon', '/php/packages/carbon-carbon'),
-                createLink('dotenv - PHP 版本的 .env', '/php/packages/vlucas-phpdotenv.md'),
-                createLink('Roave 安全建议', '/php/packages/roave-security-advisories.md'),
-                createLink('Simple Captcha For Laravel 5', '/php/packages/developer-tz-simple-captcha.md'),
-            ]
-        },
-        {
-            text: '其他',
-            items: [
-                createLink('使用 Clockwork 调试 Php 应用', '/php/tech/using-clockwork-extension-for-debug.md'),
-                createLink('Php 获取到的 Headers', '/php/tech/http-headers'),
-                createLink('FAQ', '/php/faq.md'),
-            ]
-        },
-        {
-            text: 'Hyperf',
-            items: [
-                createLink('入门', '/php/hyperf/'),
-                createLink('注解', '/php/hyperf/core-annotation'),
-                createLink('Aop', '/php/hyperf/core-aop'),
-                createLink('FAQ', '/php/hyperf/faq'),
-            ]
         },
     ],
     "/php/laravel": [
@@ -394,6 +329,15 @@ const sidebar = {
             ]
         },
     ],
+    "/php": [
+        {
+            text: "系列",
+            items: [
+                createLink("Laravel", "/php/laravel/learn-note"),
+                createLink("函数引用", "/php/refs/language/intro"),
+            ],
+        },
+    ],
     "/python": [
         {
             text: "介绍",
@@ -467,51 +411,8 @@ const sidebar = {
             ],
         },
     ],
-    "/development": [
-        {
-            text: "开发工具",
-            items: [
-                createLink("SDKMAN!", "/development/tools/sdkman"),
-                createLink("Homebrew", "/development/tools/homebrew"),
-                createLink("ApiDoc", "/development/tools/apidoc"),
-                createLink("jenv - 管理 Java 环境", "/development/tools/jenv"),
-            ],
-        },
-
-
-        {
-            text: "运营相关",
-            items: [
-                createLink("robots 文档", "/development/op/robots"),
-                createLink("SEO 和 蜘蛛", "/development/op/seo-and-crawler"),
-            ],
-        },
-        {
-            text: "设计",
-            items: [
-                createLink("UI 交互手册", "/development/design/pc-ui-interact"),
-            ],
-        },
-        {
-            text: "正则表达式",
-            items: [
-                createLink("正则手册", "/development/regex/"),
-                createLink("正则匹配中文", "/development/regex/zh-match"),
-            ],
-        },
-        {
-            text: "其他",
-            items: [
-                createLink("开发常用术语", "/development/tech/knowledge"),
-                createLink("代码审核", "/development/tech/code-review"),
-                createLink("Ip, 掩码, IP 段", "/development/tech/ip-mask-range"),
-                createLink("FAQ", "/development/tech/faq"),
-            ],
-        },
-    ],
     "/development/git": [
-        createLink("Cheat Sheet", "/development/git/cheat-sheet"),
-        createLink("使用 husky 让代码更优雅规范", "/development/git/commit-grace-use-husky.md"),
+        createLink('⬆️ 上一级', '/development/'),
         {
             text: "Git Flow",
             items: [
@@ -522,8 +423,11 @@ const sidebar = {
         createLink(".gitignore 文件说明", "/development/git/gitignore"),
         createLink("使用 subtree 管理多包", "/development/git/subtree-to-multi-packages.md"),
         createLink("FAQ", "/development/git/faq"),
+        createLink("Cheat Sheet", "/development/git/cheat-sheet"),
+        createLink("使用 husky 让代码更优雅规范", "/development/git/commit-grace-use-husky.md"),
     ],
     "/development/ide": [
+        createLink('⬆️ 上一级', '/development/'),
         {
             text: "Jetbrains",
             items: [
@@ -560,6 +464,15 @@ const sidebar = {
             text: "VsCode",
             items: [
                 createLink('VsCode 常用插件', '/development/ide/vscode-plugins'),
+            ],
+        },
+    ],
+    "/development/": [
+        {
+            text: "系列",
+            items: [
+                createLink("GIT", "/development/git/cheat-sheet"),
+                createLink("IDE", "/development/ide/jetbrains-plugins"),
             ],
         },
     ],
@@ -619,8 +532,9 @@ const sidebar = {
         },
     ],
     "/man/command": [
+        createLink('⬆️ 上一级', '/man/'),
         {
-            text: "命令",
+            text: "命令(1)",
             items: [
                 createLink("ab", "/man/command/ab.1"),
                 createLink("ac", "/man/command/ac.1"),
@@ -635,6 +549,7 @@ const sidebar = {
         },
     ],
     "/man/conf": [
+        createLink('⬆️ 上一级', '/man/'),
         {
             text: "配置(5)",
             items: [
@@ -642,15 +557,8 @@ const sidebar = {
             ],
         },
     ],
-    "/man/other": [
-        {
-            text: "其他(5)",
-            items: [
-                createLink("conf", "/man/other/wrk.9"),
-            ],
-        },
-    ],
     "/man/system": [
+        createLink('⬆️ 上一级', '/man/'),
         {
             text: "系统(8)",
             items: [
@@ -660,98 +568,81 @@ const sidebar = {
             ],
         },
     ],
-    "/ops": [
+    "/man/other": [
+        createLink('⬆️ 上一级', '/man/'),
         {
-            text: "运维",
-            link: '/ops/'
-        },
-        {
-            text: "CentOS",
+            text: "其他(9)",
             items: [
-                createLink("升级和完善 CentOS 7", "/ops/centos/upgrade-at-7"),
-                createLink("常用脚本", "/ops/centos/tools"),
-                createLink("firewalld 常用命令", "/ops/centos/firewalld"),
-                createLink("FAQ", "/ops/centos/faq"),
-            ],
-        },
-        {
-            text: "Rocky Linux",
-            items: [
-                createLink("RockyLinux 设置中文语言支持", "/ops/rockylinux/install-zh-cn-langpack.md"),
-            ],
-        },
-        {
-            text: "Ubuntu",
-            items: [
-                createLink("FAQ", "/ops/ubuntu/faq"),
-            ],
-        },
-        {
-            text: "Docker",
-            items: [
-                createLink("在 CentOS7 中使用 Docker", "/ops/docker/install-at-centos7.md"),
-            ],
-        },
-        {
-            text: "Docker 开发指南",
-            items: [
-                createLink("目录", "/ops/docker-guide/toc"),
-            ],
-        },
-        {
-            text: "CI",
-            items: [
-                createLink("php + Laravel 实现部署自动化", "/ops/ci/use-php-laravel"),
-                createLink("Jenkins 安装和 FAQ", "/ops/ci/jenkins"),
-            ],
-        },
-        {
-            text: "ELK",
-            items: [
-                createLink("在 CentOS 7 上安装", "/ops/elk/install-at-centos7"),
-                createLink("ES 插件 : IK 中文分词", "/ops/elk/es-ik"),
-                createLink("ES 语法", "/ops/elk/es-query-schema"),
-                createLink("在 Docker 上安装", "/ops/elk/install-use-docker"),
-                createLink("使用 filebeat 搜集日志", "/ops/elk/use-filebeat-collect-nginx-log"),
+                createLink("conf", "/man/other/wrk.9"),
             ],
         },
     ],
-    "/ops/software": [
+    "/man/": [
         {
-            text: "Supervisor",
+            text: "系列",
             items: [
-                createLink("supervisor 介绍", "/ops/software/supervisor/introduction"),
-                createLink("CentOS 安装/升级 supervisor", "/ops/software/supervisor/install-at-centos"),
-                createLink("Mac 安装 supervisor", "/ops/software/supervisor/install-at-mac"),
+                createLink("命令(1)", "/man/command/ab.1"),
+                createLink("配置(5)", "/man/conf/nscd.conf.5"),
+                createLink("系统(8)", "/man/system/alternatives.8"),
+                createLink("其他(9)", "/man/other/wrk.9"),
             ],
         },
+    ],
+    "/ops/nginx": [
+        createLink('⬆️ 上一级', '/ops/'),
+        createLink("介绍", "/ops/nginx/"),
+        createLink("在 RockyLinux9 上安装 Nginx", "/ops/nginx/install-at-rockylinux9.md"),
+        createLink('add_header 指令技巧', '/ops/nginx/add-header.md'),
+        createLink('阻止无意义的请求', '/ops/nginx/block-known-bad-requests.md'),
+        createLink('配置缓存', '/ops/nginx/cache-control.md'),
+        createLink('主域 - 添加或者移除 www', '/ops/nginx/canonicalize-host-name-add-remove-www.md'),
+        createLink('Nginx 编译参数', '/ops/nginx/compile.md'),
+        createLink('nginx 优化连接数', '/ops/nginx/connection-num.md'),
+        createLink('配置 CORS 跨域', '/ops/nginx/cors.md'),
+        createLink('Nginx 目录建议', '/ops/nginx/directory-suggest.md'),
+        createLink('学习使用 echo 模块', '/ops/nginx/echo.md'),
+        createLink('强制使用小写的 url 地址', '/ops/nginx/enforce-lower-case-urls.md'),
+        createLink('使用 nginx-http-concat', '/ops/nginx/http-concat.md'),
+        createLink('配置默认主页、目录浏览', '/ops/nginx/http-index.md'),
+        createLink('状态码配置和错误文件', '/ops/nginx/http-status.md'),
+        createLink('配置 HTTPS', '/ops/nginx/https.md'),
+        createLink('Nginx 日志', '/ops/nginx/log.md'),
+        createLink('stub_status : 提供访问基础信息', '/ops/nginx/module-stub-status.md'),
+        createLink('OpenResty 介绍', '/ops/nginx/openresty.md'),
+        createLink('配置泛域名转发', '/ops/nginx/pan-domain.md'),
+        createLink('proxy_pass url 反向代理', '/ops/nginx/proxy_pass.md'),
+        createLink('统计 Nginx 访问量', '/ops/nginx/pv.md'),
+        createLink('屏蔽指定的 user_agent 的访问', '/ops/nginx/shield-agent.md'),
+        createLink('配置图片防盗链', '/ops/nginx/verify-referer.md'),
+        createLink('常见问题', '/ops/nginx/faq.md'),
+    ],
+    "/ops/bash": [
+        createLink('⬆️ 上一级', '/ops/'),
         {
-            text: "Canal",
+            text: "教程",
             items: [
-                createLink("Canal 简介", "/ops/software/canal/"),
-                createLink("Canal 快速入门", "/ops/software/canal/quickstart"),
-                createLink("Deployer", "/ops/software/canal/deployer"),
-                createLink("Canal For ElasticSearch 适配器", "/ops/software/canal/client-sync-es"),
-                createLink("Client Adapter", "/ops/software/canal/client-adapter"),
+                createLink("介绍", "/ops/bash/"),
+                createLink('1.简介', '/ops/bash/1-intro.md'),
+                createLink('2.基本语法', '/ops/bash/2-basic.md'),
+                createLink('5.变量', '/ops/bash/5-variables.md'),
+                createLink('6.字符串', '/ops/bash/6-string.md'),
+                createLink('7.运算符', '/ops/bash/7-arithmetic.md'),
+                createLink('12.条件判断', '/ops/bash/12-condition.md'),
+                createLink('13.循环语句', '/ops/bash/13-loop.md'),
+                createLink('14.函数', '/ops/bash/14-function.md'),
+                createLink('15.数组', '/ops/bash/15-array.md'),
             ],
         },
+        createLink("FAQ", "/ops/bash/faq"),
+    ],
+    "/ops": [
         {
-            text: "Curl",
+            text: "系列",
             items: [
-                createLink("安装最新的 cURL ", "/ops/software/curl/install-latest-at-centos"),
-                createLink("curl 请求另外一台机器", "/ops/software/curl/visit-another-host.md"),
-            ],
-        },
-        {
-            text: "软件",
-            items: [
-                createLink("在 CentOS 上安装 Svn", "/ops/software/svn/install-at-centos"),
-                createLink("日志切割(logrotate)操作梳理", "/ops/software/logrotate/introduction.md"),
-                createLink("设置 SSH 免密码访问服务器", "/ops/software/ssh/use-ssh-login-and-deploy.md"),
-                createLink("使用 docker 安装 sentry", "/ops/software/sentry/install-use-docker-at-centos.md"),
-                createLink("expect 介绍", "/ops/software/expect/introduction.md"),
-                createLink("crontab 介绍", "/ops/software/crontab/introduction.md"),
-            ],
+                createLink('Docker 开发指南', '/ops/docker-guide/toc'),
+                createLink("Nginx", "/ops/nginx/"),
+                createLink("Bash", "/ops/bash/"),
+            ]
         },
     ],
     "/database/mysql": [
@@ -791,53 +682,9 @@ const sidebar = {
         createLink('Redis Cluster', '/database/redis/12-cluster.md'),
         createLink('Redis缓存的使用和设计', '/database/redis/13-cache.md'),
     ],
-    "/ops/nginx": [
-        createLink("介绍", "/ops/nginx/"),
-        createLink("在 RockyLinux9 上安装 Nginx", "/ops/nginx/install-at-rockylinux9.md"),
-        createLink('add_header 指令技巧', '/ops/nginx/add-header.md'),
-        createLink('阻止无意义的请求', '/ops/nginx/block-known-bad-requests.md'),
-        createLink('配置缓存', '/ops/nginx/cache-control.md'),
-        createLink('主域 - 添加或者移除 www', '/ops/nginx/canonicalize-host-name-add-remove-www.md'),
-        createLink('Nginx 编译参数', '/ops/nginx/compile.md'),
-        createLink('nginx 优化连接数', '/ops/nginx/connection-num.md'),
-        createLink('配置 CORS 跨域', '/ops/nginx/cors.md'),
-        createLink('Nginx 目录建议', '/ops/nginx/directory-suggest.md'),
-        createLink('学习使用 echo 模块', '/ops/nginx/echo.md'),
-        createLink('强制使用小写的 url 地址', '/ops/nginx/enforce-lower-case-urls.md'),
-        createLink('使用 nginx-http-concat', '/ops/nginx/http-concat.md'),
-        createLink('配置默认主页、目录浏览', '/ops/nginx/http-index.md'),
-        createLink('状态码配置和错误文件', '/ops/nginx/http-status.md'),
-        createLink('配置 HTTPS', '/ops/nginx/https.md'),
-        createLink('Nginx 日志', '/ops/nginx/log.md'),
-        createLink('stub_status : 提供访问基础信息', '/ops/nginx/module-stub-status.md'),
-        createLink('OpenResty 介绍', '/ops/nginx/openresty.md'),
-        createLink('配置泛域名转发', '/ops/nginx/pan-domain.md'),
-        createLink('proxy_pass url 反向代理', '/ops/nginx/proxy_pass.md'),
-        createLink('统计 Nginx 访问量', '/ops/nginx/pv.md'),
-        createLink('屏蔽指定的 user_agent 的访问', '/ops/nginx/shield-agent.md'),
-        createLink('配置图片防盗链', '/ops/nginx/verify-referer.md'),
-        createLink('常见问题', '/ops/nginx/faq.md'),
-    ],
-    "/ops/bash": [
-        {
-            text: "教程",
-            items: [
-                createLink("介绍", "/ops/bash/"),
-                createLink('1.简介', '/ops/bash/1-intro.md'),
-                createLink('2.基本语法', '/ops/bash/2-basic.md'),
-                createLink('5.变量', '/ops/bash/5-variables.md'),
-                createLink('6.字符串', '/ops/bash/6-string.md'),
-                createLink('7.运算符', '/ops/bash/7-arithmetic.md'),
-                createLink('12.条件判断', '/ops/bash/12-condition.md'),
-                createLink('13.循环语句', '/ops/bash/13-loop.md'),
-                createLink('14.函数', '/ops/bash/14-function.md'),
-                createLink('15.数组', '/ops/bash/15-array.md'),
-            ],
-        },
-        createLink("FAQ", "/ops/bash/faq"),
-    ],
+
     "/web": [
-        { text: "Web开发", link: "/web/" },
+        {text: "Web开发", link: "/web/"},
         {
             text: "Http",
             items: [
@@ -872,7 +719,7 @@ const sidebar = {
                 createLink("安装 Sentry 进行错误/性能跟踪", "/web/tech/use-sentry-collect-trace-and-exception")
             ],
         },
-        { text: "FAQ", link: "/web/faq" },
+        {text: "FAQ", link: "/web/faq"},
     ],
 };
 
@@ -911,7 +758,7 @@ export default defineConfig({
         },
         nav,
         sidebar,
-        socialLinks: [{ icon: "github", link: "https://github.com/imvkmark/get-started" }],
+        socialLinks: [{icon: "github", link: "https://github.com/imvkmark/get-started"}],
         editLink: {
             pattern: "https://github.com/imvkmark/get-started/edit/master/docs/:path",
         },

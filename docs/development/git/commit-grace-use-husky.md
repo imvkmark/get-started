@@ -1,23 +1,15 @@
----
-title : ""
-date : 2022-04-20 22:46:12
-toc : true
-categories :
-  - [ "开发","Git" ]
----
-
 # 「转」使用 husky 让代码提交优雅规范
 
 ::: info 原文
 [手摸手教你使用最新版husky(v7.0.1)让代码更优雅规范](https://juejin.cn/post/6982192362583752741)
 :::
 
-
 ## 写在前面
 
 日常工作中，几乎每个项目都是由多个人进行维护，每个人的代码书写习惯和风格又不尽相同，在这种情况下，如果没有统一的规范，你就会发现提交到代码仓库的代码格式五花八门，并且`commit log`
 也是乱七八糟，更严重点可能有的小伙伴在提交代码的时候为了省事`commit message`
-直接就是两个点点，总之，可能就是怎么省事怎么来。最终导致的结果就是，当你某一天需要 `cherry-pick`某个`commit`到另外的分支的时，看着`commmit log`
+直接就是两个点点，总之，可能就是怎么省事怎么来。最终导致的结果就是，当你某一天需要 `cherry-pick`某个`commit`
+到另外的分支的时，看着`commmit log`
 一脸懵逼。所以，规范和约束在多人协作下，就显得尤为重要。
 
 ## githooks
@@ -100,9 +92,11 @@ $ yarn husky add .husky/commit-msg 'yarn commitlint --edit "$1"'
 
 ## lint-staged(v11.0.0)
 
-**lint-staged 是一个在git暂存区上运行linters的工具。**（Run linters against staged git files and don't let 💩 slip into your code base!）
+**lint-staged 是一个在git暂存区上运行linters的工具。**（Run linters against staged git files and don't let 💩 slip into
+your code base!）
 
-它将根据 package.json 依赖项中的代码质量工具来安装和配置 husky 和 lint-staged ，因此请确保在此之前安装（npm install --save-dev）并配置所有代码质量工具，比如Prettier和ESlint。
+它将根据 package.json 依赖项中的代码质量工具来安装和配置 husky 和 lint-staged ，因此请确保在此之前安装（npm install
+--save-dev）并配置所有代码质量工具，比如Prettier和ESlint。
 
 - 安装：执行 `yarn add lint-staged -D` 命令
 
@@ -175,9 +169,11 @@ husky 准备好之后，我们接着来安装其他的用于规范，检查代�
 }
 ```
 
-执行`yarn add @commitlint/cli @commitlint/config-conventional -D`安装commitlint相关依赖，用来帮助我们在多人开发时，遵守 git 提交约定。
+执行`yarn add @commitlint/cli @commitlint/config-conventional -D`安装commitlint相关依赖，用来帮助我们在多人开发时，遵守
+git 提交约定。
 
-执行`echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js`在根目录创建 `commitlint.config.js` 文件（当然也可以手动创建此文件），其内容如下所示：
+执行`echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js`
+在根目录创建 `commitlint.config.js` 文件（当然也可以手动创建此文件），其内容如下所示：
 
 ```jsx
 module.exports = {
@@ -210,7 +206,8 @@ module.exports = {
 
 至此，准备好我们需要的依赖包之后，我们开始添加钩子
 
-执行`yarn husky add .husky/commit-msg 'yarn commitlint --edit "$1"'`之后，会看到在根目录的`.husky`文件夹下多了一个 `commit-msg` 文件，其内容如下：
+执行`yarn husky add .husky/commit-msg 'yarn commitlint --edit "$1"'`之后，会看到在根目录的`.husky`
+文件夹下多了一个 `commit-msg` 文件，其内容如下：
 
 ```
 #!/bin/sh
@@ -221,7 +218,8 @@ yarn commitlint --edit "$1"
 
 紧接着，我们需要将上一步添加的钩子添加到git中去，执行`git add .husky/commit-msg`
 
-执行`yarn husky add .husky/pre-commit 'yarn lint-staged --allow-empty "$1"'`之后，会看到在根目录的`.husky`文件夹下多了一个 `pre-commit` 文件，其内容如下：
+执行`yarn husky add .husky/pre-commit 'yarn lint-staged --allow-empty "$1"'`之后，会看到在根目录的`.husky`
+文件夹下多了一个 `pre-commit` 文件，其内容如下：
 
 ```
 #!/bin/sh
@@ -258,11 +256,11 @@ $ npm set-script prepare "husky install config/.husky"
 
 ```json
 {
-    "scripts": {
-        ...
-        "prepare": "husky install config/.husky"
-        ...
-    }
+  "scripts": {
+    ...
+    "prepare": "husky install config/.husky"
+    ...
+  }
 }
 ```
 
