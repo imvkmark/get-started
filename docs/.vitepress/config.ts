@@ -646,11 +646,11 @@ const sidebar = {
         },
     ],
     "/database/mysql": [
-        createLink('介绍', '/mysql/'),
+        createLink('介绍', '/database/mysql/'),
         {
             text: "优化",
             items: [
-                createLink("索引优化分析：性能分析", "/mysql/optimize/optimize-explain.md"),
+                createLink("索引优化分析：性能分析", "/database/mysql/optimize/optimize-explain.md"),
             ],
         },
         {
@@ -668,6 +668,7 @@ const sidebar = {
         createLink('FAQ', '/database/mysql/faq'),
     ],
     "/database/redis": [
+        createLink('介绍', '/database/redis/'),
         createLink('通用命令，数据结构和内部编码，单线程架构', '/database/redis/01-command-data.md'),
         createLink('字符串类型', '/database/redis/02-string.md'),
         createLink('Hash类型', '/database/redis/03-hash.md'),
