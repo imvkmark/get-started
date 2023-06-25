@@ -1459,5 +1459,5 @@ GET _cluster/health
 ## 参考链接
 
 - [ELK常用命令和语法_汪巡的博客](https://blog.csdn.net/m0_61192794/article/details/121169816)
-- [https://www.jianshu.com/p/2d0bb009063d](https://www.jianshu.com/p/2d0bb009063d)
+- https://www.jianshu.com/p/2d0bb009063d
 

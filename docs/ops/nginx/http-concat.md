@@ -4,7 +4,7 @@ nginx-http-concat 是一个 Nginx 扩展模块，用来合并 HTTP 请求。
 
 ## 1. 下载
 
-访问 [https://github.com/alibaba/nginx-http-concat/releases](https://github.com/alibaba/nginx-http-concat/releases) 官网下载最新的源包，如:
+访问 https://github.com/alibaba/nginx-http-concat/releases 官网下载最新的源包，如:
 
 ```bash
 # 下载
@@ -58,7 +58,7 @@ server {
 
 重启服务，如: `nginx -s reload` 。
 
-更新配置项点击: [https://github.com/alibaba/nginx-http-concat#module-directives](https://github.com/alibaba/nginx-http-concat#module-directives)
+更新配置项点击: https://github.com/alibaba/nginx-http-concat#module-directives
 
 ## 4. 使用
 

@@ -18,7 +18,7 @@ $ docker rename 2249f918cc81 es7
 
 ![image.png](https://file.wulicode.com/yuque/202208/04/14/5901ggb3da6c.png?x-oss-process=image/resize,h_45)
 
-下载地址 : [https://chrome.google.com/webstore/detail/elasticsearch-head/ffmkiejjmecolpfloofpjologoblkegm](https://chrome.google.com/webstore/detail/elasticsearch-head/ffmkiejjmecolpfloofpjologoblkegm)
+下载地址 : https://chrome.google.com/webstore/detail/elasticsearch-head/ffmkiejjmecolpfloofpjologoblkegm
 
 ![image.png](https://file.wulicode.com/yuque/202208/04/14/5902hlULEHBp.png?x-oss-process=image/resize,h_89)
 

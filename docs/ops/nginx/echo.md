@@ -1,7 +1,7 @@
 # 学习使用 echo 模块
 
 Nginx echo 模块是在 nginx 程序上扩展了 `echo`
-输出字符的功能，对于调试很方便，项目地址: [https://github.com/openresty/echo-nginx-module](https://github.com/openresty/echo-nginx-module) 。
+输出字符的功能，对于调试很方便，项目地址: https://github.com/openresty/echo-nginx-module 。
 
 ## Mac 安装或者替代方案
 
@@ -67,7 +67,7 @@ $ git clone https://github.com/openresty/echo-nginx-module
 
 这里使用 echo 官方使用动态模块加入:
 
-[https://github.com/openresty/echo-nginx-module#installation](https://github.com/openresty/echo-nginx-module#installation)
+https://github.com/openresty/echo-nginx-module#installation
 
 ```
 $ ./configure --prefix=/usr/local/Cellar/nginx/1.19.2 \
@@ -108,7 +108,7 @@ nginx 配置加载动态模块
 nginx: [emerg] module "/usr/local/Cellar/nginx/1.19.2/modules/ngx_http_echo_module.so" is not binary compatible in /usr/local/etc/nginx/nginx.conf:11
 ```
 
-原因可能是版本不兼容: [https://github.com/openresty/echo-nginx-module#compatibility](https://github.com/openresty/echo-nginx-module#compatibility)
+原因可能是版本不兼容: https://github.com/openresty/echo-nginx-module#compatibility
 
 ### 其他 *nix 系统
 

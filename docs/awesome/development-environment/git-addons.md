@@ -678,7 +678,7 @@ $ git push production master
 
 ## [git-cal](https://github.com/k4rthik/git-cal)
 
-![https://file.wulicode.com/yuque/202208/04/22/4641mfagTxbx.jpg](https://file.wulicode.com/yuque/202208/04/22/4641mfagTxbx.jpg)
+![](https://file.wulicode.com/yuque/202208/04/22/4641mfagTxbx.jpg)
 
 ## [git-hooks](https://github.com/icefox/git-hooks)
 
@@ -1049,9 +1049,8 @@ refs/heads/master                      Commit is directly on this branch.
 $ git playback README.md
 ```
 
-![https://file.wulicode.com/yuque/202208/04/22/5216kDhsI2kz.gif](https://file.wulicode.com/yuque/202208/04/22/5216kDhsI2kz.gif)
+![](https://file.wulicode.com/yuque/202208/04/22/5216kDhsI2kz.gif)
 
-68747470733a2f2f7261772e6769746875622e636f6d2f6a69616e6c692f6769742d706c61796261636b2f6d61737465722f616e696d6174696f6e2e676966.gif
 
 ## [git-branch-status](https://github.com/alexdavid/git-branch-status)
 

@@ -27,7 +27,7 @@ ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-darwin19]
 3.1.4
 ```
 
-ruby 更换源 : [https://gems.ruby-china.com/](https://gems.ruby-china.com/)
+ruby 更换源 : https://gems.ruby-china.com/
 
 更多可参考 [How do I install ruby gems on Mac](https://stackoverflow.com/questions/39381360/how-do-i-install-ruby-gems-on-mac)
 

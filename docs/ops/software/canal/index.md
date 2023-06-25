@@ -48,8 +48,8 @@ instance模块：
 ## 知识科普
 MySQL 的 Binary Log 介绍
 
-- [http://dev.mysql.com/doc/refman/5.5/en/binary-log.html](http://dev.mysql.com/doc/refman/5.5/en/binary-log.html)
-- [http://www.taobaodba.com/html/474_mysqls-binary-log_details.html](http://www.taobaodba.com/html/474_mysqls-binary-log_details.html)
+- http://dev.mysql.com/doc/refman/5.5/en/binary-log.html
+- http://www.taobaodba.com/html/474_mysqls-binary-log_details.html
 
 简单点说：
 

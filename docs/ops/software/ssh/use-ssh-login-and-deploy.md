@@ -120,7 +120,6 @@ Host test
 
 参考文章:
 
-- [SSH 密钥登录流程分析](https://juejin.im/post/5a2941ad6fb9a045030ffc95)
 - [Github ssh key 生成，免密登录服务器方法](https://deepzz.com/post/github-generate-ssh-key.html)
 
 ## Git 无密码进行拉取或者代码推送

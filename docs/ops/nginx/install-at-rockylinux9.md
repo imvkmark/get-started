@@ -210,7 +210,7 @@ _要使用 Let's Encrypt _使用免费 SSL 证书为您的域名设置 HTTPS
 > 2022/11/09 10:49:37 [crit] 112572#112572: *1818796 SSL_read() failed (SSL: error:0A000126:SSL routines::unexpected eof while reading) while waiting for
 > request, client: 223.104.239.202, server: 0.0.0.0:443
 
-当前问题已经存在记录的 Issue: [https://github.com/openssl/openssl/issues/18866](https://github.com/openssl/openssl/issues/18866)
+当前问题已经存在记录的 Issue: https://github.com/openssl/openssl/issues/18866
 
 ![image.png](https://file.wulicode.com/yuque/202211/09/11/0013zj2HjKuJ.png?x-oss-process=image/resize,h_621)
 

@@ -212,7 +212,7 @@ HTTP 请求方法
 
 浏览器请求 host
 
-- `http_referer`:`[https://echo.xuexb.com](https://echo.xuexb.com)`
+- `http_referer`:`https://echo.xuexb.com`
 
 浏览器来源
 

@@ -1,7 +1,7 @@
 # ES 插件 : ElasticSearch 分词/IK
 
 ## 安装
-地址  : [https://github.com/medcl/elasticsearch-analysis-ik](https://github.com/medcl/elasticsearch-analysis-ik)
+地址  : https://github.com/medcl/elasticsearch-analysis-ik
 
 
 

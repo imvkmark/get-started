@@ -1,6 +1,6 @@
 # Deployer
 
-原文地址 : [https://github.com/alibaba/canal/wiki/AdminGuide](https://github.com/alibaba/canal/wiki/AdminGuide)
+原文地址 : https://github.com/alibaba/canal/wiki/AdminGuide
 
 
 
@@ -10,7 +10,7 @@
 ### 1. 获取发布包
 方法1： (直接下载)
 
-访问：[https://github.com/alibaba/canal/tree/gh-pages/download](https://github.com/alibaba/canal/tree/gh-pages/download) ，会列出所有历史的发布版本包
+访问：https://github.com/alibaba/canal/tree/gh-pages/download ，会列出所有历史的发布版本包
 
 下载方式，比如以1.0.4版本为例子：
 ```

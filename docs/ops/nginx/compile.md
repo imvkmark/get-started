@@ -134,5 +134,5 @@ configure arguments:
 | `--with-google_perftools_module` | 启用 ngx_google_perftools_module 支持（调试用，剖析程序性能瓶颈） |
 | `--with-cpp_test_module` | 启用 ngx_cpp_test_module 支持 |
 
-> 部分摘自：[http://www.ttlsa.com/nginx/nginx-configure-descriptions/](http://www.ttlsa.com/nginx/nginx-configure-descriptions/)
+> 部分摘自：http://www.ttlsa.com/nginx/nginx-configure-descriptions/
 

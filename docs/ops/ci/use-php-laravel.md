@@ -204,12 +204,12 @@ apache:x:48:48:Apache:/usr/share/httpd:/bin/bash
 
 - [Github 访问时出现Permission denied (public key)](http://www.cnblogs.com/gr-nick/p/3406235.html)
 - [配置SSH公钥](https://coding.net/help/doc/git/ssh-key.html)
-- [https://gist.github.com/jexchan/2351996](https://gist.github.com/jexchan/2351996)
-- [https://www.freebsd.org/cgi/man.cgi?query=ssh_config&sektion=5&n=1](https://www.freebsd.org/cgi/man.cgi?query=ssh_config&sektion=5&n=1)
-- [https://help.github.com/articles/error-permission-denied-publickey/#platform-linux](https://help.github.com/articles/error-permission-denied-publickey/#platform-linux)
-- [http://callmepeanut.blog.51cto.com/7756998/1304912](http://callmepeanut.blog.51cto.com/7756998/1304912)
-- [http://www.huamanshu.com/walle.html](http://www.huamanshu.com/walle.html)
-- [http://walle-web.io/](http://walle-web.io/)
-- [https://github.com/meolu/walle-web](https://github.com/meolu/walle-web)
-- [https://www.phptesting.org/install-phpci](https://www.phptesting.org/install-phpci)
+- https://gist.github.com/jexchan/2351996
+- https://www.freebsd.org/cgi/man.cgi?query=ssh_config&sektion=5&n=1
+- https://help.github.com/articles/error-permission-denied-publickey/#platform-linux
+- http://callmepeanut.blog.51cto.com/7756998/1304912
+- http://www.huamanshu.com/walle.html
+- http://walle-web.io/
+- https://github.com/meolu/walle-web
+- https://www.phptesting.org/install-phpci
 

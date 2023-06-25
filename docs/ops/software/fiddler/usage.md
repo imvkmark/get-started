@@ -12,7 +12,7 @@ categories :
 
 Fiddler是一个蛮好用的抓包工具，可以将网络传输发送与接受的数据包进行截获、重发、编辑、转存等操作。也可以用来检测网络安全。反正好处多多，举之不尽呀！当年学习的时候也蛮费劲，一些蛮实用隐藏的小功能用了之后就忘记了，每次去网站上找也很麻烦，所以搜集各大网络的资料，总结了一些常用的功能。
 
-Fiddler 下载地址 ：[https://www.telerik.com/download/fiddler](https://www.telerik.com/download/fiddler)
+Fiddler 下载地址 ：https://www.telerik.com/download/fiddler
 
 win8之后用“Fiddler for .NET4”而win8之前用“Fiidler for .NET2”比较好
 
@@ -105,25 +105,25 @@ AutoResponder允许你拦截指定规则的求情，并返回本地资源或Fidd
 
 | 字符串匹配（baidu）                                     | 是否匹配 |
 |--------------------------------------------------|------|
-| [http://www.baidu.com](http://www.baidu.com)     | 匹配   |
-| [http://pan.baidu.com](http://pan.baidu.com)     | 匹配   |
-| [http://tieba.baidu.com](http://tieba.baidu.com) | 匹配   |
+| http://www.baidu.com     | 匹配   |
+| http://pan.baidu.com     | 匹配   |
+| http://tieba.baidu.com | 匹配   |
 
 >
 > 2. 正则表达式匹配：以“regex:”开头，使用正则表达式来匹配，这个是区分大小写的
 
 | 字符串匹配（regex:.+.(jpg &#124; gif &#124; bmp ) $）                                 | 是否匹配 |
 |--------------------------------------------------------------------------------|------|
-| [http://bbs.fishc.com/Path1/query=foo.](http://bbs.fishc.com/Path1/query=foo.) 
+| http://bbs.fishc.com/Path1/query=foo. 
 
 bmp&bar | 不匹配 |
-| [http://bbs.fishc.com/Path1/query=example.](http://bbs.fishc.com/Path1/query=example.)
+| http://bbs.fishc.com/Path1/query=example.
 
 gif | 匹配 |
-| [http://bbs.fishc.com/Path1/query=example.](http://bbs.fishc.com/Path1/query=example.)
+| http://bbs.fishc.com/Path1/query=example.
 
 bmp | 匹配 |
-| [http://bbs.fishc.com/Path1/query=example.](http://bbs.fishc.com/Path1/query=example.)
+| http://bbs.fishc.com/Path1/query=example.
 
 Gif | 不匹配 |
 

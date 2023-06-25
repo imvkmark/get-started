@@ -66,11 +66,11 @@ server {
 
 | 输入链接                                                           | 最终访问链接                                                   |
 |----------------------------------------------------------------|----------------------------------------------------------|
-| [http://www.domain.com](http://www.domain.com)                 | [https://domain.com](https://domain.com)                 |
-| [http://www.domain.com/404/500](http://www.domain.com/404/500) | [https://domain.com/404/500](https://domain.com/404/500) |
-| [http://domain.com](http://domain.com)                         | [https://domain.com](https://domain.com)                 |
-| [https://www.domain.com](https://www.domain.com)               | [https://domain.com](https://domain.com)                 |
-| [https://domain.com/500](https://domain.com/500)               | [https://domain.com/500](https://domain.com/500)         |
+| http://www.domain.com                 | https://domain.com                 |
+| http://www.domain.com/404/500 | https://domain.com/404/500 |
+| http://domain.com                         | https://domain.com                 |
+| https://www.domain.com               | https://domain.com                 |
+| https://domain.com/500               | https://domain.com/500         |
 
 对于网站需要 https 和 http 共同来访问的可以
 

@@ -149,7 +149,7 @@
 
 ### 常用工具
 
-* [http://shields.io/](http://shields.io/) - 开源项目的徽章
+* http://shields.io/ - 开源项目的徽章
 * [Classroom for GitHub](https://github.com/education/classroom) - Classroom for GitHub 可以自动创建代码仓库和访问控制，可以让老师很方便的在 GitHub 上发布代码任务和收集作业。
 * [Hexo](https://github.com/hexojs/hexo) - 通过Github Pages写博客的Node.js框架
 * [octicons](https://github.com/github/octicons) - GitHub的 图标字体
@@ -160,7 +160,7 @@
   Markdown 编写博客。
 * [openspace](https://github.com/EverythingMe/openspace) -Openspace 是一个用来将你在 Github 上的项目汇总显示在一个网页里的应用。
 * [primer](https://github.com/primer/primer) -Primer 是 Github 工具包，用于 Github 前端设计。
-* [https://gitter.im](https://gitter.im) - 专门给GitHub开源项目或者开源作者提供的聊天软件
+* https://gitter.im - 专门给GitHub开源项目或者开源作者提供的聊天软件
 * [boennemann - badges](https://github.com/boennemann/badges) - 各种徽章
 * [GitTorrent](https://github.com/cjb/GitTorrent)
 * [Insight.io](https://juejin.im/entry/597025d9518825419f7b65ba) - 一款Chrome浏览器插件(可能是迄今为止最好的 GitHub 代码浏览插件)
@@ -313,7 +313,7 @@
 * [GitHub-jQuery-Repo-Widget](https://github.com/JoelSutherland/GitHub-jQuery-Repo-Widget) - 一个GitHub风格的挂件，方便在页面中展示GitHub项目
 * [GitHub Archive](https://github.com/igrigorik/githubarchive.org) - GitHub Archive 是一个记录GitHub时间线的项目
 * [github-cards](https://github.com/lepture/github-cards) - GitHub Cards 用来展示你的简介
-* [githut](https://github.com/littleark/githut) - 可视化了GitHub Archive的数据，网站链接，[http://githut.info/](http://githut.info/)
+* [githut](https://github.com/littleark/githut) - 可视化了GitHub Archive的数据，网站链接，http://githut.info/
 * [lolcommits](https://github.com/mroth/lolcommits) - 每次提交Git都自拍一张
 * [github-selfies](https://github.com/thieman/github-selfies) - Github Selfies 可以在你 Github 的需求和贡献上加上你的自拍照。
 * [badges](https://github.com/boennemann/badges) - 收集GitHub上readme页显示的与javascript有关的各种徽章

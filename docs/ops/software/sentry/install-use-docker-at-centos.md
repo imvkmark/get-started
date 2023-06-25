@@ -10,7 +10,7 @@ Sentry 本身是基于 Django 开发的，而且也依赖到其他的如 Postgre
 
 如果你选择了通过 Docker 进行安装，其实还有更加便捷的方式 —— docker-compose 。在 github 上有一个开源项目用于部署 Sentry ，我们可以直接使用该项目进行部署，首先是克隆该项目：
 
-地址 : [https://github.com/getsentry/onpremise/](https://github.com/getsentry/onpremise/)
+地址 : https://github.com/getsentry/onpremise/
 
 ## 安装环境
 
@@ -292,7 +292,7 @@ $ docker-compose start -d
 
 ### 4. 这里配置 register mirror, 加速国内访问
 
-打开 [https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors](https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors) , 这里将镜像设置为使用 aliyun
+打开 https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors , 这里将镜像设置为使用 aliyun
 的加速镜像
 
 针对 Docker 客户端版本大于 1.10.0 的用户
