@@ -12,11 +12,13 @@ Gradle 可以基于 `Maven`、`Ivy` 或平面目录格式解析一个或多个�
 
 #### 声明公开可用的存储库
 
-构建软件的组织可能希望利用公共二进制存储库来下载和使用开源依赖项。流行的公共存储库包括 Maven Central 和 Google Android 存储库。Gradle为这些广泛使用的存储库提供了内置的速记符号
+构建软件的组织可能希望利用公共二进制存储库来下载和使用开源依赖项。流行的公共存储库包括 Maven Central 和 Google Android
+存储库。Gradle为这些广泛使用的存储库提供了内置的速记符号
 
 !["借助速记符号声明存储库"](https://file.wulicode.com/doc/20230611/1686488175142.png "借助速记符号声明存储库")
 
-在底层，Gradle从由速记符号定义的公共存储库的相应URL中解析依赖项。所有的速记符号都可以通过 RepositoryHandler API 获得。或者，您可以拼出存储库的URL，以便进行更细粒度的控制
+在底层，Gradle从由速记符号定义的公共存储库的相应URL中解析依赖项。所有的速记符号都可以通过 RepositoryHandler API
+获得。或者，您可以拼出存储库的URL，以便进行更细粒度的控制
 
 **Maven Central 库**
 
@@ -66,7 +68,8 @@ repositories {
 
 大多数企业项目都设置了仅在内部网内可用的二进制存储库。内部存储库使团队能够发布内部二进制文件，设置用户管理和安全措施，并确保正常运行时间和可用性。如果您希望声明一个不太流行但公开可用的存储库，那么指定自定义URL也很有帮助。
 
-通过调用 RepositoryHandler API上可用的相应方法，可以将具有自定义url的存储库指定为 Maven 或 Ivy 存储库。Gradle 支持 `http` 或 `https`
+通过调用 RepositoryHandler API上可用的相应方法，可以将具有自定义url的存储库指定为 Maven 或 Ivy 存储库。Gradle 支持 `http`
+或 `https`
 以外的其他协议作为自定义URL的一部分，例如 `file`,
 `sftp` 或 `s3`。有关完整的报道，请参见支持的存储库类型部分。
 
@@ -108,7 +111,8 @@ repositories {
 
 ::: info
 
-声明的顺序决定了 Gradle 将如何在运行时检查依赖项。如果 Gradle 在特定存储库中找到模块描述符，它将尝试从同一存储库中下载该模块的所有构件。您可以了解有关依赖项下载的内部工作原理的更多信息
+声明的顺序决定了 Gradle 将如何在运行时检查依赖项。如果 Gradle
+在特定存储库中找到模块描述符，它将尝试从同一存储库中下载该模块的所有构件。您可以了解有关依赖项下载的内部工作原理的更多信息
 
 :::
 
@@ -137,7 +141,8 @@ Gradle支持大量的依赖源，包括格式和连接方式。你可以从以�
 
 **扁平目录存储库**
 
-一些项目可能更喜欢将依赖项存储在共享驱动器上或作为项目源代码的一部分，而不是二进制存储库产品。如果要使用(扁平)文件系统目录作为存储库，只需键入：
+一些项目可能更喜欢将依赖项存储在共享驱动器上或作为项目源代码的一部分，而不是二进制存储库产品。如果要使用(扁平)
+文件系统目录作为存储库，只需键入：
 
 ::: code-group
 
@@ -167,13 +172,15 @@ repositories {
 
 这将添加存储库，这些存储库在一个或多个目录中查找依赖项
 
-这种类型的存储库不支持任何元数据格式，如 Ivy XML 或 Maven POM 文件。相反，Gradle 将基于构件的存在动态生成模块描述符(没有任何依赖信息)。
+这种类型的存储库不支持任何元数据格式，如 Ivy XML 或 Maven POM 文件。相反，Gradle 将基于构件的存在动态生成模块描述符(
+没有任何依赖信息)。
 
 ::: info
 
 由于 Gradle 更喜欢使用其描述符是从实际元数据创建而不是生成的模块，因此扁平目录存储库不能用于用构建中声明的其他存储库中的真实元数据覆盖构件
 
-例如，如果 Gradle 在平面目录存储库中只找到 jmxri-1.2.1.jar，但在另一个支持元数据的存储库中找到 jmxri-1.2.1.pom，它将使用第二个存储库来提供模块
+例如，如果 Gradle 在平面目录存储库中只找到 jmxri-1.2.1.jar，但在另一个支持元数据的存储库中找到
+jmxri-1.2.1.pom，它将使用第二个存储库来提供模块
 
 对于使用本地构件覆盖远程构件的用例，可以考虑使用 Ivy 或 Maven 存储库，其URL指向本地目录
 
@@ -259,7 +266,8 @@ Gradle 将查看 POM 和 JAR 的基本url位置。如果在那里找不到JAR，
 
 **Local Maven 仓库**
 
-Gradle 可以使用本地 Maven 存储库中提供的依赖项。声明此存储库对于使用一个项目发布到本地 Maven 存储库并在另一个项目中使用 Gradle 的构件的团队是有益的
+Gradle 可以使用本地 Maven 存储库中提供的依赖项。声明此存储库对于使用一个项目发布到本地 Maven 存储库并在另一个项目中使用
+Gradle 的构件的团队是有益的
 
 ::: info
 
@@ -292,7 +300,8 @@ repositories {
 :::
 
 Gradle 使用与 Maven 相同的逻辑来标识 Local Maven缓存的位置。如果在`settings.xml`
-中定义了本地存储库位置，则将使用此位置。在 `<home directory of the current user>/.m2` 中的 `settings.xml` 优先于 `M2_HOME/conf` 中的 `settings.xml`
+中定义了本地存储库位置，则将使用此位置。在 `<home directory of the current user>/.m2` 中的 `settings.xml`
+优先于 `M2_HOME/conf` 中的 `settings.xml`
 。如果没有 `settings.xml` 可用，Gradle 将使用默认位置 `<home directory of the current user>/.m2/repository`。
 
 #### MavenLocal()
@@ -443,7 +452,8 @@ repositories {
 
 :::
 
-可选的是，具有模式布局的存储库可以以 Maven 风格布局其 `organisation` 部分，用正斜杠代替点作为分隔符。例如，组织`my.company`将被表示为`my/company`
+可选的是，具有模式布局的存储库可以以 Maven 风格布局其 `organisation` 部分，用正斜杠代替点作为分隔符。例如，组织`my.company`
+将被表示为`my/company`
 
 ::: code-group
 
@@ -565,12 +575,14 @@ repositories {
 - 如果声明了一个exclude，那么它就包含除了被排除的内容之外的所有内容。
 - 如果同时声明 include 和 exclude ，那么它只包含 include 的内容，而不包含 exclude 的内容
 
-可以通过显式 组、模块或版本进行过滤，可以严格过滤，也可以使用正则表达式。当使用严格版本时，可以使用Gradle支持的格式来使用版本范围。此外，还有按解析上下文筛选的选项:
+可以通过显式
+组、模块或版本进行过滤，可以严格过滤，也可以使用正则表达式。当使用严格版本时，可以使用Gradle支持的格式来使用版本范围。此外，还有按解析上下文筛选的选项:
 配置名称甚至配置属性。详情参见RepositoryContentDescriptor
 
 **声明只在一个存储库中找到的内容**
 
-使用存储库级内容筛选器声明的筛选器不是排他性的。这意味着声明一个存储库包含一个工件并不意味着其他存储库也不能拥有它:您必须声明每个存储库在扩展中包含什么。
+使用存储库级内容筛选器声明的筛选器不是排他性的。这意味着声明一个存储库包含一个工件并不意味着其他存储库也不能拥有它:
+您必须声明每个存储库在扩展中包含什么。
 
 另外，Gradle 提供了一个API，可以让你声明一个存储库只包含一个工件。如果您这样做:
 
@@ -625,7 +637,8 @@ repositories {
 
 ::: info
 
-如果你在 `settings.gradle(.kts)` 的 pluginManagement 部分中使用排他内容过滤，那么通过项目 `buildscript.repositories` 添加更多存储库就会变得不合法。在这种情况下，构建配置将失败
+如果你在 `settings.gradle(.kts)` 的 pluginManagement 部分中使用排他内容过滤，那么通过项目 `buildscript.repositories`
+添加更多存储库就会变得不合法。在这种情况下，构建配置将失败
 
 您可以选择在设置中声明所有存储库，或者使用非排他性内容过滤。
 
@@ -675,7 +688,8 @@ repositories {
 
 #### 支持的元数据来源
 
-当在存储库中搜索模块时，Gradle 默认会检查该存储库中支持的元数据文件格式。在 Maven 存储库中，Gradle 查找 `.pom` 文件，在ivy存储库中查找 `ivy.xml`
+当在存储库中搜索模块时，Gradle 默认会检查该存储库中支持的元数据文件格式。在 Maven 存储库中，Gradle 查找 `.pom`
+文件，在ivy存储库中查找 `ivy.xml`
 文件，在扁平目录存储库中直接查找 `.jar` 文件，因为它不需要任何元数据。从5.0开始，Gradle还会查找.module (Gradle模块元数据)文件。
 
 但是，如果您定义了自定义存储库，则可能需要配置此行为。例如，您可以定义一个没有.pom文件而只有jar文件的Maven存储库。为此，您可以为任何存储库配置元数据源
@@ -725,11 +739,13 @@ _支持的元数据来源_
 
 ::: info
 Ivy 和 Maven 存储库的默认值随着 Gradle 6.0而改变。在6.0之前，artifact()包含在默认值中。当模块完全丢失时，会导致一些效率低下。为了恢复这种行为，例如，对于Maven
-central，你可以使用`mavenCentral {metadataSources {mavenPom();Artifact()}}`。以类似的方式，你可以使用 `mavenCentral {metadataSources {mavenPom()}}`
+central，你可以使用`mavenCentral {metadataSources {mavenPom();Artifact()}}`
+。以类似的方式，你可以使用 `mavenCentral {metadataSources {mavenPom()}}`
 在旧版本的Gradle中选择新的特性
 :::
 
-从Gradle 5.3开始，当解析元数据文件时，不管是Ivy还是Maven, Gradle都会寻找一个标记，表明存在匹配的 Gradle Module 元数据文件。如果找到它，将使用它代替 Ivy 或 Maven 文件
+从Gradle 5.3开始，当解析元数据文件时，不管是Ivy还是Maven, Gradle都会寻找一个标记，表明存在匹配的 Gradle Module
+元数据文件。如果找到它，将使用它代替 Ivy 或 Maven 文件
 
 从Gradle 5.6开始，你可以通过在元数据源声明中添加 `ignoreGradleMetadataRedirection()` 来禁用这种行为
 
@@ -877,13 +893,309 @@ dependencyResolutionManagement {
 
 :::
 
-#### 支持的存储库传输协议[WIP]
+#### 支持的存储库传输协议
+
+Maven和Ivy存储库支持使用各种传输协议。目前支持以下协议:
+
+| Type  | Credential types                 | 	Link | 
+|-------|----------------------------------|-------|
+| file  | none                             |       |
+| http  | username/password                |       | 
+| https | username/password                |       | 
+| sftp  | username/password                |       | 
+| s3    | key/secret, key/session env vars |       | 
+| gcs   | 应用凭证,  env 变量                    |       | 
+
+::: info
+
+用户名和密码永远不应该以纯文本形式作为构建文件的一部分检查到版本控制中。您可以将凭证存储在本地 `gradle.properties`
+文件，并使用一个开源的Gradle插件来加密和消费凭证，例如[凭证插件](https://plugins.gradle.org/plugin/nu.studer.credentials)
+
+:::
+
+传输协议是存储库URL定义的一部分。下面的构建脚本演示了如何创建基于http的Maven和Ivy存储库:
+
+::: code-group
+
+```groovy [setting.gradle]
+repositories {
+    maven {
+        url "http://repo.mycompany.com/maven2"
+    }
+
+    ivy {
+        url "http://repo.mycompany.com/repo"
+    }
+}
+```
+
+```kotlin [setting.gradle.kts]
+repositories {
+    maven {
+        url = uri("http://repo.mycompany.com/maven2")
+    }
+
+    ivy {
+        url = uri("http://repo.mycompany.com/repo")
+    }
+}
+```
+
+:::
+
+下面的示例展示了如何声明SFTP存储库:
+
+::: code-group
+
+```groovy [setting.gradle]
+repositories {
+    maven {
+        url "sftp://repo.mycompany.com:22/maven2"
+        credentials {
+            username "user"
+            password "password"
+        }
+    }
+
+    ivy {
+        url "sftp://repo.mycompany.com:22/repo"
+        credentials {
+            username "user"
+            password "password"
+        }
+    }
+}
+```
+
+```kotlin [setting.gradle.kts]
+repositories {
+    maven {
+        url = uri("sftp://repo.mycompany.com:22/maven2")
+        credentials {
+            username = "user"
+            password = "password"
+        }
+    }
+
+    ivy {
+        url = uri("sftp://repo.mycompany.com:22/repo")
+        credentials {
+            username = "user"
+            password = "password"
+        }
+    }
+}
+```
+
+:::
+
+HTTP相关认证请参见[配置HTTP(S)认证方案](#https身份验证方案配置)
 
 #### HTTP(S)身份验证方案配置
 
-#### AWS S3 存储库配置
+在使用HTTP或HTTPS传输协议配置存储库时，可以使用多种身份验证方案。默认情况下，Gradle将尝试使用Apache
+HttpClient库支持的所有模式，这里有文档说明。在某些情况下，在与远程服务器交换凭据时，最好显式指定应该使用哪种身份验证模式。当显式声明时，只有在对远程存储库进行身份验证时才使用这些模式。
 
-#### Google Cloud 存储库设置
+你可以使用 PasswordCredentials 插件来设置 Maven 存储库的 basic auth 凭证
+
+::: code-group
+
+```groovy [setting.gradle]
+repositories {
+    maven {
+        url "http://repo.mycompany.com/maven2"
+        credentials {
+            username "user"
+            password "password"
+        }
+    }
+}
+```
+
+```kotlin [setting.gradle.kts]
+repositories {
+    maven {
+        url = uri("http://repo.mycompany.com/maven2")
+        credentials {
+            username = "user"
+            password = "password"
+        }
+    }
+}
+```
+
+:::
+
+下面的示例展示了如何配置一个存储库，使其只使用 DigestAuthentication
+
+::: code-group
+
+```groovy [setting.gradle]
+repositories {
+    maven {
+        url 'https://repo.mycompany.com/maven2'
+        credentials {
+            username "user"
+            password "password"
+        }
+        authentication {
+            digest(DigestAuthentication)
+        }
+    }
+}
+```
+
+```kotlin [setting.gradle.kts]
+repositories {
+    maven {
+        url = uri("https://repo.mycompany.com/maven2")
+        credentials {
+            username = "user"
+            password = "password"
+        }
+        authentication {
+            create<DigestAuthentication>("digest")
+        }
+    }
+}
+```
+
+:::
+
+目前支持的认证方案有:
+
+BasicAuthentication
+基于HTTP的基本访问认证。当使用该方案时，凭据被先发制人地发送
+
+DigestAuthentication
+基于HTTP的摘要访问认证。
+
+HttpHeaderAuthentication
+基于任何自定义HTTP头的身份验证，例如私有令牌，OAuth令牌等。
+
+**使用抢占式认证**
+
+Gradle 的默认行为是只有当服务器以 HTTP 401 响应的形式响应身份验证时才提交凭据。在某些情况下，服务器将返回不同的代码响应(
+例如，对于托管在GitHub上的存储库返回404)
+，导致依赖解析失败。为了避免这种行为，可以将凭据首先发送到服务器。要启用抢占式认证，只需将存储库配置为显式使用BasicAuthentication方案:
+
+::: code-group
+
+```groovy [setting.gradle]
+repositories {
+    maven {
+        url 'https://repo.mycompany.com/maven2'
+        credentials {
+            username "user"
+            password "password"
+        }
+        authentication {
+            basic(BasicAuthentication)
+        }
+    }
+}
+```
+
+```kotlin [setting.gradle.kts]
+repositories {
+    maven {
+        url = uri("https://repo.mycompany.com/maven2")
+        credentials {
+            username = "user"
+            password = "password"
+        }
+        authentication {
+            create<BasicAuthentication>("basic")
+        }
+    }
+}
+```
+
+:::
+
+**使用 Http header 验证**
+
+您可以使用 HttpHeaderCredentials 和 HttpHeaderAuthentication 为需要令牌、OAuth2或其他基于HTTP头的身份验证的安全Maven存储库指定任何HTTP头
+
+::: code-group
+
+```groovy [setting.gradle]
+repositories {
+    maven {
+        url "http://repo.mycompany.com/maven2"
+        credentials(HttpHeaderCredentials) {
+            name = "Private-Token"
+            value = "TOKEN"
+        }
+        authentication {
+            header(HttpHeaderAuthentication)
+        }
+    }
+}
+```
+
+```kotlin [setting.gradle.kts]
+repositories {
+    maven {
+        url = uri("http://repo.mycompany.com/maven2")
+        credentials(HttpHeaderCredentials::class) {
+            name = "Private-Token"
+            value = "TOKEN"
+        }
+        authentication {
+            create<HttpHeaderAuthentication>("header")
+        }
+    }
+}
+```
+
+:::
+
+#### [AWS S3 存储库配置](https://docs.gradle.org/current/userguide/declaring_repositories.html#sec:s3-repositories)
+
+#### [Google Cloud 存储库设置](https://docs.gradle.org/current/userguide/declaring_repositories.html#sec:gcs-repositories)
 
 #### 处理凭据
+
+存储库凭证永远不应该是构建脚本的一部分，而应该放在外部。Gradle在工件存储库中提供了一个API，允许您仅声明所需凭证的类型。凭据值是在需要它们的构建期间从Gradle
+Properties中查找的。
+
+例如，给定存储库配置:
+
+::: code-group
+
+```groovy [setting.gradle]
+repositories {
+    maven {
+        name = 'mySecureRepository'
+        credentials(PasswordCredentials)
+        // url = uri(<<some repository url>>)
+    }
+}
+```
+
+```kotlin [setting.gradle.kts]
+repositories {
+    maven {
+        name = "mySecureRepository"
+        credentials(PasswordCredentials::class)
+        // url = uri(<<some repository url>>)
+    }
+}
+```
+
+:::
+
+用户名和密码将从 `mySecureRepositoryUsername` 和 `mySecureRepositoryPassword` 属性中查找
+
+请注意，配置属性前缀(标识)是从存储库名称确定的。凭证可以通过 Gradle 支持的任何方式提供: `gradle.properties`
+属性文件、命令行参数、环境变量或这些选项的组合
+
+另外，请注意，只有在被调用的构建需要凭证时才需要凭证。例如，如果一个项目被配置为将工件发布到一个安全的存储库，但构建不调用发布任务，Gradle将不需要发布凭据。另一方面，如果构建需要在某个时刻执行需要凭据的任务，Gradle将首先检查凭据是否存在，如果它知道构建将在稍后的某个时刻因为缺少凭据而失败，则不会开始运行任何任务
+
+这里有一个[可下载的示例](https://docs.gradle.org/current/samples/sample_publishing_credentials.html)，更详细地演示了这个概念
+
+以下是支持的各种不同的凭证
+
+![](https://file.wulicode.com/doc/20230625/1687703427232.png)
 
