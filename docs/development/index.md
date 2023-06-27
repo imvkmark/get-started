@@ -12,6 +12,7 @@
 - [Homebrew](./tools/homebrew.md)
 - [ApiDoc](./tools/apidoc.md)
 - [jenv - 管理 Java 环境](./tools/jenv.md)
+- [vitepress - 快捷的文档工具](./tools/vitepress.md)
 
 ## 运营
 
