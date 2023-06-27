@@ -1,6 +1,6 @@
 ## 文档地址
 
-- [https://flutter.cn/](https://flutter.cn/)
+- https://flutter.cn/
 
 - [Flutter 实战 . 第二版](https://book.flutterchina.club/)
 
@@ -12,10 +12,13 @@
 
 Dash 自动更新 Feed:
 
-- [https://api.flutter-io.cn/offline/flutter.xml](https://api.flutter-io.cn/offline/flutter.xml)
-- [https://master-api.flutter.dev/offline/flutter.xml](https://master-api.flutter.dev/offline/flutter.xml)
+- https://api.flutter-io.cn/offline/flutter.xml
+- https://master-api.flutter.dev/offline/flutter.xml
 
 ## 框架结构
 
 ![](https://file.wulicode.com/doc/20230515/1684121362069.png)
 
+## 博客
+
+- [LeanFlutter - 让 flutter 更简单](https://leanflutter.org/zh)
