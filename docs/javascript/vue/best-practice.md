@@ -13,6 +13,13 @@ pnpm 作为快速的, 节省磁盘空间的包管理工具具有以下优点
 - 支持 monorepos : pnpm 内置支持单仓多包
 - 严格 : pnpm 默认创建了一个非平铺的 node_modules，因此代码无法访问任意包
 
+## typescript
+
+https://www.typescriptlang.org/
+
+TypeScript 是 JavaScript 的超集，扩展了 JavaScript 的语法，因此现有的 JavaScript 代码可与 TypeScript 一起工作无需任何修改，TypeScript
+通过类型注解提供编译时的静态类型检查
+
 ## vite 启动器
 
 https://cn.vitejs.dev/
@@ -53,12 +60,11 @@ https://cn.vitest.dev/
 
 ## eslint & typescript-eslint
 
-
 > 让 ESLint 和 Prettier 支持 TypeScript 的工具
-> 
+>
 > https://typescript-eslint.io/
-> 
+>
 > ESLint 静态分析你的代码以快速发现问题。你可以将 ESLint 作为持续集成的一部分来运行
-> 
+>
 > https://eslint.org/
 
