@@ -35,6 +35,10 @@
 
 - [在 CentOS7 中使用 Docker](./docker/install-at-centos7.md)
 
+### 技术
+
+- [设置代理](./tech/set-proxy.md)
+
 ## 软件
 
 ### CI
