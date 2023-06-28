@@ -41,7 +41,7 @@ $ yum groupinstall -y "Development Tools"
 > ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?
 > 原因是 python3.7 的 ssl 模块依赖 openssl 1.0.2 或者 1.1 以上版本，如果 openssl 版本低于以上版本，将无法正常安装 python3.7 的 ssl 模块
 
-这里我们安装最新版的 openssl 模块, 下载地址 : [https://www.openssl.org/source/](https://www.openssl.org/source/)
+这里我们安装最新版的 openssl 模块, 下载地址 :  https://www.openssl.org/source/ 
 
 ```shell
 $ sudo wget https://www.openssl.org/source/openssl-1.1.1l.tar.gz

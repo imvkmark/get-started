@@ -20,7 +20,7 @@ failed to open stream: operation failed
 - 是否配置正确的 `openssl.cafile` 的证书路径
 
 但是这两个问题还是没能解决以上的错误, 另外还存在一个问题就是 ca 证书的问题:
-下载证书: [http://curl.haxx.se/docs/caextract.html](http://curl.haxx.se/docs/caextract.html)
+下载证书:  http://curl.haxx.se/docs/caextract.html 
 
 - 自动转换的证书(CA Certs from mozilla.org)
 
@@ -90,20 +90,20 @@ openssl.cafile = /real/path/to/cacert.pem
 ## 运行 composer 安装包的时候出现 curl 错误
 
 > curl error 60 while
-> downloading [https://raw.githubusercontent.com/symfony/recipes/flex/main/index.json:](https://raw.githubusercontent.com/symfony/recipes/flex/main/index.json:)
+> downloading  https://raw.githubusercontent.com/symfony/recipes/flex/main/index.json: 
 > SSL: no alternative certificate subject name matches target host name 'raw.githubusercontent.com'
 
 或者
 > In CurlDownloader.php line 377:
 > curl error 28 while
-> downloading [https://raw.githubusercontent.com/symfony/recipes/flex/main/index.json:](https://raw.githubusercontent.com/symfony/recipes/flex/main/index.json:)
+> downloading  https://raw.githubusercontent.com/symfony/recipes/flex/main/index.json: 
 > Connection timeout after 10004 ms
 
 这种情况下是使用了代理, 第一种情况是代理转发的时候证书出现问题, 导致不匹配, 第二种是请求的时候代理无法访问到这个网站导致的
 
 解决方法:
 
-使用 [https://raw.hellogithub.com/hosts](https://raw.hellogithub.com/hosts) 获取host, 不使用代理的方式来访问, 这样既能够保障联通, 又能够保障证书
+使用  https://raw.hellogithub.com/hosts  获取host, 不使用代理的方式来访问, 这样既能够保障联通, 又能够保障证书
 
 以下方案看情况, 很难保证一定成功
 

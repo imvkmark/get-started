@@ -8,7 +8,7 @@ categories:
 
 # PHPUnit简介以及如何在项目中使用
 
-官方文档：[https://phpunit.readthedocs.io/zh_CN/latest/](https://phpunit.readthedocs.io/zh_CN/latest/)
+官方文档： https://phpunit.readthedocs.io/zh_CN/latest/ 
 
 
 
@@ -79,7 +79,7 @@ class ArrayTest extends TestCase
 
 
 ### PHPUnit 断言
-laravel 中除了标准的 PHPUnit 断言(`assertEquals()`, `assertContains()`, `assertInstanceOf()`, …更多断言请看[https://phpunit.readthedocs.io/zh_CN/latest/assertions.html?highlight=assertTrue#](https://phpunit.readthedocs.io/zh_CN/latest/assertions.html?highlight=assertTrue#))之外, 还存在很多允许测试 web 应用的检测项目
+laravel 中除了标准的 PHPUnit 断言(`assertEquals()`, `assertContains()`, `assertInstanceOf()`, …更多断言请看 https://phpunit.readthedocs.io/zh_CN/latest/assertions.html?highlight=assertTrue# )之外, 还存在很多允许测试 web 应用的检测项目
 
 `assertPageLoaded($uri, $message = null)`
 

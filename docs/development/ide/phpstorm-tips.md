@@ -405,10 +405,10 @@ PhpStorm 可以在整个项目中找到标识符的所有使用位置; 这包括
 
 要查找标识符的所有用法，请按住 Cmd 键（Ctrl for Windows / Linux），然后将鼠标悬停在符号声明上以将其转换为超链接，然后单击标识符以打开 _Usages popup_ ，其中将列出标识符的用法。
 
-![](https://file.wulicode.com/note/topic/phpstorm-tips/16349770156222.png#id=sCGIZ&originHeight=11&originWidth=16&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/topic/phpstorm-tips/16349770156222.png)
 图标强调了正在写一个值到标识符的用法
 
-![](https://file.wulicode.com/note/topic/phpstorm-tips/16349770156229.png#id=UQG5m&originHeight=11&originWidth=16&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/topic/phpstorm-tips/16349770156229.png)
 图标显示从标识符读取数据的用法
 
 或者，将光标放在符号声明上，然后按 Alt+F7 查找用法并在 _Find_ 面板中打开它们。或者导航到 **Edit | Find | Find Usages**  来查找使用位置。

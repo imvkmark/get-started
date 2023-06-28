@@ -11,5 +11,5 @@ categories:
 > You don't have write permissions for the /Library/Ruby/Gems/2.6.0 directory
 
 
-安装地址 : [https://docs.fluentd.org/installation/install-by-gem](https://docs.fluentd.org/installation/install-by-gem)
+安装地址 :  https://docs.fluentd.org/installation/install-by-gem 
 

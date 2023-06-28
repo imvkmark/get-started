@@ -174,7 +174,7 @@ Docstrap 使用的还是 jsdoc 的配置项，同时新增了几个配置项。�
 - systemName：js 产品的名称。也就是生成的 jsdoc 页面上方的名称。这个改成你自己的。
 - copyright：版权信息。
 - navType：导航方式。就是页面上方的 Classes 导航下拉菜单。支持 vertical 和 inline 两种方式。建议用 vertical。inline 我觉得不方便。
-- theme：皮肤模板。默认这个就挺好。Docstrap 现在提供了 13 种效果。感兴趣的，可以自己去看看其它效果：[https://github.com/terryweiss/docstrap](https://github.com/terryweiss/docstrap)
+- theme：皮肤模板。默认这个就挺好。Docstrap 现在提供了 13 种效果。感兴趣的，可以自己去看看其它效果： https://github.com/terryweiss/docstrap 
 - linenums：是否显示所在行数。比如当前方法位于 js 源文件 12 行。false 的话，就不显示这个信息。
 - collapseSymbols：是否将类，方法，属性等 doc 信息以加号的方式收起。
 
@@ -274,7 +274,7 @@ export default test;
 
 **sublime text 插件**
 
-DocBlockr ([https://github.com/spadgos/sublime-jsdocs](https://github.com/spadgos/sublime-jsdocs))
+DocBlockr ( https://github.com/spadgos/sublime-jsdocs )
 
 **vscode 插件**
 

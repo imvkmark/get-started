@@ -147,7 +147,7 @@ org.gradle.jvmargs=-DsocksProxyHost=127.0.0.1 -DsocksProxyPort=1087
 
 在gradle-wrapper.properties中查看gradle下载地址和版本
 
-去查看所有分发的gradle版本地址:[https://services.gradle.org/distributions](https://services.gradle.org/distributions)
+去查看所有分发的gradle版本地址: https://services.gradle.org/distributions 
 
 在这里可以查看到最新的gradle版本，点击可下载.
 

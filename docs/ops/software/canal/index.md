@@ -19,7 +19,7 @@
 
 在介绍Canal内部原理之前，首先来了解一下MySQL Master/Slave同步原理：
 
-![](https://file.wulicode.com/mweb/2022/08/20/16609816381997.jpg#id=n5LpW&originHeight=339&originWidth=506&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/mweb/2022/08/20/16609816381997.jpg)
 
 MySQL master启动binlog机制，将数据变更写入二进制日志（binary log, 其中记录叫做二进制日志事件binary log events，可以通过show binlog events进行查看）MySQL slave（I/O thread）将master的binary log events拷贝到它的中继日志（relay log）MySQL slave（SQL thread）重放relay log中事件，将数据变更反映它自己的数据中
 
@@ -30,7 +30,7 @@ Canal模拟MySQL slave的交互协议，伪装自己为MySQL slave，向MySQL ma
 
 ## Canal架构
 
-![](https://file.wulicode.com/mweb/2022/08/20/16609816516157.jpg#id=SDi0I&originHeight=294&originWidth=690&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/mweb/2022/08/20/16609816516157.jpg)
 说明： 
 
 - server代表一个Canal运行实例，对应于一个jvm 
@@ -43,7 +43,7 @@ instance模块：
 - eventStore (数据存储)
 - metaManager (增量订阅&消费信息管理器)
 
-![](https://file.wulicode.com/mweb/2022/08/20/16609816640950.jpg#id=iiV5a&originHeight=836&originWidth=978&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/mweb/2022/08/20/16609816640950.jpg)
 
 ## 知识科普
 MySQL 的 Binary Log 介绍
@@ -69,7 +69,7 @@ mysql> show variables like 'binlog_format';
 ## Event Parser设计
 大致过程
 
-![](https://file.wulicode.com/mweb/2022/08/20/16609816751872.jpg#id=d5elD&originHeight=599&originWidth=1080&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/mweb/2022/08/20/16609816751872.jpg)
 
 整个parser过程大致可分为以下几步：
 
@@ -84,7 +84,7 @@ mysql> show variables like 'binlog_format';
 
 ## Event Sink设计：
 
-![](https://file.wulicode.com/mweb/2022/08/20/16609816850236.jpg#id=wtJVK&originHeight=470&originWidth=1074&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/mweb/2022/08/20/16609816850236.jpg)
 
 EventSink主要作用如下：
 
@@ -108,7 +108,7 @@ EventSink主要作用如下：
 
 RingBuffer设计：
 
-![](https://file.wulicode.com/mweb/2022/08/20/16609816953439.jpg#id=KXiwE&originHeight=529&originWidth=576&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/mweb/2022/08/20/16609816953439.jpg)
 
 定义了3个cursor：
 
@@ -120,7 +120,7 @@ ack：数据消费成功的最后一次消费位置
 
 借鉴Disruptor的RingBuffer的实现，将RingBuffer拉直来看：
 
-![](https://file.wulicode.com/mweb/2022/08/20/16609817050549.jpg#id=jKMu9&originHeight=272&originWidth=1021&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/mweb/2022/08/20/16609817050549.jpg)
 
 实现说明：
 
@@ -129,7 +129,7 @@ put/get/ack cursor用于递增，采用long型存储。三者之间的关系为p
 
 ## Instance设计：
 
-![](https://file.wulicode.com/mweb/2022/08/20/16609817160438.jpg#id=PUDbz&originHeight=603&originWidth=865&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/mweb/2022/08/20/16609817160438.jpg)
 
 instance代表了一个实际运行的数据队列，包括了EventPaser、EventSink、EventStore等组件。抽象了CanalInstanceGenerator，主要是考虑配置的管理方式：
 
@@ -140,14 +140,14 @@ spring方式：基于spring xml + properties进行定义，构建spring配置。
 
 ## Server设计：
 
-![](https://file.wulicode.com/mweb/2022/08/20/16609817845488.jpg#id=wYasH&originHeight=397&originWidth=778&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/mweb/2022/08/20/16609817845488.jpg)
 
 server代表了一个Canal运行实例，为了方便组件化使用，特意抽象了Embeded(嵌入式)/Netty(网络访问)的两种实现。
 
 
 ## 增量订阅/消费设计：
 
-![](https://file.wulicode.com/mweb/2022/08/20/16609817987647.jpg#id=WxXsV&originHeight=826&originWidth=589&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/mweb/2022/08/20/16609817987647.jpg)
 
 具体的协议格式，可参见：CanalProtocol.proto。
 
@@ -191,7 +191,7 @@ Canal的HA实现机制是依赖zookeeper实现的，主要分为Canal server和C
 
 Canal client:为了保证有序性，一份instance同一时间只能由一个Canal client进行get/ack/rollback操作，否则客户端接收无法保证有序。 Canal Server HA架构图：
 
-![](https://file.wulicode.com/mweb/2022/08/20/16609818688814.jpg#id=b7qQZ&originHeight=512&originWidth=937&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/mweb/2022/08/20/16609818688814.jpg)
 
 大致步骤：
 

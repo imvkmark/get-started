@@ -159,7 +159,7 @@ chmod --reference=./1.log  ./test.log
 
 
 ## 补充
-文章的地址 : [https://blog.xuite.net/wenhao.kk/note/143723399-Permission](https://blog.xuite.net/wenhao.kk/note/143723399-Permission)
+文章的地址 :  https://blog.xuite.net/wenhao.kk/note/143723399-Permission 
 
 以数字方式更改权限	`chmod  (数字权限)  (档名)`
 

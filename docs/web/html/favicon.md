@@ -74,7 +74,7 @@ apple-touch-icon 和 apple-touch-startup-image 替代.
 
 在之前，经常可以看到 shortcut,但他不是标准的，应该不再使用。
 
-**代码**[https://github.com/imvkmark/html-get-started/blob/master/link/favicon.html](https://github.com/imvkmark/html-get-started/blob/master/link/favicon.html)
+**代码** https://github.com/imvkmark/html-get-started/blob/master/link/favicon.html 
 
 ```html
 <!DOCTYPE html>

@@ -139,7 +139,7 @@ $ cat coding.pub
 
 在 git 管理端部分部署公钥
 
-![](https://file.wulicode.com/note/2021/10-23/11-14-35507.png#id=omXj0&originHeight=500&originWidth=1600&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/10-23/11-14-35507.png)
 
 ### 2). 测试是否可以链接到 [git@e.coding.net](mailto:git@e.coding.net) 服务器
 

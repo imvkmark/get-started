@@ -182,7 +182,7 @@ $ sudo brew services start php@7.3
 在 Mac 上官方 brew 支持的 php 版本根据 Php 的支持度会有变化, 某些版本当前已经不存在, 在这种状态下如果我们需要低版本的 php , 我们可以安装以下这个包, 如果不熟悉
 brew tap, 查看顶部首页的链接
 
-[https://github.com/shivammathur/homebrew-php](https://github.com/shivammathur/homebrew-php)
+ https://github.com/shivammathur/homebrew-php 
 
 这样即使低版本的php 我们一样可以安装使用了
 

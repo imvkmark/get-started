@@ -82,7 +82,7 @@ dns可以理解为下一代的yum，它在CentOS 8上被设置为默认的软件
 ```
 接下来，使用如下所示的dnf安装CentOS 8的软件包。这需要一段时间。这里使用的阿里云的地址
 
-[https://mirrors.aliyun.com/centos/8-stream/BaseOS/x86_64/os/Packages/](https://mirrors.aliyun.com/centos/8-stream/BaseOS/x86_64/os/Packages/)
+ https://mirrors.aliyun.com/centos/8-stream/BaseOS/x86_64/os/Packages/ 
 ```bash
 # dnf install https://mirrors.aliyun.com/centos/8-stream/BaseOS/x86_64/os/Packages/centos-stream-repos-8-6.el8.noarch.rpm
 # dnf install https://mirrors.aliyun.com/centos/8-stream/BaseOS/x86_64/os/Packages/centos-stream-release-8.6-1.el8.noarch.rpm

@@ -10,7 +10,7 @@ categories:
 
 新机器使用yum出现了报错,发现本来应该替换的`$releasever`变量变成了`%24releasever`
 
-> [http://mirrors.aliyun.com/centos/%24releasever/addons/x86_64/repodata/repomd.xml:](http://mirrors.aliyun.com/centos/%24releasever/addons/x86_64/repodata/repomd.xml:) [Errno 14] HTTP Error 404: Not Found  Trying other mirror.  Error:  Cannot retrieve repository metadata (repomd.xml)  for repository: addons.  Please verify its path and  try again
+>  http://mirrors.aliyun.com/centos/%24releasever/addons/x86_64/repodata/repomd.xml:  [Errno 14] HTTP Error 404: Not Found  Trying other mirror.  Error:  Cannot retrieve repository metadata (repomd.xml)  for repository: addons.  Please verify its path and  try again
 
 
 下面我们来看看这个是怎么回事，最好的参考文档当然是man，通过`man yum.conf` 查看这个`$releasever`

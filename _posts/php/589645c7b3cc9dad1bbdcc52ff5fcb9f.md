@@ -208,5 +208,5 @@ class StartSession
 ## 参考文章
 
 - https://www.cnblogs.com/lxwphp/p/9143495.html
-- [https://learnku.com/laravel/t/3218/laravel53-middleware-and-controller-construction-method-execution-sequence-problem](https://learnku.com/laravel/t/3218/laravel53-middleware-and-controller-construction-method-execution-sequence-problem)
+-  https://learnku.com/laravel/t/3218/laravel53-middleware-and-controller-construction-method-execution-sequence-problem 
 

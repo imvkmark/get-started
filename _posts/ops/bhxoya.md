@@ -94,5 +94,5 @@ tmpfs           496M     0  496M    0% /sys/fs/cgroup
 /dev/vda1        50G  7.2G   40G   16% /
 tmpfs           100M     0  100M    0% /run/user/1001
 ```
-参考文章: [https://help.aliyun.com/document_detail/42531.html](https://help.aliyun.com/document_detail/42531.html)
+参考文章:  https://help.aliyun.com/document_detail/42531.html 
 

@@ -8,9 +8,9 @@ categories :
 
 ## 需求
 
-参考资料 : [http://www.cnblogs.com/BeginMan/p/3577553.html](http://www.cnblogs.com/BeginMan/p/3577553.html)
+参考资料 :  http://www.cnblogs.com/BeginMan/p/3577553.html 
 
-说明 : [http://www.douban.com/group/topic/10553266/](http://www.douban.com/group/topic/10553266/)
+说明 :  http://www.douban.com/group/topic/10553266/ 
 
 - 获取指定文件的版本信息、修改者、修改时间、提交说明（git log --pretty=format:"%H|%an|%ar|%cd %s "）
 - 输入指定的文件版本信息号，版本回退
@@ -60,7 +60,7 @@ git reset –hard：彻底回退到某个版本，本地的源码也会变为上
 
 ## git 强制更新
 
-更新地址: [http://192.168.1.21:8000/](http://192.168.1.21:8000/)
+更新地址:  http://192.168.1.21:8000/ 
 
 自动更新执行的代码为
 

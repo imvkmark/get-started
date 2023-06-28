@@ -6,7 +6,7 @@ categories:
 - ["Ops","CentOS","Dnf \/ Yum \/ Repo 仓库"]
 ---
 
-原文地址: [https://www.twblogs.net/a/5eedcdc2264079afec950ab1](https://www.twblogs.net/a/5eedcdc2264079afec950ab1)
+原文地址:  https://www.twblogs.net/a/5eedcdc2264079afec950ab1 
 
 DNF的英文是 "Dandified Yum"。 是原生的yum软件包管理器（Yum的派生）。DNF命令使用libsolv，hawkey，ibrepo和libcomps等C语言库写。它是在Fedora 18中引入的，自Fedora 22 以来一直是默认的软件包管理器。DNF 是一个软件包管理器，可以在基于 RPM 的 Linux 发行版上，更新删除软件包。它会自动安装计算并确定安装软件包所需要的操作。由于一些问题长期尚未在yum中解决，如性能差，内存使用率高，依赖关系解析速度慢等，yum已被DNF个别解决。这解决了yum中待解决的问题。此外， DNF添加了许多功能，以实现基于RPM的系统中软件包的无缝管理。
 

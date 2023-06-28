@@ -18,7 +18,7 @@ xtraback 工具对 innodb 引擎完美支持真正的热备份，备份好的数
 
 
 ## 安装
-下载安装程序 [https://www.percona.com/downloads/Percona-XtraBackup-2.4/LATEST/](https://www.percona.com/downloads/Percona-XtraBackup-2.4/LATEST/) , 这里需要的是 mysql 5.7 所以下载 xtraBackup 2.4 版本
+下载安装程序  https://www.percona.com/downloads/Percona-XtraBackup-2.4/LATEST/  , 这里需要的是 mysql 5.7 所以下载 xtraBackup 2.4 版本
 
 ```
 $ yum localinstall percona-xtrabackup-24-2.4.4-1.el7.x86_64.rpm

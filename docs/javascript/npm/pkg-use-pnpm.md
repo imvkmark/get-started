@@ -199,7 +199,7 @@ $ du -d 1 -h /Users/duoli/Library/pnpm
 ```
 整体大小 1.3G , 当然上边有多版本, 对于公共文件来讲, 影响也不是特别大, 但是他的优点在于多项目的时候的文件软链接, 我们使用项目再对比下
 
-![](https://file.wulicode.com/note/2022/03-24/00-04-55568.png#id=SpWsq&originHeight=443&originWidth=588&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2022/03-24/00-04-55568.png)
 
 ## 清理
 清理掉 yarn, nvm, 以及软链接

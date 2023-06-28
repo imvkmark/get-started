@@ -182,5 +182,5 @@ yes。此选项仅对服务 _passwd_ 和_组_有效
 
 ## Ref
 
-[https://linux.die.net/man/5/nscd.conf](https://linux.die.net/man/5/nscd.conf)
+ https://linux.die.net/man/5/nscd.conf 
 

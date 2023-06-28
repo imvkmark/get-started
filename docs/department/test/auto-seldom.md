@@ -2,7 +2,7 @@
 
 ## 安装
 
-参考 : [https://pipenv.pypa.io/en/latest/](https://pipenv.pypa.io/en/latest/), 安装使用 pipenv 进行环境管理和版本管理
+参考 :  https://pipenv.pypa.io/en/latest/ , 安装使用 pipenv 进行环境管理和版本管理
 
 ```
 $ pip install pipenv
@@ -299,5 +299,5 @@ assertUrl
 - jmespath(路径提取) : [JMESPath Specification](https://jmespath.org/specification.html)
 - faker(假数据): [Faker 15.0.0 documentation](https://faker.readthedocs.io/en/master/)
 - pydash : [pydash 5.1.1 documentation](https://pydash.readthedocs.io/en/latest/)
-- jsonschema: [https://json-schema.org/learn/](https://json-schema.org/learn/)
+- jsonschema:  https://json-schema.org/learn/ 
 

@@ -173,7 +173,7 @@ FormRequest 的类, 在执行控制器方法 (理论上非控制器也可以) �
 > 理论上来说, 你不实现这个接口, 而只是简单地在控制器的构造函数中进行校验并抛出异常也是一样的. 但是借助这个接口, 我们可以保持代码清洁, 并且可以在一个命名的方法中来执行校验.
 
 
-官方文档:[https://github.com/illuminate/contracts/blob/master/Validation/ValidatesWhenResolved.php](https://github.com/illuminate/contracts/blob/master/Validation/ValidatesWhenResolved.php)
+官方文档: https://github.com/illuminate/contracts/blob/master/Validation/ValidatesWhenResolved.php 
 
 ```php
 <?php

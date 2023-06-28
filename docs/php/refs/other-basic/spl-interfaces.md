@@ -13,7 +13,7 @@ Countable {
 
 示例:
 
-[http://php.net/manual/en/class.countable.php](http://php.net/manual/en/class.countable.php)
+ http://php.net/manual/en/class.countable.php 
 
 ## OuterIterator
 

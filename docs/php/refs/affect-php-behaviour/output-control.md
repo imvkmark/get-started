@@ -36,7 +36,7 @@ PHP_INI_ALL     默认关闭,开启的时候讲自动输出信息块, 等同�
  $erase            默认为 true, 调用完成后删除缓冲, 如果指定为 false, 则在脚本完成之后删除缓冲
 ```
 
-![https://file.wulicode.com/note/2021/11-11/15-56-11856.png](https://file.wulicode.com/note/2021/11-11/15-56-11856.png)
+! https://file.wulicode.com/note/2021/11-11/15-56-11856.png 
 
 `void flush ( void )`
 
@@ -46,7 +46,7 @@ flush() 函数不会对服务器或客户端浏览器的缓存模式产生影响
 
 在 php 5.3.13 中, 默认是开启缓存的, 所以使用 ob_get_level()会获取到 1 的值,同样的是, 直接使用 flush()函数不会输出也是因为会有缓冲
 
-![https://file.wulicode.com/note/2021/11-11/15-56-21870.png](https://file.wulicode.com/note/2021/11-11/15-56-21870.png)
+! https://file.wulicode.com/note/2021/11-11/15-56-21870.png 
 
 `void ob_clean ( void )`
 
@@ -84,7 +84,7 @@ flush() 函数不会对服务器或客户端浏览器的缓存模式产生影响
 
 `int ob_get_level ( void )`
 
-![https://file.wulicode.com/note/2021/11-11/15-56-36274.png](https://file.wulicode.com/note/2021/11-11/15-56-36274.png)
+! https://file.wulicode.com/note/2021/11-11/15-56-36274.png 
 
 返回当前缓存的级别
 

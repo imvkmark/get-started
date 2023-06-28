@@ -1,6 +1,6 @@
 # 「译+」在 PhpStorm 中配置 Phpunit 的 Test Suite
 
-原文地址 : [https://www.liamnorman.com/phpstorm-testsuites/](https://www.liamnorman.com/phpstorm-testsuites/)
+原文地址 :  https://www.liamnorman.com/phpstorm-testsuites/ 
 
 我是测试驱动开发(TDD)的忠实粉丝，我相信测试可以验证代码库的可靠性和稳定性, 我相信使用 TDD
 可以创建稳定的系统并有效地测试软件，确保我的设计符合我想要解决的问题。我倾向于经常进行测试，因为这样就会非常清楚如果系统中的一个变化破坏了什么东西，我马上就知道那是添加的东西并定位到问题所在。Robert

@@ -25,6 +25,14 @@
 >
 > https://www.npmjs.com/package/vue3-moveable
 
+### vue-json-pretty
+
+![](https://file.wulicode.com/doc/20230628/1687915137687.png)
+
+> 使用 TypeScript 编写的 JSON 格式化工具, 支持大的数据量, 支持编辑
+> 
+> https://www.npmjs.com/package/vue-json-pretty
+
 ## 其他
 
 ### 搭建一个可以写前端代码的无刷新框架

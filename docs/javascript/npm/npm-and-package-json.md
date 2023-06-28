@@ -22,7 +22,7 @@ npm 是前端开发广泛使用的包管理工具，之前使用 Weex 时看了�
 
 而 npm 的作用就是让我们发布、下载一些 JS 轮子更加方便。
 
-我们可以去官方网站 [https://www.npmjs.com/](https://www.npmjs.com/) 浏览、搜索想要的轮子，也可以直接在命令行中 search 一下意中轮。
+我们可以去官方网站  https://www.npmjs.com/  浏览、搜索想要的轮子，也可以直接在命令行中 search 一下意中轮。
 
 ![](https://file.wulicode.com/yuque/202208/04/15/3409XkUXyuqa.jpeg?x-oss-process=image/resize,h_809)
 
@@ -30,7 +30,7 @@ npm 是前端开发广泛使用的包管理工具，之前使用 Weex 时看了�
 
 现在我们知道 npm 是干什么的了。当人们说起 “npm” 时，可能在说三个东西：
 
-1. 一个网站，就是前面提到用于搜索 JS 模块的网站：[https://www.npmjs.com/](https://www.npmjs.com/)
+1. 一个网站，就是前面提到用于搜索 JS 模块的网站： https://www.npmjs.com/ 
 2. 一个仓库，保存着人们分享的 JS 模块的大数据库
 3. 命令行里的客户端，开发者使用它来管理、安装、发布模块
 
@@ -38,7 +38,7 @@ npm 是前端开发广泛使用的包管理工具，之前使用 Weex 时看了�
 
 ## 安装 npm
 
-npm 是依附于 node.js 的，我们可以去它的官网 [https://nodejs.org/en/download/](https://nodejs.org/en/download/) 下载安装 node.js。
+npm 是依附于 node.js 的，我们可以去它的官网  https://nodejs.org/en/download/  下载安装 node.js。
 
 下载好 node.js, npm 也就有了，使用 `npm -v` 查看安装的 npm 版本：
 
@@ -169,7 +169,7 @@ $ npm install npm@latest  -g
 
 ### Semantic versioning（语义化版本规则）
 
-[https://docs.npmjs.com/getting-started/semantic-versioning](https://docs.npmjs.com/getting-started/semantic-versioning)
+ https://docs.npmjs.com/getting-started/semantic-versioning 
 
 `dependencies` 的内容，以 `"weex-html5": "^0.3.2"` 为例，我们知道 key 是依赖的包名称，value 是这个包的版本。那版本前面的 ^ 或者版本直接是一个 * 是什么意思呢？
 
@@ -425,7 +425,7 @@ Homebrew 会帮我们处理好权限的问题。
 
 ![](https://file.wulicode.com/yuque/202208/04/15/3416vahWz0xP.png?x-oss-process=image/resize,h_953)
 
-Github 地址：[https://github.com/dylang/npm-check](https://github.com/dylang/npm-check)
+Github 地址： https://github.com/dylang/npm-check 
 
 #### 卸载全局 package
 
@@ -563,7 +563,7 @@ $ npm install --save-dev babel-cli@6 babel-preset-es2015@6
 
 ## Thanks
 
-[https://docs.npmjs.com/](https://docs.npmjs.com/)
+ https://docs.npmjs.com/ 
 
-[http://javascript.ruanyifeng.com/nodejs/npm.html#](http://javascript.ruanyifeng.com/nodejs/npm.html#)
+ http://javascript.ruanyifeng.com/nodejs/npm.html# 
 

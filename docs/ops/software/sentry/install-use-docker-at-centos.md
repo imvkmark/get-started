@@ -222,7 +222,7 @@ server{
 
 这里即可通过域名来进行访问
 
-![](https://file.wulicode.com/note/2021/10-23/11-27-33337.png#id=gApK6&originHeight=629&originWidth=1020&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/10-23/11-27-33337.png)
 
 ## 出现问题
 
@@ -283,11 +283,11 @@ $ docker-compose start -d
 
 这样看下 管理员中的 邮箱配置
 
-![](https://file.wulicode.com/note/2021/10-23/11-27-45956.png#id=BmCJt&originHeight=633&originWidth=971&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/10-23/11-27-45956.png)
 
 测试下收到邮件就配置成功了
 
-![](https://file.wulicode.com/note/2021/10-23/11-27-55804.png#id=ntwsa&originHeight=221&originWidth=799&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/10-23/11-27-55804.png)
 > ps : 这里用的是网易的客户端
 
 ### 4. 这里配置 register mirror, 加速国内访问

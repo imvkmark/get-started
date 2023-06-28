@@ -39,7 +39,7 @@ Cygwin 是一个用于 Windows 的类 UNIX shell 环境。 它由两个组件组
 ## 安装 Cygwin
 与这里介绍的其他软件不同，Cygwin 使用 Windows 安装程序。Cygwin setup.exe 文件可以重新安装软件，可以添加、修改或升级 Cygwin 配置的组件。
 
-在 Windows 系统上打开浏览器，通过访问 [http://cygwin.com/setup.exe](http://cygwin.com/setup.exe) 下载 Cygwin 安装程序。安装程序本身非常小（大约 600KB），因为大多数 Cygwin 软件是在安装过程中下载的。完成下载之后，按照以下步骤安装 Cygwin：
+在 Windows 系统上打开浏览器，通过访问  http://cygwin.com/setup.exe  下载 Cygwin 安装程序。安装程序本身非常小（大约 600KB），因为大多数 Cygwin 软件是在安装过程中下载的。完成下载之后，按照以下步骤安装 Cygwin：
 
 ### 1. 运行安装程序
 在安装 Cygwin 期间出现的第一个对话框
@@ -137,7 +137,7 @@ c:\Program Files\Internet Explorer\IEXPLORE.EXE
 
 做出选择之后（为了满足依赖性，可能会自动选择其他包），单击 **Next** 开始更新。与前面一样，下载和安装过程需要一定的时间（开发包往往相当大）。
 
-在此期间，打开一个浏览器并通过访问 [http://ftp.gnu.org/gnu/wget/wget-1.11.4.tar.gz](http://ftp.gnu.org/gnu/wget/wget-1.11.4.tar.gz) 下载 GNU `wget` 实用程序的最新源代码。（`wget` 是一种命令行工具，它可以下载任何东西。关于此工具的更多信息，请参见 [参考资料](https://www.ibm.com/developerworks/cn/aix/library/au-spunix_cygwin/#resources)）。使用 Cygwin 把此文件复制到 Cygwin 中的主目录，展开压缩文件。清单 1 显示压缩文件的内容。
+在此期间，打开一个浏览器并通过访问  http://ftp.gnu.org/gnu/wget/wget-1.11.4.tar.gz  下载 GNU `wget` 实用程序的最新源代码。（`wget` 是一种命令行工具，它可以下载任何东西。关于此工具的更多信息，请参见 [参考资料](https://www.ibm.com/developerworks/cn/aix/library/au-spunix_cygwin/#resources)）。使用 Cygwin 把此文件复制到 Cygwin 中的主目录，展开压缩文件。清单 1 显示压缩文件的内容。
 
 列出 wget-1.11.4.tar 的内容
 ```

@@ -7,7 +7,7 @@
 > composer 2.0 版本和 laravel 6.0 版本不兼容
 
 这个是 laravel 6.0 lts 版本的问题, 由于更改了加载方式, 这个方式在 6.0 版本中没有被修复导致的问题,
-可以查看 : [https://github.com/composer/composer/issues/9340](https://github.com/composer/composer/issues/9340)
+可以查看 :  https://github.com/composer/composer/issues/9340 
 
 对于 laravel 版本的支持程度可以查看
 
@@ -106,7 +106,7 @@ $ brew services restart php@7.2
 
 ### 3. Call to undefined method Illuminate\Events\Dispatcher::fire()
 
-在 (5.8 升级指南)([https://laravel.com/docs/5.8/upgrade](https://laravel.com/docs/5.8/upgrade)) 指出,
+在 (5.8 升级指南)( https://laravel.com/docs/5.8/upgrade ) 指出,
 
 _Likelihood Of Impact: Low_
 

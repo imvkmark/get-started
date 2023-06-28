@@ -20,7 +20,7 @@ $ git init
 
 ## 初始化 composer
 
-这里假定你已经安装了 composer, 如果没有安装, 请到 [https://getcomposer.org/download/](https://getcomposer.org/download/) 进行安装
+这里假定你已经安装了 composer, 如果没有安装, 请到  https://getcomposer.org/download/  进行安装
 
 初始化并输入包名, 这里默认使用 `duoli/util-demo` 包名
 

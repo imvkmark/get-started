@@ -8,7 +8,7 @@ categories:
 
 > 18.04/20.04/22.04 测试通过
 
-> 原理一致, 不过不同系统支持的版本不同, 详情见 [https://launchpad.net/~ondrej/+archive/ubuntu/php](https://launchpad.net/~ondrej/+archive/ubuntu/php)
+> 原理一致, 不过不同系统支持的版本不同, 详情见  https://launchpad.net/~ondrej/+archive/ubuntu/php 
 > 现在 Ondrej PPA 支持的平台是 Hirsute (21.04), Groovy (20.10), Focal (20.04), Bionic (18.04) 这几个(2021 年 11 月)
 
 本文基于阿里云服务器手动安装(由于服务器配置比较低，之前一直用一键安装，CPU 会爆到 99%)，服务器配置(`1核、1G、50M`)，安装列表：
@@ -119,7 +119,7 @@ $ mysql -uroot -p
 ## FAQ
 
 ### PPA 下载缓慢
-Ubuntu 的 PPA（Personal Package Archives）可以下载其他用户上传的编译好的软件，但下载速度有时实在太慢，又不像软件源一样可以使用镜像, 使用中科大提供的反向代理可以提高 PPA 的下载速度。在 `/etc/apt/sources.list.d` 目录下可以找到每一个 PPA 添加的 list 文件，把其中的 [http://ppa.launchpad.net](http://ppa.launchpad.net) 替换为 [https://launchpad.proxy.ustclug.org](https://launchpad.proxy.ustclug.org)
+Ubuntu 的 PPA（Personal Package Archives）可以下载其他用户上传的编译好的软件，但下载速度有时实在太慢，又不像软件源一样可以使用镜像, 使用中科大提供的反向代理可以提高 PPA 的下载速度。在 `/etc/apt/sources.list.d` 目录下可以找到每一个 PPA 添加的 list 文件，把其中的  http://ppa.launchpad.net  替换为  https://launchpad.proxy.ustclug.org 
 
 在 [USTC 镜像网站](https://mirrors.ustc.edu.cn/) 上可以查看反向代理列表，像 docker、npm 等等都可以使用 USTC 的反向代理
 

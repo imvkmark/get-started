@@ -94,7 +94,7 @@ rsync error: requested action not supported (code 4) at flist.c(1882) [sender=3.
 - 需要安装 `glibc`
 
 
-glibc 下载地址 : [http://ftp.gnu.org/gnu/glibc/](http://ftp.gnu.org/gnu/glibc/)
+glibc 下载地址 :  http://ftp.gnu.org/gnu/glibc/ 
 
 
 编译参考 : [解决libc.so.6: version `GLIBC_2.14' not found问题]()
@@ -110,7 +110,7 @@ configure: error:
 **as, ld**
 
 
-继续安装 `as` `ld` , 从 [redhat上用rpm包方式升级gcc](http://www.linuxidc.com/Linux/2007-09/7327.htm) 找到 升级 ld 需要安装 binutils, 地址是: [http://ftp.gnu.org/gnu/binutils/](http://ftp.gnu.org/gnu/binutils/) , 下面例子仅供参考, 版本不一定是最新的
+继续安装 `as` `ld` , 从 [redhat上用rpm包方式升级gcc](http://www.linuxidc.com/Linux/2007-09/7327.htm) 找到 升级 ld 需要安装 binutils, 地址是:  http://ftp.gnu.org/gnu/binutils/  , 下面例子仅供参考, 版本不一定是最新的
 
 ```
 wget http://ftp.gnu.org/gnu/binutils/binutils-2.25.tar.gz
@@ -131,7 +131,7 @@ ld –v
 参考编译地址: [CentOS 6.4 编译安装 gcc 4.8.1 ](http://www.cnblogs.com/codemood/archive/2013/06/01/3113200.html)
 
 
-我还是下载的最新版 :  [http://ftp.tsukuba.wide.ad.jp/software/gcc/releases/](http://ftp.tsukuba.wide.ad.jp/software/gcc/releases/)
+我还是下载的最新版 :   http://ftp.tsukuba.wide.ad.jp/software/gcc/releases/ 
 
 ```
 wget http://ftp.tsukuba.wide.ad.jp/software/gcc/releases/gcc-4.9.2/gcc-4.9.2.tar.gz

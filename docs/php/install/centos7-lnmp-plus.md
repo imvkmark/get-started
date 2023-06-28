@@ -347,7 +347,7 @@ $ systemctl enable php-fpm mysqld nginx redis
 
 ### 下载安装mysql
 
-获取最新下载地址: [http://dev.mysql.com/downloads/mysql/](http://dev.mysql.com/downloads/mysql/)
+获取最新下载地址:  http://dev.mysql.com/downloads/mysql/ 
 
 ```
 # 下载

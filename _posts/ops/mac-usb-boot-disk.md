@@ -6,13 +6,13 @@ categories :
   - [ "Ops","Mac" ]
 ---
 
-原文地址 : [http://jiangbo.me/blog/2011/11/09/create_ubuntu_usb_startdisk_on_mac/](http://jiangbo.me/blog/2011/11/09/create_ubuntu_usb_startdisk_on_mac/)
+原文地址 :  http://jiangbo.me/blog/2011/11/09/create_ubuntu_usb_startdisk_on_mac/ 
 
 ## 一、下载ubuntu iso镜像
 
 下载地址:
 
-[http://www.ubuntu.org.cn/download/desktop](http://www.ubuntu.org.cn/download/desktop)
+ http://www.ubuntu.org.cn/download/desktop 
 
 ## 二、将iso转换为img文件
 

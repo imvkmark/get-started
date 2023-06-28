@@ -1,8 +1,8 @@
 ---
-title : " 「转+」 axios 简介"
-date : 2022-04-14 22:26:37
-toc : true
-categories :
+title: " 「转+」 axios 简介"
+date: 2022-04-14 22:26:37
+toc: true
+categories:
   - [ "前端","其他","axios" ]
 ---
 
@@ -19,7 +19,8 @@ axios 是一个基于Promise 用于浏览器和 nodejs 的 HTTP 客户端
 - 转换请求和响应数据
 - 取消请求
 - 自动转换JSON数据
-- 客户端支持防御  [CSRF/XSRF](http://baike.baidu.com/link?url=iUceAfgyfJOacUtjPgT4ifaSOxDULAc_MzcLEOTySflAn5iLlHfMGsZMtthBm5sK4y6skrSvJ1HOO2qKtV1ej_)
+-
+客户端支持防御  [CSRF/XSRF](http://baike.baidu.com/link?url=iUceAfgyfJOacUtjPgT4ifaSOxDULAc_MzcLEOTySflAn5iLlHfMGsZMtthBm5sK4y6skrSvJ1HOO2qKtV1ej_)
 
 ## 浏览器兼容性
 
@@ -368,7 +369,8 @@ instance.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 
 ### 配置优先级顺序
 
-配置将与优先顺序合并。 顺序是 `lib/defaults.js`中的库默认值，然后是实例的`defaults` 属性，最后是请求的 `config` 参数。 后者将优先于前者。 这里有一个例子。
+配置将与优先顺序合并。 顺序是 `lib/defaults.js`中的库默认值，然后是实例的`defaults` 属性，最后是请求的 `config` 参数。
+后者将优先于前者。 这里有一个例子。
 
 ```
 //使用库提供的配置默认值创建实例
@@ -536,7 +538,8 @@ import axios from 'axios';
 axios.get('/user?ID=12345');
 ```
 
-axios 在很大程度上受到 Angular 提供的 `$http` 服务的启发。 最终，axios 努力提供一个在Angular外使用的独立的 `$http`-like 服务。
+axios 在很大程度上受到 Angular 提供的 `$http` 服务的启发。 最终，axios 努力提供一个在Angular外使用的独立的 `$http`-like
+服务。
 
 ## 返回数据的错误处理
 

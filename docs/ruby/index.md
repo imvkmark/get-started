@@ -8,3 +8,6 @@
 >
 > https://github.com/rvm/rvm
 
+## 安装
+
+- [在 Mac 中安装 ruby](./install-at-mac.md)

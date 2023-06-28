@@ -28,7 +28,7 @@ PHP_INI_ALL 定义了 UNICODE 用户注释被处理的字符集
 
 exif_imagetype() 读取一个图像的第一个字节并检查其签名。 返回值和 getimagesize() 返回的数组中的索引 2 的值是一样的，但本函数快得多。
 
-![https://file.wulicode.com/note/2021/11-11/16-01-56352.png](https://file.wulicode.com/note/2021/11-11/16-01-56352.png)
+! https://file.wulicode.com/note/2021/11-11/16-01-56352.png 
 
 `array exif_read_data ( string $filename [, string $sections = NULL [, bool $arrays = false [, bool $thumbnail = false ]]] )`
 
@@ -42,6 +42,6 @@ exif_imagetype() 读取一个图像的第一个字节并检查其签名。 返�
 
 读取 TIFF 或 JPEG 图像中的嵌入缩略图。如果图像不包含缩略图则返回 FALSE。
 
-![https://file.wulicode.com/note/2021/11-11/16-02-09221.png](https://file.wulicode.com/note/2021/11-11/16-02-09221.png)
+! https://file.wulicode.com/note/2021/11-11/16-02-09221.png 
 
-![https://file.wulicode.com/note/2021/11-11/16-02-23599.png](https://file.wulicode.com/note/2021/11-11/16-02-23599.png)
+! https://file.wulicode.com/note/2021/11-11/16-02-23599.png 

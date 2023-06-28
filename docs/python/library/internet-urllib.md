@@ -4,7 +4,7 @@
 
 [urllib --- URL 处理模块](https://docs.python.org/zh-cn/3/library/urllib.html#module-urllib)
 
-[https://www.runoob.com/python3/python-urllib.html](https://www.runoob.com/python3/python-urllib.html)
+ https://www.runoob.com/python3/python-urllib.html 
 
 urllib 库用于操作网页 URL，并对网页的内容进行抓取处理
 

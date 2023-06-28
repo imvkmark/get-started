@@ -256,8 +256,8 @@ jdk 的位置 `/usr/local/Cellar/openjdk/`
 #### AdoptOpenJDK(废弃)
 
 > 该项目已经于 2021-08-01 起不再维护, 项目加入到 Eclipse 中, 新名称为 [Temurin](#temurin)
-> Old : [https://adoptopenjdk.net/](https://adoptopenjdk.net/)
-> New : [https://adoptium.net/temurin/](https://adoptium.net/temurin/)
+> Old :  https://adoptopenjdk.net/ 
+> New :  https://adoptium.net/temurin/ 
 
 卸载方式
 

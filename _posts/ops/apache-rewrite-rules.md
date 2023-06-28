@@ -88,9 +88,9 @@ URL重定向
 
 同时达到下面两个要求：
 
-1.用[http://www.zzz.com/xxx.php](http://www.zzz.com/xxx.php) 来访问 [http://www.zzz.com/xxx/](http://www.zzz.com/xxx/)
+1.用 http://www.zzz.com/xxx.php  来访问  http://www.zzz.com/xxx/ 
 
-2.用[http://yyy.zzz.com](http://yyy.zzz.com) 来访问 [http://www.zzz.com/user.php?username=yyy](http://www.zzz.com/user.php?username=yyy) 的功能
+2.用 http://yyy.zzz.com  来访问  http://www.zzz.com/user.php?username=yyy  的功能
 ```
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www.zzz.com
@@ -159,7 +159,7 @@ RewriteRule .*\.(jpg|jpeg|gif|png|rar|zip|txt|ace|torrent|gz|swf)$ http://www.xx
 ```
 
 ### Update May 7, 2009
-介绍一篇文章：[http://lamp.linux.gov.cn/Apache/ApacheMenu/mod/mod_rewrite.html](http://lamp.linux.gov.cn/Apache/ApacheMenu/mod/mod_rewrite.html)
+介绍一篇文章： http://lamp.linux.gov.cn/Apache/ApacheMenu/mod/mod_rewrite.html 
 
 ### Update May 24, 2009
 一、关于是否需要使用完全转义，比如在 `RewriteCond %{HTTP_REFERER} chinaz.com [NC]` 中 把 `chinaz.com` 改成 `chinaz\.com`

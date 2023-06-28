@@ -534,7 +534,7 @@ Azul Zulu 是Java标准版(“SE”)规范的开源实现。它是 OpenJDK 开�
 
 ### Apache ActiveMQ (Classic) (5.17.1)
 
-[https://activemq.apache.org/](https://activemq.apache.org/)
+ https://activemq.apache.org/ 
 
 ApacheActiveMQ® 是一种流行的开源、多协议、基于Java的消息代理。它支持行业标准协议，因此用户可以从各种语言和平台的客户选择中获益。从用JavaScript、C、C++、Python、.Net等编写的客户端进行连接。使用无处不在的AMQP协议集成您的多平台应用程序。使用基于WebSockets的
 STOMP 在您的Web应用程序之间交换消息。使用MQTT管理您的物联网设备。支持您现有的JMS基础设施和其他基础设施。ActiveMQ提供了支持任何消息传递用例的能力和灵活性。
@@ -545,7 +545,7 @@ STOMP 在您的Web应用程序之间交换消息。使用MQTT管理您的物联�
 
 ### Ant (1.10.13)
 
-[https://ant.apache.org/](https://ant.apache.org/)
+ https://ant.apache.org/ 
 
 ApacheAnt 是一个 Java
 库和命令行工具，其任务是将构建文件中描述的流程驱动为相互依赖的目标和扩展点。Ant的主要已知用法是构建Java应用程序。Ant提供了许多内置任务，允许编译、组装、测试和运行Java应用程序。Ant还可以有效地用于构建非Java应用程序，例如C或C++应用程序。更广泛地说，Ant可以用来引导任何类型的流程，这些流程可以用目标和任务来描述。
@@ -556,7 +556,7 @@ ApacheAnt 是一个 Java
 
 ### AsciidoctorJ (2.5.8)
 
-[http://asciidoctor.org/](http://asciidoctor.org/)
+ http://asciidoctor.org/ 
 
 AsciidoctorJ是用于在JVM上运行Asciidoctor的官方库。使用AsciidoctorJ，您可以转换AsciiDoc内容或分析从Java和其他JVM语言解析的AsciiDoc文档。
 
@@ -566,7 +566,7 @@ AsciidoctorJ是用于在JVM上运行Asciidoctor的官方库。使用AsciidoctorJ
 
 ### Ballerina (swan-lake-p3)
 
-[https://ballerina.io/](https://ballerina.io/)
+ https://ballerina.io/ 
 
 开源编程语言和平台，让云时代的应用程序程序员可以轻松编写能够正常工作的软件。
 
@@ -576,7 +576,7 @@ AsciidoctorJ是用于在JVM上运行Asciidoctor的官方库。使用AsciidoctorJ
 
 ### Bld (1.7.0)
 
-[https://rife2.com/bld](https://rife2.com/bld)
+ https://rife2.com/bld 
 
 BLD是一个构建系统，它允许您用纯Java编写构建逻辑。之所以创建BLD，是因为我们对构建工具并不真正感兴趣。我们用它们因为我们必须这样做，但我们更愿意继续编写真正的代码。
 
@@ -596,7 +596,7 @@ BPIPE是用于运行计算管道和工作流的框架
 
 ### BTrace (2.2.0)
 
-[https://github.com/btraceio/btrace](https://github.com/btraceio/btrace)
+ https://github.com/btraceio/btrace 
 
 BTrace是用于Java平台的安全、动态的跟踪工具。BTrace可用于动态跟踪正在运行的Java程序(类似于OpenSolaris的DTrace 应用程序和操作系统)。BTrace动态检测目标应用程序的类以注入字节码跟踪代码。
 
@@ -606,7 +606,7 @@ BTrace是用于Java平台的安全、动态的跟踪工具。BTrace可用于动�
 
 ### Concurnas (1.14.020)
 
-[https://concurnas.com/](https://concurnas.com/)
+ https://concurnas.com/ 
 
 ConcurNas是一种开源的JVM编程语言，旨在构建可靠、可扩展、高性能的并发、分布式和并行系统。
 
@@ -616,7 +616,7 @@ ConcurNas是一种开源的JVM编程语言，旨在构建可靠、可扩展、�
 
 ### ConnOR (1.4.1)
 
-[https://github.com/helpermethod/connor](https://github.com/helpermethod/connor)
+ https://github.com/helpermethod/connor 
 
 Connor 是 ConnectOffsetReset 的缩写，是用于重置 Kafka Connect 源连接器偏移量的命令行工具。
 
@@ -646,7 +646,7 @@ CUBA CLI 是一个开源命令行实用程序，使您能够轻松创建基于 C
 
 ### CXF (3.2.5)
 
-[https://cxf.apache.org/](https://cxf.apache.org/)
+ https://cxf.apache.org/ 
 
 ApacheCXF是一个开源服务框架。CXF帮助您使用前端编程API(如JAX-WS和JAX-RS)构建和开发服务。这些服务可以使用各种协议，如SOAP、XML/HTTP、REST 风格的
 HTTP或CORBA，并使用各种传输方式，如HTTP、JMS或JBI。
@@ -657,7 +657,7 @@ HTTP或CORBA，并使用各种传输方式，如HTTP、JMS或JBI。
 
 ### docToolchain (2.2.1)
 
-[https://doctoolchain.github.io/docToolchain/](https://doctoolchain.github.io/docToolchain/)
+ https://doctoolchain.github.io/docToolchain/ 
 
 DocToolchain 是软件体系结构的文档即代码方法的实现，外加一些额外的自动化。DocToolchain的基础是软件文档应与代码以及软件体系结构的arc42模板以相同的方式处理的哲学。
 
@@ -667,7 +667,7 @@ DocToolchain 是软件体系结构的文档即代码方法的实现，外加一�
 
 ### Flink (1.17.0)
 
-[https://flink.apache.org/](https://flink.apache.org/)
+ https://flink.apache.org/ 
 
 ApacheFlink是一个开源的、统一的流处理和批处理框架。它是一个分布式处理引擎，用于在无界和有界数据流。
 
@@ -679,7 +679,7 @@ ApacheFlink是一个开源的、统一的流处理和批处理框架。它是一
 
 ### Gaiden (1.3)
 
-[http://kobo.github.io/gaiden/](http://kobo.github.io/gaiden/)
+ http://kobo.github.io/gaiden/ 
 
 Gaiden 是一个使用Markdown轻松创建文档的工具。
 
@@ -689,7 +689,7 @@ Gaiden 是一个使用Markdown轻松创建文档的工具。
 
 ### Gradle (8.1.1)
 
-[http://gradle.org/](http://gradle.org/)
+ http://gradle.org/ 
 
 Gradle是一个构建自动化工具，它构建在ApacheAnt和ApacheMaven概念之上，并引入了一种基于Groovy的领域特定语言(DSL)
 而不是声明项目配置的更传统的XML形式。
@@ -702,7 +702,7 @@ Gradle使用有向无环图(DAG)来确定可以运行任务。
 
 ### Gradle profiler (0.19.0)
 
-[https://github.com/gradle/gradle-profiler](https://github.com/gradle/gradle-profiler)
+ https://github.com/gradle/gradle-profiler 
 
 为Gradle版本收集性能分析和基准测试信息的工具
 
@@ -712,7 +712,7 @@ Gradle使用有向无环图(DAG)来确定可以运行任务。
 
 ### Grails (5.3.2)
 
-[https://grails.org/](https://grails.org/)
+ https://grails.org/ 
 
 Grails是一个强大的Web框架，对于Java平台来说，由于约定重于配置，旨在提高开发人员的工作效率
 默认和固执己见的API。它与JVM顺利集成，允许您立即提高工作效率，同时提供强大的功能，包括集成的ORM、特定于域的语言、运行时和编译时元编程以及异步编程。
@@ -723,7 +723,7 @@ Grails是一个强大的Web框架，对于Java平台来说，由于约定重于�
 
 ### Groovy (4.0.12)
 
-[http://www.groovy-lang.org/](http://www.groovy-lang.org/)
+ http://www.groovy-lang.org/ 
 
 Groovy是一种强大的、可选类型的动态语言，具有静态类型和静态编译功能，用于Java平台，旨在实现开发人员的工作效率归功于简洁、熟悉和易于学习的语法。它与任何Java程序顺利集成，并立即交付给您的应用程序强大的功能，包括脚本编写功能、领域特定语言创作、运行时和编译时元编程以及功能编程。
 
@@ -733,7 +733,7 @@ Groovy是一种强大的、可选类型的动态语言，具有静态类型和�
 
 ### GroovyServ (1.2.0)
 
-[https://kobo.github.io/groovyserv/](https://kobo.github.io/groovyserv/)
+ https://kobo.github.io/groovyserv/ 
 
 GroovyServ显著减少了运行Groovy的JVM的启动时间。这取决于您的环境，但在大多数情况下，速度要快10到20倍 而不是普通的Groovy。
 
@@ -743,7 +743,7 @@ GroovyServ显著减少了运行Groovy的JVM的启动时间。这取决于您的�
 
 ### hadoop (3.3.5)
 
-[https://hadoop.apache.org/](https://hadoop.apache.org/)
+ https://hadoop.apache.org/ 
 
 ApacheHadoop™®项目为可靠、可扩展的分布式计算开发了开源软件，它是一个支持分布式处理的框架使用简单的编程模型跨计算机集群的大型数据集。它旨在从单台服务器扩展到数千台机器，每台机器提供本地计算和存储。
 
@@ -763,7 +763,7 @@ Helidon CLI 允许您通过从一组原型中选择来轻松创建一个 Helidon
 
 ### http4k (4.0.0.0)
 
-[http://http4k.org/](http://http4k.org/)
+ http://http4k.org/ 
 
 Http4k 是用 Kotlin 构建HTTP应用程序的功能工具包
 
@@ -773,7 +773,7 @@ Http4k 是用 Kotlin 构建HTTP应用程序的功能工具包
 
 ### Infrastructor (0.3.1)
 
-[http://infrastructor.io/](http://infrastructor.io/)
+ http://infrastructor.io/ 
 
 Infrastructor 是一个用Groovy编写的开源服务器配置工具
 
@@ -783,7 +783,7 @@ Infrastructor 是一个用Groovy编写的开源服务器配置工具
 
 ### Jarviz (0.3.0)
 
-[https://github.com/kordamp/jarviz](https://github.com/kordamp/jarviz)
+ https://github.com/kordamp/jarviz 
 Jarviz是一个JAR分析器工具。您可以从JAR获取元数据，如清单、清单条目、字节码版本、声明性服务等。
 
 `$ sdk install jarviz`
@@ -792,7 +792,7 @@ Jarviz是一个JAR分析器工具。您可以从JAR获取元数据，如清单�
 
 ### JBake (2.6.7)
 
-[http://jbake.org/](http://jbake.org/)
+ http://jbake.org/ 
 
 JBake 是一个面向开发人员和设计人员的基于Java的、开源的静态站点/博客生成器。
 
@@ -802,7 +802,7 @@ JBake 是一个面向开发人员和设计人员的基于Java的、开源的静�
 
 ### JBang (0.107.0)
 
-[http://github.com/maxandersen/jbang/](http://github.com/maxandersen/jbang/)
+ http://github.com/maxandersen/jbang/ 
 
 JBang 使得使用 Java 编写脚本变得很容易。它允许您使用单个文件进行代码和依赖项管理，并允许您直接运行它。
 
@@ -812,7 +812,7 @@ JBang 使得使用 Java 编写脚本变得很容易。它允许您使用单个�
 
 ### JDK Mission Control (8.1.1.51-zulu)
 
-[https://www.oracle.com/java/technologies/jdk-mission-control.html](https://www.oracle.com/java/technologies/jdk-mission-control.html)
+ https://www.oracle.com/java/technologies/jdk-mission-control.html 
 
 
 Java Flight Recorder 和 JDK Mission Control 共同创建了一个完整的工具链，以持续收集低级和详细的运行时信息，使 事后事件分析。JDK任务控制是一套高级工具，可以对大量数据进行高效和详细的分析由
@@ -824,7 +824,7 @@ Java Flight Recorder 收集。该工具链使开发人员和管理员能够从�
 
 ### Apache JMeter (5.5)
 
-[https://jmeter.apache.org/](https://jmeter.apache.org/)
+ https://jmeter.apache.org/ 
 
 ApacheJMeter™应用程序是开源软件，是一个100%纯Java应用程序，旨在加载测试功能行为和测量性能。确实是最初是为测试Web应用程序而设计的，但后来扩展到了其他测试功能。
 
@@ -834,7 +834,7 @@ ApacheJMeter™应用程序是开源软件，是一个100%纯Java应用程序，
 
 ### Joern (1.1.997)
 
-[https://joern.io/](https://joern.io/)
+ https://joern.io/ 
 
 Joern是一个用于分析源代码、字节码和二进制可执行文件的平台。它生成代码属性图(CPG)
 ，这是代码的图形表示跨语言代码分析。代码属性图存储在自定义图形数据库中。这允许使用在基于Scala的领域特定查询语言。开发Joern的目标是为静态漏洞发现和研究提供有用的工具程序分析。
@@ -855,7 +855,7 @@ JReleaser是一款面向Java项目的发布自动化工具。它的目标是简�
 
 ### Karaf (4.2.8)
 
-[https://karaf.apache.org/](https://karaf.apache.org/)
+ https://karaf.apache.org/ 
 
 ApacheKaraf是一个多态、轻量级、功能强大的企业级应用程序运行时。它为您提供所有生态系统和引导选项对您的应用程序的需求。它在本地或云上运行。多态是指Karaf可以托管任何类型的应用程序：WAR、OSGi、Spring等等更多。
 
@@ -865,7 +865,7 @@ ApacheKaraf是一个多态、轻量级、功能强大的企业级应用程序运
 
 ### kcctl (1.0.0.Beta3)
 
-[https://github.com/kcctl/kcctl](https://github.com/kcctl/kcctl)
+ https://github.com/kcctl/kcctl 
 
 一个现代、直观的Kafka Connect命令行客户端。依靠kubectl的习惯用法和语义，它允许您注册和检查连接器，删除它们、重新启动它们等。
 
@@ -875,7 +875,7 @@ ApacheKaraf是一个多态、轻量级、功能强大的企业级应用程序运
 
 ### ki (0.5.2)
 
-[https://github.com/Kotlin/kotlin-interactive-shell](https://github.com/Kotlin/kotlin-interactive-shell)
+ https://github.com/Kotlin/kotlin-interactive-shell 
 
 Kotlin REPL的可扩展实现，具有丰富的功能集，包括自动完成、语法突出显示、类型推理和maven依赖。
 
@@ -895,7 +895,7 @@ Kobweb是一个建立在Compose for Web之上的固有的Kotlin Web框架。CLI�
 
 ### Kotlin (1.8.20)
 
-[https://kotlinlang.org/](https://kotlinlang.org/)
+ https://kotlinlang.org/ 
 
 Kotlin是一种运行在Java虚拟机上的静态类型编程语言，也可以编译为 JavaScript 源代码。
 
@@ -905,7 +905,7 @@ Kotlin是一种运行在Java虚拟机上的静态类型编程语言，也可以�
 
 ### kscript (4.2.2)
 
-[https://github.com/holgerbrandl/kscript](https://github.com/holgerbrandl/kscript)
+ https://github.com/holgerbrandl/kscript 
 
 在基于 *NIX 的系统上增强了对Kotlin的脚本支持。KSCRIPT提供了一种易于使用、非常灵活且几乎零开销的编写解决方案使用Kotlin的自含式微型应用程序。
 
@@ -915,7 +915,7 @@ Kotlin是一种运行在Java虚拟机上的静态类型编程语言，也可以�
 
 ### ktlint (Coming soon!)
 
-[https://github.com/pinterest/ktlint](https://github.com/pinterest/ktlint)
+ https://github.com/pinterest/ktlint 
 
 Ktlint 是一个 anti-bikeshedding 的 Kotlin Lintert，内置了格式化程序。
 
@@ -925,7 +925,7 @@ Ktlint 是一个 anti-bikeshedding 的 Kotlin Lintert，内置了格式化程序
 
 ### ktx (0.1.2)
 
-[https://github.com/mpetuska/ktx](https://github.com/mpetuska/ktx)
+ https://github.com/mpetuska/ktx 
 
 用于Kotlin和JVM的npx！安装和执行JAR或Kotlin脚本，就像安装和执行任何其他命令行实用程序一样。
 
@@ -935,7 +935,7 @@ Ktlint 是一个 anti-bikeshedding 的 Kotlin Lintert，内置了格式化程序
 
 ### Layrry (1.0.0.Final)
 
-[https://github.com/moditect/layrry/](https://github.com/moditect/layrry/)
+ https://github.com/moditect/layrry/ 
 
 Layrry-模块化Java应用程序的启动器和API。它允许基于Maven构件坐标(模块化)要包括的 jar 包。Layrry 利用 Java 模块系统的模块层概念，允许在应用程序同时运行，以及在应用程序运行时动态添加和删除模块。
 
@@ -945,7 +945,7 @@ Layrry-模块化Java应用程序的启动器和API。它允许基于Maven构件�
 
 ### Leiningen (2.10.0-1)
 
-[http://leiningen.org/](http://leiningen.org/)
+ http://leiningen.org/ 
 
 Leiningen 是使用 Clojure的最简单方式。它侧重于项目自动化和声明性配置，不会妨碍您的工作，让您可以专注于你的密码。
 
@@ -955,7 +955,7 @@ Leiningen 是使用 Clojure的最简单方式。它侧重于项目自动化和�
 
 ### Maven (3.9.2)
 
-[https://maven.apache.org/](https://maven.apache.org/)
+ https://maven.apache.org/ 
 
 ApacheMaven是一个软件项目管理和理解工具。基于项目对象模型(POM)的概念，Maven可以管理项目的构建，来自中心信息的报告和文档。
 
@@ -965,7 +965,7 @@ ApacheMaven是一个软件项目管理和理解工具。基于项目对象模型
 
 ### MCS (0.3.4)
 
-[https://github.com/mthmulders/mcs](https://github.com/mthmulders/mcs)
+ https://github.com/mthmulders/mcs 
 
 从命令行搜索Maven中央存储库！使用MCS，您可以找到构件并生成所需的pom.xml片段，以便直接用在Maven项目
 
@@ -975,7 +975,7 @@ ApacheMaven是一个软件项目管理和理解工具。基于项目对象模型
 
 ### Micronaut (3.9.1)
 
-[http://micronaut.io/](http://micronaut.io/)
+ http://micronaut.io/ 
 
 Microronaut是一个用于JVM的开源微服务框架
 
@@ -985,7 +985,7 @@ Microronaut是一个用于JVM的开源微服务框架
 
 ### Mule Flow Diagrams (0.11.0)
 
-[https://github.com/manikmagar/mule-flow-diagrams/](https://github.com/manikmagar/mule-flow-diagrams/)
+ https://github.com/manikmagar/mule-flow-diagrams/ 
 
 Mule流程图是一个开源工具，它允许您为Mule配置生成流依赖图和图。
 
@@ -995,7 +995,7 @@ Mule流程图是一个开源工具，它允许您为Mule配置生成流依赖图
 
 ### Maven Daemon (1.0-m6-m39)
 
-[https://github.com/apache/maven-mvnd](https://github.com/apache/maven-mvnd)
+ https://github.com/apache/maven-mvnd 
 
 Mvnd项目旨在为基于maven的构建提供守护程序基础设施。它借鉴了Gradle和Takari的技术，提供了一种简单高效的系统。
 
@@ -1005,7 +1005,7 @@ Mvnd项目旨在为基于maven的构建提供守护程序基础设施。它借�
 
 ### MyBatis Migrations (3.3.11)
 
-[https://mybatis.org/migrations/](https://mybatis.org/migrations/)
+ https://mybatis.org/migrations/ 
 
 MyBatis架构迁移系统(简称MyBatis Migrations)寻求为任何数据库(新的或现有的)提供数据库迁移，并使数据库的当前状态易于访问和理解。安装此候选程序提供了用于管理数据库迁移的迁移命令
 
@@ -1015,7 +1015,7 @@ MyBatis架构迁移系统(简称MyBatis Migrations)寻求为任何数据库(新�
 
 ### Neo4j-Migrations (2.3.1)
 
-[https://neo4j.com/labs/neo4j-migrations/](https://neo4j.com/labs/neo4j-migrations/)
+ https://neo4j.com/labs/neo4j-migrations/ 
 
 Neo4j-Migrations是一个数据库迁移和重构工具，它允许在受控和可重复的环境中运行Cypher脚本和编程重构针对一个或多个Neo4j数据库的特性。
 
@@ -1025,7 +1025,7 @@ Neo4j-Migrations是一个数据库迁移和重构工具，它允许在受控和�
 
 ### Pierrot (0.10.7)
 
-[https://agorapulse.github.io/pierrot/](https://agorapulse.github.io/pierrot/)
+ https://agorapulse.github.io/pierrot/ 
 
 Pierrot可以帮助您使用单个命令管理多个GitHub存储库。
 
@@ -1035,7 +1035,7 @@ Pierrot可以帮助您使用单个命令管理多个GitHub存储库。
 
 ### Pomchecker (1.9.0)
 
-[https://github.com/kordamp/pomchecker/](https://github.com/kordamp/pomchecker/)
+ https://github.com/kordamp/pomchecker/ 
 
 Pomchecker-检查POM文件是否符合发布到 Maven Central 所需的最低规则。它还可以检查POM表是否为有效的BOM表文件。
 
@@ -1055,7 +1055,7 @@ Quarkus是一个Kubernetes Native Java框架，专为OpenJDK HotSpot和GraalVM�
 
 ### sbt (1.8.3)
 
-[http://www.scala-sbt.org/](http://www.scala-sbt.org/)
+ http://www.scala-sbt.org/ 
 
 SBT是用于Scala和Java项目的开源构建工具，类似于Java的Maven或Ant。它的主要特点是：本机支持编译Scala代码和与许多Scala测试框架集成；使用DSL构建用Scala编写的描述；使用Ivy(
 支持Maven格式)进行依赖管理存储库)；持续编译、测试和部署；与Scala解释器集成以实现快速迭代和调试；支持混合Java/Scala项目
@@ -1066,7 +1066,7 @@ SBT是用于Scala和Java项目的开源构建工具，类似于Java的Maven或An
 
 ### Scala (3.2.2)
 
-[http://www.scala-lang.org/](http://www.scala-lang.org/)
+ http://www.scala-lang.org/ 
 
 Scala是一种面向一般软件应用程序的编程语言。Scala完全支持函数式编程和非常强大的静态类型系统。这允许用Scala编写的程序非常简洁，因此比其他通用编程语言的大小更小。Scala源代码旨在编译成Java字节码，这样得到的可执行代码就可以在Java虚拟机上运行。Java库可以直接在Scala代码中使用反过来说。Scala是面向对象的，并使用花括号语法。Scala具有函数式编程语言的许多特性，包括Currying、类型推理不变性、惰性求值和模式匹配。它还具有支持代数数据类型、协方差和逆方差的高级类型系统，高阶类型和匿名类型。Scala的其他特性包括操作符重载、可选参数、命名参数、原始字符串和不进行检查异常。
 
@@ -1096,7 +1096,7 @@ SchemaCrawler是一个免费的数据库模式发现和理解工具。SchemaCraw
 
 ### Skeletal (0.15.0)
 
-[https://github.com/cbmarcum/skeletal](https://github.com/cbmarcum/skeletal)
+ https://github.com/cbmarcum/skeletal 
 
 Skeletal 是一个工具，它允许您为该工具具有模板的任何框架或库创建新的项目结构。
 
@@ -1106,7 +1106,7 @@ Skeletal 是一个工具，它允许您为该工具具有模板的任何框架�
 
 ### Spark (3.3.2)
 
-[https://spark.apache.org/](https://spark.apache.org/)
+ https://spark.apache.org/ 
 
 ApacheSpark是一个开源的集群计算框架。Spark提供了一个使用隐式数据并行性对整个集群进行编程的接口，并且容错。
 
@@ -1116,7 +1116,7 @@ ApacheSpark是一个开源的集群计算框架。Spark提供了一个使用隐�
 
 ### Spring Boot (3.1.0)
 
-[http://projects.spring.io/spring-boot/](http://projects.spring.io/spring-boot/)
+ http://projects.spring.io/spring-boot/ 
 
 Spring Boot 对构建可投入生产的 Spring应用程序持不变的看法。它更倾向于约定而不是配置，旨在让你运行起来跑得越快越好。
 
@@ -1126,7 +1126,7 @@ Spring Boot 对构建可投入生产的 Spring应用程序持不变的看法。�
 
 ### Sshoogr (0.9.25)
 
-[https://github.com/aestasit/sshoogr](https://github.com/aestasit/sshoogr)
+ https://github.com/aestasit/sshoogr 
 
 Shoogr是一个基于Groovy的DSL和命令行工具，用于通过 SSH 处理远程服务器
 
@@ -1146,7 +1146,7 @@ Taxi 是一种用于记录数据(如数据模型)和API合同的语言。它以�
 
 ### Apache Tomcat (10.1.8)
 
-[https://tomcat.apache.org/](https://tomcat.apache.org/)
+ https://tomcat.apache.org/ 
 
 ApacheTomcat® 软件是 Java Servlet、Java Server Pages、Java Expression Language 和Java WebSocket技术的开源实现。
 
@@ -1156,7 +1156,7 @@ ApacheTomcat® 软件是 Java Servlet、Java Server Pages、Java Expression Lang
 
 ### ToolKit (0.6.7)
 
-[https://github.com/IoT-Technology/IoT-Toolkit](https://github.com/IoT-Technology/IoT-Toolkit)
+ https://github.com/IoT-Technology/IoT-Toolkit 
 
 ToolKit 是一个客户端命令行工具，支持多种物联网协议，如MQTT和COAP。它为物联网开发提供了命令行客户端工具。
 
@@ -1166,7 +1166,7 @@ ToolKit 是一个客户端命令行工具，支持多种物联网协议，如MQT
 
 ### Vert.x (4.4.0)
 
-[http://vertx.io/](http://vertx.io/)
+ http://vertx.io/ 
 
 Vert.x是用于在JVM上构建反应式应用程序的工具包。
 
@@ -1176,7 +1176,7 @@ Vert.x是用于在JVM上构建反应式应用程序的工具包。
 
 ### VisualVM (2.1.6)
 
-[https://visualvm.github.io/](https://visualvm.github.io/)
+ https://visualvm.github.io/ 
 
 VisualVM是一个提供可视化界面的工具，用于在Java虚拟机上运行Java应用程序时查看有关这些应用程序的详细信息。
 
@@ -1186,7 +1186,7 @@ VisualVM是一个提供可视化界面的工具，用于在Java虚拟机上运�
 
 ### Webtau (1.53)
 
-[https://github.com/testingisdocumenting/webtau](https://github.com/testingisdocumenting/webtau)
+ https://github.com/testingisdocumenting/webtau 
 
 Webtau(Web测试自动化的缩写)是一个测试API、命令行工具和一个编写单元、集成和端到端测试的框架。测试可以跨越多个应用层，如REST-API、 Graph
 QL、浏览器、数据库和CLI。一组一致的匹配器和测试概念适用于所有测试层。
@@ -1199,7 +1199,7 @@ QL、浏览器、数据库和CLI。一组一致的匹配器和测试概念适用
 
 ### Znai (1.51.1)
 
-[https://github.com/testingisdocumenting/znai](https://github.com/testingisdocumenting/znai)
+ https://github.com/testingisdocumenting/znai 
 
 使用 Znai 构建实用的、可维护的、美观的用户指南。即时页面导航。本地搜索。多种集成以与Python、Java、 OpenAPI等。将入门部分转换为幻灯片，供您的研讨会使用。使用自行部署的
 Znai 中心管理多个文档。

@@ -14,7 +14,7 @@ categories :
 
 安装之后可以使用 `ctrl + cmd + v` 来将图片直接粘贴到阿里云并把地址复制到 vscode 中
 
-![](https://file.wulicode.com/static/paste-ali-oss/save-to.gif#id=fEPsW&originHeight=360&originWidth=640&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/static/paste-ali-oss/save-to.gif)
 
 ## 本地图片粘贴 [Paste Image]
 
@@ -46,17 +46,17 @@ categories :
 
 1). 查找是否安装中文插件
 
-![](https://file.wulicode.com/note/2021/10-23/15-25-09834.png#id=qhHIj&originHeight=304&originWidth=609&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/10-23/15-25-09834.png)
 
 2). 设置选择中文语言
 
 打开 `View -> Command Palette` 搜索 `Configure Display Language`, 选择 `zh-cn`
 
-![](https://file.wulicode.com/note/2021/10-23/15-25-20940.png#id=d198D&originHeight=497&originWidth=985&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/10-23/15-25-20940.png)
 
 3. 重启, 这样显示便是中文了
 
-![](https://file.wulicode.com/note/2021/10-23/15-25-30935.png#id=iUvZ5&originHeight=419&originWidth=620&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/10-23/15-25-30935.png)
 
 ### code runner
 

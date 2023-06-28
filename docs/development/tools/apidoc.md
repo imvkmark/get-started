@@ -1,7 +1,7 @@
 # 使用 ApiDoc 编写接口文档
 
 [apidoc](http://apidocjs.com/)是一个 API 文档生成工具, apidoc 可以根据代码注释生成 web api 文档, apidoc 从注释生成静态 html 网页文档，不仅支持项目版本号，还支持
-api 版本号, 项目约定使用此工具来生成接口文档<br />DemoUrl : [https://i.wulicode.com/docs/web/](https://i.wulicode.com/docs/web/)
+api 版本号, 项目约定使用此工具来生成接口文档<br />DemoUrl :  https://i.wulicode.com/docs/web/ 
 
 ## 安装
 

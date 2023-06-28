@@ -19,7 +19,7 @@ Clockwork 是个很帅的工具, 他能运行在任何服务端的平台/框架,
 
 **下载安装**
 
-作为另外一种替代方式, 你可以使用最古老的方式来下载 或者 克隆 `[https://github.com/itsgoingd/clockwork/](https://github.com/itsgoingd/clockwork/)` 来安装
+作为另外一种替代方式, 你可以使用最古老的方式来下载 或者 克隆 ` https://github.com/itsgoingd/clockwork/ ` 来安装
 
 ## Part.2: 和 Web App 集成
 

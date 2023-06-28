@@ -25,13 +25,13 @@ yum --enablerepo=$repo update php
 ## 常用 repo 源
 
 ### 阿里云
-[http://mirrors.aliyun.com/repo/](http://mirrors.aliyun.com/repo/)
+ http://mirrors.aliyun.com/repo/ 
 
 **地址列表**
 
-- 5 [http://mirrors.aliyun.com/repo/Centos-5.repo](http://mirrors.aliyun.com/repo/Centos-5.repo)
-- 6 [http://mirrors.aliyun.com/repo/Centos-6.repo](http://mirrors.aliyun.com/repo/Centos-6.repo)
-- 7 [http://mirrors.aliyun.com/repo/Centos-7.repo](http://mirrors.aliyun.com/repo/Centos-7.repo)
+- 5  http://mirrors.aliyun.com/repo/Centos-5.repo 
+- 6  http://mirrors.aliyun.com/repo/Centos-6.repo 
+- 7  http://mirrors.aliyun.com/repo/Centos-7.repo 
 
 ```
 cd /etc/yum.repos.d
@@ -40,21 +40,21 @@ wget http://mirrors.aliyun.com/repo/Centos-7.repo
 
 
 ### 163
-centos 帮助文件 [http://mirrors.163.com/.help/centos.html](http://mirrors.163.com/.help/centos.html)
+centos 帮助文件  http://mirrors.163.com/.help/centos.html 
 
-镜像列表 [http://mirrors.163.com/](http://mirrors.163.com/)
+镜像列表  http://mirrors.163.com/ 
 
 **地址列表**
 
-- [http://mirrors.163.com/.help/CentOS5-Base-163.repo](http://mirrors.163.com/.help/CentOS5-Base-163.repo)
-- [http://mirrors.163.com/.help/CentOS6-Base-163.repo](http://mirrors.163.com/.help/CentOS6-Base-163.repo)
-- [http://mirrors.163.com/.help/CentOS7-Base-163.repo](http://mirrors.163.com/.help/CentOS7-Base-163.repo)
+-  http://mirrors.163.com/.help/CentOS5-Base-163.repo 
+-  http://mirrors.163.com/.help/CentOS6-Base-163.repo 
+-  http://mirrors.163.com/.help/CentOS7-Base-163.repo 
 
 
 ### remi 源
 
 #### 说明
-[https://rpms.remirepo.net/](https://rpms.remirepo.net/) 是包含最新版本 PHP 和 MySQL 包的 Linux 源，由 Remi 提供维护。有个这个源之后，使用 YUM 安装或更新 PHP、MySQL、phpMyAdmin 等服务器相关程序的时候就非常方便了。地址可以在页面上复制找到
+ https://rpms.remirepo.net/  是包含最新版本 PHP 和 MySQL 包的 Linux 源，由 Remi 提供维护。有个这个源之后，使用 YUM 安装或更新 PHP、MySQL、phpMyAdmin 等服务器相关程序的时候就非常方便了。地址可以在页面上复制找到
 
 
 #### 安装 Remi 源
@@ -79,7 +79,7 @@ yum --enablerepo=remi upgrade php
 ### rpmforge
 rpmforge 有我們常常用的 rsync 最新版
 
-地址 : [http://pkgs.repoforge.org/rpmforge-release/](http://pkgs.repoforge.org/rpmforge-release/)
+地址 :  http://pkgs.repoforge.org/rpmforge-release/ 
 
 **更新**
 

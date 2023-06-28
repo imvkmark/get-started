@@ -10,13 +10,13 @@
 
 基于PHP的yaml库
 
-[https://code.google.com/p/php-yaml/](https://code.google.com/p/php-yaml/)
+ https://code.google.com/p/php-yaml/ 
 
 这个版本的处理器比 纯 php 解决方案要快
 
 基于PHP的解决方案
 
-[https://github.com/mustangostang/spyc](https://github.com/mustangostang/spyc)
+ https://github.com/mustangostang/spyc 
 
 **配置**
 

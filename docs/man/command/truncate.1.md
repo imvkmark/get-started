@@ -50,5 +50,5 @@ truncate OPTION... FILE...
 ```
 
 > 参考
-> - [https://linux.die.net/man/1/truncate](https://linux.die.net/man/1/truncate)
+> -  https://linux.die.net/man/1/truncate 
 

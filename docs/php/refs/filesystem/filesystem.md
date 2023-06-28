@@ -32,7 +32,7 @@ PHP_INI_ALL 当设置为ON是,php将检测行的结束符符合那种操作系�
 
 返回路径中的文件名部分 - $suffix 需要去除的后缀名
 
-![https://file.wulicode.com/note/2021/11-11/16-00-26811.png](https://file.wulicode.com/note/2021/11-11/16-00-26811.png)
+! https://file.wulicode.com/note/2021/11-11/16-00-26811.png 
 
 `bool chgrp ( string $filename , mixed $group )`
 
@@ -146,7 +146,7 @@ PHP_INI_ALL 当设置为ON是,php将检测行的结束符符合那种操作系�
 
 取得文件的类型, 可能的值有 fifo, char, dir, block, link, file, unknown
 
-![https://file.wulicode.com/note/2021/11-11/16-00-35902.png](https://file.wulicode.com/note/2021/11-11/16-00-35902.png)
+! https://file.wulicode.com/note/2021/11-11/16-00-35902.png 
 
 `bool flock ( int $handle , int $operation [, int &$wouldblock ] )`
 
@@ -301,7 +301,7 @@ LOCK_SH 共享锁定(读取) LOCK_EX 独占锁定(写入) LOCK_UN 释放锁定
 
 返回文件路径的信息 - $options PATHINFO_DIRNAME 文件目录 PATHINFO_BASENAME 基础名称 PATHINFO_EXTENSION 扩展
 
-![https://file.wulicode.com/note/2021/11-11/16-00-46079.png](https://file.wulicode.com/note/2021/11-11/16-00-46079.png)
+! https://file.wulicode.com/note/2021/11-11/16-00-46079.png 
 
 `int pclose ( resource $handle )`
 

@@ -69,7 +69,7 @@ $Xpath = new DOMXPath($Dom);
 $Xpath->query('//p');
 ```
 
-这个 `$html`在 [https://validator.w3.org/](https://validator.w3.org/) 中进行验证会有如下错误
+这个 `$html`在  https://validator.w3.org/  中进行验证会有如下错误
 > No `p` element in scope but a `p` end tag seen.
 
 ![image.png](https://file.wulicode.com/yuque/202211/02/12/55119xqEs27y.png?x-oss-process=image/resize,h_387)

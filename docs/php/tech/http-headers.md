@@ -99,7 +99,7 @@ PHP CGI 模式下的重定向状态, 使用 `--enable-cgi-redirect` 开启, 默�
 
 - `PHP_SELF` : 'index.php'
 
-当前执行脚本的文件名，与 document root 有关。例如，在地址为 `[http://example.com/test.php/foo.bar](http://example.com/test.php/foo.bar)`
+当前执行脚本的文件名，与 document root 有关。例如，在地址为 ` http://example.com/test.php/foo.bar `
 的脚本中使用 `$_SERVER['PHP_SELF']` 将得到 /test.php/foo.bar。`__FILE__` 常量包含当前(例如包含)
 
 文件的完整路径和文件名。
@@ -150,7 +150,7 @@ On 来定义 PATH_INFO。
 - `PATH_INFO`
 
 包含由客户端提供的、跟在真实脚本名称之后并且在查询语句（query string）之前的路径信息，如果存在的话。例如，如果当前脚本是通过
-URL `[http://www.example.com/php/path_info.php/some/stuff?foo=bar](http://www.example.com/php/path_info.php/some/stuff?foo=bar)`
+URL ` http://www.example.com/php/path_info.php/some/stuff?foo=bar `
 
 被访问，那么 `$_SERVER['PATH_INFO']` 将包含 /some/stuff。
 

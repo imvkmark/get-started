@@ -73,7 +73,7 @@ PHP 的 Windows 版本已内建对此扩展的支持
 
 preg_quote()需要参数 str 并向其中 每个正则表达式语法中的字符前增加一个反斜线。 这通常用于你有一些运行时字符串 需要作为正则表达式进行匹配的时候。
 
-![https://file.wulicode.com/note/2021/11-11/15-57-16384.png](https://file.wulicode.com/note/2021/11-11/15-57-16384.png)
+! https://file.wulicode.com/note/2021/11-11/15-57-16384.png 
 
 `mixed preg_replace_callback ( mixed $pattern , callable $callback , mixed $subject [, int $limit = -1 [, int &$count ]] )`
 

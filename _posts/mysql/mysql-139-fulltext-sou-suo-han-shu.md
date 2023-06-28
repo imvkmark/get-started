@@ -1553,7 +1553,7 @@ apt-get install mecab-ipadic
 If you want to build `mecab` and `mecab-ipadic` from source, basic installation steps are provided below. For additional information, refer to the MeCab documentation.
 
 1. 
-Download the tar.gz packages for `mecab` and `mecab-ipadic` from [http://taku910.github.io/mecab/#download](http://taku910.github.io/mecab/#download). As of February, 2016, the latest available packages are `mecab-0.996.tar.gz` and `mecab-ipadic-2.7.0-20070801.tar.gz`.
+Download the tar.gz packages for `mecab` and `mecab-ipadic` from  http://taku910.github.io/mecab/#download . As of February, 2016, the latest available packages are `mecab-0.996.tar.gz` and `mecab-ipadic-2.7.0-20070801.tar.gz`.
 
 2. 
 Install `mecab`:

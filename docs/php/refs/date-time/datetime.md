@@ -312,7 +312,7 @@ DatePeriod implements Traversable {
 
 Sample:
 
-![https://file.wulicode.com/note/2021/11-11/15-59-30547.png](https://file.wulicode.com/note/2021/11-11/15-59-30547.png)
+! https://file.wulicode.com/note/2021/11-11/15-59-30547.png 
 
 `bool checkdate ( int $month , int $day , int $year )`
 
@@ -411,7 +411,7 @@ $timestamp  默认是现在时间
 [0]       => 1055901520       unix时间戳
 ```
 
-![https://file.wulicode.com/note/2021/11-11/15-59-41150.png](https://file.wulicode.com/note/2021/11-11/15-59-41150.png)
+! https://file.wulicode.com/note/2021/11-11/15-59-41150.png 
 
 `mixed gettimeofday ([ bool $return_float ] )`
 
@@ -424,7 +424,7 @@ $timestamp  默认是现在时间
 [dsttime] => 1               夏时令校正的类型
 ```
 
-![https://file.wulicode.com/note/2021/11-11/15-59-52176.png](https://file.wulicode.com/note/2021/11-11/15-59-52176.png)
+! https://file.wulicode.com/note/2021/11-11/15-59-52176.png 
 
 `string gmdate ( string $format [, int $timestamp ] )`
 
@@ -464,7 +464,7 @@ $format    只接受一个字符作为format参数.
 [tm_isdst] => 1
 ```
 
-![https://file.wulicode.com/note/2021/11-11/16-00-07003.png](https://file.wulicode.com/note/2021/11-11/16-00-07003.png)
+! https://file.wulicode.com/note/2021/11-11/16-00-07003.png 
 
 `mixed microtime ([ bool $get_as_float ] )`
 

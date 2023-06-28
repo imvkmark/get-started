@@ -36,7 +36,7 @@ PHP_URL_SCHEME (integer) PHP_URL_HOST (integer) PHP_URL_PORT (integer) PHP_URL_U
 
 本函数解析一个 URL 并返回一个关联数组，包含在 URL 中出现的各种组成部分。
 
-![https://file.wulicode.com/note/2021/11-11/15-55-45998.png](https://file.wulicode.com/note/2021/11-11/15-55-45998.png)
+! https://file.wulicode.com/note/2021/11-11/15-55-45998.png 
 
 `string rawurldecode ( string $str )`
 

@@ -42,7 +42,7 @@ sudo cp phpstorm.desktop /usr/share/applications
 ```
 ４. 之后便可以在启动器中搜索到该程序， 同样锁定之后也可以在启动栏中打开这个程序了。
 
-由于phpstorm10 更改了验证机制， 之前的注册码不能使用了。 请点击 [http://idea.lanyus.com/](http://idea.lanyus.com/) 来使用。
+由于phpstorm10 更改了验证机制， 之前的注册码不能使用了。 请点击  http://idea.lanyus.com/  来使用。
 
 ![](https://file.wulicode.com/yuque/202208/04/14/4849ybjzTzMv.jpg?x-oss-process=image/resize,h_412)
 

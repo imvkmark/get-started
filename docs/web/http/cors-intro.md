@@ -46,8 +46,8 @@ http://www.a.com/b.js 不同域名 不允许
 ## 2. 通过document.domain跨域
 
 >
-前面说过了，浏览器有一个同源策略，其限制之一是不能通过ajax的方法去请求不同源中的文档。第二个限制是浏览器中不同域的框架之间是不能进行js的交互操作的。不同的框架之间是可以获取window对象的，但却无法获取相应的属性和方法。比如，有一个页面，它的地址是[http://www.damonare.cn/a.html](http://www.damonare.cn/a.html) ，
-在这个页面里面有一个iframe，它的src是[http://damonare.cn/b.html](http://damonare.cn/b.html), 很显然，这个页面与它里面的iframe框架是不同域的，所以我们是无法通过在页面中书写js代码来获取iframe中的东西的：
+前面说过了，浏览器有一个同源策略，其限制之一是不能通过ajax的方法去请求不同源中的文档。第二个限制是浏览器中不同域的框架之间是不能进行js的交互操作的。不同的框架之间是可以获取window对象的，但却无法获取相应的属性和方法。比如，有一个页面，它的地址是 http://www.damonare.cn/a.html  ，
+在这个页面里面有一个iframe，它的src是 http://damonare.cn/b.html , 很显然，这个页面与它里面的iframe框架是不同域的，所以我们是无法通过在页面中书写js代码来获取iframe中的东西的：
 
 ```
 <script type="text/javascript">
@@ -61,11 +61,11 @@ http://www.a.com/b.js 不同域名 不允许
 <iframe src="http://damonare.cn/b.html" ></iframe>
 ```
 
-> 这个时候，document.domain就可以派上用场了，我们只要把[http://www.damonare.cn/a.html](http://www.damonare.cn/a.html)
-> 和 [http://damonare.cn/b.html](http://damonare.cn/b.html)
+> 这个时候，document.domain就可以派上用场了，我们只要把 http://www.damonare.cn/a.html 
+> 和  http://damonare.cn/b.html 
 > 这两个页面的document.domain都设成相同的域名就可以了。但要注意的是，document.domain的设置是有限制的，我们只能把document.domain设置成自身或更高一级的父域，且主域必须相同。
 
-- 在页面[http://www.damonare.cn/a.html](http://www.damonare.cn/a.html) 中设置document.domain:
+- 在页面 http://www.damonare.cn/a.html  中设置document.domain:
 
 ```
 <iframe src="http://damonare.cn/b.html" ></iframe>
@@ -77,7 +77,7 @@ http://www.a.com/b.js 不同域名 不允许
 </script>
 ```
 
-- 在页面[http://damonare.cn/b.html](http://damonare.cn/b.html) 中也设置document.domain:
+- 在页面 http://damonare.cn/b.html  中也设置document.domain:
 
 ```
 <script type="text/javascript">
@@ -171,7 +171,7 @@ if (typeof window.addEventListener != 'undefined') {
 
 > 刚才说的这几种都是双向通信的，即两个iframe，页面与iframe或是页面与页面之间的，下面说几种单项跨域的（一般用来获取数据），因为通过script标签引入的js是不受同源策略的限制的。所以我们可以通过script标签引入一个js或者是一个其他后缀形式（如php，jsp等）的文件，此文件返回一个js函数的调用。
 
-比如，有个a.html页面，它里面的代码需要利用ajax获取一个不同域上的json数据，假设这个json数据地址是[http://damonare.cn/data.php](http://damonare.cn/data.php),
+比如，有个a.html页面，它里面的代码需要利用ajax获取一个不同域上的json数据，假设这个json数据地址是 http://damonare.cn/data.php ,
 那么a.html中的代码就可以这样：
 
 ```
@@ -185,7 +185,7 @@ if (typeof window.addEventListener != 'undefined') {
 
 我们看到获取数据的地址后面还有一个callback参数，按惯例是用这个参数名，但是你用其他的也一样。当然如果获取数据的jsonp地址页面不是你自己能控制的，就得按照提供数据的那一方的规定格式来操作了。
 
-因为是当做一个js文件来引入的，所以[http://damonare.cn/data.php](http://damonare.cn/data.php) 返回的必须是一个能执行的js文件，所以这个页面的php代码可能是这样的(
+因为是当做一个js文件来引入的，所以 http://damonare.cn/data.php  返回的必须是一个能执行的js文件，所以这个页面的php代码可能是这样的(
 一定要和后端约定好哦):
 
 ```

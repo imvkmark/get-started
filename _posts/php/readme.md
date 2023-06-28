@@ -33,7 +33,7 @@ Mysql
 
     ezSQL:数据库读取类
 
-         [https://github.com/jv2222/ezSQL](https://github.com/jv2222/ezSQL)
+          https://github.com/jv2222/ezSQL 
 
 ## 扩展 PCEL
 扩展是使用 c 写的, 扩展 php 相关功能的库
@@ -46,7 +46,7 @@ Mysql
 #### (archived) php-excel-reader : 读取 excel 文件的类
 php-excel-reader 使用规范
 
-[https://github.com/amade/php-excel-reader](https://github.com/amade/php-excel-reader)
+ https://github.com/amade/php-excel-reader 
 
 ## Laravel:
 

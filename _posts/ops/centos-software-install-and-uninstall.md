@@ -407,7 +407,7 @@ sudo apt-get clean && sudo apt-get autoclean 清理无用的包
 sudo apt-get check 检查是否有损坏的依赖
 ```
 
-参考链接：[http://soft.chinabyte.com/os/85/12332085.shtml](http://soft.chinabyte.com/os/85/12332085.shtml)
+参考链接： http://soft.chinabyte.com/os/85/12332085.shtml 
 
 
 ## 安装完软件后如何执行。

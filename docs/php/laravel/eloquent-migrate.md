@@ -377,7 +377,7 @@ php artisan db:seed             # 将种子种进数据库
 
 ### 在 Sequel Pro 中已存在的数据表导出
 
-![](https://file.wulicode.com/yuque/202212/06/14/30100vLNXyar.png#id=Pk9JR&originHeight=456&originWidth=900&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/yuque/202212/06/14/30100vLNXyar.png)
 
 对 [Laravel](http://laravelacademy.org/tags/laravel) 开发者来说，主要有两种方式创建数据表，一种是通过 MySQL
 客户端工具，比如 [Sequel Pro](http://laravelacademy.org/tags/sequel-pro)（Mac 环境下比较流行的 MySQL 客户端软件），另一种是通过 Laravel 提供的 Artisan 命令生成迁移文件。
@@ -385,7 +385,7 @@ php artisan db:seed             # 将种子种进数据库
 如果之前的项目不是通过 Laravel 构建的，现在要迁移到 Laravel，或者之前不是通过迁移文件生成的数据表，想要将已存在的数据表转化为 Laravel 迁移文件怎么办，由 Colin
 Viebrock 为 Sequel Pro 开发的[Laravel 迁移导出工具](https://github.com/cviebrock/sequel-pro-laravel-export)为我们提供了方便。
 
-我们从 github（[https://github.com/cviebrock/sequel-pro-laravel-export](https://github.com/cviebrock/sequel-pro-laravel-export)）将代码克隆本地：
+我们从 github（ https://github.com/cviebrock/sequel-pro-laravel-export ）将代码克隆本地：
 
 ```
 git clone https://github.com/cviebrock/sequel-pro-laravel-export.git
@@ -394,7 +394,7 @@ git clone https://github.com/cviebrock/sequel-pro-laravel-export.git
 然后进入项目目录，双击`ExportToLaravelMigration.spBundle`文件，接下来在打开的页面连接到数据库，在左侧选中一张数据表，在菜单栏选择`Bundles › Export › Export`
 将数据表导出为迁移文件（或者使用快捷命令`⌃⌥⌘M`）：
 
-![](https://file.wulicode.com/yuque/202212/06/14/3010OcydaW0i.png#id=hzsUK&originHeight=309&originWidth=998&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/yuque/202212/06/14/3010OcydaW0i.png)
 
 这样就会将选中数据表转化为 Laravel 数据库迁移文件并存放在桌面，比如我选中的是`users`表，对应的迁移文件是`2016_11_20_212052_create_users_table.php`，文件内容如下：
 

@@ -43,14 +43,14 @@ Linux 的 man 很强大，该手册分成很多 section，使用 man 时可以�
 
 其他命令
 
-这里根据 [https://www.die.net/](https://www.die.net/) 进行 man 命令的区分
+这里根据  https://www.die.net/  进行 man 命令的区分
 
-有些文档也需要根据 [https://man7.org/index.html](https://man7.org/index.html) 来进行补充, 比如 die.net 不存在的命令
+有些文档也需要根据  https://man7.org/index.html  来进行补充, 比如 die.net 不存在的命令
 
 ## 资料 :
 
-- Web 版本 : [https://qq.wdev.cn/](https://qq.wdev.cn/)
-- Dash : [https://github.com/jaywcjlove/linux-command/releases](https://github.com/jaywcjlove/linux-command/releases)
-- Github : [https://github.com/jaywcjlove/linux-command](https://github.com/jaywcjlove/linux-command)
-- Die : [https://www.die.net/](https://www.die.net/)
+- Web 版本 :  https://qq.wdev.cn/ 
+- Dash :  https://github.com/jaywcjlove/linux-command/releases 
+- Github :  https://github.com/jaywcjlove/linux-command 
+- Die :  https://www.die.net/ 
 

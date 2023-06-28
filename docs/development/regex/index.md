@@ -8,8 +8,8 @@
 
 ### 在线匹配工具
 
-- [https://regex101.com](https://regex101.com)
-- [http://rubular.com](http://rubular.com)
+-  https://regex101.com 
+-  http://rubular.com 
 
 ## 2. 基本用法
 
@@ -256,7 +256,7 @@ $regex = '/(\w)\1(.*)\1{2}/';
 
 ### 修饰符
 
-摘抄自 : [https://regex101.com/](https://regex101.com/)
+摘抄自 :  https://regex101.com/ 
 
 - `g`lobal
 

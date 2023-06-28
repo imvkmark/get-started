@@ -139,7 +139,7 @@ IteratorIterator implements OuterIterator {
 
 附加迭代器,该附加迭代器不会破坏原有数组中的键值关系.
 
-[http://www.php.net/manual/en/appenditerator.construct.php](http://www.php.net/manual/en/appenditerator.construct.php)
+ http://www.php.net/manual/en/appenditerator.construct.php 
 
 在迭代器之间循环迭代
 

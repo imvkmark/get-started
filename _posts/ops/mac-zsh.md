@@ -41,11 +41,11 @@ wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - 
 
 如下图所示：
 
-![](https://file.wulicode.com/note/2021/10-23/11-15-34512.png#id=nclXl&originHeight=655&originWidth=566&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/10-23/11-15-34512.png)
 
 安装完成之后退出当前会话重新打开一个终端窗口，你就可以见到这个彩色的提示了：
 
-![](https://file.wulicode.com/note/2021/10-23/11-15-49765.png#id=E4aXt&originHeight=107&originWidth=426&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/10-23/11-15-49765.png)
 
 ## 配置
 `oh my zsh`提供数十种主题，相关文件在 `~/.oh-my-zsh/themes` 目录，可以编辑主题来满足自身需求，我是使用默认的`robbyrussell`，但是做了一些修改：
@@ -55,7 +55,7 @@ PROMPT='%{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p%{$fg[cyan]%}%d %{$fg_bold[blu
 ```
 与原来不同的是，将 `c`(表示当前目录)改为 `d`(表示绝对路径)，另外在尾部添加一个 `>` 作为隔离符号，效果如下：
 
-![](https://file.wulicode.com/note/2021/10-23/11-16-05183.png#id=s06j0&originHeight=69&originWidth=408&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/10-23/11-16-05183.png)
 
 ### 切換 theme
 所有的主題都放在 `~/.oh-my-zsh/themes` 目录中，先看一下有哪些可以用：
@@ -111,15 +111,15 @@ dieter.zsh-theme              nicoulaj.zsh-theme
 ### 插件
 `oh my zsh` 提供丰富的插件，存放在 `~/.oh-my-zsh/plugins` 目录下：
 
-![](https://file.wulicode.com/note/2021/10-23/11-16-22860.png#id=CaaHl&originHeight=404&originWidth=488&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/10-23/11-16-22860.png)
 
 想了解每个插件的功能以及如何使用，只要打开相关插件的目录下 `zsh` 文件即可，以 `git` 插件为例：
 
-![](https://file.wulicode.com/note/2021/10-23/11-16-39801.png#id=Ablis&originHeight=16&originWidth=510&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/10-23/11-16-39801.png)
 
 显示如下：
 
-![](https://file.wulicode.com/note/2021/10-23/11-16-55122.png#id=RWGFG&originHeight=574&originWidth=456&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/10-23/11-16-55122.png)
 
 打开 `git.plugin.zsh` 文件，里面有很多命名别来来简化命令的输入。您可以根据自己的需要来启用哪些插件，只需在 `~/.zshrc` 配置文件追加内容即可：
 ```
@@ -158,7 +158,7 @@ git clone git://github.com/joelthelion/autojump.git
 
 如下图：
 
-![](https://file.wulicode.com/note/2021/10-23/11-17-15736.png#id=WUJr0&originHeight=44&originWidth=442&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/10-23/11-17-15736.png)
 
 2.使用
 
@@ -166,11 +166,11 @@ git clone git://github.com/joelthelion/autojump.git
 
 如下图：
 
-![](https://file.wulicode.com/note/2021/10-23/11-17-29474.png#id=dQ6Tc&originHeight=113&originWidth=344&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/10-23/11-17-29474.png)
 
 利用 `j –s` 可以看你的历史路径库。
 
-![](https://file.wulicode.com/note/2021/10-23/11-17-45982.png#id=kfsp8&originHeight=251&originWidth=396&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/10-23/11-17-45982.png)
 
 #### 3.osx
 
@@ -186,18 +186,18 @@ git clone git://github.com/joelthelion/autojump.git
 
 2.目录浏览和跳转：输入 `d`，就显示在会话里访问的目录列表，输入列表前的序号，即可以跳转
 
-![](https://file.wulicode.com/note/2021/10-23/11-18-04895.png#id=oGGsn&originHeight=150&originWidth=289&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/10-23/11-18-04895.png)
 
 3.输入 `..` 可以返回到上级目录
 
-![](https://file.wulicode.com/note/2021/10-23/11-18-16775.png#id=iNSsD&originHeight=76&originWidth=381&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/10-23/11-18-16775.png)
 
 ### 安装 zsh-comopletions
 安裝：
 ```
 $ brew install zsh-completions
 ```
-![](https://file.wulicode.com/note/2021/10-23/11-18-26872.png#id=eruTE&originHeight=369&originWidth=565&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/10-23/11-18-26872.png)
 
 要启用还需要打开你的 `.zshrc` 加入以下两行来纳入 `zsh-completions` 的补全功能：
 
@@ -280,6 +280,6 @@ fi
 
 ### Resource Reference
 
-- [http://icarus4.logdown.com/](http://icarus4.logdown.com/)
+-  http://icarus4.logdown.com/ 
 - http://www.cnblogs.com/bamanzi/p/zsh-simple-guide.html
 

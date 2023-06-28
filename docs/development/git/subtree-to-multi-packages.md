@@ -53,7 +53,7 @@ $ git push system `git subtree split --prefix=poppy/system feature/3.0`:3.0 --fo
 > The destination refspec neither matches an existing ref on the remote nor
 > begins with refs/, and we are unable to guess a prefix based on the source ref.
 >
-> error: failed to push some refs to '[https://github.com/imvkmark/poppy-system.git](https://github.com/imvkmark/poppy-system.git)'
+> error: failed to push some refs to ' https://github.com/imvkmark/poppy-system.git '
 >
 > Script git push system-github `git subtree split --prefix=poppy/system feature/3.0`:3.0 --force handling the py-system event returned with error code 1
 

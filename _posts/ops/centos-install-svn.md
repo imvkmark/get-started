@@ -40,8 +40,8 @@ svnserve，版本 1.6.11 (r934486)
 编译于 Jun 23 2012，00:44:03
 
 版权所有 (C) 2000-2009 CollabNet。
-Subversion 是开放源代码软件，请参阅 [http://subversion.tigris.org/](http://subversion.tigris.org/) 站点。
-此产品包含由 CollabNet( [http://www.Collab.Net/](http://www.collab.net/)) 开发的软件。
+Subversion 是开放源代码软件，请参阅  http://subversion.tigris.org/  站点。
+此产品包含由 CollabNet(  http://www.Collab.Net/ ) 开发的软件。
 
 下列版本库后端(FS) 模块可用:
 * fs_base : 模块只能操作BDB版本库。

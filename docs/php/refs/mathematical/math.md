@@ -36,7 +36,7 @@
 
 返回 arg 的反余弦值，单位是弧度。 acos() 是 cos() 的反函数，它的意思是在 acos() 范围里的每个值都是 a==cos(acos(a)) 。
 
-![https://file.wulicode.com/note/2021/11-11/16-01-01286.png](https://file.wulicode.com/note/2021/11-11/16-01-01286.png)
+! https://file.wulicode.com/note/2021/11-11/16-01-01286.png 
 
 `float acosh ( float $arg )`
 
@@ -46,7 +46,7 @@
 
 返回 arg 的反正弦值，单位是弧度。 asin() 是 sin() 的反函数，它的意思是在 asin() 范围里的每个值都是 a==sin(asin(a)) 。
 
-![https://file.wulicode.com/note/2021/11-11/16-01-13360.png](https://file.wulicode.com/note/2021/11-11/16-01-13360.png)
+! https://file.wulicode.com/note/2021/11-11/16-01-13360.png 
 
 `float asinh ( float $arg )`
 
@@ -61,7 +61,7 @@ PI）。
 
 返回 arg 的反正切值，单位是弧度。 atan() 是 tan() 的反函数，它的意思是在 atan() 范围里的每个值都是 a==tan(atan(a))。
 
-![https://file.wulicode.com/note/2021/11-11/16-01-22845.png](https://file.wulicode.com/note/2021/11-11/16-01-22845.png)
+! https://file.wulicode.com/note/2021/11-11/16-01-22845.png 
 
 `float atanh ( float $arg )`
 
@@ -84,7 +84,7 @@ bindec() 将一个二进制数转换成 integer，或者出于大小的需要，
 
 cos() 返回参数 arg 的余弦值。参数 arg 的单位为弧度。
 
-![https://file.wulicode.com/note/2021/11-11/16-01-33426.png](https://file.wulicode.com/note/2021/11-11/16-01-33426.png)
+! https://file.wulicode.com/note/2021/11-11/16-01-33426.png 
 
 `float cosh ( float $arg )`
 
@@ -127,7 +127,7 @@ ffffffff。
 
 显示随机数最大的可能值
 
-![https://file.wulicode.com/note/2021/11-11/16-01-42913.png](https://file.wulicode.com/note/2021/11-11/16-01-42913.png)
+! https://file.wulicode.com/note/2021/11-11/16-01-42913.png 
 
 `number hexdec ( string $hex_string )`
 

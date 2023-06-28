@@ -269,7 +269,7 @@ $ rm -rf homebrew-core
 $ brew upgrade -vvv
 ```
 
-随后我们将源在更换为清华源(Core)源地址 : [https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
+随后我们将源在更换为清华源(Core)源地址 :  https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/ 
 
 ```
 $ git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git

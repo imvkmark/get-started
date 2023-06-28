@@ -11,7 +11,7 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 ```
 
-> 参考官方文档 : [https://getcomposer.org/download/](https://getcomposer.org/download/)
+> 参考官方文档 :  https://getcomposer.org/download/ 
 
 **方法 2 : 下载并给予权限**
 

@@ -47,7 +47,7 @@ $ node -v
 
 **Github**
 
-[https://github.com/imvkmark](https://github.com/imvkmark)
+ https://github.com/imvkmark 
 
 ::: info 说明
 本项目自 2023年05月24日 迁移至 vitepress

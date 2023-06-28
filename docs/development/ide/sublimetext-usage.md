@@ -6,7 +6,7 @@ categories:
 - ["开发","IDE"]
 ---
 
-地址: [http://www.sublimetext.com/dev](http://www.sublimetext.com/dev)
+地址:  http://www.sublimetext.com/dev 
 
 
 
@@ -125,7 +125,7 @@ Preferences->Package Settings -> SublimeLinter ->Settings - User
 ### PHP Snippet plugin : 输入"php-"的时候便会提示匹配的代码段
 
 ### Goto Doucumentation : 查询鼠标所在点的函数的帮助信息
-快捷键 F1, 例如PHP文件将会跳转到的地址为: [http://us.php.net/lcfirst](http://us.php.net/lcfirst)
+快捷键 F1, 例如PHP文件将会跳转到的地址为:  http://us.php.net/lcfirst 
 ```
 { "keys": ["f1"], "command": "goto_documentation" }
 ```
@@ -149,10 +149,10 @@ Preferences->Global Setting-User
 ```
 
 ### Color-scheme - solarized: 很漂亮的一款主题哦
-[http://ethanschoonover.com/solarized](http://ethanschoonover.com/solarized)
+ http://ethanschoonover.com/solarized 
 
 ### Color-scheme -Flatland
-[https://github.com/thinkpixellab/flatland/archive/master.zip](https://github.com/thinkpixellab/flatland/archive/master.zip)
+ https://github.com/thinkpixellab/flatland/archive/master.zip 
 
 ## 配置
 修正字体字号

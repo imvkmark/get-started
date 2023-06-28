@@ -8,7 +8,7 @@ categories:
 
 ## 微信公众号通过 js 获取配置
 
-微信 JSSDK 官方文档：[https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421141115](https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421141115)
+微信 JSSDK 官方文档： https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421141115 
 
 需要添加公众号白名单
 
@@ -37,7 +37,7 @@ $config = $Official->jssdk->buildConfig([])
 
 ### 发起用户授权
 
-请求微信地址 [https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&redirect_uri=REDIRECT_URI&response_type=code&scope=SCOPE&state=STATE#wechat_redirect](https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&redirect_uri=REDIRECT_URI&response_type=code&scope=SCOPE&state=STATE#wechat_redirect)
+请求微信地址  https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&redirect_uri=REDIRECT_URI&response_type=code&scope=SCOPE&state=STATE#wechat_redirect 
 
 返回 code
 
@@ -51,7 +51,7 @@ REDIRECT_URI?code=091MY61w31vBNV2TZ01w3Q5yeu4MY61V&state=STATE
 
 [**SCOPE**](https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&redirect_uri=REDIRECT_URI&response_type=code&scope=SCOPE&state=STATE#wechat_redirect)
 
-关于 scope 的授权参考这里 : [https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_webpage_authorization.html](https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_webpage_authorization.html)
+关于 scope 的授权参考这里 :  https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_webpage_authorization.html 
 > 1、以snsapi_base为scope发起的网页授权，是用来获取进入页面的用户的openid的，并且是静默授权并自动跳转到回调页的。用户感知的就是直接进入了回调页（往往是业务页面）
 > 2、以snsapi_userinfo为scope发起的网页授权，是用来获取用户的基本信息的。但这种授权需要用户手动同意，并且由于用户同意过，所以无须关注，就可在授权后获取该用户的基本信息。
 
@@ -63,7 +63,7 @@ REDIRECT_URI?code=091MY61w31vBNV2TZ01w3Q5yeu4MY61V&state=STATE
 
 ### 通过 code 获取用户OpenID
 
-- 服务端请求微信地址[https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code](https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code)
+- 服务端请求微信地址 https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code 
 - 成功返回里面带有openid
 - 给前端返回openid
 

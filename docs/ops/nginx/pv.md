@@ -10,13 +10,13 @@
 
 **接下来看一下 Nginx 的配置文件：**
 
-![](https://file.wulicode.com/note/2021/11-11/17-22-29150.png#id=bBR9x&originHeight=121&originWidth=696&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/11-11/17-22-29150.png)
 
 /etc/nginx/nginx.conf
 
 **再看一下 access.log：**
 
-![](https://file.wulicode.com/note/2021/11-11/17-22-42804.png#id=GHyoq&originHeight=169&originWidth=885&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](https://file.wulicode.com/note/2021/11-11/17-22-42804.png)
 
 /var/log/nginx/access.log
 

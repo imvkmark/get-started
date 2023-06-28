@@ -377,7 +377,7 @@ $ mysqladmin shutdown
 
 ## 9 从(slave)服务器读取主服务器的 bin-log
 
-这里的参考文档: [https://dev.mysql.com/doc/refman/5.7/en/change-master-to.html](https://dev.mysql.com/doc/refman/5.7/en/change-master-to.html)
+这里的参考文档:  https://dev.mysql.com/doc/refman/5.7/en/change-master-to.html 
 
 设置从机与master主机进行通信，我们必须告诉从机必须的连接信息
 

@@ -44,7 +44,7 @@ STR_PAD_BOTH (integer)
 
 返回字符串，该字符串在属于参数 charlist 列表中的字符前都加上了反斜线 其中转义字符列表可以使用’..’来对字符进行范围的控制, 范围是根据内容在ASCII码表中的位置进行创建的 0，a，b，f，n，r，t , v C语言的预定义序列 - $charlist 参数，如“\0..\37”，将转义所有 ASCII 码介于 0 和 31 之间的字符。
 
-![https://file.wulicode.com/note/2021/11-11/15-57-28289.png](https://file.wulicode.com/note/2021/11-11/15-57-28289.png)
+! https://file.wulicode.com/note/2021/11-11/15-57-28289.png 
 
 `string addslashes ( string $str )`
 
@@ -54,11 +54,11 @@ STR_PAD_BOTH (integer)
 
 返回 ASCII 字符串，为参数 str 的十六进制表示 将二进制数据转换成十六进制表示
 
-![https://file.wulicode.com/note/2021/11-11/15-57-46259.png](https://file.wulicode.com/note/2021/11-11/15-57-46259.png)
+! https://file.wulicode.com/note/2021/11-11/15-57-46259.png 
 
-![https://file.wulicode.com/note/2021/11-11/15-57-57063.png](https://file.wulicode.com/note/2021/11-11/15-57-57063.png)
+! https://file.wulicode.com/note/2021/11-11/15-57-57063.png 
 
-![https://file.wulicode.com/note/2021/11-11/15-58-05593.png](https://file.wulicode.com/note/2021/11-11/15-58-05593.png)
+! https://file.wulicode.com/note/2021/11-11/15-58-05593.png 
 
 `string chr ( int $ascii )`
 
@@ -68,9 +68,9 @@ STR_PAD_BOTH (integer)
 
 将字符串分割成小块 [例]将 base64_encode() 的输出转换成符合 RFC 2045 语义的字符串
 
-![https://file.wulicode.com/note/2021/11-11/15-58-15447.png](https://file.wulicode.com/note/2021/11-11/15-58-15447.png)
+! https://file.wulicode.com/note/2021/11-11/15-58-15447.png 
 
-![https://file.wulicode.com/note/2021/11-11/15-58-24299.png](https://file.wulicode.com/note/2021/11-11/15-58-24299.png)
+! https://file.wulicode.com/note/2021/11-11/15-58-24299.png 
 
 `string convert_cyr_string ( string $str , string $from , string $to )`
 
@@ -84,7 +84,7 @@ STR_PAD_BOTH (integer)
 
 使用 uuencode 算法对一个字符串进行编码。 uuencode 算法会将所有（含二进制）字符串转化为可输出的字符， 并且可以被安全的应用于网络传输。使用 uuencode 编码后的数据 将会比源数据大35%左右
 
-![https://file.wulicode.com/note/2021/11-11/15-58-33727.png](https://file.wulicode.com/note/2021/11-11/15-58-33727.png)
+! https://file.wulicode.com/note/2021/11-11/15-58-33727.png 
 
 `mixed count_chars ( string $string [, int $mode = 0 ] )`
 
@@ -157,7 +157,7 @@ STR_PAD_BOTH (integer)
 
 [alias] join 连接数组 使用 implode($array) 可以将数组转换为 无缝分割的字串
 
-![https://file.wulicode.com/note/2021/11-11/15-59-04744.png](https://file.wulicode.com/note/2021/11-11/15-59-04744.png)
+! https://file.wulicode.com/note/2021/11-11/15-59-04744.png 
 
 `string lcfirst ( string $str )`
 

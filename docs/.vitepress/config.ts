@@ -17,6 +17,7 @@ const nav = [
             {text: "Php", link: "/php/"},
             {text: "Man", link: "/man/"},
             {text: "C++", link: "/cpp/"},
+            {text: "Ruby", link: "/ruby/"},
         ],
     },
     {
@@ -77,53 +78,7 @@ const nav = [
 ];
 
 const sidebar = {
-    "/javascript": [
-        {
-            text: "入门",
-            items: [createLink("说明", "/javascript/")],
-        },
-        {
-            text: "数据类型",
-            items: [createLink("null, undefined, bool", "/javascript/core/2-types/2-null-undefined-bool.md")],
-        },
-        {
-            text: "文档",
-            items: [
-                createLink("使用 jsdoc 编写 api 文档", "/javascript/tech/use-jsdoc-write-document.md"),
-                createLink("Eslint 入门", "/javascript/tech/eslint"),
-                createLink("怎样在 JavaScript 中检测 null", "/javascript/core/usage/type-null-how-to-check.md"),
-                createLink("Axios 入门", "/javascript/core/tech/axios")
-            ],
-        },
-        {
-            text: "Npm/包管理",
-            items: [
-                createLink("说明", "/javascript/npm/"),
-                createLink("npm 和 package.json", "/javascript/npm/npm-and-package-json"),
-                createLink("RHEL8 安装 nodejs", "/javascript/npm/install-at-rhel8.md"),
-                createLink("Node 更换源使用国内镜像", "/javascript/npm/pkg-use-mirror.md"),
-                createLink("使用 pnpm 替代 yarn, npm", "/javascript/npm/pkg-use-pnpm.md"),
-                createLink("发布 npm 包 - FAQ", "/javascript/npm/publish-faq.md"),
-                createLink("NPM 版本控制", "/javascript/npm/version-intro.md"),
-                createLink("nvm：管理 Node.js 版本", "/javascript/npm/version-manager-nvm.md"),
-            ],
-        },
-        {
-            text: "React",
-            items: [
-                createLink("Redux DevTool 工具", "/javascript/react/redux-devtools-intro"),
-                createLink("基于 Umi 的最佳实践", "/javascript/react/umi-best-practice.md"),
-                createLink("基于 Umi/AntDesign 的最佳实践", "/javascript/react/umi-antd-best-practice.md"),
-            ],
-        },
-        {
-            text: "Taro",
-            items: [
-                createLink("FAQ", "/javascript/taro/faq"),
-            ],
-        },
-    ],
-    "/java": [
+    "/java/": [
         {
             text: "入门",
             items: [

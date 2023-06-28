@@ -64,8 +64,8 @@ Content-Type: text/html
 但是要记住跳转会降低用户体验。在用户和 HTML 文档中间增加一个跳转，会拖延页面中所有元素的显示，因为在 HTML 文件被加载前任何文件(图像、Flash 等)都不会被下载。
 
 有一种经常被网页开发者忽略却往往十分浪费响应时间的跳转现象。这种现象发生在当 URL 本该有斜杠(/)
-却被忽略掉时。例如，当我们要访问 [http://astrology.yahoo.com/astrology](http://astrology.yahoo.com/astrology) 时，实际上返回的是一个包含 301 代码的跳
-转，它指向的是 [http://astrology.yahoo.com/astrology/](http://astrology.yahoo.com/astrology/) (注意末尾的斜杠)。在 Apache 服务器中可以使用 Alias 或者 mod_rewrite
+却被忽略掉时。例如，当我们要访问  http://astrology.yahoo.com/astrology  时，实际上返回的是一个包含 301 代码的跳
+转，它指向的是  http://astrology.yahoo.com/astrology/  (注意末尾的斜杠)。在 Apache 服务器中可以使用 Alias 或者 mod_rewrite
 或者 the DirectorySlash 来避免。
 
 连接新网站和旧网站是跳转功能经常被用到的另一种情况。这种情况下往往要连接网站 的不同内容然后根据用户的不同类型(如浏览器类型、用户账号所属类型)来进行跳转。

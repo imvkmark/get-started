@@ -10,7 +10,7 @@
 
 ### 1. [no_perms] Private mode enable
 
-> PUT [https://registry.npm.taobao.org/@](https://registry.npm.taobao.org/@)... - [no_perms] Private mode enable, only admin can publish this module
+> PUT  https://registry.npm.taobao.org/@ ... - [no_perms] Private mode enable, only admin can publish this module
 
 
 使用 `npm publish` 或者使用 `yarn publish` 出现 couldn't publish package:"https://registry.npm.taobao.org/包...:unauthorized

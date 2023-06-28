@@ -6,7 +6,7 @@ categories:
 - ["Mysql","FAQ"]
 ---
 
-原文地址: [http://binux.cn/2017/03/02/Mac-MySQL-Error/](http://binux.cn/2017/03/02/Mac-MySQL-Error/)
+原文地址:  http://binux.cn/2017/03/02/Mac-MySQL-Error/ 
 > “这篇文章将讲一个困扰了我3天的问题 Java连接不上MySQL”
 
 

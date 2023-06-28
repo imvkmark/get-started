@@ -16,7 +16,7 @@ categories:
 
 3. 原因
 
-< [http://www.dewen.io/q/1211](http://www.dewen.io/q/1211) >
+<  http://www.dewen.io/q/1211  >
 
 float,double容易产生误差，对精确度要求比较高时，建议使用decimal来存，decimal在mysql内存是以字符串存储的，用于定义货币要求精确度高的数据。在数据迁移中，float(M,D)是非标准定义，最好不要这样使用。M为精度，D为标度。
 
