@@ -31,6 +31,7 @@
 - [CentOS 7 安装 LNMP](./install/centos7-lnmp-plus)
 - [RockyLinux 安装 LNMP](./install/rocky-lnmp)
 - [使用 PECL 安装扩展](./install/install-extension-and-optimize.md)
+- ~~[scws 扩展的安装和介绍](./tech/extension-scws.md)~~
 
 # Packages
 

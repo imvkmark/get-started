@@ -133,6 +133,7 @@ const sidebar = {
             text: '源码阅读',
             items: [
                 createLink('初始 : (1) 入口文件 index', '/php/laravel/source-read-index'),
+                createLink('深入探讨 Service Provider', '/php/laravel/service-provider'),
             ]
         },
 
