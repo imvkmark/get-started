@@ -54,7 +54,8 @@ laravel new laravelRun
 
 ### 检测权限(linux)
 
-同时检测下 `./storage` 有没有权限, 否则可能报错 `Error in exception handler`.由于 5.0 版本和 4.* 版本的差别. 5.0版本的存储位置被放置在 `./storage` 目录下
+同时检测下 `./storage` 有没有权限, 否则可能报错 `Error in exception handler`.由于 5.0 版本和 4.* 版本的差别.
+5.0版本的存储位置被放置在 `./storage` 目录下
 
 ## 测试运行
 
@@ -89,7 +90,8 @@ APP_KEY=1hSm25JlcusKQGdShlbnZlgVaCb3DetR
 
 - 配置Apache
 
-我这里是 apache , 这里以 apache 为例, 这里需要配置 apache 对重写的支持 [使用 MOD_REWRITE 启用 url rewrite/url重写](http://my.oschina.net/duoli/blog/389248)
+我这里是 apache , 这里以 apache 为例, 这里需要配置 apache
+对重写的支持 [使用 MOD_REWRITE 启用 url rewrite/url重写](http://my.oschina.net/duoli/blog/389248)
 
 配置域名为 `www.lartest.com`
 
@@ -224,22 +226,6 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-### .env 文件
-
-[PHP dotenv](http://my.oschina.net/duoli/blog/388959) 是这个 env 文件的详细说明
-
-```
-APP_ENV=local
-APP_DEBUG=true
-APP_KEY=1hSm25JlcusKQGdShlbnZlgVaCb3DetR
-DB_HOST=127.0.0.1
-DB_DATABASE=mark_laravel
-DB_USERNAME=root
-DB_PASSWORD=
-CACHE_DRIVER=file
-SESSION_DRIVER=file
-```
-
 ### 配置文件 `app.php`
 
 - `debug`
@@ -338,7 +324,8 @@ echo $coll->someMethod();
 
 ## 事件调度(定时任务)
 
-Laravel 5 新增了一个框架内置的 cron 风格的令人难以置信的调度程序（与  [Indatus 的 Dispatcher](https://github.com/indatus/dispatcher)
+Laravel 5 新增了一个框架内置的 cron
+风格的令人难以置信的调度程序（与  [Indatus 的 Dispatcher](https://github.com/indatus/dispatcher)
 类似）。只要在服务器上设置一个每分钟调用  `artisan schedule:run`  的 cron job, 一切就准备就绪了。
 
 ```
@@ -382,11 +369,12 @@ $schedule
 
 - 使用命令行创建 Welcome 控制器
 
-
 ```
 php artisan make:controller FirstController --only=index
 ```
+
 运行上述命令后，Laravel 会生成 app/Http/controllers/WelcomeController.php 文件。生成文件后修改其中的 index 方法：
+
 ```
 public function index() {
     return view('first.index');;
@@ -398,3 +386,86 @@ public function index() {
 在 `resources/views/` 目录新建文件夹 `first` 并创建文件 `index.blade.php` ;
 
 在 `index.blade.php` 文件中添加 `<h1>Hello, Laravel!</h1>` ;
+
+## .env 环境变量
+
+[PHP dotenv](http://my.oschina.net/duoli/blog/388959) 是这个 env 文件的详细说明
+
+```
+APP_ENV=local
+APP_DEBUG=true
+APP_KEY=1hSm25JlcusKQGdShlbnZlgVaCb3DetR
+DB_HOST=127.0.0.1
+DB_DATABASE=mark_laravel
+DB_USERNAME=root
+DB_PASSWORD=
+CACHE_DRIVER=file
+SESSION_DRIVER=file
+```
+
+### PHP dotenv 介绍
+
+Laravel 5.0 其实也没做什么特别的创新，它只是使用了  [PHP dotenv](https://github.com/vlucas/phpdotenv), 一个从单一  `.env`
+文件中加载环境配置的第三方库。
+
+新版本的 Laravel 初始框架包含一个默认的  `.env.example`  文件，这个文件暂时看起来长这样：
+
+```
+APP_ENV=local
+APP_KEY=SomeRandomString
+DB_USERNAME=homestead
+DB_PASSWORD=homestead
+```
+
+要使用这个功能，只需要复制这个文件并重命名为  `.env`  (类似 wordpress 的 wp-config-sample.php).
+为什么不直接重命名原始文件而是先复制再重命名呢？下面马上就要说到了。
+
+接下来，就可以编辑  `APP_ENV`  的值来指定运行环境了。这是在 Laravel 5.0
+中我们指定应用运行环境名称的主要手段。可以看一下  `bootstrap/environment.php`  里最新的环境监测代码，它非常简单：
+
+```
+$env =  $app->detectEnvironment(function(){
+    return getenv('APP_ENV') ?:  'production';
+}); 
+```
+
+这么简单，多美好的一件事！
+
+### 自定义环境配置文件
+
+现在回答刚才的那个问题：为什么不直接重命名  `.env.example`  这个原始文件呢？想象一下，假设你的应用要定义 10
+个环境变量，怎么确保它被部署到不同运行环境下时都能保证定义了这些环境变量呢？当然，你可以在捡测到环境变量没定义的时候进行容错处理。但更好的处理方式还是定义这些变量。
+
+这种情况下，你打算在那里做每个部署的  `.env`  文件的变量配置说明呢？一种方式：你可以写在 readme
+文件里。更好的办法是更新  `.env.example`  文件，在里面加上你的应用需要定义的环境变量以及相应的注释。
+
+如此一来，如果在应用的每个部署都定义 10 个环境变量，那就把这 10 个环境变量加到你的`.env.example`
+文件里，指定默认值。这个默认文件会提交到你的版本管理工具中。然后每次进行部署时只要执行  `cp .env.example .env`
+命令，然后对  `.env`  中的变量值进行修改即可。
+
+### 变量引用
+
+如果需要了解更多，可以查看 PHP dotenv 的文档，但我可以告诉你一个最有用的技巧：一个已定义的环境变量是可以在后续的环境变量值中引用的。看一下他们的说明文档中的例子：
+
+```
+BASE_DIR=/var/webroot/project-root
+CACHE_DIR=$BASE_DIR/cache
+LOG_DIR=$BASE_DIR/logs 
+```
+
+很直观。
+
+### 指定必须定义的变量
+
+某些变量是系统运行不可或缺的。对于这种情况，我们可以指定他们是必须定义的，而不是等应用开始用到这些变量时才发现没有定义而造成崩溃：
+
+```
+Dotenv::required('DB_USERNAME');
+// 或者
+Dotenv::required(['DB_HOST',  'DB_NAME',  'DB_USERNAME',  'DB_PASSWORD']); 
+```
+
+通过  `Dotenv::required()`
+方法指定即可，参数可以是单个字符串或者是字符串数组，每个字符串代表一个环境变量名。如果某个环境变量没有定义，系统会抛出一个  `RuntimeException`.
+
+如今你可以很轻松地定义自己的运行环境名称和环境变量，而且是在单一的一个文件中，以一种可预期的，始终一致的方式来实现
