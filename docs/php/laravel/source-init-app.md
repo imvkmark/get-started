@@ -1,22 +1,17 @@
----
-title: "源码阅读 - 初始 : (2)  初始化 App"
-date: 2022-04-20 19:01:08
-toc: true
-categories:
-- ["Php","源码阅读","Laravel"]
----
+# 源码阅读 - 初始 : (2)  初始化 App
 
 ## 初始化 Application
+
 根据指定的路径来初始化应用, 原始码
-
-
 
 ```php
 $app = new Illuminate\Foundation\Application(
 	realpath(__DIR__ . '/../')
 );
 ```
+
 **Illuminate/Foundation/Application::__construct()**
+
 ```php
 // 1) 注册基本绑定
 $this->registerBaseBindings();
@@ -28,6 +23,7 @@ $this->registerCoreContainerAliases();
 ```
 
 ### 1) 注册基本绑定
+
 ```php
 # 1) 实例化 app
 $this->instance('app', $this);
@@ -38,9 +34,11 @@ $this->instance(PackageManifest::class, new PackageManifest(...));
 ```
 
 #### 1-1) 实例化 app
+
 **实例化 App[Application::instance()]**
 
 这里拿 `('app', $this)`为例子来阅读源码
+
 ```php
 // 移除抽象关联
 $this->removeAbstractAlias($abstract);
@@ -68,6 +66,7 @@ if ($isBound) {
 #### 1-2) 实例化 PackageManifest
 
 ### 2) 注册事件处理
+
 ```php
 // 注册事件处理器
 $this->register(new EventServiceProvider($this));
@@ -78,6 +77,7 @@ $this->register(new RoutingServiceProvider($this));
 ```
 
 #### 2-1) Application::register() 方法
+
 ```php
 /* sample service providers
 $this->serviceProviders = [
@@ -113,6 +113,7 @@ return $provider;
 ```
 
 #### 2-2) EventServiceProvider
+
 ```
 // 注册事件触发器, 并且配置队列执行
 $this->app->singleton('events', function ($app) {
@@ -123,6 +124,7 @@ $this->app->singleton('events', function ($app) {
 ```
 
 #### 2-3) LogServiceProvider
+
 ```
 // 注册日志
 $this->app->singleton('log', function () {
@@ -131,6 +133,7 @@ $this->app->singleton('log', function () {
 ```
 
 #### 2-4) RoutingServiceProvider
+
 ```
 // 注册路由
 $this->registerRouter();
@@ -149,7 +152,9 @@ $this->registerControllerDispatcher();
 ```
 
 ### 3) 注册 Alias
+
 将指定的类和 app 示例做绑定
+
 ```php
 $allAlias = [
     'app'                  => [
@@ -175,6 +180,7 @@ foreach($allAlias = as $key => $aliases) {
 ```
 
 #### 3-1) 系统 alias 项目
+
 ```php
 $alias = [
     'app'                  => [
@@ -310,6 +316,7 @@ $alias = [
 ```
 
 #### 3-2) alias 结果
+
 ```php
 /* $this->aliases = [
     [Illuminate\Foundation\Application] => app
@@ -324,21 +331,27 @@ $alias = [
 ```
 
 ## singleton Kernel 和异常处理
+
 原始代码
 
 **step 01:singleton**
+
 ```php
 $app->singleton(
 	Illuminate\Contracts\Http\Kernel::class,
 	App\Http\Kernel::class
 );
 ```
+
 **step 02:bind**
+
 ```
 // 抽象类绑定到实体类
 $this->bind($abstract, $concrete, true);
 ```
+
 **step 03:bind code**
+
 ```
 // 如果没有给定实体类型, 我们简单设置实体类型为虚拟类型, 在那之后
 // 在此之后，将注册为共享的具体类型，而不需要在两个参数中强制声明它们的类
