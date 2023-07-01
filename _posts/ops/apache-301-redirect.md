@@ -3,7 +3,7 @@ title: "apache做301重定向的方法"
 date: 2021-06-26 11:20:13
 toc: true
 categories:
-- ["Ops","软件","apache"]
+  - [ "Ops","软件","apache" ]
 ---
 
 ## 重写方式
@@ -14,9 +14,6 @@ categories:
 
 如果已经支持了rewrite，直接在你要做的站点配置文件里面添加以下代码，注意修改域名为你要做的域名。
 
-
-
-
 ```
 Options +FollowSymLinks 
 RewriteEngine on 
@@ -25,7 +22,6 @@ RewriteRule ^(.*)$ http://www.wctx123.com/$1 [R=permanent,L]
 ```
 
 在这里判断当前服务器变量HTTP_HOST是否等于php100.com，为真就进行重写，按照R=permanent进行永久重定向，L表示并立即停止重写操作，并不再应用其他重写规则。
-
 
 ## url跳转方式
 

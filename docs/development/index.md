@@ -84,3 +84,8 @@
 - [axios 简介](https://juejin.im/post/5a184108518825619a0260d7)
 - [HTML5 data 属性规则使用 jQuery Validate 插件](https://juejin.im/post/5c511afc6fb9a049ef26fded)
 
+## 数据
+
+### 日志采集
+
+- [fluentd](./data/fluentd.md)

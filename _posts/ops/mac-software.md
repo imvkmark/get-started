@@ -1,8 +1,8 @@
 ---
-title : "Mac 常用软件"
-date : 2022-04-20 19:00:59
-toc : true
-categories :
+title: "Mac 常用软件"
+date: 2022-04-20 19:00:59
+toc: true
+categories:
   - [ "Ops","Mac" ]
 ---
 
@@ -54,7 +54,8 @@ categories :
 
 ### OpenInTerminal
 
-> 链接 : [OpenInTerminal-Lite - 在当前访达路径/文件打开终端、编辑器[macOS] - 小众软件](https://www.appinn.com/openinterminal-lite/)
+>
+链接 : [OpenInTerminal-Lite - 在当前访达路径/文件打开终端、编辑器[macOS] - 小众软件](https://www.appinn.com/openinterminal-lite/)
 
 关键词 : 快捷终端, 快捷编辑器, 复制路径
 

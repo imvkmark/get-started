@@ -3,20 +3,20 @@ title: "[译+] fzaninotto_Faker 文档"
 date: 2022-04-20 19:01:09
 toc: true
 categories:
-- ["Php","扩展"]
+  - [ "Php","扩展" ]
 ---
 
 原文地址: [Faker](https://github.com/fzaninotto/Faker)
 
-
-
-
 ## Formatters 格式化器
+
 Faker 可以通过访问您想要的数据类型的属性来生成数据
 
-每个生成器属性 (例如 name, address, lorem) 都被称谓 "formatters". 一个 faker 生成器有很多, 打包在 `Provider` 中。下面是默认区域中绑定的格式化程序的列表。
+每个生成器属性 (例如 name, address, lorem) 都被称谓 "formatters". 一个 faker 生成器有很多, 打包在 `Provider`
+中。下面是默认区域中绑定的格式化程序的列表。
 
 ### Base 基本
+
 ```php
 //生成随机整数 0 - 9
 $randomDigit = $this->faker()->randomDigit; // 0
@@ -51,6 +51,7 @@ $regexify = $this->faker()->regexify('[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}'); 
 ```
 
 ### Lorem 文本
+
 ```php
 //生成随机个数的字符串
 $word = $this->faker()->word; // 'aut'
@@ -70,6 +71,7 @@ $text = $this->faker()->text($maxNbChars = 200); // 'Fuga totam reiciendis qui a
 ```
 
 ### Person 人物
+
 ```php
 //随机生成任务称呼Mrs./Mr./Dr. ...
 $title = $this->faker()->title($gender = null | 'male' | 'female'); // 'Ms.'
@@ -92,6 +94,7 @@ $lastName = $this->faker()->lastName; // 'Zulauf'
 ```
 
 ### Address 地址
+
 ```php
 //随机生成城市前缀town/port/haven...
  $cityPrefix = $this->faker()->cityPrefix; // 'Lake'
@@ -126,6 +129,7 @@ $lastName = $this->faker()->lastName; // 'Zulauf'
 ```
 
 ### PhoneNumber 电话号码
+
 ```php
 //生成随机电话号码
 $phoneNumber = $this->faker()->phoneNumber; // "(757) 833-3219 x158"
@@ -136,6 +140,7 @@ $e164PhoneNumber = $this->faker()->e164PhoneNumber; // "+8283952638578"
 ```
 
 ### Company 公司
+
 ```php
 //随机生成公司
 $company = $this->faker()->company; // "Jacobson-Reichert"
@@ -146,12 +151,14 @@ $jobTitle = $this->faker()->jobTitle; // "Brazing Machine Operator"
 ```
 
 ### Text 文本
+
 ```php
 //随机生成一段文本
 $realText = $this->faker()->realText($maxNbChars = 200, $indexSize = 2); // "And yet I wish you could manage it?) 'And what are they made of?' Alice asked in a shrill, passionate voice. 'Would YOU like cats if you were never even spoke to Time!' 'Perhaps not,' Alice replied."
 ```
 
 ### DateTime 日期时间
+
 ```php
 //随机生成时间戳
 $unixTime = $this->faker()->unixTime($max = 'now'); // 58781813
@@ -195,6 +202,7 @@ $timezone = $this->faker()->timezone; // "Antarctica/Macquarie"
 ```
 
 ### Internet 互联网
+
 ```php
 //随机生成邮箱地址
 $email = $this->faker()->email; // "qnikolaus@gmail.com"
@@ -232,6 +240,7 @@ $macAddress = $this->faker()->macAddress; // "36:2A:2F:AF:9F:55"
 ```
 
 ### UserAgent 用户代理
+
 ```php
 //用户代理
 $userAgent = $this->faker()->userAgent; // 'Mozilla/5.0 (Windows CE) AppleWebKit/5350 (KHTML, like Gecko) Chrome/13.0.888.0 Safari/5350'
@@ -248,6 +257,7 @@ $internetExplorer = $this->faker()->internetExplorer; // 'Mozilla/5.0 (compatibl
 ```
 
 ### Payment 支付
+
 ```php
 //随机生成信用卡类型
 $creditCardType = $this->faker()->creditCardType; // 'MasterCard'
@@ -265,6 +275,7 @@ $swiftBicNumber = $this->faker()->swiftBicNumber; // 'RZTIAT22263'
 ```
 
 ### Color 颜色
+
 ```php
 //随机生成16进制颜色
 $hexColor = $this->faker()->hexColor; // '#fa3cc2'
@@ -280,6 +291,7 @@ $colorName     = $this->faker()->colorName; // 'Gainsbor'
 ```
 
 ### File 文件
+
 ```php
 //随机生成文件扩展名
 $fileExtension = $this->faker()->fileExtension; // 'avi'
@@ -291,6 +303,7 @@ $fileName = $this->faker()->file($sourceDir = '/tmp', $targetDir = '/var', false
 ```
 
 ### Image 图片
+
 ```php
 //随机生成图片地址
 $imageUrl = $this->faker()->imageUrl($width = 640, $height = 480); // "https://lorempixel.com/640/480/?85309"
@@ -308,12 +321,14 @@ $imageFaker = $this->faker()->image($dir = '/var/www', $width = 640, $height = 4
 ```
 
 ### Uuid UUID
+
 ```php
 //随机生成一个唯一字串
 $uuid = $this->faker()->uuid; // "04c975c1-48c2-3730-a4e9-139fe66ee9c0"
 ```
 
 ### Barcode 条形码
+
 ```php
 //随机生成13位ean码
 $ean13  = $this->faker()->ean13; // '4006381333931'
@@ -326,6 +341,7 @@ $isbn10 = $this->faker()->isbn10; // '4881416324'
 ```
 
 ### Miscellaneous 各种各样的
+
 ```php
 //随机生成bool值 false
 $boolean = $this->faker()->boolean;
@@ -346,19 +362,23 @@ $emoji = $this->faker()->emoji; // 😁
 ```
 
 ### Biased 偏向的
+
 ```php
 //在10到20之间得到一个随机数，有更多的几率接近20
 $biasedNum = $this->faker()->biasedNumberBetween($min = 10, $max = 20, $function = 'sqrt'); //15
 ```
 
 ### HtmlLorem html 文本
+
 ```php
 //随机生成一个不超过 $maxDepth层的html, 任何级别上都不超过$maxWidth个元素
 $html = $this->faker()->randomHtml($maxDepth = 2, $maxWidth = 3); // <html><head><title>Aut illo dolorem et accusantium eum.</title></head><body><form action="example.com" method="POST"><label for="username">sequi</label><input type="text" id="username"><label for="password">et</label><input type="password" id="password"></form><b>Id aut saepe non mollitia voluptas voluptas.</b><table><thead><tr><tr>Non consequatur.</tr><tr>Incidunt est.</tr><tr>Aut voluptatem.</tr><tr>Officia voluptas rerum quo.</tr><tr>Asperiores similique.</tr></tr></thead><tbody><tr><td>Sapiente dolorum dolorem sint laboriosam commodi qui.</td><td>Commodi nihil nesciunt eveniet quo repudiandae.</td><td>Voluptates explicabo numquam distinctio necessitatibus repellat.</td><td>Provident ut doloremque nam eum modi aspernatur.</td><td>Iusto inventore.</td></tr><tr><td>Animi nihil ratione id mollitia libero ipsa quia tempore.</td><td>Velit est officia et aut tenetur dolorem sed mollitia expedita.</td><td>Modi modi repudiandae pariatur voluptas rerum ea incidunt non molestiae eligendi eos deleniti.</td><td>Exercitationem voluptatibus dolor est iste quod molestiae.</td><td>Quia reiciendis.</td></tr><tr><td>Inventore impedit exercitationem voluptatibus rerum cupiditate.</td><td>Qui.</td><td>Aliquam.</td><td>Autem nihil aut et.</td><td>Dolor ut quia error.</td></tr><tr><td>Enim facilis iusto earum et minus rerum assumenda quis quia.</td><td>Reprehenderit ut sapiente occaecati voluptatum dolor voluptatem vitae qui velit.</td><td>Quod fugiat non.</td><td>Sunt nobis totam mollitia sed nesciunt est deleniti cumque.</td><td>Repudiandae quo.</td></tr><tr><td>Modi dicta libero quisquam doloremque qui autem.</td><td>Voluptatem aliquid saepe laudantium facere eos sunt dolor.</td><td>Est eos quis laboriosam officia expedita repellendus quia natus.</td><td>Et neque delectus quod fugit enim repudiandae qui.</td><td>Fugit soluta sit facilis facere repellat culpa magni voluptatem maiores tempora.</td></tr><tr><td>Enim dolores doloremque.</td><td>Assumenda voluptatem eum perferendis exercitationem.</td><td>Quasi in fugit deserunt ea perferendis sunt nemo consequatur dolorum soluta.</td><td>Maxime repellat qui numquam voluptatem est modi.</td><td>Alias rerum rerum hic hic eveniet.</td></tr><tr><td>Tempore voluptatem.</td><td>Eaque.</td><td>Et sit quas fugit iusto.</td><td>Nemo nihil rerum dignissimos et esse.</td><td>Repudiandae ipsum numquam.</td></tr><tr><td>Nemo sunt quia.</td><td>Sint tempore est neque ducimus harum sed.</td><td>Dicta placeat atque libero nihil.</td><td>Et qui aperiam temporibus facilis eum.</td><td>Ut dolores qui enim et maiores nesciunt.</td></tr><tr><td>Dolorum totam sint debitis saepe laborum.</td><td>Quidem corrupti ea.</td><td>Cum voluptas quod.</td><td>Possimus consequatur quasi dolorem ut et.</td><td>Et velit non hic labore repudiandae quis.</td></tr></tbody></table></body></html>
 ```
 
 ## Modifiers 修改器
+
 Faker 提供三个特殊的提供者 providers, unique(), optional(), valid(), 在任何提供者之前调用。.
+
 ```php
 // unique() 强制 providers 返回一个唯一的值
 $values = array();

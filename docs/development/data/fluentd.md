@@ -1,10 +1,4 @@
----
-title: "Mac 上使用 Fluentd"
-date: 2021-05-20 16:09:28
-toc: true
-categories:
-- ["Ops","Mac"]
----
+# Mac 上使用 Fluentd
 
 使用 gem 安装, 在这之前需要安装 brew, ruby, 否则会出现无权写入
 
