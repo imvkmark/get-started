@@ -11,16 +11,21 @@
 >
 > https://archiveos.org/
 
-### CentOS
 
-- [升级和完善 CentOS 7](./centos/upgrade-at-7)
-- [常用脚本](./centos/tools)
-- [firewalld 常用命令](./centos/firewalld)
-- [FAQ](./centos/faq)
+**RHEL**
 
-### RockyLinux
+- [设置 Hostname](./rhel/set-hostname.md)
 
-- [RockyLinux 设置中文语言支持](./rockylinux/install-zh-cn-langpack.md)
+**CentOS**
+
+- [升级和完善 CentOS 7](./rhel/centos-upgrade-at-7)
+- [常用脚本](./rhel/tools)
+- [firewalld 常用命令](./rhel/firewalld)
+- [FAQ](./rhel/centos-faq)
+
+**RockyLinux**
+
+- [RockyLinux 设置中文语言支持](./rhel/install-zh-cn-langpack.md)
 
 **替代系统**
 
