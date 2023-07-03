@@ -2,7 +2,8 @@
 
 ## 初始化系统
 
-这里设置的用户是 `duoli`, 在此之前先需要对服务器进行完善和升级 [CentOS 7 进行服务器完善和升级](../../ops/centos/upgrade-at-7.md)
+这里设置的用户是 `duoli`,
+在此之前先需要对服务器进行完善和升级 [CentOS 7 进行服务器完善和升级](../../ops/rhel/centos-upgrade-at-7.md)
 
 ### 设置Mysql源
 
@@ -347,7 +348,7 @@ $ systemctl enable php-fpm mysqld nginx redis
 
 ### 下载安装mysql
 
-获取最新下载地址:  http://dev.mysql.com/downloads/mysql/ 
+获取最新下载地址:  http://dev.mysql.com/downloads/mysql/
 
 ```
 # 下载
@@ -447,7 +448,8 @@ $ vim /etc/php-fpm.d/www.conf
 ### File not found
 
 `nginx/apache` 网页文件的 selinux 上下文需要配置,
-如果未配置则日志中返回的错误是 `FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream`, 暴力解决方法: 关闭
+如果未配置则日志中返回的错误是 `FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream`,
+暴力解决方法: 关闭
 
 ```
 $ vim /etc/sysconfig/selinux
@@ -466,7 +468,8 @@ SELINUX=disabled
 
 ### 源 “MySQL 5.7 Community Server” 的 GPG 密钥已安装，但是不适用于此软件包
 
-> 源 “MySQL 5.7 Community Server” 的 GPG 密钥已安装，但是不适用于此软件包。请检查源的公钥 URL 是否配置正确 失败的软件包是：mysql-community-libs-5.7.38-1.el7.x86_64
+> 源 “MySQL 5.7 Community Server” 的 GPG 密钥已安装，但是不适用于此软件包。请检查源的公钥 URL 是否配置正确
+> 失败的软件包是：mysql-community-libs-5.7.38-1.el7.x86_64
 > GPG 密钥配置为：file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
 >
 
@@ -478,7 +481,8 @@ SELINUX=disabled
 
 ### supervisor 在代码更新之后需要重启
 
-supervisor 在启动的时候是把代码放到内存中, 然后使用单线程来跑, 并不是每次都重启一个线程, 所以 php 在运行的时候会是以一个单例的方式来运行, 这样便会导致使用静态变量不会释放,
+supervisor 在启动的时候是把代码放到内存中, 然后使用单线程来跑, 并不是每次都重启一个线程, 所以 php 在运行的时候会是以一个单例的方式来运行,
+这样便会导致使用静态变量不会释放,
 代码更新不会重新获取新代码, 加载到内存中(假定)所以
 
 - 更新代码必须要重启队列
@@ -517,7 +521,8 @@ supervisor 在启动的时候是把代码放到内存中, 然后使用单线程�
 
 ### 参考文章
 
-- [How To Install Nginx on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7)(很及时,
+- [How To Install Nginx on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7)(
+  很及时,
   解决了无法使用IP连接上服务器的问题)
 - [Nginx安装（官网翻译）](http://www.cnblogs.com/toughlife/p/5487575.html)
 - [nginx FastCGI错误Primary script unknown解决办法](http://www.jb51.net/article/47916.htm)
