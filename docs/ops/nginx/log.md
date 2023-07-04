@@ -8,10 +8,12 @@
 
 ## 关闭 access log
 
-在配置本地 nginx 开发环境时，发现一个问题，当 server 段不指定 access_log 时，并且 http 段中也未指定任何 access_log 参数时，它会默认写到`logs/access.log` 这个文件，也就是
+在配置本地 nginx 开发环境时，发现一个问题，当 server 段不指定 access_log 时，并且 http 段中也未指定任何 access_log
+参数时，它会默认写到`logs/access.log` 这个文件，也就是
 access_log 默认值就是 `logs/access.log`，而且是所有 server 的访问日志。但 nginx 网站上我并未找到此配置的默认值。
 
-如果我们不需要，在http段中加一行 access_log off; 然后在特定的 server 中配置自己想写入的日志。开发环境我默认不写日志，即不配置任何 access_log，需要时才打开。
+如果我们不需要，在http段中加一行 access_log off; 然后在特定的 server 中配置自己想写入的日志。开发环境我默认不写日志，即不配置任何
+access_log，需要时才打开。
 
 nginx 的 http 段中，设置 access log：
 
@@ -70,23 +72,23 @@ location ~* \.(jpg|gif|png|jpeg|bmp|svg|eot|woff|woff2|ico|js|css)$ {
 
 详细操作 : [安装方式](https://help.aliyun.com/document_detail/28982.html)
 
-内网安装:
+公网跨地域安装:
 
-```bash
+```shell
 # 下载
-$ wget http://logtail-release-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/linux64/logtail.sh -O logtail.sh; chmod 755 logtail.sh
+wget http://logtail-release-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/linux64/logtail.sh -O logtail.sh;chmod 755 logtail.sh
 # 安装
-$ ./logtail.sh install auto
+./logtail.sh install auto
 # 升级
-$ ./logtail.sh upgrade
+./logtail.sh upgrade
 # 启动
-$ /etc/init.d/ilogtaild start
+/etc/init.d/ilogtaild start
 # 重启
-$ /etc/init.d/ilogtaild restart
+/etc/init.d/ilogtaild restart
 # 停止
-$ /etc/init.d/ilogtaild stop
+/etc/init.d/ilogtaild stop
 # 卸载
-$ ./logtail.sh uninstall
+./logtail.sh uninstall
 ```
 
 相关目录
@@ -107,7 +109,8 @@ $ ./logtail.sh uninstall
 
 **查看阿里云主账号ID。**
 
-登录日志服务控制台。单击页面右上角的控制台图标，进入CloudShell（详细内容参考云命令行）。在页面下方的命令框中输入`echo $ALIBABA_CLOUD_ACCOUNT_ID`获取主账号ID。
+登录日志服务控制台。单击页面右上角的控制台图标，进入CloudShell（详细内容参考云命令行）。在页面下方的命令框中输入`echo $ALIBABA_CLOUD_ACCOUNT_ID`
+获取主账号ID。
 
 查看主账号ID
 

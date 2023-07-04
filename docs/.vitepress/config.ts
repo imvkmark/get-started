@@ -32,7 +32,9 @@ const nav = [
         ],
     },
     {
-        text: "数据库", activeMatch: `^/database/`, items: [
+        text: "数据库",
+        activeMatch: `^/database/`,
+        items: [
             createLink('MySQL', '/database/mysql/'),
             createLink('Redis', '/database/redis/01-command-data.md'),
         ]
@@ -602,28 +604,14 @@ const sidebar = {
             ]
         },
     ],
-    "/database/mysql": [
-        createLink('介绍', '/database/mysql/'),
-        {
-            text: "优化",
-            items: [
-                createLink("索引优化分析：性能分析", "/database/mysql/optimize/optimize-explain.md"),
-            ],
-        },
-        {
-            text: "MySQL CookBook",
-            items: [
-                createLink("使用 Mysql 客户端", "/database/mysql/mysql-cookbook/1-2-client"),
-                createLink("从表中查询数据", "/database/mysql/mysql-cookbook/3-7-table-query"),
-                createLink("表管理", "/database/mysql/mysql-cookbook/4-table-mgr"),
-                createLink("与字符串共舞", "/database/mysql/mysql-cookbook/5-string"),
-                createLink("使用日期和时间", "/database/mysql/mysql-cookbook/6-date-time"),
-                createLink("聚合函数", "/database/mysql/mysql-cookbook/8-9-aggregate-function"),
-                createLink("数据导入导出", "/database/mysql/mysql-cookbook/10-dump-import"),
-            ],
-        },
-        createLink('FAQ', '/database/mysql/faq'),
+    "/database/mysql/statements": [
+        createLink('SQL 语句', '/database/mysql/refs/13-sql-statements'),
     ],
+    "/database/mysql": [
+        createLink('MySQL 参考', '/database/mysql/refs/13-sql-statements'),
+        createLink('MySQL CookBook', '/database/mysql/mysql-cookbook/1-2-client'),
+    ],
+
     "/database/redis": [
         createLink('介绍', '/database/redis/'),
         createLink('通用命令，数据结构和内部编码，单线程架构', '/database/redis/01-command-data.md'),
@@ -640,7 +628,6 @@ const sidebar = {
         createLink('Redis Cluster', '/database/redis/12-cluster.md'),
         createLink('Redis缓存的使用和设计', '/database/redis/13-cache.md'),
     ],
-
     "/web": [
         {text: "Web开发", link: "/web/"},
         {
