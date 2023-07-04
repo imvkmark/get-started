@@ -2,7 +2,7 @@
 
 ## 索引优化分析
 
-- [索引优化分析：性能分析](./optimize)
+- [索引优化分析：性能分析](./optimize/optimize-explain.md)
 
 ## IDE
 

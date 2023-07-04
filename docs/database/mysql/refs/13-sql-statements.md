@@ -30,6 +30,12 @@ ALTER USER 'jeffrey'@'localhost' IDENTIFIED BY 'new_password'
 CREATE USER 'jeffrey'@'localhost' IDENTIFIED BY 'password';
 ```
 
+#### 删除用户
+
+```sql
+DROP USER 'jeffrey'@'localhost';
+```
+
 #### GRANT 语句
 
 ```sql
