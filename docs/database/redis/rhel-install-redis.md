@@ -1,12 +1,13 @@
----
-title : "「译」 在 CentOS 7/RockyLinux 上安装和配置 Redis"
-date : 2022-04-20 19:00:53
-toc : true
-categories :
-  - [ "Ops","CentOS" ]
----
+# 「译」在 RockyLinux/CentOS 7 上安装和配置 Redis
 
-Redis 是一个开源的内存型数据库。它可以用作数据库，缓存或消息代理，并支持各种数据结构，例如字符串，哈希，列表，集合等。Redis 通过 Redis Sentinel
+::: info 原文地址
+
+[How to Install and Configure Redis on CentOS 7](https://linuxize.com/post/how-to-install-and-configure-redis-on-centos-7/)
+
+:::
+
+Redis 是一个开源的内存型数据库。它可以用作数据库，缓存或消息代理，并支持各种数据结构，例如字符串，哈希，列表，集合等。Redis 通过
+Redis Sentinel
 提供高可用性，包括监视，通知，自动故障转移。它还使用 Redis Cluster 在多个 Redis 节点之间提供自动分区。
 
 ## 先决条件
@@ -14,6 +15,36 @@ Redis 是一个开源的内存型数据库。它可以用作数据库，缓存�
 在开始本教程之前，请确保您以[user with sudo privileges](https://linuxize.com/post/create-a-sudo-user-on-centos/)的身份登录。
 
 ## 安装
+
+### 在 RockyLinux 上安装/升级 Redis
+
+查看当前可用的 redis 源
+
+```
+# dnf module list redis
+上次元数据过期检查：2:41:32 前，执行于 2022年05月07日 星期六 17时13分02秒。
+Rocky Linux 8 - AppStream
+Name        Stream     Profiles        Summary
+redis       5 [d]      common [d]      Redis persistent key-value database
+redis       6          common [d]      Redis persistent key-value database
+
+Remi's Modular repository for Enterprise Linux 8 - x86_64
+Name        Stream            Profiles        Summary
+redis       remi-5.0          common [d]      Redis persistent key-value database
+redis       remi-6.0          common [d]      Redis persistent key-value database
+redis       remi-6.2          common [d]      Redis persistent key-value database
+redis       remi-7.0 [e]      common [d]      Redis persistent key-value database
+```
+
+安装 / 升级
+
+```
+启用 redis 7.0 版本
+# dnf module enable -y redis:remi-7.0
+
+安装 
+# dnf install -y --enablerepo=remi redis
+```
 
 ### 在 CentOS 7 上安装 Redis
 
@@ -79,41 +110,12 @@ OK
 (0.78s)
 ```
 
-### 在 RockyLinux 上安装/升级 Redis
-
-查看当前可用的 redis 源
-
-```
-# dnf module list redis
-上次元数据过期检查：2:41:32 前，执行于 2022年05月07日 星期六 17时13分02秒。
-Rocky Linux 8 - AppStream
-Name        Stream     Profiles        Summary
-redis       5 [d]      common [d]      Redis persistent key-value database
-redis       6          common [d]      Redis persistent key-value database
-
-Remi's Modular repository for Enterprise Linux 8 - x86_64
-Name        Stream            Profiles        Summary
-redis       remi-5.0          common [d]      Redis persistent key-value database
-redis       remi-6.0          common [d]      Redis persistent key-value database
-redis       remi-6.2          common [d]      Redis persistent key-value database
-redis       remi-7.0 [e]      common [d]      Redis persistent key-value database
-```
-
-安装 / 升级
-
-```
-启用 redis 7.0 版本
-# dnf module enable -y redis:remi-7.0
-
-安装 
-# dnf install -y --enablerepo=remi redis
-```
-
 ## 配置 Redis 远程访问
 
 默认情况下，Redis 不允许远程连接。只能从运行 Redis 的计算机 127.0.0.1 （localhost） 连接到 Redis 服务器。
 
-仅当你要从远程主机连接到 Redis 服务器时，才执行以下步骤。如果使用单个服务器设置，并且应用程序和 Redis 在同一台计算机上运行， 则不应启用远程访问。
+仅当你要从远程主机连接到 Redis 服务器时，才执行以下步骤。如果使用单个服务器设置，并且应用程序和 Redis 在同一台计算机上运行，
+则不应启用远程访问。
 
 要将 Redis 配置为接受远程连接，请使用文本编辑器打开 Redis 配置文件：
 
@@ -150,7 +152,8 @@ tcp    LISTEN     0      128    127.0.0.1:6379                  *:*
 
 接下来，需要添加防火墙规则，以启用来自远程计算机上 TCP 端口上的访问 `6379`。
 
-假设正在使用`[FirewallD](https://linuxize.com/post/how-to-setup-a-firewall-with-firewalld-on-centos-7/)` 防火墙来管理防火墙，并且希望允许从`192.168.121.0/24`
+假设正在使用`[FirewallD](https://linuxize.com/post/how-to-setup-a-firewall-with-firewalld-on-centos-7/)`
+防火墙来管理防火墙，并且希望允许从`192.168.121.0/24`
 子网进行访问，则可以运行以下命令：
 
 ```
@@ -190,7 +193,6 @@ redis-cli> CONFIG SET protected-mode no
 
 ## 参考
 
-- [How to Install and Configure Redis on CentOS 7](https://linuxize.com/post/how-to-install-and-configure-redis-on-centos-7/)
 - [Documentation](https://redis.io/docs/)
 - [使用 dnf 升級 redis 版本](https://blog.yowko.com/dnf-upgrade-redis/)
 

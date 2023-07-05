@@ -12,9 +12,10 @@
 > https://archiveos.org/
 
 
-**RHEL**
+**RHEL(以 RockyLinux 9 为例子)**
 
 - [设置 Hostname](./rhel/set-hostname.md)
+- [查看系统版本号](./rhel/view-system-version.md)
 
 **CentOS**
 
