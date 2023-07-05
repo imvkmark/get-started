@@ -1,34 +1,54 @@
 # 设置 SSH 安全通过密钥,免密码登录服务器或拉取代码
 
-我们一般使用 PuTTY 等 SSH 客户端来远程管理 Linux 服务器。但是，一般的密码方式登录，容易有密码被暴力破解的问题。所以，一般我们会将 SSH 的端口设置为默认的 22
-以外的端口，或者禁用 root 账户登录。其实，有一个更好的办法来保证安全，而且让你可以放心地用 root 账户从远程登录——那就是通过密钥方式登录。
+我们一般使用 PuTTY 等 SSH 客户端来远程管理 Linux 服务器。但是，一般的密码方式登录，容易有密码被暴力破解的问题。所以，一般我们会将
+SSH 的端口设置为默认的 22 以外的端口，并且禁用 root 账户登录。
+
+其实，有一个更好的办法来保证安全，而且让你可以放心地用 root 账户从远程登录——那就是通过密钥方式登录。
 
 密钥形式登录的原理是：利用密钥生成器制作一对密钥——一只公钥和一只私钥。将公钥添加到服务器的某个账户上，然后在客户端利用私钥即可完成认证并登录。这样一来，没有私钥，任何人都无法通过
-SSH 暴力破解你的密码来远程登录到系统。此外，如果将公钥复制到其他账户甚至主机，利用私钥也可以登录。
+SSH 暴力破解你的密码来远程登录到系统。此外，如果将公钥复制到其他账户甚至主机，利用私钥也可以登录
+
 > 这个方式同样可以拉取 git 代码, 后续会附上如何在 coding 中配置公钥
 
 ## 制作密钥
 
-下面来讲解如何在 Linux 服务器上制作密钥对，将公钥添加给账户，设置 SSH，最后通过客户端登录。
+下面来讲解如何在服务器上制作密钥对，将公钥添加给账户，设置 SSH，最后通过客户端登录
 
 ### 1) 制作密钥对
 
-首先在服务器上制作密钥对。首先用密码登录到你打算使用密钥登录的账户，然后执行以下命令：
-> 对于 Centos 版本比较高的系统, 需要使用长度较长的密钥, 可能比较弱的密钥在高版本系统中根本无法通过授权 userauth-request for user liexiang service ssh-connection
-> method none [preauth] 可能是无法找到匹配的方法,不安全的密钥已经不支持了
+首先在服务器上制作密钥对
+
+> 这里的密钥算法首推 ed25519, 因为它的安全性在 2048-4096 之间并且性能比 rsa 要优秀的多, 并且在 ubuntu 22.0 中已经默认禁用了
+> rsa 算法的密钥作为 ssh 的登录密钥.
 
 ```
-# 使用给定的 email 注释 public/private rsa 密钥
-# 需要配置 .ssh/config
-cd ~/
-ssh-keygen
-# or
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+# 使用 email 或你喜欢的内容对密钥进行注释
+$ ssh-keygen -t ed25519 -C "your_email@example.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (~/.ssh/id_ed25519): ./key
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in ./key
+Your public key has been saved in ./key.pub
+The key fingerprint is:
+SHA256:65eeHAeln848lKByEwoOHkEef8TvR6yjrduLRevC0no your_email@example.com
+The key's randomart image is:
++--[ED25519 256]--+
+| .o  ..          |
+| ..o ..          |
+|  ... .. .  .    |
+|  o ..  o +o     |
+| . + . oS=o. .   |
+|  . . o.Bo.oo.   |
+|     o =++.o+    |
+|    . E*..oB.    |
+|    .+++=++ +.   |
++----[SHA256]-----+
 ```
 
-密钥锁码在使用私钥时必须输入，这样就可以保护私钥不被盗用。当然，也可以留空，实现无密码登录。
+密钥密码在使用私钥时必须输入，这样就可以保护私钥不被盗用。当然，也可以留空，实现无密码登录
 
-现在，在指定的目录中生成了一个有两个密钥文件。id_rsa 为私钥，id_rsa.pub 为公钥。
+现在，在指定的目录中生成了一个有两个密钥文件。key 为私钥，key.pub 为公钥
 
 ### 2) 在服务器上安装公钥
 
@@ -37,7 +57,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 > 公钥复制到远程机器, 并自动配置好权限密钥
 
 ```
-$ ssh-copy-id -i {dir-of-keys}/rsa2.pub user@host
+$ ssh-copy-id -i {dir-of-keys}/key.pub user@host
 ```
 
 **方法二 : 进入服务器手动设定文件和目录的权限**
@@ -46,7 +66,7 @@ $ ssh-copy-id -i {dir-of-keys}/rsa2.pub user@host
 
 ```
 $ cd .ssh
-$ cat id_rsa.pub >> authorized_keys
+$ cat key.pub >> authorized_keys
 ```
 
 如此便完成了公钥的安装。为了确保连接成功，请保证以下文件权限正确：
@@ -86,18 +106,17 @@ $ systemctl restart sshd
 
 ## 客户端配置私钥 & config 配置
 
-很多时候，我们开发可能需要连接多台远程服务器，并且需要配置 git 服务器的私钥。那么这么多的服务器不能共用一套私钥，不同的服务器应该使用不同的私钥。但是我们从上面的连接流程可以看到，ssh
-默认是去读取 `$HOME/.ssh/id_rsa` 文件作为私钥登录的。如果想要不同的服务器使用不同的私钥进行登录，那么需要在 `.ssh` 目录下编写 `config` 文件来进行配置。
+很多时候，我们开发可能需要连接多台远程服务器，并且需要配置 git
+服务器的私钥。那么这么多的服务器不能共用一套私钥，不同的服务器应该使用不同的私钥。但是我们从上面的连接流程可以看到，ssh
+默认是去读取 `$HOME/.ssh/key` 文件作为私钥登录的。如果想要不同的服务器使用不同的私钥进行登录，那么需要在 `.ssh`
+目录下编写 `config` 文件来进行配置。
 
 `config` 的配置很简单，只要指明哪个用户登录哪台远程服务器需要使用哪个私钥即可。下面给出一个配置示例。
 
 ```
-Host github.com
-    User duoli
-    IdentityFile ~/.ssh/id_rsa.github
 Host 192.168.1.1
-    User ubuntu
-    IdentityFile ~/.ssh/id_rsa.xxx
+    User foo
+    IdentityFile ~/.ssh/key
 ```
 
 **另一种方式** 支持名字的映射
@@ -105,8 +124,8 @@ Host 192.168.1.1
 ```
 Host test
     HostName 192.168.1.21
-    User liexiang
-    IdentityFile ~/.ssh/liexiang
+    User foo
+    IdentityFile ~/.ssh/key
 ```
 
 上面 `config` 文件字段含义如下：
@@ -134,7 +153,7 @@ Host test
 输出部署公玥
 
 ```
-$ cat coding.pub
+$ cat key.pub
 ```
 
 在 git 管理端部分部署公钥
@@ -291,6 +310,22 @@ Host *
 - `ServerAliveCountMax 3`
 
 表示最大连续尝试连接次数（这个基本不用设置）
+
+### Too many authentication failures
+
+**场景**
+
+我们登录的时候 ssh 会使用密钥进行匹配连接, 但是会报 Too many authentication failures
+
+**原因**
+
+ECS实例内SSH远程登录配置文件 `/etc/ssh/sshd_config` 中配置了密码重试策略，多次连续输入错误密码后，提示该错误, 解决方案
+
+找到这个配置, 更改重试次数, 然后重启 sshd
+
+```
+MaxAuthTries 6
+```
 
 ## 参考
 
