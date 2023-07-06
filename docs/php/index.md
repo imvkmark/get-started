@@ -13,8 +13,8 @@
 
 ## 包管理
 
-- [composer 命令行](http://docs.phpcomposer.com/03-cli.html)
 - [Composer 中文文档](https://learnku.com/docs/composer/2018)
+- [composer 命令行](http://docs.phpcomposer.com/03-cli.html)
 - [安装和加速](./composer/install-and-use-mirror)
 - [怎样创建 PSR-4 的 Php 包](./composer/create-psr4-package.md)
 
@@ -25,7 +25,7 @@
 - [PhpStorm 中运行 TestSuit](../development/ide/phpstorm-run-testsuit.md)
 - [使用 PhpStorm 开发 Laravel](../development/ide/phpstorm-develop-laravel.md)
 
-# 安装
+## 安装
 
 - [Mac 安装 LNMP](./install/mac-lnmp)
 - [CentOS 7 安装 LNMP](./install/centos7-lnmp-plus)
@@ -33,20 +33,21 @@
 - [使用 PECL 安装扩展](./install/install-extension-and-optimize.md)
 - ~~[scws 扩展的安装和介绍](./tech/extension-scws.md)~~
 
-# Packages
+## Packages
 
 - [Carbon](./packages/carbon-carbon)
 - [dotenv - PHP 版本的 .env](./packages/vlucas-phpdotenv.md)
 - [Roave 安全建议](./packages/roave-security-advisories.md)
 - [Simple Captcha For Laravel 5](./packages/developer-tz-simple-captcha.md)
 
-# 其他
+## 其他
 
 - [使用 Clockwork 调试 Php 应用](./tech/using-clockwork-extension-for-debug.md)
 - [Php 获取到的 Headers](./tech/http-headers.md)
 - [FAQ](./faq.md)
+- [使用 Sami/Doctum 生成 Php Api文档](./tech/sami-generate-phpdoc.md)
 
-# Hyperf
+## Hyperf
 
 - [Hyperf 2](https://hyperf.wiki/2.2/#/)
 - [入门](./hyperf/index.md)
@@ -62,6 +63,7 @@
 - [Laravel 组件之 Forms & HTML 组件 (laravelcollective/html)](https://segmentfault.com/a/1190000011580448)
 - [Laravel Cheetsheet@6.x](https://learnku.com/docs/laravel-cheatsheet/6.0)
 - [Laravel Doc @6.x](https://learnku.com/docs/laravel/6.x)
+- [Laravel 内核分析](https://learnku.com/docs/laravel-kernel)
 
 ## 单元测试
 

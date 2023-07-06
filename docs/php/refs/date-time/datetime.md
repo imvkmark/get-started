@@ -2,7 +2,8 @@
 
 ## 介绍
 
-这些函数允许你从运行 PHP 的服务器获取时间和日期,你可以通过各种方式来处理这些日期.日期和时间信息在内部以 64 为数字存储,所以可以想到的任何时间的日期都是支持的(包括公元前纪年), 所有的时间都是基于内部的服务器设置.
+这些函数允许你从运行 PHP 的服务器获取时间和日期,你可以通过各种方式来处理这些日期.日期和时间信息在内部以 64
+为数字存储,所以可以想到的任何时间的日期都是支持的(包括公元前纪年), 所有的时间都是基于内部的服务器设置.
 
 ## 安装
 
@@ -26,7 +27,8 @@ date.timezone "" PHP_INI_ALL 默认的时区
 
 1. DateTime
 
-从服务器获取时间或者使用函数来格式化时间 由于数据是以 64 位数字保存,所以数据可以延伸到负数的年份,所以时间可以延伸到 -2920 亿年前到 2920 亿年之前
+从服务器获取时间或者使用函数来格式化时间 由于数据是以 64 位数字保存,所以数据可以延伸到负数的年份,所以时间可以延伸到
+-2920 亿年前到 2920 亿年之前
 
 ```php
 DateTime {
@@ -312,7 +314,7 @@ DatePeriod implements Traversable {
 
 Sample:
 
-! https://file.wulicode.com/note/2021/11-11/15-59-30547.png 
+! https://file.wulicode.com/note/2021/11-11/15-59-30547.png
 
 `bool checkdate ( int $month , int $day , int $year )`
 
@@ -411,7 +413,7 @@ $timestamp  默认是现在时间
 [0]       => 1055901520       unix时间戳
 ```
 
-! https://file.wulicode.com/note/2021/11-11/15-59-41150.png 
+! https://file.wulicode.com/note/2021/11-11/15-59-41150.png
 
 `mixed gettimeofday ([ bool $return_float ] )`
 
@@ -424,7 +426,7 @@ $timestamp  默认是现在时间
 [dsttime] => 1               夏时令校正的类型
 ```
 
-! https://file.wulicode.com/note/2021/11-11/15-59-52176.png 
+! https://file.wulicode.com/note/2021/11-11/15-59-52176.png
 
 `string gmdate ( string $format [, int $timestamp ] )`
 
@@ -464,7 +466,7 @@ $format    只接受一个字符作为format参数.
 [tm_isdst] => 1
 ```
 
-! https://file.wulicode.com/note/2021/11-11/16-00-07003.png 
+! https://file.wulicode.com/note/2021/11-11/16-00-07003.png
 
 `mixed microtime ([ bool $get_as_float ] )`
 
@@ -547,4 +549,4 @@ $format
 
 ## 扩展
 
-[关于 Php 的周计算](https://www.notion.so/Php-233e178888d040cda85b2c7e12342dd1)
+- [关于 Php 的周计算](../usage/datetime-week.md)
