@@ -139,6 +139,12 @@ const sidebar = {
                 createLink('深入探讨 Service Provider', '/php/laravel/service-provider'),
             ]
         },
+        {
+            text: 'CodeReview',
+            items: [
+                createLink('Cr-01', '/php/laravel/code-review-01'),
+            ]
+        },
 
         createLink('FAQ', '/php/laravel/faq.md'),
     ],

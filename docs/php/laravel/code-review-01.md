@@ -1,14 +1,6 @@
----
-title: "Laravel (Code Review) - 01"
-date: 2022-04-20 19:01:04
-toc: true
-categories:
-- ["Php","Laravel"]
----
+# Laravel (Code Review) - 01
 
 ## 1. 带标签的缓存是无法不带标签删除的
-
-
 
 ```php
 #laravel 5.5
@@ -23,6 +15,7 @@ $this->assertEquals($a, $b);
 ```
 
 ## 2. 创建的数据和保存的数据不符合
+
 ```php
 # 创建前
 $input = [
@@ -56,18 +49,21 @@ $user = [
     "updated_at" => "2018-07-26 22:07:30"
 ]
 ```
-> I believe this is designed this way to limit number of SQL queries. If you need to get actual data saved in the database, you need to obtain this record explicitely, just the way you did :)
+
+> I believe this is designed this way to limit number of SQL queries. If you need to get actual data saved in the
+> database, you need to obtain this record explicitely, just the way you did :)
 > INSERT query doesn't return actual row.
 
-
 ## 3. 事件中绝对不要返回 fasle
+
 因为在 PHP 5.5 中 这样说明
 > Stopping The Propagation Of An Event
-> Sometimes, you may wish to stop the propagation of an event to other listeners. You may do so by returning `false` from your listener's `handle` method.
+> Sometimes, you may wish to stop the propagation of an event to other listeners. You may do so by returning `false`
+> from your listener's `handle` method.
 > 
 
-
 ## 4. 控制器方法
+
 ```
 index()                  # 列表
 establish($id = null)    # 创建 / 编辑
@@ -77,13 +73,16 @@ destroy()                # 销毁(彻底删除)
 ```
 
 ## 5. 路由写法
+
 路由器第二个参数不可以传 `key`
+
 ```
 # 传值 bad
 route('dsk_base_area.establish', ['parent_id' => $item['areaid']])
 # 不传值 good
 route('dsk_base_area.establish', [$item->areaid]])
 ```
+
 这两个哪个写起来更简洁呢?
 
 因为使用 route 的时候接收到的参数在控制器传参数进行获取
@@ -93,6 +92,7 @@ route('dsk_base_area.establish', [$item->areaid]])
 ps: 使用 `$request->input('parent_id')` 根本获取不到东西
 
 ## 6. 使用对象和对象的错误提示
+
 ```
 # 使用对象的好处
 route('dsk_base_area.create', [$item['areaid']])   # 如果不存在字段, 则报 undefined index 错误
@@ -103,6 +103,7 @@ route('dsk_base_area.create', [$item->area_id])   # 使用映射过的字段更�
 ```
 
 ## 7. 合理使用模型提供的方法
+
 ```
 # 取一条
 UserMessage::where('item_id', $item_id)->select("*")->first();
@@ -118,6 +119,7 @@ $item->save();
 ```
 
 ## 8. Form 使用 post 方法提交可以不填写 'method'
+
 ```
 # 这里来自于表单提交
 @if (isset($item))
@@ -126,7 +128,9 @@ $item->save();
     {!! Form::open(['route' => 'dsk_adv_item.create','id' => 'form_ad_place','enctype'=>'multipart/form-data']) !!}
 @endif
 ```
+
 优化后
+
 ```
 @if (isset($item))
     {!! Form::model($item,['route' => ['dsk_adv_item.edit', $item->id], 'id' => 'form_ad_place']) !!}
@@ -136,10 +140,13 @@ $item->save();
 ```
 
 ## 9. 对于编辑/创建使用同一个模版
+
 编辑和创建来说, 我们使用同一个模版, 模板的名字应该命名为 `establish.blade.php`
 
 ## 10. [批量]更新使用 update
+
 因为这里的更新就是批量的, 并且使用的方式不是更新一个, 所以这里不使用 `batchUpdate`
+
 ```php
 class AdPlaceController{
     # bad
@@ -158,6 +165,7 @@ class AdPlaceController{
 ```
 
 ## 11. 取消不需要的导入
+
 ```
 use Order\Action\Hunter;
  use Order\Models\Filters\OrderHunterFilter;
@@ -168,6 +176,7 @@ use Order\Action\Hunter;
 ```
 
 ## 12. 类内部调用使用 self (self_accessor)
+
 ```
 /**
  * @param int $account_id 用户ID
@@ -180,6 +189,7 @@ public function account($account_id): self
 ```
 
 ## 13. Laravel 中 Carbon 对象可以直接进行时间传递
+
 ```php
 // deprecated
 $rePublishTimer = Carbon::now()->subMinutes($interval)->toDateTimeString();
@@ -191,7 +201,9 @@ $accountIds = CustomHunter::where('updated_at', '<',  Carbon::now()->subMinutes(
 ```
 
 ## 14. 数据获取
+
 获取数据应当采用最简单的形式
+
 ```php
 // bad : new 模型, 没有考虑逻辑
 if ((new \System\Models\PamBind)->where('qq_key', $openId)->exists()) {
@@ -213,7 +225,9 @@ PamBind::updateOrCreate([
 ```
 
 ## 15.初始化异常处理
+
 获取数据需要做异常处理, 否则会出现无查询结果
+
 ```php
 // bad : 错误信息
 public function init($id)
@@ -236,12 +250,15 @@ public function init($id)
 ```
 
 ## 16. 队列中运行延迟时候需要确保存在 `delay()` 方法
+
 使用 `Illuminate\Bus\Queueable` 这个 Trait,
 
 `.env` 中的 `QUEUE_DRIVER` 能够是 sync
 
 ## 17. `empty()` 和 `Collection::empty()` 方法不同
+
 这段代码来自于清除未支付的中间订单
+
 ```
 # 原始代码
 $list = FinancePayTransfer::where('status', FinancePayTransfer::STATUS_UNPAY)
@@ -266,12 +283,15 @@ if (!$list->isEmpty()) {
 ```
 
 ## 18. 类名和文件名大小写匹配
+
 如果不匹配会造成类在 unix 平台中无法匹配
 
 ![](https://file.wulicode.com/note/2021/11-11/15-55-31887.png#)
 
 ## 19. 类方法名使用正确的方法名称
+
 `orderBy` 是正确写法, 不是 `OrderBy`
+
 ```
 # bad
 AdvPlace::OrderBy('list_order', 'asc')->lists('title', 'id');
@@ -282,12 +302,15 @@ $DB->orderBy('id', 'desc');
 ```
 
 ## 20. 生成 Laravel ide-helper 用来提示函数
+
 使用以下命令可以生成代码提示
+
 ```
 php artisan ide-helper:generate
 ```
 
 ## 21 使用 Map 会掉 el### 3.1 使用 Map 会坑
+
 ```php
 $items   = [
     [
@@ -339,7 +362,9 @@ $collect = collect($items)
 ```
 
 ## 22 使用 collect 转换成数组
+
 toArray 递归转换成数组, 支持 `toArray` 方法的可以递归转换成数组
+
 ```php
 // collect 内部可以转换成数组
 $collect    = collect([1, 2, 3, 4]);
