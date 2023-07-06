@@ -49,6 +49,7 @@
 
 - [设置代理](./tech/set-proxy.md)
 - [Aliyun STS 细粒度授权](./tech/aliyun-sts-assume-role.md)
+- [查看连接 wifi 的mac 地址](./tech/view-wifi-mac.md)
 
 ## 软件
 

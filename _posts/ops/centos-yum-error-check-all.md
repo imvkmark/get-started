@@ -3,14 +3,10 @@ title: " 「转+」 yum check报错Error: check all 解决办法"
 date: 2021-06-26 10:30:12
 toc: true
 categories:
-- ["Ops","CentOS","Dnf \/ Yum \/ Repo 仓库"]
+  - [ "Ops","CentOS","Dnf \/ Yum \/ Repo 仓库" ]
 ---
 
 原文地址: [yum check报错Error: check all 解决办法](https://www.91linux.org/592.html)
-
-
-
-
 
 ### 错误信息：
 
@@ -30,7 +26,6 @@ tzdata-2013g-1.el6.noarch is a duplicate with tzdata-2013c-2.el6.noarch
 2:xinetd-2.3.14-39.el6_4.x86_64 is a duplicate with 2:xinetd-2.3.14-38.el6.x86_64
 Error: check all
 ```
-
 
 ### 解决办法：
 
