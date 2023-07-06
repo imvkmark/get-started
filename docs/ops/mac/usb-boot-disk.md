@@ -1,10 +1,4 @@
----
-title: "Mac上制作Ubuntu USB启动盘"
-date: 2022-04-14 22:14:38
-toc: true
-categories:
-  - [ "Ops","Mac" ]
----
+# Mac上制作Ubuntu USB启动盘
 
 原文地址 :  http://jiangbo.me/blog/2011/11/09/create_ubuntu_usb_startdisk_on_mac/
 

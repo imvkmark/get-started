@@ -2,12 +2,7 @@
 
 原文地址 : [高可用Redis(一)：通用命令，数据结构和内部编码，单线程架构](https://www.cnblogs.com/renpingsheng/p/9773913.html)
 
-
-
-
-
 ## 1.通用API
-
 
 ### 1.1 keys命令和dbsize命令
 
@@ -60,7 +55,6 @@ OK
 4.Redis内置一个计数器，可以实时更新Redis中key的总数，所以dbsize命令可以在线上使用
 ```
 
-
 ### 1.2 exists命令和del命令
 
 ```
@@ -98,7 +92,6 @@ OK
 ```
 del命令和exists命令的时间复杂度为O(1)
 ```
-
 
 ### 1.3 expire命令，ttl命令和persist命令
 
@@ -145,7 +138,6 @@ OK
 expire命令和ttl命令，persist命令的时间复杂度都是O(1)
 ```
 
-
 ### 1.4 type命令
 
 ```
@@ -174,13 +166,11 @@ type的返回结果有6种：string,hash,list,set,zset,none
 type命令的时间复杂度为O(1)
 ```
 
-
 ## 2.数据结构和内部编码
 
 Redis每种数据结构及对应的内部编码如下图所示
 
 ![](https://file.wulicode.com/yuque/202208/04/15/0008zh11wAnr.jpeg)
-
 
 ## 3.单线程架构
 
@@ -189,7 +179,6 @@ Redis内部使用单线程架构。
 比如一条公路，这条公路只有一条车道。所有从这条车道上行驶的车，都必须按先来后到的顺序依次行驶
 
 Redis一个瞬间只能执行一条命令，不能执行两条命令
-
 
 ### 3.1 Redis单线程为什么这么快
 

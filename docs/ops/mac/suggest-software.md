@@ -1,10 +1,4 @@
----
-title: "Mac 常用软件"
-date: 2022-04-20 19:00:59
-toc: true
-categories:
-  - [ "Ops","Mac" ]
----
+# Mac 常用软件
 
 ## 开发
 

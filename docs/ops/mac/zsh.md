@@ -1,12 +1,10 @@
----
-title: "[转] Mac-zsh 安装和使用"
-date: 2022-04-20 19:00:58
-toc: true
-categories:
-  - [ "Ops","Mac" ]
----
+# 「转」Mac-zsh 安装和使用
 
-原文地址: [Mac-zsh 安装和使用(原创)](https://cnbin.github.io/blog/2015/06/01/mac-zsh-an-zhuang-he-shi-yong/)
+::: info 原文地址
+
+[Mac-zsh 安装和使用(原创)](https://cnbin.github.io/blog/2015/06/01/mac-zsh-an-zhuang-he-shi-yong/)
+
+:::
 
 首先，我们知道，shell 有很多种：可以通过命令 `cat /etc/shells` 可以查看系统支持哪些 shell：
 

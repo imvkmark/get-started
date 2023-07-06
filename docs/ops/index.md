@@ -4,6 +4,10 @@
 
 ### Mac
 
+- [常用软件](./mac/suggest-software.md)
+- [「转」Mac-zsh 安装和使用](./mac/zsh.md)
+- [Mac上制作Ubuntu USB启动盘](./mac/usb-boot-disk.md)
+
 ### Linux
 
 ****
@@ -44,6 +48,7 @@
 ### 技术
 
 - [设置代理](./tech/set-proxy.md)
+- [Aliyun STS 细粒度授权](./tech/aliyun-sts-assume-role.md)
 
 ## 软件
 
