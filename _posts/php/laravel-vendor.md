@@ -3,15 +3,13 @@ title: "[转] Laravel5 插件包 vendor 开发"
 date: 2022-04-20 19:01:07
 toc: true
 categories:
-- ["Php","Laravel","vendor"]
+  - [ "Php","Laravel","vendor" ]
 ---
 
 原文地址: [laravel5.2插件包vendor开发](https://phperzh.com/articles/2275)
 
-
-
-
 #### 准备工作
+
 ```
 1)拥有git账户密码,熟悉git常用命令
 2)拥有packagist账户密码
@@ -21,21 +19,24 @@ categories:
 
 ---
 
-
 #### 1)新建文件夹
+
 在新建的laravel项目中建立如下目录:
+
 ```
 packages/yuansir/toastr/src
 ```
+
 packages 目录和 app 目录同级。
 
 我们开发包的代码都放在这个src目录中,yuansir和toastr完全自定义。
 
 ---
 
-
 #### 2)修改项目根目录的composer.json
+
 修改项目的composer.json,设定PSR-4命名空间:
+
 ```
 "autoload": {
     "classmap": [
@@ -50,31 +51,37 @@ packages 目录和 app 目录同级。
 
 ---
 
-
 #### 3)重新生成autoload文件
+
 根目录下cmd执行
+
 ```
 composer dump-autoload
 ```
 
 ---
 
-
 #### 4)扩展包composer.json
+
 cmd切换到插件目录:packages/yuansir/toastr 执行命令,根据提示填写
+
 ```
 composer init
 ```
+
 填写完基本信息之后 在packages/geekghc/laraflash目录下就会生成一个composer.json文件
 
 ---
 
-
 #### 5)创建服务提供者Service Provider
+
 ```
 php artisan make:provider ToastrServiceProvider
 ```
-将生成的app/Providers/ToastrServiceProvider.php文件移动到我们的packages/yuansir/toastr/src 目录下面，并注册ToastrServiceProvider到config/app.php 的providers 中。
+
+将生成的app/Providers/ToastrServiceProvider.php文件移动到我们的packages/yuansir/toastr/src
+目录下面，并注册ToastrServiceProvider到config/app.php 的providers 中。
+
 ```
 'providers' => [
     /*
@@ -91,9 +98,10 @@ php artisan make:provider ToastrServiceProvider
 
 ---
 
-
 #### 6)创建配置文件
+
 新建packages/yuansir/toastr/src/config/toastr.php 来保存toastr.js的options
+
 ```
 <?php
 return [
@@ -103,9 +111,11 @@ return [
 
 ---
 
-
 #### 7)创建自定义类
-新建Toastr类，来实现toastr 的info，success，error，warning的相关实现，代码还是很简单的，packages/yuansir/toastr/src/Toastr.php:
+
+新建Toastr类，来实现toastr
+的info，success，error，warning的相关实现，代码还是很简单的，packages/yuansir/toastr/src/Toastr.php:
+
 ```
 <?php namespace Yuansir\Toastr;
 use Illuminate\Session\SessionManager;
@@ -230,9 +240,10 @@ public function clear()
 
 ---
 
-
 #### 8)创建视图文件
+
 新建 packages/yuansir/toastr/src/views/toastr.blade.php 视图文件：
+
 ```
 <link href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
 <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
@@ -241,9 +252,10 @@ public function clear()
 
 ---
 
-
 #### 9)创建门面Facade
+
 建立Facade,新建packages/yuansir/toastr/src/Facades/Toastr.php 就是引入了tastr插件，输出我们render方法中的$javascript
+
 ```
 <?php namespace Yuansir\Toastr\Facades;
 use Illuminate\Support\Facades\Facade;
@@ -258,8 +270,8 @@ class Toastr extends Facade
 
 ---
 
-
 #### 10)修改服务提供者
+
 ```
 <?php namespace Yuansir\Toastr;
     use Illuminate\Support\ServiceProvider;
@@ -300,22 +312,27 @@ class Toastr extends Facade
         }
     }
 ```
-$this->loadViewsFrom( DIR . ‘/views’, ‘Toastr’); 就是表示Toastr命名空间的视图文件冲当前目录的views目录中渲染，所以我们上面用 return view(‘Toastr::toastr’, compact(‘javascript’));
+
+$this->loadViewsFrom( DIR . ‘/views’, ‘Toastr’); 就是表示Toastr命名空间的视图文件冲当前目录的views目录中渲染，所以我们上面用
+return view(‘Toastr::toastr’, compact(‘javascript’));
 
 $this->publishes 在执行`php artisan vendor:publish` 时会将对应的目录和文件复制到对应的位置
 
 ---
 
-
 #### 11)本地测试
+
 修改 config/app.php 添加服务提供者如下:
+
 ```
 'aliases' => [
         ......
         'Toastr' => Yuansir\Toastr\Facades\Toastr::class,
     ],
 ```
+
 创建测试控制器
+
 ```
 php artisan make:controller TestController
     <?php
@@ -347,9 +364,12 @@ php artisan make:controller TestController
         }
     }
 ```
+
 到此结束，大功告成，这样一个Laravel 的 composer 包就开发完成了。
 
-修改命名空间到包的composer.json,因为别人安装这个包的时候不可能也去改项目composer.json的PSR-4的autoload，所以我们把PSR-4的命名空间加到这个包的composer.json中去，修改packages/yuansir/toastr/src/composer.json 如下：
+修改命名空间到包的composer.json,因为别人安装这个包的时候不可能也去改项目composer.json的PSR-4的autoload，所以我们把PSR-4的命名空间加到这个包的composer.json中去，修改packages/yuansir/toastr/src/composer.json
+如下：
+
 ```
 {
         "name": "ryan/toastr-for-laravel",
@@ -371,16 +391,19 @@ php artisan make:controller TestController
 
 ---
 
-
 #### 12)发布到git上
+
 发布到自己git上:例如Github项目 或者码云: git窗口中命令如下
+
 ```
 git add .
     git status
     git commit -m 'vendor'
     git push
 ```
+
 切记创建版本号:
+
 ```
 $ git tag -a 1.0.0 -m "version 1.0.0"
     $ git push --tags
@@ -388,9 +411,10 @@ $ git tag -a 1.0.0 -m "version 1.0.0"
 
 ---
 
-
 #### 13)发布到packagist上供大家composer安装
-提交到Packagist,打开到 [packagist.org](https://packagist.org/),登陆后点击右边上角的 **submit**，并填入git的项目地址git@github.com:yuansir/toastr-for-laravel5.git 点击 **check** 就OK了
+
+提交到Packagist,打开到 [packagist.org](https://packagist.org/),登陆后点击右边上角的 **submit**
+，并填入git的项目地址git@github.com:yuansir/toastr-for-laravel5.git 点击 **check** 就OK了
 
 ![](https://file.wulicode.com/note/2021/11-11/15-53-15739.png)
 
@@ -398,44 +422,49 @@ $ git tag -a 1.0.0 -m "version 1.0.0"
 
 ---
 
-
 #### 14)别人安装使用
+
 切记翻墙才能加载
+
 ```
 composer require aaa/bbb (aaa/bbb是你composer.json中的name值)
 ```
+
 ![](https://file.wulicode.com/note/2021/11-11/15-53-50016.png)
+
 ```
 Run composer require ryan/toastr-for-laravel
     Add Yuansir\Toastr\ToastrServiceProvider::class, to providers in config/app.php
     Add 'Toastr' => Yuansir\Toastr\Facades\Toastr::class, to aliases in config/app.php
     Run php artisan vendor:publish
 ```
+
 ![](https://file.wulicode.com/note/2021/11-11/15-54-04319.png)
 
 ---
 
-
 #### 15)Demo视图
+
 ```html
 <!DOCTYPE html>
-    <html>
-        <head>
-            <title>Laravel</title>
-        </head>
-        <body>
-        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
-        {!! Toastr::render() !!}
-        </body>
-    </html>
+<html>
+<head>
+    <title>Laravel</title>
+</head>
+<body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+{!! Toastr::render() !!}
+</body>
+</html>
 ```
+
 ![](https://file.wulicode.com/note/2021/11-11/15-54-24704.png)
 
 ---
 
-
 #### 16)Demo
-教程的源码和这个包的安装使用方法详见github  https://github.com/yuansir/toastr-for-laravel5 
+
+教程的源码和这个包的安装使用方法详见github  https://github.com/yuansir/toastr-for-laravel5
 
 ---
 

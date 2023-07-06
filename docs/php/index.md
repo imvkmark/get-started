@@ -39,6 +39,7 @@
 - [dotenv - PHP 版本的 .env](./packages/vlucas-phpdotenv.md)
 - [Roave 安全建议](./packages/roave-security-advisories.md)
 - [Simple Captcha For Laravel 5](./packages/developer-tz-simple-captcha.md)
+- [Fzaninotto Faker](./packages/fzaninotto-faker.md)
 
 ## 其他
 

@@ -1,17 +1,15 @@
----
-title: "[转] laravel-mysql 读写分离"
-date: 2022-04-20 19:01:04
-toc: true
-categories:
-- ["Php","Laravel","Tips 记录"]
----
+# 「转」laravel-mysql 读写分离
 
-原文地址 : [laravel-mysql 读写分离](https://www.jianshu.com/p/8ea43b1a83df)
+::: info 原文地址
+
+[laravel-mysql 读写分离](https://www.jianshu.com/p/8ea43b1a83df)
+
+:::
+
+
 > 使用【如果不想了解源代码，直接看 3 种使用方式就好】
 
 **配置**
-
-
 
 ```
 'mysql' => [
@@ -42,14 +40,17 @@ categories:
     // 'sticky'    => true, // laravel 5.5 新增
 ],
 ```
+
 **使用写库读数据的三种方式**
 
 - 方法 1:
+
 ```
 $user = DB::selectFromWriteConnection('select * from users where id=42111');
 ```
 
 - 方法 2:
+
 ```
 User::onWriteConnection()->find($id);
 ```
@@ -59,7 +60,9 @@ User::onWriteConnection()->find($id);
 通过配置  `'sticky' => true,`
 
 ## 一 配置过程
+
 **config/database.php 里面配置**
+
 ```
 'mysql' => [
     'write'    => [
@@ -82,7 +85,9 @@ User::onWriteConnection()->find($id);
   'prefix'    => '',
 ]
 ```
+
 **加强版，支持多主多从，支持独立用户名和密码，配置如下**
+
 ```
 'mysql' => [
     'write'    => [
@@ -111,12 +116,17 @@ User::onWriteConnection()->find($id);
     'prefix'    => '',
 ]
 ```
-设置完毕之后，Laravel5 默认将  `select`  的语句让  `read`  指定的数据库执行，`insert/update/delete`  则交给  `write`  指定的数据库，达到读写分离的作用。
+
+设置完毕之后，Laravel5 默认将  `select`  的语句让  `read`  指定的数据库执行，`insert/update/delete`  则交给  `write`
+指定的数据库，达到读写分离的作用。
 
 这些设置对原始查询  `raw queries`，查询生成器  `query builder`，以及  `Eloquent ORM`  都生效。
 
 官网解释如下：
-> Sometimes you may wish to use one database connection for SELECT statements, and another for INSERT, UPDATE, and DELETE statements. Laravel makes this a breeze, and the proper connections will always be used whether you are using raw queries, the query builder, or the Eloquent ORM
+> Sometimes you may wish to use one database connection for SELECT statements, and another for INSERT, UPDATE, and
+> DELETE statements. Laravel makes this a breeze, and the proper connections will always be used whether you are using
+> raw
+> queries, the query builder, or the Eloquent ORM
 
 **验证**
 
@@ -126,14 +136,21 @@ User::onWriteConnection()->find($id);
 
 `sticky`  是一个 可选的 选项，它可用于立即读取在当前请求周期内已写入数据库的记录。
 
-如果  `sticky`  选项被启用，并且在当前的请求周期内在数据库执行过「写入」操作，那么任何「读取」的操作都将使用「写入」连接。这可以确保在请求周期内写入的任何数据可以在同一请求期间立即从数据库读回。这个选项的作用取决于应用程序的需求。【sticky 选项是一个可选的配置值，可用于在当前请求生命周期内允许立即读取写入数据库的记录。如果 sticky 选项被启用并且一个"写"操作在当前生命周期内发生，则后续所有"读"操作都会使用这个"写"连接（前提是同一个请求生命周期内），这样就可以确保同一个请求生命周期内写入的数据都可以立即被读取到，从而避免主从延迟导致的数据不一致，是否启用这一功能取决于你。】
-> 当然，这只是一个针对分布式数据库系统中主从数据同步延迟的一个非常初级的解决方案，访问量不高的中小网站可以这么做，大流量高并发网站肯定不能这么干，主从读写分离本来就是为了解决单点性能问题，这样其实是把问题又引回去了，造成所有读写都集中到写数据库，对于高并发频繁写的场景下，后果可能是不堪设想的，但是话说回来，对于并发量不那么高，写操作不那么频繁的中小型站点来说，sticky 这种方式不失为一个初级的解决方案。
+如果  `sticky`
+选项被启用，并且在当前的请求周期内在数据库执行过「写入」操作，那么任何「读取」的操作都将使用「写入」连接。这可以确保在请求周期内写入的任何数据可以在同一请求期间立即从数据库读回。这个选项的作用取决于应用程序的需求。【sticky
+选项是一个可选的配置值，可用于在当前请求生命周期内允许立即读取写入数据库的记录。如果 sticky 选项被启用并且一个"写"
+操作在当前生命周期内发生，则后续所有"读"操作都会使用这个"写"
+连接（前提是同一个请求生命周期内），这样就可以确保同一个请求生命周期内写入的数据都可以立即被读取到，从而避免主从延迟导致的数据不一致，是否启用这一功能取决于你。】
+>
+当然，这只是一个针对分布式数据库系统中主从数据同步延迟的一个非常初级的解决方案，访问量不高的中小网站可以这么做，大流量高并发网站肯定不能这么干，主从读写分离本来就是为了解决单点性能问题，这样其实是把问题又引回去了，造成所有读写都集中到写数据库，对于高并发频繁写的场景下，后果可能是不堪设想的，但是话说回来，对于并发量不那么高，写操作不那么频繁的中小型站点来说，sticky
+这种方式不失为一个初级的解决方案。
 
 **注意点 2:**
 
 注：目前读写分离仅支持单个写连接。
 
 ## 二 实现原理
+
 Laravel5 读写分离主要有两个过程:
 
 第一步，根据  `database.php`  配置，创建写库和读库的链接  `connection`
@@ -141,9 +158,11 @@ Laravel5 读写分离主要有两个过程:
 第二步，调用  `select`  时先判断使用读库还是写库，而  `insert/update/delete`  统一使用写库
 
 ## 三 源码分析：根据 database.php 配置，创建写库和读库的链接 connection
+
 主要文件：`/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php`  来看看几个重要的函数：
 
 - 判断  `database.php`  是否配置了读写分离数据库
+
 ```
 /**
      * Establish a PDO connection based on the configuration.
@@ -165,6 +184,7 @@ Laravel5 读写分离主要有两个过程:
 ```
 
 - 创建读库和写库的链接
+
 ```
 /**
  * Create a single database connection instance.
@@ -184,6 +204,7 @@ protected function createReadWriteConnection(array $config)
 - 多个读库会选择哪个呢
 
 旧版本:
+
 ```
 /**
  * Get the read configuration for a read / write connection.
@@ -203,7 +224,9 @@ protected function getReadConfig(array $config)
     return $this->mergeReadWriteConfig($config, $readConfig);
 }
 ```
+
 新版本:
+
 ```
 /**
      * Get the read configuration for a read / write connection.
@@ -242,6 +265,7 @@ protected function getReadConfig(array $config)
                         : $config[$type];
     }
 ```
+
 ```
 class Arr
 {
@@ -331,6 +355,7 @@ class Arr
 - 写库也是随机选择的
 
 旧版本:
+
 ```
 /**
  * Get a read / write level configuration.
@@ -348,7 +373,9 @@ protected function getReadWriteConfig(array $config, $type)
     return $config[$type];
 }
 ```
+
 新版本:
+
 ```
 /**
      * Get a read / write level configuration.
@@ -364,6 +391,7 @@ protected function getReadWriteConfig(array $config, $type)
                         : $config[$type];
     }
 ```
+
 **总结**
 
 - 可以设置多个读库和多个写库，或者不同组合，比如一个写库两个读库
@@ -371,12 +399,12 @@ protected function getReadWriteConfig(array $config, $type)
 
 - 每次只创建一个读库链接和一个写库链接，从多个库中随机选择一个
 
-
-
 ## 四 源码分析：调用 select 时先判断使用读库还是写库，而 insert/update/delete 统一使用写库
+
 主要文件：`/vendor/laravel/framework/src/Illuminate/Database/Connection.php`  看看几个重要的函数
 
 - `select`  函数根据第三个输入参数判断使用读库还是写库(true 使用读库，false 使用写库；默认使用读库)
+
 ```
 /**
      * Run a select statement against the database.
@@ -419,6 +447,7 @@ protected function getReadWriteConfig(array $config, $type)
 ```
 
 - `insert/update/delete`  统一使用写库
+
 ```
 /**
      * Run an insert statement against the database.
@@ -500,6 +529,7 @@ protected function getReadWriteConfig(array $config, $type)
         });
     }
 ```
+
 **总结：**
 
 - `getReadPdo()`  获得读库链接，`getPdo()`  获得写库链接；
@@ -507,10 +537,10 @@ protected function getReadWriteConfig(array $config, $type)
 
 - `select()`  函数根据第三个参数判断使用读库还是写库；
 
-
-
 ## 五 强制使用写库
-有时候，我们需要读写实时一致，写完数据库后，想马上读出来，那么读写都指定一个数据库即可。 虽然 Laravel5 配置了读写分离，但也提供了另外的方法强制读写使用同一个数据库。
+
+有时候，我们需要读写实时一致，写完数据库后，想马上读出来，那么读写都指定一个数据库即可。 虽然 Laravel5
+配置了读写分离，但也提供了另外的方法强制读写使用同一个数据库。
 
 **实现原理：上面  `$this->select()`  时指定使用写库的链接，即第三个参数  `useReadPdo`  设置为  `false`  即可。**
 
@@ -523,6 +553,7 @@ protected function getReadWriteConfig(array $config, $type)
 源码解释：通过  `selectFromWriteConnection()`  函数 主要文件:
 
 `/vendor/laravel/framework/src/Illuminate/Database/Connection.php`
+
 ```
 /**
  * Run a select statement against the database.
@@ -544,6 +575,7 @@ public function selectFromWriteConnection($query, $bindings = [])
 源码解释：通过  `onWriteConnection()`  函数 主要文件:
 
 `/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php`
+
 ```
 /**
  * Begin querying the model on the write connection.
@@ -557,9 +589,11 @@ public static function onWriteConnection()
     return $instance->newQuery()->useWritePdo();
 }
 ```
+
 再看看  `query builder`  如何指定使用写库 主要文件：
 
 `/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php`
+
 ```
 /**
  * Use the write pdo for query.
@@ -588,6 +622,7 @@ protected function runSelect()
 ## 开启日志验证
 
 ### 使用 mysql general log 来验证数据库读写分离
+
 > 主数据库开启 general log
 
 ```
@@ -602,6 +637,7 @@ mysql> show global variables like '%general%';
 mysql> set global general_log = on;
 Query OK, 0 rows affected (0.05 sec)
 ```
+
 > 从数据库开启 general log
 
 ```
@@ -616,12 +652,14 @@ mysql> show global variables like '%general%';
 mysql> set global general_log = on;
 Query OK, 0 rows affected (0.04 sec)
 ```
+
 > 关闭日志
 
 ```
 mysql> set global general_log = off;
 Query OK, 0 rows affected (0.01 sec)
 ```
+
 ```
 // 指定log路径
 // set global general_log_file='/tmp/general.lg';    #设置路径
@@ -630,17 +668,26 @@ Query OK, 0 rows affected (0.01 sec)
 ```
 
 ## 问题
+
 **问题 1**
 
 写入了数据，但查询时却报 No query result ，而且只是偶然性出现，没啥规律。
 
 **解决方案**
 
-初以为是 prettus/l5-repository 包的缓存引起的，但关掉它的缓存功能后问题依旧。后来好一阵折腾，直到再一次仔细翻看文档, 才发现 Laravel5.5 数据库读写分离配置的部分额外提到了一个 sticky 项，文档里这部分原文如下:
+初以为是 prettus/l5-repository 包的缓存引起的，但关掉它的缓存功能后问题依旧。后来好一阵折腾，直到再一次仔细翻看文档, 才发现
+Laravel5.5 数据库读写分离配置的部分额外提到了一个 sticky 项，文档里这部分原文如下:
 > The sticky Option
-> The sticky option is an optional value that can be used to allow the immediate reading of records that have been written to the database during the current request cycle. If the sticky option is enabled and a "write" operation has been performed against the database during the current request cycle, any further "read" operations will use the "write" connection. This ensures that any data written during the request cycle can be immediately read back from the database during that same request. It is up to you to decide if this is the desired behavior for your application.
+> The sticky option is an optional value that can be used to allow the immediate reading of records that have been
+> written to the database during the current request cycle. If the sticky option is enabled and a "write" operation has
+> been performed against the database during the current request cycle, any further "read" operations will use the "
+> write"
+> connection. This ensures that any data written during the request cycle can be immediately read back from the database
+> during that same request. It is up to you to decide if this is the desired behavior for your application.
 
-在没有启用  `sticky`  的时候，使用  `write`  连接写入数据后立即读取，读取时使用的是  `read`  连接，这样就有可能出问题。将  `sticky`  设置为  `true`  后，在与这个写入操作相同的请求周期内的后续读取操作，仍然使用原来的  `write`  连接。
+在没有启用  `sticky`  的时候，使用  `write`  连接写入数据后立即读取，读取时使用的是  `read`
+连接，这样就有可能出问题。将  `sticky`  设置为  `true`
+后，在与这个写入操作相同的请求周期内的后续读取操作，仍然使用原来的  `write`  连接。
 
 或者  `强制使用写库`
 

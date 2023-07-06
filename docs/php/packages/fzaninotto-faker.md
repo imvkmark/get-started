@@ -1,12 +1,8 @@
----
-title: "[译+] fzaninotto_Faker 文档"
-date: 2022-04-20 19:01:09
-toc: true
-categories:
-  - [ "Php","扩展" ]
----
+# 「译+」fzaninotto_Faker 文档
 
-原文地址: [Faker](https://github.com/fzaninotto/Faker)
+::: info 原文地址
+[fzaninotto_Faker](https://github.com/fzaninotto/Faker)
+:::
 
 ## Formatters 格式化器
 

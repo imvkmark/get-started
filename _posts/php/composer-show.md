@@ -3,21 +3,20 @@ title: "composer - 平台软件包"
 date: 2022-04-14 22:14:53
 toc: true
 categories:
-- ["Php","composer"]
+  - [ "Php","composer" ]
 ---
 
 Composer 将那些已经安装在系统上，但并不是由 Composer 安装的包视为一个虚拟的平台软件包。这包括PHP本身，PHP扩展和一些系统库。
 
 - `php` 表示用户的 PHP 版本要求，你可以对其做出限制。例如 `>=5.4.0`。如果需要64位版本的 PHP，你可以使用 `php-64bit` 进行限制。
 - `hhvm` 代表的是 HHVM（也就是 HipHop Virtual Machine） 运行环境的版本，并且允许你设置一个版本限制，例如，'>=2.3.3'。
-- `ext-<name>` 可以帮你指定需要的 PHP 扩展（包括核心扩展）。通常 PHP 拓展的版本可以是不一致的，将它们的版本约束为 * 是一个不错的主意。一个 PHP 扩展包的例子：包名可以写成 ext-gd。
+- `ext-<name>` 可以帮你指定需要的 PHP 扩展（包括核心扩展）。通常 PHP 拓展的版本可以是不一致的，将它们的版本约束为 *
+  是一个不错的主意。一个 PHP 扩展包的例子：包名可以写成 ext-gd。
 - `lib-<name>` 允许对 PHP 库的版本进行限制。
 
 以下是可供使用的名称：curl、iconv、icu、libxml、openssl、pcre、uuid、xsl。
 
 你可以使用 `composer show --platform` 命令来获取可用的平台软件包的列表。
-
-
 
 ```
 composer-plugin-api 1.1.0     The Composer Plugin API
