@@ -36,7 +36,8 @@ const nav = [
         activeMatch: `^/database/`,
         items: [
             createLink('MySQL', '/database/mysql/'),
-            createLink('Redis', '/database/redis/01-command-data.md'),
+            createLink('Redis', '/database/redis/'),
+            createLink('MongoDB', '/database/mongo/'),
         ]
     },
     {text: "Awesome", link: "/awesome/"},

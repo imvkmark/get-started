@@ -1,21 +1,18 @@
----
-title: "mongoDb 中使用 shell"
-date: 2022-04-14 22:13:10
-toc: true
-categories:
-- ["Lang","Mongo"]
----
+# MongoDB
 
+## 安装
 
+- [Mac 下安装 MongoDB](./install-at-mac.md)
+
+## 使用 Shell
 
 进入命令行
-
-
 
 ```
 $ mongo
 MongoDB shell version v4.2.2
 ```
+
 ```
 # 显示数据库
 mongo > show dbs;
@@ -26,4 +23,3 @@ local   0.000GB
 mongo > use local
 switched to db local
 ```
-
