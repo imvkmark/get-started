@@ -3,17 +3,15 @@ title: "[转] 删除 CentOS 的旧内核，清理 CentOS 的 /boot 分区"
 date: 2021-06-26 10:30:06
 toc: true
 categories:
-- ["Ops","CentOS"]
+  - [ "Ops","CentOS" ]
 ---
 
 原文地址 : [删除CentOS的旧内核，清理CentOS的/boot分区](https://qiaodahai.com/centos-boot-partition.html)
 
-Linux系统在分区的时候一般不会分配过多的磁盘空间给启动分区/boot，通常情况下是300MB左右。在使用yum update升级内核（kernel）后，CentOS并不会自动删除旧内核，在启动选项中会有多个内核选项，会出现/boot分区逐渐减小、空间不足、无法更新内核的情况。如果出现这些问题，可以手动使用以下命令删除多余的内核，清理/boot分区。方法如下：
+Linux系统在分区的时候一般不会分配过多的磁盘空间给启动分区/boot，通常情况下是300MB左右。在使用yum
+update升级内核（kernel）后，CentOS并不会自动删除旧内核，在启动选项中会有多个内核选项，会出现/boot分区逐渐减小、空间不足、无法更新内核的情况。如果出现这些问题，可以手动使用以下命令删除多余的内核，清理/boot分区。方法如下：
 
 1.查看系统当前使用的内核（kernel）版本。
-
-
-
 
 ```
 uname -a

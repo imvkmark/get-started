@@ -1,10 +1,4 @@
----
-title : "CentOS 下使用 yum 安装配置和使用 svn"
-date : 2021-06-26 10:31:08
-toc : true
-categories :
-  - [ "Ops","CentOS" ]
----
+# CentOS 下使用 yum 安装配置和使用 svn
 
 ### 安装说明
 
@@ -58,13 +52,16 @@ SVN软件安装完成后还需要建立SVN库
 [root@zck modules]# svnadmin create /opt/svn/repositories
 ```
 
-执行上面的命令后，自动建立repositories库，查看/opt/svn/repositories 文件夹发现包含了conf, db,format,hooks, locks, README.txt等文件，说明一个SVN库已经建立。
+执行上面的命令后，自动建立repositories库，查看/opt/svn/repositories 文件夹发现包含了conf, db,format,hooks, locks,
+README.txt等文件，说明一个SVN库已经建立。
 
 ### 配置代码库
 
 进入上面生成的文件夹conf下，进行配置
 
-[root[@zck ](/zck ) modules]# cd /opt/svn/repositories/conf
+```
+[root[@zck ] modules]# cd /opt/svn/repositories/conf
+```
 
 ### 用户密码passwd配置
 

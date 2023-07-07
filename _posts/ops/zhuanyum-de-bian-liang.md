@@ -3,20 +3,19 @@ title: " 「转+」Yum 的变量"
 date: 2021-06-26 10:31:24
 toc: true
 categories:
-- ["Ops","CentOS","Dnf \/ Yum \/ Repo 仓库"]
+  - [ "Ops","CentOS","Dnf \/ Yum \/ Repo 仓库" ]
 ---
 
 原文地址 : [Yum的变量](http://www.opstool.com/article/294)
 
 新机器使用yum出现了报错,发现本来应该替换的`$releasever`变量变成了`%24releasever`
 
->  http://mirrors.aliyun.com/centos/%24releasever/addons/x86_64/repodata/repomd.xml:  [Errno 14] HTTP Error 404: Not Found  Trying other mirror.  Error:  Cannot retrieve repository metadata (repomd.xml)  for repository: addons.  Please verify its path and  try again
+> http://mirrors.aliyun.com/centos/%24releasever/addons/x86_64/repodata/repomd.xml:  [Errno 14] HTTP Error 404: Not
+> Found Trying other mirror. Error:  Cannot retrieve repository metadata (repomd.xml)  for repository: addons. Please
+> verify its path and try again
 
 
 下面我们来看看这个是怎么回事，最好的参考文档当然是man，通过`man yum.conf` 查看这个`$releasever`
-
-
-
 
 ```
 $releasever This will be replaced with the value of the version of the package listed in distroverpkg.  This defaults to the ver- sion of ‘redhat-release’  package. 
@@ -28,7 +27,6 @@ variable does not exist then the configuration file variable will not be replace
 ```
 
 可以看到 yum中有这几个变量: `$releaserver`、`$arch`、`$basearch` 和用户自定义的 `$YUM0-$YUM9`。
-
 
 有一个简单的python命令可以看到yum的 releaserver、arch、basearch的值
 
@@ -55,7 +53,6 @@ distroverpkg The  package used by yum to determine the "version" of the distribu
 ```
 
 `distroverpkg` 定义了一个包名，通过这个包命，执行`yum whatprovides $distroverpkg` yum就知道了系统的发行版本。
-
 
 这里默认的值是redhat-release。
 

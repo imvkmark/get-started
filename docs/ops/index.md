@@ -7,6 +7,7 @@
 - [常用软件](./mac/suggest-software.md)
 - [「转」Mac-zsh 安装和使用](./mac/zsh.md)
 - [Mac上制作Ubuntu USB启动盘](./mac/usb-boot-disk.md)
+- [在 macOS 上升级 Bash](./mac/upgrade-bash.md)
 
 ### Linux
 
