@@ -50,7 +50,7 @@ pip freeze >requirements.txt
 
 你的本地环境不仅包含项目 A 所需要的依赖，也包含着项目 B 所需要的依赖。此时我们要如何做到只把项目 A 的依赖导出呢？
 
-[pipreqs](https://link.zhihu.com/?target=https%3A//github.com/bndr/pipreqs) 可以通过扫描项目目录，帮助我们仅生成当前项目的依赖清单。
+[pipreqs](https://github.com/bndr/pipreqs) 可以通过扫描项目目录，帮助我们仅生成当前项目的依赖清单。
 
 通过以下命令安装：
 

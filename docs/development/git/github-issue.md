@@ -53,15 +53,15 @@ issue 可以有额外的属性：
 
 现在，很多大公司的软件研发团队协作，都是通过 JIRA 来实现的。
 
-目前也流行很多非代码的团队协作，比如 teambition、[http://Tower.im](https://link.zhihu.com/?target=http%3A//Tower.im)、Worktile、trello 等。
+目前也流行很多非代码的团队协作，比如 teambition、tower.im、Worktile、trello 等。
 
 其实，GitHub 的 issue ，就是一个轻量级**协作系统**。它的 comment 支持 GitHub Flavored Markdown，可以进行内容丰富的交流。Git 本身就是分布式的代码版本控制软件，是为了程序员的协作而设计的。而 issue 的 Assignee 功能，就是这个在线协作系统的核心，足以让一群线上的开发者，一起完成一个软件项目。
 
 最后，作为一个路人，你可以通过 issue 给别人的项目提 bug 。
 
-参考：[Closing issues via commit messages](https://link.zhihu.com/?target=https%3A//help.github.com/articles/closing-issues-via-commit-messages/)，[About issues](https://link.zhihu.com/?target=https%3A//help.github.com/articles/about-issues/)
+参考：[Closing issues via commit messages](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
 
-其它Github帮助，可以在此搜索：[GitHub Help](https://link.zhihu.com/?target=https%3A//help.github.com/)
+其它Github帮助，可以在此搜索：[GitHub Help](https://support.github.com/)
 
 参考 [Mastering Issues](https://guides.github.com/features/issues/)
 
