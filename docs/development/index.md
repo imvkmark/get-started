@@ -10,9 +10,15 @@
 
 - [SDKMAN!](./tools/sdkman.md)
 - [Homebrew](./tools/homebrew.md)
-- [ApiDoc](./tools/apidoc.md)
+
 - [jenv - 管理 Java 环境](./tools/jenv.md)
+
+## 文档工具
+
 - [vitepress - 快捷的文档工具](./tools/vitepress.md)
+- [ApiDoc](./tools/apidoc.md)
+- [Sphinx](./tools/sphinx.md)
+    - [Sphinx 安装](./tools/sphinx-install.md)
 
 ## 运营
 

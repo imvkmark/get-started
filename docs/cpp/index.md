@@ -1,6 +1,10 @@
 # C++
 
-学习记录
 
-- [C++ Primer](./cpp-primer/toc.md)
-- [C++ Qt5 Cookbook](./cpp-qt5-cookbook/toc.md)
+## 代码解析
+
+- [extundelete 代码解析](./tech/c-extundelete.md)
+
+## FAQ
+
+- [C FAQ](./tech/c-faq.md)

@@ -304,34 +304,17 @@ const sidebar = {
             ],
         },
     ],
+
+    "/python/python-manual": [
+        createLink('⬆️ 上一级', '/python/'),
+        createLink("目录", "/python/python-manual/toc"),
+        createLink("第一章 : 问答环节", "/python/python-manual/1-qa"),
+        createLink("第二 三章 运行程序", "/python/python-manual/2-3-run"),
+        createLink("第四章 介绍 python 对象类型", "/python/python-manual/4-object-type"),
+        createLink("第五章 数值类型", "/python/python-manual/5-int"),
+    ],
     "/python": [
-        {
-            text: "介绍",
-            items: [
-                createLink("说明", "/python/"),
-                createLink("使用镜像, 加速安装", "/python/install/use-mirror-to-speed"),
-                createLink("CentOS 安装 Python", "/python/install/at-centos"),
-            ],
-        },
-        {
-            text: "类型和运算",
-            items: [
-                createLink("目录", "/python/python-manual/toc"),
-                createLink("第一章 : 问答环节", "/python/python-manual/1-qa"),
-                createLink("第二 三章 运行程序", "/python/python-manual/2-3-run"),
-                createLink("第四章 介绍 python 对象类型", "/python/python-manual/4-object-type"),
-                createLink("第五章 数值类型", "/python/python-manual/5-int"),
-            ],
-        },
-        {
-            text: "模块",
-            items: [
-                createLink("urllib - Url 处理模块", "/python/library/internet-urllib"),
-                createLink("Pydash 中文文档", "/python/package/pydash"),
-                createLink("Pipenv 管理环境", "/python/package/pipenv"),
-                createLink("requirement.txt 介绍", "/python/tech/requirement-usage"),
-            ],
-        },
+        createLink('Python 学习手册', '/python/python-manual/'),
     ],
     "/dart": [
         {
@@ -346,27 +329,31 @@ const sidebar = {
             items: [createLink("单元测试", "/dart/tests/")],
         },
     ],
+
+    "/cpp/cpp-qt5-cookbook": [
+        createLink('⬆️ 上一级', '/cpp/'),
+        createLink("目录", "/cpp/cpp-qt5-cookbook/"),
+        createLink("1. 外观和自定义", "/cpp/cpp-qt5-cookbook/1-appearance-custom"),
+        createLink("2. 状态和特效", "/cpp/cpp-qt5-cookbook/2-property"),
+    ],
+    "/cpp/cpp-primer": [
+        createLink('⬆️ 上一级', '/cpp/'),
+        createLink("目录", "/cpp/cpp-primer/"),
+        createLink("1. 开始", "/cpp/cpp-primer/1-start"),
+        createLink("2. 变量和基本类型", "/cpp/cpp-primer/2-vars"),
+        createLink("3. 字符串, 向量和数组", "/cpp/cpp-primer/3-string-vector-array.md"),
+        createLink("4. 表达式", "/cpp/cpp-primer/4-expression"),
+        createLink("5. 语句", "/cpp/cpp-primer/5-sentence"),
+        createLink("6. 函数", "/cpp/cpp-primer/6-function"),
+    ],
+    "/cpp/cpp-cookbook": [
+        createLink('⬆️ 上一级', '/cpp/'),
+        createLink("目录", "/cpp/cpp-cookbook/"),
+    ],
     "/cpp": [
-        {
-            text: "C++ / Qt5 Cookbook",
-            items: [
-                createLink("目录", "/cpp/cpp-qt5-cookbook/toc"),
-                createLink("1. 外观和自定义", "/cpp/cpp-qt5-cookbook/1-appearance-custom"),
-                createLink("2. 状态和特效", "/cpp/cpp-qt5-cookbook/2-property"),
-            ],
-        },
-        {
-            text: "C++ Primer",
-            items: [
-                createLink("目录", "/cpp/cpp-primer/toc"),
-                createLink("1. 开始", "/cpp/cpp-primer/1-start"),
-                createLink("2. 变量和基本类型", "/cpp/cpp-primer/2-vars"),
-                createLink("3. 字符串, 向量和数组", "/cpp/cpp-primer/3-string-vector-array.md"),
-                createLink("4. 表达式", "/cpp/cpp-primer/4-expression"),
-                createLink("5. 语句", "/cpp/cpp-primer/5-sentence"),
-                createLink("6. 函数", "/cpp/cpp-primer/6-function"),
-            ],
-        },
+        createLink('C++ / Qt5 Cookbook', '/cpp/cpp-qt5-cookbook/'),
+        createLink('C++ Primer', '/cpp/cpp-primer/'),
+        createLink('C++ Cookbook', '/cpp/cpp-cookbook/'),
     ],
     "/flutter": [
         {

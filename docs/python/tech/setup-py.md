@@ -1,12 +1,10 @@
----
-title: "[转]花了两天，终于把 Python 的 setup.py 给整明白了"
-date: 2022-04-20 22:52:50
-toc: true
-categories:
-  - [ "Lang","Python" ]
----
+# 「转」花了两天，终于把 Python 的 setup.py 给整明白了
+
+::: info
 
 原文地址 :  https://zhuanlan.zhihu.com/p/276461821
+
+:::
 
 ## 1. 为什么需要对项目分发打包？
 

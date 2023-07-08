@@ -1,11 +1,3 @@
----
-title : "安装 Sphinx(Python Documentation Generator)"
-date : 2022-04-20 22:52:51
-toc : true
-categories :
-  - [ "Lang","Python" ]
----
-
 # 安装 Sphinx(Python Documentation Generator)
 
 ## 概述

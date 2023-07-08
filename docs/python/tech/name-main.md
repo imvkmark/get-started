@@ -1,10 +1,4 @@
----
-title: "[转]Python 中的 if __name__ == '__main__' 该如何理解"
-date: 2022-04-20 22:52:50
-toc: true
-categories:
-- ["Lang","Python"]
----
+# 「转」Python 中的 if __name__ == '__main__' 该如何理解
 
  https://blog.konghy.cn/2017/04/24/python-entry-program/ 
 

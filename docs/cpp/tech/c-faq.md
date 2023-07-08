@@ -1,12 +1,8 @@
----
-title: "整数在内存中的存储方式"
-date: 2022-04-14 22:52:29
-toc: true
-categories:
-  - [ "Lang","C" ]
----
+# C - FAQ
 
-## 地址读取(&amp;) 和 内容存取(*) 符号的区别
+# 整数在内存中的存储方式
+
+## 地址读取(&) 和 内容存取(*) 符号的区别
 
 ![](https://file.wulicode.com/yuque/202208/04/14/5015jff2GblF.png?x-oss-process=image/resize,h_217)
 
