@@ -3,13 +3,10 @@ title: "centos apache 使用 mod_proxy_fcgi 支持多版本 php"
 date: 2021-06-26 10:30:49
 toc: true
 categories:
-- ["Ops","CentOS"]
+  - [ "Ops","CentOS" ]
 ---
 
 ### remi 源安装的PHP分析
-
-
-
 
 ```
 /usr/bin/php56  # 执行文件
@@ -22,7 +19,6 @@ categories:
 /opt/remi/php56/root/var/log/php-fpm        # 日志
 ```
 
-
 #### 配置文件树状结构
 
 配置根目录 : `/opt/remi/php56/root/etc`
@@ -33,7 +29,6 @@ php-fpm.conf
 /php-fpm.d
     www.conf
 ```
-
 
 ### 修改 php-fpm 运行时候的端口配置
 
@@ -47,11 +42,9 @@ php-fpm.conf
 listen = 127.0.0.1:9056
 ```
 
-
 ### 配置 apache 配置文件
 
 目录 `/etc/httpd/conf.d/`
-
 
 `vim test_host.conf`
 
@@ -71,7 +64,6 @@ listen = 127.0.0.1:9056
 </VirtualHost>
 ```
 
-
 ### 启动 php-fpm, 重启 apache
 
 ```
@@ -83,14 +75,11 @@ service httpd restart
 
 ![](https://file.wulicode.com/yuque/202208/04/15/3333pLfa0fYS.png)
 
-
 ### 管理脚本
 
 由于这个remi 的没有启动脚本, 所以新建立一个脚本进行管理
 
-
 放置位置
-
 
 `/etc/init.d/php56-fpm` , 并给定执行权限
 
@@ -157,7 +146,6 @@ case "$1" in
 esac
 exit 0
 ```
-
 
 ### 运行
 

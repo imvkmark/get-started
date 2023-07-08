@@ -51,6 +51,7 @@
 - [设置代理](./tech/set-proxy.md)
 - [Aliyun STS 细粒度授权](./tech/aliyun-sts-assume-role.md)
 - [查看连接 wifi 的mac 地址](./tech/view-wifi-mac.md)
+- [「转+」Linux系统平均负载3个数字的含义](./tech/load-average.md)
 
 ## 软件
 
@@ -95,5 +96,6 @@
 - [日志切割(logrotate)操作梳理](./software/logrotate/introduction.md)
 - [设置 SSH 免密码访问服务器](./software/ssh/use-ssh-login-and-deploy.md)
 - [使用 docker 安装 sentry](./software/sentry/install-use-docker-at-centos.md)
-- [expect 介绍](./software/expect/introduction.md)
-- [crontab 介绍](./software/crontab/introduction.md)
+- [expect 介绍](./software/expect.md)
+- [crontab 介绍](./software/crontab.md)
+- [autojump 介绍](./software/autojump.md)
