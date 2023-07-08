@@ -6,6 +6,19 @@ outline: 'deep'
 
 ## 3.1 一个简单的程序
 
+**模板**
+
+```
+[package 包名] 
+impoort 包名.类名 
+[public] class 类名 { 
+    int val = '123'; 
+    public static void main(String args[]) {
+        // 变量定义和语句 
+    } 
+}
+```
+
 <<< @/java/core-basic/src/WelcomeSimple.java
 
 - Java 区分大小写
@@ -235,7 +248,8 @@ String guide = greeting + "World."
 
 ### 3.6.3 不可变字符串
 
-宇符串 `Hello` 永远包含字符 h, e, l, l, o 的代码单元序列。你不能修改这些值，不过，可以修改宇符串变量greeting，让它引用另外一个字符串，这就如同可以让原本存放了 3
+宇符串 `Hello` 永远包含字符 h, e, l, l, o 的代码单元序列。你不能修改这些值，不过，可以修改宇符串变量greeting，让它引用另外一个字符串，这就如同可以让原本存放了
+3
 的数值变量改成存放 4 一样
 
 ### 3.6.4 字符串对比
@@ -289,6 +303,22 @@ StringBuilder builder = newStringBuilder();
 builder.append(ch);  // appends a single character
 builder.append(str); // appends a string
 StringcompletedString = builder.toString() ;
+```
+
+### 3.6.10 字串的转义
+
+```
+\n       换行 (0x0a)
+\r       回车 (0x0d)
+\f       换页符(0x0c)
+\b       退格 (0x08)
+\s       空格 (0x20)
+\t       制表符
+\"       双引号
+\'       单引号
+\\       反斜杠
+\ddd     八进制字符 (ddd)
+\uxxxx   16进制Unicode字符 (xxxx)
 ```
 
 ## 3.7 输入和输出
@@ -435,6 +465,41 @@ if (condition) {
 ## 3.9 大数
 
 如果整数和浮点数不能满足要求, 可以使用 `java.math` 包中两个类 `BigInteger` 和 `BigDecimal`, 这个类似于 php 中的 `bcmath`
+
+### 3.9.1 范围
+
+数值类型的基本类型的取值范围，无需强制去记忆，它们的值以常量的形式定义在对应的包装类中
+
+```
+# java.lang.Byte
+Byte.SIZE
+Byte.MIN_VALUE
+Byte.MAX_VALUE
+# java.lang.Short
+Short.SIZE
+Short.MIN_VALUE
+Short.MAX_VALUE
+# java.lang.Integer
+Integer.SIZE
+Integer.MIN_VALUE
+Integer.MAX_VALUE
+# java.lang.Long
+Long.SIZE
+Long.MIN_VALUE
+Long.MAX_VALUE
+# java.lang.Float
+Float.SIZE
+Float.MIN_VALUE
+Float.MAX_VALUE
+# java.lang.Double
+Double.SIZE
+Double.MIN_VALUE
+Double.MAX_VALUE
+# java.lang.Character
+Character.SIZE
+Character.MIN_VALUE
+Character.MAX_VALUE
+```
 
 ## 3.10 数组
 
