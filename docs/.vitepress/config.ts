@@ -25,7 +25,7 @@ const nav = [
         activeMatch: `^/web|development/`,
         items: [
             {text: "Web", link: "/web/"},
-            {text: "手机端", link: "/mobile/design/site"},
+            {text: "手机端", link: "/mobile/"},
             {text: "运维", link: "/ops/"},
             {text: "开发", link: "/development/"},
             {text: "部门", link: "/department/test/auto-seldom"},
@@ -467,33 +467,17 @@ const sidebar = {
     ],
     "/mobile": [
         {
-            text: "设计",
-            items: [createLink("设计站点", "/mobile/design/site")],
+            text: "iOS",
+            items: [
+                createLink("主页", "/mobile/ios/"),
+                createLink("Cocoa and OC Cookbook", "/mobile/ios/book-cocoa-and-oc-cookbook/"),
+                createLink("Learning Cocoa with OC", "/mobile/ios/book-learning-cocoa-with-oc/"),
+            ],
         },
         {
             text: "Android",
             items: [
-                createLink("MAC 下安装和配置 android-sdk", "/mobile/android/install-sdk-at-mac.md"),
-                createLink("Android Gradle 自动化打包", "/mobile/android/auto-build-use-gradle.md"),
-                createLink("面试题 v1", "/mobile/android/interview-question-v1.md"),
-            ],
-        },
-        {
-            text: "iOS",
-            items: [
-                createLink("iOS - 介绍", "/mobile/ios/"),
-                createLink("iOS - FAQ", "/mobile/ios/faq"),
-                createLink("Universal Links", "/mobile/ios/universal-links"),
-                createLink("CocoaPods 介绍", "/mobile/ios/cocoapods"),
-            ],
-        },
-        {
-            text: "其他",
-            items: [
-                createLink("使用模拟器调试手机浏览器", "/mobile/tech/debug-with-chrome.md"),
-                createLink("App 的崩溃率标准", "/mobile/tech/standard-for-best-app.md"),
-                createLink("「Cocoa and Object-C Cookbook」", "/mobile/ios/book-cocoa-and-oc-cookbook/"),
-                createLink("「Learning Cocoa with Objective-C」", "/mobile/ios/book-learning-cocoa-with-oc/"),
+                createLink("主页", "/mobile/android/")
             ],
         },
     ],
