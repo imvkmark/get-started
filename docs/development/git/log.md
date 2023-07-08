@@ -1,10 +1,4 @@
----
-title : "Git Log"
-date : 2022-04-14 22:14:25
-toc : true
-categories :
-  - [ "开发","Git" ]
----
+# Git Log
 
 ## 需求
 

@@ -252,7 +252,6 @@ scws.default.fpath = /usr/local/scws/etc
 
 **返回值：** 成功返回类操作句柄，失败返回 false。
 
----
 
 ### mixed scws_open(void)
 
@@ -260,7 +259,6 @@ scws.default.fpath = /usr/local/scws/etc
 
 **返回值：** 成功返回 scws 操作句柄，失败返回 false。
 
----
 
 ### bool scws_close(resource scws_handle)
 
@@ -270,7 +268,6 @@ scws.default.fpath = /usr/local/scws/etc
 
 **返回值：** 始终为 true
 
----
 
 ### bool scws_set_charset(resource scws_handle, string charset)
 
@@ -280,7 +277,6 @@ scws.default.fpath = /usr/local/scws/etc
 
 **返回值：** 始终为 true
 
----
 
 ### bool scws_add_dict(resource scws_handle, string dict_path [, int mode])
 
@@ -298,7 +294,6 @@ scws.default.fpath = /usr/local/scws/etc
 
 **返回值：** 成功返回 true 失败返回 false
 
----
 
 ### bool scws_set_dict(resource scws_handle, string dict_path [, int mode])
 
@@ -310,7 +305,6 @@ scws.default.fpath = /usr/local/scws/etc
 
 **返回值：** 成功返回 true 失败返回 false
 
----
 
 ### bool scws_set_rule(resource scws_handle, string rule_path)
 
@@ -322,7 +316,6 @@ scws.default.fpath = /usr/local/scws/etc
 
 **返回值：** 成功返回 true 失败返回 false
 
----
 
 ### bool scws_set_ignore(resource scws_handle, bool yes)
 
@@ -332,7 +325,6 @@ scws.default.fpath = /usr/local/scws/etc
 
 **返回值：** 始终为 true
 
----
 
 ### bool scws_set_multi(resource scws_handle, int mode)
 
@@ -349,7 +341,6 @@ scws.default.fpath = /usr/local/scws/etc
 
 **返回值：** 始终为 true
 
----
 
 ### bool scws_set_duality(resource scws_handle, bool yes)
 
@@ -359,7 +350,6 @@ scws.default.fpath = /usr/local/scws/etc
 
 **返回值：** 始终为 true
 
----
 
 ### bool scws_send_text(resource scws_handle, string text)
 
@@ -372,7 +362,6 @@ scws.default.fpath = /usr/local/scws/etc
 **注意：** 系统底层处理方式为对该文本增加一个引用，故不论多长的文本并不会造成内存浪费；执行本函数时，若未加载任何词典和规则集，则会自动试图在
 ini 指定的缺省目录下查找缺省字符集的词典和规则集。
 
----
 
 ### mixed scws_get_result(resource scws_handle)
 
@@ -389,7 +378,6 @@ ini 指定的缺省目录下查找缺省字符集的词典和规则集。
 
 **注意：** 每次切词后本函数应该循环调用，直到返回 false 为止，因为程序每次返回的词数是不确定的。
 
----
 
 ### mixed scws_get_tops(resource scws_handle [, int limit [, string attr]])
 
@@ -409,7 +397,6 @@ ini 指定的缺省目录下查找缺省字符集的词典和规则集。
 - attr    string    词性
 ```
 
----
 
 ### mixed scws_get_words(resource scws_handle, string attr)
 
@@ -420,7 +407,6 @@ ini 指定的缺省目录下查找缺省字符集的词典和规则集。
 
 **返回值：** 成功返回符合要求词汇组成的数组，返回 false。返回的词汇包含的键值参见 `scws_get_result`
 
----
 
 ### bool scws_has_word(resource scws_handle, string attr)
 
@@ -431,7 +417,6 @@ ini 指定的缺省目录下查找缺省字符集的词典和规则集。
 
 **返回值：** 如果有则返回 true，没有就返回 false。
 
----
 
 ### string scws_version(void)
 
@@ -439,7 +424,6 @@ ini 指定的缺省目录下查找缺省字符集的词典和规则集。
 
 **返回值：** 返回string，scws 版本号名称信息。
 
----
 
 ## 测试分词功能
 

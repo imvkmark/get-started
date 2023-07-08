@@ -1,10 +1,4 @@
----
-title: "源码开源协议"
-date: 2022-04-14 22:15:45
-toc: true
-categories:
-- ["开发","开发"]
----
+# 源码开源协议
 
 ![image.png](https://file.wulicode.com/yuque/202208/04/15/030066zJpnDD.png?x-oss-process=image/resize,h_461)
 

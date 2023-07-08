@@ -99,3 +99,7 @@
 - [expect 介绍](./software/expect.md)
 - [crontab 介绍](./software/crontab.md)
 - [autojump 介绍](./software/autojump.md)
+
+## FAQ
+
+- [Linux FAQ](./tech/faq.md)

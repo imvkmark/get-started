@@ -1,10 +1,4 @@
----
-title : "[转] Fiddler抓包工具总结"
-date : 2022-04-14 22:09:09
-toc : true
-categories :
-  - [ "开发","抓包工具" ]
----
+# 「转」 Fiddler抓包工具总结
 
 原文地址: [Fiddler抓包工具总结 - ﹏猴子请来的救兵 - 博客园](https://www.cnblogs.com/yyhh/p/5140852.html)
 
@@ -24,7 +18,7 @@ Fiddler是通过改写HTTP代理，让数据从它那通过，来监控并且截
 
 ![](https://file.wulicode.com/yuque/202208/04/14/4621hjzKa3zq.png?x-oss-process=image/resize,h_849)
 
-#####   
+#####    
 
 ### 1） 字段说明
 
@@ -75,7 +69,7 @@ Fiddler开始工作了，抓到的数据包就会显示在列表里面，下面�
 | ![](https://file.wulicode.com/yuque/202208/04/16/1350oV7860kS.gif?x-oss-process=image/resize,h_14) | 服务端错误                                    |
 | ![](https://file.wulicode.com/yuque/202208/04/16/1350o6zy2GBH.gif?x-oss-process=image/resize,h_17) | 会话被客户端、Fiddler 或者服务端终止                   |
 
-#####   
+#####    
 
 ### 2） Statistics 请求的性能数据分析
 
@@ -85,7 +79,7 @@ Fiddler开始工作了，抓到的数据包就会显示在列表里面，下面�
 
 ![](https://file.wulicode.com/yuque/202208/04/16/1350MWXRDoAm.png?x-oss-process=image/resize,h_736)
 
-#####   
+#####    
 
 ### 3）Inspectors 查看数据内容
 
@@ -93,28 +87,29 @@ Inspectors是用于查看会话的内容，上半部分是请求的内容，下�
 
 ![](https://file.wulicode.com/yuque/202208/04/16/1351Ai251yA6.png?x-oss-process=image/resize,h_547)
 
-#####   
+#####    
 
 ### 4）AutoResponder 允许拦截指定规则的请求
 
 AutoResponder允许你拦截指定规则的求情，并返回本地资源或Fiddler资源，从而代替服务器响应。
 
-看下图5步，我将“baidu”这个关键字与我电脑“f:\Users\YukiO\Pictures\boy.jpeg”这张图片绑定了，点击Save保存后勾选Enable rules，再访问baidu，就会被劫持。
+看下图5步，我将“baidu”这个关键字与我电脑“f:\Users\YukiO\Pictures\boy.jpeg”这张图片绑定了，点击Save保存后勾选Enable
+rules，再访问baidu，就会被劫持。
 > 这个玩意有很多匹配规则，如：
 > 1. 字符串匹配（默认）：只要包含指定字符串（不区分大小写），全部认为是匹配
 
-| 字符串匹配（baidu）                                     | 是否匹配 |
-|--------------------------------------------------|------|
-| http://www.baidu.com     | 匹配   |
-| http://pan.baidu.com     | 匹配   |
+| 字符串匹配（baidu）           | 是否匹配 |
+|------------------------|------|
+| http://www.baidu.com   | 匹配   |
+| http://pan.baidu.com   | 匹配   |
 | http://tieba.baidu.com | 匹配   |
 
 >
 > 2. 正则表达式匹配：以“regex:”开头，使用正则表达式来匹配，这个是区分大小写的
 
-| 字符串匹配（regex:.+.(jpg &#124; gif &#124; bmp ) $）                                 | 是否匹配 |
-|--------------------------------------------------------------------------------|------|
-| http://bbs.fishc.com/Path1/query=foo. 
+| 字符串匹配（regex:.+.(jpg &#124; gif &#124; bmp ) $） | 是否匹配 |
+|------------------------------------------------|------|
+| http://bbs.fishc.com/Path1/query=foo.          
 
 bmp&bar | 不匹配 |
 | http://bbs.fishc.com/Path1/query=example.

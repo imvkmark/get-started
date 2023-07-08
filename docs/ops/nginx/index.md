@@ -1,36 +1,33 @@
----
-title: "Nginx 简介"
-date: 2022-04-20 19:00:45
-toc: true
-categories:
-- ["Ops","Nginx"]
----
+# Nginx 简介
 
 ![image.png](https://file.wulicode.com/yuque/202208/04/23/3821qxHD7Ou5.png?x-oss-process=image/resize,h_36)
 
-Nginx（发音同 engine x）是一个异步框架的 Web 服务器，也可以用作反向代理，负载平衡器 和 HTTP 缓存。该软件由 [Igor Sysoev](https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%88%88%E7%88%BE%C2%B7%E8%B3%BD%E7%B4%A2%E8%80%B6%E5%A4%AB) 创建，并于 2004 年首次公开发布。同名公司成立于 2011 年，以提供支持。Nginx 是一款免费的开源软件，根据类 BSD 许可证的条款发布。一大部分 Web 服务器使用 Nginx ，通常作为负载均衡器。
-
-
-
+Nginx（发音同 engine x）是一个异步框架的 Web 服务器，也可以用作反向代理，负载平衡器 和 HTTP
+缓存。该软件由 [Igor Sysoev](https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%88%88%E7%88%BE%C2%B7%E8%B3%BD%E7%B4%A2%E8%80%B6%E5%A4%AB)
+创建，并于 2004 年首次公开发布。同名公司成立于 2011 年，以提供支持。Nginx 是一款免费的开源软件，根据类 BSD 许可证的条款发布。一大部分
+Web 服务器使用 Nginx ，通常作为负载均衡器。
 
 ## 简介
 
 ### Nginx 的特点
 
 - 更快：
-   - 单次请求会得到更快的响应。
-   - 在高并发环境下，Nginx 比其他 WEB 服务器有更快的响应。
+    - 单次请求会得到更快的响应。
+    - 在高并发环境下，Nginx 比其他 WEB 服务器有更快的响应。
 - 高扩展性：
-   - Nginx 是基于模块化设计，由多个耦合度极低的模块组成，因此具有很高的扩展性。许多高流量的网站都倾向于开发符合自己业务特性的定制模块。
+    - Nginx 是基于模块化设计，由多个耦合度极低的模块组成，因此具有很高的扩展性。许多高流量的网站都倾向于开发符合自己业务特性的定制模块。
 - 高可靠性：
-   - Nginx 的可靠性来自于其核心框架代码的优秀设计，模块设计的简单性。另外，官方提供的常用模块都非常稳定，每个 worker 进程相对独立，master 进程在一个 worker 进程出错时可以快速拉起新的 worker 子进程提供服务。
+    - Nginx 的可靠性来自于其核心框架代码的优秀设计，模块设计的简单性。另外，官方提供的常用模块都非常稳定，每个 worker
+      进程相对独立，master 进程在一个 worker 进程出错时可以快速拉起新的 worker 子进程提供服务。
 - 低内存消耗：
-   - 一般情况下，10000 个非活跃的 `HTTP Keep-Alive` 连接在 Nginx 中仅消耗 `2.5MB` 的内存，这是 Nginx 支持高并发连接的基础。
-   - 单机支持 10 万以上的并发连接：**理论上，Nginx 支持的并发连接上限取决于内存，10 万远未封顶。**
+    - 一般情况下，10000 个非活跃的 `HTTP Keep-Alive` 连接在 Nginx 中仅消耗 `2.5MB` 的内存，这是 Nginx 支持高并发连接的基础。
+    - 单机支持 10 万以上的并发连接：**理论上，Nginx 支持的并发连接上限取决于内存，10 万远未封顶。**
 - 热部署:
-   - master 进程与 worker 进程的分离设计，使得 Nginx 能够提供热部署功能，即在 7x24 小时不间断服务的前提下，升级 Nginx 的可执行文件。当然，它也支持不停止服务就更新配置项，更换日志文件等功能。
+    - master 进程与 worker 进程的分离设计，使得 Nginx 能够提供热部署功能，即在 7x24 小时不间断服务的前提下，升级 Nginx
+      的可执行文件。当然，它也支持不停止服务就更新配置项，更换日志文件等功能。
 - 最自由的 BSD 许可协议:
-   - 这是 Nginx 可以快速发展的强大动力。BSD 许可协议不只是允许用户免费使用 Nginx ，它还允许用户在自己的项目中直接使用或修改 Nginx 源码，然后发布。
+    - 这是 Nginx 可以快速发展的强大动力。BSD 许可协议不只是允许用户免费使用 Nginx ，它还允许用户在自己的项目中直接使用或修改
+      Nginx 源码，然后发布。
 
 ### 你可能需要掌握的
 
@@ -39,6 +36,7 @@ Nginx（发音同 engine x）是一个异步框架的 Web 服务器，也可以�
 - 基本的正则表达式
 
 ### 图谱
+
 ![](https://file.wulicode.com/yuque/202208/04/23/38229Y3vOVic.png?x-oss-process=image/resize,h_1595)
 
 ## 常用工具
@@ -48,7 +46,10 @@ Nginx（发音同 engine x）是一个异步框架的 Web 服务器，也可以�
 - [nginx news](http://nginx.org/)
 
 ## 常见变量
-这里列出常用的 Nginx 全局变量，也可以点击 [实时查看](https://echo.xuexb.com/api/dump/path?a=1&%E4%B8%AD%E6%96%87=%E5%A5%BD%E7%9A%84#123) 浏览。这里是官方的变量详单 [Alphabetical index of variables](https://nginx.org/en/docs/varindex.html)
+
+这里列出常用的 Nginx
+全局变量，也可以点击 [实时查看](https://echo.xuexb.com/api/dump/path?a=1&%E4%B8%AD%E6%96%87=%E5%A5%BD%E7%9A%84#123)
+浏览。这里是官方的变量详单 [Alphabetical index of variables](https://nginx.org/en/docs/varindex.html)
 
 ### 服务器相关
 
@@ -92,7 +93,7 @@ HTTP 响应代码
 
 当前连接请求的文件路径，由 `root` 或 `alias` 指令与 URI 请求生成
 
-- `request_completion:`:`""` 
+- `request_completion:`:`""`
 
 如果请求成功，值为”OK”，如果请求未完成或者请求不是一个范围请求的最后一部分，则为空
 
@@ -218,7 +219,8 @@ HTTP 请求方法
 
 - `http_upgrade_insecure_requests`:`1`
 
-是一个请求首部，用来向服务器端发送信号，表示客户端优先选择加密及带有身份验证的响应，并且它可以成功处理 upgrade-insecure-requests CSP 指令
+是一个请求首部，用来向服务器端发送信号，表示客户端优先选择加密及带有身份验证的响应，并且它可以成功处理
+upgrade-insecure-requests CSP 指令
 
 - `http_user_agent` : `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36`
 

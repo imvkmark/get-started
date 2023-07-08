@@ -1,10 +1,4 @@
----
-title: "robots文档"
-date: 2023-04-28 16:29:40
-toc: true
-categories:
-- ["开发","SEO"]
----
+# robots文档
 
 ## robots含义
 Robots 协议也称作爬虫协议、机器人协议，它的全名叫作网络爬虫排除标准（ Robots ExclusionProtocol ），用来告诉爬虫和搜索引擎哪些页面可以抓取，哪些不可以抓取。它通常是一个叫作 robots .txt 文本文件，一般放在网站的根目录下。

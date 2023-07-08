@@ -1,10 +1,4 @@
----
-title: "Git Commit 使用规范流程"
-date: 2021-05-20 16:01:40
-toc: true
-categories:
-- ["开发","Git"]
----
+# Git Commit 使用规范流程
 
 原文地址 : [Git 使用规范流程](http://www.ruanyifeng.com/blog/2015/08/git-use-process.html)
 
@@ -15,10 +9,6 @@ categories:
 下面是[ThoughtBot](https://github.com/thoughtbot/guides/tree/master/protocol/git) 的Git使用规范流程。我从中学到了很多，推荐你也这样使用Git。
 
 ![](https://file.wulicode.com/yuque/202208/04/22/42496XLOPKZ2.png)
-
-
-
-
 
 ## 第一步：新建分支
 
@@ -33,7 +23,6 @@ $ git pull
 $ git checkout -b feature/my
 ```
 
-
 ## 第二步：提交分支commit
 
 分支修改后，就可以提交commit了。
@@ -44,7 +33,8 @@ $ git status
 $ git commit --verbose
 ```
 
-`git add` 命令的 `--all` 参数，表示保存所有变化（包括新建、修改和删除）。从Git 2.0开始，all是 git add 的默认参数，所以也可以用 git add . 代替。
+`git add` 命令的 `--all` 参数，表示保存所有变化（包括新建、修改和删除）。从Git 2.0开始，all是 git add 的默认参数，所以也可以用
+git add . 代替。
 
 `git status` 命令，用来查看发生变动的文件。
 
@@ -70,7 +60,6 @@ $ git commit --verbose
 修改尚未加入提交
 ```
 
-
 ## 第三步：撰写提交信息
 
 提交commit时，必须给出完整扼要的提交信息，下面是一个范本。
@@ -86,7 +75,6 @@ http://project.management-system.com/ticket/123
 
 第一行是不超过50个字的提要，然后空一行，罗列出改动原因、主要变动、以及需要注意的问题。最后，提供对应的网址（比如Bug ticket）。
 
-
 ## 第四步：与主干同步
 
 分支的开发过程中，要经常与主干保持同步。其目的是保障最新代码协同
@@ -95,7 +83,6 @@ http://project.management-system.com/ticket/123
 $ git fetch origin
 $ git rebase origin/develop
 ```
-
 
 ## 第五步：合并commit
 
@@ -109,7 +96,8 @@ $ git rebase -i origin/develop
 
 `git rebase` 命令的 `-i` 参数表示互动（interactive），这时 git会打开一个互动界面，进行下一步操作。
 
-下面采用[Tute Costa](https://robots.thoughtbot.com/git-interactive-rebase-squash-amend-rewriting-history)的例子，来解释怎么合并commit。
+下面采用[Tute Costa](https://robots.thoughtbot.com/git-interactive-rebase-squash-amend-rewriting-history)
+的例子，来解释怎么合并commit。
 
 ```
 pick 90f28d9 介绍 OpenPGP 并且添加基础使用规范
@@ -157,7 +145,8 @@ s 6665b96 修复 url 参数错误, 多地址模式
 pick f9adae8 增加注释
 ```
 
-这样一改，执行后，当前分支只会剩下两个commit。第二行和第三行的commit，都会合并到第一行的commit。提交信息会同时包含这三个 commit 的提交信息。
+这样一改，执行后，当前分支只会剩下两个commit。第二行和第三行的commit，都会合并到第一行的commit。提交信息会同时包含这三个
+commit 的提交信息。
 
 ```
 # 这是一个 3 个提交的组合。
@@ -227,7 +216,8 @@ pick f9adae8 增加注释
 多厘 提交于 1 分钟前
 ```
 
-(不推荐:会丢失掉已经填写的 commit 信息)[Pony Foo](http://ponyfoo.com/articles/git-github-hacks)提出另外一种合并commit的简便方法，就是先撤销过去5个commit，然后再建一个新的。
+(不推荐:会丢失掉已经填写的 commit 信息)[Pony Foo](http://ponyfoo.com/articles/git-github-hacks)
+提出另外一种合并commit的简便方法，就是先撤销过去5个commit，然后再建一个新的。
 
 ```
 $ git reset HEAD~5
@@ -245,7 +235,6 @@ $ git rebase -i --autosquash
 
 这个用法请参考[这篇文章](http://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html)，这里就不解释了。
 
-
 ## 第六步：推送到远程仓库
 
 合并commit后，就可以推送当前分支到远程仓库了。
@@ -254,8 +243,8 @@ $ git rebase -i --autosquash
 $ git push --force origin feature/my
 ```
 
-`git push` 命令要加上 `--force` 参数，因为 `rebase` 以后，分支历史改变了，跟远程分支不一定兼容，有可能要强行推送（参见[这里](http://willi.am/blog/2014/08/12/the-dark-side-of-the-force-push/)）。
-
+`git push` 命令要加上 `--force` 参数，因为 `rebase`
+以后，分支历史改变了，跟远程分支不一定兼容，有可能要强行推送（参见[这里](http://willi.am/blog/2014/08/12/the-dark-side-of-the-force-push/)）。
 
 ## 第七步：发出Pull Request
 

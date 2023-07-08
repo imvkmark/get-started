@@ -1,10 +1,3 @@
----
-title: "CentOS "
-date: 2021-06-26 10:31:14
-toc: true
-categories:
-  - [ "Ops","CentOS" ]
----
 
 # 查看系统版本号
 

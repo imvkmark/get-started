@@ -1,10 +1,3 @@
----
-title : ""
-date : 2022-04-14 22:27:32
-toc : true
-categories :
-  - [ "Php","Laravel" ]
----
 
 # 「译+」 使用 PhpStorm 开发 Laravel 应用
 

@@ -1,10 +1,4 @@
----
-title: "sample"
-date: 2022-04-20 14:22:50
-toc: true
-categories:
-- ["Man"]
----
+# sample
 
 这里写简要描述
 

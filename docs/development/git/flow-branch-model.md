@@ -1,11 +1,3 @@
----
-title : ""
-date : 2022-04-20 18:58:26
-toc : true
-categories :
-  - [ "开发","Git","Git Flow" ]
----
-
 # 「译」一个成功的 Git 分支模型
 
 ::: info 原文和译文

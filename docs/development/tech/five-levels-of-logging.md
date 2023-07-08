@@ -1,18 +1,14 @@
----
-title : "[译+] 日志的5个级别"
-date : 2022-04-14 22:26:34
-toc : true
-categories :
-  - [ "开发","开发" ]
----
+# [译+] 日志的5个级别
 
 日志是软件开发中的一个概念，在这个概念中，几乎所有软件都能从日志中获益良多。它是在开始一个大型项目时设置的第一个系统。关于它的优点有很多，但我会把它留给其他人(
 或某个时候)来讲, 现在我想谈谈日志级别。
 
-日志级别是除了基本的 `滚动文本行` 日志之外一个出色的(并且很简单，因为它们常常是同时进行的)概念。每个消息被分配一个级别，表示消息的重要性或其影响的严重性。例如，
+日志级别是除了基本的 `滚动文本行` 日志之外一个出色的(并且很简单，因为它们常常是同时进行的)
+概念。每个消息被分配一个级别，表示消息的重要性或其影响的严重性。例如，
 _您的计算机着火了_ 可能是一条 _关键_ 消息，而 _无法找到配置文件_ 可能会被赋予较低的重要性级别。
 
-许多应用程序和库根据自己或用户的需要定义自己的级别. 当然，做这些事情没有固定的模式，我想谈谈我发现的五种(或六种，或四种)是最关键的，用于建立你自己的认知
+许多应用程序和库根据自己或用户的需要定义自己的级别. 当然，做这些事情没有固定的模式，我想谈谈我发现的五种(或六种，或四种)
+是最关键的，用于建立你自己的认知
 
 我还会讨论我倾向于为这些级别分配的颜色(或者说，样式)，因为颜色(或样式)不同的日志更容易有据可循。使用它将使你的程序变得清晰可辨,
 无论是从远处看到还是通过未经训练的人!但谁知道呢，你可能有一次离开电脑吃午饭。
@@ -53,7 +49,8 @@ _您的计算机着火了_ 可能是一条 _关键_ 消息，而 _无法找到�
 
 可能发生了错误。仅仅是一个日志信息，无法分析情况。人们应该 _可能_ 去调查这件事。
 
-这可能是平行宇宙中的一个错误。它可能是潜在的当前或未来问题的提示(响应缓慢、连接中断、内存不足……)，也可能是程序处理的错误情况的通知(但希望 _不_
+这可能是平行宇宙中的一个错误。它可能是潜在的当前或未来问题的提示(响应缓慢、连接中断、内存不足……)
+，也可能是程序处理的错误情况的通知(但希望 _不_
 必须再做一次，非常感谢)。
 
 **样式:** 一些吸引注意力但又不太烦人的东西，以防出现暂时的问题，让你在一段时间内无法自顾不暇。区别于错误的样式, 使用黄色文本。
@@ -111,10 +108,12 @@ _Debug_ 是保存程序流和其他技术内容的首选级别。除非它覆盖
 
 这里有一些与技术无关的细节，除非你恰巧在寻找它们。
 
-_Trace_ 是详细的调试信息，您可能不希望一直启用它(除非您向保存日志的人出售硬盘驱动器)。它可以包含诸如调用了哪些函数(因此命名)
+_Trace_ 是详细的调试信息，您可能不希望一直启用它(除非您向保存日志的人出售硬盘驱动器)。它可以包含诸如调用了哪些函数(
+因此命名)
 或与客户机交换了哪些网络数据包之类的信息。这对于捕获低级错误很好，但通常只有在您将它们的位置缩小到两个调试消息之间时才会这样做。
 
-跟踪消息将主要包含您已经可以猜到的信息("Debug says 'logging in', so this is the login packet")，因此，除非您的假设是错误的，否则可能不会有什么帮助。 ("Wait, is that
+跟踪消息将主要包含您已经可以猜到的信息("Debug says 'logging in', so this is the login packet")
+，因此，除非您的假设是错误的，否则可能不会有什么帮助。 ("Wait, is that
 a log_out_?!", "Hmm,  `foo`  should be called here. Why isn't  `foo`'s Trace being printed then?")
 
 **样式:** 在 _Debug_ 日志中可能丢失的东西。我使用深灰色，虽然它通常是禁用的。
@@ -133,7 +132,8 @@ a log_out_?!", "Hmm,  `foo`  should be called here. Why isn't  `foo`'s Trace bei
 - Python's  [logging](https://docs.python.org/library/logging.html#logging-levels)
 - Java's  [java.util.logging.Level](https://docs.oracle.com/javase/6/docs/api/java/util/logging/Level.html)  or
   log4j's  [org.apache.log4j.Level](https://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/Level.html)
-- Javascript's various console._level_  calls ([WHATWG's](https://console.spec.whatwg.org/#contents)  or  [Node.js'](https://nodejs.org/api/console.html#toc)
+- Javascript's various console._level_  calls ([WHATWG's](https://console.spec.whatwg.org/#contents)
+  or  [Node.js'](https://nodejs.org/api/console.html#toc)
   Console API specs)
 - NLog's  [log levels](https://github.com/nlog/nlog/wiki/Log-levels)
 

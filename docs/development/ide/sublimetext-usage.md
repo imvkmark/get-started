@@ -1,30 +1,27 @@
----
-title: "sublime text 使用简历"
-date: 2022-04-14 22:15:10
-toc: true
-categories:
-- ["开发","IDE"]
----
+# sublime text 使用简历
 
-地址:  http://www.sublimetext.com/dev 
-
-
-
+地址:  http://www.sublimetext.com/dev
 
 ## 插件
 
 ### 安装包控制(Sublime Package Control)
+
 2.0
+
 ```
 import urllib2,os;pf='Package Control.sublime-package';ipp=sublime.installed_packages_path();os.makedirs(ipp) if not os.path.exists(ipp) else None;open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read())
 ```
+
 3.0
+
 ```
 import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
 ```
 
 ### Alignment:整齐的码农
+
 Preferences → Key Bindings - User
+
 ```
 [
     { "keys": ["ctrl+alt+l"], "command": "alignment" }
@@ -32,11 +29,13 @@ Preferences → Key Bindings - User
 ```
 
 ### Emmet(previous zencoding):
+
 tab : 补全
 
 ctrl+alt+enter : 输入复杂表达式立刻补全,Emmet的控制面板
 
 ### DocBlockr : 文档说明立刻补全
+
 /** : 回车补全
 
 支持PHP, javascript
@@ -48,9 +47,11 @@ ctrl+alt+enter : 输入复杂表达式立刻补全,Emmet的控制面板
 - conf     : Apache Config File
 
 ### sublimeLinter
+
 语法提示工具
 
 - PHP支持
+
 ```
 Preferences->Package Settings -> SublimeLinter ->Settings - User
  {
@@ -77,6 +78,7 @@ Preferences->Package Settings -> SublimeLinter ->Settings - User
 2.edit->line->reindent
 
 3.Preferences → Key Bindings - User
+
 ```
 [
   { "keys": ["ctrl+alt+f"], "command": "reindent" , "args": {"single_line": false}}
@@ -84,6 +86,7 @@ Preferences->Package Settings -> SublimeLinter ->Settings - User
 ```
 
 ### jsFormat : 格式化Javascript文档
+
 ```
 [
   { "keys": ["ctrl+alt+shift+j"], "command": "js_format" }
@@ -91,6 +94,7 @@ Preferences->Package Settings -> SublimeLinter ->Settings - User
 ```
 
 ### CssLisible : 格式化CSS文档
+
 ```
 [
   { "keys": ["ctrl+alt+shift+c"], "command": "csslisible" }
@@ -98,7 +102,9 @@ Preferences->Package Settings -> SublimeLinter ->Settings - User
 ```
 
 ### SideBarEnhancements : 附加右鍵選單功能
+
 根据需求自行添加快捷方式
+
 ```
 [
     { "keys": ["ctrl+t"], "command": "side_bar_new_file2" },
@@ -112,6 +118,7 @@ Preferences->Package Settings -> SublimeLinter ->Settings - User
 ### Bracketeer:  標示{}、()、[]片段頭尾
 
 ### TrailingSpaces: 删除尾部空行
+
 ```
 [
     { "keys": ["ctrl+shift+T"], "command": "delete_trailing_spaces" }
@@ -125,7 +132,9 @@ Preferences->Package Settings -> SublimeLinter ->Settings - User
 ### PHP Snippet plugin : 输入"php-"的时候便会提示匹配的代码段
 
 ### Goto Doucumentation : 查询鼠标所在点的函数的帮助信息
-快捷键 F1, 例如PHP文件将会跳转到的地址为:  http://us.php.net/lcfirst 
+
+快捷键 F1, 例如PHP文件将会跳转到的地址为:  http://us.php.net/lcfirst
+
 ```
 { "keys": ["f1"], "command": "goto_documentation" }
 ```
@@ -135,12 +144,15 @@ Preferences->Package Settings -> SublimeLinter ->Settings - User
 ## 主题
 
 ### Theme - Soda: 安装soda主题
+
 Preferences->Global Setting-User
+
 ```
 "theme": "Soda Dark.sublime-theme"
 ```
 
 ### Theme - Flatland: 安装Flatland主题
+
 ```
 {
     "theme": "Flatland Dark.sublime-theme",
@@ -149,20 +161,25 @@ Preferences->Global Setting-User
 ```
 
 ### Color-scheme - solarized: 很漂亮的一款主题哦
- http://ethanschoonover.com/solarized 
+
+http://ethanschoonover.com/solarized
 
 ### Color-scheme -Flatland
- https://github.com/thinkpixellab/flatland/archive/master.zip 
+
+https://github.com/thinkpixellab/flatland/archive/master.zip
 
 ## 配置
+
 修正字体字号
 
 File Settings – User
+
 ```
 { "font_size": 10.5 }
 ```
 
 ## 常用命令
+
 ```
 命令面板:          shift + ctrl + P
 即时的文件切换:     ctrl + P

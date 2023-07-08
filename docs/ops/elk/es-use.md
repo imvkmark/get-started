@@ -1,59 +1,40 @@
----
-title: "Es 使用"
-date: 2021-02-07 23:16:49
-toc: true
-categories:
-- ["开发","Es"]
----
-
-From 澎涛
-
-
-
+# Es 使用
 
 # index
-
 
 ### create
 
 PUT `/<index>`
 
-
 ### delete
 
 PUT `/<index>`
 
-
 ### 查看
-
 
 #### 查看所有
 
 GET `/_cat/indices`
 
-
 #### 查看指定
 
 GET `/_cat/indices/<index>`
 
-
 ## _doc
 
-
 ### 创建
-
 
 #### post
 
 POST `/<index>/_doc`
 
 - api params
+
 ```json
 {
     // 文档内容
 }
 ```
-
 
 #### put
 
@@ -61,16 +42,13 @@ POST `/<index>/_doc`
 
 PUT `/<index>/_doc/<id>`
 
-
 ### 修改
-
 
 #### put
 
 PUT `/<index>/_doc/<id>`
 
 **同put方式创建,put方式修改,会覆盖掉原的所有字段**, 如只想修改某个字段的值, 该方式则不能满足
-
 
 #### post
 
@@ -80,6 +58,7 @@ PUT `/<index>/_doc/<id>`
 
 - POST `/<index>/_update/<id>`
 - params
+
 ```json
 {
     "doc": {
@@ -90,17 +69,13 @@ PUT `/<index>/_doc/<id>`
 
 **该方式只会修改指定的字段, 不会覆盖所有字段**
 
-
 ### 删除
-
 
 #### delete
 
 DELETE `/<index>/_doc/<id>`
 
-
 ### 查询
-
 
 #### 请求方式
 
@@ -109,38 +84,35 @@ DELETE `/<index>/_doc/<id>`
 - POST `/<index>/_search`
 - POST `/_search`
 
-
 #### 常用查询参数
 
 查询参数,有**地址传递**和**请求体(body)传递**两种方式,此处只介绍body方式
 
 - `query`
-   - 查询条件
+    - 查询条件
 - `from`
-   - 偏移量,默认为0
+    - 偏移量,默认为0
 - `size`
-   - 每页条数限制
+    - 每页条数限制
 - `_source`
 
 需要查询返回的字段
-- `sort`
-   - 排序
 
+- `sort`
+    - 排序
 
 ### 复合查询条件
-
 
 #### bool
 
 基于布尔条件的匹配查询, 基于一个或多个布尔条件构建, 可能出现的类型有:
 
-| 类型 | 描述 |
-| --- | --- |
-| must | 查询结果必须全部符合查询条件,并给查询结果`计算分值`, 每个子条件的关系相当于`AND` |
-| must_not | 与must查询的结果相反,相当于`NOT`, 与must不同,`分数将会被省略` |
-| should | 查询结果符合任意一个查询条件即可, 相当于`OR` |
-| filter | 结果必须符合全部与must不同点是忽略`分数` |
-
+| 类型       | 描述                                            |
+|----------|-----------------------------------------------|
+| must     | 查询结果必须全部符合查询条件,并给查询结果`计算分值`, 每个子条件的关系相当于`AND` |
+| must_not | 与must查询的结果相反,相当于`NOT`, 与must不同,`分数将会被省略`      |
+| should   | 查询结果符合任意一个查询条件即可, 相当于`OR`                     |
+| filter   | 结果必须符合全部与must不同点是忽略`分数`                       |
 
 - must
 
@@ -148,26 +120,26 @@ DELETE `/<index>/_doc/<id>`
 
 ```json
 {
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "name": "3333"
-          }
-        },
-        {
-          "match": {
-            "sex": "female"
-          }
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "name": "3333"
+                    }
+                },
+                {
+                    "match": {
+                        "sex": "female"
+                    }
+                }
+            ]
         }
-      ]
-    }
-  }, 
-  "_source": [
-      "scores.*",
-      "name"
-  ]
+    },
+    "_source": [
+        "scores.*",
+        "name"
+    ]
 }
 ```
 
@@ -175,22 +147,22 @@ DELETE `/<index>/_doc/<id>`
 
 ```json
 {
-  "query": {
-    "bool": {
-      "filter": [
-        {
-          "match": {
-            "name": "3333"
-          }
-        },
-        {
-          "match": {
-            "sex": "female"
-          }
+    "query": {
+        "bool": {
+            "filter": [
+                {
+                    "match": {
+                        "name": "3333"
+                    }
+                },
+                {
+                    "match": {
+                        "sex": "female"
+                    }
+                }
+            ]
         }
-      ]
     }
-  }, 
 }
 ```
 
@@ -226,22 +198,22 @@ GET /search/_search
 
 ```json
 {
-  "query": {
-    "bool": {
-      "must_not": [
-        {
-          "match": {
-            "name": "乌拉"
-          }
-        },
-        {
-          "match": {
-            "sex": "female"
-          }
+    "query": {
+        "bool": {
+            "must_not": [
+                {
+                    "match": {
+                        "name": "乌拉"
+                    }
+                },
+                {
+                    "match": {
+                        "sex": "female"
+                    }
+                }
+            ]
         }
-      ]
     }
-  }
 }
 ```
 
@@ -253,69 +225,69 @@ GET /search/_search
 
 ```json
 {
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "sex": "male"
-          }
-        },
-        {
-          "match": {
-            "name": "乌拉 3333" // 多个关键词空格分隔
-          }
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "sex": "male"
+                    }
+                },
+                {
+                    "match": {
+                        "name": "乌拉 3333"
+                        // 多个关键词空格分隔
+                    }
+                }
+            ]
         }
-      ]
     }
-  }
 }
 ```
 
 ```json
 {
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "match": {
-            "sex": "male"
-          }
-        },
-        {
-          "bool": {
-            "should": [
-              {
-                "match": {
-                  "name": "3333"
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "sex": "male"
+                    }
+                },
+                {
+                    "bool": {
+                        "should": [
+                            {
+                                "match": {
+                                    "name": "3333"
+                                }
+                            },
+                            {
+                                "match": {
+                                    "name": "乌拉"
+                                }
+                            }
+                        ]
+                    }
                 }
-              },
-              {
-                "match": {
-                  "name": "乌拉"
-                }
-              }
             ]
-          }
         }
-      ]
     }
-  }
 }
 ```
-
 
 #### boostring
 
 <a name="constant_score"></a>
-#### constant_score
 
+#### constant_score
 
 #### dis_max
 
 <a name="function_score"></a>
-#### function_score
 
+#### function_score
 
 #### query_string 方式查询
 
@@ -323,23 +295,21 @@ GET /search/_search
 
 ```json
 {
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "query_string": {
-            "query": "sex:male AND ( name:3333 OR name:乌拉)"
-          }
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "query_string": {
+                        "query": "sex:male AND ( name:3333 OR name:乌拉)"
+                    }
+                }
+            ]
         }
-      ]
     }
-  }
 }
 ```
 
-
 ### 全文查询
-
 
 #### match 全文检索
 
@@ -347,17 +317,15 @@ GET /search/_search
 
 ```json
 {
-  "query": {
-   "match": {
-     "name": "乌拉"
-   }
-  }
+    "query": {
+        "match": {
+            "name": "乌拉"
+        }
+    }
 }
 ```
 
-
 #### match_phase 处理分词
-
 
 #### term 词条查询
 
@@ -368,11 +336,11 @@ GET /search/_search
 ```json
 GET /search/_search
 {
-  "query": {
-    "exists": {
-      "field": "name"
+    "query": {
+        "exists": {
+            "field": "name"
+        }
     }
-  }
 }
 ```
 
@@ -380,11 +348,14 @@ GET /search/_search
 
 ```json
 {
-  "query": {
-    "ids": {
-      "values": [1, 2]
+    "query": {
+        "ids": {
+            "values": [
+                1,
+                2
+            ]
+        }
     }
-  }
 }
 ```
 
@@ -392,13 +363,13 @@ GET /search/_search
 
 ```json
 {
-  "query": {
-    "range": {
-      "scores.math": {
-        "lt": 80
-      }
+    "query": {
+        "range": {
+            "scores.math": {
+                "lt": 80
+            }
+        }
     }
-  }
 }
 ```
 
@@ -408,13 +379,13 @@ GET /search/_search
 
 ```json
 {
-  "query": {
-   "term": {
-     "sex": {
-       "value": "male"
-     }
-   }
-  }
+    "query": {
+        "term": {
+            "sex": {
+                "value": "male"
+            }
+        }
+    }
 }
 ```
 
@@ -422,14 +393,14 @@ GET /search/_search
 
 ```json
 {
-  "query": {
-   "terms": {
-     "scores.math": [
-       "60",
-       "120"
-     ]
-   }
-  }
+    "query": {
+        "terms": {
+            "scores.math": [
+                "60",
+                "120"
+            ]
+        }
+    }
 }
 ```
 
@@ -437,13 +408,13 @@ GET /search/_search
 
 ```json
 {
-  "query": {
-    "wildcard": {
-      "name": {
-        "value": "*拉"
-      }
+    "query": {
+        "wildcard": {
+            "name": {
+                "value": "*拉"
+            }
+        }
     }
-  }
 }
 ```
 
@@ -451,19 +422,19 @@ GET /search/_search
 
 ```json
 {
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "term": {
-            "name.keyword": {
-              "value": "乌拉"
-            }
-          }
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "term": {
+                        "name.keyword": {
+                            "value": "乌拉"
+                        }
+                    }
+                }
+            ]
         }
-      ]
     }
-  }
 }
 ```
 

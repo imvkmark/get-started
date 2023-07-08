@@ -1,21 +1,10 @@
----
-title: "将 Vscode 配置为 sphinx-doc 的趁手编辑器"
-date: 2021-05-20 16:59:27
-toc: true
-categories:
-- ["开发","IDE","vscode"]
----
+# 将 Vscode 配置为 sphinx-doc 的趁手编辑器
 
 ## rst 语言支持
 
 安装插件
 
-
 [reStructuredText](https://marketplace.visualstudio.com/items?itemName=lextudio.restructuredtext)
-
-
-
-
 
 ### 1) QA: doc8 warns "D001 Line Too Long"
 
@@ -43,11 +32,9 @@ doc8 检测行的长度, 并且推荐最大的长度为 79 字符.
 }
 ```
 
-
 ### 2) 支持的语法脚本
 
 如果出现 `...filename.md: WARNING: 未知的 Pygments 词法分析器 'jsx'`,
-
 
 我们可以安装 jsx 语法的提示器
 
@@ -55,14 +42,12 @@ doc8 检测行的长度, 并且推荐最大的长度为 79 字符.
 $ pip install jsx-lexer
 ```
 
-
 ## RST 预览
 
 > rst 预览的流程是, 配置解析器, 编译生成 html, 渲染 html 展示
 
 
 安装插件
-
 
 [Preview](https://marketplace.visualstudio.com/items?itemName=searKing.preview-vscode)
 
@@ -76,11 +61,9 @@ $ pip install jsx-lexer
 
 这里根据自己 python 版本来选择使用哪个来作为解析器,
 
-
 然后点击右上角预览便可以进行演示
 
 ![](https://file.wulicode.com/yuque/202208/04/23/0436oOZRzjCC.jpeg)
-
 
 ## 图片粘贴
 
@@ -103,7 +86,6 @@ $ pip install jsx-lexer
 ```
 
 这样我们粘贴图片的之后就可以直接将文件粘贴到
-
 
 `/_static/images/2020/0131/191053.png` 类似目录下
 

@@ -1,10 +1,4 @@
----
-title : "Http 相关定义"
-date : 2022-04-20 18:58:26
-toc : true
-categories :
-  - [ "开发","http" ]
----
+# Http 相关定义
 
 ## 状态码
 

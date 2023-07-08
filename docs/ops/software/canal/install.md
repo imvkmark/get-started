@@ -1,10 +1,4 @@
----
-title: "安装 Canal"
-date: 2021-02-08 16:45:13
-toc: true
-categories:
-- ["开发","Es"]
----
+# 安装 Canal
 
 ## Mysql 开启binlog
 

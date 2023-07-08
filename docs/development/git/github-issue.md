@@ -1,10 +1,4 @@
----
-title: "[转] github issue是做什么的？"
-date: 2021-05-20 16:02:37
-toc: true
-categories:
-- ["开发","Git"]
----
+# 「转」 github issue是做什么的？
 
 GitHub 的 issue 功能，对个人而言，就如同 TODO list 。
 

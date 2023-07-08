@@ -1,10 +1,4 @@
----
-title: " 「转+」 axios 简介"
-date: 2022-04-14 22:26:37
-toc: true
-categories:
-  - [ "前端","其他","axios" ]
----
+# 「转+」 axios 简介
 
 原文地址: [axios全攻略](https://ykloveyxk.github.io/2017/02/25/axios%E5%85%A8%E6%94%BB%E7%95%A5/)
 
@@ -46,7 +40,6 @@ $ bower install axios
 
 ## 举个栗子：
 
----
 
 ### 执行 GET 请求
 
@@ -193,8 +186,6 @@ axios＃patch（url [，data [，config]]）
 ```
 
 ## 请求配置
-
----
 
 这些是用于发出请求的可用配置选项。 只有url是必需的。 如果未指定方法，请求将默认为GET。
 

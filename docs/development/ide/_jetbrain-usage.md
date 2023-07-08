@@ -1,10 +1,4 @@
----
-title : "Jetbrains 使用"
-date : 2022-04-14 22:15:00
-toc : true
-categories :
-  - [ "开发","IDE","JetBrains" ]
----
+# Jetbrains 使用
 
 ## 快捷键
 

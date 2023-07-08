@@ -1,11 +1,3 @@
----
-title : ""
-date : 2022-10-13 12:26:33
-toc : true
-categories :
-  - [ "Ops","软件","ELK" ]
----
-
 # ES 语法
 
 ## 类型

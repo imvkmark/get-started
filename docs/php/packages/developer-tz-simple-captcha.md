@@ -1,10 +1,4 @@
----
-title : "Simple Captcha 包 (developer-tz/laravel-5-simple-captcha)"
-date : 2022-04-14 22:14:48
-toc : true
-categories :
-  - [ "Php","Laravel","vendor" ]
----
+
 
 # Simple Captcha 包 (developer-tz/simple-captcha)
 

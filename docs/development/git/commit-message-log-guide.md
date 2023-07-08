@@ -1,15 +1,6 @@
----
-title: "Git Commit message 和 Change log 编写指南"
-date: 2021-05-20 16:02:24
-toc: true
-categories:
-- ["开发","Git"]
----
+# Git Commit message 和 Change log 编写指南
 
 Git 每次提交代码，都要写 Commit message（提交说明），否则就不允许提交。
-
-
-
 
 ```
 $ git commit -m "hello world"
@@ -23,7 +14,8 @@ $ git commit -m "hello world"
 $ git commit
 ```
 
-基本上，你写什么都行（[这里](http://www.commitlogsfromlastnight.com/)，[这里](http://blog.no-panic.at/2014/10/20/funny-initial-git-commit-messages/)和[这里](http://whatthecommit.com/)）。
+基本上，你写什么都行（[这里](http://www.commitlogsfromlastnight.com/)，[这里](http://blog.no-panic.at/2014/10/20/funny-initial-git-commit-messages/)
+和[这里](http://whatthecommit.com/)）。
 
 ![](https://file.wulicode.com/yuque/202208/04/14/58566Ulcp389.png)
 
@@ -31,8 +23,9 @@ $ git commit
 
 ![](https://file.wulicode.com/yuque/202208/04/14/58576NDxU6HE.png)
 
-目前，社区有多种 Commit message 的[写法规范](https://github.com/ajoslin/conventional-changelog/blob/master/conventions)。本文介绍[Angular 规范](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.greljkmo14y0)（见上图），这是目前使用最广的写法，比较合理和系统化，并且有配套的工具。
-
+目前，社区有多种 Commit message 的[写法规范](https://github.com/ajoslin/conventional-changelog/blob/master/conventions)
+。本文介绍[Angular 规范](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.greljkmo14y0)
+（见上图），这是目前使用最广的写法，比较合理和系统化，并且有配套的工具。
 
 ## 一、Commit message 的作用
 
@@ -62,7 +55,6 @@ Change Log 是发布新版本时，用来说明与上一个版本差异的文档
 
 ![](https://file.wulicode.com/yuque/202208/04/14/5858RIA1jEbn.png)
 
-
 ## 二、Commit message 的格式
 
 每次提交，Commit message 都包括三个部分：Header，Body 和 Footer。
@@ -78,7 +70,6 @@ Change Log 是发布新版本时，用来说明与上一个版本差异的文档
 其中，Header 是必需的，Body 和 Footer 可以省略。
 
 不管是哪一个部分，任何一行都不得超过72个字符（或100个字符）。这是为了避免自动换行影响美观。
-
 
 ### 2.1 Header
 
@@ -96,7 +87,8 @@ Header部分只有一行，包括三个字段：`type`（必需）、`scope`（�
 - test：增加测试
 - chore：构建过程或辅助工具的变动
 
-如果`type`为`feat`和`fix`，则该 commit 将肯定出现在 Change log 之中。其他情况（`docs`、`chore`、`style`、`refactor`、`test`）由你决定，要不要放入 Change log，建议是不要。
+如果`type`为`feat`和`fix`，则该 commit 将肯定出现在 Change log 之中。其他情况（`docs`、`chore`、`style`、`refactor`、`test`
+）由你决定，要不要放入 Change log，建议是不要。
 
 **（2）scope**
 
@@ -109,7 +101,6 @@ Header部分只有一行，包括三个字段：`type`（必需）、`scope`（�
 - 以动词开头，使用第一人称现在时，比如`change`，而不是`changed`或`changes`
 - 第一个字母小写
 - 结尾不加句号（`.`）
-
 
 ### 2.2 Body
 
@@ -130,7 +121,6 @@ Further paragraphs come after blank lines.
 （1）使用第一人称现在时，比如使用`change`而不是`changed`或`changes`。
 
 （2）应该说明代码变动的动机，以及与以前行为的对比。
-
 
 ### 2.3 Footer
 
@@ -174,7 +164,6 @@ Closes #234
 Closes #123, #245, #992
 ```
 
-
 ### 2.4 Revert
 
 还有一种特殊情况，如果当前 commit 用于撤销以前的 commit，则必须以`revert:`开头，后面跟着被撤销 Commit 的 Header。
@@ -187,8 +176,8 @@ This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
 
 Body部分的格式是固定的，必须写成`This reverts commit &lt;hash>.`，其中的`hash`是被撤销 commit 的 SHA 标识符。
 
-如果当前 commit 与被撤销的 commit，在同一个发布（release）里面，那么它们都不会出现在 Change log 里面。如果两者在不同的发布，那么当前 commit，会出现在 Change log 的`Reverts`小标题下面。
-
+如果当前 commit 与被撤销的 commit，在同一个发布（release）里面，那么它们都不会出现在 Change log 里面。如果两者在不同的发布，那么当前
+commit，会出现在 Change log 的`Reverts`小标题下面。
 
 ## 三、Commitizen
 
@@ -210,14 +199,15 @@ $ commitizen init cz-conventional-changelog --save --save-exact
 
 ![](https://file.wulicode.com/yuque/202208/04/14/5859S7ZC3u3c.png)
 
-
 ## 四、validate-commit-msg
 
 [validate-commit-msg](https://github.com/kentcdodds/validate-commit-msg) 用于检查 Node 项目的 Commit message 是否符合格式。
 
-它的安装是手动的。首先，拷贝下面这个[JS文件](https://github.com/kentcdodds/validate-commit-msg/blob/master/index.js)，放入你的代码库。文件名可以取为`validate-commit-msg.js`。
+它的安装是手动的。首先，拷贝下面这个[JS文件](https://github.com/kentcdodds/validate-commit-msg/blob/master/index.js)
+，放入你的代码库。文件名可以取为`validate-commit-msg.js`。
 
-接着，把这个脚本加入 Git 的 hook。下面是在`package.json`里面使用 [ghooks](http://npm.im/ghooks)，把这个脚本加为`commit-msg`时运行。
+接着，把这个脚本加入 Git 的 hook。下面是在`package.json`里面使用 [ghooks](http://npm.im/ghooks)，把这个脚本加为`commit-msg`
+时运行。
 
 ```
   "config": {
@@ -235,10 +225,10 @@ $ git commit -m "edit markdown"
 INVALID COMMIT MSG: does not match "<type>(<scope>): <subject>" ! was: edit markdown
 ```
 
-
 ## 五、生成 Change log
 
-如果你的所有 Commit 都符合 Angular 格式，那么发布新版本时， Change log 就可以用脚本自动生成（[例1](https://github.com/ajoslin/conventional-changelog/blob/master/CHANGELOG.md)，[例2](https://github.com/karma-runner/karma/blob/master/CHANGELOG.md)，[例3](https://github.com/btford/grunt-conventional-changelog/blob/master/CHANGELOG.md)）。
+如果你的所有 Commit 都符合 Angular 格式，那么发布新版本时， Change log
+就可以用脚本自动生成（[例1](https://github.com/ajoslin/conventional-changelog/blob/master/CHANGELOG.md)，[例2](https://github.com/karma-runner/karma/blob/master/CHANGELOG.md)，[例3](https://github.com/btford/grunt-conventional-changelog/blob/master/CHANGELOG.md)）。
 
 生成的文档包括以下三个部分。
 

@@ -1,6 +1,3 @@
----
-outline: 'deep'
----
 
 # 2. Java 程序设计环境
 

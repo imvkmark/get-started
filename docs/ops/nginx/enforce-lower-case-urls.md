@@ -1,10 +1,3 @@
----
-title: ""
-date: 2022-09-29 16:36:39
-toc: true
-categories:
-- ["Ops","Nginx","示例"]
----
 
 # 强制使用小写的 url 地址
 
