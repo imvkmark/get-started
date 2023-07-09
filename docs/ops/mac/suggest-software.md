@@ -81,3 +81,12 @@
 
 ![image.png](https://file.wulicode.com/yuque/202208/24/23/2203zIY7m7tX.png?x-oss-process=image/resize,h_418)
 
+## 播放器
+
+### IINA - 现代 mac 播放器
+
+> 链接 : https://iina.io/
+>
+> 深色模式, 画中画, 音乐播放, Touchbar
+
+![](https://file.wulicode.com/doc/20230709/1688871091022.png)
