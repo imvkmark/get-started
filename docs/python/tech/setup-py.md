@@ -119,7 +119,7 @@ find-links=http://mirrors.aliyun.com/pypi/simple/
 ```
 
 以上仅介绍了 easy_install
-的一些常用的方法，想要了解更多，你可以点击官方文档：[setuptools.readthedocs.io](ce608ffd31174e9f7400864d3251beb0)
+的一些常用的方法，想要了解更多，你可以点击官方文档：https://setuptools.pypa.io/en/latest/
 
 总结一句：setuptools 是官方提供的一个专业用于包分发的工具，若只从安装的角度来看，它的功能确实简单。它更大的意义是对包的分发很有用，定制化程序非常高，我们现在也还在用它进行版本包的发布。
 <a name="38726570-af41-4520-a46b-1af598c76dc7"></a>

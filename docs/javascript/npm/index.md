@@ -18,6 +18,14 @@
 
 ### 手势
 
+**Sortable**
+
+> 一个 JavaScript 拖拽库
+>
+> [Demo](http://sortablejs.github.io/Sortable/), [GitHub](https://github.com/SortableJS/Sortable)
+
+
+
 **vue3-moveable**
 
 ![](https://file.wulicode.com/doc/20230531/1685519827510.png)
