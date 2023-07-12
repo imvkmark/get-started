@@ -19,7 +19,7 @@
 
 ## Npm/包管理
 
-- [说明](./npm/)
+- [说明](./npm/index.md)
 - [npm 和 package.json](./npm/npm-and-package-json)
 - [RHEL8 安装 nodejs](./npm/install-at-rhel8.md)
 - [Node 更换源使用国内镜像](./npm/pkg-use-mirror.md)
@@ -27,6 +27,7 @@
 - [发布 npm 包 - FAQ](./npm/publish-faq.md)
 - [NPM 版本控制](./npm/version-intro.md)
 - [nvm：管理 Node.js 版本](./npm/version-manager-nvm.md)
+- [NPM FAQ](./npm/faq.md)
 
 ## React
 
