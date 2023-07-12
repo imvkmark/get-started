@@ -38,7 +38,7 @@ $ npm --registry https://registry.npmmirror.com info express
 **使用 **`**nrm**`** 来更换访问源**
 
 nrm 是 NPM Registry Manager 的缩写, 通过他可以快速切换源,
-文档地址 :  https://www.npmjs.com/package/nrm 
+文档地址 :  https://www.npmjs.com/package/nrm
 
 ```
 $ npm install -g nrm
@@ -75,7 +75,7 @@ registry=https://registry.npmmirror.com/
 
 ### 使用 `cnpm` 来替代 `npm`
 
-使用说明查看 :  https://npmmirror.com 
+使用说明查看 :  https://npmmirror.com
 
 cnpm 支持所有 npm 的命令并且可以快速同步任意模块
 
@@ -85,7 +85,7 @@ $ cnpm sync koa connect mocha
 
 如果不想安装 `cnpm cli` 怎么办? 我们还有一个 web 页面:
 
-例如我想马上同步 koa, 直接打开浏览器:  http://npmmirror.com/sync/koa 
+例如我想马上同步 koa, 直接打开浏览器:  http://npmmirror.com/sync/koa
 
 或者你是命令行控, 通过 open 命令打开:
 
@@ -154,7 +154,7 @@ yarn config set registry https://npmmirror.com/
 
 YARN registry manager:
 
- https://github.com/i5ting/yrm 
+https://github.com/i5ting/yrm
 
 `yrm` 不仅可以快速切换镜像源，还可以测试自己网络访问不同源的速度
 
@@ -199,7 +199,7 @@ $ yrm test
 
 ## Nodejs Release 镜像使用帮助
 
-Nodejs Release 为各平台提供预编译的 nodejs 和 npm 等二进制文件，是  https://nodejs.org/dist/ 
+Nodejs Release 为各平台提供预编译的 nodejs 和 npm 等二进制文件，是  https://nodejs.org/dist/
 的镜像。
 
 使用方法:
@@ -218,6 +218,6 @@ export NODE_MIRROR=http://npmmirror.com/mirrors/node
 
 **2021 年 10 月 27 日**
 
-- 增加 npm 站点  https://npmmirror.com 
+- 增加 npm 站点  https://npmmirror.com
 - 增加 nrm 的说明
 

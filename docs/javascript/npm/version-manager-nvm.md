@@ -2,7 +2,8 @@
 
 ![](https://file.wulicode.com/yuque/202208/04/14/50299Hb0k8di.jpg?x-oss-process=image/resize,h_630)
 
-nvm 是 Node.js 的版本管理器 (version manager)，可在同一台主機上安裝多個版本的 Node.js 環境，因為不同專案可能會使用不同的 Node.js 版本，那就需要透過一個版本管理器來切換不同的
+nvm 是 Node.js 的版本管理器 (version manager)，可在同一台主機上安裝多個版本的 Node.js 環境，因為不同專案可能會使用不同的
+Node.js 版本，那就需要透過一個版本管理器來切換不同的
 Node.js 版本。
 
 ## 安裝 NVM
@@ -19,7 +20,8 @@ $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bas
 $ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 ```
 
-此安裝腳本會將 nvm repo clone 到 `~/.nvm`，並且將 source line 新增至你的 profile 設定 ( `~/.bash_profile`、`~/.zshrc`、`~/.profile` 或 `~/.bashrc` )：
+此安裝腳本會將 nvm repo clone 到 `~/.nvm`，並且將 source line 新增至你的 profile
+設定 ( `~/.bash_profile`、`~/.zshrc`、`~/.profile` 或 `~/.bashrc` )：
 
 ```
 export NVM_DIR="$HOME/.nvm"
@@ -27,7 +29,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ```
 
-如果在 Linux 執行安裝腳本後，執行下面指令會顯示以下訊息或沒有任何訊息時，建議重開一個新的終端機 (terminal) 再重新執行一次 `nvm` 指令：
+如果在 Linux 執行安裝腳本後，執行下面指令會顯示以下訊息或沒有任何訊息時，建議重開一個新的終端機 (terminal)
+再重新執行一次 `nvm` 指令：
 
 ```
 $ command -v nvm
@@ -44,8 +47,10 @@ $ source .zshrc
 
 - 使用 `nvm` 時，不需要 `sudo` 即可使用 `npm -g` 全域安裝模組，所以與其執行 `sudo npm i -g`，不如執行 `npm i -g`
 - 若你有 `~/.npmrc`，請確保裡面不包含任何 `prefix` 的設定 (因為與 `nvm` 不相容)
-- 你可以 (但不應該) 保留以前在 “系統” 安裝的 Node.js，但 `nvm` 只對你的使用者帳戶 (用於安裝 `nvm` 的使用者帳戶) 可用。可能會導致版本不
-  match，因為其他使用者會使用 `/usr/local/lib/node_modules/*`，而使用者帳戶會使用 `~/.nvm/versions/node/vX.X.X/lib/node_modules/*`
+- 你可以 (但不應該) 保留以前在 “系統” 安裝的 Node.js，但 `nvm` 只對你的使用者帳戶 (用於安裝 `nvm` 的使用者帳戶)
+  可用。可能會導致版本不
+  match，因為其他使用者會使用 `/usr/local/lib/node_modules/*`
+  ，而使用者帳戶會使用 `~/.nvm/versions/node/vX.X.X/lib/node_modules/*`
 
 ## `--version`：确认 NVM 是否安裝成功
 
@@ -115,7 +120,8 @@ $ nvm ls-remote
 ->      v12.8.1
 ```
 
-不過剛剛的 `ls-remote` 指令會把所有可用的版本都列出來，但通常會選擇安裝 LTS (Long-term support，長期支援) 版，所以只要加上 `-lts` 參數就可以指列出可用的 LTS 版：
+不過剛剛的 `ls-remote` 指令會把所有可用的版本都列出來，但通常會選擇安裝 LTS (Long-term support，長期支援)
+版，所以只要加上 `-lts` 參數就可以指列出可用的 LTS 版：
 
 ```
 $ nvm ls-remote --lts
@@ -125,7 +131,8 @@ $ nvm ls-remote --lts
        v10.16.3   (Latest LTS: Dubnium)
 ```
 
-如果版本號的文字有特殊顏色 (不是白色字)，則代表該版本的 Node.js 有透過 nvm 安裝過，例如：我的電腦就安裝了 `v10.16.3` 和 `v12.8.1`：
+如果版本號的文字有特殊顏色 (不是白色字)，則代表該版本的 Node.js 有透過 nvm 安裝過，例如：我的電腦就安裝了 `v10.16.3`
+和 `v12.8.1`：
 
 ![](https://file.wulicode.com/yuque/202208/04/14/5030nZVp6tVl.png?x-oss-process=image/resize,h_580)
 
@@ -166,9 +173,11 @@ N/A: version "lts/carbon -> N/A" is not yet installed.
 You need to run "nvm install lts/carbon" to install it before using it.
 ```
 
-透過 nvm 安裝 Node.js 時，nvm 會將不同的 Node.js 版本儲存在 `~/.nvm/versions/node/vX.X.X`，然後再修改 `$PATH`，將指定版本的 Node.js 路徑加入：
+透過 nvm 安裝 Node.js 時，nvm 會將不同的 Node.js 版本儲存在 `~/.nvm/versions/node/vX.X.X`，然後再修改 `$PATH`，將指定版本的
+Node.js 路徑加入：
 
-在 nvm 的各個 Node.js 版本安裝的全域套件都會在各自版本的目錄內安裝，所以在切換至新安裝的 Node.js 版本後需要重新安裝，也因為如此，不同版本間的套件就不會有衝突問題。
+在 nvm 的各個 Node.js 版本安裝的全域套件都會在各自版本的目錄內安裝，所以在切換至新安裝的 Node.js
+版本後需要重新安裝，也因為如此，不同版本間的套件就不會有衝突問題。
 
 ## `current`：察看目前使用版本
 
@@ -221,7 +230,8 @@ $ nvm which 12.8.1
 - `node`：安裝最新版的 Node.js
 - `iojs`：安裝最新版的 io.js
 - `stable`：此 alias 已棄用，僅適用於 v0.12 以及更舊版，目前改為 `node` alias
-- `unstable`：此 alias 為 v0.11，最後一個 “unstable” (不穩定) Node release，在 v1.0 之後的版本都是穩定版 (in SemVer, versions communicate breakage, not stability)
+- `unstable`：此 alias 為 v0.11，最後一個 “unstable” (不穩定) Node release，在 v1.0 之後的版本都是穩定版 (in SemVer,
+  versions communicate breakage, not stability)
 
 可在下面這些指令使用以上預設別名：
 
@@ -286,7 +296,8 @@ lts/erbium -> v12.13.0 (-> N/A)
 
 基本上，需要反向执行 `install.sh`中的步骤-从 `~/.bash_profile`(和/或 `~/.profile`) 中删除所有 nvm 注册行，然后重新打shell
 
-如果是 nvm 失效, 只需从 `.bash_profile`或 `.profile`中删除NVM命令就足够, 如果你有其他的 node 执行环境, 则也需要删除, 则需要执行如下命令
+如果是 nvm 失效, 只需从 `.bash_profile`或 `.profile`中删除NVM命令就足够, 如果你有其他的 node 执行环境, 则也需要删除,
+则需要执行如下命令
 
 ```
 $ rm -rf ~/.nvm
