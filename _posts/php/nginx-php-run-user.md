@@ -1,8 +1,8 @@
 ---
-title : "linux 将 php/nginx 的权限执行用户进行更换"
-date : 2022-04-14 22:15:03
-toc : true
-categories :
+title: "linux 将 php/nginx 的权限执行用户进行更换"
+date: 2022-04-14 22:15:03
+toc: true
+categories:
   - [ "Php","环境搭建" ]
 ---
 
@@ -53,7 +53,8 @@ $ chown -R liexiang.liexiang /var/lib/nginx
 
 此错误处理来自于以下日志
 
-> 2019/11/03 23:00:36 [crit] 17371#17371: *2512110 open() "/var/cache/nginx/fastcgi_temp/5/82/0000008825" failed (13: Permission denied) while reading upstream,
+> 2019/11/03 23:00:36 [crit] 17371#17371: *2512110 open() "/var/cache/nginx/fastcgi_temp/5/82/0000008825" failed (13:
+> Permission denied) while reading upstream,
 > client: 112.232.241.204 ...
 
 ### php

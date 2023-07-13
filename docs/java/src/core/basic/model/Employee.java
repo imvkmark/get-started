@@ -1,5 +1,7 @@
 package core.basic.model;
 
+import core.basic.util.StrHelper;
+
 public class Employee
 {
     private static int nextId = 1;
@@ -54,5 +56,10 @@ public class Employee
     public String toString()
     {
         return "name:" + name + ";salary:" + salary;
+    }
+
+    public void say(int to)
+    {
+        System.out.println("say to" + to + ":" + StrHelper.randomString(8));
     }
 }
