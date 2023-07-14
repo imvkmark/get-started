@@ -2,6 +2,12 @@
 
 ![](https://file.wulicode.com/doc/20230625/1687660314610.png)
 
+## 产品
+
+### 用户流程设计
+
+- [用户密码流程](./product/user-pwd.md)
+
 ## 设计
 
 - [UI 交互手册](./design/pc-ui-interact.md)

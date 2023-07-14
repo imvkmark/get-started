@@ -28,7 +28,7 @@ const nav = [
             {text: "手机端", link: "/mobile/"},
             {text: "运维", link: "/ops/"},
             {text: "开发", link: "/development/"},
-            {text: "部门", link: "/department/test/auto-seldom"},
+            {text: "部门", link: "/development/test/auto-seldom"},
         ],
     },
     {
@@ -433,7 +433,7 @@ const sidebar = {
         {
             text: "测试",
             items: [
-                createLink("Seldom 自动化测试", "/department/test/auto-seldom"),
+                createLink("Seldom 自动化测试", "/development/test/auto-seldom"),
             ],
         },
     ],
