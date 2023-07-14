@@ -24,9 +24,10 @@
 
 **CentOS**
 
-- [升级和完善 CentOS 7](./rhel/centos-upgrade-at-7)
-- [常用脚本](./rhel/tools)
-- [firewalld 常用命令](./rhel/firewalld)
+- [升级和完善 CentOS 7](./rhel/centos-upgrade-at-7.md)
+- [常用脚本](./rhel/tools.md)
+- [firewalld 常用命令](./rhel/firewalld.md)
+- [Yum 介绍](./rhel/yum.md)
 - [FAQ](./rhel/centos-faq)
 
 **RockyLinux**

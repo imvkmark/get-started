@@ -1,12 +1,18 @@
 ---
-title: "「译」 使用 Laravel 访问前端 Cookie"
+title: ""
 date: 2022-04-14 22:26:31
 toc: true
 categories:
   - [ "Php","Laravel","Tips 记录" ]
 ---
 
+# 「译」 使用 Laravel 访问前端 Cookie
+
+::: info
+
 原文地址: [Accessing Front-End Cookies with Laravel](https://pineco.de/accessing-front-end-cookies-laravel/)
+
+:::
 
 **在我们的应用程序中，我们可以在JS端设置cookie，但我们也希望在后端使用。我们可以使用**`**$_COOKIE**`**
 全局魔术变量，但如果我们使用Laravel，我们会使用它提供的方法。让我们下Laravel中是如何使用的**

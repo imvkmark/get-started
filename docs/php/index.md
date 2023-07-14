@@ -68,6 +68,16 @@
 - [🔗 Laravel Doc @6.x](https://learnku.com/docs/laravel/6.x)
 - [🔗 Laravel 内核分析](https://learnku.com/docs/laravel-kernel)
 
+### 深度学习
+
+- [Laravel 中间件的介绍以及使用](./laravel/middleware.md)
+- [Laravel Cookie 和前端联合使用](./laravel/cookie.md)
+
+### Laravel 组件包
+
+- [组件开发](./laravel/develop-package.md)
+- [laravelcollective/html](./laravel/pkgs-laravelcollective-html.md)
+
 ## 单元测试
 
 - [🔗 PhpUnit 手册](https://phpunit.readthedocs.io/zh_CN/latest/)
