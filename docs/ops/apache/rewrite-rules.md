@@ -15,7 +15,7 @@ Rewrite 规则详解”
 
 本文是经过我实验后修改有效的，如果还是出现500错误请去掉  **#**  及后面的注释（也许有些环境不支持中文注解），如果还是错误请在下面给我留言。
 
-**1、Rewrite规则简介：**
+## 1、Rewrite规则简介：
 
 Rewirte主要的功能就是实现URL的跳转，它的正则表达式是基于Perl语言。可基于服务器级的(httpd.conf)和目录级的(.htaccess)
 两种方式。如果要想用到rewrite模块，必须先安装或加载rewrite模块。方法有两种一种是编译apache的时候就直接安装rewrite模块，别一种是编译
@@ -28,7 +28,7 @@ apache 时以DSO模式安装 apache,然后再利用源码和apxs来安装rewrite
 
 基于目录级的`.htaccess`,要注意一点那就是必须打开此目录的`FollowSymLinks`属性且在`.htaccess`里要声明`RewriteEngine on`。
 
-**2、举例说明：**
+## 2、举例说明：
 
 例一.下面是在一个虚拟主机里定义的规则。功能是把client请求的主机前缀不是www.kiya.cn和70.40.213.183都跳转到主机前缀为 http://www.kiya.cn
 ，避免相同内容的网页有多个指向的域名，如 http://kiya.cn。
@@ -69,7 +69,8 @@ RewriteCond %{REQUEST_URI} !^/bbs/
 RewriteRule ^(.*) http://www.sicasoft.com/$1 [R=permanent,L]
 ```
 
-**3.Apache mod_rewrite规则重写的标志一览**
+## 3.Apache mod_rewrite规则重写的标志一览
+
 > 1) R(force redirect) 强制外部重定向
      > 强制在替代字符串加上 `http://thishost[:thisport]/` 前缀重定向到外部的URL.如果code不指定，将用缺省的302 HTTP状态码。
 > 2) F(force URL to be forbidden)禁用URL,返回403HTTP状态码。
@@ -92,7 +93,7 @@ RewriteRule ^(.*) http://www.sicasoft.com/$1 [R=permanent,L]
 > 14) S=num(skip next rule(s)) 跳过num条规则
 > 15) E=VAR:VAL(set environment variable) 设置环境变量
 
-**4.Apache rewrite例子集合**
+## 4.Apache rewrite例子集合
 
 URL重定向
 
@@ -126,7 +127,7 @@ RewriteRule ^/type([0-9]+).html$ /type.php?typeid=$1 [PT]
 RewriteRule ^/type([0-9]+)page([0-9]+).html$ /type.php?typeid=$1&page=$2 [PT]
 ```
 
-**5.使用Apache的URL Rewrite配置多用户虚拟服务器**
+## 5.使用Apache的URL Rewrite配置多用户虚拟服务器
 
 要实现这个功能，首先要在DNS服务器上打开域名的泛域名解析（自己做或者找域名服务商做）。比如，我就把 *.kiya.us和 *
 .kiya.cn全部解析到了我的IP地址70.40.213.183上。
@@ -160,10 +161,10 @@ RewriteRule ^(.+) %{HTTP_HOST}$1 [C] #把用户输入完整的地址（GET方式
 RewriteRule ^([^.]+).kiya.(cn|us)(.*)$ /home/www/dev.kiya.us/sylvan$3?un=$1&%{QUERY_STRING} [L]
 ```
 
->
-最关键的是这一句，使用证则表达式解析用户输入的URL地址，把主机名中的用户名信息作为名为un的参数传给/home/www/dev.kiya.us目录下的脚本，并在后面跟上用户输入的GET方式的传入参数。并指明这是最后一条规则（[L]
-规则）。注意，在这一句中指明的重写后的地址用的是服务器上的绝对路径，这是内部跳转。如果使用http:
-//xxxx这样的URL格式，则被称为外部跳转。使用外部跳转的话，浏览着的浏览器中的URL地址会改变成新的地址，而使用内部跳转则浏览器中的地址不发生改变，看上去更像实际的二级域名虚拟服务器。
+> 最关键的是这一句，使用证则表达式解析用户输入的URL地址，把主机名中的用户名信息作为名为un的参数传给 /home/www/dev.kiya.us 目录下的脚本，并在后面跟上用户输入的GET方式的传入参数。
+> 并指明这是最后一条规则（[L]规则）。注意，在这一句中指明的重写后的地址用的是服务器上的绝对路径，这是内部跳转。
+> 如果使用http://xxxx这样的URL格式，则被称为外部跳转。
+> 使用外部跳转的话，浏览着的浏览器中的URL地址会改变成新的地址，而使用内部跳转则浏览器中的地址不发生改变，看上去更像实际的二级域名虚拟服务器。
 
 设置后重启Apache服务器就大功告成了！
 
