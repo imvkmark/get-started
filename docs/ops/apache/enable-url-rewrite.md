@@ -1,12 +1,10 @@
----
-title: "「译」 Apache 使用 MOD_REWRITE 启用 url rewrite/url重写"
-date: 2022-04-14 22:26:29
-toc: true
-categories:
-  - [ "Ops","软件","apache" ]
----
+# 「译」 Apache 使用 MOD_REWRITE 启用 url rewrite/url重写
 
-原文地址:[ENABLING MOD_REWRITE ON WINDOWS APACHE FOR URL REWRITING](http://www.webdevdoor.com/php/mod_rewrite-windows-apache-url-rewriting/)
+::: info 原文
+
+原文地址:[Activating mod_rewrite on Apache for Windows: A Guide for URL Rewriting](https://clouddevs.com/php/mod_rewrite-windows-apache-url-rewriting/)
+
+:::
 
 以下几步将帮助你 windows 平台上的 wamp 启用 mod_rewrite 组件
 

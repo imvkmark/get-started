@@ -106,7 +106,7 @@ Comparator<String> comp
 
 ```
 // 每次都会初始化
-LocalDate hireDay = Objects.requireNonNullorElse (day, new LocalDate (1970, 1, 1));
+LocalDate hireDay = Objects.requireNonNullorElse(day, new LocalDate (1970, 1, 1));
 
 // 当 day 为空的时候才返回数据
 LocalDate hireDay = Dbjects.requireNonNullorElseGet(day，() -> new LocalDate(1970,1,1));

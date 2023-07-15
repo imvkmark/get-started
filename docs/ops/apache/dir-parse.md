@@ -1,17 +1,8 @@
----
-title: "CentOS httpd 分析"
-date: 2021-06-26 10:30:44
-toc: true
-categories:
-- ["Ops","CentOS"]
----
+# apache httpd 目录分析
 
 ### httpd 文件目录结构
 
 已经安装完成的使用 `whereis` 确定的 httpd 的位置
-
-
-
 
 ```
 /usr/sbin/httpd     # 执行bin 文件
@@ -20,7 +11,6 @@ categories:
 /usr/share/httpd    # 默认的 apache 指向目录
 /usr/share/man/man8/httpd.8.gz  # 文档
 ```
-
 
 ### 配置文件目录
 

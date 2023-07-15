@@ -1,26 +1,22 @@
----
-title: "调整Virtual Box硬盘大小"
-date: 2022-04-14 22:27:18
-toc: true
-categories:
-- ["Ops","软件","Virtual Box"]
----
+# 调整Virtual Box硬盘大小
 
 ## 原因
-我在 ubuntu 系统上运行, 给 XP 机器的虚拟机大小为 10G 大小, 运行之后发现空间不太够用,于是便开始折腾变更大小. 目标更改为 15G左右.
 
-
-
+我在 ubuntu 系统上运行, 给 XP 机器的虚拟机大小为 10G 大小, 运行之后发现空间不太够用,于是便开始折腾变更大小. 目标更改为
+15G左右.
 
 ## 操作步骤
+
 **关闭虚拟机**
 
 如果不关闭虚拟你可能会造成无法调整大小, 或者错误.
 
 **列出现有的虚拟机并获取 uuid**
+
 ```
 VBoxManage list hdds
 ```
+
 > UUID:           770538c2-93dc-4793-9724-cc36c2509f6b
 > Parent UUID:    base
 > State:          created
@@ -36,9 +32,11 @@ VBoxManage list hdds
 这里调整的大小单位是M
 
 我们使用的命令是 `VBoxManage modifyhd uuid --resize 15960` , 替换时候将 `uuid` 替换为我们上边获取到的 `UUID`
+
 ```
 VBoxManage modifyhd 770538c2-93dc-4793-9724-cc36c2509f6b --resize 15960
 ```
+
 > 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
 
 **虚拟机中调整使用**

@@ -1,12 +1,10 @@
----
-title: "[转] Apache Rewrite 规则详解"
-date: 2022-04-14 22:08:40
-toc: true
-categories:
-  - [ "Ops","软件","apache" ]
----
+# Apache Rewrite 规则详解
 
-原文地址 :  [Apache Rewrite 规则详解](http://slj.me/2009/04/apache-rewrite-regular/)
+::: info 原文地址
+
+原文地址 :  ~~[Apache Rewrite 规则详解](http://slj.me/2009/04/apache-rewrite-regular/)~~
+
+:::
 
 **在开篇之前：**
 

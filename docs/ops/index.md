@@ -28,7 +28,9 @@
 - [常用脚本](./rhel/tools.md)
 - [firewalld 常用命令](./rhel/firewalld.md)
 - [Yum 介绍](./rhel/yum.md)
-- [FAQ](./rhel/centos-faq)
+- [安装和配置 SVN](./rhel/install-svn.md)
+- [Repo 介绍](./rhel/repo-file-introduction.md)
+- [FAQ](./rhel/centos-faq.md)
 
 **RockyLinux**
 
@@ -41,6 +43,7 @@
 
 ### Ubuntu
 
+- [将程序桌面图标加到ubuntu启动器的方法](./ubuntu/add-quick-link-on-desktop.md)
 - [FAQ](./ubuntu/faq)
 
 ### Docker
@@ -81,6 +84,14 @@
 - [安装最新的 cURL ](./software/curl/install-latest-at-centos.md)
 - [curl 请求另外一台机器](./software/curl/visit-another-host.md)
 
+### Apache
+
+- [apache httpd 目录分析](./apache/dir-parse.md)
+- [Apache 使用 MOD_REWRITE 启用 url rewrite/url重写](./apache/enable-url-rewrite.md)
+- [apache 使用 mod_proxy_fcgi 支持多版本 php](./apache/mod-support-multi-ver-php.md)
+- [Apache Rewrite 规则详解](./apache/rewrite-rules.md)
+- [Apache - FAQ](./apache/faq.md)
+
 ### Solution
 
 ### Canal
@@ -100,6 +111,10 @@
 - [expect 介绍](./software/expect.md)
 - [crontab 介绍](./software/crontab.md)
 - [autojump 介绍](./software/autojump.md)
+
+## Windows
+
+- [调整Virtual Box硬盘大小](./win/vm-modify-size.md)
 
 ## FAQ
 

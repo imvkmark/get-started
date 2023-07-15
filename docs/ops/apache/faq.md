@@ -1,10 +1,4 @@
----
-title: ""
-date: 2021-06-26 11:19:46
-toc: true
-categories:
-  - [ "Ops","软件","apache" ]
----
+# Apache - FAQ
 
 ## apache 读取图片显示 403 Forbidden
 
@@ -54,7 +48,7 @@ Header("Location:http://XXX.com")
 
 这样当用户访问带www的域名的时候，就会访问这个二级目录下面的index.php，php就会执行301，将域名跳转会不带www的域名，这个跳转的时间非常短，用户感觉不出来的。
 
-# Apache alias 实现目录别名访问 和目录索引
+## Apache alias 实现目录别名访问 和目录索引
 
 **目录别名访问**
 
