@@ -55,9 +55,9 @@ RewriteRule ^(.*) http://www.sicasoft.com/ [L]
 
 例三.赛卡软件近期更换了域名，新域名为www.sicasoft.com, 更加简短好记。这时需要将原来的域名ss.kiya.cn,
 以及论坛所在地址ss.kiya.cn/bbs/定向到新的域名，以便用户可以找到，并且使原来的论坛 URL 继续有效而不出现 404
-未找到，比如原来的http://ss.kiya.cn/bbs/tread-60.html, 让它在新的域名下继续有效，点击后转发到http:
-//bbs.sicasoft.com/tread-60.html，而其他网页，如原先的 http://ss.kiya.cn/purchase
-不会到二级域名bbs.sicasoft.com/purchase上，而是到www.sicasoft.com/purchase
+未找到，比如原来的 http://ss.kiya.cn/bbs/tread-60.html, 让它在新的域名下继续有效，点击后转发到
+http://bbs.sicasoft.com/tread-60.html, 而其他网页，如原先的 http://ss.kiya.cn/purchase
+不会到二级域名 bbs.sicasoft.com/purchase 上，而是到 www.sicasoft.com/purchase
 
 按照这样的要求重定向规则应该这样写：
 
@@ -70,8 +70,8 @@ RewriteRule ^(.*) http://www.sicasoft.com/$1 [R=permanent,L]
 ```
 
 **3.Apache mod_rewrite规则重写的标志一览**
-> 1) R[=code](force redirect) 强制外部重定向
-     > 强制在替代字符串加上http://thishost[:thisport]/前缀重定向到外部的URL.如果code不指定，将用缺省的302 HTTP状态码。
+> 1) R(force redirect) 强制外部重定向
+     > 强制在替代字符串加上 `http://thishost[:thisport]/` 前缀重定向到外部的URL.如果code不指定，将用缺省的302 HTTP状态码。
 > 2) F(force URL to be forbidden)禁用URL,返回403HTTP状态码。
 > 3) G(force URL to be gone) 强制URL为GONE，返回410HTTP状态码。
 > 4) P(force proxy) 强制使用代理转发。
@@ -84,10 +84,10 @@ RewriteRule ^(.*) http://www.sicasoft.com/$1 [R=permanent,L]
 > 10) NC(no case) 不区分大小写
 > 11) QSA(query string append) 追加请求字符串
 > 12) NE(no URI escaping of output) 不在输出转义特殊字符
-      > 例如：RewriteRule /foo/(.*) /bar?arg=P1%3d$1 [R,NE] 将能正确的将/foo/zoo转换成/bar?arg=P1=zoo
+      > 例如：`RewriteRule /foo/(.*) /bar?arg=P1%3d$1 [R,NE]` 将能正确的将 /foo/zoo 转换成/bar?arg=P1=zoo
 > 13) PT(pass through to next handler) 传递给下一个处理
       > 例如：
-      > RewriteRule ^/abc(.*) /def$1 [PT] # 将会交给/def规则处理
+      > `RewriteRule ^/abc(.*) /def$1 [PT]` # 将会交给/def规则处理
       > Alias /def /ghi
 > 14) S=num(skip next rule(s)) 跳过num条规则
 > 15) E=VAR:VAL(set environment variable) 设置环境变量
