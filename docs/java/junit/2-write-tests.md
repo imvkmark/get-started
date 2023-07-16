@@ -2,7 +2,7 @@
 
 下面的示例简要介绍了在 JUnit Jupiter 中编写测试的最低要求。本章的后续部分将提供有关所有可用功能的更多详细信息
 
-<<< @/java/src/test/java/junit/FirstJupiterTest.java
+<<< @/java/junit/src/FirstJupiterTest.java
 
 ## Annotations
 
@@ -149,7 +149,7 @@ JUnit4 的`@AfterClass`。
 
 下面的示例演示如何声明将自动重复10次的名为 `repeat()` 的测试
 
-<<< @/java/src/test/java/junit/RepeatTestTest.java#simple
+<<< @/java/junit/src/RepeatTestTest.java#simple
 
 除了指定重复次数外，还可以通过`@RepeatedTest`注解的 `name`
 属性为每次重复配置一个自定义显示名称。此外，显示名称可以是由静态文本和动态占位符的组合组成的模式。当前支持以下占位符:
@@ -173,7 +173,7 @@ repetition 2 of 10
 方法的显示名称，可以定义自己的自定义模式或使用预定义的 `RepeatedTest.LONG_DISPLAY_NAME`
 模式。
 
-<<< @/java/src/test/java/junit/RepeatTestTest.java#long
+<<< @/java/junit/src/RepeatTestTest.java#long
 
 相当于`"{displayName} :: repetition {currentRepetition} of {totalRepetitions}"`
 ，这会导致重复测试的显示名称变成这样：
@@ -185,14 +185,14 @@ longDisplayName() :: repetition 1 of 1
 
 **自定义名称**
 
-<<< @/java/src/test/java/junit/RepeatTestTest.java#custom
+<<< @/java/junit/src/RepeatTestTest.java#custom
 
 **repetition 注入**
 
 为了以编程方式获取有关当前重复和总重复次数的信息，开发人员可以选择将 `RepetitionInfo`
 的实例注入 `@RepeatedTest` ， `@BeforeEach` 或 `@AfterEach` 方法
 
-<<< @/java/src/test/java/junit/RepeatTestTest.java#repetition
+<<< @/java/junit/src/RepeatTestTest.java#repetition
 
 ## 参数化测试
 
@@ -201,7 +201,7 @@ longDisplayName() :: repetition 1 of 1
 的注解。此外，必须至少声明一个将为每个调用提供参数的源，然后在测试方法中使用这些参数。
 下面的示例演示了使用 `@ValueSource` 注解将 `String` 数组指定为参数源的参数化测试。
 
-<<< @/java/src/test/java/junit/ParameterizedTestTest.java#simple
+<<< @/java/junit/src/ParameterizedTestTest.java#simple
 
 在执行上述参数化测试方法时，每次调用都会单独上报。以下是 gradle test 的输出, 未使用官方文档的 Console Launcher
 
