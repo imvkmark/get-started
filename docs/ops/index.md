@@ -8,6 +8,7 @@
 - [「转」Mac-zsh 安装和使用](./mac/zsh.md)
 - [Mac上制作Ubuntu USB启动盘](./mac/usb-boot-disk.md)
 - [在 macOS 上升级 Bash](./mac/upgrade-bash.md)
+- [Mac OS 的环境变量设置](./mac/env-vars.md)
 
 ### Linux
 

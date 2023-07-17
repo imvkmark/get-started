@@ -1,10 +1,4 @@
----
-title: " 「转+」 shell 脚本中 echo 显示内容带颜色"
-date: 2019-05-05 18:35:51
-toc: true
-categories:
-  - [ "Ops","Linux" ]
----
+# 「转+」shell 脚本中 echo 显示内容带颜色
 
 原文地址 : [shell脚本中echo显示内容带颜色](https://www.cnblogs.com/lr-ting/archive/2013/02/28/2936792.html)
 
