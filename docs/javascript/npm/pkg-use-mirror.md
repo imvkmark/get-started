@@ -35,7 +35,7 @@ $ npm --registry https://registry.npmmirror.com info express
 
 ### 永久更换访问源
 
-**使用 **`**nrm**`** 来更换访问源**
+**使用 `nrm` 来更换访问源**
 
 nrm 是 NPM Registry Manager 的缩写, 通过他可以快速切换源,
 文档地址 :  https://www.npmjs.com/package/nrm
@@ -58,7 +58,7 @@ $ nrm ls
 $ nrm use taobao
 ```
 
-**[linux]在配置文件 **`**~/.npmrc**`** 文件写入源地址**
+**[linux]在配置文件 `~/.npmrc` 文件写入源地址**
 
 ```shell
 # 打开配置文件
@@ -150,53 +150,6 @@ yarn save 软件名 --registry https://npmmirror.com/
 yarn config set registry https://npmmirror.com/
 ```
 
-### 使用第三方软件快速修改、切换 yarn 镜像源
-
-YARN registry manager:
-
-https://github.com/i5ting/yrm
-
-`yrm` 不仅可以快速切换镜像源，还可以测试自己网络访问不同源的速度
-
-**安装 yrm**
-
-```
-npm install -g yrm
-```
-
-**列出当前可用的所有镜像源**
-
-```
-$ yrm ls
-    npm -----  https://registry.npmjs.org/
-    cnpm ----  http://r.cnpmjs.org/
-    taobao --  https://registry.npm.taobao.org/
-    nj ------  https://registry.nodejitsu.com/
-    rednpm -- http://registry.mirror.cqupt.edu.cn
-    skimdb -- https://skimdb.npmjs.com/registry
-    yarn ----  https://registry.yarnpkg.com
-```
-
-**使用淘宝镜像源**
-
-```
-yrm use taobao
-```
-
-**测试访问速度**
-
-```
-$ yrm test
-  npm ------ 1174ms
-  yarn ----- 1787ms
-  tencent -- 1284ms
-  cnpm ----- 2970ms
-* taobao --- 133ms
-  npmMirror - 886ms
-```
-
-更多用法查看 [yrm](https://github.com/i5ting/yrm) GitHub
-
 ## Nodejs Release 镜像使用帮助
 
 Nodejs Release 为各平台提供预编译的 nodejs 和 npm 等二进制文件，是  https://nodejs.org/dist/
@@ -206,7 +159,7 @@ Nodejs Release 为各平台提供预编译的 nodejs 和 npm 等二进制文件�
 
 ```
 # 设定环境变量
-export NODE_MIRROR=http://npmmirror.com/mirrors/node
+export NODE_MIRROR=https://npmmirror.com/mirrors/node
 ```
 
 参考网站:
@@ -215,6 +168,10 @@ export NODE_MIRROR=http://npmmirror.com/mirrors/node
 - 给电脑换源 npm 国内镜像 cnpm
 
 ## 更新说明
+
+**2023年07月18日**
+
+- 移除 yrm, yrm 存在过时数据且不再更新, 使用 nrm 替代
 
 **2021 年 10 月 27 日**
 
