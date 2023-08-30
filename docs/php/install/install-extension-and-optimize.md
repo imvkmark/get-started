@@ -64,15 +64,20 @@ ERROR: `/private/tmp/pear/temp/redis/configure --with-php-config=/usr/local/opt/
 
 mac 上 mcrypt 依托于 libmcrypt, 所以在 mac 上需要提前安装
 
-```shell
+```
 $ brew install mcrypt
 ```
 
-安装 mcrypt 组件
+在安装的时候需要设置 mcrypt 的路径
 
-```
+```html
 $ pecl install mcrypt
+...
+libmcrypt prefix? [autodetect] : /opt/homebrew/Cellar/mcrypt/2.6.8
+...
 ```
+
+如果是 intel 的mac 路径应当填写 `/usr/local/Cellar/mcrypt/2.6.8` 这个路径
 
 ## 安装 Swoole
 
