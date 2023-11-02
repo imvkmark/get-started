@@ -1,5 +1,6 @@
 #!name=Code Ai
-#!desc=代码 Ai 地址
+#!desc=Code Ai Assist Url Rewrite
+#!system=ios
 
-[Rule]
-RULE-SET,https://raw.githubusercontent.com/imvkmark/get-started/master/_posts/ai.list,Code Ai,update-interval=86400
+[URL Rewrite]
+^https:\/\/raw\.githubusercontent\.com\/AGWA5783\/Profiles\/master\/Surge\/Ruleset\/Extra\/OpenAI\/OpenAI\.list https://raw.githubusercontent.com/imvkmark/get-started/master/_posts/ai.list 302
