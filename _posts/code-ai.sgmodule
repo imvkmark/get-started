@@ -4,3 +4,6 @@
 
 [URL Rewrite]
 ^https:\/\/raw\.githubusercontent\.com\/AGWA5783\/Profiles\/master\/Surge\/Ruleset\/Extra\/OpenAI\/OpenAI\.list https://raw.githubusercontent.com/imvkmark/get-started/master/_posts/ai.list 302
+
+[MITM]
+hostname = %APPEND% raw.githubusercontent.com
