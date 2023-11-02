@@ -1,0 +1,5 @@
+#!name=Code Ai
+#!desc=代码 Ai 地址
+
+[Rule]
+RULE-SET,https://raw.githubusercontent.com/imvkmark/get-started/master/_posts/ai.list,Code Ai,update-interval=86400
