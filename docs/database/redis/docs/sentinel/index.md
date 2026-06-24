@@ -17,3 +17,15 @@ head:
 ---
 # Sentinel
 
+- [SENTINEL ckquorum](/database/redis/docs/sentinel/sentinel_ckquorum.md)
+- [SENTINEL failover](/database/redis/docs/sentinel/sentinel_failover.md)
+- [SENTINEL flushconfig](/database/redis/docs/sentinel/sentinel_flushconfig.md)
+- [SENTINEL get-master-addr-by-name](/database/redis/docs/sentinel/sentinel_get_master_addr_by_name.md)
+- [SENTINEL master](/database/redis/docs/sentinel/sentinel_master.md)
+- [SENTINEL masters](/database/redis/docs/sentinel/sentinel_masters.md)
+- [SENTINEL MONITOR](/database/redis/docs/sentinel/sentinel_monitor.md)
+- [SENTINEL REMOVE](/database/redis/docs/sentinel/sentinel_remove.md)
+- [SENTINEL reset](/database/redis/docs/sentinel/sentinel_reset.md)
+- [SENTINEL sentinels](/database/redis/docs/sentinel/sentinel_sentinels.md)
+- [SENTINEL SET](/database/redis/docs/sentinel/sentinel_set.md)
+- [SENTINEL slaves](/database/redis/docs/sentinel/sentinel_slaves.md)

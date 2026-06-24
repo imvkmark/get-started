@@ -17,3 +17,8 @@ head:
 ---
 # Transaction
 
+- [DISCARD](/database/redis/docs/transaction/discard.md)
+- [EXEC](/database/redis/docs/transaction/exec.md)
+- [MULTI](/database/redis/docs/transaction/multi.md)
+- [UNWATCH](/database/redis/docs/transaction/unwatch.md)
+- [WATCH](/database/redis/docs/transaction/watch.md)

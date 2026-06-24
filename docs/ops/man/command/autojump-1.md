@@ -39,7 +39,7 @@ $ brew install autojump
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 ```
 
-如果使用 `zsh` , 可以使用插件的方式来激活 autojump, 详细查看 <cite doc-id="BuA2waWh8if2Nekq7M2cjhRNngh" file-type="wiki" title="Mac-zsh 安装和使用" type="doc"></cite>
+如果使用 `zsh` , 可以使用插件的方式来激活 autojump, 详细查看 [Mac-zsh 安装和使用](/ops/mac/omz.md)
 
 vim `~/.zshrc` , 找到 plugins , 按如下格式添加 autojump
 

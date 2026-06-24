@@ -20,7 +20,7 @@ head:
 ---
 # 配置 HTTPS
 
-::: info 📖<p>扩展阅读</p><ul><li><cite doc-id="A1zVwSnWwix1Q3kCSeTc65SMnEd" file-type="wiki" title="Nginx 配置 HTTPS 服务器" type="doc"></cite></li></ul>:::
+::: info 📖<p>扩展阅读</p><ul><li>[Nginx 配置 HTTPS 服务器](/ops/nginx/https-nginx-set-server.md)</li></ul>:::
 
 ## 重定向所有的站点到 https
 

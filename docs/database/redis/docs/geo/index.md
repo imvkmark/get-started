@@ -17,3 +17,9 @@ head:
 ---
 # Geo / 地理位置
 
+- [GEOADD key longitude latitude member [longitude latitude member …]](/database/redis/docs/geo/geoadd.md)
+- [GEODIST key member1 member2 [unit]](/database/redis/docs/geo/geodist.md)
+- [GEOHASH key member [member …]](/database/redis/docs/geo/geohash.md)
+- [GEOPOS key member [member …]](/database/redis/docs/geo/geopos.md)
+- [GEORADIUS key longitude latitude radius m|km|ft|mi [WITHCOORD] [WITHDIST] [WITHHASH] [ASC|DESC] [COUNT count]](/database/redis/docs/geo/georadius.md)
+- [GEORADIUSBYMEMBER key member radius m|km|ft|mi [WITHCOORD] [WITHDIST] [WITHHASH] [ASC|DESC] [COUNT count]](/database/redis/docs/geo/georadiusbymember.md)

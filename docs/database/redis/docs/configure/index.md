@@ -17,3 +17,7 @@ head:
 ---
 # 配置选项
 
+- [CONFIG GET parameter](/database/redis/docs/configure/config_get.md)
+- [CONFIG RESETSTAT](/database/redis/docs/configure/config_resetstat.md)
+- [CONFIG REWRITE](/database/redis/docs/configure/config_rewrite.md)
+- [CONFIG SET parameter value](/database/redis/docs/configure/config_set.md)

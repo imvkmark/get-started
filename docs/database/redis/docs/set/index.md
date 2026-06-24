@@ -17,3 +17,18 @@ head:
 ---
 # Set / 集合
 
+- [SADD key member [member …]](/database/redis/docs/set/sadd.md)
+- [SCARD key](/database/redis/docs/set/scard.md)
+- [SDIFF key [key …]](/database/redis/docs/set/sdiff.md)
+- [SDIFFSTORE destination key [key …]](/database/redis/docs/set/sdiffstore.md)
+- [SINTER key [key …]](/database/redis/docs/set/sinter.md)
+- [SINTERSTORE destination key [key …]](/database/redis/docs/set/sinterstore.md)
+- [SISMEMBER key member](/database/redis/docs/set/sismember.md)
+- [SMEMBERS key](/database/redis/docs/set/smembers.md)
+- [SMOVE source destination member](/database/redis/docs/set/smove.md)
+- [SPOP key](/database/redis/docs/set/spop.md)
+- [SRANDMEMBER key [count]](/database/redis/docs/set/srandmember.md)
+- [SREM key member [member …]](/database/redis/docs/set/srem.md)
+- [SSCAN key cursor [MATCH pattern] [COUNT count]](/database/redis/docs/set/sscan.md)
+- [SUNION key [key …]](/database/redis/docs/set/sunion.md)
+- [SUNIONSTORE destination key [key …]](/database/redis/docs/set/sunionstore.md)
