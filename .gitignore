@@ -1,0 +1,22 @@
+# idea
+#-------------------
+.idea
+
+# vitepress
+#-------------------
+docs/.vitepress/cache
+docs/.vitepress/dist
+node_modules
+
+# python
+#-------------------
+Pipfile.lock
+*.pyc
+
+
+# java
+#-------------------
+*.class!/wip/development/ide/copy.php
+
+# AI
+.omc
