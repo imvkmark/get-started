@@ -19,7 +19,7 @@ head:
 
 - [PSUBSCRIBE pattern [pattern …]](/database/redis/docs/pubsub/psubscribe.md)
 - [PUBLISH channel message](/database/redis/docs/pubsub/publish.md)
-- [PUBSUB &lt;subcommand&gt; [argument [argument …]]](/database/redis/docs/pubsub/pubsub.md)
+- [PUBSUB subcommand [argument [argument …]]](/database/redis/docs/pubsub/pubsub.md)
 - [PUNSUBSCRIBE [pattern [pattern …]]](/database/redis/docs/pubsub/punsubscribe.md)
 - [SUBSCRIBE channel [channel …]](/database/redis/docs/pubsub/subscribe.md)
 - [UNSUBSCRIBE [channel [channel …]]](/database/redis/docs/pubsub/unsubscribe.md)

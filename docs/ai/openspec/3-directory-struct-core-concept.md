@@ -1,6 +1,6 @@
 ---
 description: 'openspec/目录包含`specs/`（长期规范）和`changes/`（变更工作区）。每个变更包含四个核心Artifact：`proposal.md`（为什么做）、`spec.md`（做什么）、`design.md`（怎么做）、`tasks.md`（分几步做），分别管理账号领域的需求、场景、架构设计和任务分解。'
-lastUpdated: '2026-04-08 08:44:04'
+lastUpdated: '2026-06-22 00:53:16'
 head:
   - - meta
     - name: 'og:title'

@@ -1,6 +1,6 @@
 ---
 description: '该内容介绍VSCode相关插件和常见问题：推荐使用插件存储图片到阿里云，以及本地图片粘贴插件Paste Image。FAQ部分包括设置中文语言、使用code runner、解决yarn安装jshint后语法检测无法识别的问题，以及设置自动换行。'
-lastUpdated: '2026-03-14 10:04:11'
+lastUpdated: '2026-06-22 17:46:32'
 head:
   - - meta
     - name: 'og:title'

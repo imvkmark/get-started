@@ -1,6 +1,6 @@
 ---
 description: 'OpenSpec 旨在需求驱动开发，通过核心工作流（创建变更、生成规划文档、审查修改、按规范实现、归档）实现订单状态重构等场景。强调长期价值、与CLAUDE.md协同及团队建议，官方入口`/opsx:onboard`，社区工具`spec-gen`逆向冷启动。'
-lastUpdated: '2026-04-08 14:16:10'
+lastUpdated: '2026-06-22 00:52:16'
 head:
   - - meta
     - name: 'og:title'

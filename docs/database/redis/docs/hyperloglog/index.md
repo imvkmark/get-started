@@ -17,6 +17,3 @@ head:
 ---
 # Hyperloglog
 
-- [PFADD key element [element …]](/database/redis/docs/hyperloglog/pfadd.md)
-- [PFCOUNT key [key …]](/database/redis/docs/hyperloglog/pfcount.md)
-- [PFMERGE destkey sourcekey [sourcekey …]](/database/redis/docs/hyperloglog/pfmerge.md)

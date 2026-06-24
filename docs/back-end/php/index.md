@@ -29,6 +29,6 @@ head:
 
 ## 常用包
 
-[[译] dotenv - PHP 版本的 env 6fa1f4980a3347219d1dfdd73898fab2](/back-end/php/packages/vlucas-phpdotenv.md)
+<cite doc-id="XjoDwiODXiJx8JkQG7XcmglWnkQ" file-type="wiki" title="[译] dotenv - PHP 版本的 env 6fa1f4980a3347219d1dfdd73898fab2" type="doc"></cite>
 
 ## 扩展阅读

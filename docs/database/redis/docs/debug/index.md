@@ -17,10 +17,3 @@ head:
 ---
 # Debug / 调试
 
-- [DEBUG OBJECT key](/database/redis/docs/debug/debug_object.md)
-- [DEBUG SEGFAULT](/database/redis/docs/debug/debug_segfault.md)
-- [ECHO message](/database/redis/docs/debug/echo.md)
-- [MONITOR](/database/redis/docs/debug/monitor.md)
-- [OBJECT subcommand [arguments [arguments]]](/database/redis/docs/debug/object.md)
-- [PING](/database/redis/docs/debug/ping.md)
-- [SLOWLOG subcommand [argument]](/database/redis/docs/debug/slowlog.md)

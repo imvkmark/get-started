@@ -1,6 +1,6 @@
 ---
 description: 'OpenSpec CLI提供四把工具：`list`（项目速览）、`show`（详情查看）、`validate`（格式检查，非零退出码用于CI）、`view`（交互仪表盘）。可通过`openspec config profile`切换工作流配置（core/custom），修改后重新生成工具配置并重启Claude Code。支持自定义Schema（三种创建方式：交互式、非交互式、Fork修改），通过`schema.yaml`定义文件结构，配合`config.yaml`的rules和context控制AI生成行为。'
-lastUpdated: '2026-04-08 10:13:53'
+lastUpdated: '2026-06-22 00:53:56'
 head:
   - - meta
     - name: 'og:title'

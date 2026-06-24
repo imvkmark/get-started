@@ -1,6 +1,6 @@
 ---
 description: '安装与初始化支持Claude Code和Cursor，通过`openspec init`过程生成`config.yaml`配置文件，交互完成后需重启Claude Code以启用扩展工作流，支持20多种工具集成。'
-lastUpdated: '2026-04-08 08:30:13'
+lastUpdated: '2026-06-22 00:52:51'
 head:
   - - meta
     - name: 'og:title'

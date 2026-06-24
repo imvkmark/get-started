@@ -1,6 +1,6 @@
 ---
 description: '本文阐述了在写代码前先撰写规格说明（Spec）的核心理念，从Vibe Coding现象出发，强调“先达成共识再构建”的原则，介绍了四个设计原则，并指出先写Spec与Claude Code的天然契合性，也说明了何时不需要这样做。'
-lastUpdated: '2026-04-08 14:19:31'
+lastUpdated: '2026-06-22 00:52:55'
 head:
   - - meta
     - name: 'og:title'

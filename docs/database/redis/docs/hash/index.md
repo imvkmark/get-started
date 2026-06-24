@@ -17,18 +17,3 @@ head:
 ---
 # Hash
 
-- [HDEL](/database/redis/docs/hash/hdel.md)
-- [HEXISTS hash field](/database/redis/docs/hash/hexists.md)
-- [HGET hash field](/database/redis/docs/hash/hget.md)
-- [HGETALL](/database/redis/docs/hash/hgetall.md)
-- [HINCRBY](/database/redis/docs/hash/hincrby.md)
-- [HINCRBYFLOAT](/database/redis/docs/hash/hincrbyfloat.md)
-- [HKEYS](/database/redis/docs/hash/hkeys.md)
-- [HLEN](/database/redis/docs/hash/hlen.md)
-- [HMGET](/database/redis/docs/hash/hmget.md)
-- [HMSET](/database/redis/docs/hash/hmset.md)
-- [HSCAN](/database/redis/docs/hash/hscan.md)
-- [HSET hash field value](/database/redis/docs/hash/hset.md)
-- [HSETNX hash field value](/database/redis/docs/hash/hsetnx.md)
-- [HSTRLEN](/database/redis/docs/hash/hstrlen.md)
-- [HVALS](/database/redis/docs/hash/hvals.md)

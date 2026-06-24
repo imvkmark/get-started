@@ -1,6 +1,6 @@
 ---
 description: 'JetBrains 插件与FAQ：包括代码地图（CodeGlancePro）、大小写切换（CamelCase）、字串处理（String Manipulation）、忽略文件（.ignore）及Dash辅助工具。常见问题：Mac副屏全屏模式下代码提示对话框闪屏、Inlay Hints侧边切换提交人信息、隐藏缓存文件提升性能、快捷键操作等。'
-lastUpdated: '2026-03-14 09:30:00'
+lastUpdated: '2026-06-22 17:45:27'
 head:
   - - meta
     - name: 'og:title'

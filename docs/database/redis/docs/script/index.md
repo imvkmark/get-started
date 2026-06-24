@@ -17,9 +17,3 @@ head:
 ---
 # Script / Lua 脚本
 
-- [EVAL script numkeys key [key …] arg [arg …]](/database/redis/docs/script/eval.md)
-- [EVALSHA sha1 numkeys key [key …] arg [arg …]](/database/redis/docs/script/evalsha.md)
-- [SCRIPT EXISTS sha1 [sha1 …]](/database/redis/docs/script/script_exists.md)
-- [SCRIPT FLUSH](/database/redis/docs/script/script_flush.md)
-- [SCRIPT KILL](/database/redis/docs/script/script_kill.md)
-- [SCRIPT LOAD script](/database/redis/docs/script/script_load.md)

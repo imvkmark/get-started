@@ -1,6 +1,6 @@
 ---
 description: '本文介绍了npm包管理器的快速入门指南，涵盖npm的安装与更新、package.json文件创建与依赖指定、语义化版本规则、本地与全局包的安装、更新与卸载、常用命令（如npm run、npm install、npm uninstall等），以及国内镜像配置（如使用nrm、cnpm、aliyun私有仓库）和常见问题解答。'
-lastUpdated: '2026-06-21 20:26:25'
+lastUpdated: '2026-06-24 14:22:27'
 head:
   - - meta
     - name: 'og:title'
@@ -629,12 +629,12 @@ $ yarn global add nrm
 ```Plain Text
 # list all
 $ nrm ls
-* npm ---------- <https://registry.npmjs.org/>
-  yarn --------- <https://registry.yarnpkg.com/>
-  tencent ------ <https://mirrors.cloud.tencent.com/npm/>
-  cnpm --------- <https://r.cnpmjs.org/>
-  taobao ------- <https://registry.npmmirror.com/>
-  npmMirror ---- <https://skimdb.npmjs.com/registry/>
+* npm ---------- https://registry.npmjs.org/
+  yarn --------- https://registry.yarnpkg.com/
+  tencent ------ https://mirrors.cloud.tencent.com/npm/
+  cnpm --------- https://r.cnpmjs.org/
+  taobao ------- https://registry.npmmirror.com/
+  npmMirror ---- https://skimdb.npmjs.com/registry/
 # 替换使用
 $ nrm use taobao
 ```
@@ -645,7 +645,7 @@ $ nrm use taobao
 
 ```Plain Text
 # 在使用时候临时指定
-$ npm --registry <https://registry.npmmirror.com> info express
+$ npm --registry https://registry.npmmirror.com info express
 ```
 
 ### 使用 `cnpm` 来替代 `npm`
@@ -705,7 +705,7 @@ Aliyun 制品仓库
 
 ```Bash
 # 添加 code
-$ nrm add codeup <https://packages.aliyun.com/******/npm/npm-registry/>
+$ nrm add codeup https://packages.aliyun.com/******/npm/npm-registry/
 
 # 使用 codeup
 $ nrm use codeup

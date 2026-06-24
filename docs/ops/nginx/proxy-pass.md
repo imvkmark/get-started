@@ -20,7 +20,7 @@ head:
 ---
 # proxy_pass url 反向代理
 
-::: info 📖<p>扩展阅读</p><ul><li>[Node.js 反向代理](/ops/nginx/proxy-pass-node.md)</li></ul>:::
+::: info 📖<p>扩展阅读</p><ul><li><cite doc-id="Gnf1w0OX1iP43PkMbQrcT7TWn7e" file-type="wiki" title="Node.js 反向代理" type="doc"></cite></li></ul>:::
 
 说到 Nginx 就不得不说 Nginx 的反向代理是多么的好用，一个指令 `proxy_pass` 搞定反向代理，对于接口代理、负载均衡很是实用，但 `proxy_pass` 指令后面的参数很有讲究。网上有很多什么绝对路径、相对路径的说法，其实在实际的应用中就分为两种情况：
 

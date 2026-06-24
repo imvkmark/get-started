@@ -1,6 +1,6 @@
 ---
 description: '使用 nvm 可灵活管理多版本 Node.js 与项目依赖，支持脚本或 Homebrew 安装，在 zsh 中启用后通过 install、use、ls 等命令切换版本，还提供卸载、缓存配置及 Jenkins 集成指南。'
-lastUpdated: '2026-06-22 02:47:34'
+lastUpdated: '2026-06-24 14:29:44'
 head:
   - - meta
     - name: 'og:title'

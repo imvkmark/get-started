@@ -17,12 +17,3 @@ head:
 ---
 # Topic / 主题
 
-- [持久化（persistence）](/database/redis/docs/topic/persistence.md)
-- [发布与订阅（pub·sub）](/database/redis/docs/topic/pubsub.md)
-- [复制（Replication）](/database/redis/docs/topic/replication.md)
-- [集群教程](/database/redis/docs/topic/cluster-tutorial.md)
-- [键空间通知（keyspace notification）](/database/redis/docs/topic/notification.md)
-- [事务（transaction）](/database/redis/docs/topic/transaction.md)
-- [通信协议（protocol）](/database/redis/docs/topic/protocol.md)
-- [Redis 集群规范](/database/redis/docs/topic/cluster-spec.md)
-- [sentinel](/database/redis/docs/topic/sentinel.md)

@@ -1,6 +1,6 @@
 ---
 description: '在JetBrains IDE中，可通过“设置”中的“Copyright”功能添加和管理版权信息。先定义版权模板，再设置应用范围（Scope），并将其与Scope关联。支持更新版权及为不同编程语言定制版权格式，确保代码文件自动包含版权声明。'
-lastUpdated: '2026-03-14 09:50:34'
+lastUpdated: '2026-06-22 17:46:00'
 head:
   - - meta
     - name: 'og:title'

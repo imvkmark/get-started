@@ -1,6 +1,6 @@
 ---
 description: 'OPSX 是一套AI辅助开发工作流，通过提案（propose）、规范编写、任务分解、代码生成（apply）、质量验证（verify）和归档（archive）等命令，结构化地管理和实现功能变更，确保代码与规范同步、质量可预测。'
-lastUpdated: '2026-04-08 10:04:19'
+lastUpdated: '2026-06-22 00:53:32'
 head:
   - - meta
     - name: 'og:title'

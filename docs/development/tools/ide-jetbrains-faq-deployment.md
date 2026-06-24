@@ -1,6 +1,6 @@
 ---
 description: '在JetBrains IDE中，通过“工具”“部署”“配置”设置FTP/SFTP连接，添加服务器并指定本地与远程路径映射。启用“自动上传”后，可在侧边栏（如项目视图）右键选择“部署”“浏览远程主机”查看远程文件，便于同步管理。'
-lastUpdated: '2026-03-14 09:51:11'
+lastUpdated: '2026-06-22 17:46:12'
 head:
   - - meta
     - name: 'og:title'

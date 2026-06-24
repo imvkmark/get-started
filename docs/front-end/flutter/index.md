@@ -24,7 +24,7 @@ head:
 
 - https://flutter.cn/
 - [Flutter 实战 . 第二版](https://book.flutterchina.club/)
-- [Flutter 安装和环境设置](/front-end/flutter/refs/install.md)
+- <cite doc-id="L2GBwZnBgiaHNJkOHR2c81Nynif" file-type="wiki" title="Flutter 安装和环境设置" type="doc"></cite>
 
 ## 编辑器
 

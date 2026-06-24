@@ -29,7 +29,7 @@ Homebrew 是 macOS 的包管理工具, 可以安装多款 unix 软件, 可以根
 
 <bookmark name="Homebrew" href="https://brew.sh/"></bookmark>
 
-::: info 🔗<p>更多 Homebrew 使用查看 : [Mac 下安装和使用 Homebrew](/ops/mac/homebrew.md)</p><p>对于不同芯片的 homebrew 目录有所不同, 需要注意</p><ul><li>M 系列芯片, 所有的目录基于 <code>/opt/homebrew </code>, 本文基于此定义</li><li>intel 芯片, 目录基于 <code>/usr/local</code></li></ul>:::
+::: info 🔗<p>更多 Homebrew 使用查看 : <cite doc-id="R16nwIaV7iph3BkSk0ScHicPnYd" file-type="wiki" title="Mac 下安装和使用 Homebrew" type="doc"></cite></p><p>对于不同芯片的 homebrew 目录有所不同, 需要注意</p><ul><li>M 系列芯片, 所有的目录基于 <code>/opt/homebrew </code>, 本文基于此定义</li><li>intel 芯片, 目录基于 <code>/usr/local</code></li></ul>:::
 
 如果你尚未安装, macOS 将会提醒你安装 Xcode 命令行工具, 安装完成后根据提示配置命令行目录
 
