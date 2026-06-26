@@ -1,6 +1,6 @@
 ---
 description: 'RockyLinux设置中文语言支持需先重新加载locale配置，再通过设置环境变量临时验证。持久化可编辑.bash_profile（登录shell）或.bashrc（非登录shell），最后生效配置。'
-lastUpdated: '2026-06-22 09:01:39'
+lastUpdated: '2026-06-26 11:25:09'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: 'RockyLinux设置中文语言支持需先重新加载locale配置，再通过设置环境变量临时验证。持久化可编辑.bash_profile（登录shell）或.bashrc（非登录shell），最后生效配置。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//ops/linux/rhel-install-zh-cn-langpack.html'
+      content: 'https://www.wulicode.com/ops/linux/rhel-install-zh-cn-langpack.html'
 ---
 # RockyLinux 设置中文语言支持
 
@@ -30,12 +30,14 @@ Date:   Wed Nov 5 08:45:43 2025 +0800
 
 可能不同的发行方对系统做了一些更新导致会缺失中文语言包, 为了解决类似问题, 我们需要检查并安装语言包同时并设置 `$LANG` 和 `$LC_ALL`
 
-::: info 📖<p>扩展阅读</p><ul><li>[localectl(1) - 控制系统的本地化与键盘布局](/ops/man/command/localectl-1.md)</li></ul>:::
+::: info 📖
+<p>扩展阅读</p><ul><li>[localectl(1) - 控制系统的本地化与键盘布局]([object Object].md)</li></ul>
+:::
 
 查看是否存在中文语言
 
-```Bash
-[root@duoli]# localectl list-locales |grep zh
+```Plain Text
+[root@rocky web]# localectl list-locales |grep zh
 zh_CN
 zh_CN.gb18030
 zh_CN.gbk
@@ -44,8 +46,8 @@ zh_CN.utf8
 
 如果没有, 则安装语言包
 
-```Bash
-[root@duoli ~]# dnf install -y langpacks-zh_CN glibc-common
+```Shell
+dnf install -y langpacks-zh_CN glibc-common
 ```
 
 - `langpacks-zh_CN`：简体中文语言包核心组件
@@ -53,14 +55,14 @@ zh_CN.utf8
 
 通过 `localectl` 工具设置当前的语言包
 
-```Bash
-[root@duoli ~]# localectl set-locale LANG=zh_CN.UTF-8
+```Shell
+localectl set-locale LANG=zh_CN.UTF-8
 ```
 
 重新登录后，执行以下命令确认：
 
 ```Bash
-[root@duoli ~]$ echo $LANG
+echo $LANG
 ```
 
 若输出 `zh_CN.UTF-8` 则表示设置成功
@@ -71,7 +73,7 @@ zh_CN.utf8
 
 执行命令查看系统语言配置，确认 `localectl` 已正确修改系统级设置：
 
-```Bash
+```Plain Text
 localectl status
 ```
 

@@ -1,6 +1,6 @@
 ---
 description: '本文档为集群配置的命令参考，涵盖集群能力相关命令的使用说明及版权声明，旨在帮助用户理解并执行集群管理操作。'
-lastUpdated: '2026-06-22 01:00:50'
+lastUpdated: '2026-06-24 19:01:55'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: '本文档为集群配置的命令参考，涵盖集群能力相关命令的使用说明及版权声明，旨在帮助用户理解并执行集群管理操作。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/redis/docs/index.html'
+      content: 'https://www.wulicode.com/database/redis/docs/index.html'
 ---
 # 文档
 
@@ -21,58 +21,55 @@ head:
 
 ### 关于
 
-<cite doc-id="A4CqwMAr1iXV9ykOW94cNPqQn2f" file-type="wiki" title="关于" type="doc"></cite>
-
-[Topic / 主题](/database/redis/docs/topic/index.md)
+[Topic / 主题]([object Object].md)
 
 ### 配置 / 集群
 
-[配置选项](/database/redis/docs/configure/index.md)
+[配置选项]([object Object].md)
 
-[客户端和服务器](/database/redis/docs/client_and_server/index.md)
+[客户端和服务器]([object Object].md)
 
-[集群](/database/redis/docs/cluster/index.md)
+[集群]([object Object].md)
 
-[数据库](/database/redis/docs/database/index.md)
+[数据库]([object Object].md)
 
-[Debug / 调试](/database/redis/docs/debug/index.md)
+[Debug / 调试]([object Object].md)
 
-[Expire / 自动过期](/database/redis/docs/expire/index.md)
+[Expire / 自动过期]([object Object].md)
 
 ### 能力
 
-[String / 字符串](/database/redis/docs/string/index.md)
+[String / 字符串]([object Object].md)
 
-[Bitmap / 位图](/database/redis/docs/bitmap/index.md)
+[Bitmap / 位图]([object Object].md)
 
-[Geo / 地理位置](/database/redis/docs/geo/index.md)
+[Geo / 地理位置]([object Object].md)
 
-[Hash](/database/redis/docs/hash/index.md)
+[Hash]([object Object].md)
 
-[Hyperloglog](/database/redis/docs/hyperloglog/index.md)
+[Hyperloglog]([object Object].md)
 
-[Internal / 内部命令](/database/redis/docs/internal/index.md)
+[Internal / 内部命令]([object Object].md)
 
-[List / 列表](/database/redis/docs/list/index.md)
+[List / 列表]([object Object].md)
 
-[Persistence / 持久化](/database/redis/docs/persistence/index.md)
+[Persistence / 持久化]([object Object].md)
 
-[Pubsub / 发布与订阅](/database/redis/docs/pubsub/index.md)
+[Pubsub / 发布与订阅]([object Object].md)
 
-[Replication / 复制](/database/redis/docs/replication/index.md)
+[Replication / 复制]([object Object].md)
 
-[Script / Lua 脚本](/database/redis/docs/script/index.md)
+[Script / Lua 脚本]([object Object].md)
 
-[Sentinel](/database/redis/docs/sentinel/index.md)
+[Sentinel]([object Object].md)
 
-[Set / 集合](/database/redis/docs/set/index.md)
+[Set / 集合]([object Object].md)
 
-[Sorted Set / 有序集合](/database/redis/docs/sorted_set/index.md)
+[Sorted Set / 有序集合]([object Object].md)
 
-[Transaction](/database/redis/docs/transaction/index.md)
+[Transaction]([object Object].md)
 
-> 本文档是 Redis 命令参考手册的中文翻译版，  
-> 可以在 [RedisDoc.com](http://www.redisdoc.com) 在线阅读本文档。
+> 本文档是 Redis 命令参考手册的中文翻译版，
 
 ## 版权声明
 
@@ -81,6 +78,7 @@ head:
 ---
 
 ::: info 📆
+
 更新记录
 2019 年 2 月 8 日（Redis 3+）
 - 更换了新皮肤
@@ -124,4 +122,5 @@ head:
 - 完成 keys 、 string 、 list 、 set 和 sorted set 六个部分的翻译。
 2011 年 4 月(Redis 2.2)
 - 开始进行 Redis 命令参考的翻译工作。
+
 :::
