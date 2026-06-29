@@ -13,7 +13,7 @@ head:
       content: '使用PhpStorm开发Laravel应用时，安装Laravel IDE助手和Laravel插件可提升效率：IDE助手为类、Facades等提供代码补全，插件提供导航、模板、路由支持等。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/primer/phpstorm-setting-for-laravel.html'
+      content: 'https://www.wulicode.com/back-end/php/primer/phpstorm-setting-for-laravel.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/703f017997ccd549e9a024075370ae2f.png'
@@ -21,7 +21,9 @@ head:
 # ⚠️ 使用 PhpStorm 开发 Laravel 应用
 
 ::: warning ⚠️
+
 因为 Laravel 扩展已经不被维护, 此文章已过时
+
 :::
 
 很多PHP程序员使用 [laravel](http://laravel.com/) 创建他们的应用程序。[laravel](http://laravel.com/) 是一个免费开源的PHP web应用程序框架。它基于多个Symfony 组件，提供了一个开发框架，包括authentication, routing, sessions, caching 等模块.

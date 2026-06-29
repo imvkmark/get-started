@@ -18,7 +18,7 @@ head:
 # ⚠️ 使用 satis 搭建私有包平台
 
 ::: warning ⚠️
-<p>此文档的解决方案并非最优解, 替代产品参考 : [使用 packeton 来管理私有包]([object Object].md)</p>
+<p>此文档的解决方案并非最优解, 替代产品参考 : [使用 packeton 来管理私有包](/back-end/php/composer/packeton.md)</p>
 :::
 
 ## 搭建本地 packagist 平台
