@@ -13,7 +13,7 @@ head:
       content: 'Calendar扩展用于处理日历和事件，支持安装与配置，提供多种函数操作日期、事件及日历，便于集成到应用中。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/calendar/calendar.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/calendar/calendar.html'
 ---
 # 日历和事件相关扩展 - Calendar
 

@@ -13,7 +13,7 @@ head:
       content: 'SPL是PHP标准库，用于解决典型问题的接口与类的集合，从PHP 5.0起可用，5.3.0后成为内核组件。它提供标准数据结构，如双联列表（SplDoublyLinkedList、SplStack、SplQueue）和堆（SplHeap、SplMaxHeap、SplMinHeap、SplPriorityQueue）等，支持高效操作。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/other/spl-standard.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/other/spl-standard.html'
 ---
 # SPL (PHP标准库)
 

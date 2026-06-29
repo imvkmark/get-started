@@ -13,7 +13,7 @@ head:
       content: 'lzf是一种高效的压缩与归档扩展，基于LZF算法，支持快速数据压缩和解压。安装可通过PECL或源码编译，配置简单，提供lzf_compress、lzf_decompress等函数，适用于实时数据压缩场景。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/compression/lzf.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/compression/lzf.html'
 ---
 # 压缩与归档扩展 - lzf
 

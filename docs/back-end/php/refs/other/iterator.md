@@ -13,7 +13,7 @@ head:
       content: 'ArrayIterator是PHP SPL迭代器，允许在遍历数组或对象时修改键/值。它实现ArrayAccess、SeekableIterator、Countable和Serializable接口，提供append、asort、count、current等方法。需通过ArrayObject创建实例以实现多次遍历。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/other/iterator.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/other/iterator.html'
 ---
 # SPL - Iterators(迭代器)
 

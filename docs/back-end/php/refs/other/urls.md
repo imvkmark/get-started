@@ -13,7 +13,7 @@ head:
       content: 'URLs扩展的安装步骤、配置方法、常量定义及可用函数说明。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/other/urls.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/other/urls.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/2895b6bcc24dec54547415ad6b81fcac.png'

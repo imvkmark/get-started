@@ -13,7 +13,7 @@ head:
       content: 'Exif是一种用于读取数码相机拍摄照片元数据的技术，包括拍摄参数、设备信息等。使用时需安装相应库或工具，配置环境后调用函数即可解析图像文件中的Exif数据。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/image/exif.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/image/exif.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/cf3ea81b0128d97768b74c670079fad2.png'

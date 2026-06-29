@@ -13,7 +13,7 @@ head:
       content: 'zlib是一个用于数据压缩与归档的扩展库，本文详述其安装步骤、配置方法、支持的资源类型以及核心函数的使用方式，帮助开发者高效处理压缩任务。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/compression/zlib.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/compression/zlib.html'
 ---
 # 压缩与归档扩展 - zlib
 

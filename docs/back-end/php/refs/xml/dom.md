@@ -13,7 +13,7 @@ head:
       content: '该内容介绍了XML操作中的DOM模块，涵盖了安装、常量定义以及一系列核心类（如DOMDocument、DOMElement、DOMNode等）和相关的DOM函数，用于解析、创建和操作XML文档。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/xml/dom.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/xml/dom.html'
 ---
 # XML 操作 - Dom
 

@@ -1,10 +1,10 @@
 ---
 description: ''
-lastUpdated: '2025-12-14 15:46:00'
-head: 
+lastUpdated: '2026-06-29 23:36:25'
+head:
   - - meta
     - name: 'og:title'
-      content: '数学扩展'
+      content: '数学运算'
   - - meta
     - name: 'og:type'
       content: 'article'
@@ -13,13 +13,7 @@ head:
       content: ''
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/php/refs/math/index.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/math/index.html'
 ---
-# 数学扩展
-
-
-
-[数学扩展 - BCMath 任意精度数学函数](bcmath.md)
-
-[数学扩展 - Math 数学函数](math.md)
+# 数学运算
 

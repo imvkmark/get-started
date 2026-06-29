@@ -13,7 +13,7 @@ head:
       content: '与变量和类型相关的扩展主要包括数组、常量与函数。数组用于存储多个相同类型的元素；常量定义不可变的值；函数封装可复用的操作。这些扩展增强了数据组织、代码复用和类型安全性。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/vartype/array.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/vartype/array.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/1dbe47bf2a1eba94961fa002903994dd.png'

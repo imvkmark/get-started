@@ -13,7 +13,7 @@ head:
       content: 'POSIX正则表达式函数包括匹配（ereg）、替换（ereg_replace）、不区分大小写的匹配（eregi）和替换（eregi_replace），以及分割（split）。建议优先使用效率更高的Perl正则表达式（preg系列）作为替代。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/text/posix.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/text/posix.html'
 ---
 # 文本处理 - POSIX Regex
 

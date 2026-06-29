@@ -13,7 +13,7 @@ head:
       content: '本文档涵盖字符串(String)的安装、配置及常用函数，介绍其基本操作与应用方法。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/text/string.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/text/string.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/3f170ab39750948bf833875a1d94c6e3.png'

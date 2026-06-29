@@ -13,7 +13,7 @@ head:
       content: 'Phar扩展用于创建和处理PHP归档文件，支持压缩与打包。需求包括启用phar扩展；安装通常随PHP内置或通过编译配置；配置涉及phar.readonly等选项。主要函数有Phar::createDefaultStub等，关键类包括Phar、PharData和PharFileInfo，分别用于操作归档、数据归档和文件信息。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/compression/phar.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/compression/phar.html'
 ---
 # 压缩与归档扩展 - phar
 

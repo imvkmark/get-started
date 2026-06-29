@@ -13,7 +13,7 @@ head:
       content: '本部分介绍了其他基本扩展中的Misc.杂项函数，包括安装方法、配置选项以及相关函数的详细说明，适用于各种杂项操作需求。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/other/misc.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/other/misc.html'
 ---
 # 其它基本扩展- Misc 杂项函数
 

@@ -13,7 +13,7 @@ head:
       content: 'Ctype是PHP的扩展，提供字符类型检查函数（如ctype_alpha、ctype_digit）。安装通常通过PHP配置启用或动态加载。函数用于验证字符串是否全为字母、数字等，适用于数据验证和安全过滤。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/vartype/ctype.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/vartype/ctype.html'
 ---
 # Ctype
 

@@ -13,7 +13,7 @@ head:
       content: 'bcompiler是PHP的PECL扩展，用于将PHP源代码编译为字节码，提高执行效率并隐藏源码。支持安装配置，提供定义常量和函数的字节码编译功能。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/basic/bcompiler.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/basic/bcompiler.html'
 ---
 # [Pecl] bcompiler - 字节码编译
 

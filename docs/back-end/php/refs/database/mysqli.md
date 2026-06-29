@@ -13,7 +13,7 @@ head:
       content: '本文介绍了PHP中与具体数据库系统相关的mysqli扩展，涵盖安装与配置、主要类（MySQLi、MySQLi_STMT、MySQLi_Result、MySQLi_Driver、MySQLi_Warning）及其属性方法、异常类mysqli_sql_exception，以及别名和过时函数。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/database/mysqli.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/database/mysqli.html'
 ---
 # 与具体数据库系统相关的扩展 - mysqli
 

@@ -13,7 +13,7 @@ head:
       content: 'PHP的mhash扩展提供哈希相关函数，包括获取可用哈希算法数量（mhash_count）、获取特定哈希的块大小（mhash_get_block_size）和名称（mhash_get_hash_name），以及使用Salted S2K算法生成密钥（mhash_keygen_s2k）。核心函数mhash可计算指定哈希算法的数据摘要，并可选择性地使用HMAC模式。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/crypto/mhash.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/crypto/mhash.html'
 ---
 # 加密扩展 - mhash
 

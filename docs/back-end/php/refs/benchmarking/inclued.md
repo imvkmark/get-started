@@ -13,7 +13,7 @@ head:
       content: 'inclued是PHP的PECL扩展，用于追踪文件包含（include/require）和类继承关系，可输出序列化的依赖信息。需在php.ini中启用inclued.enabled并设置inclued.dumpdir目录，函数inclued_get_data()返回请求的包含文件、继承及类定义信息。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/benchmarking/inclued.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/benchmarking/inclued.html'
 ---
 # [Pecl]inclued
 

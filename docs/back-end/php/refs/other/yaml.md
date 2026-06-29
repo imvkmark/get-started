@@ -13,7 +13,7 @@ head:
       content: 'YAML数据序列化扩展基于libYAML库，性能优于纯PHP方案。支持配置解码二进制、时间戳、输出规范、缩进与行宽，并提供yamlemitfile函数用于输出YAML到文件。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/other/yaml.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/other/yaml.html'
 ---
 # 其他基本扩展 - YAML Data Serialization
 

@@ -13,7 +13,7 @@ head:
       content: 'Apache服务器扩展的安装与配置涉及编译模块、编辑httpd.conf加载模块、调整配置指令。常用函数包括apache_get_modules()、apache_get_version()等，用于获取模块列表和版本信息，以及apache_note()管理请求备注。正确配置可提升性能与功能。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/server/apache.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/server/apache.html'
 ---
 # 服务器相关扩展 - Apache
 

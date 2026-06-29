@@ -1,10 +1,10 @@
 ---
 description: 'PHP扩展涵盖音频、认证、日历、命令行、压缩、加密、数据库、文件系统、国际化、图像、邮件、数学、MIME、进程控制、搜索引擎、服务器、会话、文本处理、变量类型、Web服务、Windows平台及XML操作等众多领域，全面增强PHP功能。'
-lastUpdated: '2026-06-17 17:57:10'
+lastUpdated: '2026-06-29 23:34:31'
 head:
   - - meta
     - name: 'og:title'
-      content: '参考'
+      content: '参考 / 函数大纲'
   - - meta
     - name: 'og:type'
       content: 'article'
@@ -13,9 +13,9 @@ head:
       content: 'PHP扩展涵盖音频、认证、日历、命令行、压缩、加密、数据库、文件系统、国际化、图像、邮件、数学、MIME、进程控制、搜索引擎、服务器、会话、文本处理、变量类型、Web服务、Windows平台及XML操作等众多领域，全面增强PHP功能。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/index.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/index.html'
 ---
-# 参考
+# 参考 / 函数大纲
 
 说明: 这里整理Php 函数的主要函数
 

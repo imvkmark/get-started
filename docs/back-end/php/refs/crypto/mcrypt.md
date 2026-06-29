@@ -13,7 +13,7 @@ head:
       content: 'Mcrypt是PHP的加密扩展库，支持TripleDES、Blowfish、TWOFISH等多种算法及CBC、OFB等模式。PHP 5.0.0起需libmcrypt，5.2需mcrypt.dll，5.3后无需。配置项mcrypt.algorithmsdir和mcrypt.modesdir设置算法/模式目录，默认/usr/local/lib/libmcrypt。常用函数mcrypt_module_open()返回加密描述符。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/crypto/mcrypt.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/crypto/mcrypt.html'
 ---
 # 加密扩展 - Mcrypt
 

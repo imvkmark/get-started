@@ -13,7 +13,7 @@ head:
       content: 'Crack是一个PECL扩展，用于通过字典检查保护密码免受基于字典的攻击。它提供安装、配置、定义常量及相关函数，帮助开发者抵御常见密码破解尝试。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/crypto/crack.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/crypto/crack.html'
 ---
 # [Pecl] Crack - 保护密码免受基于字典的攻击
 

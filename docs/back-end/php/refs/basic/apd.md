@@ -13,7 +13,7 @@ head:
       content: 'PeclAPD是一个高级PHP调试器，作为Zend的纠错扩展，尚未在Windows平台构建。它提供多种调试函数，包括apdbreakpoint、apdcallstack、apdclunk、apdcontinue、apdcroak、apddumpfunctiontable、apddumppersistentresources、apddumpregularresources、apdecho、apdgetactivesymbols、apdsetpproftrace、apdsetsession、apdsetsessiontrace、apdsetsessiontracesocket等。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/basic/apd.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/basic/apd.html'
 ---
 # [Pecl]APD
 

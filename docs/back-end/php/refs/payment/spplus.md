@@ -13,7 +13,7 @@ head:
       content: '此PECL扩展用于与法国松鼠储蓄银行接口交互，仅支持非Windows平台。它提供了计算HMAC和nthmac密钥的函数，以及生成交易URL的功能。主要函数包括calculhmac（8参数和2参数版本）和nthmac（2参数版本）。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/payment/spplus.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/payment/spplus.html'
 ---
 # [Pecl]SPPLUS
 

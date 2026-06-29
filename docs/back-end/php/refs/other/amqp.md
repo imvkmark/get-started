@@ -13,7 +13,7 @@ head:
       content: '高级消息队列协议（AMQP）是异步消息传递的应用层线路层协议，独立于API。最初为金融互操作设计，现成为通用消息队列架构工具。它不直接实现发布/订阅等MOM系统，而是通过简化AMQ实体让用户构建，其AMQP模型统一消息模式并支持内容路由。注意：此扩展不支持Windows（因librabbitmq未兼容）。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/other/amqp.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/other/amqp.html'
 ---
 # AMQP
 

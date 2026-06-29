@@ -13,7 +13,7 @@ head:
       content: 'Bzip2是一种高效的数据压缩算法，常用于文件归档和传输。安装时通过包管理器或编译源码配置PHP的--with-bz2选项。配置完成后，可使用bzopen、bzcompress、bzdecompress等函数进行压缩与解压操作，支持流式处理，节省存储空间。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/compression/bzip2.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/compression/bzip2.html'
 ---
 # 压缩与归档扩展 - Bzip2
 

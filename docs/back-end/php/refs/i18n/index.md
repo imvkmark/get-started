@@ -17,7 +17,3 @@ head:
 ---
 # 国际化与字符编码支持
 
-- [国际化与字符编码支持 - Enchant](/back-end/php/refs/i18n/enchant.md)
-- [国际化与字符编码支持 - Gettext ](/back-end/php/refs/i18n/gettext.md)
-- [国际化与字符编码支持 - iconv](/back-end/php/refs/i18n/iconv.md)
-- [[WIP]国际化与字符编码支持 - Intl](/back-end/php/refs/i18n/intl.md)

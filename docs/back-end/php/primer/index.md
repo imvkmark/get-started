@@ -1,6 +1,6 @@
 ---
 description: 'PHP学习资源合集，涵盖速查表、最新语法、PSR标准、设计模式、最佳实践、语言规范、推荐库、Laravel框架及Composer中文文档，助你快速掌握PHP开发。'
-lastUpdated: '2026-06-17 18:18:48'
+lastUpdated: '2026-06-29 23:44:28'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: 'PHP学习资源合集，涵盖速查表、最新语法、PSR标准、设计模式、最佳实践、语言规范、推荐库、Laravel框架及Composer中文文档，助你快速掌握PHP开发。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/primer/index.html'
+      content: 'https://www.wulicode.com/back-end/php/primer/index.html'
 ---
 # 入门
 
@@ -29,8 +29,8 @@ head:
 
 ## Awesome
 
-- Awesome PHP - 即时编译语言
-- Awesome Laravel - 一款优秀的艺术家框架
+- [Awesome PHP](/back-end/php/primer/awesome.md)
+- [Awesome Laravel](/back-end/php/laravel/primer/awesome.md)
 
 ## 包管理
 

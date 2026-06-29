@@ -13,7 +13,7 @@ head:
       content: 'PDO（PHP Data Objects）是PHP的数据库抽象层，支持多种数据库驱动。安装后通过配置文件启用。核心类包括PDO（连接与执行）、PDOStatement（预处理与结果处理）及PDO Drivers（驱动扩展），简化跨数据库操作。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/database/pdo.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/database/pdo.html'
 ---
 # 数据库抽象层 - PDO
 

@@ -13,7 +13,7 @@ head:
       content: 'Pecl htscanner扩展允许PHP为各目录单独配置类似htaccess的选项，尤其适用于FastCGI模式。默认配置文件名为“.htscanner”，可设置文档根目录、配置缓存时间和错误停止选项。下载地址：http://pecl.php.net/package/htscanner'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/basic/htscanner.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/basic/htscanner.html'
 ---
 # [Pecl] htscanner - htaccess 支持
 

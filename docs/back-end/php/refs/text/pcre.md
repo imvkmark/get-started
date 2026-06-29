@@ -13,7 +13,7 @@ head:
       content: 'PCRE（Perl兼容正则表达式）用于文本处理，需安装并配置环境，提供常量定义和函数接口，支持高效的字符串模式匹配与替换。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/text/pcre.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/text/pcre.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/2c199685a20457ab8d644ef453384604.png'

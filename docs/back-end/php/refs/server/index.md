@@ -1,10 +1,10 @@
 ---
 description: ''
-lastUpdated: '2025-12-14 15:44:00'
-head: 
+lastUpdated: '2026-06-29 23:36:58'
+head:
   - - meta
     - name: 'og:title'
-      content: '面向服务器的扩展'
+      content: '服务器相关'
   - - meta
     - name: 'og:type'
       content: 'article'
@@ -13,11 +13,7 @@ head:
       content: ''
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/php/refs/server/index.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/server/index.html'
 ---
-# 面向服务器的扩展
-
-
-
-[服务器相关扩展 - Apache](apache.md)
+# 服务器相关
 

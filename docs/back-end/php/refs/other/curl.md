@@ -13,7 +13,7 @@ head:
       content: 'PHP的cURL扩展基于libcurl库，支持HTTP、HTTPS、FTP等协议，可实现HTTPS认证、POST/PUT请求、FTP上传、表单上传、代理、cookies及用户名密码认证。相关函数包括curl_close、curl_copy_handle、curl_errno等。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/other/curl.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/other/curl.html'
 ---
 # 其它服务 - cURL
 

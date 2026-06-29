@@ -13,14 +13,16 @@ head:
       content: 'Datetime是一个日历和事件相关的扩展，用于处理日期和时间。安装简单，支持灵活的配置，提供丰富的函数如日期计算、格式化、时区转换等，方便开发者高效管理时间相关功能。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/calendar/datetime.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/calendar/datetime.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/6cdaf1a0bad2a437ef1c0de17800e2d7.png'
 ---
 # Datetime  - 时间日期
 
-::: info 📖<p>扩展阅读</p><ul><li>[关于 Php 的周计算](/back-end/php/faq/datetime-weekday-calc.md)</li></ul>:::
+::: info 📖
+<p>扩展阅读</p><ul><li>[关于 Php 的周计算](/back-end/php/faq/datetime-weekday-calc.md)</li></ul>
+:::
 
 ## 介绍
 

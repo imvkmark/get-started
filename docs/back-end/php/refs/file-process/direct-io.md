@@ -13,7 +13,7 @@ head:
       content: 'Direct IO 是文件系统相关扩展，提供直接输入输出功能，需通过安装开启，并调用相应函数进行文件操作。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/file-process/direct-io.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/file-process/direct-io.html'
 ---
 # Direct IO
 

@@ -13,7 +13,7 @@ head:
       content: 'PHP的SPL扩展提供一组标准接口，如Countable（实现count方法）、OuterIterator、RecursiveIterator、SeekableIterator等，方便迭代器与数组操作。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/other/interface.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/other/interface.html'
 ---
 # SPL - 接口
 

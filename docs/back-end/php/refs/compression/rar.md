@@ -13,7 +13,7 @@ head:
       content: '描述PHP的RAR压缩与归档扩展，涵盖安装配置、相关函数以及RarArchive、RarEntry、RarException类的使用方法。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/compression/rar.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/compression/rar.html'
 ---
 # 压缩与归档扩展 - rar
 

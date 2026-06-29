@@ -13,7 +13,7 @@ head:
       content: 'fileinfo 是 PHP 文件系统扩展，用于获取文件的 MIME 类型和编码信息。安装可通过编译时启用或安装 PECL 包。资源类型为 fileinfo 资源。常用函数包括 finfo_open（创建资源）、finfo_file（返回文件信息）、finfo_close（关闭资源）等。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/file-process/fileinfo.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/file-process/fileinfo.html'
 ---
 # fileinfo
 

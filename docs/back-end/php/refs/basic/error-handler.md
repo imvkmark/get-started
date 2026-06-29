@@ -13,7 +13,7 @@ head:
       content: 'PHP提供了错误处理和日志记录功能，允许自定义错误处理规则和记录方式。error_reporting设置错误级别，可通过常数或整数指定。display_errors控制是否显示错误信息，建议仅开发环境启用。启动过程中的错误不受display_errors影响。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/basic/error-handler.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/basic/error-handler.html'
 ---
 # 错误处理
 

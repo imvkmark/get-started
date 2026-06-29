@@ -13,7 +13,7 @@ head:
       content: '该扩展涉及变量与类型的函数处理，包括安装配置、常量定义及相关函数。支持动态调用、创建匿名函数、获取函数参数及类型信息等操作，增强代码灵活性与类型安全性。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/vartype/function-handling.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/vartype/function-handling.html'
 ---
 # Function Handling
 

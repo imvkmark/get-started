@@ -13,7 +13,7 @@ head:
       content: 'chdb是一个基于完美哈希函数的键值数据库，利用cmph模块实现高效查找。它支持通过chdb类创建实例并按键获取值，也可使用chdb_create函数将数组持久化存储为chdb文件。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/caching/chdb.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/caching/chdb.html'
 ---
 # [Pecl] chdb
 

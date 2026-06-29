@@ -13,7 +13,7 @@ head:
       content: 'ArrayObject是PHP SPL扩展中的类，允许以数组方式操作对象。它实现了IteratorAggregate、ArrayAccess等接口，支持设置标志（如STD_PROP_LIST、ARRAY_AS_PROPS）并提供了append、asort、count、exchangeArray、getArrayCopy等方法。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/other/spl-class.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/other/spl-class.html'
 ---
 # SPL - 各种类及接口
 

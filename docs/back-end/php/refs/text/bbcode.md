@@ -13,7 +13,7 @@ head:
       content: 'BBCode（公告板代码）是一种轻量级标记语言，用于论坛等平台。安装配置过程包括定义常量、编写解析函数，实现文本样式、链接、图片等格式化处理，增强用户交互体验。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/text/bbcode.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/text/bbcode.html'
 ---
 # 文本处理 - BBCode[Bulletin Board Code]
 

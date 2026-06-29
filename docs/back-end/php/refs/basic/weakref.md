@@ -13,7 +13,7 @@ head:
       content: 'PHP7.4后WeakRef成为内置弱引用类，允许无打扰访问短暂对象，不阻止GC回收。对象消失后弱引用仍存在但可用。另需启用pecl inclued.enabled配置项（默认关闭）方可生效。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/basic/weakref.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/basic/weakref.html'
 ---
 # WeakRef 弱引用
 

@@ -13,7 +13,7 @@ head:
       content: ''
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/basic/index.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/basic/index.html'
 ---
 # 影响 PHP 行为的扩展
 

@@ -13,7 +13,7 @@ head:
       content: 'Eio函数提供异步POSIX I/O接口，但Windows平台不可用。其函数包括：eiobusy（人工增加负载，用于测试）、eiocancel（取消请求）、eiochmod与eiochown（更改文件/目录权限）、eioclose（关闭文件）、eiocustom（执行自定义请求）、eiodup2（复制文件描述符）、eioeventloop（轮询直至所有请求完成）、eiofallocate（允许调用分配空间）等。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/process/eio.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/process/eio.html'
 ---
 # 进程控制扩展 - Eio
 

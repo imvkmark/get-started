@@ -13,7 +13,7 @@ head:
       content: 'PHP的变量处理函数扩展提供类型判断（如is_int、is_string）、存在性检查（isset、empty）、类型转换（intval、settype）、变量输出调试（var_dump、print_r）及序列化（serialize）等功能，是核心中处理变量与类型的基础工具。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/vartype/variable-handling.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/vartype/variable-handling.html'
 ---
 # Variable handling
 

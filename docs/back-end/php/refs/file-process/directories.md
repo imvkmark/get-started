@@ -13,7 +13,7 @@ head:
       content: '文件系统扩展提供了目录相关的常量与函数，用于创建、删除、遍历和操作目录。常见函数如mkdir、rmdir、opendir、readdir等，以及路径分隔符等常量，便于跨平台目录管理。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/file-process/directories.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/file-process/directories.html'
 ---
 # Directories
 

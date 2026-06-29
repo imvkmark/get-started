@@ -13,7 +13,7 @@ head:
       content: '该文档介绍了压缩与归档扩展（zip）的安装步骤，并详细说明了相关的资源类型、函数、类方法及函数方法的使用方式。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/compression/zip.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/compression/zip.html'
 ---
 # 压缩与归档扩展 - zip
 

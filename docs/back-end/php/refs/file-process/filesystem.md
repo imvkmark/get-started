@@ -13,7 +13,7 @@ head:
       content: '文件系统扩展用于操作文件和目录，提供配置选项（如编码、权限）及函数（如读取、写入、删除文件，遍历目录等），支持路径处理、文件信息获取，常用于服务器端资源管理。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/file-process/filesystem.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/file-process/filesystem.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/19a8684eeeb42657a0521832701a97aa.png'

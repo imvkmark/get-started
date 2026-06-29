@@ -13,9 +13,9 @@ head:
       content: '该内容介绍了PHP中网络相关的函数分类，包括日志函数（openlog、syslog等）、socket函数（fsockopen等）、域名解析（gethostbyname等）、IP地址转换（ip2long等）、HTTP头处理（header_remove等）以及socket操作（socket_set_timeout等）。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/other/network.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/other/network.html'
 ---
-<title>网络函数(network) </title>
+# 网络函数(network) 
 
 # **介绍**
 

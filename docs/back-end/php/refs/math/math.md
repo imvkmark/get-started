@@ -13,7 +13,7 @@ head:
       content: '该文档介绍数学扩展（Math），涵盖数学函数与预定义常量，提供常用数学运算支持，包括取整、三角函数、指数对数、随机数等，适用于科学计算与数据处理场景。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/math/math.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/math/math.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/bd15d67741a25b7e63bb88bed16de011.png'

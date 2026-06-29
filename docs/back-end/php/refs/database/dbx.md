@@ -13,7 +13,7 @@ head:
       content: 'dbx模块是PHP的数据库抽象层，提供统一调用接口，支持FrontBase、MS SQL Server、MySQL、ODBC、PostgreSQL、Sybase-CT、Oracle、SQLite等数据库。配置项dbx.colnames_case控制列名大小写（默认unchanged）。资源类型包括数据库连接对象和查询结果数组对象，通过dbx_close()关闭连接。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/database/dbx.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/database/dbx.html'
 ---
 # [Pecl]dbx
 

@@ -13,7 +13,7 @@ head:
       content: 'BCMath是PHP的任意精度数学扩展，支持大数运算，避免浮点误差。安装时需编译时启用--enable-bcmath，或在php.ini中启用extension=bcmath。配置通常无需额外设置。常用函数包括bcadd、bcsub、bcmul、bcdiv、bccomp等，均接受精度参数。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/math/bcmath.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/math/bcmath.html'
 ---
 # 数学扩展 - BCMath 任意精度数学函数
 

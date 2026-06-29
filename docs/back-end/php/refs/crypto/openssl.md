@@ -13,7 +13,7 @@ head:
       content: 'OpenSSL扩展用于生成和验证签名数据，需安装OpenSSL库。PHP版本与OpenSSL版本要求：7.0需0.9.8，7.1-8.0需1.0.1-3.0，8.1需1.0.2-4.0。运行时需访问/dev/urandom或/dev/random设备以确保随机数生成。建议安装最新包防范攻击。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/crypto/openssl.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/crypto/openssl.html'
 ---
 # 加密扩展 - OpenSSL
 

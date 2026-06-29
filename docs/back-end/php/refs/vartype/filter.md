@@ -13,7 +13,7 @@ head:
       content: 'Filter扩展支持变量与类型的过滤操作，涵盖安装、配置及函数使用，便于数据处理与类型转换。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/vartype/filter.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/vartype/filter.html'
 ---
 # Filter
 

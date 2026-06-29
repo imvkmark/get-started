@@ -13,7 +13,7 @@ head:
       content: '本文介绍了国际化与字符编码支持中iconv的安装、配置及常用函数，帮助用户处理字符集转换。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/i18n/iconv.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/i18n/iconv.html'
 ---
 # 国际化与字符编码支持 - iconv
 

@@ -13,7 +13,7 @@ head:
       content: 'PHP输出控制函数用于管理脚本输出，允许在输出开始后发送HTTP头信息。output_buffering可全局开启输出缓冲（默认0），optionally设置缓冲大小。output_handler可指定函数处理所有输出，仅限内置函数，不能与mb_output_handler或ob_iconv_handler同时使用。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/basic/output.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/basic/output.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/2e897389d478b864d2bdaf4d68a73a87.png'

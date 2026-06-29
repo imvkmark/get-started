@@ -13,7 +13,7 @@ head:
       content: ''
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/caching/index.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/caching/index.html'
 ---
 # 缓存
 

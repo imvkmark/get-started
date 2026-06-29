@@ -13,7 +13,7 @@ head:
       content: 'Cyrus IMAP管理扩展在Windows上不可用，且与IMAP、recode、YAZ（2.0以下版本）共享符号不能同时启用。配置项inclued.enabled默认为Off。定义常量如CYRUS_CONN_NONSYNCLITERAL等。函数cyrus_authenticate(resource $connection, string $mechlist, string $service, string $user, int $minssf, int $maxssf, string $authname, string $password)用于授权验证。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/mail/cyrus.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/mail/cyrus.html'
 ---
 # Cyrus
 

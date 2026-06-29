@@ -1,27 +1,25 @@
 ---
-description: '继承是 is-a 的明显特征超类和子类的名称来源于计算机科学中的集合术语: 超集和子集使用 super.getSalary() 调用父类方法, 使用 super() 调用父类的构造函数由于子类不能访问父类的私有字段, 所以必须通过构造器来初始化这些私有字段如果没有显示调用超类的构造器, 将自动调用超类的无参数构造器, 如果超类中没有无参数构造器, 将报一个编译错误一个对象变量可以只是出多种类型的现象叫做多态, 在运行时候能够选择适当的方法, 成为动态绑定.继承不限于一个层次is-a 规则的定义中表述是替换原则(substitution principle), 超'
-lastUpdated: '2025-12-06 14:56:00'
-head: 
+description: '该内容介绍了Java继承机制，包括子类定义、方法覆盖、构造器、多态、final类与方法、强制类型转换、抽象类及受保护访问。还涉及Object基类的equals、hashCode、toString方法，泛型数组列表、对象包装器与自动装箱、可变参数方法及枚举类。'
+lastUpdated: '2026-06-29 23:58:21'
+head:
   - - meta
     - name: 'og:title'
-      content: '5. 继承'
+      content: '5.继承'
   - - meta
     - name: 'og:type'
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: '继承是 is-a 的明显特征超类和子类的名称来源于计算机科学中的集合术语: 超集和子集使用 super.getSalary() 调用父类方法, 使用 super() 调用父类的构造函数由于子类不能访问父类的私有字段, 所以必须通过构造器来初始化这些私有字段如果没有显示调用超类的构造器, 将自动调用超类的无参数构造器, 如果超类中没有无参数构造器, 将报一个编译错误一个对象变量可以只是出多种类型的现象叫做多态, 在运行时候能够选择适当的方法, 成为动态绑定.继承不限于一个层次is-a 规则的定义中表述是替换原则(substitution principle), 超'
+      content: '该内容介绍了Java继承机制，包括子类定义、方法覆盖、构造器、多态、final类与方法、强制类型转换、抽象类及受保护访问。还涉及Object基类的equals、hashCode、toString方法，泛型数组列表、对象包装器与自动装箱、可变参数方法及枚举类。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/java/core/5-inheritance.html'
+      content: 'https://www.wulicode.com/back-end/java/core/5-inheritance.html'
 ---
-# 5. 继承
-
-
+# 5.继承
 
 ## 5.1 类, 超类和子类
 
-继承是  `is-a`  的明显特征
+继承是 `is-a` 的明显特征
 
 ### 5.1.1 定义子类
 
@@ -32,7 +30,7 @@ head:
 
 ### 5.1.2 覆盖方法
 
-使用  `super.getSalary()`  调用父类方法, 使用  `super()`  调用父类的构造函数
+使用 `super.getSalary()` 调用父类方法, 使用 `super()` 调用父类的构造函数
 
 ### 5.1.3 子类构造器
 
@@ -40,7 +38,7 @@ head:
 
 如果没有显示调用超类的构造器, 将自动调用超类的无参数构造器, 如果超类中没有无参数构造器, 将报一个编译错误
 
-```java
+```Java
 public Manager (String name, double salary, int year, int month, int day) 
 {
     super(name, salary, year, month, day); 
@@ -56,7 +54,7 @@ public Manager (String name, double salary, int year, int month, int day)
 
 ### 5.1.5 多态
 
-`is-a`  规则的定义中表述是替换原则(substitution principle), 超类出现的地方都可以用子类对象替换
+`is-a` 规则的定义中表述是替换原则(substitution principle), 超类出现的地方都可以用子类对象替换
 
 子类引用的数组可以转换成超类已禁用的数组, 而不需要使用强制类型转换
 
@@ -72,7 +70,7 @@ final 不允许类继承和方法重写和字段数据改写
 
 基本类型转换
 
-```
+```Plaintext
 // 基本类型
 double x = 3.14;
 int nx = (int) x;
@@ -83,7 +81,7 @@ Manager boss = (Manager) staff[0];
 
 如果遇到强制类型转换的时候可以使用 instanceof 操作符, 来确定下类型
 
-```
+```Plaintext
 if (staff[1] instanceof Manager)
 {
    boss= (Manager) staff[1];
@@ -100,7 +98,7 @@ if (staff[1] instanceof Manager)
 - 包含抽象方法的类必须是抽象类
 - 抽象类不能被实例化
 
-```
+```Plaintext
 public abstract class Person
 {
     public abstract String getDescription();
@@ -132,15 +130,15 @@ Java 语言规范要求 equals 有以下特性
 - 对称性
 - 传递性
 - 一致性
-- 任意对象  `x.equals(null)`  应该返回 false
+- 任意对象 `x.equals(null)` 应该返回 false
 
-数组对比可以是用  `Array.equals()`
+数组对比可以是用 `Array.equals()`
 
 ### 5.2.4 hashCode 方法
 
 散列码是有对象导出的一个整形值, 用来方便插入散列值
 
-```
+```Plaintext
 Object.hashCode() // 每个对象都有自己的实现
 
 Objects.hash(name, sallary, hireDay);
@@ -154,13 +152,13 @@ Objects.hashCode(employee)
 
 ## 5.3 泛型数组列表
 
-ArrayList 是一个有类型参数(type parameter) 和泛型类 (generic class), 为了指定数组列表保存的元素对象的类型, 需要用尖括号将类名括起来追加到  `ArrayList`  后边, 例如  `ArrayList<Employee>`
+ArrayList 是一个有类型参数(type parameter) 和泛型类 (generic class), 为了指定数组列表保存的元素对象的类型, 需要用尖括号将类名括起来追加到 `ArrayList` 后边, 例如 `ArrayList<Employee>`
 
 ### 5.3.1 声明数组列表
 
 这种尖括号的语法称之为菱形语法
 
-```java
+```Java
 // 声明和构造一个保存 `Employee` 对象的数组列表 : 
 ArrayList<Employee> staff = new ArrayList<Employee> ();
 
@@ -176,15 +174,15 @@ ArrayList <Employee> staff = new ArrayList(100);
 
 添加数据
 
-```java
+```Java
 ArrayList <Employee> staff = new ArrayList(100);staff.add(new Employee());
 ```
 
 ### 5.3.2 访问数组列表元素
 
-不能使用我们喜爱的  `[]`  语法格式访问或政变数组的元素，而要使用 get 和 set 方法
+不能使用我们喜爱的 `[]` 语法格式访问或政变数组的元素，而要使用 get 和 set 方法
 
-```java
+```Java
 // 仅当 i 有值的时候才能够设置
 staff.set(i , harry);
 
@@ -203,7 +201,7 @@ staff.remove(i);
 
 原始数组转为类型化的时候会不可避免的出现警告信息
 
-```java
+```Java
 // 原始数组转换为类型化列表
 ArrayList<Employee> result = employeeDB.find(query); // yields warning
 
@@ -211,7 +209,7 @@ ArrayList<Employee> result = employeeDB.find(query); // yields warning
 ArrayList<Employee> result = (ArrayList<Employee>)employeeDB.find(query); // yields another warning
 ```
 
-```java
+```Java
 // 使用注解来表示接受强制类型转换的变量
 @SuppressWarnings("unchecked") ArrayList<Employee> result
     = (ArrayList<Employee>)employeeDB.find(query);
@@ -223,15 +221,15 @@ ArrayList<Employee> result = (ArrayList<Employee>)employeeDB.find(query); // yie
 
 Number(Integer、Long、Float、Double、Short、Byte)、Character和 Boolean
 
-很容易地向  `Arraylist<Integer>`  中添加 int 类型的元素。下面这个调用
+很容易地向 `Arraylist<Integer>` 中添加 int 类型的元素。下面这个调用
 
-```
+```Plaintext
 list.add(3);
 ```
 
 将自动地变换成
 
-```
+```Plaintext
 list.add(Integer.value0f(3));
 ```
 
@@ -239,7 +237,7 @@ list.add(Integer.value0f(3));
 
 ## 5.5 参数数量可变的方法
 
-```
+```Plaintext
 public class PrintStream
 {
     public Printstream printf(String fnt, Object... args){
@@ -248,13 +246,13 @@ public class PrintStream
 }
 ```
 
-这里的 args 表示可以接收任意数量的对象, 这里的  `Object...`  和  `Object[]`  完全一样
+这里的 args 表示可以接收任意数量的对象, 这里的 `Object...` 和 `Object[]` 完全一样
 
 我们可以通过类似的方式设置变参
 
 ## 5.6 枚举类
 
-```java
+```Java
 public enum Size
 {
     SMALL("S"), MEDIUM("M"), LARGE("L"), EXTRA_LARGE("XL");
@@ -266,7 +264,7 @@ public enum Size
 }
 ```
 
-```java
+```Java
 Size.SMALL.toString()                // 返回字符串
 Enum.valueof(Size.class, "SMALL")    // 静态方法返回数据
 
@@ -282,9 +280,8 @@ Size.values();
 
 - 将公共操作和字段放在超类中
 - 不要使用受保护的字段(包访问和子级访问会破坏封装)
-- 使用继承使用  `is-a`  关系
+- 使用继承使用 `is-a` 关系
 - 除非所有的继承的方法都有意义, 否则不要使用继承
 - 在覆盖方法时, 不要改变预期的行为
 - 使用多态, 而不要使用类型信息
 - 不要滥用反射
-

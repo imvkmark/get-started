@@ -13,7 +13,7 @@ head:
       content: '该加密扩展提供哈希功能的安装与配置指南，涵盖资源类型定义及相关的函数调用接口，用于数据摘要与安全校验。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/crypto/hash.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/crypto/hash.html'
 ---
 # 加密扩展 - hash
 

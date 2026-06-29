@@ -13,7 +13,7 @@ head:
       content: 'APC是PHP的可选缓存扩展，提供介绍、安装、配置（php.ini）及函数等文档内容。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/caching/apc.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/caching/apc.html'
 ---
 # ⚠️ [Pecl] APC - 可选的 PHP 缓存
 

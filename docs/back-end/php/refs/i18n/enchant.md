@@ -13,7 +13,7 @@ head:
       content: 'Enchant 提供国际化与字符编码支持，涵盖安装、配置、定义常量及函数，用于拼写检查和语言处理。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/i18n/enchant.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/i18n/enchant.html'
 ---
 # 国际化与字符编码支持 - Enchant
 

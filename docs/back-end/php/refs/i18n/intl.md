@@ -13,7 +13,7 @@ head:
       content: '该内容为PHP Intl扩展的待完成功能列表，涵盖国际化与字符编码支持，包括Collator、NumberFormatter、Locale、Normalizer等核心组件，以及MessageFormatter、IntlCalendar、IntlTimeZone等高级功能，均标记为WIP（工作进展中）。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/i18n/intl.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/i18n/intl.html'
 ---
 # [WIP]国际化与字符编码支持 - Intl
 

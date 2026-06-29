@@ -13,7 +13,7 @@ head:
       content: 'Cairo是一个免费的矢量绘图软件库，支持Linux、Windows、macOS等多平台，可输出X Window System、OpenGL、内存图像、PostScript、PDF及SVG等格式，实现高质量打印与屏幕输出一致的效果。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/image/cairo.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/image/cairo.html'
 ---
 # [Pecl] Cairo
 

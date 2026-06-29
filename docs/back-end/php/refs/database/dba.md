@@ -13,7 +13,7 @@ head:
       content: '数据库抽象层为DBA提供统一安装与配置接口，封装常用函数简化数据库管理操作，支持多类型数据库，提升效率与可移植性。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/database/dba.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/database/dba.html'
 ---
 # 数据库抽象层 - DBA
 

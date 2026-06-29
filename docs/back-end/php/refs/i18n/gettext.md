@@ -13,7 +13,7 @@ head:
       content: 'Gettext 是实现软件国际化的关键工具，支持多语言翻译和字符编码处理。其安装可通过系统包管理器或源码完成，需配置 locale 环境及 .po/.mo 文件。常用函数如 `gettext()`、`bindtextdomain()` 等用于加载语言包、设定域和字符集，实现程序文本的动态本地化。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/i18n/gettext.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/i18n/gettext.html'
 ---
 # 国际化与字符编码支持 - Gettext
 
