@@ -21,3 +21,4 @@ Pipfile.lock
 
 # AI
 .omc
+.claude
