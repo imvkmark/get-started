@@ -1,6 +1,6 @@
 ---
 description: 'Clockwork 是一款浏览器端 PHP 调试工具，支持 Laravel、Lumen、Symfony、Slim 等框架。提供安装与升级指南，核心功能包括记录数据库查询、命令、队列与测试，收集查看数据、日志、时间线及客户端性能，支持分享和用户数据。高级特性涵盖验证、元数据存储、Xdebug 分析器及扩展执行与数据源管理。'
-lastUpdated: '2026-06-17 23:01:13'
+lastUpdated: '2026-06-29 10:02:40'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: 'Clockwork 是一款浏览器端 PHP 调试工具，支持 Laravel、Lumen、Symfony、Slim 等框架。提供安装与升级指南，核心功能包括记录数据库查询、命令、队列与测试，收集查看数据、日志、时间线及客户端性能，支持分享和用户数据。高级特性涵盖验证、元数据存储、Xdebug 分析器及扩展执行与数据源管理。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/laravel/packages/itsgoingd-clockwork.html'
+      content: 'https://www.wulicode.com/back-end/php/laravel/packages/itsgoingd-clockwork.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/4585c3dc68b8563289648e1e10dba4ae.png'
@@ -30,7 +30,7 @@ head:
 
 [通过Composer](https://getcomposer.org/)安装 Clockwork 库。
 
-```JavaScript
+```Shell
 $ composer require itsgoingd/clockwork
 ```
 
