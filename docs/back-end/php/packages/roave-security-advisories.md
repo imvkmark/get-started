@@ -13,7 +13,7 @@ head:
       content: '该内容为Roave安全建议的翻译，涉及安装与使用，指出部分命令将执行失败，并涉及稳定性和源码相关问题。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/packages/roave-security-advisories.html'
+      content: 'https://www.wulicode.com/back-end/php/packages/roave-security-advisories.html'
 ---
 # [译] Roave 安全建议
 

@@ -1,7 +1,7 @@
 ---
-description: ''
-lastUpdated: '2025-12-14 15:46:00'
-head: 
+description: '该文档集涵盖PHP中国际化与字符编码支持的核心技术，包括Enchant拼写检查、Gettext消息翻译、iconv字符转换以及Intl国际组件（进度中），为多语言应用开发提供关键参考。'
+lastUpdated: '2026-06-29 13:32:00'
+head:
   - - meta
     - name: 'og:title'
       content: '国际化与字符编码支持'
@@ -10,20 +10,14 @@ head:
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: ''
+      content: '该文档集涵盖PHP中国际化与字符编码支持的核心技术，包括Enchant拼写检查、Gettext消息翻译、iconv字符转换以及Intl国际组件（进度中），为多语言应用开发提供关键参考。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/php/refs/i18n/index.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/i18n/index.html'
 ---
 # 国际化与字符编码支持
 
-
-
-[[WIP]国际化与字符编码支持 - Intl](intl.md)
-
-[国际化与字符编码支持 - Enchant](enchant.md)
-
-[国际化与字符编码支持 - Gettext](gettext.md)
-
-[国际化与字符编码支持 - iconv](iconv.md)
-
+- [国际化与字符编码支持 - Enchant](/back-end/php/refs/i18n/enchant.md)
+- [国际化与字符编码支持 - Gettext ](/back-end/php/refs/i18n/gettext.md)
+- [国际化与字符编码支持 - iconv](/back-end/php/refs/i18n/iconv.md)
+- [[WIP]国际化与字符编码支持 - Intl](/back-end/php/refs/i18n/intl.md)

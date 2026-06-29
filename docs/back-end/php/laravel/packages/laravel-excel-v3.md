@@ -13,7 +13,7 @@ head:
       content: 'Laravel-Excel 3.0文档涵盖基本用法、依赖注入、集合操作，支持将Collection导出为Excel下载或存储到磁盘。提供从查询输出、自定义查询、构造器参数、视图等多种导出方式，并支持队列处理、追加任务及自定义队列。包含多单元表、数据遍历、行遍历、表头添加、列格式化、日期处理、关系导出、Traits扩展、事件（自动注册监听器）及宏。测试方面支持下载、存储和队列导出的测试。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/laravel/packages/laravel-excel-v3.html'
+      content: 'https://www.wulicode.com/back-end/php/laravel/packages/laravel-excel-v3.html'
 ---
 # Laravel-Excel 3.0 文档
 

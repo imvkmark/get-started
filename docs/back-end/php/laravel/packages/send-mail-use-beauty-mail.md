@@ -13,7 +13,7 @@ head:
       content: '在Laravel中，使用Beautymail包可轻松发送美观的HTML邮件。首先安装并配置Beautymail，然后创建并自定义邮件视图（如布局、样式）。通过定义邮件类或直接使用Beautymail方法，可查看输入、预览设计，最后调用`Mail::send()`发送即可。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/laravel/packages/send-mail-use-beauty-mail.html'
+      content: 'https://www.wulicode.com/back-end/php/laravel/packages/send-mail-use-beauty-mail.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/27eb1879f59e4f3dee763217d93b4344.jpg'

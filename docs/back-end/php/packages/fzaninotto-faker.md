@@ -13,7 +13,7 @@ head:
       content: 'Faker库的格式化器模块提供多种数据生成分类，包括基础文本、人物、地址、电话号码、公司、日期时间、互联网、用户代理、支付、颜色、文件、图片、UUID、条形码及各种杂项和偏向数据，并支持修改器定制输出。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/packages/fzaninotto-faker.html'
+      content: 'https://www.wulicode.com/back-end/php/packages/fzaninotto-faker.html'
 ---
 # [译+] fzaninotto_Faker 文档
 

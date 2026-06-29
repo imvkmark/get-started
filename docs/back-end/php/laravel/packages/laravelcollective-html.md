@@ -13,7 +13,7 @@ head:
       content: '本内容介绍了Laravel Collective HTML组件的安装与使用，涵盖表单CSRF保护、模型绑定、各类输入元素（文本框、密码、隐藏域、多选、单选、数字、日期、文件选择器）、下拉列表（含默认值、占位符、分组、范围、月份）、按钮、自定义宏以及URL链接生成（link_to、link_to_asset、link_to_route、link_to_action）。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/laravel/packages/laravelcollective-html.html'
+      content: 'https://www.wulicode.com/back-end/php/laravel/packages/laravelcollective-html.html'
 ---
 # Forms & HTML 组件 (laravelcollective-html)
 

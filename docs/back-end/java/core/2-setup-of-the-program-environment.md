@@ -1,6 +1,6 @@
 ---
 description: '本文介绍了Java程序环境搭建的完整流程，包括安装JDK与JRE工具包、编写首个Java程序、使用IDE开发工具、JShell交互式编程，以及Java Web环境的创建、服务器配置与项目运行。'
-lastUpdated: '2026-06-22 02:50:37'
+lastUpdated: '2026-06-29 13:28:07'
 head:
   - - meta
     - name: 'og:title'
@@ -83,7 +83,9 @@ JCP组织：Java Community Process
 
 ### 2.1.2 下载和设置 SDK
 
-::: info 📖<p>扩展阅读</p><ul><li>[jenv - 管理当前的 Java 环境 ](/back-end/java/primer/jenv-java-environment--version-manager.md)</li><li>[sdkman - 管理多个 sdk 的工具](/development/tools/sdkman.md)</li></ul>:::
+::: info 📖
+<p>扩展阅读</p><ul><li>[jenv - 管理当前的 Java 环境 ](/back-end/java/primer/jenv-java-environment--version-manager.md)</li><li>[sdkman - 管理多个 sdk 的工具](/development/tools/sdkman.md)</li></ul>
+:::
 
 这里我们使用 `jenv` 和 `temurin` 来设置 sdk 和管理版本
 

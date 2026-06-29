@@ -13,7 +13,7 @@ head:
       content: '本指南详细介绍了Laravel插件包的完整开发流程，包括初始化、创建服务提供者、配置文件、自定义类、视图和门面，本地测试后发布至Git及Packagist，并最终安装使用。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/laravel/packages/development.html'
+      content: 'https://www.wulicode.com/back-end/php/laravel/packages/development.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/74ec094b0e6e8690e9b8b7c05cff9dfc.png'

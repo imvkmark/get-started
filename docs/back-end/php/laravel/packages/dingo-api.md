@@ -13,11 +13,13 @@ head:
       content: 'Laravel结合Dingo API与JWT实现API认证。安装Dingo和JWT插件，配置API类型、前缀、版本及Debug模式，设置认证并注册中间件。添加路由后，通过JWT实现auth认证（含前提、认证方式和限制）。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/laravel/packages/dingo-api.html'
+      content: 'https://www.wulicode.com/back-end/php/laravel/packages/dingo-api.html'
 ---
 # Laravel API 结合 Dingo API 和 JWT
 
-::: info 📖<p>扩展阅读</p><ul><li>[JWT(JSON Web Tokens) 介绍 ](/development/software/spec/jwt.md)</li></ul>:::
+::: info 📖
+<p>扩展阅读</p><ul><li>[JWT(JSON Web Tokens) 介绍 ](/development/software/spec/jwt.md)</li></ul>
+:::
 
 ## 介绍
 

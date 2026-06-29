@@ -1,10 +1,10 @@
 ---
 description: ''
-lastUpdated: '2026-06-29 13:30:16'
+lastUpdated: '2026-06-29 14:36:06'
 head:
   - - meta
     - name: 'og:title'
-      content: 'Laravel 扩展包'
+      content: '邮件'
   - - meta
     - name: 'og:type'
       content: 'article'
@@ -13,7 +13,7 @@ head:
       content: ''
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/back-end/php/laravel/packages/index.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/mail/index.html'
 ---
-# Laravel 扩展包
+# 邮件
 

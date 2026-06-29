@@ -13,12 +13,14 @@ head:
       content: '这是一个为 Laravel 5 设计的简单验证码包，提供安装、使用、配置及示例，方便快速集成图形验证码功能。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/laravel/packages/developer-tz-laravel-5-simple-captcha.html'
+      content: 'https://www.wulicode.com/back-end/php/laravel/packages/developer-tz-laravel-5-simple-captcha.html'
 ---
 # 🚫 Simple Captcha 包 For Laravel 5
 
 ::: danger 🚫
+
 已过时, For Laravel 5 https://github.com/developer-tz/laravel-5-simple-captcha
+
 :::
 
 一个简单的 [Laravel 5](http://laravel.com/) 包是 [Simple Captcha for Laravel 5](https://github.com/developer-tz/laravel-5-simple-captcha).

@@ -13,7 +13,7 @@ head:
       content: 'Snoopy是一个PHP网络客户端，用于模拟浏览器行为，获取网页数据。它支持HTTP/HTTPS请求、Cookie处理、表单提交、文件上传等功能，方便开发者抓取网页内容或进行自动化测试。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/refs/packages/endroy-snoopy.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/packages/endroy-snoopy.html'
 ---
 # Snoopy - php 网络客户端, 获取网页数据
 

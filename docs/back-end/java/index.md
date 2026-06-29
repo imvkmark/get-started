@@ -1,6 +1,6 @@
 ---
 description: '根据提供内容，Java学习路径分三步：先学《Java核心技术》基础，再学高级，最后掌握SpringBoot。同时推荐参考Gradle官方中文文档，包含入门、依赖管理、Java项目构建等章节；并提及Maven-mvnd和Gradle两种构建工具。'
-lastUpdated: '2026-06-22 02:51:03'
+lastUpdated: '2026-06-29 13:27:57'
 head:
   - - meta
     - name: 'og:title'

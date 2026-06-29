@@ -1,10 +1,10 @@
 ---
 description: '该扩展包名为“Awesome 字符串”，存放于私有仓库，已被标记为Deprecated（已弃用），不建议使用，其中存在一些已知或潜在的坑，应避免在生产环境中采用。'
-lastUpdated: '2026-06-29 10:46:18'
+lastUpdated: '2026-06-29 13:30:06'
 head:
   - - meta
     - name: 'og:title'
-      content: '扩展包'
+      content: 'Php 扩展包'
   - - meta
     - name: 'og:type'
       content: 'article'
@@ -18,7 +18,7 @@ head:
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/0701633744504f7fa55a4ca885edea35.png'
 ---
-# 扩展包
+# Php 扩展包
 
 ## Awesome
 

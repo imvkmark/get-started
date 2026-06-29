@@ -13,7 +13,7 @@ head:
       content: '使用Doctum Sami生成PHP文档，需理解DocBlock注释。该工具可自动生成API文档，通过安装Sami并参考Laravel文档进行配置，支持Git版本控制、自定义主题、添加资源及变更标记，最终生成清晰的文档概述。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/packages/code-lts-doctum.html'
+      content: 'https://www.wulicode.com/back-end/php/packages/code-lts-doctum.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/23025d910ff376f371998eb0eb0c35b0.png'
@@ -21,8 +21,10 @@ head:
 # 使用 Doctum Sami 生成 PHP 文档
 
 ::: warning ⚠️
+
 当前 sami 已经不维护, 后续使用 https://github.com/code-lts/doctum 替代, API 完全一致
 原文地址 : [Generating PHP Documentation with Sami](http://www.sitepoint.com/generating-php-documentation-sami/)
+
 :::
 
 为方法, 类, 函数生成文档已经成为了程序员的习惯, 所以需要知道通过源代码生成独立的文档. 本文中我会介绍

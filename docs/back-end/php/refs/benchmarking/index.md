@@ -1,23 +1,20 @@
 ---
-description: ''
-lastUpdated: '2025-12-14 15:54:00'
-head: 
+description: '该文档是关于PHP扩展inclued的基准测试，用于分析include文件跟踪对后端性能的影响。'
+lastUpdated: '2026-06-29 13:32:17'
+head:
   - - meta
     - name: 'og:title'
-      content: '基准'
+      content: '基准测试'
   - - meta
     - name: 'og:type'
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: ''
+      content: '该文档是关于PHP扩展inclued的基准测试，用于分析include文件跟踪对后端性能的影响。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/php/refs/benchmarking/index.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/benchmarking/index.html'
 ---
-# 基准
+# 基准测试
 
-
-
-[<img src="https://file.wulicode.com/notion/73/73587d3b044dd65bcaa6e2686af6e0fc.svg" style="width:17px;position:relative;top:4px;border:none;display:inline;">  [Pecl]inclued](inclued.md)
-
+- [[Pecl]inclued](/back-end/php/refs/benchmarking/inclued.md)

@@ -1,6 +1,6 @@
 ---
 description: 'PHP生态涵盖依赖管理（如Composer）、Web框架（如Laravel）、微型框架、模板、数据库、缓存、安全、测试、持续集成等工具与资源，以及开发环境、IDE、项目与文档，形成完整的开发体系。'
-lastUpdated: '2026-06-17 18:38:13'
+lastUpdated: '2026-06-29 13:22:26'
 head:
   - - meta
     - name: 'og:title'
@@ -13,13 +13,15 @@ head:
       content: 'PHP生态涵盖依赖管理（如Composer）、Web框架（如Laravel）、微型框架、模板、数据库、缓存、安全、测试、持续集成等工具与资源，以及开发环境、IDE、项目与文档，形成完整的开发体系。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/primer/awesome.html'
+      content: 'https://www.wulicode.com/back-end/php/primer/awesome.html'
 ---
 # Awesome PHP
 
 ::: info 🔗
+
 https://github.com/ziadoz/awesome-php 
 https://github.com/JingwenTian/awesome-php
+
 :::
 
 ## 依赖管理

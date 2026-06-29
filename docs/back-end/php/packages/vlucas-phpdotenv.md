@@ -13,12 +13,14 @@ head:
       content: 'dotenv 是 PHP 版本的 .env 文件管理工具，通过 Composer 安装，用于加载环境变量。支持变量嵌入、防止覆盖（不可变）、强制变量必须设置、限定允许的值，并支持注释功能，便于开发者管理配置。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/packages/vlucas-phpdotenv.html'
+      content: 'https://www.wulicode.com/back-end/php/packages/vlucas-phpdotenv.html'
 ---
 # [译] dotenv - PHP 版本的 .env
 
 ::: info 🔗
+
 github : [vlucas/phpdotenv](https://github.com/vlucas/phpdotenv)
+
 :::
 
 通过 `.env` 加载环境变量并且能够自动的通过 `getenv()`, `$_ENV` 和 `$_SERVER` 自动调用.
