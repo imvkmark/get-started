@@ -1,36 +1,19 @@
 ---
-description: ''
-lastUpdated: '2026-01-11 19:58:00'
-head: 
+description: '数据库系统相关的扩展指针对特定数据库管理系统（如MySQL、PostgreSQL、Oracle等）的增强功能，包括存储过程、触发器、自定义函数、索引类型、数据类型及扩展插件等，用于提升性能、兼容性或实现业务逻辑，是数据库定制化与高效运行的重要部分。'
+lastUpdated: '2026-06-30 13:26:15'
+head:
   - - meta
     - name: 'og:title'
-      content: '数据库扩展'
+      content: '与具体数据库系统相关的扩展'
   - - meta
     - name: 'og:type'
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: ''
+      content: '数据库系统相关的扩展指针对特定数据库管理系统（如MySQL、PostgreSQL、Oracle等）的增强功能，包括存储过程、触发器、自定义函数、索引类型、数据类型及扩展插件等，用于提升性能、兼容性或实现业务逻辑，是数据库定制化与高效运行的重要部分。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/php/refs/database/index.html'
+      content: 'https://www.wulicode.com/back-end/php/refs/database/index.html'
 ---
-# 数据库扩展
-
-
-
-::: info  <img src="https://file.wulicode.com/notion/b8/b856dd2822721bdc41101c3e23915df8.svg" style="width:17px;position:relative;top:4px;border:none;display:inline;">  扩展资料
-
-  - [ezSQL/ezsql](https://github.com/ezSQL/ezsql) - PHP类让数据库交互变得极其简单
-:::
-
-[与具体数据库系统相关的扩展 - mysqli](mysqli.md)
-
-[数据库抽象层 - DBA](dba.md)
-
-[数据库抽象层 - PDO](pdo.md)
-
-[<img src="https://file.wulicode.com/notion/73/73587d3b044dd65bcaa6e2686af6e0fc.svg" style="width:17px;position:relative;top:4px;border:none;display:inline;">  [Pecl]dbx](dbx.md)
-
-
+# 与具体数据库系统相关的扩展
 

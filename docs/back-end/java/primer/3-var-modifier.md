@@ -13,7 +13,7 @@ head:
       content: 'Java变量定义要点包括声明与初始化。修饰符分为访问控制修饰符（如public、private、protected）和非访问修饰符（如static、final、abstract、synchronized等）。访问控制修饰符控制可见性，非访问修饰符改变变量或方法的行为。参考文档可深化理解。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/java/primer/3-var-modifier.html'
+      content: 'https://www.wulicode.com/back-end/java/primer/3-var-modifier.html'
 ---
 # Java 学习 03 - 变量-修饰符
 

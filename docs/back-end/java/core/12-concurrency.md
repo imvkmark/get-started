@@ -1,26 +1,24 @@
 ---
-description: '多进程和多线程的区别就是线程之间的数据是可以共享的线程可以并发运行线程的 6 中状态new 创建一个线程时候, 状态是 New调用 start 方法的时候, 现成处于 runnable 状态, 当然由于系统对线程的调度或者分片, 线程可能并未运行, 所以线程的状态是 runnable (可运行)现成调用 yield 静态方法或者被阻塞或等待时候才失去控制权不活动状态, 不进行代码运行执行到最后并 return 时候 和未捕获的异常的时候线程会终止, interrupt 可以请求终止一个线程, 要想知道线程是否中断, 需要调用静态的 Thread.currentT'
-lastUpdated: '2025-12-06 14:57:00'
-head: 
+description: '该内容讲述了Java多线程编程的基础，包括线程的定义、线程的四种状态（新建、可运行、阻塞/等待、终止）以及线程的中断属性。'
+lastUpdated: '2026-06-30 13:31:17'
+head:
   - - meta
     - name: 'og:title'
-      content: '12. 并发'
+      content: '12.并发'
   - - meta
     - name: 'og:type'
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: '多进程和多线程的区别就是线程之间的数据是可以共享的线程可以并发运行线程的 6 中状态new 创建一个线程时候, 状态是 New调用 start 方法的时候, 现成处于 runnable 状态, 当然由于系统对线程的调度或者分片, 线程可能并未运行, 所以线程的状态是 runnable (可运行)现成调用 yield 静态方法或者被阻塞或等待时候才失去控制权不活动状态, 不进行代码运行执行到最后并 return 时候 和未捕获的异常的时候线程会终止, interrupt 可以请求终止一个线程, 要想知道线程是否中断, 需要调用静态的 Thread.currentT'
+      content: '该内容讲述了Java多线程编程的基础，包括线程的定义、线程的四种状态（新建、可运行、阻塞/等待、终止）以及线程的中断属性。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/java/core/12-concurrency.html'
+      content: 'https://www.wulicode.com/back-end/java/core/12-concurrency.html'
   - - meta
     - name: 'og:image'
-      content: 'https://file.wulicode.com/notion/94/940193a96ff24aecce2ce726625c55a4.png?x-oss-process=image/resize,m_mfit,w_400'
+      content: 'https://file.wulicode.com/feishu-images/05c691169215cd18cc36a56e33af50f4.png'
 ---
-# 12. 并发
-
-
+# 12.并发
 
 多进程和多线程的区别就是线程之间的数据是可以共享的
 
@@ -49,7 +47,7 @@ new 创建一个线程时候, 状态是 New
 
 调用 start 方法的时候, 现成处于 runnable 状态, 当然由于系统对线程的调度或者分片, 线程可能并未运行, 所以线程的状态是 runnable (可运行)
 
-现成调用  `yield`  静态方法或者被阻塞或等待时候才失去控制权
+现成调用 `yield` 静态方法或者被阻塞或等待时候才失去控制权
 
 ### 12.2.3 阻塞和等待线程
 
@@ -59,7 +57,7 @@ new 创建一个线程时候, 状态是 New
 - 当线程等待另一个线程通知调度器出现一个条件的时候, 现成进入等待状态
 - 当设置了超时参数并运行超时进入计时等待
 
-![](https://file.wulicode.com/notion/94/940193a96ff24aecce2ce726625c55a4.png)
+![](https://file.wulicode.com/feishu-images/05c691169215cd18cc36a56e33af50f4.png)
 
 ### 12.2.4 终止线程
 
@@ -71,4 +69,3 @@ new 创建一个线程时候, 状态是 New
 ### 12.3.1 中断线程
 
 执行到最后并 return 时候 和未捕获的异常的时候线程会终止, interrupt 可以请求终止一个线程, 要想知道线程是否中断, 需要调用静态的 Thread.currentThread 获取到当前线程, 然后再调用 isInterrupted 方法
-
