@@ -13,7 +13,7 @@ head:
       content: '根据提供的Java教程内容，涵盖了Integer、Character、String、StringBuffer、数组以及Date等数据类型的定义和初始化示例，展示了基本类型与对象的创建方式。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/java/primer/5-defined-class.html'
+      content: 'https://www.wulicode.com/back-end/java/primer/5-defined-class.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/acd26a47bf811e08072076ef1876142d.png'

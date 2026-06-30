@@ -1,26 +1,24 @@
 ---
-description: '在集合中定义了接口, 实现和接口分离可以更好的为程序编写更多可能性的算法体系在 Java 类库中, 集合类的基本接口是 Collection 接口迭代器包含 4 个方法迭代器可以通过 while 来进行循环也可以使用 foreach 循环可以使用 lambda 表达式链表的图形化表示链表删除元素会比较轻松, 只需更新删除元素周围的链接即可多线程同时访问的时候使用 Vector, 非线程安全的时候使用 ArrayList有序集合, TreeSet 使用红黑树生成的数据有序集合将最小的数据从队列中移除HashMap , TreeMap 都实现了 Ma'
-lastUpdated: '2025-12-06 14:57:00'
-head: 
+description: 'Java集合框架包括Collection接口及其子接口（List、Set、Queue），以及Map接口。具体实现有LinkedList、ArrayList、HashSet、TreeSet、Queue与Deque、优先队列。映射部分涵盖基本操作、更新条目、视图和弱散列映射。'
+lastUpdated: '2026-06-30 13:31:05'
+head:
   - - meta
     - name: 'og:title'
-      content: '9. 集合'
+      content: '9.集合'
   - - meta
     - name: 'og:type'
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: '在集合中定义了接口, 实现和接口分离可以更好的为程序编写更多可能性的算法体系在 Java 类库中, 集合类的基本接口是 Collection 接口迭代器包含 4 个方法迭代器可以通过 while 来进行循环也可以使用 foreach 循环可以使用 lambda 表达式链表的图形化表示链表删除元素会比较轻松, 只需更新删除元素周围的链接即可多线程同时访问的时候使用 Vector, 非线程安全的时候使用 ArrayList有序集合, TreeSet 使用红黑树生成的数据有序集合将最小的数据从队列中移除HashMap , TreeMap 都实现了 Ma'
+      content: 'Java集合框架包括Collection接口及其子接口（List、Set、Queue），以及Map接口。具体实现有LinkedList、ArrayList、HashSet、TreeSet、Queue与Deque、优先队列。映射部分涵盖基本操作、更新条目、视图和弱散列映射。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/java/core/9-collection.html'
+      content: 'https://www.wulicode.com/back-end/java/core/9-collection.html'
   - - meta
     - name: 'og:image'
-      content: 'https://file.wulicode.com/notion/a5/a55d62a8d74fe42c9eb755a5c61575e8.png?x-oss-process=image/resize,m_mfit,w_400'
+      content: 'https://file.wulicode.com/feishu-images/0ec409ce67d9eee7916a6ea203f1c55e.png'
 ---
-# 9. 集合
-
-
+# 9.集合
 
 ## 9.1 Java 集合框架
 
@@ -32,7 +30,7 @@ head:
 
 在 Java 类库中, 集合类的基本接口是 Collection 接口
 
-```java
+```Java
 public interface Collection<E> {
     boolean add(E element); 
     Iterator‹E> iterator ();
@@ -43,7 +41,7 @@ public interface Collection<E> {
 
 迭代器包含 4 个方法
 
-```java
+```Java
 public interface Iterator<E>
 {
     E next ();
@@ -55,7 +53,7 @@ public interface Iterator<E>
 
 迭代器可以通过 while 来进行循环
 
-```java
+```Java
 CollectionString> c= . . 
 Iterator<String> iter = c.iterator (); 
 while (iter.hasNext ()) {
@@ -66,7 +64,7 @@ while (iter.hasNext ()) {
 
 也可以使用 foreach 循环
 
-```
+```Plaintext
 for(String element : c){
     // do something with element
 }
@@ -74,7 +72,7 @@ for(String element : c){
 
 可以使用 lambda 表达式
 
-```
+```Plaintext
 iterator.forEachRemaining(element -> do something with element);
 ```
 
@@ -82,19 +80,19 @@ iterator.forEachRemaining(element -> do something with element);
 
 ## 9.2 集合框架中的接口
 
-![](https://file.wulicode.com/notion/a5/a55d62a8d74fe42c9eb755a5c61575e8.png)
+![](https://file.wulicode.com/feishu-images/0ec409ce67d9eee7916a6ea203f1c55e.png)
 
 ## 9.3 具体集合
 
-![](https://file.wulicode.com/notion/73/7313dee3e958951765956c396338a8ac.png)
+![](https://file.wulicode.com/feishu-images/354090c3647c6fe3e0f05e106603a420.png)
 
 ### 9.3.1 链表(LinkedList)
 
-![](https://file.wulicode.com/notion/f2/f2fdeb6896781cbdaeb0a5adb40b1650.png)
+![](https://file.wulicode.com/feishu-images/e6721feb4a33d0341081551ddf14a07a.png)
 
 链表的图形化表示
 
-![](https://file.wulicode.com/notion/a2/a2a8d6601acf532f170be3e26101b869.png)
+![](https://file.wulicode.com/feishu-images/cb884915611f80947188896a5e7fe148.png)
 
 链表删除元素会比较轻松, 只需更新删除元素周围的链接即可
 
@@ -131,4 +129,3 @@ HashMap , TreeMap 都实现了 Map 接口
 ### 9.4.3 映射视图
 
 ### 9.4.4 弱散列映射
-

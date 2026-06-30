@@ -13,7 +13,7 @@ head:
       content: 'Java基础数据类型分为内置数据类型（如byte、short、int、long、float、double、char）与引用数据类型。每种内置类型有对应的包装类（如java.lang.Byte等），并具有特定取值范围。此外，还涉及转义序列及基础语法要点。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/java/primer/2-basic-types.html'
+      content: 'https://www.wulicode.com/back-end/java/primer/2-basic-types.html'
 ---
 # Java 学习 02 - 基础数据类型-基础语法
 

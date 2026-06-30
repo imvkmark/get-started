@@ -1,23 +1,21 @@
 ---
-description: '使用类型参数让代码有更高的可读性, 让程序更宜读也更安全泛型是普通类的工厂限制 T 只能是实现了 Comparable 接口虚拟机在处理的时候会擦除掉类型转换泛型表达式的两个步骤是在使用泛型的时候可能会遇到数据转换异常的情况, 这种情况可以使用 @SuppressWarnings("unchecked") 来进行忽略原因在于类型擦除, 擦除之后, Pair 类含有 Object 类型的字段, 而 Object 类虚拟机中的对象总有一个特定的非泛型类型, 因此所有类型查询只产生原始类型同样的道理, getClass 方法总是返回原始类型可以声明 Pair['
-lastUpdated: '2025-12-06 14:57:00'
-head: 
+description: '本章介绍了泛型程序设计，涵盖类型参数的好处、泛型定义和方法、类型变量限定、虚拟机中的类型擦除、转换泛型表达式与遗留代码调用，以及泛型的限制（如基本类型实例化、类型查询、数组创建等）。还涉及泛型类型继承规则、通配符类型（超类型限定、无限定通配符、捕获）及反射与泛型的应用。'
+lastUpdated: '2026-06-30 13:30:47'
+head:
   - - meta
     - name: 'og:title'
-      content: '8. 泛型程序设计'
+      content: '8.泛型程序设计'
   - - meta
     - name: 'og:type'
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: '使用类型参数让代码有更高的可读性, 让程序更宜读也更安全泛型是普通类的工厂限制 T 只能是实现了 Comparable 接口虚拟机在处理的时候会擦除掉类型转换泛型表达式的两个步骤是在使用泛型的时候可能会遇到数据转换异常的情况, 这种情况可以使用 @SuppressWarnings("unchecked") 来进行忽略原因在于类型擦除, 擦除之后, Pair 类含有 Object 类型的字段, 而 Object 类虚拟机中的对象总有一个特定的非泛型类型, 因此所有类型查询只产生原始类型同样的道理, getClass 方法总是返回原始类型可以声明 Pair['
+      content: '本章介绍了泛型程序设计，涵盖类型参数的好处、泛型定义和方法、类型变量限定、虚拟机中的类型擦除、转换泛型表达式与遗留代码调用，以及泛型的限制（如基本类型实例化、类型查询、数组创建等）。还涉及泛型类型继承规则、通配符类型（超类型限定、无限定通配符、捕获）及反射与泛型的应用。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/java/core/8-generics.html'
+      content: 'https://www.wulicode.com/back-end/java/core/8-generics.html'
 ---
-# 8. 泛型程序设计
-
-
+# 8.泛型程序设计
 
 ## 8.1 为什么要使用泛型程序设计
 
@@ -25,7 +23,7 @@ head:
 
 使用类型参数让代码有更高的可读性, 让程序更宜读也更安全
 
-```
+```Plaintext
 var files = new ArrayList<string>();
 ```
 
@@ -33,7 +31,7 @@ var files = new ArrayList<string>();
 
 ## 8.2 定义简单泛型
 
-```java
+```Java
 public class Pair<T, U> 
 {
     private T first;
@@ -54,7 +52,7 @@ public class Pair<T, U>
 
 ## 8.3 泛型方法
 
-```
+```Plaintext
 String middle = ArrayALg.<string> getMiddle("john", "Q.","Public");
 ```
 
@@ -62,7 +60,7 @@ String middle = ArrayALg.<string> getMiddle("john", "Q.","Public");
 
 限制 T 只能是实现了 Comparable 接口
 
-```
+```Plaintext
 // 限定类型
 public static <T extends Comparable> T min(T[] a) . . .
 
@@ -92,7 +90,7 @@ public static <T extends Comparable & Serializable> T min(T[] a) . . .
 
 ### 8.5.4 调用遗留代码
 
-在使用泛型的时候可能会遇到数据转换异常的情况, 这种情况可以使用  `@SuppressWarnings("unchecked")`  来进行忽略
+在使用泛型的时候可能会遇到数据转换异常的情况, 这种情况可以使用 `@SuppressWarnings("unchecked")` 来进行忽略
 
 ## 8.6 [WIP]限制与局限性
 
@@ -100,7 +98,7 @@ public static <T extends Comparable & Serializable> T min(T[] a) . . .
 
 原因在于类型擦除, 擦除之后, Pair 类含有 Object 类型的字段, 而 Object 类
 
-```diff
+```Plaintext
 - Pair<double>
 + Pair<Double>
 ```
@@ -109,11 +107,11 @@ public static <T extends Comparable & Serializable> T min(T[] a) . . .
 
 虚拟机中的对象总有一个特定的非泛型类型, 因此所有类型查询只产生原始类型
 
-同样的道理,  `getClass`  方法总是返回原始类型
+同样的道理, `getClass` 方法总是返回原始类型
 
 ### 8.6.3 不能创建参数化类型的数组
 
-可以声明  `Pair<string>[]`  的变量, 但是不能用  `new Pair<string>[10]`  初始化这个变量
+可以声明 `Pair<string>[]` 的变量, 但是不能用 `new Pair<string>[10]` 初始化这个变量
 
 ### 8.6.4 Varargs 警告
 
@@ -139,7 +137,7 @@ public static <T extends Comparable & Serializable> T min(T[] a) . . .
 
 允许类型参数发生变化, 这个可能更类似于 php 中的 “更灵活” 的接口约定
 
-```
+```Plaintext
 Pair<? extends Employee>
 ```
 
@@ -147,7 +145,7 @@ Pair<? extends Employee>
 
 这个限定为所有 Manager 的超类型
 
-```
+```Plaintext
 ? super Manager
 ```
 
@@ -156,4 +154,3 @@ Pair<? extends Employee>
 ### 8.8.4 通配符捕获
 
 ### 8.9 [WIP]反射和泛型
-

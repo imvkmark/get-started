@@ -13,7 +13,7 @@ head:
       content: 'Java学习笔记涵盖运算符（算术、关系、位、逻辑、赋值及其他）与循环分支结构，重点介绍了增强for循环的应用。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/java/primer/4-math-loop.html'
+      content: 'https://www.wulicode.com/back-end/java/primer/4-math-loop.html'
 ---
 # Java 学习 04 - 运算符-循环-分支结构
 

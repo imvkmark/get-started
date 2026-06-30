@@ -13,7 +13,7 @@ head:
       content: '本内容介绍了Java学习入门：在Ubuntu下配置运行环境，包括默认JDK、JDK文档、JRE等；概述Java体系（Java EE、SE、ME）及特性；最后演示了Hello World程序的编写与试运行。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/java/primer/1-install-get-started.html'
+      content: 'https://www.wulicode.com/back-end/java/primer/1-install-get-started.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/cdce7fca8d8c5c0e98c9833c6029cb19.png'

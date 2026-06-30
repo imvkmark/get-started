@@ -1,26 +1,24 @@
 ---
-description: '在分析问题的过程中寻找名词, 方法对应动词将时间度量和日历分开是一种很好的面向对象设计localDate介绍了简易的单元测试可以通过 javac 对文件进行动态的更新, 不必手动编译在局部代码中不用使用类型声明(Java 10)使用 objects 的方法来对值进行默认或者非空判定一个类的可以访问相同类的所有对象的私有数据 * (Java 的一大特点)私有方法用来隔离访问实例字段只能在构造函数中初始化将字段定义为 static, 则每个类只有这一个字段, 也称为类字段, 对于非静态的字段, 每个实例中都有自己的一个副本如题的名称根据不同的场景'
-lastUpdated: '2025-12-06 14:56:00'
-head: 
+description: '本章介绍Java面向对象编程的核心概念，涵盖类的定义、对象创建、预定义类（如LocalDate）的使用，以及用户自定义类的封装、构造器、静态字段与方法。深入讲解方法参数传递、对象构造过程（重载、初始化块等），包与类路径管理，Jar文件创建与执行，文档注释规范，最后总结类设计技巧。'
+lastUpdated: '2026-06-30 13:30:14'
+head:
   - - meta
     - name: 'og:title'
-      content: '4. 对象和类'
+      content: '4.对象和类'
   - - meta
     - name: 'og:type'
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: '在分析问题的过程中寻找名词, 方法对应动词将时间度量和日历分开是一种很好的面向对象设计localDate介绍了简易的单元测试可以通过 javac 对文件进行动态的更新, 不必手动编译在局部代码中不用使用类型声明(Java 10)使用 objects 的方法来对值进行默认或者非空判定一个类的可以访问相同类的所有对象的私有数据 * (Java 的一大特点)私有方法用来隔离访问实例字段只能在构造函数中初始化将字段定义为 static, 则每个类只有这一个字段, 也称为类字段, 对于非静态的字段, 每个实例中都有自己的一个副本如题的名称根据不同的场景'
+      content: '本章介绍Java面向对象编程的核心概念，涵盖类的定义、对象创建、预定义类（如LocalDate）的使用，以及用户自定义类的封装、构造器、静态字段与方法。深入讲解方法参数传递、对象构造过程（重载、初始化块等），包与类路径管理，Jar文件创建与执行，文档注释规范，最后总结类设计技巧。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/java/core/4-object-and-class.html'
+      content: 'https://www.wulicode.com/back-end/java/core/4-object-and-class.html'
   - - meta
     - name: 'og:image'
-      content: 'https://file.wulicode.com/notion/32/327dbc0c6db405e38ae9bac42ec2a715.png?x-oss-process=image/resize,m_mfit,w_400'
+      content: 'https://file.wulicode.com/feishu-images/52982697cc65520cf48a509de86882f5.png'
 ---
-# 4. 对象和类
-
-
+# 4.对象和类
 
 ## 4.1 概述
 
@@ -43,13 +41,13 @@ head:
 - 聚合(‘has-a’)
 - 继承(‘is-a’)
 
-![](https://file.wulicode.com/notion/32/327dbc0c6db405e38ae9bac42ec2a715.png)
+![](https://file.wulicode.com/feishu-images/52982697cc65520cf48a509de86882f5.png)
 
 ## 4.2 预定义类
 
 ### 4.2.1 对象与对象变量
 
-```
+```Plaintext
 Date date = new Date()
 ```
 
@@ -83,8 +81,8 @@ Date date = new Date()
 
 ### 4.3.4 从构造器开始
 
-- 构造器和类同名 * ( Php 废弃了这种写法, 改用了  `__construct()` )
-- 可以有多个构造器 * (此处和 php 不同)
+- 构造器和类同名 \* ( Php 废弃了这种写法, 改用了 `__construct()`)
+- 可以有多个构造器 \* (此处和 php 不同)
 - 构造器可以不限参数
 - 构造器无返回
 - 构造器和 new 操作符一起使用
@@ -93,7 +91,7 @@ Date date = new Date()
 
 在局部代码中不用使用类型声明(Java 10)
 
-```
+```Plaintext
 var duoli = new Employee('duoli');
 ```
 
@@ -103,7 +101,7 @@ var duoli = new Employee('duoli');
 
 使用 objects 的方法来对值进行默认或者非空判定
 
-```java
+```Java
 // 提供默认值
 name= Objects.requireNonNullElse(n, "unknown");
 
@@ -124,7 +122,7 @@ Objects.requireNonNull(n, "The name cannot be null");
 
 ### 4.3.9 基于类的访问权限
 
-一个类的可以访问相同类的所有对象的私有数据 * (Java 的一大特点)
+一个类的可以访问相同类的所有对象的私有数据 \* (Java 的一大特点)
 
 ### 4.3.10 私有方法
 
@@ -181,7 +179,7 @@ Objects.requireNonNull(n, "The name cannot be null");
 
 在类中设置并赋值, 初始值可以调用函数
 
-```java
+```Java
 class Employee 
 {
     private String name = ''
@@ -201,7 +199,7 @@ class Employee
 
 参数名会遮蔽同名的实例字段, 这样可以使用 this 来显示的调用变量名称
 
-```java
+```Java
 class Employee 
 {
     private String name = ''
@@ -215,7 +213,7 @@ class Employee
 
 ### 4.6.6 调用另一个构造器
 
-```java
+```Java
 public Employee(String name) 
 {
     this("Employee #" + nextId, name);
@@ -229,7 +227,7 @@ public Employee(String name)
 
 首先运行初始化块, 才运行构造器的主体部分, 不允许读取在后面初始化的字段
 
-```java
+```Java
 public Employee(String name)
 {
 
@@ -240,7 +238,6 @@ public Employee(String name)
         id = nextId;
         nextId++;
     }
-
 
     // object initialization block
     static
@@ -269,7 +266,7 @@ public Employee(String name)
 
 完全限定名称
 
-```java
+```Java
 // 完全限定
 java.time.LocalDate today = java.time.LocalDate.now();
 
@@ -284,7 +281,7 @@ import java.time.LocalDate;
 
 ### 4.7.3 静态导入
 
-```
+```Plaintext
 import static java.lang.System.*
 
 out.println("Hello world");
@@ -292,7 +289,7 @@ out.println("Hello world");
 
 静态导入指定的包
 
-```
+```Plaintext
 import static java.lang.System.out
 
 out.println("Hello world");
@@ -300,15 +297,15 @@ out.println("Hello world");
 
 ### 4.7.4 在包中增加类
 
-需要在代码的头部放置 package 语句, 文件目录的位置也应该按照包名去组织  `tech/weiran/blog/Welcome.java`
+需要在代码的头部放置 package 语句, 文件目录的位置也应该按照包名去组织 `tech/weiran/blog/Welcome.java`
 
-```
+```Plaintext
 package tech.weiran.blog;
 ```
 
 这样运行 javac 和 java 的不同在于
 
-```
+```Plaintext
 javac tech/weiran/blog/Welcome.java    // 目录
 
 java tech.weiran.blog.Welcome          // 类名
@@ -322,7 +319,7 @@ java tech.weiran.blog.Welcome          // 类名
 - 标记为 private 的在本类使用
 - 没有指定 public/private 可以在本包内所有方法访问
 
-**变量**  和包一样, 建议加上修饰符, 因为默认情况下会破坏封装
+**变量** 和包一样, 建议加上修饰符, 因为默认情况下会破坏封装
 
 ### 4.7.6 类路径
 
@@ -333,11 +330,11 @@ java tech.weiran.blog.Welcome          // 类名
 
 - 如果类可以被共享, 需要把类文件放到同一个目录中
 - 如果是 jar 包, 把包放在另一个目录并设置类路径 (class path), 支持通配符
-- 类路径中必须要包含当前目录  `.`  , 如果没有编译不会报错但无法运行
+- 类路径中必须要包含当前目录 `.` , 如果没有编译不会报错但无法运行
 
 ### 4.7.7 设置类路径
 
-最好使用  `-class-path`  来指定类路径, 或者通过设置  `CLASSPATH`  环境变量来指定, 在 Java 9 中, 还可以从模块路径加载类.
+最好使用 `-class-path` 来指定类路径, 或者通过设置 `CLASSPATH` 环境变量来指定, 在 Java 9 中, 还可以从模块路径加载类.
 
 ## 4.8 Jar 文件
 
@@ -345,7 +342,7 @@ java tech.weiran.blog.Welcome          // 类名
 
 ### 4.8.1 创建 jar 文件
 
-```
+```Plaintext
 jar -cvf jarFileName file1, file2
 
 // 例如
@@ -353,17 +350,17 @@ jar -cvf jarFileName file1, file2
 jar cvf CalculatorClasses.jar *.class icon.gif
 ```
 
-![](https://file.wulicode.com/notion/66/667f04e29ee550c3c0ff5305dde19f4a.png)
+![](https://file.wulicode.com/feishu-images/fc39a28d0e1489ddb1d19da40d3d280a.png)
 
-![](https://file.wulicode.com/notion/e7/e786d7ec8ee57640a391b60fd3ecce3c.png)
+![](https://file.wulicode.com/feishu-images/61b611701b25a2a437c3b566d610b598.png)
 
 ### 4.8.2 清单文件
 
-jar 包包含的文件  `MANIFEST.MF` , 用来描述归档文件的特殊特性, 位于  `META-INF`  子目录中
+jar 包包含的文件 `MANIFEST.MF`, 用来描述归档文件的特殊特性, 位于 `META-INF` 子目录中
 
 https://docs.oracle.com/en/java/javase/17/docs/specs/jar/jar.html
 
-```
+```Plaintext
 Manifest-Version: 1.0
 lines describing this archive
 Name: Woozle.class
@@ -374,19 +371,19 @@ iines describing this package
 
 要想编辑清单文件，需要将希望添加到清单文件中的行放到文本文件中，然后运行:
 
-```
+```Plaintext
 jar cfm jarFileName manifestFileName . .
 ```
 
 例如，要创建 一个包含清单文件的JAR文件，应该运行:
 
-```
+```Plaintext
 jar cfm MyArchive.jar manifest.mf com/mycompany/mypkg/*.class
 ```
 
 要想更新一个已有的JAR文件的清单，则需要将增加的部分放置到一个文本文件中，然后执行以下命令:
 
-```
+```Plaintext
 jar ufm MyArchive.jar manifest-additions.mf
 ```
 
@@ -394,21 +391,21 @@ jar ufm MyArchive.jar manifest-additions.mf
 
 使用 e 选项指定入口点
 
-```
+```Plaintext
 jar cvfe MyProgram.jar com.mycompany.mypkg.MainAppClass files to add
 ```
 
 或者在清单文件中指定程序的主类
 
-```
+```Plaintext
 Main-Class : com.mycompany.mypkg.MainAppClass
 ```
 
-不要为主类名增加扩展名  `.class`
+不要为主类名增加扩展名 `.class`
 
 启动
 
-```
+```Plaintext
 java -jar MyProgram.jar
 ```
 
@@ -418,7 +415,7 @@ java -jar MyProgram.jar
 
 对于不同版本之间的 API 不同, Java 9 引入了多版本 Jar(multi-release JAR), 因为 Java 8 不知道这个新增功能, 所以只会加载默认类, 9 则会加载新版本类. 文件结构如下
 
-```
+```Plaintext
 
 Application.class
 BuildingBlocks.class
@@ -433,33 +430,33 @@ META-INF
 
 要增加不同的版本使用 –release 标志
 
-```
+```Plaintext
 jar uf MyProgram.jar --release 9 Application.class
 ```
 
 要从头构建一个多版本的 jar 文件, 可以使用 -C 选项, 对应不同版本切换到不同的目录
 
-```
+```Plaintext
 jar cf MyProgram.jar -C bin/8. --release 9 -C bin/9 Aplication.class
 ```
 
 面向不同版本编译时, 要使用 –release 标志和 -d 标志来指定输出目录
 
-```
+```Plaintext
 javac -d bin/8 --release 8 ...
 ```
 
--  `-release`  是 java 9 新增, 较早的版本中需要使用  `source` ,  `target` ,  `boot-classpath` 
+- `-release` 是 java 9 新增, 较早的版本中需要使用 `source`, `target`, `boot-classpath`
 
 多版本的库仅仅对 java 自带的 api 适用, 如果涉及到三方的 api, 不会支持
 
 ### 4.8.5 命令行选项的说明
 
-对于命令行选项, Java 9 之后支持长命令 例如  `--class-path`  而不是  `-classpath`
+对于命令行选项, Java 9 之后支持长命令 例如 `--class-path` 而不是 `-classpath`
 
 为了简短可以使用短命令
 
-```
+```Plaintext
 jar -c -v -f ...
 jar -cvf     # 此项目可能会容易混淆, 例如 -c, -p, -cp(短线是 java 经典表示方法, 不同于 shell)
 jar --create--verbose --file jarFileName file1 file2
@@ -481,8 +478,8 @@ javadoc 从一下几项中抽取信息
 
 一般的写法和 php 一致
 
-- 对于代码可以使用  `{@code Code}`  来生成, 一般来讲 IDE 都会自动生成
-- 对于链接可以使用  `{@link package.class#feature label}`  可以放到注释中, 用来链接到指定的类/参数
+- 对于代码可以使用 `{@code Code}` 来生成, 一般来讲 IDE 都会自动生成
+- 对于链接可以使用 `{@link package.class#feature label}` 可以放到注释中, 用来链接到指定的类/参数
 
 对于注释来讲, 比 php 优秀的点是, 因为代码是强类型, 就没必要再文档中再标识类型了
 
@@ -496,21 +493,21 @@ import 之后, 类之前
 
 ### 4.9.5 通用注释
 
--  `@author name`  : 作者条目
--  `@since 1.7.1`  : 开始于
--  `@version name`  : 版本条目
--  `@see name`  : 推荐
--  `@link name`  : 文档
+- `@author name` : 作者条目
+- `@since 1.7.1` : 开始于
+- `@version name` : 版本条目
+- `@see name` : 推荐
+- `@link name` : 文档
 
 ### 4.9.6 包注释
 
-**方法 1(推荐)**  提供一个  `package-info.java`  文件,这个文件必须包含一个初始的以 `/**`  和  `*/`  界定的Javadoc 注释，后面是一个 package 语句。它不能包含更多的代码或注释
+**方法 1(推荐)** 提供一个 `package-info.java` 文件,这个文件必须包含一个初始的以`/**` 和 `*/` 界定的Javadoc 注释，后面是一个 package 语句。它不能包含更多的代码或注释
 
-**方法 2**  提供一个  `package.html`  文件, 内容放到 body 中
+**方法 2** 提供一个 `package.html` 文件, 内容放到 body 中
 
 ### 4.9.7 生成文档
 
-```
+```Plaintext
 # 单个包
 javadoc - d docDirectory nameOPackage
 
@@ -523,15 +520,15 @@ javadoc -d docDirectory *.java
 
 其他选项
 
--  `link` 
+- `link`
 
 标准类库链接到 oracle 网站
 
--  `linksource` 
+- `linksource`
 
 源文件转换为 html
 
--  `overview filename` 
+- `overview filename`
 
 提供预览入口
 
@@ -546,6 +543,3 @@ javadoc -d docDirectory *.java
 - 分解有过多指责的类
 - 类名和方法名要能够体现他们的职责
 - 有限使用不可变的类
-
-
-
