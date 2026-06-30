@@ -1,7 +1,7 @@
 ---
-description: 'java.lang.StrictMath 提供了一组严格遵循 IEEE 754 标准的数学计算方法，确保跨平台结果一致性。以下是按功能分组的方法列表。int abs(int a)返回整数的绝对值。long abs(long a)返回长整数的绝对值。float abs(float a)返回浮点数的绝对值。double abs(double a)返回双精度浮点数的绝对值。int min(int a, int b)返回两个整数中的较小值。long min(long a, long b)返回两个长整数中的较小值。float min(float a'
-lastUpdated: '2025-12-06 15:02:00'
-head: 
+description: 'java.lang.StrictMath严格遵循IEEE 754标准，提供算术运算、指数与对数、三角函数、舍入取整、随机数及单位增量等数学计算方法，确保跨平台结果一致。'
+lastUpdated: '2026-06-30 09:45:06'
+head:
   - - meta
     - name: 'og:title'
       content: 'java.lang.StrictMath - 遵循 IEEE 754 标准的数学计算方法'
@@ -10,24 +10,23 @@ head:
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: 'java.lang.StrictMath 提供了一组严格遵循 IEEE 754 标准的数学计算方法，确保跨平台结果一致性。以下是按功能分组的方法列表。int abs(int a)返回整数的绝对值。long abs(long a)返回长整数的绝对值。float abs(float a)返回浮点数的绝对值。double abs(double a)返回双精度浮点数的绝对值。int min(int a, int b)返回两个整数中的较小值。long min(long a, long b)返回两个长整数中的较小值。float min(float a'
+      content: 'java.lang.StrictMath严格遵循IEEE 754标准，提供算术运算、指数与对数、三角函数、舍入取整、随机数及单位增量等数学计算方法，确保跨平台结果一致。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/java/refs/base/lang-strict-math.html'
+      content: 'https://www.wulicode.com/back-end/java/refs/base/lang-strict-math.html'
 ---
 # java.lang.StrictMath - 遵循 IEEE 754 标准的数学计算方法
 
+`java.lang.StrictMath` 提供了一组严格遵循 IEEE 754 标准的数学计算方法，确保跨平台结果一致性。以下是按功能分组的方法列表。
 
+::: info ℹ️
 
-`java.lang.StrictMath`  提供了一组严格遵循 IEEE 754 标准的数学计算方法，确保跨平台结果一致性。以下是按功能分组的方法列表。
+跨平台一致性：StrictMath 使用严格定义的算法实现所有方法，因此性能可能略低于 Math
+与 Math 的区别：Math 在某些平台上可能会使用硬件优化，而 StrictMath 的结果在所有平台上都一致, `StrictMath` 适合对结果一致性要求较高的场景，例如科学计算或需要跨平台精确一致性的应用
 
-::: info   跨平台一致性：StrictMath 使用严格定义的算法实现所有方法，因此性能可能略低于 Math
-
-
-与 Math 的区别：Math 在某些平台上可能会使用硬件优化，而 StrictMath 的结果在所有平台上都一致,  `StrictMath`  适合对结果一致性要求较高的场景，例如科学计算或需要跨平台精确一致性的应用
 :::
 
-##  **算术运算** 
+## **算术运算**
 
 `int abs(int a)`
 
@@ -93,9 +92,9 @@ head:
 
 返回具有指定符号的双精度浮点数。
 
-_________________
+---
 
-##  **指数与对数运算** 
+## **指数与对数运算**
 
 `double exp(double a)`
 
@@ -125,14 +124,14 @@ _________________
 
 返回 sqrt(x² + y²), 计算斜边长度
 
-```java
+```Java
 double hypotenuse = StrictMath.hypot(3, 4); // sqrt(3^2 + 4^2)
 System.out.println(hypotenuse); // 输出 5.0
 ```
 
-_________________
+---
 
-##  **三角函数** 
+## **三角函数**
 
 `double sin(double a)`
 
@@ -162,9 +161,9 @@ _________________
 
 返回点 (x, y) 的极坐标角度值。
 
-_________________
+---
 
-##  **舍入与取整** 
+## **舍入与取整**
 
 `double ceil(double a)`
 
@@ -186,15 +185,15 @@ _________________
 
 返回双精度浮点数的四舍五入长整数值。
 
-_________________
+---
 
-##  **随机与单位增量** 
+## **随机与单位增量**
 
 `double random()`
 
-返回  `[0.0, 1.0)`  区间的伪随机数
+返回 `[0.0, 1.0)` 区间的伪随机数
 
-```java
+```Java
 double randomValue = StrictMath.random();
 System.out.println(randomValue); // 输出一个 [0.0, 1.0) 的随机数
 ```
@@ -214,6 +213,3 @@ System.out.println(randomValue); // 输出一个 [0.0, 1.0) 的随机数
 `double ulp(double d)`
 
 返回指定双精度浮点数的最小单位增量
-
-
-

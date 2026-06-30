@@ -1,7 +1,7 @@
 ---
-description: 'JLabel()创建一个没有文本或图标的 JLabel。JLabel(String text)使用指定文本创建一个 JLabel。JLabel(Icon icon)使用指定图标创建一个 JLabel。JLabel(String text, int horizontalAlignment)使用指定文本和水平对齐方式创建一个 JLabel。JLabel(Icon icon, int horizontalAlignment)使用指定图标和水平对齐方式创建一个 JLabel。JLabel(String text, Icon icon, int horizon'
-lastUpdated: '2025-12-06 15:31:00'
-head: 
+description: 'javax.swing.JLabel 是Swing标签组件，支持通过构造方法创建，提供设置文本和图标的方法，可调整水平和垂直对齐方式，具备显示属性如字体、颜色，并继承自JComponent的常用方法。'
+lastUpdated: '2026-06-30 09:45:59'
+head:
   - - meta
     - name: 'og:title'
       content: 'javax.swing.JLabel'
@@ -10,42 +10,40 @@ head:
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: 'JLabel()创建一个没有文本或图标的 JLabel。JLabel(String text)使用指定文本创建一个 JLabel。JLabel(Icon icon)使用指定图标创建一个 JLabel。JLabel(String text, int horizontalAlignment)使用指定文本和水平对齐方式创建一个 JLabel。JLabel(Icon icon, int horizontalAlignment)使用指定图标和水平对齐方式创建一个 JLabel。JLabel(String text, Icon icon, int horizon'
+      content: 'javax.swing.JLabel 是Swing标签组件，支持通过构造方法创建，提供设置文本和图标的方法，可调整水平和垂直对齐方式，具备显示属性如字体、颜色，并继承自JComponent的常用方法。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/java/refs/desktop/swing-jlable.html'
+      content: 'https://www.wulicode.com/back-end/java/refs/desktop/swing-jlable.html'
 ---
 # javax.swing.JLabel
-
-
 
 ## 构造方法
 
 `JLabel()`
 
-创建一个没有文本或图标的  `JLabel` 。
+创建一个没有文本或图标的 `JLabel` 。
 
 `JLabel(String text)`
 
-使用指定文本创建一个  `JLabel` 。
+使用指定文本创建一个 `JLabel` 。
 
 `JLabel(Icon icon)`
 
-使用指定图标创建一个  `JLabel` 。
+使用指定图标创建一个 `JLabel` 。
 
 `JLabel(String text, int horizontalAlignment)`
 
-使用指定文本和水平对齐方式创建一个  `JLabel` 。
+使用指定文本和水平对齐方式创建一个 `JLabel` 。
 
 `JLabel(Icon icon, int horizontalAlignment)`
 
-使用指定图标和水平对齐方式创建一个  `JLabel` 。
+使用指定图标和水平对齐方式创建一个 `JLabel` 。
 
 `JLabel(String text, Icon icon, int horizontalAlignment)`
 
-使用指定文本、图标和水平对齐方式创建一个  `JLabel`
+使用指定文本、图标和水平对齐方式创建一个 `JLabel`
 
-_________________
+---
 
 ## JLabel 的方法
 
@@ -135,11 +133,11 @@ _________________
 
 判断标签是否填充背景。
 
-_________________
+---
 
 ## 继承方法
 
-继承自  `javax.swing.JComponent`  的方法：
+继承自 `javax.swing.JComponent` 的方法：
 
 `void setForeground(Color fg)`
 
@@ -165,7 +163,7 @@ _________________
 
 获取字体。
 
-继承自  `java.awt.Component`  的方法：
+继承自 `java.awt.Component` 的方法：
 
 `void setBounds(int x, int y, int width, int height)`
 
@@ -179,7 +177,7 @@ _________________
 
 判断组件是否可见。
 
-继承自  `java.lang.Object`  的方法：
+继承自 `java.lang.Object` 的方法：
 
 `String toString()`
 
@@ -193,8 +191,7 @@ _________________
 
 返回对象的哈希码。
 
-###  **说明** 
+### **说明**
 
--  `JLabel`  的方法分为设置文本、图标的内容与对齐方式，以及组件的外观和事件控制。
-- 许多方法继承自  `JComponent`  或  `Container` ，提供了对组件更细粒度的操作支持。
-
+- `JLabel` 的方法分为设置文本、图标的内容与对齐方式，以及组件的外观和事件控制。
+- 许多方法继承自 `JComponent` 或 `Container` ，提供了对组件更细粒度的操作支持。

@@ -1,7 +1,7 @@
 ---
-description: 'JMenuItem()创建一个空的菜单项，没有文本或图标。JMenuItem(String text)创建一个具有指定文本的菜单项。JMenuItem(String text, Icon icon)创建一个具有指定文本和图标的菜单项。JMenuItem(String text, int mnemonic)创建一个具有指定文本和助记符的菜单项。JMenuItem(Action a)创建一个基于指定 Action 的菜单项。void setAction(Action a)设置与菜单项关联的 Action。Action getAction()获'
-lastUpdated: '2025-12-06 15:32:00'
-head: 
+description: 'javax.swing.JMenuItem 是 Swing 菜单项组件，支持构造方法创建实例，提供设置动作、事件、属性（如助记符、快捷键）及外观的方法，并继承自 AbstractButton 和 Object 类的方法。'
+lastUpdated: '2026-06-30 09:46:11'
+head:
   - - meta
     - name: 'og:title'
       content: 'javax.swing.JMenuItem'
@@ -10,14 +10,12 @@ head:
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: 'JMenuItem()创建一个空的菜单项，没有文本或图标。JMenuItem(String text)创建一个具有指定文本的菜单项。JMenuItem(String text, Icon icon)创建一个具有指定文本和图标的菜单项。JMenuItem(String text, int mnemonic)创建一个具有指定文本和助记符的菜单项。JMenuItem(Action a)创建一个基于指定 Action 的菜单项。void setAction(Action a)设置与菜单项关联的 Action。Action getAction()获'
+      content: 'javax.swing.JMenuItem 是 Swing 菜单项组件，支持构造方法创建实例，提供设置动作、事件、属性（如助记符、快捷键）及外观的方法，并继承自 AbstractButton 和 Object 类的方法。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/java/refs/desktop/swing-jmenuitem.html'
+      content: 'https://www.wulicode.com/back-end/java/refs/desktop/swing-jmenuitem.html'
 ---
 # javax.swing.JMenuItem
-
-
 
 ## 构造方法
 
@@ -39,9 +37,9 @@ head:
 
 `JMenuItem(Action a)`
 
-创建一个基于指定  `Action`  的菜单项。
+创建一个基于指定 `Action` 的菜单项。
 
-_________________
+---
 
 ## JMenuItem 的方法
 
@@ -49,11 +47,11 @@ _________________
 
 `void setAction(Action a)`
 
-设置与菜单项关联的  `Action` 。
+设置与菜单项关联的 `Action` 。
 
 `Action getAction()`
 
-获取与菜单项关联的  `Action` 。
+获取与菜单项关联的 `Action` 。
 
 `void setActionCommand(String command)`
 
@@ -71,7 +69,7 @@ _________________
 
 移除菜单项的动作监听器。
 
-_________________
+---
 
 ### 菜单项的属性设置
 
@@ -107,7 +105,7 @@ _________________
 
 判断菜单项是否选中。
 
-_________________
+---
 
 ### 助记符和快捷键
 
@@ -127,7 +125,7 @@ _________________
 
 获取菜单项的快捷键。
 
-_________________
+---
 
 ### 菜单项的外观设置
 
@@ -171,11 +169,11 @@ _________________
 
 获取菜单项的垂直对齐方式。
 
-_________________
+---
 
 ## 继承方法
 
-### 继承自  `javax.swing.AbstractButton`  的方法：
+### 继承自 `javax.swing.AbstractButton` 的方法：
 
 `void setPressedIcon(Icon icon)`
 
@@ -185,7 +183,7 @@ _________________
 
 设置按钮的工具提示文本。
 
-继承自  `java.awt.Component`  的方法：
+继承自 `java.awt.Component` 的方法：
 
 `void setBackground(Color color)`
 
@@ -195,7 +193,7 @@ _________________
 
 设置组件的前景颜色。
 
-### 继承自  `java.lang.Object`  的方法：
+### 继承自 `java.lang.Object` 的方法：
 
 `boolean equals(Object obj)`
 
@@ -208,6 +206,3 @@ _________________
 `String toString()`
 
 返回对象的字符串表示形式
-
-
-

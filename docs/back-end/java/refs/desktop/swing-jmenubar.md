@@ -1,7 +1,7 @@
 ---
-description: 'JMenuBar()创建一个新的空菜单栏。void add(JMenu menu)将指定的菜单添加到菜单栏。void remove(JMenu menu)从菜单栏中移除指定的菜单。void remove(int index)根据索引从菜单栏中移除菜单。int getMenuCount()返回菜单栏中菜单的数量。JMenu getMenu(int index)根据索引获取菜单栏中的菜单。void setMargin(Insets m)设置菜单栏的边距。Insets getMargin()获取菜单栏的边距。void setBord'
-lastUpdated: '2025-12-06 15:32:00'
-head: 
+description: 'javax.swing.JMenuBar用于创建菜单栏，提供构造方法及菜单管理（添加、移除菜单）、布局与外观设置（不透明、边框）、键盘快捷键管理（助记符、加速器）等功能，并继承自JComponent和Container的方法。'
+lastUpdated: '2026-06-30 09:46:07'
+head:
   - - meta
     - name: 'og:title'
       content: 'javax.swing.JMenuBar'
@@ -10,14 +10,12 @@ head:
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: 'JMenuBar()创建一个新的空菜单栏。void add(JMenu menu)将指定的菜单添加到菜单栏。void remove(JMenu menu)从菜单栏中移除指定的菜单。void remove(int index)根据索引从菜单栏中移除菜单。int getMenuCount()返回菜单栏中菜单的数量。JMenu getMenu(int index)根据索引获取菜单栏中的菜单。void setMargin(Insets m)设置菜单栏的边距。Insets getMargin()获取菜单栏的边距。void setBord'
+      content: 'javax.swing.JMenuBar用于创建菜单栏，提供构造方法及菜单管理（添加、移除菜单）、布局与外观设置（不透明、边框）、键盘快捷键管理（助记符、加速器）等功能，并继承自JComponent和Container的方法。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/java/refs/desktop/swing-jmenubar.html'
+      content: 'https://www.wulicode.com/back-end/java/refs/desktop/swing-jmenubar.html'
 ---
 # javax.swing.JMenuBar
-
-
 
 ## 构造方法
 
@@ -25,7 +23,7 @@ head:
 
 创建一个新的空菜单栏。
 
-_________________
+---
 
 ## JMenuBar 的方法
 
@@ -95,11 +93,11 @@ _________________
 
 获取菜单栏的选择模型。
 
-_________________
+---
 
 ## 继承方法
 
-继承自  `javax.swing.JComponent`  的方法：
+继承自 `javax.swing.JComponent` 的方法：
 
 `void setForeground(Color fg)`
 
@@ -117,7 +115,7 @@ _________________
 
 设置菜单栏的可见性。
 
-继承自  `java.awt.Container`  的方法：
+继承自 `java.awt.Container` 的方法：
 
 `void add(Component comp)`
 
@@ -131,7 +129,7 @@ _________________
 
 根据索引获取容器中的组件。
 
-继承自  `java.lang.Object`  的方法：
+继承自 `java.lang.Object` 的方法：
 
 `boolean equals(Object obj)`
 
@@ -144,4 +142,3 @@ _________________
 `int hashCode()`
 
 返回对象的哈希码。
-

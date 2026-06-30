@@ -1,10 +1,10 @@
 ---
 description: ''
-lastUpdated: '2025-12-06 15:00:00'
-head: 
+lastUpdated: '2026-06-30 09:49:06'
+head:
   - - meta
     - name: 'og:title'
-      content: '基本结构'
+      content: 'java.basic - 基本结构'
   - - meta
     - name: 'og:type'
       content: 'article'
@@ -13,13 +13,8 @@ head:
       content: ''
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/java/refs/basic/index.html'
+      content: 'https://www.wulicode.com/back-end/java/refs/basic/index.html'
 ---
-# 基本结构
+# java.basic - 基本结构
 
-
-
-[Enum 解读](enum.md)
-
-
-
+[Enum 解读](/back-end/java/refs/basic/enum.md)
