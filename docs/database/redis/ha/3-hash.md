@@ -1,6 +1,6 @@
 ---
 description: 'Redis哈希类型是键值结构，支持存储字段-值映射。特点包括节省内存、适合对象存储。常用命令有hget/hset/hdel、hexists/hlen、hmget/hmset、hgetall/hvals/hkeys、hsetnx/hincrby/hincrbyfloat。实战中保存用户数据有三种方式：直接使用字符串、使用哈希类型、或结合其他结构，哈希类型在内存占用和操作效率上更优。'
-lastUpdated: '2026-06-21 22:47:33'
+lastUpdated: '2026-06-30 22:48:39'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: 'Redis哈希类型是键值结构，支持存储字段-值映射。特点包括节省内存、适合对象存储。常用命令有hget/hset/hdel、hexists/hlen、hmget/hmset、hgetall/hvals/hkeys、hsetnx/hincrby/hincrbyfloat。实战中保存用户数据有三种方式：直接使用字符串、使用哈希类型、或结合其他结构，哈希类型在内存占用和操作效率上更优。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/redis/ha/3-hash.html'
+      content: 'https://www.wulicode.com/database/redis/ha/3-hash.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/623f8fee105599bf083c1ced5b118522.png'
@@ -21,7 +21,9 @@ head:
 # (三)：Hash类型
 
 ::: info ℹ️
+
  原文链接 : [高可用Redis(三)：Hash类型](https://www.cnblogs.com/renpingsheng/p/9774526.html)
+
 :::
 
 ## 1.哈希类型键值结构

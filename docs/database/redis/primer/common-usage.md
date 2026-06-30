@@ -1,6 +1,6 @@
 ---
 description: 'Redis支持多种数据类型：字符串（string）支持set、setnx、get、incr、mset等；哈希（hash）支持hset、hget、hdel、hlen等；集合（set）支持sadd、srem、sismember等；有序集合（zset）支持zadd、zscore、zrank、zrem等；列表（list）支持lpush、rpush、lpop、rpop等。'
-lastUpdated: '2026-06-21 22:43:31'
+lastUpdated: '2026-06-30 22:49:57'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: 'Redis支持多种数据类型：字符串（string）支持set、setnx、get、incr、mset等；哈希（hash）支持hset、hget、hdel、hlen等；集合（set）支持sadd、srem、sismember等；有序集合（zset）支持zadd、zscore、zrank、zrem等；列表（list）支持lpush、rpush、lpop、rpop等。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/redis/primer/common-usage.html'
+      content: 'https://www.wulicode.com/database/redis/primer/common-usage.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/c0dd1c7d5f27729b12be293f259b987d.jpg'

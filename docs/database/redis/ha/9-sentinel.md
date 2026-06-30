@@ -1,6 +1,6 @@
 ---
 description: 'Redis Sentinel用于解决主从复制的高可用问题，通过架构实现自动故障转移。其安装配置包括设置主从节点、运行Sentinel，并通过Python客户端持续读写。故障模拟后查看结果和日志。实现原理涉及三个定时任务、主观与客观下线、领导者选举、故障转移及slave节点选择。'
-lastUpdated: '2026-06-21 22:49:27'
+lastUpdated: '2026-06-30 22:49:08'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: 'Redis Sentinel用于解决主从复制的高可用问题，通过架构实现自动故障转移。其安装配置包括设置主从节点、运行Sentinel，并通过Python客户端持续读写。故障模拟后查看结果和日志。实现原理涉及三个定时任务、主观与客观下线、领导者选举、故障转移及slave节点选择。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/redis/ha/9-sentinel.html'
+      content: 'https://www.wulicode.com/database/redis/ha/9-sentinel.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/6eafe08c4b99ef6e1e13777091de0aa1.png'
@@ -21,7 +21,9 @@ head:
 # (九)：Redis Sentinel
 
 ::: info ℹ️
+
  原文链接 : [高可用Redis(九)：Redis Sentinel](https://www.cnblogs.com/renpingsheng/p/9803838.html)
+
 :::
 
 ## 1.主从复制高可用的问题

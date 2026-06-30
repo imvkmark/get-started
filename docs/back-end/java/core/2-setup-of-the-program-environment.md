@@ -1,6 +1,6 @@
 ---
 description: '本文介绍了Java程序环境搭建的完整流程，包括安装JDK与JRE工具包、编写首个Java程序、使用IDE开发工具、JShell交互式编程，以及Java Web环境的创建、服务器配置与项目运行。'
-lastUpdated: '2026-06-29 13:28:07'
+lastUpdated: '2026-06-30 17:46:05'
 head:
   - - meta
     - name: 'og:title'
@@ -28,7 +28,7 @@ head:
 
 看下JavaSE, JavaEE, JavaME 三者之间的关系
 
-```Plaintext
+```Plain Text
 ┌─────────────────────────┐
 │Java EE                  │ JavaEE (Java Platform,Enterprise Edition，企业版)
 │   ┌───────────────────┐ │  

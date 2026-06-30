@@ -1,6 +1,6 @@
 ---
 description: '本文介绍了在RHEL系系统（CentOS 7和RockyLinux）上安装和配置Redis的步骤，包括使用dnf模块启用remi仓库安装Redis 7.0，以及配置远程访问时需注意默认未开启无密码连接。'
-lastUpdated: '2026-06-20 11:51:33'
+lastUpdated: '2026-06-30 22:50:02'
 head:
   - - meta
     - name: 'og:title'
@@ -13,12 +13,14 @@ head:
       content: '本文介绍了在RHEL系系统（CentOS 7和RockyLinux）上安装和配置Redis的步骤，包括使用dnf模块启用remi仓库安装Redis 7.0，以及配置远程访问时需注意默认未开启无密码连接。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/redis/primer/install-at-rhel.html'
+      content: 'https://www.wulicode.com/database/redis/primer/install-at-rhel.html'
 ---
 # [译] 在 RHEL 系统上安装和配置 Redis
 
 ::: info 🔗
+
 原文链接 : [How to Install and Configure Redis on CentOS 7](https://linuxize.com/post/how-to-install-and-configure-redis-on-centos-7/)
+
 :::
 
 Redis 是一个开源的内存型数据库。它可以用作数据库，缓存或消息代理，并支持各种数据结构，例如字符串，哈希，列表，集合等。Redis 通过 Redis Sentinel 提供高可用性，包括监视，通知，自动故障转移。它还使用 Redis Cluster 在多个 Redis 节点之间提供自动分区。

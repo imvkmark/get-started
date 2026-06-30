@@ -1,6 +1,6 @@
 ---
 description: 'Redis Cluster通过虚拟槽分区实现数据分布，解决单机性能与容量瓶颈。其架构包括节点通信（meet）、槽分配、主从复制、客户端路由（moved/ask重定向）及故障自动发现与恢复。但也存在带宽消耗、Pub/Sub广播、数据倾斜等局限，适用于大规模高可用场景。'
-lastUpdated: '2026-06-21 22:50:13'
+lastUpdated: '2026-06-30 22:49:19'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: 'Redis Cluster通过虚拟槽分区实现数据分布，解决单机性能与容量瓶颈。其架构包括节点通信（meet）、槽分配、主从复制、客户端路由（moved/ask重定向）及故障自动发现与恢复。但也存在带宽消耗、Pub/Sub广播、数据倾斜等局限，适用于大规模高可用场景。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/redis/ha/12-cluster.html'
+      content: 'https://www.wulicode.com/database/redis/ha/12-cluster.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/2d6b09bb65fac3bd23369b814fa68d94.png'
@@ -21,7 +21,9 @@ head:
 # (十二)：Redis Cluster
 
 ::: info 🔗
+
  原文链接 : [高可用Redis(十二)：Redis Cluster](https://www.cnblogs.com/renpingsheng/p/9862485.html)
+
 :::
 
 Redis Cluster是Redis官方提供的Redis集群功能

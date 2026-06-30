@@ -1,6 +1,6 @@
 ---
 description: '本文介绍了Redis的慢查询生命周期、配置方法及运维经验，Pipeline的概念、示例与使用建议，以及发布订阅的角色、模型和命令，并对比了与消息队列的区别。'
-lastUpdated: '2026-06-21 22:48:00'
+lastUpdated: '2026-06-30 22:48:45'
 head:
   - - meta
     - name: 'og:title'
@@ -13,12 +13,14 @@ head:
       content: '本文介绍了Redis的慢查询生命周期、配置方法及运维经验，Pipeline的概念、示例与使用建议，以及发布订阅的角色、模型和命令，并对比了与消息队列的区别。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/redis/ha/5-query-pipline-sub.html'
+      content: 'https://www.wulicode.com/database/redis/ha/5-query-pipline-sub.html'
 ---
 # (五)：瑞士军刀之慢查询，Pipeline和发布订阅
 
 ::: info ℹ️
+
 原文链接 : [高可用Redis(五)：瑞士军刀之慢查询，Pipeline和发布订阅](https://www.cnblogs.com/renpingsheng/p/9779926.html)
+
 :::
 
 ## 1.慢查询

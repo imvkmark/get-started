@@ -1,6 +1,6 @@
 ---
 description: 'SpringBoot教程涵盖核心特性、Web、Data、IO、消息、单元测试、打包及生产就绪特性，提供开发指南、Maven/Gradle插件、CLI、Rest API、Actuator、Java/Kotlin API、配置元数据与可执行Jar格式等全面参考。'
-lastUpdated: '2026-06-18 08:36:34'
+lastUpdated: '2026-06-30 17:11:34'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: 'SpringBoot教程涵盖核心特性、Web、Data、IO、消息、单元测试、打包及生产就绪特性，提供开发指南、Maven/Gradle插件、CLI、Rest API、Actuator、Java/Kotlin API、配置元数据与可执行Jar格式等全面参考。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/java/spring-boot/index.html'
+      content: 'https://www.wulicode.com/back-end/java/spring-boot/index.html'
 ---
 # SpringBoot
 
@@ -299,8 +299,10 @@ head:
 - [SpringBoot 微服务 12449524d1e080c7ac34dcbe12c41b44](/back-end/java/spring-boot/other/micro-services.md)
 
 ::: tip 💡
+
 在许多操作系统中，可以使用包管理器安装 Maven。例如：
 - macOS 使用 Homebrew：`brew install maven`
 - Ubuntu 用户：`sudo apt-get install maven`
 - Windows 用户（使用 [Chocolatey](https://chocolatey.org/)）：在管理员权限下运行 `choco install maven`
+
 :::

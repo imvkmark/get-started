@@ -1,6 +1,6 @@
 ---
 description: 'Redis持久化用于防止数据丢失，提供RDB和AOF两种方式。RDB通过快照保存数据，支持SAVE/BGSAVE手动或自动触发，适合备份。AOF记录写命令，有三种同步策略，支持重写压缩，数据更安全。实际使用中常结合两者，注意fork、CPU、内存及AOF阻塞问题。'
-lastUpdated: '2026-06-21 22:48:45'
+lastUpdated: '2026-06-30 22:49:00'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: 'Redis持久化用于防止数据丢失，提供RDB和AOF两种方式。RDB通过快照保存数据，支持SAVE/BGSAVE手动或自动触发，适合备份。AOF记录写命令，有三种同步策略，支持重写压缩，数据更安全。实际使用中常结合两者，注意fork、CPU、内存及AOF阻塞问题。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/redis/ha/7-persistence.html'
+      content: 'https://www.wulicode.com/database/redis/ha/7-persistence.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/8c9c1ed6fa28c37dbce1a21f243142b4.png'
@@ -21,14 +21,14 @@ head:
 # (七)：Redis持久化
 
 ::: info 🔗
+
  原文链接 : [高可用Redis(七)：Redis持久化](https://www.cnblogs.com/renpingsheng/p/9786806.html)
+
 :::
 
 ## 1.什么是持久化
 
-```Plaintext
 持久化就是将数据从掉电易失的内存同步到能够永久存储的设备上的过程
-```
 
 ## 2.Redis为什么需要持久化
 

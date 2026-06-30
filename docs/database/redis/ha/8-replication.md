@@ -1,6 +1,6 @@
 ---
 description: 'Redis主从复制解决单机故障、容量和QPS瓶颈，支持一主一从、一主多从及读写分离模型。通过slaveof命令或配置文件配置，实现数据同步。复制分为全量复制（基于run_id和offset）和部分复制，需注意全量复制开销大。主从故障处理包括slave宕机自动重连和master宕机需手动切换。常见问题有读写延迟、读到过期数据、配置不一致、全量复制风暴等。'
-lastUpdated: '2026-06-21 22:49:08'
+lastUpdated: '2026-06-30 22:49:04'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: 'Redis主从复制解决单机故障、容量和QPS瓶颈，支持一主一从、一主多从及读写分离模型。通过slaveof命令或配置文件配置，实现数据同步。复制分为全量复制（基于run_id和offset）和部分复制，需注意全量复制开销大。主从故障处理包括slave宕机自动重连和master宕机需手动切换。常见问题有读写延迟、读到过期数据、配置不一致、全量复制风暴等。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/redis/ha/8-replication.html'
+      content: 'https://www.wulicode.com/database/redis/ha/8-replication.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/83e956a2b2badb14e558b5cabb6af4f6.png'
@@ -21,7 +21,9 @@ head:
 # (八)：Redis主从复制
 
 ::: info ℹ️
+
  原文链接 : [高可用Redis(八)：Redis主从复制](https://www.cnblogs.com/renpingsheng/p/9796899.html)
+
 :::
 
 ## 1.Redis复制的原理和优化

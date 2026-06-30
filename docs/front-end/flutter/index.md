@@ -1,6 +1,6 @@
 ---
 description: 'Flutter官方文档提供框架结构指南，可通过Dash等工具离线查阅。推荐编辑器VS Code或Android Studio，安装配置简便。众多博客分享实战经验与最佳实践，助力开发者快速上手。'
-lastUpdated: '2026-06-15 11:32:22'
+lastUpdated: '2026-07-01 00:29:16'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: 'Flutter官方文档提供框架结构指南，可通过Dash等工具离线查阅。推荐编辑器VS Code或Android Studio，安装配置简便。众多博客分享实战经验与最佳实践，助力开发者快速上手。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//front-end/flutter/index.html'
+      content: 'https://www.wulicode.com/front-end/flutter/index.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/c423fd95d0742949752cf29ed55e07c5.png'
@@ -24,7 +24,7 @@ head:
 
 - https://flutter.cn/
 - [Flutter 实战 . 第二版](https://book.flutterchina.club/)
-- [Flutter 安装和环境设置](/front-end/flutter/refs/install.md)
+- [Flutter 安装和环境设置](/front-end/flutter/primer/install.md)
 
 ## 编辑器
 

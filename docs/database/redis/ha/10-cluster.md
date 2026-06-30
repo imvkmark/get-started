@@ -1,6 +1,6 @@
 ---
 description: '本文介绍了使用Redis原生命令搭建集群的完整过程，包括在两台虚拟机上生成配置、启动Redis、执行meet操作、分配slot及数据写入，并说明了集群扩容步骤及优缺点。'
-lastUpdated: '2026-06-21 22:49:41'
+lastUpdated: '2026-06-30 22:49:11'
 head:
   - - meta
     - name: 'og:title'
@@ -13,12 +13,14 @@ head:
       content: '本文介绍了使用Redis原生命令搭建集群的完整过程，包括在两台虚拟机上生成配置、启动Redis、执行meet操作、分配slot及数据写入，并说明了集群扩容步骤及优缺点。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/redis/ha/10-cluster.html'
+      content: 'https://www.wulicode.com/database/redis/ha/10-cluster.html'
 ---
 # (十)：Redis原生命令搭建集群
 
 ::: info ℹ️
+
 原文链接 : [高可用Redis(十)：Redis原生命令搭建集群](https://www.cnblogs.com/renpingsheng/p/9813959.html)
+
 :::
 
 ## 1.搭建Redis Cluster主要步骤

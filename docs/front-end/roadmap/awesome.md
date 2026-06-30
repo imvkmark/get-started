@@ -1,6 +1,6 @@
 ---
 description: '该内容覆盖前端全栈技术栈：CSS、JavaScript基础，Vue、React框架及扩展，Vite、Vitepress构建工具，Axios网络请求，组件库、中台架构，单元测试与一致性，移动端（iOS/Android）开发，以及资源加载、图表、伪数据、营销工具、评论系统、包管理器等实用资源。'
-lastUpdated: '2026-06-30 16:58:16'
+lastUpdated: '2026-06-30 17:00:56'
 head:
   - - meta
     - name: 'og:title'

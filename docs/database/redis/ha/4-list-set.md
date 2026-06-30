@@ -1,6 +1,6 @@
 ---
 description: '本文介绍了列表、集合与有序集合三种数据类型，包括其数据结构、特点及常用方法。列表有序可重复；集合无序不重复，支持集合运算；有序集合兼具集合特性与排序功能。同时对比了集合与有序集合、列表与有序集合的区别。'
-lastUpdated: '2026-06-21 22:47:45'
+lastUpdated: '2026-06-30 22:48:42'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: '本文介绍了列表、集合与有序集合三种数据类型，包括其数据结构、特点及常用方法。列表有序可重复；集合无序不重复，支持集合运算；有序集合兼具集合特性与排序功能。同时对比了集合与有序集合、列表与有序集合的区别。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/redis/ha/4-list-set.html'
+      content: 'https://www.wulicode.com/database/redis/ha/4-list-set.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/b0abc170a9a52c33bc7f3415bdd95f5c.png'
@@ -21,7 +21,9 @@ head:
 # (四)：列表，集合与有序集合
 
 ::: info 🔗
+
 原文链接 : [高可用Redis(四)：列表，集合与有序集合](https://www.cnblogs.com/renpingsheng/p/9778433.html)
+
 :::
 
 ## 1.列表类型

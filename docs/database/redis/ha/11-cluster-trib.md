@@ -1,6 +1,6 @@
 ---
 description: '文档描述了使用redis-trib.rb工具搭建Redis集群的完整流程，包括Ruby环境与模块准备、配置文件创建、集群构建、扩容（手动及工具方式）与收缩，并强调使用官方工具的优势。'
-lastUpdated: '2026-06-21 22:49:56'
+lastUpdated: '2026-06-30 22:49:14'
 head:
   - - meta
     - name: 'og:title'
@@ -13,12 +13,14 @@ head:
       content: '文档描述了使用redis-trib.rb工具搭建Redis集群的完整流程，包括Ruby环境与模块准备、配置文件创建、集群构建、扩容（手动及工具方式）与收缩，并强调使用官方工具的优势。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/redis/ha/11-cluster-trib.html'
+      content: 'https://www.wulicode.com/database/redis/ha/11-cluster-trib.html'
 ---
 # (十一)：使用redis-trib rb工具搭建集群
 
 ::: info ℹ️
+
  原文链接 : [高可用Redis(十一)：使用redis-trib.rb工具搭建集群](https://www.cnblogs.com/renpingsheng/p/9833740.html)
+
 :::
 
 环境说明：

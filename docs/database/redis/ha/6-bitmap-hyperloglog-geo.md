@@ -1,6 +1,6 @@
 ---
 description: '本文介绍了Redis的三种高级数据结构：bitmap用于高效位操作，支持setbit等命令，适用于统计活跃用户；HyperLoglog以极小内存估算独立访客数，注意误差；GEO用于地理位置存储与查询，支持计算距离和范围搜索，可用zrem删除。'
-lastUpdated: '2026-06-21 22:48:25'
+lastUpdated: '2026-06-30 22:48:49'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: '本文介绍了Redis的三种高级数据结构：bitmap用于高效位操作，支持setbit等命令，适用于统计活跃用户；HyperLoglog以极小内存估算独立访客数，注意误差；GEO用于地理位置存储与查询，支持计算距离和范围搜索，可用zrem删除。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/redis/ha/6-bitmap-hyperloglog-geo.html'
+      content: 'https://www.wulicode.com/database/redis/ha/6-bitmap-hyperloglog-geo.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/1cee87c0eea70c8fa0d5e9e0125766a6.png'
@@ -21,7 +21,9 @@ head:
 # (六)：瑞士军刀之bitmap，HyperLoglog和GEO
 
 ::: info ℹ️
+
  原文链接 : [高可用Redis(六)：瑞士军刀之bitmap，HyperLoglog和GEO](https://www.cnblogs.com/renpingsheng/p/9783834.html)
+
 :::
 
 ## 1.bitmap位图

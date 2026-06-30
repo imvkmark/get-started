@@ -1,6 +1,6 @@
 ---
 description: '该文档集涵盖Redis核心知识：通用命令、数据结构与内部编码、单线程架构，以及字符串、Hash、列表、集合、有序集合等类型详解，并包括慢查询、Pipeline、发布订阅、Bitmap、HyperLogLog、GEO等高级功能，最后涉及持久化和主从复制机制。'
-lastUpdated: '2026-06-21 22:46:54'
+lastUpdated: '2026-06-30 22:49:50'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: '该文档集涵盖Redis核心知识：通用命令、数据结构与内部编码、单线程架构，以及字符串、Hash、列表、集合、有序集合等类型详解，并包括慢查询、Pipeline、发布订阅、Bitmap、HyperLogLog、GEO等高级功能，最后涉及持久化和主从复制机制。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/redis/ha/index.html'
+      content: 'https://www.wulicode.com/database/redis/ha/index.html'
 ---
 # 高可用
 

@@ -1,6 +1,6 @@
 ---
 description: '在RHEL8/CentOS7上安装Node.js，先确保有epel源，然后通过`dnf module list nodejs`查看可用版本，启用`nodejs:18`模块，最后执行`dnf module install nodejs`或`yum install nodejs`完成安装。'
-lastUpdated: '2026-06-20 11:55:59'
+lastUpdated: '2026-06-30 22:47:35'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: '在RHEL8/CentOS7上安装Node.js，先确保有epel源，然后通过`dnf module list nodejs`查看可用版本，启用`nodejs:18`模块，最后执行`dnf module install nodejs`或`yum install nodejs`完成安装。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//front-end/javascript/primary/install-node-at-rhel.html'
+      content: 'https://www.wulicode.com/front-end/javascript/primary/install-node-at-rhel.html'
 ---
 # RHEL8 CentOS7 安装 nodejs
 

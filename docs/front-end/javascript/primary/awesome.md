@@ -4,7 +4,7 @@ lastUpdated: '2026-06-30 16:59:46'
 head:
   - - meta
     - name: 'og:title'
-      content: 'Awesome Javascript 前端编程语言'
+      content: 'Awesome Javascript'
   - - meta
     - name: 'og:type'
       content: 'article'

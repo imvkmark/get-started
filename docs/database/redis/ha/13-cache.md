@@ -1,6 +1,6 @@
 ---
 description: '本文介绍了Redis缓存的使用与设计，涵盖缓存收益（提升性能、减少数据库压力）、成本（数据不一致、内存开销）及适用场景。详细讨论了缓存更新策略、穿透优化（空对象缓存、布隆过滤器）、无底洞问题（串行/并行IO、hash_tag）及缓存重建优化（互斥锁、数据永不过期），总结了各种解决方案的优缺点。'
-lastUpdated: '2026-06-21 22:50:22'
+lastUpdated: '2026-06-30 22:48:20'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: '本文介绍了Redis缓存的使用与设计，涵盖缓存收益（提升性能、减少数据库压力）、成本（数据不一致、内存开销）及适用场景。详细讨论了缓存更新策略、穿透优化（空对象缓存、布隆过滤器）、无底洞问题（串行/并行IO、hash_tag）及缓存重建优化（互斥锁、数据永不过期），总结了各种解决方案的优缺点。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/redis/ha/13-cache.html'
+      content: 'https://www.wulicode.com/database/redis/ha/13-cache.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/0b325dd6c787fcfdd4960cb30f0c15f4.png'
@@ -21,7 +21,9 @@ head:
 # (十三)：Redis缓存的使用和设计
 
 ::: info ℹ️
+
 原文链接 : [高可用Redis(十三)：Redis缓存的使用和设计](https://www.cnblogs.com/renpingsheng/p/10202914.html)
+
 :::
 
 ## 1.缓存的受益和成本

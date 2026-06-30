@@ -1,6 +1,6 @@
 ---
 description: '这段内容介绍了Redis的通用命令（如keys、dbsize、exists、del、expire、ttl、persist和type），数据结构和内部编码，以及单线程架构。重点解释了Redis单线程为什么快：基于内存、高效数据结构、非阻塞I/O和避免锁竞争。'
-lastUpdated: '2026-06-21 22:47:16'
+lastUpdated: '2026-06-30 22:48:33'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: '这段内容介绍了Redis的通用命令（如keys、dbsize、exists、del、expire、ttl、persist和type），数据结构和内部编码，以及单线程架构。重点解释了Redis单线程为什么快：基于内存、高效数据结构、非阻塞I/O和避免锁竞争。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/redis/ha/1-command-data.html'
+      content: 'https://www.wulicode.com/database/redis/ha/1-command-data.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/0a8648565246cdc66194fbe0bee8a6dc.jpg'
@@ -21,7 +21,9 @@ head:
 # (一): 通用命令，数据结构和内部编码，单线程架构
 
 ::: info ℹ️
+
  原文链接 : [高可用Redis(一)：通用命令，数据结构和内部编码，单线程架构](https://www.cnblogs.com/renpingsheng/p/9773913.html)
+
 :::
 
 ## 1.通用API

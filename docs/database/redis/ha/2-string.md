@@ -1,6 +1,6 @@
 ---
 description: 'Redis字符串类型是基础数据结构，支持文本、整数和二进制数据。常用命令包括：SET/GET/DEL进行基本读写删除；INCR/DECR实现整数自增自减；SETNX实现分布式锁；MSET/MGET批量操作；GETSET原子交换；APPEND追加；STRLEN获取长度；INCRBY指定增量；GETRANGE/SETRANGE截取或修改子串。这些命令覆盖了字符串的所有常见操作场景。'
-lastUpdated: '2026-06-21 22:47:26'
+lastUpdated: '2026-06-30 22:48:36'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: 'Redis字符串类型是基础数据结构，支持文本、整数和二进制数据。常用命令包括：SET/GET/DEL进行基本读写删除；INCR/DECR实现整数自增自减；SETNX实现分布式锁；MSET/MGET批量操作；GETSET原子交换；APPEND追加；STRLEN获取长度；INCRBY指定增量；GETRANGE/SETRANGE截取或修改子串。这些命令覆盖了字符串的所有常见操作场景。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/redis/ha/2-string.html'
+      content: 'https://www.wulicode.com/database/redis/ha/2-string.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/8ab168cca6447658f14c16760c57be0e.jpg'
@@ -21,7 +21,9 @@ head:
 # (二) 字符串类型
 
 ::: info ℹ️
+
 原文链接 : [高可用Redis(二)：字符串类型](https://www.cnblogs.com/renpingsheng/p/9774352.html)
+
 :::
 
 ## 1.Redis字符串结构
