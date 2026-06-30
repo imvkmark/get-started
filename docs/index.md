@@ -14,7 +14,7 @@ hero :
     -
       theme : alt
       text : Flutter
-      link : /front-end/dart/
+      link : /front-end/flutter/
 
 features :
   -

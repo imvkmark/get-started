@@ -233,14 +233,6 @@ export default defineConfig(withSidebar(vitePressConfig, [
     {
         documentRootPath: 'docs/',
         collapsed: false,
-        scanStartPath: 'front-end/dart',
-        basePath: '/front-end/dart/',
-        resolvePath: '/front-end/dart/',
-        useTitleFromFileHeading: true
-    },
-    {
-        documentRootPath: 'docs/',
-        collapsed: false,
         scanStartPath: 'front-end/flutter',
         basePath: '/front-end/flutter/',
         resolvePath: '/front-end/flutter/',
