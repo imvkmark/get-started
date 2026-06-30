@@ -1,6 +1,6 @@
 ---
 description: '该内容覆盖前端全栈技术栈：CSS、JavaScript基础，Vue、React框架及扩展，Vite、Vitepress构建工具，Axios网络请求，组件库、中台架构，单元测试与一致性，移动端（iOS/Android）开发，以及资源加载、图表、伪数据、营销工具、评论系统、包管理器等实用资源。'
-lastUpdated: '2026-06-26 10:38:05'
+lastUpdated: '2026-06-30 16:58:16'
 head:
   - - meta
     - name: 'og:title'
@@ -20,8 +20,6 @@ head:
 > Awesome iOS
 > 
 > Awesome Android
-> 
-> Awesome Mobile
 > 
 > Awesome Web
 
@@ -166,31 +164,3 @@ https://github.com/enaqx/awesome-react
 
 - [typescript-eslint](https://typescript-eslint.io/) - 强大的 JavaScript 和 TypeScript 静态分析工具
 - [ESLint](https://eslint.org/) - 查找并修复JavaScript 代码中的问题
-
-## iOS
-
-### 设计
-
-- [设计 - Apple Developer](https://developer.apple.com/cn/design/) - iOS 设计规范, 设计指南, 设计资源
-
-### 分发
-
-- [第八区](https://www.dibaqu.com/) -  企业签名, 内测分发, UDID
-
-### 资料
-
-- [统计 iOS 和 iPadOS 的使用率](https://developer.apple.com/support/app-store/)
-
-## Android
-
-### 设计
-
-- [Material Design](https://m3.material.io/) - 谷歌(Google)的开源设计系统
-
-### 分发
-
-- [空壳（Konker）](https://www.iofomo.com/docs/mobile/konker/Introduce/)- Android（安卓）平台下应用分身多开应用
-
-### 开发
-
-- [OneDroid](https://qingge.tech/onedroid/web/) - 开源的安卓应用，提供多种实用工具，来管理你的安卓设备

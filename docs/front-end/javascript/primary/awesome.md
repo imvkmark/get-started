@@ -1,6 +1,6 @@
 ---
 description: '该内容列举了多个JavaScript前端工具库，包括UI插件Tom Select、倒计时库easytimer.js、轻量日期库dayjs、IndexedDB管理库dexie.js、HTTP请求库axios，以及图表、手势等其他类别，并提及搭建无刷新前端框架。'
-lastUpdated: '2026-06-26 10:35:04'
+lastUpdated: '2026-06-30 16:59:46'
 head:
   - - meta
     - name: 'og:title'
@@ -18,7 +18,7 @@ head:
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/d851f0e812e65b35e9f9dc956ebb3332.png'
 ---
-# Awesome Javascript 前端编程语言
+# Awesome Javascript
 
 ::: info 🔗
 
