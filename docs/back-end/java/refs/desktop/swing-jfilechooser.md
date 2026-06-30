@@ -1,7 +1,7 @@
 ---
-description: 'JFileChooser()创建一个默认的 JFileChooser，使用用户的默认目录。JFileChooser(String currentDirectoryPath)创建一个 JFileChooser，使用指定的当前目录路径。JFileChooser(File currentDirectory)创建一个 JFileChooser，使用指定的当前目录。JFileChooser(FileSystemView fsv)创建一个 JFileChooser，使用指定的 FileSystemView。JFileChooser(String currentDirec'
-lastUpdated: '2025-12-06 15:31:00'
-head: 
+description: 'javax.swing.JFileChooser 是 Swing 的文件选择组件，提供构造方法创建实例，支持文件选择与处理、目录与文件过滤，以及外观与行为设置，并继承父类方法。'
+lastUpdated: '2026-06-30 09:45:51'
+head:
   - - meta
     - name: 'og:title'
       content: 'javax.swing.JFileChooser'
@@ -10,42 +10,40 @@ head:
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: 'JFileChooser()创建一个默认的 JFileChooser，使用用户的默认目录。JFileChooser(String currentDirectoryPath)创建一个 JFileChooser，使用指定的当前目录路径。JFileChooser(File currentDirectory)创建一个 JFileChooser，使用指定的当前目录。JFileChooser(FileSystemView fsv)创建一个 JFileChooser，使用指定的 FileSystemView。JFileChooser(String currentDirec'
+      content: 'javax.swing.JFileChooser 是 Swing 的文件选择组件，提供构造方法创建实例，支持文件选择与处理、目录与文件过滤，以及外观与行为设置，并继承父类方法。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/java/refs/desktop/swing-jfilechooser.html'
+      content: 'https://www.wulicode.com/back-end/java/refs/desktop/swing-jfilechooser.html'
 ---
 # javax.swing.JFileChooser
-
-
 
 ## 构造方法
 
 `JFileChooser()`
 
-创建一个默认的  `JFileChooser` ，使用用户的默认目录。
+创建一个默认的 `JFileChooser` ，使用用户的默认目录。
 
 `JFileChooser(String currentDirectoryPath)`
 
-创建一个  `JFileChooser` ，使用指定的当前目录路径。
+创建一个 `JFileChooser` ，使用指定的当前目录路径。
 
 `JFileChooser(File currentDirectory)`
 
-创建一个  `JFileChooser` ，使用指定的当前目录。
+创建一个 `JFileChooser` ，使用指定的当前目录。
 
 `JFileChooser(FileSystemView fsv)`
 
-创建一个  `JFileChooser` ，使用指定的  `FileSystemView` 。
+创建一个 `JFileChooser` ，使用指定的 `FileSystemView` 。
 
 `JFileChooser(String currentDirectoryPath, FileSystemView fsv)`
 
-创建一个  `JFileChooser` ，使用指定的当前目录路径和  `FileSystemView` 。
+创建一个 `JFileChooser` ，使用指定的当前目录路径和 `FileSystemView` 。
 
 `JFileChooser(File currentDirectory, FileSystemView fsv)`
 
-创建一个  `JFileChooser` ，使用指定的当前目录和  `FileSystemView` 。
+创建一个 `JFileChooser` ，使用指定的当前目录和 `FileSystemView` 。
 
-_________________
+---
 
 ## JFileChooser 的方法
 
@@ -121,7 +119,7 @@ _________________
 
 判断是否隐藏隐藏文件。
 
-_________________
+---
 
 ### 外观与行为设置
 
@@ -157,11 +155,11 @@ _________________
 
 获取对话框的类型。
 
-_________________
+---
 
 ## 继承方法
 
-继承自  `javax.swing.JComponent`  的方法：
+继承自 `javax.swing.JComponent` 的方法：
 
 `void setForeground(Color fg)`
 
@@ -175,7 +173,7 @@ _________________
 
 设置字体。
 
-继承自  `java.awt.Component`  的方法：
+继承自 `java.awt.Component` 的方法：
 
 `void setBounds(int x, int y, int width, int height)`
 
@@ -189,7 +187,7 @@ _________________
 
 判断组件是否可见。
 
-继承自  `java.lang.Object`  的方法：
+继承自 `java.lang.Object` 的方法：
 
 `boolean equals(Object obj)`
 
@@ -202,4 +200,3 @@ _________________
 `int hashCode()`
 
 返回对象的哈希码。
-

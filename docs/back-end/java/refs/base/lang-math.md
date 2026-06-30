@@ -1,7 +1,7 @@
 ---
-description: '处理数学运算的核心工具类，为开发者提供了丰富的静态方法，用于高效计算数学表达式。int abs(int a)返回整数的绝对值。long abs(long a)返回长整数的绝对值。float abs(float a)返回浮点数的绝对值。double abs(double a)返回双精度浮点数的绝对值。int max(int a, int b)返回两个整数中的较大值。long max(long a, long b)返回两个长整数中的较大值。float max(float a, float b)返回两个浮点数中的较大值。double m'
-lastUpdated: '2025-12-06 15:01:00'
-head: 
+description: 'java.lang.Math提供数学常量与运算，包括算术、指数对数、舍入取整、三角函数及精确计算等方法，支持浮点与整数运算。'
+lastUpdated: '2026-06-30 09:44:36'
+head:
   - - meta
     - name: 'og:title'
       content: 'java.lang.Math - 数学运算'
@@ -10,36 +10,21 @@ head:
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: '处理数学运算的核心工具类，为开发者提供了丰富的静态方法，用于高效计算数学表达式。int abs(int a)返回整数的绝对值。long abs(long a)返回长整数的绝对值。float abs(float a)返回浮点数的绝对值。double abs(double a)返回双精度浮点数的绝对值。int max(int a, int b)返回两个整数中的较大值。long max(long a, long b)返回两个长整数中的较大值。float max(float a, float b)返回两个浮点数中的较大值。double m'
+      content: 'java.lang.Math提供数学常量与运算，包括算术、指数对数、舍入取整、三角函数及精确计算等方法，支持浮点与整数运算。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/java/refs/base/lang-math.html'
+      content: 'https://www.wulicode.com/back-end/java/refs/base/lang-math.html'
 ---
 # java.lang.Math - 数学运算
 
-
-
 处理数学运算的核心工具类，为开发者提供了丰富的静态方法，用于高效计算数学表达式。
 
-##  **常量列表** 
+## **常量列表**
 
-<table><tbody>
-  <tr>
-    <td>常量名称</td>
-    <td>值</td>
-    <td>描述</td>
-  </tr>
-  <tr>
-    <td> <code>Math.E</code> </td>
-    <td> <code>2.718281828459045</code> </td>
-    <td>自然对数的底数（e），用于指数和对数运算</td>
-  </tr>
-  <tr>
-    <td> <code>Math.PI</code> </td>
-    <td> <code>3.141592653589793</code> </td>
-    <td>圆周率（&pi;），用于角度、圆的计算</td>
-  </tr>
-</tbody></table>
+| 常量名称 | 值 | 描述 |
+|-|-|-|
+| `Math.E` | `2.718281828459045` | 自然对数的底数（e），用于指数和对数运算 |
+| `Math.PI` | `3.141592653589793` | 圆周率（π），用于角度、圆的计算 |
 
 ## 算术运算
 
@@ -91,7 +76,7 @@ head:
 
 返回两个双精度浮点数中的较小值。
 
-_________________
+---
 
 ## 指数与对数运算
 
@@ -119,7 +104,7 @@ _________________
 
 返回数值的以 10 为底的对数。
 
-_________________
+---
 
 ## 舍入与取整
 
@@ -139,7 +124,7 @@ _________________
 
 返回单精度浮点数的四舍五入整数值。
 
-_________________
+---
 
 ## 三角函数
 
@@ -175,55 +160,52 @@ _________________
 
 `int addExact(int x, int y)`
 
-执行两个整数的加法运算，抛出  `ArithmeticException`  以指示溢出。
+执行两个整数的加法运算，抛出 `ArithmeticException` 以指示溢出。
 
 `long addExact(long x, long y)`
 
-执行两个长整数的加法运算，抛出  `ArithmeticException`  以指示溢出。
+执行两个长整数的加法运算，抛出 `ArithmeticException` 以指示溢出。
 
 `int subtractExact(int x, int y)`
 
-执行两个整数的减法运算，抛出  `ArithmeticException`  以指示溢出。
+执行两个整数的减法运算，抛出 `ArithmeticException` 以指示溢出。
 
 `long subtractExact(long x, long y)`
 
-执行两个长整数的减法运算，抛出  `ArithmeticException`  以指示溢出。
+执行两个长整数的减法运算，抛出 `ArithmeticException` 以指示溢出。
 
 `int multiplyExact(int x, int y)`
 
-执行两个整数的乘法运算，抛出  `ArithmeticException`  以指示溢出。
+执行两个整数的乘法运算，抛出 `ArithmeticException` 以指示溢出。
 
 `long multiplyExact(long x, long y)`
 
-执行两个长整数的乘法运算，抛出  `ArithmeticException`  以指示溢出。
+执行两个长整数的乘法运算，抛出 `ArithmeticException` 以指示溢出。
 
 `int incrementExact(int x)`
 
-执行整数的加一操作，抛出  `ArithmeticException`  以指示溢出。
+执行整数的加一操作，抛出 `ArithmeticException` 以指示溢出。
 
 `long incrementExact(long x)`
 
-执行长整数的加一操作，抛出  `ArithmeticException`  以指示溢出。
+执行长整数的加一操作，抛出 `ArithmeticException` 以指示溢出。
 
 `int decrementExact(int x)`
 
-执行整数的减一操作，抛出  `ArithmeticException`  以指示溢出。
+执行整数的减一操作，抛出 `ArithmeticException` 以指示溢出。
 
 `long decrementExact(long x)`
 
-执行长整数的减一操作，抛出  `ArithmeticException`  以指示溢出。
+执行长整数的减一操作，抛出 `ArithmeticException` 以指示溢出。
 
 `int negateExact(int x)`
 
-对整数取反，抛出  `ArithmeticException`  以指示溢出。
+对整数取反，抛出 `ArithmeticException` 以指示溢出。
 
 `long negateExact(long x)`
 
-对长整数取反，抛出  `ArithmeticException`  以指示溢出。
+对长整数取反，抛出 `ArithmeticException` 以指示溢出。
 
 `int toIntExact(long value)`
 
-将一个长整数值转换为整数，抛出  `ArithmeticException`  以指示超出整数范围
-
-
-
+将一个长整数值转换为整数，抛出 `ArithmeticException` 以指示超出整数范围

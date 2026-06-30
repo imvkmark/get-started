@@ -1,7 +1,7 @@
 ---
-description: 'JMenu()创建一个没有标题的空菜单。JMenu(String s)创建一个具有指定标题的菜单。JMenu(Action a)创建一个与指定操作相关联的菜单。JMenu(String s, boolean b)创建一个具有指定标题和启用/禁用选项的菜单。JMenuItem add(JMenuItem menuItem)将指定的菜单项添加到菜单中。JMenuItem add(String s)创建一个具有指定标题的新菜单项并添加到菜单中。JMenuItem add(Action a)创建一个基于指定动作的菜单项并添加到菜单中。void'
-lastUpdated: '2025-12-06 15:32:00'
-head: 
+description: 'javax.swing.JMenu是Swing的菜单组件，提供构造方法创建菜单，支持通过add()等管理菜单项，可添加ActionListener处理事件，设置字体、图标等属性，并继承AbstractButton、JComponent等方法。'
+lastUpdated: '2026-06-30 09:46:03'
+head:
   - - meta
     - name: 'og:title'
       content: 'javax.swing.JMenu'
@@ -10,14 +10,12 @@ head:
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: 'JMenu()创建一个没有标题的空菜单。JMenu(String s)创建一个具有指定标题的菜单。JMenu(Action a)创建一个与指定操作相关联的菜单。JMenu(String s, boolean b)创建一个具有指定标题和启用/禁用选项的菜单。JMenuItem add(JMenuItem menuItem)将指定的菜单项添加到菜单中。JMenuItem add(String s)创建一个具有指定标题的新菜单项并添加到菜单中。JMenuItem add(Action a)创建一个基于指定动作的菜单项并添加到菜单中。void'
+      content: 'javax.swing.JMenu是Swing的菜单组件，提供构造方法创建菜单，支持通过add()等管理菜单项，可添加ActionListener处理事件，设置字体、图标等属性，并继承AbstractButton、JComponent等方法。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/java/refs/desktop/swing-jmenu.html'
+      content: 'https://www.wulicode.com/back-end/java/refs/desktop/swing-jmenu.html'
 ---
 # javax.swing.JMenu
-
-
 
 ## 构造方法
 
@@ -37,7 +35,7 @@ head:
 
 创建一个具有指定标题和启用/禁用选项的菜单。
 
-_________________
+---
 
 ## JMenu 的方法
 
@@ -87,7 +85,7 @@ _________________
 
 返回菜单中的菜单项数量。
 
-_________________
+---
 
 ### 菜单事件处理
 
@@ -103,7 +101,7 @@ _________________
 
 返回所有添加到菜单的菜单监听器。
 
-_________________
+---
 
 ### 菜单属性设置
 
@@ -135,11 +133,11 @@ _________________
 
 设置弹出菜单的显示位置。
 
-_________________
+---
 
 ## 继承方法
 
-继承自  `javax.swing.JMenuItem`  的方法：
+继承自 `javax.swing.JMenuItem` 的方法：
 
 `void setText(String text)`
 
@@ -157,7 +155,7 @@ _________________
 
 获取菜单项的操作命令。
 
-继承自  `javax.swing.AbstractButton`  的方法：
+继承自 `javax.swing.AbstractButton` 的方法：
 
 `void setSelected(boolean b)`
 
@@ -171,7 +169,7 @@ _________________
 
 为按钮添加动作监听器。
 
-继承自  `java.awt.Container`  的方法：
+继承自 `java.awt.Container` 的方法：
 
 `void add(Component comp)`
 
@@ -181,7 +179,7 @@ _________________
 
 从容器中移除组件。
 
-继承自  `java.lang.Object`  的方法：
+继承自 `java.lang.Object` 的方法：
 
 `boolean equals(Object obj)`
 
@@ -194,4 +192,3 @@ _________________
 `int hashCode()`
 
 返回对象的哈希码。
-

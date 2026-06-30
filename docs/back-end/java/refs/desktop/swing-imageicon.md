@@ -1,23 +1,21 @@
 ---
-description: 'ImageIcon 是处理和显示图像的基础类，通常用于 Swing 应用程序中的按钮、标签等组件的图标设置ImageIcon(Image image)使用指定的 Image 创建一个 ImageIcon 实例。ImageIcon(String filename)使用文件路径创建一个 ImageIcon 实例ImageIcon(URL location)使用指定的 URL 创建一个 ImageIcon 实例。ImageIcon(byte[] imageData)使用字节数组中的图像数据创建一个 ImageIcon 实例。void setImage(Imag'
-lastUpdated: '2025-12-06 15:32:00'
-head: 
+description: 'javax.swing.ImageIcon 是Java Swing中用于加载和管理图像图标的类。它支持从文件、URL或字节数组创建图标，并提供获取图像尺寸、像素信息等方法。可绘制图标到组件，支持序列化以便存储或网络传输，同时包含描述属性方便调试和识别。'
+lastUpdated: '2026-06-30 09:45:47'
+head:
   - - meta
     - name: 'og:title'
-      content: 'javax.swing.ImageIcon '
+      content: 'javax.swing.ImageIcon'
   - - meta
     - name: 'og:type'
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: 'ImageIcon 是处理和显示图像的基础类，通常用于 Swing 应用程序中的按钮、标签等组件的图标设置ImageIcon(Image image)使用指定的 Image 创建一个 ImageIcon 实例。ImageIcon(String filename)使用文件路径创建一个 ImageIcon 实例ImageIcon(URL location)使用指定的 URL 创建一个 ImageIcon 实例。ImageIcon(byte[] imageData)使用字节数组中的图像数据创建一个 ImageIcon 实例。void setImage(Imag'
+      content: 'javax.swing.ImageIcon 是Java Swing中用于加载和管理图像图标的类。它支持从文件、URL或字节数组创建图标，并提供获取图像尺寸、像素信息等方法。可绘制图标到组件，支持序列化以便存储或网络传输，同时包含描述属性方便调试和识别。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/java/refs/desktop/swing-imageicon.html'
+      content: 'https://www.wulicode.com/back-end/java/refs/desktop/swing-imageicon.html'
 ---
-# javax.swing.ImageIcon 
-
-
+# javax.swing.ImageIcon
 
 ImageIcon 是处理和显示图像的基础类，通常用于 Swing 应用程序中的按钮、标签等组件的图标设置
 
@@ -25,13 +23,13 @@ ImageIcon 是处理和显示图像的基础类，通常用于 Swing 应用程序
 
 `ImageIcon(Image image)`
 
-使用指定的  `Image`  创建一个  `ImageIcon`  实例。
+使用指定的 `Image` 创建一个 `ImageIcon` 实例。
 
 `ImageIcon(String filename)`
 
-使用文件路径创建一个  `ImageIcon`  实例
+使用文件路径创建一个 `ImageIcon` 实例
 
-```java
+```Java
 ImageIcon icon = new ImageIcon("path/to/image.png");
 
 JLabel label = new JLabel(icon);  // 将图标添加到标签
@@ -40,28 +38,28 @@ frame.add(label);                 // 将标签添加到窗口
 
 `ImageIcon(URL location)`
 
-使用指定的 URL 创建一个  `ImageIcon`  实例。
+使用指定的 URL 创建一个 `ImageIcon` 实例。
 
 `ImageIcon(byte[] imageData)`
 
-使用字节数组中的图像数据创建一个  `ImageIcon`  实例。
+使用字节数组中的图像数据创建一个 `ImageIcon` 实例。
 
 `void setImage(Image image)`
 
-设置此  `ImageIcon`  的图像
+设置此 `ImageIcon` 的图像
 
-```java
+```Java
 icon.setImage(newImage);  // 更新图标的图像
 label.repaint();          // 触发重绘
 ```
 
-_________________
+---
 
 ## 获取信息
 
 `Image getImage()`
 
-返回此  `ImageIcon`  的图像。
+返回此 `ImageIcon` 的图像。
 
 `int getIconWidth()`
 
@@ -71,7 +69,7 @@ _________________
 
 返回此图标的高度。
 
-_________________
+---
 
 ## 绘制操作
 
@@ -79,7 +77,7 @@ _________________
 
 将此图标绘制到指定位置
 
-```java
+```Java
 @Override
 public void paintComponent(Graphics g) {
     super.paintComponent(g);
@@ -87,7 +85,7 @@ public void paintComponent(Graphics g) {
 }
 ```
 
-_________________
+---
 
 ## 序列化与描述
 
@@ -97,7 +95,4 @@ _________________
 
 `AccessibleContext getAccessibleContext()`
 
-获取与此图标关联的  `AccessibleContext` 。
-
-
-
+获取与此图标关联的 `AccessibleContext` 。

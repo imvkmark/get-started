@@ -1,7 +1,7 @@
 ---
-description: 'JFrame()创建一个没有标题的默认 JFrame 实例。JFrame(String title)创建一个具有指定标题的 JFrame 实例。JFrame(GraphicsConfiguration gc)创建一个默认的 JFrame，并使用指定的 GraphicsConfiguration。JFrame(String title, GraphicsConfiguration gc)创建一个具有指定标题并使用指定 GraphicsConfiguration 的 JFramevoid setDefaultCloseOperation(int operatio'
-lastUpdated: '2025-12-06 15:31:00'
-head: 
+description: 'javax.swing.JFrame是Swing窗口容器。其构造方法可设置标题；窗口管理包括设置大小、位置、关闭操作；外观设置可调整背景色、边框等；图标设置通过setIconImage定义窗口图标；内容管理使用getContentPane添加组件；其他操作如可见性、布局设置、窗口监听等。'
+lastUpdated: '2026-06-30 09:45:55'
+head:
   - - meta
     - name: 'og:title'
       content: 'javax.swing.JFrame'
@@ -10,32 +10,30 @@ head:
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: 'JFrame()创建一个没有标题的默认 JFrame 实例。JFrame(String title)创建一个具有指定标题的 JFrame 实例。JFrame(GraphicsConfiguration gc)创建一个默认的 JFrame，并使用指定的 GraphicsConfiguration。JFrame(String title, GraphicsConfiguration gc)创建一个具有指定标题并使用指定 GraphicsConfiguration 的 JFramevoid setDefaultCloseOperation(int operatio'
+      content: 'javax.swing.JFrame是Swing窗口容器。其构造方法可设置标题；窗口管理包括设置大小、位置、关闭操作；外观设置可调整背景色、边框等；图标设置通过setIconImage定义窗口图标；内容管理使用getContentPane添加组件；其他操作如可见性、布局设置、窗口监听等。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/java/refs/desktop/swing-jframe.html'
+      content: 'https://www.wulicode.com/back-end/java/refs/desktop/swing-jframe.html'
 ---
 # javax.swing.JFrame
-
-
 
 ## 构造方法
 
 `JFrame()`
 
-创建一个没有标题的默认  `JFrame`  实例。
+创建一个没有标题的默认 `JFrame` 实例。
 
 `JFrame(String title)`
 
-创建一个具有指定标题的  `JFrame`  实例。
+创建一个具有指定标题的 `JFrame` 实例。
 
 `JFrame(GraphicsConfiguration gc)`
 
-创建一个默认的  `JFrame` ，并使用指定的  `GraphicsConfiguration` 。
+创建一个默认的 `JFrame` ，并使用指定的 `GraphicsConfiguration` 。
 
 `JFrame(String title, GraphicsConfiguration gc)`
 
-创建一个具有指定标题并使用指定  `GraphicsConfiguration`  的  `JFrame`
+创建一个具有指定标题并使用指定 `GraphicsConfiguration` 的 `JFrame`
 
 ## 窗口管理
 
@@ -55,7 +53,7 @@ head:
 
 获取窗口的标题。
 
-_________________
+---
 
 ## 外观设置
 
@@ -83,7 +81,7 @@ _________________
 
 判断此窗口是否没有装饰。
 
-_________________
+---
 
 ## 图标设置
 
@@ -95,7 +93,7 @@ _________________
 
 获取窗口的图标图像。
 
-_________________
+---
 
 ## 内容管理
 
@@ -127,7 +125,7 @@ _________________
 
 设置此窗口的分层窗格。
 
-_________________
+---
 
 ## 其他操作
 
@@ -147,11 +145,6 @@ _________________
 
 判断窗口是否可见。
 
+`JFrame` 的方法主要分为设置窗口属性（如标题、图标、菜单栏）和控制窗口行为（如可见性、关闭操作）。
 
-
-`JFrame`  的方法主要分为设置窗口属性（如标题、图标、菜单栏）和控制窗口行为（如可见性、关闭操作）。
-
-此外， `JFrame`  继承了多层父类的方法，如  `java.awt.Frame` ,  `java.awt.Window` , 和  `java.awt.Component` ，提供了对窗口和组件的更细粒度控制
-
-
-
+此外， `JFrame` 继承了多层父类的方法，如 `java.awt.Frame` , `java.awt.Window` , 和 `java.awt.Component` ，提供了对窗口和组件的更细粒度控制
