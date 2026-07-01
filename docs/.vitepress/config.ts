@@ -46,8 +46,7 @@ const nav = [
         activeMatch: `^/front-end/`,
         items: [
             { text: "RoadMap", link: "/front-end/roadmap/index" },
-            { text: "Dart", link: "/front-end/dart/" },
-            { text: "Flutter", link: "/front-end/flutter/" },
+            { text: "App", link: "/front-end/app/" },
             { text: "Javascript", link: "/front-end/javascript/index" },
         ],
     },
@@ -233,9 +232,9 @@ export default defineConfig(withSidebar(vitePressConfig, [
     {
         documentRootPath: 'docs/',
         collapsed: false,
-        scanStartPath: 'front-end/flutter',
-        basePath: '/front-end/flutter/',
-        resolvePath: '/front-end/flutter/',
+        scanStartPath: 'front-end/app',
+        basePath: '/front-end/app/',
+        resolvePath: '/front-end/app/',
         useTitleFromFileHeading: true
     },
     {

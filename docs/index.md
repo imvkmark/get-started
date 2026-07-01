@@ -13,8 +13,8 @@ hero :
       link : /back-end/java/
     -
       theme : alt
-      text : Flutter
-      link : /front-end/flutter/
+      text : App
+      link : /front-end/app/
 
 features :
   -
