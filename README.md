@@ -1,6 +1,6 @@
 # 学习记录
 
-https://wulicode.com
+https://www.wulicode.com
 
 ## 语言学习
 
