@@ -1,6 +1,6 @@
 ---
 description: 'Nginx常见问题包括：出现500错误时可能泄露版本号，需隐藏；413错误表示请求实体过大，需调整client_max_body_size；前后端混排时，URL添加后缀“/”可优化连接数，避免重定向。'
-lastUpdated: '2026-06-17 12:37:24'
+lastUpdated: '2026-07-01 19:56:16'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: 'Nginx常见问题包括：出现500错误时可能泄露版本号，需隐藏；413错误表示请求实体过大，需调整client_max_body_size；前后端混排时，URL添加后缀“/”可优化连接数，避免重定向。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//ops/nginx/faq.html'
+      content: 'https://www.wulicode.com/ops/nginx/faq.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/ef88a3810641c9cdc1c59d868ea686dc.png'
@@ -52,6 +52,30 @@ nginx -s reload
 ```
 
 恢复正常
+
+### Nginx 转发请求支持 vue3 history 模式
+
+转发目录
+
+```Plain Text
+location ~ ^/m/ {
+    proxy_set_header Host $host;
+    rewrite ^/m/(.*) /$1 break;
+    proxy_pass <http://127.0.0.1:9200>;
+    access_log off;
+}
+```
+
+转发根目录
+
+```Plain Text
+location / {
+    proxy_set_header Host $host;
+    rewrite ^/(.*) /$1 break;
+    proxy_pass <http://127.0.0.1:9200>;
+    access_log off;
+}
+```
 
 ## Nginx 前后端混排时候给 url 添加后缀 /
 
