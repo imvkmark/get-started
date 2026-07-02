@@ -20,7 +20,7 @@ head:
 ---
 # 配置 PyCharm 作为趁手的IDE
 
-本文以 uv 作为管理工具 : uv 使用查看 : [uv 的使用](/back-end/python/primary/uv-get-started.md)
+本文以 uv 作为管理工具 : uv 使用查看 : [uv 的使用](/back-end/python/primer/uv-get-started.md)
 
 ## 配置 uv 作为 Interpreter
 
