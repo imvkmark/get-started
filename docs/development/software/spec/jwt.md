@@ -13,7 +13,7 @@ head:
       content: 'JSON Web Token（JWT）是一种紧凑的、自包含的令牌格式，由Header、Payload和Signature三部分组成，用于在各方之间安全传输声明信息。它常用于身份验证和信息交换，如单点登录。JWT通过数字签名验证内容完整性，服务器无需存储会话，可扩展且跨语言支持。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//development/software/spec/jwt.html'
+      content: 'https://www.wulicode.com/development/software/spec/jwt.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/2d84ec79677edc45545abdfb37dafc32.png'

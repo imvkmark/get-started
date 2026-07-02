@@ -13,7 +13,7 @@ head:
       content: '该内容涵盖数据库查询基础与进阶操作：包括列查询、条件筛选、格式化显示、表达式比较、null值处理，以及排序（Order By、If、Field、Enum排序）、视图和多表查询等技巧。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/mysql/cookbook/query.html'
+      content: 'https://www.wulicode.com/database/mysql/cookbook/query.html'
 ---
 # 3.从表中查询数据
 

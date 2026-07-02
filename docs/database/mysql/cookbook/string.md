@@ -13,7 +13,7 @@ head:
       content: '该内容涵盖字符串处理的核心概念：字符集与排序规则（大小写敏感/不敏感）、数据类型选择、连接字符集设置、字符串查询与检查、字串操作函数、SQL模式匹配（LIKE与通配符）、正则表达式匹配以及全文检索（单列或多列多词查询）。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/mysql/cookbook/string.html'
+      content: 'https://www.wulicode.com/database/mysql/cookbook/string.html'
 ---
 # 4.与字符串共舞
 

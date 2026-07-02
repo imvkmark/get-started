@@ -13,7 +13,7 @@ head:
       content: '本文介绍了MySQL客户端的使用方法，涵盖用户账号创建与授权、数据库与样表建立、启动停止与服务器维护、选项文件配置、SQL语句执行、分页输出、记录操作、用户自定义变量、数学函数及Shell脚本集成等实用技巧。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/mysql/cookbook/client.html'
+      content: 'https://www.wulicode.com/database/mysql/cookbook/client.html'
 ---
 # 1.使用 Mysql 客户端
 

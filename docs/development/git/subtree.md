@@ -1,7 +1,7 @@
 ---
-description: '对于多项目来说, 使用一个项目来管理多个包是最为方便的, 但是每个包单独弄一个 git 地址去做代码的提交是非常累人的在一个项目中管理所有包, 为每个不同的文件夹设定不同的地址并共享主项目的提交记录, 然后进行包的提交无疑是最方便的.例如上面 poppy project 为一个项目, 其他几个为不同的包, 每个包有唯一的 git 仓库地址一开始使用子树的方式去进行提交但是如果在多个不同的机器上去做提交经常会出现以下仅仅是例子, 和上边仓库以及文件夹不匹配所以使用 split 命令找到唯一的提交号, 进行提交推送的时候使用 --force 来推送但是如果远程没'
-lastUpdated: '2024-11-19 12:23:00'
-head: 
+description: 'Git的subtree功能允许在主仓库中嵌入其他Git仓库的子目录，实现多项目代码的统一管理，同时保持独立提交历史和便捷的双向同步，适用于长期协作或代码复用场景。'
+lastUpdated: '2026-07-02 18:08:11'
+head:
   - - meta
     - name: 'og:title'
       content: 'Git 使用 subtree 管理多个项目代码'
@@ -10,19 +10,17 @@ head:
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: '对于多项目来说, 使用一个项目来管理多个包是最为方便的, 但是每个包单独弄一个 git 地址去做代码的提交是非常累人的在一个项目中管理所有包, 为每个不同的文件夹设定不同的地址并共享主项目的提交记录, 然后进行包的提交无疑是最方便的.例如上面 poppy project 为一个项目, 其他几个为不同的包, 每个包有唯一的 git 仓库地址一开始使用子树的方式去进行提交但是如果在多个不同的机器上去做提交经常会出现以下仅仅是例子, 和上边仓库以及文件夹不匹配所以使用 split 命令找到唯一的提交号, 进行提交推送的时候使用 --force 来推送但是如果远程没'
+      content: 'Git的subtree功能允许在主仓库中嵌入其他Git仓库的子目录，实现多项目代码的统一管理，同时保持独立提交历史和便捷的双向同步，适用于长期协作或代码复用场景。'
   - - meta
     - name: 'og:url'
       content: 'https://www.wulicode.com/development/git/subtree.html'
   - - meta
     - name: 'og:image'
-      content: 'https://file.wulicode.com/notion/b4/b4619f1344488f57635caca8236195a2.png?x-oss-process=image/resize,m_mfit,w_400'
+      content: 'https://file.wulicode.com/feishu-images/9bf5895cc3d2ac45c0ecc0c4d1074ac7.png'
 ---
 # Git 使用 subtree 管理多个项目代码
 
-
-
-![](https://file.wulicode.com/notion/b4/b4619f1344488f57635caca8236195a2.png)
+![](https://file.wulicode.com/feishu-images/9bf5895cc3d2ac45c0ecc0c4d1074ac7.png)
 
 对于多项目来说, 使用一个项目来管理多个包是最为方便的, 但是每个包单独弄一个 git 地址去做代码的提交是非常累人的
 
@@ -32,15 +30,15 @@ head:
 
 一开始使用子树的方式去进行提交
 
-```
+```Plaintext
 $ git subtree push --prefix=poppy/system system 3.0
 ```
 
 但是如果在多个不同的机器上去做提交经常会出现
 
-_以下仅仅是例子, 和上边仓库以及文件夹不匹配_
+*以下仅仅是例子, 和上边仓库以及文件夹不匹配*
 
-```
+```Plaintext
 git push using:  demo temp/from-main
 fatal: ambiguous argument 'cb0580bb6ee76fa96f5bc3c7095303f9a33f5834^0': unknown revision or path not in the working tree.
 Use '--' to separate paths from revisions, like this:
@@ -57,13 +55,13 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 所以使用 split 命令找到唯一的提交号, 进行提交
 
-```
+```Plaintext
 $ git subtree split --prefix=poppy/system feature/3.0
 ```
 
-推送的时候使用  `--force`  来推送
+推送的时候使用 `--force` 来推送
 
-```
+```Plaintext
 $ git push system `git subtree split --prefix=poppy/system feature/3.0`:3.0 --force
 ```
 
@@ -73,7 +71,7 @@ $ git push system `git subtree split --prefix=poppy/system feature/3.0`:3.0 --fo
 
 解决方法
 
-```
+```Plaintext
 $ git push system-github 5187723bd023a009363fdba2b224ca0fefd0ed7b:refs/heads/3.0 --force
 ```
 
@@ -81,6 +79,3 @@ $ git push system-github 5187723bd023a009363fdba2b224ca0fefd0ed7b:refs/heads/3.0
 
 - [Why can’t I push this up-to-date Git subtree?](https://stackoverflow.com/questions/13756055/why-cant-i-push-this-up-to-date-git-subtree)
 - [git subtree 不断增加的推送时间，解不玩的冲突！这篇文章应该能救你](https://blog.walterlv.com/post/performance-of-git-subtree.html)
-
-
-

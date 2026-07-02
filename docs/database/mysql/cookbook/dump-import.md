@@ -13,7 +13,7 @@ head:
       content: 'MySQL数据导入导出：使用Load Data或mysqlimport，默认制表符分隔，需File权限。文件位于服务器，无Local读取服务器文件，有Local读取本地。Replace Into替代操作，存在时忽略。可用Show Warnings查看警告。可指定列。还涉及数据预处理、导出、SQLMode、序列生成及表匹配查找。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/mysql/cookbook/dump-import.html'
+      content: 'https://www.wulicode.com/database/mysql/cookbook/dump-import.html'
 ---
 # 7.数据导入导出
 

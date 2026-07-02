@@ -13,7 +13,7 @@ head:
       content: '本文介绍了表管理操作，包括克隆表结构与数据（创建表、插入数据、指定字段插入、查询新建、使用索引、修改结构及自增数据），使用临时表（创建、删除、唯一性临时表），以及检查或更改表的存储引擎（显示引擎、通过Information_Schema查看、Status、Create Table、修改引擎）。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/mysql/cookbook/table-manage.html'
+      content: 'https://www.wulicode.com/database/mysql/cookbook/table-manage.html'
 ---
 # 2.表管理
 

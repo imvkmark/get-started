@@ -1,10 +1,10 @@
 ---
 description: ''
-lastUpdated: '2026-06-18 06:39:13'
+lastUpdated: '2026-07-02 18:09:16'
 head:
   - - meta
     - name: 'og:title'
-      content: '协议'
+      content: '入门'
   - - meta
     - name: 'og:type'
       content: 'article'
@@ -13,7 +13,7 @@ head:
       content: ''
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/development/software/spec/index.html'
+      content: 'https://www.wulicode.com/development/git/primer/index.html'
 ---
-# 协议
+# 入门
 

@@ -1,10 +1,10 @@
 ---
 description: '软件版本号规范应遵循语义化版本（SemVer）原则，通常采用主版本号.次版本号.修订号格式。当发生不兼容API更改时进位主版本号，新增功能向后兼容时进位次版本号，进行bug修复时进位修订号。参考GitHub起草的规范可确保版本演进逻辑清晰。'
-lastUpdated: '2026-06-18 06:40:01'
+lastUpdated: '2026-07-02 18:17:08'
 head:
   - - meta
     - name: 'og:title'
-      content: '软件版本号规范 该如何顺理成章的进位'
+      content: '软件版本号规范: 该如何顺理成章的进位'
   - - meta
     - name: 'og:type'
       content: 'article'
@@ -13,12 +13,12 @@ head:
       content: '软件版本号规范应遵循语义化版本（SemVer）原则，通常采用主版本号.次版本号.修订号格式。当发生不兼容API更改时进位主版本号，新增功能向后兼容时进位次版本号，进行bug修复时进位修订号。参考GitHub起草的规范可确保版本演进逻辑清晰。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//development/software/spec/semver.html'
+      content: 'https://www.wulicode.com/development/software/spec/semver.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/6ce91929c4e11a6140a019a50d7aeaed.jpg'
 ---
-# 软件版本号规范 该如何顺理成章的进位
+# 软件版本号规范: 该如何顺理成章的进位
 
 在定义版本号时，为了查看 `git tag` 方便，设置了 `1.0.9` 版本之后的版本号为
 

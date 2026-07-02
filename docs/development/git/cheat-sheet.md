@@ -1,41 +1,46 @@
 ---
-description: '一般来说，日常使用只要记住下图6个命令即可。但是熟练使用，恐怕要记住60～100个命令。下面是我整理的常用 Git 命令清单。几个专用名词的译名如下。Git的设置文件为.gitconfig，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。快捷快捷[End]'
-lastUpdated: '2023-11-25 17:37:00'
-head: 
+description: '该文档汇总了Git常用命令，涵盖新建仓库、配置、文件增删、提交、分支管理、标签、信息查看、远程同步、撤销及打包等操作，便于快速查阅。'
+lastUpdated: '2026-07-02 18:12:12'
+head:
   - - meta
     - name: 'og:title'
-      content: 'Git 常用命令清单(Cheat-Sheet)'
+      content: 'Git 常用命令清单(Cheat-Sheet) '
   - - meta
     - name: 'og:type'
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: '一般来说，日常使用只要记住下图6个命令即可。但是熟练使用，恐怕要记住60～100个命令。下面是我整理的常用 Git 命令清单。几个专用名词的译名如下。Git的设置文件为.gitconfig，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。快捷快捷[End]'
+      content: '该文档汇总了Git常用命令，涵盖新建仓库、配置、文件增删、提交、分支管理、标签、信息查看、远程同步、撤销及打包等操作，便于快速查阅。'
   - - meta
     - name: 'og:url'
       content: 'https://www.wulicode.com/development/git/cheat-sheet.html'
   - - meta
     - name: 'og:image'
-      content: 'https://file.wulicode.com/notion/30/30a1045a5b44eb9794f086f1cee8b4b8.png?x-oss-process=image/resize,m_mfit,w_400'
+      content: 'https://file.wulicode.com/feishu-images/1848247b6a09a1664982a56eda5e351f.png'
 ---
 # Git 常用命令清单(Cheat-Sheet)
 
+::: info ℹ️
 
+原文地址 : https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html
+这里基于个人使用增补了部分
+
+:::
 
 一般来说，日常使用只要记住下图6个命令即可。但是熟练使用，恐怕要记住60～100个命令。
 
-![](https://file.wulicode.com/notion/30/30a1045a5b44eb9794f086f1cee8b4b8.png)
+![](https://file.wulicode.com/feishu-images/1848247b6a09a1664982a56eda5e351f.png)
 
 下面是我整理的常用 Git 命令清单。几个专用名词的译名如下。
 
-> - Workspace：工作区 <br>
-> - Index / Stage：暂存区(已修改未提交的文件) <br>
-> - Repository：本地仓库 <br>
-> - Remote：远程仓库
+- Workspace：工作区
+- Index / Stage：暂存区(已修改未提交的文件)
+- Repository：本地仓库
+- Remote：远程仓库
 
 ## 一、新建代码库
 
-```
+```Plaintext
 # 在当前目录新建一个Git代码库
 $ git init
 # 新建一个目录，将其初始化为Git代码库
@@ -46,9 +51,9 @@ $ git clone [url]
 
 ## 二、配置
 
-Git的设置文件为 `.gitconfig` ，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。
+Git的设置文件为`.gitconfig`，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。
 
-```
+```Plaintext
 # 显示当前的Git配置
 $ git config --list
 # 编辑Git配置文件
@@ -60,7 +65,7 @@ $ git config [--global] user.email "[email address]"
 
 **快捷**
 
-```
+```Plaintext
 # 设置代理
 $ git config --global http.proxy http://127.0.0.1:1087
 $ git config --global https.proxy https://127.0.0.1:1087
@@ -75,7 +80,7 @@ git config --global core.safecrlf false
 
 ## 三、增加/删除文件
 
-```
+```Plaintext
 # 添加指定文件到暂存区
 $ git add [file1] [file2] ...
 # 添加指定目录到暂存区，包括子目录
@@ -95,7 +100,7 @@ $ git mv [file-original] [file-renamed]
 
 ## 四、代码提交
 
-```
+```Plaintext
 # 提交暂存区到仓库区
 $ git commit -m [message]
 # 提交暂存区的指定文件到仓库区
@@ -113,7 +118,7 @@ $ git commit --amend [file1] [file2] ...
 
 ## 五、分支
 
-```
+```Plaintext
 # 列出所有本地分支
 $ git branch
 # 列出所有远程分支
@@ -147,7 +152,7 @@ $ git branch -dr [remote/branch]
 
 ## 六、标签
 
-```
+```Plaintext
 # 列出所有tag
 $ git tag
 # 新建一个tag在当前commit
@@ -170,14 +175,14 @@ $ git checkout -b [branch] [tag]
 
 **快捷**
 
-```
+```Plaintext
 # 删除本地所有tag 并获取服务端所有
 $ git tag -l | xargs git tag -d && git fetch --tags
 ```
 
 ## 七、查看信息
 
-```
+```Plaintext
 # 显示有变更的文件
 $ git status
 # 显示当前分支的版本历史
@@ -223,7 +228,7 @@ $ git reflog
 
 ## 八、远程同步
 
-```
+```Plaintext
 # 下载远程仓库的所有变动
 $ git fetch [remote]
 # 显示所有远程仓库
@@ -244,7 +249,7 @@ $ git push [remote] --all
 
 ## 九、撤销
 
-```
+```Plaintext
 # 恢复暂存区的指定文件到工作区
 $ git checkout [file]
 # 恢复某个commit的指定文件到暂存区和工作区
@@ -271,7 +276,7 @@ $ git stash pop
 
 ## 十、其他
 
-```
+```Plaintext
 # 生成一个可供发布的压缩包
 $ git archive
 # 筛选标签以及详细
@@ -279,10 +284,3 @@ $ git for-each-ref --format="%(refname:short) %(taggerdate) %(subject) %(body)" 
 # 强制更新
 $ git fetch && git reset --hard && git pull
 ```
-
-[End]
-
-## 参考
-
-- [常用 Git 命令清单](https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
-

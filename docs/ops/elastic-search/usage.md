@@ -1,7 +1,7 @@
 ---
-description: 'PUT /PUT /GET /_cat/indicesGET /_cat/indices/POST //_docputput方式需指定idPUT //_doc/PUT //_doc/同put方式创建,put方式修改,会覆盖掉原的所有字段, 如只想修改某个字段的值, 该方式则不能满足该方式与put相同,会覆盖掉原的字段该方式只会修改指定的字段, 不会覆盖所有字段DELETE //_doc/查询参数,有地址传递和请求体(body)传递两种方式,此处只介绍body方式基于布尔条件的匹配查询, 基于一个或多个布尔条件构建, 可能出现的类型有:'
-lastUpdated: '2025-12-19 14:27:00'
-head: 
+description: 'Elasticsearch支持通过HTTP请求（如POST、PUT）进行文档的创建、修改、删除及查询。常用查询包括全文检索（match、match_phrase）、词条查询（term）以及复合查询（bool），并支持多参数过滤与query_string方式。'
+lastUpdated: '2026-07-02 12:19:46'
+head:
   - - meta
     - name: 'og:title'
       content: 'Es 使用'
@@ -10,44 +10,42 @@ head:
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: 'PUT /PUT /GET /_cat/indicesGET /_cat/indices/POST //_docputput方式需指定idPUT //_doc/PUT //_doc/同put方式创建,put方式修改,会覆盖掉原的所有字段, 如只想修改某个字段的值, 该方式则不能满足该方式与put相同,会覆盖掉原的字段该方式只会修改指定的字段, 不会覆盖所有字段DELETE //_doc/查询参数,有地址传递和请求体(body)传递两种方式,此处只介绍body方式基于布尔条件的匹配查询, 基于一个或多个布尔条件构建, 可能出现的类型有:'
+      content: 'Elasticsearch支持通过HTTP请求（如POST、PUT）进行文档的创建、修改、删除及查询。常用查询包括全文检索（match、match_phrase）、词条查询（term）以及复合查询（bool），并支持多参数过滤与query_string方式。'
   - - meta
     - name: 'og:url'
       content: 'https://www.wulicode.com/ops/elastic-search/usage.html'
 ---
 # Es 使用
 
-
-
 ### create
 
-PUT  `/<index>`
+PUT `/<index>`
 
 ### delete
 
-PUT  `/<index>`
+PUT `/<index>`
 
 ### 查看
 
 ### 查看所有
 
-GET  `/_cat/indices`
+GET `/_cat/indices`
 
 ### 查看指定
 
-GET  `/_cat/indices/<index>`
+GET `/_cat/indices/<index>`
 
-## _doc
+## \_doc
 
 ### 创建
 
 ### post
 
-POST  `/<index>/_doc`
+POST `/<index>/_doc`
 
 - api params
 
-```json
+```JSON
 {
     // 文档内容
 }
@@ -57,26 +55,26 @@ POST  `/<index>/_doc`
 
 **put方式需指定id**
 
-PUT  `/<index>/_doc/<id>`
+PUT `/<index>/_doc/<id>`
 
 ### 修改
 
 ### put
 
-PUT  `/<index>/_doc/<id>`
+PUT `/<index>/_doc/<id>`
 
-**同put方式创建,put方式修改,会覆盖掉原的所有字段** , 如只想修改某个字段的值, 该方式则不能满足
+**同put方式创建,put方式修改,会覆盖掉原的所有字段**, 如只想修改某个字段的值, 该方式则不能满足
 
 ### post
 
-- POST  `/<index>/_doc/<id>` 
+- POST `/<index>/_doc/<id>`
 
 **该方式与put相同,会覆盖掉原的字段**
 
-- POST  `/<index>/_update/<id>` 
+- POST `/<index>/_update/<id>`
 - params
 
-```json
+```JSON
 {
     "doc": {
         // 需要修改的数据
@@ -90,26 +88,34 @@ PUT  `/<index>/_doc/<id>`
 
 ### delete
 
-DELETE  `/<index>/_doc/<id>`
+DELETE `/<index>/_doc/<id>`
 
 ### 查询
 
 ### 请求方式
 
-- GET  `/<index>/_search` 
-- GET  `/_search` 
-- POST  `/<index>/_search` 
-- POST  `/_search` 
+- GET `/<index>/_search`
+- GET `/_search`
+- POST `/<index>/_search`
+- POST `/_search`
 
 ### 常用查询参数
 
-查询参数,有 **地址传递** 和 **请求体(body)传递** 两种方式,此处只介绍body方式
+查询参数,有**地址传递**和**请求体(body)传递**两种方式,此处只介绍body方式
 
--  `query` 
--  `from` 
--  `size` 
--  `_source` 需要查询返回的字段
--  `sort` 
+- `query`
+
+  - 查询条件
+- `from`
+
+  - 偏移量,默认为0
+- `size`
+
+  - 每页条数限制
+- `_source`需要查询返回的字段
+- `sort`
+
+  - 排序
 
 ### 复合查询条件
 
@@ -117,34 +123,18 @@ DELETE  `/<index>/_doc/<id>`
 
 基于布尔条件的匹配查询, 基于一个或多个布尔条件构建, 可能出现的类型有:
 
-<table><tbody>
-  <tr>
-    <td>类型</td>
-    <td>描述</td>
-  </tr>
-  <tr>
-    <td>must</td>
-    <td>查询结果必须全部符合查询条件,并给查询结果</td>
-  </tr>
-  <tr>
-    <td>must_not</td>
-    <td>与must查询的结果相反,相当于</td>
-  </tr>
-  <tr>
-    <td>should</td>
-    <td>查询结果符合任意一个查询条件即可, 相当于</td>
-  </tr>
-  <tr>
-    <td>filter</td>
-    <td>结果必须符合全部与must不同点是忽略</td>
-  </tr>
-</tbody></table>
+| 类型 | 描述 |
+|-|-|
+| must | 查询结果必须全部符合查询条件,并给查询结果`计算分值`, 每个子条件的关系相当于`AND` |
+| must_not | 与must查询的结果相反,相当于`NOT`, 与must不同,`分数将会被省略` |
+| should | 查询结果符合任意一个查询条件即可, 相当于`OR` |
+| filter | 结果必须符合全部与must不同点是忽略`分数` |
 
 - must
 
-以下语句,只会搜索出  `name:3333, sex:female` 的用户, 并计算分值
+以下语句,只会搜索出 `name:3333, sex:female`的用户, 并计算分值
 
-```json
+```JSON
 {
     "query": {
         "bool": {
@@ -171,7 +161,7 @@ DELETE  `/<index>/_doc/<id>`
 
 - filter (不计算分值)
 
-```json
+```JSON
 {
     "query": {
         "bool": {
@@ -194,9 +184,9 @@ DELETE  `/<index>/_doc/<id>`
 
 - should
 
-搜索 `name:乌拉` 或者 `sex:female` , 计算分值
+搜索`name:乌拉`或者`sex:female`, 计算分值
 
-```json
+```JSON
 GET /search/_search
 {
   "query": {
@@ -220,9 +210,9 @@ GET /search/_search
 
 - must_not
 
-搜索 `name!=乌拉` 并且 `sex!=female` 的数据, 计算分值
+搜索`name!=乌拉`并且`sex!=female`的数据, 计算分值
 
-```json
+```JSON
 {
     "query": {
         "bool": {
@@ -243,13 +233,13 @@ GET /search/_search
 }
 ```
 
--  **多种条件复合使用** 
+- **多种条件复合使用**
 
-搜索 `sex:male` 并且 `name:3333 或者name:乌拉` 的数据.
+搜索`sex:male`并且`name:3333 或者name:乌拉`的数据.
 
-以下两种写法皆可实现, 注意嵌套写法的 `层级关系`
+以下两种写法皆可实现, 注意嵌套写法的`层级关系`
 
-```json
+```JSON
 {
     "query": {
         "bool": {
@@ -271,7 +261,7 @@ GET /search/_search
 }
 ```
 
-```json
+```JSON
 {
     "query": {
         "bool": {
@@ -313,9 +303,9 @@ function_score
 
 ### query_string 方式查询
 
-使用 `query_string` 拼接查询条件,  **注意AND|OR的大小写形式**
+使用`query_string`拼接查询条件, **注意AND|OR的大小写形式**
 
-```json
+```JSON
 {
     "query": {
         "bool": {
@@ -335,9 +325,9 @@ function_score
 
 ### match 全文检索
 
-返回与关键词( **文本,数字,日期,布尔** )匹配的文档,
+返回与关键词(**文本,数字,日期,布尔**)匹配的文档,
 
-```json
+```JSON
 {
     "query": {
         "match": {
@@ -351,11 +341,11 @@ function_score
 
 ### term 词条查询
 
-查找包含指定字段中 **精确匹配** 查询字符串的文档。
+查找包含指定字段中**精确匹配**查询字符串的文档。
 
--  **exists**  返回包含指定字段的文档
+- **exists** 返回包含指定字段的文档
 
-```
+```Plaintext
 GET /search/_search
 {
     "query": {
@@ -366,9 +356,9 @@ GET /search/_search
 }
 ```
 
--  **ids**  根据ids查询文档
+- **ids** 根据ids查询文档
 
-```json
+```JSON
 {
     "query": {
         "ids": {
@@ -381,9 +371,9 @@ GET /search/_search
 }
 ```
 
--  **range**  根据数据范围查询文档
+- **range** 根据数据范围查询文档
 
-```json
+```JSON
 {
     "query": {
         "range": {
@@ -395,11 +385,11 @@ GET /search/_search
 }
 ```
 
--  **term**  根据词条准确查找(价格,id…)
+- **term** 根据词条准确查找(价格,id…)
 
-**不要使用**  **`term`**  **对**  **`text`**  **字段进行查询, 要搜索**  **`text`**  **字段,是用**  **`match`**  **查询**
+**不要使用`term`对`text`字段进行查询, 要搜索`text`字段,是用`match`查询**
 
-```json
+```JSON
 {
     "query": {
         "term": {
@@ -411,9 +401,9 @@ GET /search/_search
 }
 ```
 
--  **terms**  根据多个词条进行精确查找
+- **terms** 根据多个词条进行精确查找
 
-```json
+```JSON
 {
   "query": {
     "terms": {
@@ -423,9 +413,9 @@ GET /search/_search
 }
 ```
 
--  **wildcard通配符查询** 
+- **wildcard通配符查询**
 
-```json
+```JSON
 {
   "query": {
     "wildcard": {
@@ -437,9 +427,9 @@ GET /search/_search
 }
 ```
 
--  **关键词准确搜索** 
+- **关键词准确搜索**
 
-```json
+```JSON
 {
   "query": {
     "bool": {
@@ -456,4 +446,3 @@ GET /search/_search
   }
 }
 ```
-

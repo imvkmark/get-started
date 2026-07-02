@@ -1,7 +1,7 @@
 ---
-description: '当不加-D 参数,useradd 指令使用命令列来指定新帐号的设定值并且使用系统上的预设值.新使用者帐号将产生一些系统档案，使用者目录建立，拷备起始档案等，这些均可以利用命令列选项指定。[此版本为 RedHatLinux 提供，可帮每个新加入的使用者建立个别的 group,毋须添加-n 选项]useradd 命令 用于 Linux 中创建的新的系统用户。useradd 可用来建立用户帐号。帐号建好之后，再用 passwd 设定帐号的密码．而可用 userdel 删除帐号。使用 useradd 指令所建立的帐号，实际上是保存在 /etc/passwd 文本文件中在 Slackware'
-lastUpdated: '2025-12-05 23:30:00'
-head: 
+description: 'useradd(8) 是Linux系统中创建新用户或更新默认新用户信息的命令。常用选项包括 -m（创建家目录）、-s（指定登录Shell）、-G（附加组）、-u（指定UID）。参数如用户名。实例：`useradd -m -s /bin/bash -G sudo newuser` 创建用户并设置家目录、Shell和附加组。'
+lastUpdated: '2026-07-02 12:30:19'
+head:
   - - meta
     - name: 'og:title'
       content: 'useradd(8) - 创建新用户或者更新默认的新用户信息'
@@ -10,22 +10,20 @@ head:
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: '当不加-D 参数,useradd 指令使用命令列来指定新帐号的设定值并且使用系统上的预设值.新使用者帐号将产生一些系统档案，使用者目录建立，拷备起始档案等，这些均可以利用命令列选项指定。[此版本为 RedHatLinux 提供，可帮每个新加入的使用者建立个别的 group,毋须添加-n 选项]useradd 命令 用于 Linux 中创建的新的系统用户。useradd 可用来建立用户帐号。帐号建好之后，再用 passwd 设定帐号的密码．而可用 userdel 删除帐号。使用 useradd 指令所建立的帐号，实际上是保存在 /etc/passwd 文本文件中在 Slackware'
+      content: 'useradd(8) 是Linux系统中创建新用户或更新默认新用户信息的命令。常用选项包括 -m（创建家目录）、-s（指定登录Shell）、-G（附加组）、-u（指定UID）。参数如用户名。实例：`useradd -m -s /bin/bash -G sudo newuser` 创建用户并设置家目录、Shell和附加组。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/man/system/useradd-8.html'
+      content: 'https://www.wulicode.com/ops/man/system/useradd-8.html'
 ---
 # useradd(8) - 创建新用户或者更新默认的新用户信息
 
+当不加-D 参数,useradd 指令使用命令列来指定新帐号的设定值并且使用系统上的预设值.新使用者帐号将产生一些系统档案，使用者目录建立，拷备起始档案等，这些均可以利用命令列选项指定。[**此版本为 RedHatLinux 提供，可帮每个新加入的使用者建立个别的 group,毋须添加-n 选项**]
 
+**useradd 命令** 用于 Linux 中创建的新的系统用户。useradd 可用来建立用户帐号。帐号建好之后，再用 passwd 设定帐号的密码．而可用 userdel 删除帐号。使用 useradd 指令所建立的帐号，实际上是保存在 `/etc/passwd` 文本文件中
 
-当不加-D 参数,useradd 指令使用命令列来指定新帐号的设定值并且使用系统上的预设值.新使用者帐号将产生一些系统档案，使用者目录建立，拷备起始档案等，这些均可以利用命令列选项指定。[ **此版本为 RedHatLinux 提供，可帮每个新加入的使用者建立个别的 group,毋须添加-n 选项** ]
+在 Slackware 中，adduser 指令是个 script 程序，利用交谈的方式取得输入的用户帐号资料，然后再交由真正建立帐号的 useradd 命令建立新用户，如此可方便管理员建立用户帐号。在 Red Hat Linux 中， **adduser 命令** 则是 useradd 命令的符号连接，两者实际上是同一个指令
 
-**useradd 命令**  用于 Linux 中创建的新的系统用户。useradd 可用来建立用户帐号。帐号建好之后，再用 passwd 设定帐号的密码．而可用 userdel 删除帐号。使用 useradd 指令所建立的帐号，实际上是保存在  `/etc/passwd`  文本文件中
-
-在 Slackware 中，adduser 指令是个 script 程序，利用交谈的方式取得输入的用户帐号资料，然后再交由真正建立帐号的 useradd 命令建立新用户，如此可方便管理员建立用户帐号。在 Red Hat Linux 中，  **adduser 命令**  则是 useradd 命令的符号连接，两者实际上是同一个指令
-
-```
+```Plaintext
 useradd [options] LOGIN
 useradd -D
 useradd -D [options]
@@ -39,11 +37,11 @@ useradd -D [options]
 
 `-b, --base-dir BASE_DIR`
 
-如果  `d`  没有指定, 这个默认文件夹将是系统默认的基准文件夹,  `BASE_DIR`  是定义用户 home 目录的文件目录, 如果此目录不存在, 否则用户的 home 目录不会被创建
+如果 `d` 没有指定, 这个默认文件夹将是系统默认的基准文件夹, `BASE_DIR` 是定义用户 home 目录的文件目录, 如果此目录不存在, 否则用户的 home 目录不会被创建
 
 `-d, --home HOME_DIR`
 
-新帐号每次登入时所使用的  `HOME_DIR` 。预设值为 `BASE_DIR` 内 login 名称，并当成登入时目录名称, HOME_DIR 的父级必须存在, 否则目录不会给创建
+新帐号每次登入时所使用的 `HOME_DIR`。预设值为`BASE_DIR`内 login 名称，并当成登入时目录名称, HOME_DIR 的父级必须存在, 否则目录不会给创建
 
 `-e, --expiredate EXPIRE_DATE`
 
@@ -59,7 +57,7 @@ useradd -D [options]
 
 `-G, --groups GROUP1[,GROUP2,...[,GROUPN]]]`
 
-定义此使用者为此一堆 groups 的成员。每个群组使用 `,` 区格开来，不可以夹杂空白字符。群组名同-g 选项的限制。定义值为使用者的起始群组。
+定义此使用者为此一堆 groups 的成员。每个群组使用`,`区格开来，不可以夹杂空白字符。群组名同-g 选项的限制。定义值为使用者的起始群组。
 
 `-h, --help`
 
@@ -67,25 +65,25 @@ useradd -D [options]
 
 `-M`
 
-用户的 Home 目录将不会被创建, 只有在 `/etc/login.defs` 系统设定中的才会创建目录
+用户的 Home 目录将不会被创建, 只有在`/etc/login.defs`系统设定中的才会创建目录
 
 `-m, --create-home`
 
-使用者目录如不存在则自动建立。如使用-k 选项  `SKEL_DIR`  内的档案将复制至使用者目录下。否则的话  `/etc/skel`  目录下的档案会复制过去取代。任何在  `SKEL_DIR` ,  `/etc/skel`  的目录也相同会在使用者目录下一一建立。 `-k`  选项必须和  `-m`  选项同时使用, 不建立目录以及不复制任何档案为预设值。
+使用者目录如不存在则自动建立。如使用-k 选项 `SKEL_DIR` 内的档案将复制至使用者目录下。否则的话 `/etc/skel` 目录下的档案会复制过去取代。任何在 `SKEL_DIR`, `/etc/skel` 的目录也相同会在使用者目录下一一建立。`-k` 选项必须和 `-m` 选项同时使用, 不建立目录以及不复制任何档案为预设值。
 
 `-l`
 
-<span style="background:#E9F3F7;">[Red Hat]</span> 不向用户登陆的日志文件中填写信息
+[Red Hat] 不向用户登陆的日志文件中填写信息
 
 `-n`
 
 默认创建用户的时候将创建一个和用户相同名称的组, 这个选项关闭这个行为, 当这个选项使用的时候, 用户必须指定一个组
 
-When this option is used, users by default will be placed in whatever group is specified in  `/etc/default/useradd` . If no default group is defined, group 1 will be used.
+When this option is used, users by default will be placed in whatever group is specified in `/etc/default/useradd`. If no default group is defined, group 1 will be used.
 
 `-K, --key KEY=VALUE`
 
-覆盖  `/etc/login.defs`  默认值 (UID_MIN, UID_MAX, UMASK, PASS_MAX_DAYS and others).例如:  `K PASS_MAX_DAYS=-1`  在创建系统账户时候关闭密码过期. 及时系统账号没有密码.支持多值设定 `K UID_MIN=100 -K UID_MAX=499` Note:  `K UID_MIN=10,UID_MAX=499`  将不合法
+覆盖 `/etc/login.defs` 默认值 (UID_MIN, UID_MAX, UMASK, PASS_MAX_DAYS and others).例如: `K PASS_MAX_DAYS=-1` 在创建系统账户时候关闭密码过期. 及时系统账号没有密码.支持多值设定`K UID_MIN=100 -K UID_MAX=499`Note: `K UID_MIN=10,UID_MAX=499` 将不合法
 
 `-o, --non-unique`
 
@@ -93,15 +91,15 @@ When this option is used, users by default will be placed in whatever group is s
 
 `-p, --password PASSWORD`
 
-加密的密码, 使用  `crypt(3)`  返回, 默认是禁用账户
+加密的密码, 使用 `crypt(3)` 返回, 默认是禁用账户
 
 `-r`
 
-This flag is used to create a system account. That is, a user with a UID lower than the value of UID_MIN defined in /etc/login.defs and whose password does not expire. Note that useradd will not create a home directory for such an user, regardless of the default setting in /etc/login.defs. You have to specify -m option if you want a home directory for a system account to be created.  **This is an option added by Red Hat**
+This flag is used to create a system account. That is, a user with a UID lower than the value of UID_MIN defined in /etc/login.defs and whose password does not expire. Note that useradd will not create a home directory for such an user, regardless of the default setting in /etc/login.defs. You have to specify -m option if you want a home directory for a system account to be created. **This is an option added by Red Hat**
 
 `-s, --shell SHELL`
 
-使用者登入后使用的 shell 名称, 默认留空, 让系统选择默认的 shell, 例如  `s /sbin/nologin`  是不允许登陆 `u, --uid UID` 用户的 ID 值。必须为唯一的 ID 值，除非用 `o` 选项。数字不可为负值。预设为最小不得小于  `UID_MIN`  而逐次增加。0~ `UID_MIN` 传统上是保留给系统帐号使用。
+使用者登入后使用的 shell 名称, 默认留空, 让系统选择默认的 shell, 例如 `s /sbin/nologin` 是不允许登陆`u, --uid UID`用户的 ID 值。必须为唯一的 ID 值，除非用`o`选项。数字不可为负值。预设为最小不得小于 `UID_MIN` 而逐次增加。0\~`UID_MIN`传统上是保留给系统帐号使用。
 
 `-Z, --selinux-user SEUSER`
 
@@ -109,11 +107,11 @@ The SELinux user for the user’s login. The default is to leave thisfield blank
 
 **改变默认值**
 
-当使用  `-D`  选项,  `useradd`  将显示默认的当前值, 或者使用命令行更新当前值, 可用选项如下
+当使用 `-D` 选项, `useradd` 将显示默认的当前值, 或者使用命令行更新当前值, 可用选项如下
 
 `-b HOME_DIR`
 
-定义使用者所属目录的 `父目录` 。使用者名称会附加在  `HOME_DIR`  后面用来建立新使用者的目录。使用-d 后则此选项无效。
+定义使用者所属目录的`父目录`。使用者名称会附加在 `HOME_DIR` 后面用来建立新使用者的目录。使用-d 后则此选项无效。
 
 `-e EXPIRE_DATE`
 
@@ -135,7 +133,7 @@ The SELinux user for the user’s login. The default is to leave thisfield blank
 
 **备注**
 
-`/etc/skel/`  目录下的文件将会覆盖默认的用户文件
+`/etc/skel/` 目录下的文件将会覆盖默认的用户文件
 
 The system administrator is responsible for placing the default user files in the /etc/skel/ directory.
 
@@ -143,7 +141,7 @@ This version of useradd was modified by Red Hat to suit Red Hat user/group conve
 
 **涉及到的文件**
 
-```
+```Plaintext
 /etc/passwd             #User account information.
 /etc/shadow             #Secure user account information.
 /etc/group              #Group account information.
@@ -157,7 +155,7 @@ This version of useradd was modified by Red Hat to suit Red Hat user/group conve
 
 The useradd command exits with the following values:
 
-```
+```Plaintext
 0  success
 1  can't update password file
 2  invalid command syntax
@@ -174,17 +172,14 @@ The useradd command exits with the following values:
 
 新建用户加入组：
 
-```
+```Plaintext
 useradd –g sales jack –G company,employees    //-g：加入主要组、-G：加入次要组
 ```
 
 建立一个新用户账户，并设置 ID：
 
-```
+```Plaintext
 useradd duoli -u 544
 ```
 
 需要说明的是，设定 ID 值时尽量要大于 500，以免冲突。因为 Linux 安装后会建立一些特殊用户，一般 0 到 499 之间的值留给 bin、mail 这样的系统账号。
-
-
-

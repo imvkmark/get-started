@@ -1,41 +1,40 @@
 ---
-description: '地址 : https://github.com/medcl/elasticsearch-analysis-ik这个版本的 7.17.5 安装失败, 可以使用手动安装(参考 github 文档)这里创建索引并创建属性, 也可以向github 中, 创建索引再创建字段使用分词器'
-lastUpdated: '2025-12-19 14:27:00'
-head: 
+description: 'ES插件IK分词支持自动或手动安装，解压后重启ElasticSearch即可。自定义词库需新建文件夹和分词文件，配置IK文件指向自定义词库后重启服务。支持ik_smart和ik_max_word两种分词方式，使用时需在mapping中指定字段使用IK分词器，特殊词组可建立或新增自定义词库。'
+lastUpdated: '2026-07-02 12:19:33'
+head:
   - - meta
     - name: 'og:title'
-      content: 'ES 插件 : ElasticSearch 分词-IK'
+      content: 'ES 插件 ElasticSearch 分词-IK'
   - - meta
     - name: 'og:type'
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: '地址 : https://github.com/medcl/elasticsearch-analysis-ik这个版本的 7.17.5 安装失败, 可以使用手动安装(参考 github 文档)这里创建索引并创建属性, 也可以向github 中, 创建索引再创建字段使用分词器'
+      content: 'ES插件IK分词支持自动或手动安装，解压后重启ElasticSearch即可。自定义词库需新建文件夹和分词文件，配置IK文件指向自定义词库后重启服务。支持ik_smart和ik_max_word两种分词方式，使用时需在mapping中指定字段使用IK分词器，特殊词组可建立或新增自定义词库。'
   - - meta
     - name: 'og:url'
       content: 'https://www.wulicode.com/ops/elastic-search/install-plugin-ik.html'
 ---
-# ES 插件 : ElasticSearch 分词-IK
-
-
+# ES 插件 ElasticSearch 分词-IK
 
 ## 安装
 
-地址 : [medcl/elasticsearch-analysis-ik](https://github.com/medcl/elasticsearch-analysis-ik)
+地址 : [https://github.com/medcl/elasticsearch-analysis-ik](https://github.com/medcl/elasticsearch-analysis-ik)
 
 ### 自动安装
 
-- 选择对应的 `ES` 的版本
-- 2. 安装插件
+1. 选择对应的`ES`的版本
 
-```shell
+   1. 安装插件
+
+```Bash
 cd /usr/share/elasticsearch/bin
 ./elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.17.5/elasticsearch-analysis-ik-7.17.5.zip
 ```
 
 这个版本的 7.17.5 安装失败, 可以使用手动安装(参考 github 文档)
 
-```
+```Plaintext
 # 
 ./elasticsearch-plugin install elasticsearch-analysis-ik-7.17.5.zip
 -> Installing elasticsearch-analysis-ik-7.17.5.zip
@@ -46,7 +45,7 @@ cd /usr/share/elasticsearch/bin
 
 ### 手动安装
 
-```yaml
+```YAML
 mkdir -p /usr/share/elasticsearch/plugins/ik
 wget https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.17.5/elasticsearch-analysis-ik-7.17.5.zip
 unzip elasticsearch-analysis-ik-7.17.5.zip
@@ -58,7 +57,7 @@ unzip elasticsearch-analysis-ik-7.17.5.zip
 
 这里创建索引并创建属性, 也可以向github 中, 创建索引再创建字段
 
-```json
+```JSON
 {
   "content": {
     "type": "text",
@@ -70,7 +69,7 @@ unzip elasticsearch-analysis-ik-7.17.5.zip
 
 ### 验证分词索引
 
-```
+```Plaintext
 POST /INDEX/_analyze
 {
   "text": "可恨东君，把春去春来无迹。便过眼、等闲输了，三分之一，昼永暖翻红杏雨，风晴扶起垂杨力。更天涯、芳草最关情，烘残日。湘浦岸，南塘驿。恨不尽，愁如积。算年年孤负，对他寒食",
@@ -80,7 +79,7 @@ POST /INDEX/_analyze
 
 ## 自己的词库
 
-```
+```Plaintext
 # 下载安装，下载解压即可，然后复制到其他主机，需要重启es
 wget https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.10.1/elasticsearch-analysis-ik-7.10.1.zip
 unzip elasticsearch-analysis-ik-7.10.1.zip -d /usr/local/servers/elasticsearch/plugins/ik
@@ -110,12 +109,11 @@ vi config/IKAnalyzer.cfg.xml
         <!-- <entry key="remote_ext_stopwords">words_location</entry> -->
 </properties>
 # 第四步：重启elasticsearch服务
-
 ```
 
 使用分词器
 
-```
+```Plaintext
 # 一般分词（包含ik_smart和ik_max_word两种方式）
 GET _analyze
 {
@@ -142,6 +140,4 @@ PUT news
     }
   }
 }
-
 ```
-

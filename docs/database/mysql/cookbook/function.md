@@ -13,7 +13,7 @@ head:
       content: '该内容主要讲解数据库统计函数（如Count、Min、Max等）及分组函数（忽略Null值，Having用于分组后筛选），With RollUp实现汇总统计；同时介绍元数据的使用方法（检查数据库、表、列信息），显示表结构，获取服务器元数据及支持的存储引擎。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/mysql/cookbook/function.html'
+      content: 'https://www.wulicode.com/database/mysql/cookbook/function.html'
 ---
 # 6.函数
 

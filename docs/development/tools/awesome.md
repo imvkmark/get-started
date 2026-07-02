@@ -1,6 +1,6 @@
 ---
 description: 'Desmos是在线数学绘图工具，excalidraw是本地保存数据的绘图白板协作网站，browserframe可生成浏览器窗口截图模拟，FlowerCloud和AmyTelecom则是两个网络服务（机场）。'
-lastUpdated: '2026-06-18 06:36:36'
+lastUpdated: '2026-07-02 18:15:53'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: 'Desmos是在线数学绘图工具，excalidraw是本地保存数据的绘图白板协作网站，browserframe可生成浏览器窗口截图模拟，FlowerCloud和AmyTelecom则是两个网络服务（机场）。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//development/tools/awesome.html'
+      content: 'https://www.wulicode.com/development/tools/awesome.html'
 ---
 # Awesome Tools
 
@@ -33,3 +33,9 @@ head:
 
 - [FlowerCloud](https://huacloud.dev/) - 花云, 另一个机场
 - [AmyTelecom](https://www.amytele.co/index.php) - 一个机场
+
+## 浏览器插件(Chrome系)
+
+### 翻译
+
+- [https://github.com/snailfrying/flowers](https://github.com/snailfrying/flowers) - AI 驱动的翻译插件

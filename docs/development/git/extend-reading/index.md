@@ -1,10 +1,10 @@
 ---
 description: ''
-lastUpdated: '2026-06-18 06:39:13'
+lastUpdated: '2026-07-02 18:11:05'
 head:
   - - meta
     - name: 'og:title'
-      content: '协议'
+      content: '扩展阅读'
   - - meta
     - name: 'og:type'
       content: 'article'
@@ -13,7 +13,7 @@ head:
       content: ''
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/development/software/spec/index.html'
+      content: 'https://www.wulicode.com/development/git/extend-reading/index.html'
 ---
-# 协议
+# 扩展阅读
 

@@ -13,7 +13,7 @@ head:
       content: '本文档介绍了MySQL中日期和时间的使用方法，包括选择合适类型、日期函数（提取、格式化、时区转换、当前时间）、客户端时区设置、Timestamp自动更新、日期分离与组成、时间间隔计算及时间加法等操作。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/mysql/cookbook/date-time.html'
+      content: 'https://www.wulicode.com/database/mysql/cookbook/date-time.html'
 ---
 # 5.使用日期和时间
 

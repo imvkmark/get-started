@@ -1,10 +1,10 @@
 ---
 description: '该文档涵盖了MySQL的全面操作，包括客户端使用、数据查询与表管理、字符串与日期处理、排序与摘要生成，以及触发器、存储规则、元数据导入导出等高级功能。还涉及序列、Join与子查询、统计、复制、事务管理，以及Web应用集成和服务器安全维护。'
-lastUpdated: '2026-06-17 17:50:47'
+lastUpdated: '2026-07-02 13:00:10'
 head:
   - - meta
     - name: 'og:title'
-      content: 'MySQL Cookbook'
+      content: '📘 MySQL Cookbook'
   - - meta
     - name: 'og:type'
       content: 'article'
@@ -13,11 +13,11 @@ head:
       content: '该文档涵盖了MySQL的全面操作，包括客户端使用、数据查询与表管理、字符串与日期处理、排序与摘要生成，以及触发器、存储规则、元数据导入导出等高级功能。还涉及序列、Join与子查询、统计、复制、事务管理，以及Web应用集成和服务器安全维护。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/mysql/cookbook/index.html'
+      content: 'https://www.wulicode.com/database/mysql/cookbook/index.html'
 ---
-# MySQL Cookbook
+# 📘 MySQL Cookbook
 
-1. 使用 mysql 客户端
+1. <cite doc-id="VtgWwJx4pifWtYkGM51cIOwenIL" file-type="wiki" title="1.使用 Mysql 客户端" type="doc"></cite>
 2. 编写基于 mysql 的程序(略)
 3. 从表中选择数据
 4. 表管理

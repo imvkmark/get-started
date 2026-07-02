@@ -1,7 +1,7 @@
 ---
-description: 'canal 1.1.1版本之后, 内置增加客户端数据同步功能, Client适配器整体介绍: ClientAdapter canal adapter 的 Elastic Search 版本支持6.x.x以上, 如需其它版本的es可替换依赖重新编译client-adapter.elasticsearch 模块adapter将会自动加载 conf/es 下的所有.yml结尾的配置文件修改 conf/es/mytest_user.yml文件:sql映射说明:sql支持多表关联自由组合, 但是有一定的限制:Elastic Search的mapping 属性与sql的查询值将一一'
-lastUpdated: '2025-12-19 14:29:00'
-head: 
+description: 'Canal For ElasticSearch适配器需修改application.yml配置，定义表映射文件（指定主键、对象字段及单表或多表SQL示例），然后启动适配器执行数据同步，支持全量同步与验证。'
+lastUpdated: '2026-07-02 12:20:09'
+head:
   - - meta
     - name: 'og:title'
       content: 'Canal For ElasticSearch 适配器'
@@ -10,20 +10,18 @@ head:
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: 'canal 1.1.1版本之后, 内置增加客户端数据同步功能, Client适配器整体介绍: ClientAdapter canal adapter 的 Elastic Search 版本支持6.x.x以上, 如需其它版本的es可替换依赖重新编译client-adapter.elasticsearch 模块adapter将会自动加载 conf/es 下的所有.yml结尾的配置文件修改 conf/es/mytest_user.yml文件:sql映射说明:sql支持多表关联自由组合, 但是有一定的限制:Elastic Search的mapping 属性与sql的查询值将一一'
+      content: 'Canal For ElasticSearch适配器需修改application.yml配置，定义表映射文件（指定主键、对象字段及单表或多表SQL示例），然后启动适配器执行数据同步，支持全量同步与验证。'
   - - meta
     - name: 'og:url'
       content: 'https://www.wulicode.com/ops/canal/client-adapter-es.html'
 ---
 # Canal For ElasticSearch 适配器
 
-
-
 canal 1.1.1版本之后, 内置增加客户端数据同步功能, Client适配器整体介绍: [ClientAdapter](https://github.com/alibaba/canal/wiki/ClientAdapter) canal adapter 的 Elastic Search 版本支持6.x.x以上, 如需其它版本的es可替换依赖重新编译client-adapter.elasticsearch 模块
 
 ## 1 修改启动器配置: application.yml
 
-```yaml
+```YAML
 canal.conf:
   canalServerHost: 127.0.0.1:11111
   batchSize: 500
@@ -57,7 +55,7 @@ adapter将会自动加载 conf/es 下的所有.yml结尾的配置文件
 
 修改 conf/es/mytest_user.yml文件:
 
-```yaml
+```YAML
 dataSourceKey: defaultDS        # 源数据源的key, 对应上面配置的srcDataSources中的值
 outerAdapterKey: exampleKey     # 对应application.yml中es配置的key 
 destination: example            # cannal的instance或者MQ的topic
@@ -84,24 +82,24 @@ sql映射说明:
 
 sql支持多表关联自由组合, 但是有一定的限制:
 
-- 主表不能为子查询语句
-- 只能使用left outer join即最左表一定要是主表
-- 关联从表如果是子查询不能有多张表
-- 主sql中不能有where查询条件(从表子查询中可以有where条件但是不推荐, 可能会造成数据同步的不一致, 比如修改了where条件中的字段内容)
-- 关联条件只允许主外键的’=’操作不能出现其他常量判断比如: on a.role_id=b.id and b.statues=1
-- 关联条件必须要有一个字段出现在主查询语句中比如: on a.role_id=b.id 其中的 a.role_id 或者 b.id 必须出现在主select语句中
+1. 主表不能为子查询语句
+2. 只能使用left outer join即最左表一定要是主表
+3. 关联从表如果是子查询不能有多张表
+4. 主sql中不能有where查询条件(从表子查询中可以有where条件但是不推荐, 可能会造成数据同步的不一致, 比如修改了where条件中的字段内容)
+5. 关联条件只允许主外键的’=’操作不能出现其他常量判断比如: on a.role_id=b.id and b.statues=1
+6. 关联条件必须要有一个字段出现在主查询语句中比如: on a.role_id=b.id 其中的 a.role_id 或者 b.id 必须出现在主select语句中
 
-Elastic Search的mapping 属性与sql的查询值将一一对应(不支持 select *), 比如: select a.id as _id, a.name, a.email as _email from user, 其中name将映射到es mapping的name field, _email将 映射到mapping的_email field, 这里以别名(如果有别名)作为最终的映射字段. 这里的_id可以填写到配置文件的 _id: _id映射.
+Elastic Search的mapping 属性与sql的查询值将一一对应(不支持 select \*), 比如: select a.id as \_id, a.name, a.email as \_email from user, 其中name将映射到es mapping的name field, \_email将 映射到mapping的_email field, 这里以别名(如果有别名)作为最终的映射字段. 这里的_id可以填写到配置文件的 \_id: \_id映射.
 
 ### 2.1.单表映射索引示例sql:
 
-```
+```Plaintext
 select a.id as _id, a.name, a.role_id, a.c_time from user a
 ```
 
 该sql对应的es mapping示例:
 
-```json
+```JSON
 {
     "mytest_user": {
         "mappings": {
@@ -125,13 +123,13 @@ select a.id as _id, a.name, a.role_id, a.c_time from user a
 
 ### 2.2.单表映射索引示例sql带函数或运算操作:
 
-```sql
+```SQL
 select a.id as _id, concat(a.name,'_test') as name, a.role_id+10000 as role_id, a.c_time from user a
 ```
 
 函数字段后必须跟上别名, 该sql对应的es mapping示例:
 
-```json
+```JSON
 {
     "mytest_user": {
         "mappings": {
@@ -155,14 +153,14 @@ select a.id as _id, concat(a.name,'_test') as name, a.role_id+10000 as role_id, 
 
 ### 2.3.多表映射(一对一, 多对一)索引示例sql:
 
-```
+```Plaintext
 select a.id as _id, a.name, a.role_id, b.role_name, a.c_time from user a
 left join role b on b.id = a.role_id
 ```
 
 注:这里join操作只能是left outer join, 第一张表必须为主表!!该sql对应的es mapping示例:
 
-```json
+```JSON
 {
     "mytest_user": {
         "mappings": {
@@ -189,7 +187,7 @@ left join role b on b.id = a.role_id
 
 ### 2.4.多表映射(一对多)索引示例sql:
 
-```
+```Plaintext
 select a.id as _id, a.name, a.role_id, c.labels, a.c_time from user a
 left join (select user_id, group_concat(label order by id desc separator ';') as labels from label
         group by user_id) c on c.user_id=a.id
@@ -197,7 +195,7 @@ left join (select user_id, group_concat(label order by id desc separator ';') as
 
 注:left join 后的子查询只允许一张表, 即子查询中不能再包含子查询或者关联!!该sql对应的es mapping示例:
 
-```json
+```JSON
 {
   "mytest_user": {
     "mappings": {
@@ -226,19 +224,19 @@ left join (select user_id, group_concat(label order by id desc separator ';') as
 
 - geo type
 
-```
+```Plaintext
 select ... concat(IFNULL(a.latitude, 0), ',', IFNULL(a.longitude, 0)) AS location, ...
 ```
 
 - 复合主键
 
-```
+```Plaintext
 select concat(a.id,'_',b.type) as _id, ... from user a left join role b on b.id=a.role_id
 ```
 
 - 数组字段
 
-```
+```Plaintext
 select a.id as _id, a.name, a.role_id, c.labels, a.c_time from user a
 left join (select user_id, group_concat(label order by id desc separator ';') as labels from label
         group by user_id) c on c.user_id=a.id
@@ -246,20 +244,20 @@ left join (select user_id, group_concat(label order by id desc separator ';') as
 
 配置中使用:
 
-```
+```Plaintext
 objFields:
   labels: array:;
 ```
 
 - 对象字段
 
-```
+```Plaintext
 select a.id as _id, a.name, a.role_id, c.labels, a.c_time, a.description from user a
 ```
 
 配置中使用:
 
-```
+```Plaintext
 objFields:
   description: object
 ```
@@ -270,7 +268,7 @@ objFields:
 
 es/customer.yml
 
-```yaml
+```YAML
 # ......
 esMapping:
   _index: customer
@@ -284,7 +282,7 @@ esMapping:
 
 es/order.yml
 
-```yaml
+```YAML
 esMapping:
   _index: customer
   _type: _doc
@@ -305,7 +303,7 @@ esMapping:
 
 mapping示例:
 
-```json
+```JSON
 {
     "mappings":{
         "_doc":{
@@ -344,25 +342,25 @@ mapping示例:
 
 ### 启动canal-adapter启动器
 
-```
+```Plaintext
 bin/startup.sh
 ```
 
 ### 验证
 
-- 新增mysql mytest.user表的数据, 将会自动同步到es的mytest_user索引下面, 并会打出DML的log
-- 修改mysql mytest.role表的role_name, 将会自动同步es的mytest_user索引中的role_name数据
-- 新增或者修改mysql mytest.label表的label, 将会自动同步es的mytest_user索引中的labels数据
+1. 新增mysql mytest.user表的数据, 将会自动同步到es的mytest_user索引下面, 并会打出DML的log
+2. 修改mysql mytest.role表的role_name, 将会自动同步es的mytest_user索引中的role_name数据
+3. 新增或者修改mysql mytest.label表的label, 将会自动同步es的mytest_user索引中的labels数据
 
 ### 全量同步
 
-```
+```Plaintext
 $ curl localhost:8081/etl/es7/mytest_user.yml -X 'POST'
 ```
 
-这里的端口号 默认是  `8081` , 可以配置  `adapter/application.yml`  文件进行更改 _application.yml_
+这里的端口号 默认是 `8081`, 可以配置 `adapter/application.yml` 文件进行更改*application.yml*
 
-```yaml
+```YAML
 server:  port: 8082
 ```
 
@@ -370,9 +368,9 @@ server:  port: 8082
 
 ### None of the configured nodes are available
 
-检查下  `es7` 的  `properties`  的  `cluster.name`  是否已经设置, 这里设置的值应当和ES 返回的  `cluster_name` 一致 _curl 192.168.1.23:9200_
+检查下 `es7`的 `properties` 的 `cluster.name` 是否已经设置, 这里设置的值应当和ES 返回的 `cluster_name`一致*curl 192.168.1.23:9200*
 
-```json
+```JSON
 {
     "name" : "node-1",
     "cluster_name" : "elasticsearch",
@@ -391,6 +389,3 @@ server:  port: 8082
     "tagline" : "You Know, for Search"
 }
 ```
-
-
-

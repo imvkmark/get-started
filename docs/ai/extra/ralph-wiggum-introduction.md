@@ -13,7 +13,7 @@ head:
       content: 'Ralph Wiggum自治循环指南介绍了安装、快速开始、架构原理、常见排错（如模型未配置错误）及实战示例，包括自动迁移测试框架（Jest转Vitest）和构建带用户认证的全栈Web应用，帮助用户高效完成迭代任务。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//ai/extra/ralph-wiggum-introduction.html'
+      content: 'https://www.wulicode.com/ai/extra/ralph-wiggum-introduction.html'
 ---
 # Ralph Wiggum 自治循环指南
 
@@ -21,7 +21,9 @@ head:
 
 现在 Ralph Wiggum 就能帮你实现这个愿望。它是一个 AI 编码代理的自治循环框架，让 Claude Code、OpenAI Codex、GitHub Copilot 等工具可以持续迭代同一个任务，直到满足你预先设定的完成条件。不用盯着屏幕一步步引导，只要写好明确的成功标准，剩下的交给它自动跑就行
 
-::: info 🔗<p>在此之前需要保证系统有 node 环境</p><ul><li>[使用 nvm 管理多版本 Node 项目依赖](/front-end/javascript/npm/nvm-manage-multi-version-node.md)</li></ul>:::
+::: info 🔗
+<p>在此之前需要保证系统有 node 环境</p><ul><li><a href="https://www.wulicode.com/front-end/javascript/npm/nvm-manage-multi-version-node.html">使用 nvm 管理多版本 Node 项目依赖</a></li></ul>
+:::
 
 ## 安装与兼容性 (Installation & Requirements)
 
