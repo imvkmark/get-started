@@ -1,7 +1,7 @@
 ---
-description: '日常工作中，几乎每个项目都是由多个人进行维护，每个人的代码书写习惯和风格又不尽相同，在这种情况下，如果没有统一的规范，你就会发现提交到代码仓库的代码格式五花八门，并且 commit log 也是乱七八糟，更严重点可能有的小伙伴在提交代码的时候为了省事 commit message 直接就是两个点点，总之，可能就是怎么省事怎么来。最终导致的结果就是，当你某一天需要 cherry-pick 某个 commit 到另外的分支的时，看着 commmit log 一脸懵逼。所以，规范和约束在多人协作下，就显得尤为重要类似于前端框架中的生命周期钩子，git在某些特定事件发生前或后也会有某些执行特定'
-lastUpdated: '2025-12-11 14:30:00'
-head: 
+description: '使用 Husky 结合 lint-staged 及 ESLint、Stylelint、Prettier 等工具，在 Git 提交前自动检查并修复代码。通过 pnpm 安装依赖，配置提交规范，确保代码风格统一和提交流程优雅。'
+lastUpdated: '2026-07-02 20:23:22'
+head:
   - - meta
     - name: 'og:title'
       content: '使用 husky 让代码提交优雅规范'
@@ -10,198 +10,79 @@ head:
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: '日常工作中，几乎每个项目都是由多个人进行维护，每个人的代码书写习惯和风格又不尽相同，在这种情况下，如果没有统一的规范，你就会发现提交到代码仓库的代码格式五花八门，并且 commit log 也是乱七八糟，更严重点可能有的小伙伴在提交代码的时候为了省事 commit message 直接就是两个点点，总之，可能就是怎么省事怎么来。最终导致的结果就是，当你某一天需要 cherry-pick 某个 commit 到另外的分支的时，看着 commmit log 一脸懵逼。所以，规范和约束在多人协作下，就显得尤为重要类似于前端框架中的生命周期钩子，git在某些特定事件发生前或后也会有某些执行特定'
+      content: '使用 Husky 结合 lint-staged 及 ESLint、Stylelint、Prettier 等工具，在 Git 提交前自动检查并修复代码。通过 pnpm 安装依赖，配置提交规范，确保代码风格统一和提交流程优雅。'
   - - meta
     - name: 'og:url'
       content: 'https://www.wulicode.com/development/git/commit-grace-use-husky.html'
   - - meta
     - name: 'og:image'
-      content: 'https://file.wulicode.com/notion/3c/3cd9523ad90cf305d90791847889abdb.png?x-oss-process=image/resize,m_mfit,w_400'
+      content: 'https://file.wulicode.com/feishu-images/77a9b389317168735e184ca525018e22.png'
 ---
 # 使用 husky 让代码提交优雅规范
 
-
-
-日常工作中，几乎每个项目都是由多个人进行维护，每个人的代码书写习惯和风格又不尽相同，在这种情况下，如果没有统一的规范，你就会发现提交到代码仓库的代码格式五花八门，并且  `commit log`  也是乱七八糟，更严重点可能有的小伙伴在提交代码的时候为了省事  `commit message`  直接就是两个点点，总之，可能就是怎么省事怎么来。最终导致的结果就是，当你某一天需要  `cherry-pick`  某个  `commit`  到另外的分支的时，看着  `commmit log`  一脸懵逼。所以，规范和约束在多人协作下，就显得尤为重要
+日常工作中，几乎每个项目都是由多个人进行维护，每个人的代码书写习惯和风格又不尽相同，在这种情况下，如果没有统一的规范，你就会发现提交到代码仓库的代码格式五花八门，并且 `commit log` 也是乱七八糟，更严重点可能有的小伙伴在提交代码的时候为了省事 `commit message` 直接就是两个点点，总之，可能就是怎么省事怎么来。最终导致的结果就是，当你某一天需要 `cherry-pick` 某个 `commit` 到另外的分支的时，看着 `commmit log` 一脸懵逼。所以，规范和约束在多人协作下，就显得尤为重要
 
 ## githooks
 
 类似于前端框架中的生命周期钩子，git在某些特定事件发生前或后也会有某些执行特定功能的钩子，githooks 就是在 git 执行特定事件(如commit、push、receive等)时触发运行的脚本。
 
-githooks 保存在  `.git`  文件夹中
+githooks 保存在 `.git` 文件夹中
 
 具体钩子如下表所示：
 
-<table><tbody>
-  <tr>
-    <td>Git Hook</td>
-    <td>执行时机</td>
-    <td>说明</td>
-  </tr>
-  <tr>
-    <td>applypatch-msg</td>
-    <td>git am 执行前</td>
-    <td>默认情况下，如果 commit-msg 启用的话，applpatch-msg 钩子在启用时会运行commit-msg 钩子</td>
-  </tr>
-  <tr>
-    <td>pre-applypatc</td>
-    <td>git am 执行前</td>
-    <td>默认的 pre-applypatch 钩子在启用时运行pre-commit 钩子（如果后者已启用）</td>
-  </tr>
-  <tr>
-    <td>post-applypatch</td>
-    <td>git am 执行后</td>
-    <td>这个钩子主要用于通知，不能影响git-am的结果</td>
-  </tr>
-  <tr>
-    <td>pre-commit</td>
-    <td>git commit 执行前</td>
-    <td>可以使用 git commit &ndash;no verify 命令绕过该钩子</td>
-  </tr>
-  <tr>
-    <td>pre-merge-commit</td>
-    <td>git merge 执行前</td>
-    <td>可以使用 git merge &ndash;no verify 命令绕过该钩子</td>
-  </tr>
-  <tr>
-    <td>prepare-commit-msg</td>
-    <td>git commit执行之后，编辑器打开之前</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>commit-msg</td>
-    <td>git commit 执行前</td>
-    <td>可以使用 git commit &ndash;no verify 命令绕过该钩子</td>
-  </tr>
-  <tr>
-    <td>post-commit</td>
-    <td>git commit 执行后</td>
-    <td>不影响git commit的结果</td>
-  </tr>
-  <tr>
-    <td>pre-rebase</td>
-    <td>git rebase执行前</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>post-checkout</td>
-    <td>git checkout 或 git switch执行后</td>
-    <td>如果不使用 &ndash;no-checkout 参数，则在 git clone 之后也会执行</td>
-  </tr>
-  <tr>
-    <td>post-merge</td>
-    <td>git merge 执行后</td>
-    <td>在执行git pull 时也会被调用</td>
-  </tr>
-  <tr>
-    <td>pre-push</td>
-    <td>&nbsp;</td>
-    <td>git push 执行前</td>
-  </tr>
-  <tr>
-    <td>pre-receive</td>
-    <td>git receive pack 执行前</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>update</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>proc-receive</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>post-receive</td>
-    <td>git receive pack 执行前</td>
-    <td>不影响 git receive pack 的执行结果</td>
-  </tr>
-  <tr>
-    <td>post-update</td>
-    <td>当git receive pack对 git push 作出反应并更新仓库中的引用时</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>reference-transaction</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>push-to-checkout</td>
-    <td>当git receive pack对 git push 作出反应并更新仓库中的引用时，以及当推送试图更新当前被签出的分支且 receive.denyCurrentBranch配置被updateInstead时</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>pre-auto-gc</td>
-    <td>git gc &ndash;auto 执行前</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>post-rewrite</td>
-    <td>执行 git commit &ndash;amend 或 git rebase 时</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>sendemail-validate</td>
-    <td>git send-email 执行前</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>fsmonitor-watchman</td>
-    <td>配置 core.fsmonitor 被设置为 </td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>p4-changelist</td>
-    <td>git-p4 submit 执行并编辑完changelist message 之后</td>
-    <td>可以使用 git-p4 submit &ndash;no-verify绕过该钩子</td>
-  </tr>
-  <tr>
-    <td>p4-prepare-changelist</td>
-    <td>git-p4 submit 执行后，编辑器启动前</td>
-    <td>可以使用 git-p4 submit &ndash;no-verify绕过该钩子</td>
-  </tr>
-  <tr>
-    <td>p4-post-changelist</td>
-    <td>git-p4 submit 执行后</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>p4-pre-submit</td>
-    <td>git-p4 submit 执行前</td>
-    <td>可以使用 git-p4 submit &ndash;no-verify绕过该钩子</td>
-  </tr>
-  <tr>
-    <td>post-index-change</td>
-    <td>索引被写入 read-cache.c do_write_locked_index后</td>
-    <td>&nbsp;</td>
-  </tr>
-</tbody></table>
+| Git Hook | 执行时机 | 说明 |
+|-|-|-|
+| applypatch-msg | git am 执行前 | 默认情况下，如果 commit-msg 启用的话，applpatch-msg 钩子在启用时会运行commit-msg 钩子 |
+| pre-applypatc | git am 执行前 | 默认的 pre-applypatch 钩子在启用时运行pre-commit 钩子（如果后者已启用） |
+| post-applypatch | git am 执行后 | 这个钩子主要用于通知，不能影响git-am的结果 |
+| pre-commit | git commit 执行前 | 可以使用 git commit –no verify 命令绕过该钩子 |
+| pre-merge-commit | git merge 执行前 | 可以使用 git merge –no verify 命令绕过该钩子 |
+| prepare-commit-msg | git commit执行之后，编辑器打开之前 |  |
+| commit-msg | git commit 执行前 | 可以使用 git commit –no verify 命令绕过该钩子 |
+| post-commit | git commit 执行后 | 不影响git commit的结果 |
+| pre-rebase | git rebase执行前 |  |
+| post-checkout | git checkout 或 git switch执行后 | 如果不使用 –no-checkout 参数，则在 git clone 之后也会执行 |
+| post-merge | git merge 执行后 | 在执行git pull 时也会被调用 |
+| pre-push |  | git push 执行前 |
+| pre-receive | git receive pack 执行前 |  |
+| update |  |  |
+| proc-receive |  |  |
+| post-receive | git receive pack 执行前 | 不影响 git receive pack 的执行结果 |
+| post-update | 当git receive pack对 git push 作出反应并更新仓库中的引用时 |  |
+| reference-transaction |  |  |
+| push-to-checkout | 当git receive pack对 git push 作出反应并更新仓库中的引用时，以及当推送试图更新当前被签出的分支且 receive.denyCurrentBranch配置被updateInstead时 |  |
+| pre-auto-gc | git gc –auto 执行前 |  |
+| post-rewrite | 执行 git commit –amend 或 git rebase 时 |  |
+| sendemail-validate | git send-email 执行前 |  |
+| fsmonitor-watchman | 配置 core.fsmonitor 被设置为 `.git/hooks/fsmonitor-watchman` 或 `.git/hooks/fsmonitor-watchmanv2` 时 |  |
+| p4-changelist | git-p4 submit 执行并编辑完changelist message 之后 | 可以使用 git-p4 submit –no-verify绕过该钩子 |
+| p4-prepare-changelist | git-p4 submit 执行后，编辑器启动前 | 可以使用 git-p4 submit –no-verify绕过该钩子 |
+| p4-post-changelist | git-p4 submit 执行后 |  |
+| p4-pre-submit | git-p4 submit 执行前 | 可以使用 git-p4 submit –no-verify绕过该钩子 |
+| post-index-change | 索引被写入 read-cache.c do_write_locked_index后 |  |
 
 ## husky
 
-husky 是一个让配置 git 钩子变得更简单的工具。支持所有的 git 钩子, 本版本测试  `9.x`
+husky 是一个让配置 git 钩子变得更简单的工具。支持所有的 git 钩子, 本版本测试 `9.x`
 
 安装
 
-```shell
+```Bash
 # pnpm
 $ pnpm add -D husky
 ```
 
-`init`  命令简化了项目中的 husky 设置。它会在  `.husky/`  中创建  `pre-commit`  脚本，并更新  `package.json`  中的  `prepare`  脚本
+`init` 命令简化了项目中的 husky 设置。它会在 `.husky/` 中创建 `pre-commit` 脚本，并更新 `package.json` 中的 `prepare` 脚本
 
-```shell
+```Bash
 $ pnpm exec husky init
 ```
 
-这样已经成功地用一个命令设置了你的第一个 Git 钩子  `.husky/pre-commit`
+这样已经成功地用一个命令设置了你的第一个 Git 钩子 `.husky/pre-commit`
 
-这里也会在  `package.json`  自动加入, 用于项目初始化时候自动初始化 husky 环境
+这里也会在 `package.json` 自动加入, 用于项目初始化时候自动初始化 husky 环境
 
-```json
+```JSON
 {
   "scripts": {
     "prepare": "husky"
@@ -211,35 +92,35 @@ $ pnpm exec husky init
 
 ### 添加 hook
 
-使用  `echo`  脚本添加  `pre-commit`  脚本
+使用 `echo` 脚本添加 `pre-commit` 脚本
 
-```shell
+```Bash
 echo "npm test" > .husky/pre-commit
 ```
 
-创建钩子，比如我们创建一个  `commit-msg`  钩子, 这里的意思是在  `git commit-msg`  的时候运行  `commitlint`  校验工具
+创建钩子，比如我们创建一个 `commit-msg` 钩子, 这里的意思是在 `git commit-msg` 的时候运行 `commitlint` 校验工具
 
-```shell
+```Bash
 $ echo "npx --no -- commitlint --edit $1" > .husky/commit-msg
 ```
 
 ## lint-staged
 
-[lint-staged/lint-staged](https://github.com/lint-staged/lint-staged)  **是一个在git暂存区上运行 linters 的工具**
+https://github.com/lint-staged/lint-staged **是一个在git暂存区上运行 linters 的工具**
 
 > Run linters against staged git files and don’t let 💩 slip into your code base
 
-它将根据  `package.json`  依赖项中的代码质量工具来安装和配置 husky 和 lint-staged ，因此请确保在此之前安装并配置所有代码质量工具，比如 prettier 和 eslint
+它将根据 `package.json` 依赖项中的代码质量工具来安装和配置 husky 和 lint-staged ，因此请确保在此之前安装并配置所有代码质量工具，比如 prettier 和 eslint
 
 安装
 
-```shell
+```Bash
 $ pnpm add lint-staged -D
 ```
 
-执行  `npx lint-staged --help`  命令可以看到相关的所有参数如下：
+执行 `npx lint-staged --help` 命令可以看到相关的所有参数如下：
 
-```
+```Plaintext
 $ npx lint-staged --help
 Usage: lint-staged [options]
 
@@ -255,19 +136,17 @@ Options:
   -h, --help                         输出用法信息
 ```
 
-`--allow-empty` ：使用此参数允许创建空的git提交。默认情况下，当 LITER 任务撤消所有阶段性的更改时，LITET 阶段将抛出一个错误，并中止提交。
+`--allow-empty`：使用此参数允许创建空的git提交。默认情况下，当 LITER 任务撤消所有阶段性的更改时，LITET 阶段将抛出一个错误，并中止提交。
 
 ## git commit 提交规范
 
-::: tip  <img src="https://file.wulicode.com/notion/37/37647bd2bfa32b9367255fe6e0073ac3.svg" style="width:17px;position:relative;top:4px;border:none;display:inline;">  需要阅读: 
-
-
-[Git Commit message 和 Change log 编写指南](/development/git/commit-message-log-guide.md)
+::: info 📖
+<p>扩展阅读 <a href="https://www.wulicode.com/development/git/commit-message-log-guide.html">Git Commit message 和 Change log 编写指南</a></p>
 :::
 
 通常使用 Google AnguarJS 规范的要求。 格式要求：
 
-```
+```Plaintext
 <type>(<scope>): <subject>
 <BLANK LINE>
 <body>
@@ -275,67 +154,36 @@ Options:
 <footer>
 ```
 
--  `<type>`  代表某次提交的类型，比如是修复一个 bug 或是增加一个 feature，具体类型如下： 
+- `<type>` 代表某次提交的类型，比如是修复一个 bug 或是增加一个 feature，具体类型如下：
 
-<table><tbody>
-  <tr>
-    <td> <strong>类型</strong> </td>
-    <td> <strong>说明</strong> </td>
-  </tr>
-  <tr>
-    <td>feat</td>
-    <td>新增feature</td>
-  </tr>
-  <tr>
-    <td>fix</td>
-    <td>修复bug</td>
-  </tr>
-  <tr>
-    <td>docs</td>
-    <td>仅仅修改了文档，比如README, CHANGELOG, CONTRIBUTE等等;</td>
-  </tr>
-  <tr>
-    <td>style</td>
-    <td>仅仅修改了空格、格式缩进、逗号等等，不改变代码逻辑;</td>
-  </tr>
-  <tr>
-    <td>refactor</td>
-    <td>代码重构，没有加新功能或者修复bug</td>
-  </tr>
-  <tr>
-    <td>perf</td>
-    <td>优化相关，比如提升性能、体验</td>
-  </tr>
-  <tr>
-    <td>test</td>
-    <td>测试用例，包括单元测试、集成测试等</td>
-  </tr>
-  <tr>
-    <td>chore</td>
-    <td>改变构建流程、或者增加依赖库、工具等</td>
-  </tr>
-  <tr>
-    <td>revert</td>
-    <td>回滚到上一个版本</td>
-  </tr>
-</tbody></table>
+| **类型** | **说明** |
+|-|-|
+| feat | 新增feature |
+| fix | 修复bug |
+| docs | 仅仅修改了文档，比如README, CHANGELOG, CONTRIBUTE等等; |
+| style | 仅仅修改了空格、格式缩进、逗号等等，不改变代码逻辑; |
+| refactor | 代码重构，没有加新功能或者修复bug |
+| perf | 优化相关，比如提升性能、体验 |
+| test | 测试用例，包括单元测试、集成测试等 |
+| chore | 改变构建流程、或者增加依赖库、工具等 |
+| revert | 回滚到上一个版本 |
 
--  `scope` ：说明 commit 影响的范围。scope 依据项目而定，例如在业务项目中可以依据菜单或者功能模块划分，如果是组件库开发，则可以依据组件划分
--  `subject` : 是 commit 的简短描述
--  `body` : 提交代码的详细描述
--  `footer` : 如果代码的提交是不兼容变更或关闭缺陷，则 footer 必需，否则可以省略
+- `scope`：说明 commit 影响的范围。scope 依据项目而定，例如在业务项目中可以依据菜单或者功能模块划分，如果是组件库开发，则可以依据组件划分
+- `subject`: 是 commit 的简短描述
+- `body`: 提交代码的详细描述
+- `footer`: 如果代码的提交是不兼容变更或关闭缺陷，则 footer 必需，否则可以省略
 
 ### 安装提交约定
 
-安装  `commitlint`  相关依赖, 用来帮助我们在多人开发时，遵守 git 提交约定
+安装 `commitlint` 相关依赖, 用来帮助我们在多人开发时，遵守 git 提交约定
 
-```shell
+```Bash
 $ pnpm add @commitlint/cli @commitlint/config-conventional -D
 ```
 
-在根目录创建  `commitlint.config.js`  文件，其内容如下所示：
+在根目录创建 `commitlint.config.js` 文件，其内容如下所示：
 
-```javascript
+```JavaScript
 module.exports = {
   extends: ["@commitlint/config-conventional"],
   // 以下是我们自定义的规则
@@ -367,31 +215,31 @@ module.exports = {
 
 至此，准备好我们需要的依赖包之后，我们使用上面 husky 章节添加的钩子
 
-待提交区代码 lint 添加到  `pre-commit`  组件, 如果之前有  `pnpm test`  相关的代码注意不要出现运行异常, 这里采用追加的方式添加
+待提交区代码 lint 添加到 `pre-commit` 组件, 如果之前有 `pnpm test` 相关的代码注意不要出现运行异常, 这里采用追加的方式添加
 
-```shell
+```Bash
 $ echo 'npx lint-staged --allow-empty "$1"' >> .husky/pre-commit
 ```
 
 接下来，就是检验配置的时候了：当我们按照 commit 规范正确提交时，可以在控制台看到如下输出
 
-![](https://file.wulicode.com/notion/3c/3cd9523ad90cf305d90791847889abdb.png)
+![](https://file.wulicode.com/feishu-images/77a9b389317168735e184ca525018e22.png)
 
 当我们不按照配置的规范来提交commit时，就会发现如下报错，并阻止你提交代码
 
-![](https://file.wulicode.com/notion/dc/dcb703dc8ca9d399167342f48035101b.png)
+![](https://file.wulicode.com/feishu-images/42be4ffec522613507896d5d0af8b728.png)
 
 至此，配置完成
 
 ## eslint & stylistic
 
-以下是基于你提供的 ESLint 配置文件的 **安装与初始化说明** ，确保所有依赖和工具正确配置：
+以下是基于你提供的 ESLint 配置文件的**安装与初始化说明**，确保所有依赖和工具正确配置：
 
 ### 依赖安装命令
 
 根据配置文件中使用的插件，执行以下命令安装所有必需依赖：
 
-```bash
+```Bash
 # 基础依赖（ESLint 核心及扁平化配置支持）
 npm install eslint eslint-flat-config-airbnb --save-dev
 
@@ -403,14 +251,13 @@ npm install eslint-plugin-vue vue-eslint-parser eslint-plugin-vue-scoped-css --s
 
 # 代码风格与工具插件
 npm install @stylistic/eslint-plugin eslint-plugin-simple-import-sort --save-dev
-
 ```
 
-将 ESLint 配置文件命名为  `eslint.config.js` ，放置在项目根目录（与  `package.json`  同级）。
+将 ESLint 配置文件命名为 `eslint.config.js`，放置在项目根目录（与 `package.json` 同级）。
 
-在  `package.json`  中添加 ESLint 检查和自动修复脚本，方便日常使用：
+在 `package.json` 中添加 ESLint 检查和自动修复脚本，方便日常使用：
 
-```json
+```JSON
 {
   "scripts": {
     "lint": "eslint .",                     // 检查所有文件的 ESLint 问题
@@ -421,59 +268,27 @@ npm install @stylistic/eslint-plugin eslint-plugin-simple-import-sort --save-dev
 
 关键依赖说明
 
-<table><tbody>
-  <tr>
-    <td>依赖包</td>
-    <td>作用</td>
-  </tr>
-  <tr>
-    <td> <code>eslint</code> </td>
-    <td>ESLint 核心工具，用于代码检查</td>
-  </tr>
-  <tr>
-    <td> <code>eslint-flat-config-airbnb</code> </td>
-    <td>适配 ESLint 扁平化配置的 Airbnb 规则集</td>
-  </tr>
-  <tr>
-    <td> <code>@typescript-eslint/parser</code> </td>
-    <td>TypeScript 代码解析器</td>
-  </tr>
-  <tr>
-    <td> <code>@typescript-eslint/eslint-plugin</code> </td>
-    <td>TypeScript 语法规则插件</td>
-  </tr>
-  <tr>
-    <td> <code>eslint-plugin-vue</code> </td>
-    <td>Vue 单文件组件 (SFC) 检查插件</td>
-  </tr>
-  <tr>
-    <td> <code>vue-eslint-parser</code> </td>
-    <td>解析 Vue SFC 的专用解析器</td>
-  </tr>
-  <tr>
-    <td> <code>@stylistic/eslint-plugin</code> </td>
-    <td>代码风格规则插件（替代旧版 prettier）</td>
-  </tr>
-  <tr>
-    <td> <code>eslint-plugin-simple-import-sort</code> </td>
-    <td>自动排序 import 语句的插件</td>
-  </tr>
-  <tr>
-    <td> <code>eslint-plugin-vue-scoped-css</code> </td>
-    <td>Vue 作用域 CSS 检查插件</td>
-  </tr>
-</tbody></table>
+| 依赖包 | 作用 |
+|-|-|
+| `eslint` | ESLint 核心工具，用于代码检查 |
+| `eslint-flat-config-airbnb` | 适配 ESLint 扁平化配置的 Airbnb 规则集 |
+| `@typescript-eslint/parser` | TypeScript 代码解析器 |
+| `@typescript-eslint/eslint-plugin` | TypeScript 语法规则插件 |
+| `eslint-plugin-vue` | Vue 单文件组件 (SFC) 检查插件 |
+| `vue-eslint-parser` | 解析 Vue SFC 的专用解析器 |
+| `@stylistic/eslint-plugin` | 代码风格规则插件（替代旧版 prettier） |
+| `eslint-plugin-simple-import-sort` | 自动排序 import 语句的插件 |
+| `eslint-plugin-vue-scoped-css` | Vue 作用域 CSS 检查插件 |
 
 使用说明
 
-**检查代码** ：执行  `npm run lint` ，终端会输出所有不符合规则的代码位置和原因。
+**检查代码**：执行 `npm run lint`，终端会输出所有不符合规则的代码位置和原因。
 
-**自动修复** ：执行  `npm run lint:fix` ，ESLint 会自动修复部分问题（如格式错误），无法自动修复的需手动调整
+**自动修复**：执行 `npm run lint:fix`，ESLint 会自动修复部分问题（如格式错误），无法自动修复的需手动调整
 
-配置文件  `eslint.config.js`
+配置文件 `eslint.config.js`
 
-```typescript
-// eslint.config.js
+```TypeScript
 import tsParser from "@typescript-eslint/parser";
 import tsPlugin from "@typescript-eslint/eslint-plugin";
 import vue from "eslint-plugin-vue";
@@ -644,18 +459,19 @@ export default [
 ];
 ```
 
-## ⚠️ eslint & stylelint
+## eslint & stylelint
 
-::: warning  ⚠️ 
+::: warning ⚠️
+
 这个配置组合是 eslint / stylelint, 这个配置内容较多, 不比上一个配置简单, 不推荐使用
 
 :::
 
-### 安装 eslint 
+### 安装 eslint
 
 安装 eslint 和项目需要的 eslint 配置
 
-```shell
+```Bash
 # 基础的 eslint 配置
 $ pnpm add -D eslint
 
@@ -671,7 +487,7 @@ $ pnpm add -D eslint-config-prettier eslint-plugin-prettier
 
 添加 linter 命令
 
-```shell
+```Bash
 # eslint
 $ npm pkg set scripts.eslint="eslint --ext .vue,.js,.jsx,.ts,.tsx ./ --max-warnings 0"
 $ npm pkg set scripts.eslint:fix="eslint --ext .vue,.js,jsx,.ts,.tsx ./ --max-warnings 0 --fix"
@@ -679,7 +495,7 @@ $ npm pkg set scripts.eslint:fix="eslint --ext .vue,.js,jsx,.ts,.tsx ./ --max-wa
 
 ### 安装 stylelint
 
-```shell
+```Bash
 # 基础的 stylelint
 $ pnpm add stylelint
 
@@ -689,7 +505,7 @@ $ pnpm add -D stylelint-config-standard stylelint-order
 
 添加 stylelint 命令
 
-```shell
+```Bash
 # stylelint
 $ npm pkg set scripts.stylelint="stylelint src/**/*.{html,vue,sass,less}"
 $ npm pkg set scripts.stylelint:fix="stylelint --fix src/**/*.{html,vue,css,sass,less}"
@@ -699,18 +515,18 @@ $ npm pkg set scripts.stylelint:fix="stylelint --fix src/**/*.{html,vue,css,sass
 
 husky 准备好之后，我们接着来检查代码的依赖
 
-在  `package.json`  文件下添加如下代码, 根据需要来添加 eslint 或者 stylelint 的要求
+在 `package.json` 文件下添加如下代码, 根据需要来添加 eslint 或者 stylelint 的要求
 
-```json
+```JSON
 {
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json}": [
-			"prettier --write", 
-			"npm run eslint:fix"
-		],
+                        "prettier --write", 
+                        "npm run eslint:fix"
+                ],
     "*.{html,vue,css,sass,less}": [
-			"npm run stylelint:fix"
-		]
+                        "npm run stylelint:fix"
+                ]
   }
 }
 ```
@@ -719,20 +535,16 @@ husky 准备好之后，我们接着来检查代码的依赖
 
 - [手摸手教你使用最新版husky(v7.0.1)让代码更优雅规范 - 掘金 (juejin.cn)](https://juejin.cn/post/6982192362583752741)
 
-::: info  <img src="https://file.wulicode.com/notion/47/47c09e2568b8d6a89b378c48929d4075.svg" style="width:17px;position:relative;top:4px;border:none;display:inline;">   **更新记录** 
+::: info 📆
 
-
+**更新记录**
 **2025年11月18日**
-  - 增加 eslint / stylistic 配置, 不推荐使用  eslint / stylelint / prettier
-
+- 增加 eslint / stylistic 配置, 不推荐使用 eslint / stylelint / prettier
 **2025年02月26日**
-  - husky 的使用更新到 9.x 版本
-
+- husky 的使用更新到 9.x 版本
 **2023年11月24日**
-  - 命令更新为  `pnpm` 
-  - 移除过时的  `npm set-script`  命令
-  - 加入  `stylelint`  支持 css 样式
+- 命令更新为 `pnpm`
+- 移除过时的 `npm set-script` 命令
+- 加入 `stylelint` 支持 css 样式
+
 :::
-
-
-
