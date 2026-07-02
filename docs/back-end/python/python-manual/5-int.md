@@ -13,7 +13,7 @@ head:
       content: '本章介绍数值类型的基础知识，包括数值字面量、运算符及程序、运算符优先级、数字的实际应用和基础表达式，为理解数值计算打下基础。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/python/python-manual/5-int.html'
+      content: 'https://www.wulicode.com/back-end/python/python-manual/5-int.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/8a128d435067e98cf631dc09a1fbecac.png'

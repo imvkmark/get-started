@@ -13,7 +13,7 @@ head:
       content: '本章以问答形式介绍Python的优点，阐释其能应用于Web开发、数据分析、人工智能等领域，并总结其简洁易读、跨平台、生态丰富等技术优势。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/python/python-manual/1-qa.html'
+      content: 'https://www.wulicode.com/back-end/python/python-manual/1-qa.html'
 ---
 # 第一章 问答环节
 

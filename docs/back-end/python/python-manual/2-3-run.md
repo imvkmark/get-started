@@ -13,7 +13,7 @@ head:
       content: 'Python运行程序的方式包括：交互式命令行（通过两次回车执行多行嵌套语句，注意缩进）、运行脚本（如python first.py）、Unix风格的可执行脚本、模块的导入与重载，以及使用IDLE环境。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/python/python-manual/2-3-run.html'
+      content: 'https://www.wulicode.com/back-end/python/python-manual/2-3-run.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/9dc5bddb584ec6f0d3b7841825c4d3f6.png'

@@ -1,10 +1,10 @@
 ---
 description: '本书涵盖Python编程的九个部分：从入门基础、数据类型与运算、语句语法，到函数、模块、面向对象编程、异常处理，最后拓展高级话题与附录，系统全面。'
-lastUpdated: '2026-06-17 19:06:42'
+lastUpdated: '2026-07-02 09:40:34'
 head:
   - - meta
     - name: 'og:title'
-      content: 'Python 学习手册'
+      content: '📘 Python 学习手册'
   - - meta
     - name: 'og:type'
       content: 'article'
@@ -13,23 +13,21 @@ head:
       content: '本书涵盖Python编程的九个部分：从入门基础、数据类型与运算、语句语法，到函数、模块、面向对象编程、异常处理，最后拓展高级话题与附录，系统全面。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/python/python-manual/index.html'
+      content: 'https://www.wulicode.com/back-end/python/python-manual/index.html'
 ---
-# Python 学习手册
+# 📘 Python 学习手册
 
 Python 的学习进度根据 「Python 学习手册」
 
 ### 第一部分 使用入门
 
-第一章 : 问答环节
-
-第二/三章 : 运行程序
+- <cite doc-id="PvUewydY7iqsZJkeduAc1ivGnMg" file-type="wiki" title="第一章 问答环节" type="doc"></cite>
+- <cite doc-id="RydDwAm17i7bOskkl0McCLU8nCf" file-type="wiki" title="第二 三章 运行程序" type="doc"></cite>
 
 ### 第二部分 类型和运算
 
-第四章 : 介绍 python 对象类型
-
-第五章 : 数值类型
+- <cite doc-id="JTQxw1G05i0LB0kcc0QcFWCknLe" file-type="wiki" title="第四章 介绍 python 对象类型" type="doc"></cite>
+- <cite doc-id="OOxIw3OOLiXDEJkMYa3cQaBPnbb" file-type="wiki" title="第五章 数值类型" type="doc"></cite>
 
 第6章 动态类型简介
 

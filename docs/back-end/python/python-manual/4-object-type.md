@@ -13,7 +13,7 @@ head:
       content: '第四章介绍了Python核心对象类型，包括数字、字符串、序列操作、不可变性、列表推导、字典键值赋值与排序、元组、文件编码、二进制、集合及类自定义等，并强调如何避免破坏代码灵活性。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/python/python-manual/4-object-type.html'
+      content: 'https://www.wulicode.com/back-end/python/python-manual/4-object-type.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/df6ec045db908bdae5076f58da72a409.png'

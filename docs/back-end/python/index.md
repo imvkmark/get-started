@@ -1,6 +1,6 @@
 ---
 description: '基于百度飞桨开发的超轻量、多语言OCR系统PaddleOCR；以及两个Django框架的接口文档生成工具：drf-spectacular支持OpenAPI 3，drf-yasg自动生成OpenAPI 2.0语法。'
-lastUpdated: '2026-06-30 13:42:21'
+lastUpdated: '2026-07-02 09:39:00'
 head:
   - - meta
     - name: 'og:title'
@@ -14,8 +14,13 @@ head:
   - - meta
     - name: 'og:url'
       content: 'https://www.wulicode.com/back-end/python/index.html'
+  - - meta
+    - name: 'og:image'
+      content: 'https://file.wulicode.com/feishu-images/e62f8e723df9fa22eca51b8e992ce085.png'
 ---
 # Python
+
+![](https://file.wulicode.com/feishu-images/e62f8e723df9fa22eca51b8e992ce085.png)
 
 ## Awesome
 

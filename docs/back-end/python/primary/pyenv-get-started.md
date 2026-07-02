@@ -1,10 +1,10 @@
 ---
 description: 'pyenv用于管理Python版本，支持安装、切换及卸载。通过官方bash github installer安装，常用命令包括查看已安装/可安装版本、切换版本。配合pyenv-virtualenv可创建、列出和删除虚拟环境。常见问题有安装缓慢、SSL模块缺失、模块未找到、patch命令缺失等。'
-lastUpdated: '2026-06-17 23:35:18'
+lastUpdated: '2026-07-02 09:39:16'
 head:
   - - meta
     - name: 'og:title'
-      content: '使用 pyenv 管理 Python 版本 '
+      content: '⚠️ 使用 pyenv 管理 Python 版本 '
   - - meta
     - name: 'og:type'
       content: 'article'
@@ -13,14 +13,16 @@ head:
       content: 'pyenv用于管理Python版本，支持安装、切换及卸载。通过官方bash github installer安装，常用命令包括查看已安装/可安装版本、切换版本。配合pyenv-virtualenv可创建、列出和删除虚拟环境。常见问题有安装缓慢、SSL模块缺失、模块未找到、patch命令缺失等。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/python/primary/pyenv-get-started.html'
+      content: 'https://www.wulicode.com/back-end/python/primary/pyenv-get-started.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/ab25a7121eaaadf54f2cff0009bc77f1.png'
 ---
-# 使用 pyenv 管理 Python 版本
+# ⚠️ 使用 pyenv 管理 Python 版本
 
-::: warning ⚠️<p>Deprecated, 推荐使用 [uv 的使用](/back-end/python/primary/uv-get-started.md) 来进行环境管理</p>:::
+::: warning ⚠️
+<p>Deprecated, 推荐使用 <a href="https://www.wulicode.com/back-end/python/primary/uv-get-started.html">uv 的使用</a> 来进行环境管理</p>
+:::
 
 > 如果使用多环境推荐使用 pipenv, pyenv 使用方法较为复杂  
 > 如果遇到 pip 下载比较慢可以查看 更换镜像源 , 加速 python 安装
