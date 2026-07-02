@@ -1,6 +1,6 @@
 ---
 description: '更换Python镜像源可显著加速包安装。常用镜像包括阿里云、清华等。可通过命令行临时指定（`pip install -i 镜像地址 包名`），或修改配置文件（Linux/Mac: `~/.pip/pip.conf`，Windows: `%APPDATA%\pip\pip.ini`）永久生效。常见问题：pip版本过低需升级（`pip install --upgrade pip`）。建议优先使用国内镜像。'
-lastUpdated: '2026-06-17 19:08:57'
+lastUpdated: '2026-07-02 21:46:37'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: '更换Python镜像源可显著加速包安装。常用镜像包括阿里云、清华等。可通过命令行临时指定（`pip install -i 镜像地址 包名`），或修改配置文件（Linux/Mac: `~/.pip/pip.conf`，Windows: `%APPDATA%\pip\pip.ini`）永久生效。常见问题：pip版本过低需升级（`pip install --upgrade pip`）。建议优先使用国内镜像。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/python/primary/use-mirror-to-speed.html'
+      content: 'https://www.wulicode.com/back-end/python/primer/use-mirror-to-speed.html'
 ---
 # 更换镜像源 , 加速 python 安装
 

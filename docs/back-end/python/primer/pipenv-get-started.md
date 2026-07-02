@@ -1,6 +1,6 @@
 ---
 description: 'Pipenv是新一代Python项目环境与依赖管理工具，整合pip和virtualenv，通过Pipfile和Pipfile.lock自动管理虚拟环境与依赖，确保项目可复现构建，简化开发流程。'
-lastUpdated: '2026-06-18 08:23:32'
+lastUpdated: '2026-07-02 21:46:52'
 head:
   - - meta
     - name: 'og:title'
@@ -13,12 +13,14 @@ head:
       content: 'Pipenv是新一代Python项目环境与依赖管理工具，整合pip和virtualenv，通过Pipfile和Pipfile.lock自动管理虚拟环境与依赖，确保项目可复现构建，简化开发流程。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/python/primary/pipenv-get-started.html'
+      content: 'https://www.wulicode.com/back-end/python/primer/pipenv-get-started.html'
 ---
 # pipenv：新一代Python项目环境与依赖管理工具
 
 ::: info ℹ️
-原作者 : [李辉](https://www.zhihu.com/people/im-greyli)
+
+原作者 : <a href="https://www.zhihu.com/people/im-greyli">李辉</a>
+
 :::
 
 ## **什么是Pipenv**
