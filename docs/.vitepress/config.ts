@@ -7,10 +7,10 @@ const nav = [
         text: "AI",
         activeMatch: `^/ai/`,
         items: [
-            { text: "资料", link: "/ai/awesome/ai" },
+            { text: "入门", link: "/ai/primer/awesome" },
             { text: "OpenSpec", link: "/ai/openspec/1-core" },
             { text: "Claude Code", link: "/ai/claude-code/01-can" },
-            { text: "Gstack 学习路线图", link: "/ai/gstack/overview" },
+            { text: "Gstack 学习路线图", link: "/ai/extend-reading/gstack" },
         ],
     },
     {
@@ -20,15 +20,17 @@ const nav = [
             { text: "Java", link: "/back-end/java/" },
             { text: "Php", link: "/back-end/php/" },
             { text: "Python", link: "/back-end/python/" },
+            { text: "Ruby", link: "/back-end/ruby/" },
         ],
     },
     {
         text: "数据库",
         activeMatch: `^/database/`,
         items: [
+            { text: '入门', link: '/database/primer/' },
             { text: 'MySQL', link: '/database/mysql/' },
-            { text: 'Redis', link: '/database/redis/get-started' },
-            { text: 'Mongo', link: '/database/mongo/get-started' },
+            { text: 'Redis', link: '/database/redis/' },
+            { text: 'Mongo', link: '/database/mongo/' },
             {
                 items: [
                     { text: '📚 Redis Document', link: '/database/redis/docs' },
@@ -48,6 +50,7 @@ const nav = [
             { text: "RoadMap", link: "/front-end/roadmap/index" },
             { text: "App", link: "/front-end/app/" },
             { text: "Javascript", link: "/front-end/javascript/index" },
+            { text: "Web", link: "/front-end/web/" },
         ],
     },
     {
@@ -99,9 +102,9 @@ const vitePressConfig = {
         [
             'script',
             {
-                "async": "true",
-                'src': 'https://www.googletagmanager.com/gtag/js?id=G-6STKYFNBZK'
-            }
+                async: "true",
+                src: 'https://www.googletagmanager.com/gtag/js?id=G-6STKYFNBZK'
+            }, ''
         ],
         [
             'script', {},
@@ -144,8 +147,22 @@ const vitePressConfig = {
     },
 };
 
+const vitePressSidebarOptions = {
+    documentRootPath: '/docs'
+};
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig(withSidebar(vitePressConfig, [
+    {
+        documentRootPath: 'docs/',
+        collapsed: false,
+        includeRootIndexFile: true,
+        scanStartPath: 'ai',
+        basePath: '/ai/',
+        resolvePath: '/ai/',
+        useTitleFromFileHeading: true,
+        sortFolderTo: 'bottom',
+    },
     {
         documentRootPath: 'docs/',
         collapsed: false,
@@ -154,21 +171,15 @@ export default defineConfig(withSidebar(vitePressConfig, [
         resolvePath: '/about/',
         useTitleFromFileHeading: true
     },
-    {
-        documentRootPath: 'docs/',
-        collapsed: false,
-        scanStartPath: 'ai',
-        basePath: '/ai/',
-        resolvePath: '/ai/',
-        useTitleFromFileHeading: true
-    },
+
     {
         documentRootPath: 'docs/',
         collapsed: false,
         scanStartPath: 'back-end/java/',
         basePath: '/back-end/java/',
         resolvePath: '/back-end/java/',
-        useTitleFromFileHeading: true
+        useTitleFromFileHeading: true,
+        sortFolderTo: 'bottom',
     },
     {
         documentRootPath: 'docs/',
@@ -176,7 +187,8 @@ export default defineConfig(withSidebar(vitePressConfig, [
         scanStartPath: 'back-end/php/',
         basePath: '/back-end/php/',
         resolvePath: '/back-end/php/',
-        useTitleFromFileHeading: true
+        useTitleFromFileHeading: true,
+        sortFolderTo: 'bottom',
     },
     {
         documentRootPath: 'docs/',
@@ -184,8 +196,14 @@ export default defineConfig(withSidebar(vitePressConfig, [
         scanStartPath: 'back-end/python/',
         basePath: '/back-end/python/',
         resolvePath: '/back-end/python/',
-        useTitleFromFileHeading: true
+        useTitleFromFileHeading: true,
+        sortFolderTo: 'bottom',
     },
+    /*
+    |--------------------------------------------------------------------------
+    | 数据库
+    |--------------------------------------------------------------------------
+    */
     {
         documentRootPath: 'docs/',
         collapsed: false,
@@ -194,17 +212,31 @@ export default defineConfig(withSidebar(vitePressConfig, [
         resolvePath: '/database/mysql/',
         useTitleFromFileHeading: true
     },
+
+    {
+        documentRootPath: 'docs/',
+        collapsed: false,
+        scanStartPath: 'database/redis/docs',
+        basePath: '/database/redis/docs',
+        resolvePath: '/database/redis/docs',
+        useTitleFromFileHeading: true
+    },
     {
         documentRootPath: 'docs/',
         collapsed: false,
         scanStartPath: 'database/redis',
         basePath: '/database/redis/',
         resolvePath: '/database/redis/',
-        useTitleFromFileHeading: true
+        useTitleFromFileHeading: true,
+        sortFolderTo: 'bottom',
+        excludeByGlobPattern: [
+            'docs/'
+        ]
     },
     {
         documentRootPath: 'docs/',
         collapsed: false,
+        includeRootIndexFile: true,
         scanStartPath: 'database/mongo',
         basePath: '/database/mongo/',
         resolvePath: '/database/mongo/',
@@ -213,22 +245,37 @@ export default defineConfig(withSidebar(vitePressConfig, [
     {
         documentRootPath: 'docs/',
         collapsed: false,
-        scanStartPath: 'development',
-        basePath: '/development/',
-        resolvePath: '/development/',
-        useTitleFromFileHeading: true
+        scanStartPath: 'database/',
+        basePath: '/database/',
+        resolvePath: '/database/',
+        useTitleFromFileHeading: true,
+        includeRootIndexFile: true,
+        includeFolderIndexFile: true,
+        excludeByGlobPattern: [
+            'redis', 'mongo', 'mysql'
+        ]
     },
+    /*
+    |--------------------------------------------------------------------------
+    | 开发
+    |--------------------------------------------------------------------------
+    */
     {
         documentRootPath: 'docs/',
         collapsed: false,
-        scanStartPath: 'front-end',
-        basePath: '/front-end/',
-        resolvePath: '/front-end/',
-        useTitleFromFileHeading: true,
-        excludeByGlobPattern: [
-            'dart/', 'javascript/', 'roadmap/'
-        ],
+        includeRootIndexFile: true,
+        includeFolderIndexFile: true,
+        scanStartPath: 'development',
+        basePath: '/development/',
+        resolvePath: '/development/',
+        sortFolderTo: 'bottom',
+        useTitleFromFileHeading: true
     },
+    /*
+    |--------------------------------------------------------------------------
+    | 前端
+    |--------------------------------------------------------------------------
+    */
     {
         documentRootPath: 'docs/',
         collapsed: false,
@@ -248,10 +295,32 @@ export default defineConfig(withSidebar(vitePressConfig, [
     {
         documentRootPath: 'docs/',
         collapsed: false,
+        scanStartPath: 'front-end/web',
+        basePath: '/front-end/web/',
+        resolvePath: '/front-end/web/',
+        includeRootIndexFile: true,
+        includeFolderIndexFile: true,
+        sortFolderTo: 'bottom',
+        useTitleFromFileHeading: true
+    },
+    {
+        documentRootPath: 'docs/',
+        collapsed: false,
         scanStartPath: 'front-end/roadmap',
         basePath: '/front-end/roadmap/',
         resolvePath: '/front-end/roadmap/',
         useTitleFromFileHeading: true
+    },
+    {
+        documentRootPath: 'docs/',
+        collapsed: false,
+        scanStartPath: 'front-end',
+        basePath: '/front-end/',
+        resolvePath: '/front-end/',
+        useTitleFromFileHeading: true,
+        excludeByGlobPattern: [
+            'javascript/', 'roadmap/'
+        ],
     },
     {
         documentRootPath: 'docs/',
@@ -291,7 +360,7 @@ export default defineConfig(withSidebar(vitePressConfig, [
     {
         documentRootPath: 'docs/',
         collapsed: false,
-        scanStartPath: 'ops/man',
+        scanStartPath: 'ops/man/',
         basePath: '/ops/man/',
         resolvePath: '/ops/man/',
         useTitleFromFileHeading: true,
