@@ -1,6 +1,6 @@
 ---
 description: 'Ubuntu可通过官方安装包、系统命令等方式安装Node.js，并推荐设置npm淘宝镜像或使用cnpm替代npm以加速下载。'
-lastUpdated: '2026-06-30 22:47:28'
+lastUpdated: '2026-07-02 21:16:41'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: 'Ubuntu可通过官方安装包、系统命令等方式安装Node.js，并推荐设置npm淘宝镜像或使用cnpm替代npm以加速下载。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com/front-end/javascript/primary/install-node-at-ubuntu.html'
+      content: 'https://www.wulicode.com/front-end/javascript/primer/install-node-at-ubuntu.html'
 ---
 # Ubuntu 安装 Nodejs 并配置
 
