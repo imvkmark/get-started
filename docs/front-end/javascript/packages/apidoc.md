@@ -1,10 +1,10 @@
 ---
 description: '本文介绍了使用ApiDoc编写接口文档的方法，包括安装（可能需要sudo权限）、生成规则（apidoc -i code_dir -o output_dir），以及项目中基于Laravel Artisan封装的函数。同时说明了参数说明、写法规范、参数对齐、apiName命名规范、返回值约定与对齐等要点。'
-lastUpdated: '2026-07-02 18:32:52'
+lastUpdated: '2026-07-02 19:29:42'
 head:
   - - meta
     - name: 'og:title'
-      content: '⚠️ 使用 ApiDoc 编写接口文档'
+      content: '使用 ApiDoc 编写接口文档'
   - - meta
     - name: 'og:type'
       content: 'article'
@@ -15,7 +15,7 @@ head:
     - name: 'og:url'
       content: 'https://www.wulicode.com/front-end/javascript/packages/apidoc.html'
 ---
-# ⚠️ 使用 ApiDoc 编写接口文档
+# 使用 ApiDoc 编写接口文档
 
 ::: warning ⚠️
 

@@ -1,6 +1,6 @@
 ---
 description: '本文介绍了使用Sphinx撰写技术文档的流程：安装Sphinx、快速初始化并生成HTML，以及配置主题、Markdown支持、中文搜索、代码高亮等。同时提及了常见问题（如Mac搜索显示异常）及在线托管于ReadTheDocs。'
-lastUpdated: '2026-07-02 18:40:20'
+lastUpdated: '2026-07-02 19:15:24'
 head:
   - - meta
     - name: 'og:title'

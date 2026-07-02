@@ -1,7 +1,7 @@
 ---
-description: '对原文的评价: 好文章输在格式上在 javascript 中，要判断字符串是中文是很简单的。比如：在Javascript 中. 编码是 unicode 字符想当然的，在php中来判断字符串是否为中文，就会沿袭这个思路：不过，很快就会发现，php并不支持这样的表达，报错：所以所有 \u 的匹配都是不靠谱的, 如果说使用 preg_match 的话, 故而有在 php 中，是用 \x 表示十六进制数据的。于是变换成如下的代码：貌似不报错了，判断的结果也正确，不过把 $str 换成“编程”两字，结果却还是显示 该字符串不全部是中文 ，看来这样的判断还是不够准确。于是继'
-lastUpdated: '2023-12-16 12:02:00'
-head: 
+description: '正则表达式匹配中文常用Unicode范围如\u4e00-\u9fa5，修正符（如i、g、m）可调整匹配模式：i忽略大小写（中文无意义），g全局匹配，m多行匹配，s让.匹配换行符，u启用Unicode属性等。匹配中文时注意编码和修正符u，确保正确识别汉字。'
+lastUpdated: '2026-07-02 19:13:58'
+head:
   - - meta
     - name: 'og:title'
       content: '使用正则表达式对中文进行匹配'
@@ -10,20 +10,18 @@ head:
       content: 'article'
   - - meta
     - name: 'og:description'
-      content: '对原文的评价: 好文章输在格式上在 javascript 中，要判断字符串是中文是很简单的。比如：在Javascript 中. 编码是 unicode 字符想当然的，在php中来判断字符串是否为中文，就会沿袭这个思路：不过，很快就会发现，php并不支持这样的表达，报错：所以所有 \u 的匹配都是不靠谱的, 如果说使用 preg_match 的话, 故而有在 php 中，是用 \x 表示十六进制数据的。于是变换成如下的代码：貌似不报错了，判断的结果也正确，不过把 $str 换成“编程”两字，结果却还是显示 该字符串不全部是中文 ，看来这样的判断还是不够准确。于是继'
+      content: '正则表达式匹配中文常用Unicode范围如\u4e00-\u9fa5，修正符（如i、g、m）可调整匹配模式：i忽略大小写（中文无意义），g全局匹配，m多行匹配，s让.匹配换行符，u启用Unicode属性等。匹配中文时注意编码和修正符u，确保正确识别汉字。'
   - - meta
     - name: 'og:url'
       content: 'https://www.wulicode.com/development/regex/zh-match.html'
 ---
 # 使用正则表达式对中文进行匹配
 
-
-
 对原文的评价: 好文章输在格式上
 
 在 javascript 中，要判断字符串是中文是很简单的。比如：
 
-```php
+```PHP
 var str = "php编程";
 if (/^[\u4e00-\u9fa5]+$/.test(str)) {
     alert("该字符串全部是中文");
@@ -36,7 +34,7 @@ if (/^[\u4e00-\u9fa5]+$/.test(str)) {
 
 想当然的，在php中来判断字符串是否为中文，就会沿袭这个思路：
 
-```javascript
+```JavaScript
 $str = "php编程";
 if (preg_match("/^[\u4e00-\u9fa5]+$/",$str)) {
     print("该字符串全部是中文");
@@ -49,11 +47,11 @@ if (preg_match("/^[\u4e00-\u9fa5]+$/",$str)) {
 
 > Warning: preg_match() [function.preg-match]: Compilation failed: PCRE does not support \L, \l, \N, \U, or \u at offset 3 in …
 
-所以所有 \u 的匹配都是不靠谱的, 如果说使用  `preg_match`  的话, 故而有
+所以所有 \u 的匹配都是不靠谱的, 如果说使用 `preg_match` 的话, 故而有
 
-在 php 中，是用  `\x`  表示十六进制数据的。于是变换成如下的代码：
+在 php 中，是用 `\x` 表示十六进制数据的。于是变换成如下的代码：
 
-```php
+```PHP
 $str = "php编程";
 if (preg_match("/^[\x4e00-\x9fa5]+$/",$str)) {
     print("该字符串全部是中文");
@@ -62,15 +60,15 @@ if (preg_match("/^[\x4e00-\x9fa5]+$/",$str)) {
 }
 ```
 
-貌似不报错了，判断的结果也正确，不过把  `$str`  换成“编程”两字，结果却还是显示  **该字符串不全部是中文**  ，看来这样的判断还是不够准确。于是继续搜:
+貌似不报错了，判断的结果也正确，不过把 `$str` 换成“编程”两字，结果却还是显示 **该字符串不全部是中文** ，看来这样的判断还是不够准确。于是继续搜:
 
 片言只语:
 
-01: 匹配全角字符的正则:  `^[\x80-\xff]*^/`   `[\u4e00-\u9fa5]` 可以匹配中文, 但是PHP又不支持
+01: 匹配全角字符的正则: `^[\x80-\xff]*^/` `[\u4e00-\u9fa5]`可以匹配中文, 但是PHP又不支持
 
-02:  `chr(0xa1) . '-' . chr(0xff)` 可以匹配所有中文,但是不知道在UTF-8下如何!即使在gb2312下,  `chr(0xa1) . '-' . chr(0xff)`  也不对, 它把全角符号也匹配进来了
+02: `chr(0xa1) . '-' . chr(0xff)`可以匹配所有中文,但是不知道在UTF-8下如何!即使在gb2312下, `chr(0xa1) . '-' . chr(0xff)` 也不对, 它把全角符号也匹配进来了
 
-03: 模式修正符：  `u`
+03: 模式修正符： `u`
 
 ### 关于修正符
 
@@ -78,7 +76,7 @@ if (preg_match("/^[\x4e00-\x9fa5]+$/",$str)) {
 
 给“4e00”和“9fa5”两边分别用"{"和“}”包起来，跑了一遍，发现真的准确了：
 
-```php
+```PHP
 $str = "php编程";
 if (preg_match("/^[\x{4e00}-\x{9fa5}]+$/u",$str)) {
     print("该字符串全部是中文");
@@ -89,8 +87,5 @@ if (preg_match("/^[\x{4e00}-\x{9fa5}]+$/u",$str)) {
 
 ### 参考文章
 
-- [php 正则匹配中文 utf8编码/^[\x{4e00}-\x{9fa5}A-Za-z0-9_]+$](http://my.oschina.net/BearCatYN/blog/413833)
+- [php 正则匹配中文 utf8编码/^[\x{4e00}-\x{9fa5}A-Za-z0-9\_]+\$](http://my.oschina.net/BearCatYN/blog/413833)
 - [正则表达式的汉字匹配](http://www.cnblogs.com/yitian/archive/2008/11/14/1333569.html)
-
-
-

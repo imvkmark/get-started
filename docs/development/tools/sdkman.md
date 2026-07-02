@@ -1,6 +1,6 @@
 ---
 description: 'SDKMAN 是一个用于管理多个 SDK 版本（如 JDK、Maven、Gradle 等）的命令行工具，支持安装、切换、升级和卸载。它提供 Beta 频道、离线模式、自定义目录安装及 Shell 配置选项。可管理多种 JDK 发行版（如 OpenJDK、Temurin、GraalVM）和众多开发工具（如 Scala、Spring Boot、Kotlin）。支持 Apple Silicon 的 Rosetta 2 兼容模式，适用于 CI 环境。'
-lastUpdated: '2026-06-18 09:45:46'
+lastUpdated: '2026-07-02 19:30:29'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: 'SDKMAN 是一个用于管理多个 SDK 版本（如 JDK、Maven、Gradle 等）的命令行工具，支持安装、切换、升级和卸载。它提供 Beta 频道、离线模式、自定义目录安装及 Shell 配置选项。可管理多种 JDK 发行版（如 OpenJDK、Temurin、GraalVM）和众多开发工具（如 Scala、Spring Boot、Kotlin）。支持 Apple Silicon 的 Rosetta 2 兼容模式，适用于 CI 环境。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//development/tools/sdkman.html'
+      content: 'https://www.wulicode.com/development/tools/sdkman.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/c3ddf93c1328a31e169da09347139236.png'

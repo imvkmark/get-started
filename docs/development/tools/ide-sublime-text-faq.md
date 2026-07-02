@@ -1,6 +1,6 @@
 ---
 description: 'Sublime Text常用插件包括包控制、格式化工具（Emmet、DocBlockr、JsFormat等）、右侧菜单增强、编码支持、语法检测、主题（Soda、Flatland）等，提升开发效率与代码可读性。'
-lastUpdated: '2026-07-02 18:43:44'
+lastUpdated: '2026-07-02 19:16:52'
 head:
   - - meta
     - name: 'og:title'
