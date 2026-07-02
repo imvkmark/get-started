@@ -57,6 +57,7 @@ const nav = [
         text: "Ops",
         activeMatch: `^/ops/`,
         items: [
+            { text: "运维", link: "/ops/index" },
             { text: "Mac", link: "/ops/mac/index" },
             { text: "Linux", link: "/ops/linux/index" },
             { text: "Nginx", link: "/ops/nginx/index" },
@@ -322,17 +323,11 @@ export default defineConfig(withSidebar(vitePressConfig, [
             'javascript/', 'roadmap/'
         ],
     },
-    {
-        documentRootPath: 'docs/',
-        collapsed: false,
-        scanStartPath: 'ops',
-        basePath: '/ops/',
-        resolvePath: '/ops/',
-        useTitleFromFileHeading: true,
-        excludeByGlobPattern: [
-            'mac/', 'linux/', 'nginx/', 'bash/', 'man/'
-        ],
-    },
+    /*
+    |--------------------------------------------------------------------------
+    | 运维
+    |--------------------------------------------------------------------------
+    */
     {
         documentRootPath: 'docs/',
         collapsed: false,
@@ -364,5 +359,24 @@ export default defineConfig(withSidebar(vitePressConfig, [
         basePath: '/ops/man/',
         resolvePath: '/ops/man/',
         useTitleFromFileHeading: true,
+    },
+    {
+        documentRootPath: 'docs/',
+        collapsed: false,
+        scanStartPath: 'ops/bash/',
+        basePath: '/ops/bash/',
+        resolvePath: '/ops/bash/',
+        useTitleFromFileHeading: true,
+    },
+    {
+        documentRootPath: 'docs/',
+        collapsed: false,
+        scanStartPath: 'ops',
+        basePath: '/ops/',
+        resolvePath: '/ops/',
+        useTitleFromFileHeading: true,
+        excludeByGlobPattern: [
+            'mac/', 'linux/', 'nginx/', 'bash/', 'man/'
+        ],
     },
 ]));
