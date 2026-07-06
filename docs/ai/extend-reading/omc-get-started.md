@@ -4,7 +4,7 @@ lastUpdated: '2026-07-06 19:31:47'
 head:
   - - meta
     - name: 'og:title'
-      content: 'Oh My ClaudeCode (OMC) 完整学习文档'
+      content: 'Oh My ClaudeCode (OMC) 学习文档'
   - - meta
     - name: 'og:type'
       content: 'article'
