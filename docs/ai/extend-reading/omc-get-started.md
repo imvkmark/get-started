@@ -1,6 +1,6 @@
 ---
 description: 'Oh My ClaudeCode (OMC) 是一个提升 Claude Code 效率的插件，提供19个专属Agent、37个内置Skill、Autopilot、Teams模式、多AI协作（CCG）、tmux Worker、自定义Skill、Hooks生命周期、状态持久化等丰富功能。文档涵盖从入门到生产掌握的四个阶段，包括安装配置、核心工作流、进阶编排及实战案例，帮助用户高效完成代码重构、审计、测试等任务。'
-lastUpdated: '2026-07-06 19:31:47'
+lastUpdated: '2026-07-06 21:23:00'
 head:
   - - meta
     - name: 'og:title'
@@ -16,6 +16,8 @@ head:
       content: 'https://www.wulicode.com/ai/extend-reading/omc-get-started.html'
 ---
 # Oh My ClaudeCode (OMC) 学习文档
+
+> 文档版本：基于 oh-my-claudecode v4.15.2 整理 
 
 ## 1. 项目概述
 
@@ -34,7 +36,7 @@ oh-my-claudecode（简称 OMC）是一个运行在 Claude Code 之上的**多 Ag
    /        \
 Agent 1   Agent 2   Agent 3
 Architect  Executor  QA-Tester
-(Opus)    (Sonnet)  (Haiku)
+(Opus)    (Sonnet)  (Sonnet, v4.14+)
    \        /
   结果综合输出
 ```
@@ -44,11 +46,11 @@ Architect  Executor  QA-Tester
 | 能力 | 原生 Claude Code | OMC |
 |-|-|-|
 | 执行模式 | 单 Agent，顺序执行 | 多 Agent，并行执行 |
-| 任务分解 | 手动 | 自动（Team 流水线） |
-| AI 模型 | 仅 Claude | Claude + Codex + Gemini |
-| 成本控制 | 全量用同一模型 | 智能路由，省 30–50% |
-| 上下文 | 容易丢失 | notepad + project-memory 持久化 |
-| 配置量 | 无需配置 | 零配置，开箱即用 |
+| 任务分解 | 手动 | 自动（Team 流水线，v4.1.7+ 标准编排） |
+| AI 模型 | 仅 Claude | Claude + Codex + Gemini + Antigravity(agy, v4.15.0+) |
+| 成本控制 | 全量用同一模型 | tier-alias 智能路由，省 30–50% |
+| 上下文 | 容易丢失 | notepad（三级优先级） + project-memory 持久化 |
+| 配置量 | 无需配置 | 零配置，可选 `/omc-setup` 增量配置 |
 
 ### 1.3 适合 vs 不适合的场景
 
@@ -58,7 +60,7 @@ Architect  Executor  QA-Tester
 - 超过 2 小时的长会话，上下文丢失风险高
 - 大规模重构（50+ 文件批量改造）
 - 架构决策类工作，需要 "先思考再执行"
-- 需要 Codex 做安全审计、Gemini 做 UI 评审的跨模型场景
+- 需要 Codex/Gemini/Antigravity 做交叉视角的跨模型场景
 
 **不适合 OMC 的场景：**
 
@@ -72,12 +74,12 @@ Architect  Executor  QA-Tester
 
 ### 2.1 安装插件
 
-OMC 通过 Claude Code 的插件市场安装，无需手动编辑任何配置文件。**不要使用 npm 全局安装**
+OMC 通过 Claude Code 的插件市场安装，无需手动编辑任何配置文件。**不要用 npm 全局安装来初始化插件**；npm 包（`oh-my-claude-sisyphus`）是另一条独立轨道，跟插件市场不是二选一关系。
 
 在 Claude Code 会话内，**逐条执行**以下命令（不能同时粘贴）：
 
 ```Plain Text
-/plugin marketplace add https://github.com/Yeachan-Heo/oh-my-claudecode
+/plugin marketplace add oh-my-claudecode
 ```
 
 等待第一条完成后，再执行：
@@ -88,7 +90,18 @@ OMC 通过 Claude Code 的插件市场安装，无需手动编辑任何配置文
 
 **安装验证**
 
-安装完成后，在 Claude Code 中运行 `/setup`，如果出现 OMC 的初始化提示则说明安装成功。
+安装完成后，在 Claude Code 中运行 `/omc-setup`（或带命名空间 `/oh-my-claudecode:omc-setup`），如果回显中包含 OMC 的版本号、Agent 数（19）、Skill 数（40），说明安装成功
+
+> 注意：Claude Code 原生 `/setup` 和 `/init` 都不是 OMC 入口
+
+**两条独立安装轨道（v4.15.2 官方强调）**
+
+| 轨道 | 安装命令 | 用途 |
+|-|-|-|
+| 插件轨道 | `/plugin marketplace add oh-my-claudecode` + `/plugin install oh-my-claudecode` | Skill/Agent 在 Claude Code 会话内直接可用 |
+| CLI 轨道 | `npm install -g oh-my-claude-sisyphus@latest` | 提供 `omc` / `oh-my-claudecode` / `omc-cli` 三个 binary；`ask` / `ccg` / `team` 的 CLI 后端依赖此轨道 |
+
+两条都装要同时升级（不是二选一）。
 
 **前置依赖**
 
