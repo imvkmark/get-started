@@ -1,6 +1,6 @@
 ---
 description: '本文介绍了在PhpStorm中使用Xdebug进行PHP远程调试的完整流程，包括配置调试环境、设置断点、启动调试会话及内部调用方式；同时涵盖Profiler生成与分析，帮助提升PHP开发调试效率。'
-lastUpdated: '2026-06-17 18:25:36'
+lastUpdated: '2026-07-06 14:36:01'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: '本文介绍了在PhpStorm中使用Xdebug进行PHP远程调试的完整流程，包括配置调试环境、设置断点、启动调试会话及内部调用方式；同时涵盖Profiler生成与分析，帮助提升PHP开发调试效率。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/primer/phpstorm-xdebug.html'
+      content: 'https://www.wulicode.com/back-end/php/primer/phpstorm-xdebug.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/ceb9c0992d2ae8e73ebe0068f095b046.jpg'
@@ -249,7 +249,9 @@ Xdebug 生成的结果是 **CacheGrind** 格式
 ---
 
 ::: info 📆
+
 更新记录
 **2025年12月14日**
 - 合并 Profiler
+
 :::
