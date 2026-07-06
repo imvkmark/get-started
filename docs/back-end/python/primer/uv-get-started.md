@@ -1,6 +1,6 @@
 ---
 description: 'uv是一款Python项目管理工具，支持快速安装更新、项目初始化、依赖管理（增删改查、树形展示、安全升级）、缓存清理、虚拟环境管理、多Python版本切换、项目构建与发布（wheel/sdist），以及从requirements.txt迁移至pyproject.toml等，并提供国内镜像选项。'
-lastUpdated: '2026-07-02 21:46:42'
+lastUpdated: '2026-07-06 23:23:00'
 head:
   - - meta
     - name: 'og:title'
