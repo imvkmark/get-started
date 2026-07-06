@@ -1,6 +1,6 @@
 ---
 description: '提供一系列精选的Mac工具，覆盖开发、远程访问、文件解压缩、安全防护及软件下载等实用类别，帮助用户高效完成各类任务。'
-lastUpdated: '2026-06-21 20:18:30'
+lastUpdated: '2026-07-06 13:32:43'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: '提供一系列精选的Mac工具，覆盖开发、远程访问、文件解压缩、安全防护及软件下载等实用类别，帮助用户高效完成各类任务。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//ops/mac/awesome.html'
+      content: 'https://www.wulicode.com/ops/mac/awesome.html'
 ---
 # Awesome Mac
 
@@ -35,9 +35,14 @@ head:
 
 - [Paste](https://pasteapp.io/) - 多平台同步的粘贴板工具
 - [Raycast](https://www.raycast.com/) - 🔥 Mac 快捷启动工具
-- [jordanbaird/Ice](https://github.com/jordanbaird/Ice) - macOS 强大的菜单栏管理器
 - [Fusion - Run Windows on Mac](https://customerconnect.vmware.com/evalcenter?p=fusion-player-personal&source=dwnp)
 - [VMware Fusion Player – Personal Use License](https://customerconnect.vmware.com/evalcenter?p=fusion-player-personal-13)
+
+**菜单栏管理工具**
+
+- [stonerl/Thaw](https://github.com/stonerl/Thaw) - Mac OS 26 的隐藏 Icon 的工具
+- [jordanbaird/Ice](https://github.com/jordanbaird/Ice) - macOS 的菜单栏管理器, 隐藏菜单栏
+- [dwarvesf/hidden](https://github.com/dwarvesf/hidden) - 轻量级的 Mac OS 隐藏 Icon 的工具
 
 **命令行**
 
