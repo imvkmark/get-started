@@ -1,6 +1,6 @@
 ---
 description: 'Skills封装领域知识与工作流，Hooks实现质量门禁与状态持久化，MCP连接外部服务与自定义工具，三者构成Claude Code的可扩展自动化体系。'
-lastUpdated: '2026-07-07 13:20:58'
+lastUpdated: '2026-07-07 13:55:31'
 head:
   - - meta
     - name: 'og:title'
@@ -16,6 +16,12 @@ head:
       content: 'https://www.wulicode.com/ai/claude-code/03-use.html'
 ---
 # 驾驭 : Skills · Hooks · Mcp 扩展体系
+
+本篇是「Claude Code 介绍以及学习教程」系列的**第三篇**，主题是「[驾驭 : Skills · Hooks · Mcp 扩展体系](/ai/claude-code/03-use.md)」。
+
+整个系列五篇：
+
+<table><colgroup><col/><col/><col/></colgroup><tbody><tr><td>篇</td><td>主题</td><td>何时读</td></tr><tr><td>1</td><td>[会用 : 命令行基础与日常协作](/ai/claude-code/01-can.md)</td><td>初次入手</td></tr><tr><td>2</td><td>[善用 : Agent 模式与自主任务执行](/ai/claude-code/02-with.md)</td><td>想知道底层循环、工具集、权限</td></tr><tr><td>3</td><td>[驾驭 : Skills · Hooks · Mcp 扩展体系](/ai/claude-code/03-use.md)「当前文章」</td><td>想把流程沉淀为可复用资产</td></tr><tr><td>4</td><td>[自动化 : 多 Agent 协作与并行执行](/ai/claude-code/04-auto.md)</td><td>遇到「又宽又重」的并行任务</td></tr><tr><td>5</td><td>[工程化 : Token 优化 · Compaction · 生产级部署](/ai/claude-code/05-engineering.md)</td><td>用熟了想降低成本、上 CI/CD</td></tr></tbody></table>
 
 进阶阶段的核心是**把 Claude Code 从协作者变成可编程的智能基础设施**
 
