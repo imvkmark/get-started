@@ -1,6 +1,6 @@
 ---
 description: 'Claude是Anthropic开发的AI助手，本指南涵盖其核心概念、学习教程与最佳实践，包括模型特性、使用技巧及学习路线图，帮助用户高效掌握Claude的应用方法。'
-lastUpdated: '2026-06-17 10:09:04'
+lastUpdated: '2026-07-07 15:28:11'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: 'Claude是Anthropic开发的AI助手，本指南涵盖其核心概念、学习教程与最佳实践，包括模型特性、使用技巧及学习路线图，帮助用户高效掌握Claude的应用方法。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//ai/claude-code/get-started.html'
+      content: 'https://www.wulicode.com/ai/claude-code/get-started.html'
 ---
 # Claude 介绍以及学习教程
 
@@ -22,8 +22,6 @@ head:
 - [驾驭 : Skills · Hooks · Mcp 扩展体系](/ai/claude-code/03-use.md)
 - [自动化 : 多 Agent 协作与并行执行](/ai/claude-code/04-auto.md)
 - [工程化 : Token 优化 · Compaction · 生产级部署](/ai/claude-code/05-engineering.md)
-- [subagents / 子代理](/ai/claude-code/extral-subagent.md)
-- [Skills 技能系统](/ai/claude-code/extral-skills.md)
 
 ---
 
