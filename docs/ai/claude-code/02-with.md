@@ -1,6 +1,6 @@
 ---
 description: '基于内容，Agent通过思考循环处理任务，结合工具调用与外部世界交互，使用任务规划让循环有方向。系统包含四层权限防御：规则系统、沙箱隔离、危险拦截、智能分类器。多步骤任务需拆解为探索-规划-执行三阶段，设置校验点防止错误蔓延，并管理上下文避免长任务瓶颈。'
-lastUpdated: '2026-06-17 10:10:00'
+lastUpdated: '2026-07-07 13:55:06'
 head:
   - - meta
     - name: 'og:title'
@@ -13,9 +13,15 @@ head:
       content: '基于内容，Agent通过思考循环处理任务，结合工具调用与外部世界交互，使用任务规划让循环有方向。系统包含四层权限防御：规则系统、沙箱隔离、危险拦截、智能分类器。多步骤任务需拆解为探索-规划-执行三阶段，设置校验点防止错误蔓延，并管理上下文避免长任务瓶颈。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//ai/claude-code/02-with.html'
+      content: 'https://www.wulicode.com/ai/claude-code/02-with.html'
 ---
 # 善用 : Agent 模式与自主任务执行
+
+本篇是「Claude Code 介绍以及学习教程」系列的**第二篇**，主题是「[善用 : Agent 模式与自主任务执行](/ai/claude-code/02-with.md)」。
+
+整个系列五篇：
+
+<table><colgroup><col/><col/><col/></colgroup><tbody><tr><td>篇</td><td>主题</td><td>何时读</td></tr><tr><td>1</td><td>[会用 : 命令行基础与日常协作](/ai/claude-code/01-can.md)</td><td>初次入手</td></tr><tr><td>2</td><td>[善用 : Agent 模式与自主任务执行](/ai/claude-code/02-with.md)「当前文章」</td><td>想知道底层循环、工具集、权限</td></tr><tr><td>3</td><td>[驾驭 : Skills · Hooks · Mcp 扩展体系](/ai/claude-code/03-use.md)</td><td>想把流程沉淀为可复用资产</td></tr><tr><td>4</td><td>[自动化 : 多 Agent 协作与并行执行](/ai/claude-code/04-auto.md)</td><td>遇到「又宽又重」的并行任务</td></tr><tr><td>5</td><td>[工程化 : Token 优化 · Compaction · 生产级部署](/ai/claude-code/05-engineering.md)</td><td>用熟了想降低成本、上 CI/CD</td></tr></tbody></table>
 
 ## Agent 工作原理
 
@@ -319,7 +325,9 @@ WebSearch 同样需要权限确认。
 
 `Agent` 工具让 Claude 可以把一个子任务委托给独立的子 Agent 处理。子 Agent 拥有自己独立的上下文窗口，完成任务后把结果汇报给主 Agent。这是 Claude Code 处理需要大量探索的任务的方式——比如"扫描整个仓库，列出所有没有单元测试覆盖的 Service 方法"。
 
-子 Agent 有深度限制——它们不能再派发自己的子 Agent，防止递归膨胀。子 Agent 的结果作为普通工具调用的输出返回给主循环，保持了整体系统的单线程简洁性。Agent Teams 这套完整的多 Agent 协作体系会在阶段四详细展开。
+子 Agent 可以继续派发自己的子 Agent（最多 5 层嵌套），形成递归执行层级。但需要注意：嵌套越深，总 token 消耗越大，且调试链路更长。对于大多数场景，1-2 层嵌套已经足够
+
+子 Agent 的结果作为普通工具调用的输出返回给主循环，保持了整体系统的单线程简洁性。Agent Teams 这套完整的多 Agent 协作体系会在阶段四详细展开。
 
 ---
 
@@ -342,8 +350,6 @@ WebSearch 同样需要权限确认。
 "修改完之后跑集成测试，如果失败就继续改直到通过"——这个任务能成立，因为你知道背后有 Bash 在循环执行。
 
 工具知识，是把"我能用 Claude Code 做什么"这个问题的答案从模糊变得具体的关键一步。下一篇，我们来看当这些工具遇到权限管控时，应该如何设计一套既安全又不打断开发流的权限策略。
-
-文档充分，开始写文章。
 
 ---
 

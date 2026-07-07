@@ -1,6 +1,6 @@
 ---
 description: '本文介绍了多Agent协作与并行执行系统，涵盖Agent Teams架构、Subagents选择、任务分工及权限控制。强调先规划再执行，通过主Agent委托子Agent构建流水线，实现精准上下文移交。支持Web云端与Remote Control两种并行模式，并提供会话共享与跨会话持久化方案，如CLAUDE.md、外部存储及Git状态探测。'
-lastUpdated: '2026-06-17 10:10:25'
+lastUpdated: '2026-07-07 13:56:11'
 head:
   - - meta
     - name: 'og:title'
@@ -13,9 +13,15 @@ head:
       content: '本文介绍了多Agent协作与并行执行系统，涵盖Agent Teams架构、Subagents选择、任务分工及权限控制。强调先规划再执行，通过主Agent委托子Agent构建流水线，实现精准上下文移交。支持Web云端与Remote Control两种并行模式，并提供会话共享与跨会话持久化方案，如CLAUDE.md、外部存储及Git状态探测。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//ai/claude-code/04-auto.html'
+      content: 'https://www.wulicode.com/ai/claude-code/04-auto.html'
 ---
 # 自动化 : 多 Agent 协作与并行执行
+
+本篇是「Claude Code 介绍以及学习教程」系列的**第四篇**，主题是「[自动化 : 多 Agent 协作与并行执行](/ai/claude-code/04-auto.md)」。
+
+整个系列五篇：
+
+<table><colgroup><col/><col/><col/></colgroup><tbody><tr><td>篇</td><td>主题</td><td>何时读</td></tr><tr><td>1</td><td>[会用 : 命令行基础与日常协作](/ai/claude-code/01-can.md)</td><td>初次入手</td></tr><tr><td>2</td><td>[善用 : Agent 模式与自主任务执行](/ai/claude-code/02-with.md)</td><td>想知道底层循环、工具集、权限</td></tr><tr><td>3</td><td>[驾驭 : Skills · Hooks · Mcp 扩展体系](/ai/claude-code/03-use.md)</td><td>想把流程沉淀为可复用资产</td></tr><tr><td>4</td><td>[自动化 : 多 Agent 协作与并行执行](/ai/claude-code/04-auto.md)「当前文章」</td><td>遇到「又宽又重」的并行任务</td></tr><tr><td>5</td><td>[工程化 : Token 优化 · Compaction · 生产级部署](/ai/claude-code/05-engineering.md)</td><td>用熟了想降低成本、上 CI/CD</td></tr></tbody></table>
 
 ## 开启 Agent Teams / 多 agent 协作
 
@@ -62,6 +68,10 @@ claude
 Agent Team 由四个组件构成：Team Lead（主 Claude Code 会话，负责创建团队、生成任务、综合结果）、Teammates（各自有独立上下文窗口的 Claude 实例）、共享任务列表（所有 Agent 可见的中心任务队列，支持依赖追踪）、以及 Mailbox（Agent 之间的消息通信系统）。
 
 团队配置和任务列表存储在本地：`~/.claude/teams/{team-name}/config.json` 和 `~/.claude/tasks/{team-name}/`。
+
+从 v2.1.178 起，TeamCreate/TeamDelete 工具已移除。每个会话隐式拥有一个 team——直接用 Agent 工具的 `name` 参数派生 teammate，无需显式创建团队。
+
+关键机制是任务依赖追踪。你可以声明「Task B 依赖 Task A」，当 A 完成，B 自动解锁，teammates 自主领取下一个可执行的任务，不需要 lead 一直盯着。
 
 关键机制是任务依赖追踪。你可以声明「Task B 依赖 Task A」，当 A 完成，B 自动解锁，teammates 自主领取下一个可执行的任务，不需要 lead 一直盯着。
 
@@ -297,7 +307,7 @@ model: sonnet
         如果测试覆盖不足，告知 test-writer 补充
 ```
 
-任务分解可以是递归的。主 Agent 可以把功能请求分解为创建 model、controller 和 view，然后派生子 Agent 来处理 controller，controller 子 Agent 还可以派生自己的子子 Agent 来写单独的方法和对应的测试。这创建了一种反映代码逻辑结构的执行层级。 不过官方文档也明确说明，子 Agent 在 Plan 模式下不能再派生子 Agent（防止无限嵌套），实际使用时需要注意这个约束。
+任务分解可以是递归的。主 Agent 可以把功能请求分解为创建 model、controller 和 view，然后派生子 Agent 来处理 controller，controller 子 Agent 还可以派生自己的子子 Agent 来写单独的方法和对应的测试。这创建了一种反映代码逻辑结构的执行层级。 子 Agent 可以派生子 Agent 最多 5 层。但在 Plan 模式下子 Agent 不能继续派生子 Agent——Plan 模式的只读约束会阻断嵌套链. 
 
 ### 用 CLAUDE.md 教会主 Agent 如何委托
 
@@ -332,6 +342,19 @@ model: sonnet
 ---
 
 分工策略设计好之后，实际运行中最常见的反馈是：子 Agent 返回的结果和预期不符。这通常不是子 Agent 本身的问题，而是委托指令写得不够精确，或者工具权限设置有误导致它无法完成部分步骤。迭代的方向是逐步收紧每个子 Agent 的定义，让它的职责范围越来越清晰，而不是越做越大——做大了就该拆成两个子 Agent。
+
+#### 三种扩展机制对比
+
+| 维度 | Skills | Subagents | Agent Teams |
+|-|-|-|-|
+| **上下文** | 在主对话上下文中运行 | 独立上下文窗口 | 各自独立上下文窗口 |
+| **通信** | 无（内联执行） | 单向（子→主返回结果） | 双向（teammates 可直接互发消息） |
+| **适用场景** | 可复用的任务流程/规范 | 边界清晰、结果独立的子任务 | 需要多视角印证或持续对齐的并行任务 |
+| **创建方式** | `.claude/skills/<name>/SKILL.md` | `.claude/agents/<name>.md` | `/team` 或隐式 team + Agent 工具 |
+| **成本** | 低（按需加载，共用上下文） | 中（独立上下文，完成后释放） | 高（多个并行上下文同时运行） |
+| **配置复杂度** | 低（Markdown 文件） | 中（frontmatter + 工具白名单） | 高（任务依赖 + 通信规则） |
+
+**选择原则**：能复用流程 → Skills；边界清晰的独立任务 → Subagents（默认后台运行）；需要 Agent 之间实时协调的复杂并行任务 → Agent Teams。
 
 ## 使用 `claude.ai/code` 在浏览器端并行运行多任务
 
