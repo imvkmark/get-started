@@ -40,4 +40,4 @@ uv venv --python=3.12
 
 位置 : `Settings | Python | Tools | Ruff`
 
-![](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODRhMGE4NjE5MDIzMmVkMmE2YTZjZWNjMmRlOGRjNmNfMTczYmEyNmUyM2QxNmMxY2EzMWEzNjI3YzlmYTU4YmNfSUQ6NzYxMzMwMzkzOTc0ODg1ODgzNl8xNzgzNjIyNzM4OjE3ODM2MjYzMzhfVjM)
+![](https://file.wulicode.com/feishu-images/6867034e49caaa2a04c34928bc98fc53.png)
