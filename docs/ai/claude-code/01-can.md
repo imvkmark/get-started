@@ -14,6 +14,9 @@ head:
   - - meta
     - name: 'og:url'
       content: 'https://www.wulicode.com/ai/claude-code/01-can.html'
+  - - meta
+    - name: 'og:image'
+      content: 'https://file.wulicode.com/feishu-images/66db1644e748c6109ea11f14dcb7a762.png'
 ---
 # 会用 : 命令行基础与日常协作
 
@@ -138,7 +141,7 @@ export PATH="$HOME/program:$PATH"
 
 这样可以使多个客户端同时存在, 方便在速度和费用中间做权衡
 
-![](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZGE5N2RjYTRmZTg1YjFhMWM3M2UyYzc4ZWMzNzM4YTZfNGNiZjBjMzBlNzBiNjI1MmIxYzVlZjhmYWZmZTBlNzdfSUQ6NzYyMDM3ODAyMzIwNTI3Njg1Ml8xNzgzODYwMzQ5OjE3ODM4NjM5NDlfVjM)
+![](https://file.wulicode.com/feishu-images/66db1644e748c6109ea11f14dcb7a762.png)
 
 #### 配置多服务商 (使用配置文件方式)
 
