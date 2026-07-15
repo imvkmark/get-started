@@ -1,6 +1,6 @@
 ---
 description: 'Taro常见问题包括：`button` 的 `onGetPhoneNumber` 属性无法获取回调，数字信封错误（error:0308010C），插件调用失败，`mini-css-extract-plugin` 样式顺序冲突，以及iOS页面切换白屏。'
-lastUpdated: '2026-06-21 20:30:45'
+lastUpdated: '2026-07-15 18:59:20'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: 'Taro常见问题包括：`button` 的 `onGetPhoneNumber` 属性无法获取回调，数字信封错误（error:0308010C），插件调用失败，`mini-css-extract-plugin` 样式顺序冲突，以及iOS页面切换白屏。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//front-end/web/framework/taro/faq.html'
+      content: 'https://www.wulicode.com/front-end/web/framework/taro/faq.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/baed44df661266c8ba17fafd7e6c8070.png'
@@ -56,7 +56,7 @@ export NODE_OPTIONS=--openssl-legacy-provider
 
 **降级到 Node.js v16(不推荐)**
 
-使用 `nvm` 或者 `pnpm env` , 查看文档 使用 nvm 管理多版本 Node 项目依赖
+使用 `nvm` 或者 `pnpm env` , 查看文档 [使用 nvm 管理多版本 Node 项目依赖](/front-end/javascript/npm/nvm-manage-multi-version-node.md)
 
 ## thread `<unnamed>` panicked at 'failed to invoke plugin: failed to invoke plugin on 'None'
 
