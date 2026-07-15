@@ -1,6 +1,6 @@
 ---
 description: 'Awesome AI Studio是一个集成AI导航、UI设计、原型制作、对话交互与编程功能的综合平台，兼备中转站与MCP协议支持，助力开发者高效创建智能应用。'
-lastUpdated: '2026-07-02 12:32:44'
+lastUpdated: '2026-07-15 19:48:13'
 head:
   - - meta
     - name: 'og:title'
@@ -93,3 +93,7 @@ head:
 - [lovable.dev](https://lovable.dev/) - 专注于生成高质量 React 应用，支持 GitHub 集成和一键部署
 - [replit.com](https://replit.com/) - 集成 AI 编程助手的在线 IDE，支持多种语言和实时协作
 - [Minimax](https://agent.minimaxi.com/) - MiniMax 提供的智能体平台
+
+### 工具
+
+- [superset.sh](https://superset.sh/) - 同时运行多个编码 Agents
