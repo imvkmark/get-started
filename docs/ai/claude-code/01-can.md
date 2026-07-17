@@ -1,6 +1,6 @@
 ---
 description: '针对Claude Code CLI的文档摘要：涵盖安装配置（多模型/服务商切换、接口调用）、Prompt编写技巧（自然语言描述、错误定位、@引用）、CLAUDE.md项目地图创建与模块化管理、内置命令（/clear、/compact、/resume控制上下文）及Git工作流（自动commit、分支PR）等核心功能，助力高效协作。'
-lastUpdated: '2026-07-07 13:56:48'
+lastUpdated: '2026-07-17 15:05:46'
 head:
   - - meta
     - name: 'og:title'
