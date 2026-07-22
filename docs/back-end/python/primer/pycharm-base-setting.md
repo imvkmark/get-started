@@ -14,6 +14,9 @@ head:
   - - meta
     - name: 'og:url'
       content: 'https://www.wulicode.com/back-end/python/primer/pycharm-base-setting.html'
+  - - meta
+    - name: 'og:image'
+      content: 'https://file.wulicode.com/feishu-images/9b5c19828918534dc8254e1ead199ccc.png'
 ---
 # 配置 PyCharm 作为趁手的IDE
 
@@ -31,10 +34,10 @@ uv venv --python=3.12
 
 配置位置 : `Settings | Python | Interpreter`
 
-![](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZmIyNTNmY2E2ODI2ZmQzMDg0YTM5NDRmNWZmMjRhNWVfYTExYzg5MjczNTQ1MWUxNjhhZGFjNjVkNDRjMWM3MzJfSUQ6NzYxMzI0MDM1ODkwMjE4OTAwOF8xNzg0NzIwNzQ5OjE3ODQ3MjQzNDlfVjM)
+![](https://file.wulicode.com/feishu-images/9b5c19828918534dc8254e1ead199ccc.png)
 
 ## 启用 ruff
 
 位置 : `Settings | Python | Tools | Ruff`
 
-![](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NWFmOWNjN2UyMGVmMjQ0MWU0ODQwMDk5Zjc2MDhhNTRfNzJiODA2NjE2ZDU1MjZiZDg2MDAwMGJhZDBkYjQwNWZfSUQ6NzYxMzMwMzkzOTc0ODg1ODgzNl8xNzg0NzIwNzQ5OjE3ODQ3MjQzNDlfVjM)
+![](https://file.wulicode.com/feishu-images/6867034e49caaa2a04c34928bc98fc53.png)
