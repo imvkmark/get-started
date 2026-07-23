@@ -1,6 +1,6 @@
 ---
 description: 'Redis 是一款高性能的键值数据库。本文介绍了其在 Ubuntu 中的安装步骤，包括服务器端安装、进程检查、状态验证，以及通过命令行客户端进行基本操作和配置修改。'
-lastUpdated: '2026-07-02 21:09:28'
+lastUpdated: '2026-07-23 11:21:11'
 head:
   - - meta
     - name: 'og:title'
@@ -14,10 +14,13 @@ head:
   - - meta
     - name: 'og:url'
       content: 'https://www.wulicode.com/database/redis/index.html'
+  - - meta
+    - name: 'og:image'
+      content: 'https://file.wulicode.com/feishu-images/1ed6719dfe6c968f95537f537d3656f4.png'
 ---
 # Redis 简介
 
-## 前言
+![](https://file.wulicode.com/feishu-images/1ed6719dfe6c968f95537f537d3656f4.png)
 
 Redis是常用基于内存的Key-Value数据库，比Memcache更先进，支持多种数据结构，高效，快速。用Redis可以很轻松解决高并发的数据访问问题；做为实时监控信号处理也非常不错。
 
@@ -314,6 +317,6 @@ redis-cli -a redis_pwd -h 192.168.1.111
 
 ## 常用链接
 
-[Redis容量预估-极数云舟](http://www.redis.cn/redis_memory/)
+- [Redis容量预估](https://redis.lierhua.top/)
 
-Redis容量预估
+![](https://file.wulicode.com/feishu-images/2963098daad6717b4cde52f2950644bd.png)

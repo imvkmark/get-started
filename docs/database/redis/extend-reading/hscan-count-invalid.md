@@ -1,6 +1,6 @@
 ---
 description: 'Redis的HSCAN命令中，COUNT参数并非精确返回指定数量的元素，而是给服务器一个建议值。当哈希表较大或处于rehash状态时，实际返回的元素可能少于COUNT，甚至为空但游标未结束。这是因为SCAN系列命令的增量迭代特性所致，需循环调用直到游标为0。'
-lastUpdated: '2026-06-20 11:51:42'
+lastUpdated: '2026-07-23 11:18:47'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: 'Redis的HSCAN命令中，COUNT参数并非精确返回指定数量的元素，而是给服务器一个建议值。当哈希表较大或处于rehash状态时，实际返回的元素可能少于COUNT，甚至为空但游标未结束。这是因为SCAN系列命令的增量迭代特性所致，需循环调用直到游标为0。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//database/redis/extend-reading/hscan-count-invalid.html'
+      content: 'https://www.wulicode.com/database/redis/extend-reading/hscan-count-invalid.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/2e4fcfc967774ff8ec47d1728b472f6d.png'
@@ -21,7 +21,9 @@ head:
 # 解惑：Redis的HSCAN命令中COUNT参数的’失效’场景
 
 ::: info 🔗
-原文链接 : [解惑：Redis的HSCAN命令中COUNT参数的"失效"场景](https://my.oschina.net/throwable/blog/4518025)
+
+原文链接 : <a href="https://my.oschina.net/throwable/blog/4518025">解惑：Redis的HSCAN命令中COUNT参数的"失效"场景</a>
+
 :::
 
 ## 前提

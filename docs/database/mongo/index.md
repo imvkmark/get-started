@@ -1,6 +1,6 @@
 ---
 description: '该内容展示了MongoDB Shell版本v4.2.2的基本操作，包括显示数据库列表（admin、config、local）并切换到local数据库。'
-lastUpdated: '2026-07-02 12:55:53'
+lastUpdated: '2026-07-23 11:17:15'
 head:
   - - meta
     - name: 'og:title'
@@ -14,10 +14,13 @@ head:
   - - meta
     - name: 'og:url'
       content: 'https://www.wulicode.com/database/mongo/index.html'
+  - - meta
+    - name: 'og:image'
+      content: 'https://file.wulicode.com/feishu-images/43cd9290fd2968d65b18d4892473d9cd.png'
 ---
 # Mongo
 
-小试牛刀
+![](https://file.wulicode.com/feishu-images/43cd9290fd2968d65b18d4892473d9cd.png)
 
 ```Plaintext
 $ mongo
