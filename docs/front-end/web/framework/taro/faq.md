@@ -16,7 +16,7 @@ head:
       content: 'https://www.wulicode.com/front-end/web/framework/taro/faq.html'
   - - meta
     - name: 'og:image'
-      content: 'https://file.wulicode.com/feishu-images/baed44df661266c8ba17fafd7e6c8070.png'
+      content: 'https://file.wulicode.com/feishu-images/73f43e21e247bfca0ea16713c07724a7.png'
 ---
 # Taro - FAQ
 
@@ -24,7 +24,7 @@ head:
 
 在使用 事件的时候需要遵循 vue 对事件的命名
 
-![](https://file.wulicode.com/feishu-images/baed44df661266c8ba17fafd7e6c8070.png)
+![](https://file.wulicode.com/feishu-images/73f43e21e247bfca0ea16713c07724a7.png)
 
 文档 : [Taro 文档](https://docs.taro.zone/docs/vue-overall#taro-%E8%A7%84%E8%8C%83-1)
 
