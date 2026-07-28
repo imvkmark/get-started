@@ -1,6 +1,6 @@
 ---
 description: 'Nginx常见问题包括：出现500错误时可能泄露版本号，需隐藏；413错误表示请求实体过大，需调整client_max_body_size；前后端混排时，URL添加后缀“/”可优化连接数，避免重定向。'
-lastUpdated: '2026-07-01 19:56:16'
+lastUpdated: '2026-07-28 10:08:22'
 head:
   - - meta
     - name: 'og:title'
@@ -72,7 +72,7 @@ location ~ ^/m/ {
 location / {
     proxy_set_header Host $host;
     rewrite ^/(.*) /$1 break;
-    proxy_pass <http://127.0.0.1:9200>;
+    proxy_pass http://127.0.0.1:9200;
     access_log off;
 }
 ```
