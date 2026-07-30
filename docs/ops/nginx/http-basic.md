@@ -1,6 +1,6 @@
 ---
 description: 'Nginx 使用 HTTP Basic Authentication 实现访问限制，需先创建密码文件，然后配置 NGINX 或 NGINX Plus 进行身份验证，并可结合 IP 地址限制。提供完整示例及使用 wget/curl 的访问方法。'
-lastUpdated: '2026-06-17 12:34:18'
+lastUpdated: '2026-07-30 13:46:53'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: 'Nginx 使用 HTTP Basic Authentication 实现访问限制，需先创建密码文件，然后配置 NGINX 或 NGINX Plus 进行身份验证，并可结合 IP 地址限制。提供完整示例及使用 wget/curl 的访问方法。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//ops/nginx/http-basic.html'
+      content: 'https://www.wulicode.com/ops/nginx/http-basic.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/8eca646719d8cc777bd69dcdba8a8e0b.png'
