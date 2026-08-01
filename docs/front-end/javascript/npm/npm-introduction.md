@@ -1,6 +1,6 @@
 ---
 description: '本文介绍了npm包管理器的快速入门指南，涵盖npm的安装与更新、package.json文件创建与依赖指定、语义化版本规则、本地与全局包的安装、更新与卸载、常用命令（如npm run、npm install、npm uninstall等），以及国内镜像配置（如使用nrm、cnpm、aliyun私有仓库）和常见问题解答。'
-lastUpdated: '2026-06-24 14:22:27'
+lastUpdated: '2026-08-01 17:23:32'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: '本文介绍了npm包管理器的快速入门指南，涵盖npm的安装与更新、package.json文件创建与依赖指定、语义化版本规则、本地与全局包的安装、更新与卸载、常用命令（如npm run、npm install、npm uninstall等），以及国内镜像配置（如使用nrm、cnpm、aliyun私有仓库）和常见问题解答。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//front-end/javascript/npm/npm-introduction.html'
+      content: 'https://www.wulicode.com/front-end/javascript/npm/npm-introduction.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/5721d111a97af9309a329f82171d8ef4.png'
@@ -213,7 +213,7 @@ $ npm install npm@latest  -g
 
 小结一下：**总共三种版本变化类型，接受依赖包哪种类型的更新，就把版本号准确写到前一位。**
 
-## 安装 package
+##  npm install - 安装
 
 使用 npm 安装 package 有两种方式：本地（当前项目路径）安装 或者 全局安装。
 
@@ -286,6 +286,16 @@ $ npm install sax@">=0.1.0"
 
 - `npm install <package_name> --save` 表示将这个包名及对应的版本添加到 `package.json`的 `dependencies`
 - `npm install <package_name> --save-dev` 表示将这个包名及对应的版本添加到 `package.json`的 `devDependencies`
+
+### `--legacy-peer-deps` 不校验 peerDependencies 冲突
+
+npm v7 开始引入了严格的 peer dependency 校验。当 A 包声明它的 peerDependencies 需要 `react@^16`,而 B 包声明需要 `react@^18`,npm 会直接报错拒绝安装(`ERESOLVE` 错误),要求你手动解决版本冲突。而在 npm v6 及更早版本,这种冲突只是打印一条 warning,依然会把依赖装上去,不会中断安装。
+
+`--legacy-peer-deps` 就是让 npm v7+ 恢复到 v6 那种"警告但不阻塞"的宽松模式
+
+```PHP
+npm install --legacy-peer-deps
+```
 
 ### 使用下载好的包
 
@@ -761,7 +771,9 @@ verbose 0.647639875 Request "<https://packages.aliyun.com/****/npm/npm-registry/
 看起来是权限的问题
 
 ::: tip 💡
+
 在使用aliyun 镜像的时候需要注意一个问题, 就是使用 yarn 的时候 `npm config set always-auth true` 这个选项会报错, 但是 yarn 需要这个选项来做授权, 每次请求需要携带授权才可以不 401
+
 :::
 
 据 [https://github.com/npm/config/issues/17](https://github.com/npm/config/issues/17) 这个帖子说这个选项 `always-auth` 需要根据注册商来进行设定, 这里需要手动编辑 `.npmrc`
@@ -777,7 +789,9 @@ verbose 0.647639875 Request "<https://packages.aliyun.com/****/npm/npm-registry/
 ## Thanks
 
 ::: info 🔗
+
 参考资料: 
-- [npm 与 package.json 快速入门教程](https://cloud.tencent.com/developer/article/1438055)
-- [https://docs.npmjs.com/](https://docs.npmjs.com/)
+- <a href="https://cloud.tencent.com/developer/article/1438055">npm 与 package.json 快速入门教程</a>
+- <a href="https://docs.npmjs.com/">https://docs.npmjs.com/</a>
+
 :::

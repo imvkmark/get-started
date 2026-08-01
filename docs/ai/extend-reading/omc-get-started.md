@@ -1,6 +1,6 @@
 ---
 description: 'Oh My ClaudeCode (OMC) 是一个提升 Claude Code 效率的插件，提供19个专属Agent、37个内置Skill、Autopilot、Teams模式、多AI协作（CCG）、tmux Worker、自定义Skill、Hooks生命周期、状态持久化等丰富功能。文档涵盖从入门到生产掌握的四个阶段，包括安装配置、核心工作流、进阶编排及实战案例，帮助用户高效完成代码重构、审计、测试等任务。'
-lastUpdated: '2026-07-07 11:31:01'
+lastUpdated: '2026-08-01 16:52:00'
 head:
   - - meta
     - name: 'og:title'
@@ -17,7 +17,7 @@ head:
 ---
 # Oh My ClaudeCode (OMC) 学习文档
 
-> 文档版本：基于 oh-my-claudecode v4.15.2 整理 
+> 本文基于 oh-my-claudecode v4.15.2 整理 
 
 ## 1. 项目概述
 
