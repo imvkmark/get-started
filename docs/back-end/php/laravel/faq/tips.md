@@ -1,10 +1,10 @@
 ---
 description: 'Laravel开发技巧：缓存使用标签化管理；模型数据创建与保存需一致；合理利用模型方法；事件避免返回false；控制器方法命名规范；表单提交推荐POST；编辑/创建共用模板；类内调用使用self；Carbon直接传递时间；队列延迟需调用delay()；注意empty()与集合方法的区别；减少数据库请求；类名大小写匹配；使用ide-helper；用户输入数据需用{!! !!}渲染。'
-lastUpdated: '2026-06-17 22:46:02'
+lastUpdated: '2026-08-01 15:51:09'
 head:
   - - meta
     - name: 'og:title'
-      content: 'Laravel Tips基础'
+      content: 'Laravel Tips'
   - - meta
     - name: 'og:type'
       content: 'article'
@@ -13,12 +13,12 @@ head:
       content: 'Laravel开发技巧：缓存使用标签化管理；模型数据创建与保存需一致；合理利用模型方法；事件避免返回false；控制器方法命名规范；表单提交推荐POST；编辑/创建共用模板；类内调用使用self；Carbon直接传递时间；队列延迟需调用delay()；注意empty()与集合方法的区别；减少数据库请求；类名大小写匹配；使用ide-helper；用户输入数据需用{!! !!}渲染。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/laravel/faq/tips.html'
+      content: 'https://www.wulicode.com/back-end/php/laravel/faq/tips.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/28d5715fa52e2d257a62ee6fea7c6e39.png'
 ---
-# Laravel Tips基础
+# Laravel Tips
 
 ## 缓存
 

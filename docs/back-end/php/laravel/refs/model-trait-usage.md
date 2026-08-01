@@ -1,6 +1,6 @@
 ---
 description: 'Laravel模型事件包括检索、首次保存、已存在模型保存、删除、创建/更新、软删除恢复及强制删除等类型。在Trait中可通过boot方法注册事件监听，利用Trait的boot或initialize方法自动触发，便于复用模型事件逻辑。'
-lastUpdated: '2026-06-17 22:39:01'
+lastUpdated: '2026-08-01 15:50:12'
 head:
   - - meta
     - name: 'og:title'
@@ -13,11 +13,9 @@ head:
       content: 'Laravel模型事件包括检索、首次保存、已存在模型保存、删除、创建/更新、软删除恢复及强制删除等类型。在Trait中可通过boot方法注册事件监听，利用Trait的boot或initialize方法自动触发，便于复用模型事件逻辑。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/laravel/refs/model-trait-usage.html'
+      content: 'https://www.wulicode.com/back-end/php/laravel/refs/model-trait-usage.html'
 ---
 # Laravel 模型事件和模型事件在 Trait 中的使用
-
-[Laravel 模型事件和模型事件在 Trait 中的使用 - 掘金](https://juejin.cn/post/7206924411257438264)
 
 ## 模型事件
 
