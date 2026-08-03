@@ -1,6 +1,6 @@
 ---
 description: '本文介绍了在Mac上通过Homebrew搭建LNMP环境（Nginx、MySQL、PHP）的步骤，包括关闭Apache、配置Nginx、替换MySQL配置、安装多版本PHP、配置PHP-FPM及常见问题。'
-lastUpdated: '2026-06-17 18:28:04'
+lastUpdated: '2026-08-03 13:47:53'
 head:
   - - meta
     - name: 'og:title'
@@ -13,12 +13,14 @@ head:
       content: '本文介绍了在Mac上通过Homebrew搭建LNMP环境（Nginx、MySQL、PHP）的步骤，包括关闭Apache、配置Nginx、替换MySQL配置、安装多版本PHP、配置PHP-FPM及常见问题。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//back-end/php/primer/install-lnmp-at-mac.html'
+      content: 'https://www.wulicode.com/back-end/php/primer/install-lnmp-at-mac.html'
 ---
 # Mac 使用 brew 安装 Nginx、MySQL、Php 的 LNMP 开发环境
 
 ::: info 🔗
+
 文章同步发布到掘金 : https://juejin.cn/post/7615074040147345418
+
 :::
 
 ## 准备
@@ -29,7 +31,9 @@ Homebrew 是 macOS 的包管理工具, 可以安装多款 unix 软件, 可以根
 
 <bookmark name="Homebrew" href="https://brew.sh/"></bookmark>
 
-::: info 🔗<p>更多 Homebrew 使用查看 : [Mac 下安装和使用 Homebrew](/ops/mac/homebrew.md)</p><p>对于不同芯片的 homebrew 目录有所不同, 需要注意</p><ul><li>M 系列芯片, 所有的目录基于 <code>/opt/homebrew </code>, 本文基于此定义</li><li>intel 芯片, 目录基于 <code>/usr/local</code></li></ul>:::
+::: info 🔗
+<p>更多 Homebrew 使用查看 : <a href="https://www.wulicode.com/ops/mac/homebrew.html">Mac 下安装和使用 Homebrew</a></p><p>对于不同芯片的 homebrew 目录有所不同, 需要注意</p><ul><li>M 系列芯片, 所有的目录基于 <code>/opt/homebrew </code>, 本文基于此定义</li><li>intel 芯片, 目录基于 <code>/usr/local</code></li></ul>
+:::
 
 如果你尚未安装, macOS 将会提醒你安装 Xcode 命令行工具, 安装完成后根据提示配置命令行目录
 
@@ -286,9 +290,11 @@ $ sudo brew services start php@8.2
 - 参考文章 : [Setting up a Nginx web server on macOS](https://sylvaindurand.org/setting-up-a-nginx-web-server-on-macos/)
 
 ::: info 📆
+
 更新记录
 2026年03月11日
 - 更新内容适配 Mac 芯片
 2023年01月16日
 - 加入 php 多版本, 移除和当前版本不符合的描述
+
 :::
