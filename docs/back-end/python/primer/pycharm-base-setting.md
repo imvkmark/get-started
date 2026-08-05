@@ -16,7 +16,7 @@ head:
       content: 'https://www.wulicode.com/back-end/python/primer/pycharm-base-setting.html'
   - - meta
     - name: 'og:image'
-      content: 'https://file.wulicode.com/feishu-images/4f5b36b164d4375d96ff7b2a2761a8e9.png'
+      content: 'https://file.wulicode.com/feishu-images/9b5c19828918534dc8254e1ead199ccc.png'
 ---
 # 配置 PyCharm 作为趁手的IDE
 
@@ -34,10 +34,10 @@ uv venv --python=3.12
 
 配置位置 : `Settings | Python | Interpreter`
 
-![](https://file.wulicode.com/feishu-images/4f5b36b164d4375d96ff7b2a2761a8e9.png)
+![](https://file.wulicode.com/feishu-images/9b5c19828918534dc8254e1ead199ccc.png)
 
 ## 启用 ruff
 
 位置 : `Settings | Python | Tools | Ruff`
 
-![](https://file.wulicode.com/feishu-images/11fc8498fe97437d9af71f14b263c181.png)
+![](https://file.wulicode.com/feishu-images/6867034e49caaa2a04c34928bc98fc53.png)
