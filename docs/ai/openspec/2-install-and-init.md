@@ -1,6 +1,6 @@
 ---
 description: '安装与初始化支持Claude Code和Cursor，通过`openspec init`过程生成`config.yaml`配置文件，交互完成后需重启Claude Code以启用扩展工作流，支持20多种工具集成。'
-lastUpdated: '2026-06-22 00:52:51'
+lastUpdated: '2026-08-09 22:18:55'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: '安装与初始化支持Claude Code和Cursor，通过`openspec init`过程生成`config.yaml`配置文件，交互完成后需重启Claude Code以启用扩展工作流，支持20多种工具集成。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//ai/openspec/2-install-and-init.html'
+      content: 'https://www.wulicode.com/ai/openspec/2-install-and-init.html'
 ---
 # ② 安装 & 初始化
 
@@ -88,7 +88,9 @@ openspec init
 默认对于 Claude 来说 安装四条命令：`/opsx:propose`、`/opsx:explore`、`/opsx:apply`、`/opsx:archive`，覆盖从提案到归档的完整开发周期，并且同时兼容 Claude Code 的 Skills 和 Commands 两种触发方式。
 
 ::: tip 💡
+
 假如你看的学习资料中会生成 `openspec/project.md` 和 `openspec/AGENTS.md` 这两个文件的, 或者生成的命令是 `/openspec:*` 格式的, 请忽略, 这个是 1.0 之前的老版本, 当前已不适用
+
 :::
 
 如果不想走交互式问答，可以直接传参数：
