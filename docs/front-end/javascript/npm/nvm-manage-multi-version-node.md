@@ -1,6 +1,6 @@
 ---
 description: '使用 nvm 可灵活管理多版本 Node.js 与项目依赖，支持脚本或 Homebrew 安装，在 zsh 中启用后通过 install、use、ls 等命令切换版本，还提供卸载、缓存配置及 Jenkins 集成指南。'
-lastUpdated: '2026-06-24 14:29:44'
+lastUpdated: '2026-08-17 21:37:19'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: '使用 nvm 可灵活管理多版本 Node.js 与项目依赖，支持脚本或 Homebrew 安装，在 zsh 中启用后通过 install、use、ls 等命令切换版本，还提供卸载、缓存配置及 Jenkins 集成指南。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//front-end/javascript/npm/nvm-manage-multi-version-node.html'
+      content: 'https://www.wulicode.com/front-end/javascript/npm/nvm-manage-multi-version-node.html'
   - - meta
     - name: 'og:image'
       content: 'https://file.wulicode.com/feishu-images/4693c7c6b9ff103f3b6c5d24d0ffc736.png'
@@ -46,13 +46,9 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 brew install nvm
 ```
 
-如果还是无法使用 nvm，可执行下面指令立即应用 ZSH 的设定：
+### 在 zsh 中启用
 
-```Bash
-source .zshrc
-```
-
-- 手动添加
+#### 手动添加脚本
 
 检查是否存在如下 source line, 没有可以手动添加到 `.zshrc`
 
@@ -62,13 +58,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ```
 
-注意：
+如果还是无法使用 nvm，可执行下面指令立即应用 ZSH 的设定：
 
-- 使用 `nvm` 时，不需要 `sudo` 即可使用 `npm -g` 全局命令
-- 若你有 `~/.npmrc`，请确保里面不包含任何 `prefix` 的设定 (因为和 `nvm` 不相容)
-- 你可以保留以前在 `系统` 安装的 Node.js，但 `nvm` 只对你的当前账号可用。使用目录: `~/.nvm/versions/node/vX.X.X/lib/node_modules/*`
+```Bash
+source .zshrc
+```
 
-### 在 zsh 中启用
+#### 使用 zsh 插件启用
 
 在 `~/.zshrc` 中找到 `plugins=(***` 这一行, 在这一行中启用 nvm 插件
 
@@ -81,8 +77,17 @@ sed -i '' '/^plugins=(/ { /[[:space:](]nvm[[:space:])]/! s/)/ nvm)/; }' ~/.zshrc
 ```Diff
 + zstyle ':omz:plugins:nvm' autoload yes
 
-plugins=(git autojump nvm)
+- plugins=(git autojump)
++ plugins=(git autojump nvm)
 ```
+
+::: info ℹ️
+
+- 使用 `nvm` 时，不需要 `sudo` 即可使用 `npm -g` 全局命令
+- 若你有 `~/.npmrc`，请确保里面不包含任何 `prefix` 的设定 (因为和 `nvm` 不相容)
+- 你可以保留以前在 `系统` 安装的 Node.js，但 `nvm` 只对你的当前账号可用。使用目录: `~/.nvm/versions/node/vX.X.X/lib/node_modules/*`
+
+:::
 
 ## 命令
 
@@ -613,7 +618,10 @@ $ rm -rf ~/.nvm
 ---
 
 ::: info 📆
+
 更新记录
+**2026年08月17日**
+- 修正 zsh 的加载方式, 最小化加载
 **2026年03月10日**
 - 更新贴图 / 验证命令输出情况
 - 增加 nvm 插件启用 zshrc
@@ -622,4 +630,5 @@ $ rm -rf ~/.nvm
 - 更新处理结构
 **2023-11-02**
 - 增加国内源的访问
+
 :::
