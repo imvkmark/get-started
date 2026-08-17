@@ -1,6 +1,6 @@
 ---
 description: '使用 nvm 可灵活管理多版本 Node.js 与项目依赖，支持脚本或 Homebrew 安装，在 zsh 中启用后通过 install、use、ls 等命令切换版本，还提供卸载、缓存配置及 Jenkins 集成指南。'
-lastUpdated: '2026-08-17 21:37:19'
+lastUpdated: '2026-08-17 22:19:22'
 head:
   - - meta
     - name: 'og:title'
@@ -23,6 +23,10 @@ head:
 nvm 是 Node.js 的版本管理器 (version manager)，可在同一台主机上安裝多个版本的 Node.js 环境，因为不同项目可能使用不同的 Node.js 版本，那就需要通过一个版本管理器来切换不同的 Node.js 版本
 
 - [nvm-sh/nvm](https://github.com/nvm-sh/nvm#install--update-script) - Github 仓库地址
+
+::: info ℹ️
+<p>当前的 Node 包管理工具还可以选用</p><ul><li><a href="https://mise.jdx.dev/">mise - dev tools, env vars, task runner </a></li></ul><p>使用国内镜像可以参考</p><ul><li><a href="https://www.wulicode.com/front-end/javascript/npm/npm-introduction.html">npm 包管理快速入门</a></li></ul>
+:::
 
 ## 安装/升级 NVM
 

@@ -1,6 +1,6 @@
 ---
 description: '本文介绍了npm包管理器的快速入门指南，涵盖npm的安装与更新、package.json文件创建与依赖指定、语义化版本规则、本地与全局包的安装、更新与卸载、常用命令（如npm run、npm install、npm uninstall等），以及国内镜像配置（如使用nrm、cnpm、aliyun私有仓库）和常见问题解答。'
-lastUpdated: '2026-08-01 17:23:32'
+lastUpdated: '2026-08-17 22:18:35'
 head:
   - - meta
     - name: 'og:title'
@@ -707,9 +707,7 @@ export NODE_MIRROR=http://npmmirror.com/mirrors/node
 
 ### 使用 aliyun 的私有 npm 仓库
 
-[阿里云登录 - 欢迎登录阿里云，安全稳定的云计算服务平台](https://packages.aliyun.com/npm?channel=cnpm)
-
-Aliyun 制品仓库
+- https://packages.aliyun.com/ - Aliyun 制品仓库
 
 使用 aliyun 设置的制品仓库  + nrm 可以更好的设定环境并且使用内部的制品库
 
