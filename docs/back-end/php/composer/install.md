@@ -1,6 +1,6 @@
 ---
 description: 'Composer安装加速指南：支持curl、php、wget及Macbrew安装。修改镜像源可配置当前项目或全局生效，也可用第三方软件快速切换。更新使用自我更新参数。'
-lastUpdated: '2026-07-21 12:07:28'
+lastUpdated: '2026-08-18 15:08:50'
 head:
   - - meta
     - name: 'og:title'
@@ -85,11 +85,14 @@ composer global require psy/psysh
 
 ::: warning ⚠️
 
-由于composer 在多年前被挂了影视资源, 导致国内某些情况下不去同步最新的包, 所以不推荐用这种方式来使用国内的镜像站来加速, 可以采用代理来访问国外的站点
+由于composer 在多年前被挂了影视资源, 导致国内某些情况下不去同步最新的包, 所以不推荐用这种方式来使用国内的镜像站来加速, 可以采用代理来访问国外的站点, 以下是搜集的镜像站地址
+- aliyun : https://developer.aliyun.com/composer
+- 腾讯云 : https://mirrors.cloud.tencent.com/help/composer.html
+- PKG : https://pkg.xyz/
 
 :::
 
-可以使用阿里巴巴提供的 Composer 全量镜像  / [阿里云Composer镜像站](https://developer.aliyun.com/composer)
+以下使用阿里巴巴提供的 Composer 全量镜像做示例
 
 #### a). 配置只在当前项目生效
 
