@@ -405,7 +405,7 @@ $ nvm ls-remote --lts
 
 如果版本号的文字有特殊颜色（不是白色字），则代表该版本的Node.js有通过nvm安装过
 
-![](https://file.wulicode.com/feishu-images/4693c7c6b9ff103f3b6c5d24d0ffc736.png)
+![图片展示了在终端中使用nvm（Node Version Manager）列出可安装的远程版本的命令执行结果。终端显示了多个Node.js版本，其中v22.22.1版本被高亮显示，标注为“Latest LTS: Jod”，表明它是最新LTS版本。此外，还有v24.14.0版本被标注为“Latest LTS: Krypton”。这些版本信息与文档中介绍nvm命令相关，直观呈现了可用的LTS版本，帮助用户了解可安装的Node.js版本情况。](https://file.wulicode.com/feishu-images/4693c7c6b9ff103f3b6c5d24d0ffc736.png)
 
 ### version / version-remote
 
