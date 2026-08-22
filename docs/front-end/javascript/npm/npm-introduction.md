@@ -1,6 +1,6 @@
 ---
 description: '本文介绍了npm包管理器的快速入门指南，涵盖npm的安装与更新、package.json文件创建与依赖指定、语义化版本规则、本地与全局包的安装、更新与卸载、常用命令（如npm run、npm install、npm uninstall等），以及国内镜像配置（如使用nrm、cnpm、aliyun私有仓库）和常见问题解答。'
-lastUpdated: '2026-08-17 22:18:35'
+lastUpdated: '2026-08-22 12:25:10'
 head:
   - - meta
     - name: 'og:title'
@@ -26,7 +26,7 @@ npm 是前端开发广泛使用的包管理工具，当前基于 ai 的工具大
 
 ### 什么是 npm？
 
-![](https://file.wulicode.com/feishu-images/5721d111a97af9309a329f82171d8ef4.png)
+![图片展示了几个卡通风格的棕色小狗，它们戴着红色项圈，有的戴着带有“wdm”字样的纸箱帽子，有的戴着带有“npm”字样的纸箱帽子。背景是白色的。这张图片位于介绍npm包管理的文档中，与上下文紧密相关，直观地体现了npm作为包管理器的概念，npm可视为“npm模块”的缩写，它让JavaScript开发者分享、复用代码更方便，图片中的小狗和纸箱帽子形象地传达了npm与包相关的主题。](https://file.wulicode.com/feishu-images/5721d111a97af9309a329f82171d8ef4.png)
 
 官方文档的介绍是：npm 是一个包管理器，它让 JavaScript 开发者分享、复用代码更方便
 
@@ -34,7 +34,7 @@ npm 是前端开发广泛使用的包管理工具，当前基于 ai 的工具大
 
 我们可以去官方网站 [https://www.npmjs.com/](https://www.npmjs.com/) 浏览、搜索想要的包，也可以直接在命令行中搜索
 
-![](https://file.wulicode.com/feishu-images/c3732b30dba6c98c7cd630367033583a.png)
+![这张图片展示的是npm官方网站的页面，页面顶部设有Pro、Teams、Pricing、Documentation的导航选项，还有搜索框用于搜索JS相关包。页面分为三个主要板块，左侧是“Popular libraries”板块，列出了react、lodash、axios等热门JS库名称；中间是“Discover packages”板块，提供了前端、后端、CLI、文档、CSS、测试、物联网、覆盖情况、移动端、框架等不同类别的包分类选项；右侧“By the numbers”板块显示了npm相关统计数据，包括包总数、上周下载量、上月下载量。页面上方还有提示用户启用双重认证的信息。](https://file.wulicode.com/feishu-images/c3732b30dba6c98c7cd630367033583a.png)
 
 使用 npm 后我们可以非常方便地查看依赖的包是否有更新、是否需要下载新版本。
 
@@ -84,13 +84,13 @@ $ npm install npm@latest  -g
 
 使用 `npm init` 即可在当前目录创建一个 `package.json` 文件：
 
-![](https://file.wulicode.com/feishu-images/2318b3a8a1f8763d8ef788c38e71c42b.jpg)
+![这张图片展示了在终端中执行`npm init`命令后的界面内容，界面包含了一系列用于创建`package.json`文件的交互配置项，具体包含项目名称`name`、版本`version`、项目描述`description`、入口文件`main`等多个配置字段，各字段对应有默认值。界面还展示了即将生成的`package.json`文件的部分JSON内容，完整呈现了创建`package.json`文件过程中的配置与预览环节，与上下文介绍的通过`npm init`创建`package.json`文件的操作内容相呼应。](https://file.wulicode.com/feishu-images/2318b3a8a1f8763d8ef788c38e71c42b.jpg)
 
 如图所示，输入 `npm init` 后会弹出一堆问题，我们可以输入对应内容，也可以使用默认值。在回答一堆问题后输入 `yes` 就会生成图中所示内容的 `package.json` 文件。
 
 如果嫌回答这一大堆问题麻烦，可以直接输入 `npm init --yes` 跳过回答问题步骤，直接生成默认值的 `package.json` 文件：
 
-![](https://file.wulicode.com/feishu-images/4aaea685224615e60d18e96af7db038b.jpg)
+![图片展示了在Mac终端中使用`npm init --yes`命令生成默认值的`package.json`文件过程及结果。终端显示执行命令后，`package.json`文件被写入指定路径，内容包含`name`、`version`、`description`等字段，如`name`为`npm-init-test2`，`version`为`1.0.0`，`main`为`index.js`，`scripts`包含`test`脚本，`author`为`shixinzhang <shixinzhang2016@gmail.com>`等信息，还显示了`license`为`MIT`。该图片直观呈现了`npm init --yes`命令的执行效果。](https://file.wulicode.com/feishu-images/4aaea685224615e60d18e96af7db038b.jpg)
 
 ### package.json 的内容
 
@@ -257,7 +257,7 @@ lodash
 
 下载后的项目文件夹：
 
-![](https://file.wulicode.com/feishu-images/1e3f26c9901ef75dd46800bc8679532f.jpg)
+![图片展示了下载后的项目文件夹内容。左侧显示了.DS_Store、demo-app、publish-pkg三个文件夹。右侧是publish-pkg文件夹的内部结构，包含index.js、node_modules、lodash三个文件夹及package-lock.json、package.json两个文件。其中，node_modules文件夹被蓝色高亮显示。该图片与上文“下载后的项目文件夹”内容对应，直观呈现了下载npm包后项目文件夹的实际结构。](https://file.wulicode.com/feishu-images/1e3f26c9901ef75dd46800bc8679532f.jpg)
 
 **安装指定版本：**
 
@@ -305,7 +305,7 @@ npm install --legacy-peer-deps
 
 举个例子： 创建一个 index.js 文件，写入如下代码：
 
-![](https://file.wulicode.com/feishu-images/48e7acdb59e53e3e421498b01a5390e9.jpg)
+![图片展示的是在终端中运行代码的界面。代码中引入了lodash库，使用`lodash.without()`方法去除数组\[1,2,3\]中与1重复的数据，输出结果为\[2,3\]。界面显示代码文件为index.js，行数为41，字数为94C。下方有“\[zhangshixin@MacBook-Pro:demo-app zhangshixin\]$”提示符，表明当前目录为demo-app，用户为zhangshixin。该图片与上文介绍使用下载好的包并举例子的内容相关，展示了运行代码后的结果。](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDgyOWQ4NzNlYmEyYTI0NDJhYzUwZDhmOGEwODVjMDZfYmIyOWE3ZDI1YjYyZGJmYTRkZmRkYmQxMjI3NWIzOTNfSUQ6NzYxODA5ODM2ODA0ODY0NzM0OV8xNzg3MzczOTU4OjE3ODczNzc1NThfVjM)
 
 在使用 `require('lodash')` 后引入了 lodash 库，然后调用了它的 `without()` 方法，这个方法可以去除第一个数组参数中与第二个参数重复的数据。
 
@@ -324,7 +324,7 @@ Error: Cannot find module 'lodash'
 
 有时候我们想知道依赖的包是否有新版本，可以使用 `npm outdated` 查看，如果发现有的包有新版本，就可以使用 `npm update <package-name>` 更新它，或者直接 `npm update` 更新所有：
 
-![](https://file.wulicode.com/feishu-images/75fdce29cb03012b95afd1872d8aaf9f.jpg)
+![图片展示了在Mac终端中使用npm进行包管理的操作过程。首先执行`npm install lodash@3.1.0`安装lodash@3.1.0版本，接着使用`npm ls`查看依赖包，再通过`npm outdated`查看是否有可更新的包，发现lodash有新版本。最后执行`npm update`更新lodash，显示更新了1个包。整个操作体现了npm在更新本地package版本时的工作流程，与上下文介绍的npm update工作过程相呼应。](https://file.wulicode.com/feishu-images/75fdce29cb03012b95afd1872d8aaf9f.jpg)
 
 上图中，我们在输入 `npm update` 后发现本地的 `lodash` 模块还不是最新的，这是为什么呢？
 
@@ -363,13 +363,13 @@ Error: Cannot find module 'lodash'
 
 这表示任何版本的更新都接受，然后再执行 `npm update`，就发现更新成功了：
 
-![](https://file.wulicode.com/feishu-images/e22cbc4bd9d93990f25d6474d27e4b45.jpg)
+![图片展示了在终端执行npm操作的界面。先是执行`npm outdated`命令，显示lodash当前版本3.10.1，想要版本4.17.4，最新版本4.17.4，位于demo项目中；接着执行`npm update`，提示无仓库字段；最后再次执行`npm outdated`，显示无更新。该图片与上下文紧密相关，直观呈现了文档中介绍的npm update操作过程，即先查询最新版本，对比本地版本，查看语义版本规则，再更新等步骤。](https://file.wulicode.com/feishu-images/e22cbc4bd9d93990f25d6474d27e4b45.jpg)
 
 **小结一下：**
 
 执行 `npm outdated` 后可以看到有三个版本号：
 
-![](https://file.wulicode.com/feishu-images/fb1162f9d904b3560986fefd5ec39e96.jpg)
+![这张图片展示了在终端执行`npm outdated`命令后的结果，该结果对应npm包管理更新本地package的相关操作。表格中明确列出了依赖包lodash的相关信息，包括三列版本数据：第一列是当前node_modules中该模块的版本3.10.1，第二列是package.json文件中声明的版本4.17.4，第三列是远程仓库的最新版本4.17.4，此外还标注了该依赖的存储位置相关信息。](https://file.wulicode.com/feishu-images/fb1162f9d904b3560986fefd5ec39e96.jpg)
 
 第一个是当前 node_modules 中该模块的版本，第二个是 `package.json` 文件中声明的版本，第三个是远程仓库最新的版本。
 
@@ -379,7 +379,7 @@ Error: Cannot find module 'lodash'
 
 卸载一个本地 package 很简单，`npm uninstall <package-name>` 即可：
 
-![](https://file.wulicode.com/feishu-images/a118898caf4ac6efb4cace5225cee95e.jpg)
+![这张图片展示的是终端界面执行npm包卸载操作的过程，对应文档中本地包卸载的内容。界面中执行的命令是`npm uninstall lodash`，该命令用于卸载lodash包，执行后返回结果显示`removed 1 package in 0.333s`，表明卸载成功，同时还有npm警告提示项目缺少repository字段，最后还展示了查看node_modules目录的命令操作，和文档里卸载后验证是否删除成功的内容对应。](https://file.wulicode.com/feishu-images/a118898caf4ac6efb4cace5225cee95e.jpg)
 
 > 官方文档说输入 npm uninstall --save lodash 才能在删除项目的同时移除 package.json 中对它的依赖。但我没加 --save 也达到了一样的效果，一脸懵逼。
 
@@ -401,7 +401,7 @@ npm install -g <package-name>
 npm install -g jshint
 ```
 
-![](https://file.wulicode.com/feishu-images/b1fcc481571301b86fd0890773ad8eec.jpg)
+![图片展示了在Mac终端中使用npm全局安装`jshint`的命令及结果。先是执行`npm install -g jshint`命令，显示`jshint`安装成功，版本为0.29.5，还添加了31个包。接着执行`npm ls -g --depth=0`命令，列出全局安装的包，如`npm@5.0.0`等。最后出现`npm ERR! peer dep missing`错误提示，指出`vue@^2.1.5`依赖未找到，被`weex-vue-render@0.2.0`所需。该图片与文档中介绍npm全局安装`jshint`的内容相关，直观呈现了操作及结果。](https://file.wulicode.com/feishu-images/b1fcc481571301b86fd0890773ad8eec.jpg)
 
 安装后可以使用 `npm ls -g --depth=0` 查看安装在全局第一层的包。
 
@@ -433,7 +433,7 @@ Homebrew 会帮我们处理好权限的问题。
 
 想知道哪些包需要更新，可以使用 `npm outdated -g --depth=0`，然后使用 `npm update -g <package>`更新指定的包：
 
-![](https://file.wulicode.com/feishu-images/84741bed026cad89883001e5a35ca5a0.jpg)
+![图片展示了在终端中使用`npm outdated -g --depth=0`命令查看全局包更新情况的界面。终端显示了cnpm、flow-bin等全局包的当前版本、所需版本、最新版本及位置信息，如cnpm当前版本4.5.0，所需版本5.1.6等。下方还显示了`npm update -g vue-template-compiler`命令执行结果，更新了3个包，耗时1.782秒。该图片与文档中介绍更新全局包的内容相关，直观呈现了操作及结果。](https://file.wulicode.com/feishu-images/84741bed026cad89883001e5a35ca5a0.jpg)
 
 要更新所有全局包，可以使用 `npm update -g`，可以发现对比本地的，只是多了个 `-g`。
 
@@ -441,7 +441,7 @@ Homebrew 会帮我们处理好权限的问题。
 
 这种情况下可以使用 `npm-check` ，贴一张它的截图：
 
-![](https://file.wulicode.com/feishu-images/077759ea291ec00cf3ebc3ab431abcff.png)
+![图片展示的是npm-check的运行结果。在终端中执行`npm-check`命令后，显示了多个npm包的状态及更新信息。如angular、angular-animate、angular-aria等包的本地安装已过时，需更新至1.4.5版本；lodash包在package.json中有但未安装；ng-input包有新版本可用，可更新至0.8.0等。图片直观呈现了npm包的更新情况，与文档中介绍的`npm-check`用于检查全局安装的npm包是否过时的内容相契合。](https://file.wulicode.com/feishu-images/077759ea291ec00cf3ebc3ab431abcff.png)
 
 Github 地址：[https://github.com/dylang/npm-check](https://github.com/dylang/npm-check)
 
@@ -486,7 +486,7 @@ npm 还可以直接运行 `package.json` 中 `scripts` 指定的脚本：
 }
 ```
 
-![](https://file.wulicode.com/feishu-images/13ea8d2502906dd0a7aa95c020d01334.png)
+![图片展示了在终端中执行`npm install`命令后，项目文件夹下的`node_modules`目录及其中部分依赖包。左侧为项目文件夹结构，右侧是`node_modules`目录下的文件和目录。其中，`acorn`、`browser-pack`等依赖包被红色框突出显示。该图片与文档中介绍`npm install`命令的内容相关，直观呈现了安装依赖包后的项目结构情况。](https://file.wulicode.com/feishu-images/13ea8d2502906dd0a7aa95c020d01334.png)
 
 **直接运行** `npm run`会列出当前项目的 **`package.json`** 中 **`scripts`** 属性下的所有脚本命令
 
@@ -519,7 +519,7 @@ npm uninstall -g <package-name>
 
 `npm info <package-name>` 可以查看指定包的信息：
 
-![](https://file.wulicode.com/feishu-images/6ac5652784d6cab0e68cfde7a70871a0.jpg)
+![图片展示了在终端中使用`npm info`命令查看`flow`包信息的界面。终端显示了`flow`包的名称、版本、描述、URL、作者邮箱、依赖项等信息，如版本为`0.2.3`，描述为“Flow-JS使在Node或浏览器中表达多步骤异步逻辑变得简单”，还列出了其在GitHub的仓库地址等。该图片与文档中介绍`npm info`命令查看指定包信息的内容相关，直观呈现了命令执行结果。](https://file.wulicode.com/feishu-images/6ac5652784d6cab0e68cfde7a70871a0.jpg)
 
 ### npm adduser
 
@@ -604,6 +604,25 @@ liexiang
 └── https://github.com/sponsors/sindresorhus
     └── open@8.4.2, is-docker@2.2.1
 ```
+
+### npx
+
+`npx` 本质上是一个「找命令 + 必要时临时装」的执行器，直接敲命令则完全依赖 PATH。
+
+**查找顺序的差别**
+
+|  | **直接运行 `xxx`** | **`npx xxx`** |
+|-|-|-|
+| 找哪里 | 只找 shell 的 PATH（全局安装的 bin） | ① 当前项目 `node_modules/.bin` → ② 全局 → ③ 都没有就从 registry 下载到 `~/.npm/_npx` 临时执行 |
+| 版本 | 全局那一份，容易和项目 `package.json` 里的版本不一致 | 优先用项目锁定的版本 |
+| 是否污染全局 | 需要先 `npm i -g` | 不需要，用完留在缓存里 |
+
+**实际影响**
+
+- **项目内一致性**：团队里 A 全局装了 `vite@4`、B 装了 `vite@6`，直接敲 `vite` 结果不同；`npx vite` 都会命中项目里锁定的那份。
+- **`package.json` 的 scripts 里不需要 npx**：npm/pnpm 执行 script 时会自动把 `node_modules/.bin` 加进 PATH，写 `"dev": "vite"` 就够了，加 `npx` 只是多一层解析开销。
+- **一次性脚手架**：`npx create-vite@latest`、`npx sass-migrator` 这种跑一次就不再用的，用 npx 最合适。
+- **风险点**：npx 把「本地执行」和「远程下载执行」混在一个命令里。名字打错（typosquatting）时它可能默默下载一个同名恶意包。npm 7+ 会弹确认提示，但 `-y` 会跳过
 
 ## 国内镜像
 
