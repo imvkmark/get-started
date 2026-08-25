@@ -1,6 +1,6 @@
 ---
 description: '提供的內容是一個白板訪問令牌，用於標識或驗證白板工作區的訪問權限。'
-lastUpdated: '2026-08-22 08:44:06'
+lastUpdated: '2026-08-25 23:33:07'
 head:
   - - meta
     - name: 'og:title'
