@@ -467,7 +467,7 @@ nvm alias <name> <version>
 
 如下图有些版本的文字是紅色或是显示 `N/A`，就代表该版本未在电脑安装：
 
-![图片展示了nvm别名设置后的输出结果。其中，`default`别名指向`v24.11.1`版本，`iojs`别名指向`N/A`，`node`别名指向`stable`版本`v25.8.0`且为默认别名，`stable`别名也指向`v25.8.0`且为默认别名，`unstable`别名指向`N/A`。此外，还列出了多个`lts`别名对应的Node.js版本，如`lts/krypton`指向`v24.14.0`等，部分版本后标注`N/A`。该图片与上文介绍nvm别名设定的内容相关，直观呈现了别名设置后的状态。](https://file.wulicode.com/feishu-images/6deb9b0d8ea9d565b4316811ca628db0.png)
+![图片展示了nvm别名设置后的输出结果。其中，`default`别名指向`v24.11.1`版本，`iojs`别名指向`N/A`，`node`别名指向`stable`版本`v25.8.0`且为默认别名，`stable`别名也指向`v25.8.0`且为默认别名，`unstable`别名指向`N/A`。此外，还列出了多个`lts`别名对应的Node.js版本，如`lts/krypton`指向`v24.14.0`等，部分版本后标注`N/A`。该图片与上文介绍nvm别名设定的内容相关，直观呈现了别名设置后的状态。](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjUzNTcyN2YwOTlmNmY2ODdhY2Y2ZWEyN2M5NDA2ZTdfOWUxMGY4NjNiM2UyOGUzYTczODE2MGUwNzNlNTU4ZjJfSUQ6NzYxNTI4NjA3NTQxMzY5NTY4MV8xNzg4MTExOTQ3OjE3ODgxMTU1NDdfVjM)
 
 默认别名可以取代版本号：
 
