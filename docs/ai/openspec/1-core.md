@@ -1,6 +1,6 @@
 ---
 description: '本文阐述了在写代码前先撰写规格说明（Spec）的核心理念，从Vibe Coding现象出发，强调“先达成共识再构建”的原则，介绍了四个设计原则，并指出先写Spec与Claude Code的天然契合性，也说明了何时不需要这样做。'
-lastUpdated: '2026-06-22 00:52:55'
+lastUpdated: '2026-09-01 19:35:21'
 head:
   - - meta
     - name: 'og:title'
@@ -13,7 +13,7 @@ head:
       content: '本文阐述了在写代码前先撰写规格说明（Spec）的核心理念，从Vibe Coding现象出发，强调“先达成共识再构建”的原则，介绍了四个设计原则，并指出先写Spec与Claude Code的天然契合性，也说明了何时不需要这样做。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//ai/openspec/1-core.html'
+      content: 'https://www.wulicode.com/ai/openspec/1-core.html'
 ---
 # ① 核心理念 为什么要在写代码前先写 Spec
 
@@ -29,7 +29,11 @@ Claude 立刻开始写代码。十分钟后，它交出了一个基于 WebSocket
 
 这不是 Claude 的问题，也不是你的问题。这是 AI 辅助编程固有的结构性缺陷：**需求只存在于你的脑子里，AI 只能猜。**
 
-OpenSpec 的全部理念，都是为了解决这一个问题: AI 幻觉
+OpenSpec 的全部理念，都是为了解决这一个问题。注意它解决的**不是** AI 幻觉——上面那段 WebSocket 代码语法正确、能跑、也没有编造不存在的 API。
+
+官方对这个问题的定性是"AI coding assistants are powerful but unpredictable when requirements live only in chat history"（AI 编程助手很强大，但当需求只活在聊天记录里时会变得不可预测）。
+
+幻觉是模型编造了不存在的事实，而这里是模型**替你做了本该由你做的决策**——两者的解法完全不同：前者靠检索与校验，后者只能靠事先对齐规格。
 
 ---
 
@@ -43,9 +47,9 @@ OpenSpec 的官方描述是"spec-driven development for AI coding assistants"，
 
 ---
 
-## 四个设计原则
+## 五个设计原则
 
-OpenSpec 有四条明确写在文档里的设计哲学，理解它们能帮助你判断什么时候该用、什么时候不必用。
+OpenSpec 有明确写在文档里的设计哲学，理解它们能帮助你判断什么时候该用、什么时候不必用。
 
 **Fluid not rigid（流动而非刚性）**
 
@@ -62,6 +66,10 @@ OpenSpec 有四条明确写在文档里的设计哲学，理解它们能帮助�
 **Brownfield-first（存量优先）**
 
 这一条在 AI 编程工具里尤为罕见。大多数"规格驱动"方案都假设你在从零开始建系统，而 OpenSpec 的 Delta Spec 机制专门为修改现有系统设计。你不需要把整个游戏账号平台的现有逻辑都写进 spec，只需要描述这次变更的部分——加了什么、改了什么、删了什么。
+
+**Scalable from personal projects to enterprises（从个人项目到企业级都能用）**
+
+这是 v1.10.0 才被写进 README 哲学清单的第五条。前四条讲的都是"流程要多轻"，这一条讲的是"轻流程能撑多大"。同一套 `openspec/` 目录形态，在你一个人的仓库里是"我和 AI 的共识文件"，在一个跨 API 服务、Web 应用和共享库的团队里，就变成"一次变更、一份计划，即使代码要落到三个仓库"。官方为后者提供的机制叫 **Stores**（目前处于 beta），把规划本身放进一个独立的 git 仓库，靠 `git push` 共享——但心智模型不变，你不需要为了扩大规模换一套工具。
 
 ---
 
@@ -91,7 +99,12 @@ OpenSpec 在和 Claude Code 配合时有一个其他工具没有的优势：它�
 
 Claude Code 本身就是一个以文件系统为中心的 Agent，它读 CLAUDE.md 获取项目规范，读源代码理解现有实现，读测试文件理解预期行为。OpenSpec 的 `specs/`、`design.md`、`tasks.md` 都是普通 Markdown 文件，放进 `.claude/` 目录或者通过 `@` 语法引用，Claude 就能把它们作为上下文的一部分纳入每一次请求。
 
-更进一步，OpenSpec 在执行 `openspec init --tools claude` 时会直接在 `.claude/skills/` 目录里生成对应的 Skill 文件，这意味着 `/opsx:propose`、`/opsx:apply`、`/opsx:archive` 这些命令实际上是通过 Claude Code 的 Skills 机制触发的，整个流程不需要离开 Claude Code 的工作环境。
+更进一步，OpenSpec 在执行 `openspec init --tools claude` 时会**同时**写两套文件：
+
+- `.claude/skills/openspec-*/SKILL.md`（Skill）
+-  `.claude/commands/opsx/<id>.md`（斜杠命令）
+
+默认的投递模式就是 `both`，两者各司其职——你敲的 `/opsx:propose`、`/opsx:apply`、`/opsx:archive` 走的是 `.claude/commands/opsx/` 下的命令文件，而 `.claude/skills/` 下的 Skill 是让 Claude 在你没敲命令时也能自动识别并遵循 OpenSpec 工作流的那一半。两套文件都由 `openspec update` 重新生成，整个流程不需要离开 Claude Code 的工作环境。
 
 这是 OpenSpec 和 Claude Code 之间的架构级契合，而不仅仅是表面上"都支持斜杠命令"的巧合。
 
@@ -104,3 +117,54 @@ Claude Code 本身就是一个以文件系统为中心的 Agent，它读 CLAUDE.
 OpenSpec 的价值区间在于**有一定复杂度、会影响多个模块、未来可能被修改的功能**。在交易平台的上下文里，账号估价、搜索筛选逻辑、订单状态机、支付对账——这些都是值得走一遍 SDD 流程的功能，而改一个字段名、加一条日志、调整一个枚举值则完全不必。
 
 判断标准很简单：如果你在描述这个功能时需要说超过三句话，那就值得把这三句话写成一份 `proposal.md`。
+
+## 先探索，再提案
+
+上面三层论证有一个隐含前提：你已经知道自己要什么，只是还没写下来。但更常见的情况是——你只有一个问题，还没有方案。"页面感觉很慢"、"权限这块乱成一团"、"老是出现重复订单"，这类描述离一份 `proposal.md` 还差着一次思考。
+
+OpenSpec 为这一步单独留了一个入口：`/opsx:explore`。它不创建 change 文件夹，不写任何 artifact，也不改一行代码，只做一件事——读你的代码库、把可选方案和各自的代价摆出来、和你一起把模糊的想法收敛成一个能落地的范围。收敛完了，它再把你交接给 `/opsx:propose`。
+
+官方文档把它的价值讲得很直白：AI 编程助手是"急切"的，你问得含糊，它会自信地构建**某个**东西，只是未必是你要的那个。探索就是解药，因为它零成本、零承诺——你可以连着探三条死路，从每一条里学到点东西，最后只把活下来的那条提成方案。
+
+从 v1.10.0 起，`explore` 已经在默认的 core 配置里（默认工作流为 `propose, explore, apply, update, sync, archive`），装完就能用，不需要额外切换 profile。于是日常的循环是这样的：
+
+```Plain Text
+/opsx:explore          → （可选）先想清楚
+/opsx:propose <想法>   → AI 起草 proposal / specs / design / tasks
+        （你读一遍，改一改）
+/opsx:apply            → AI 按 tasks 实现，逐条打勾
+/opsx:archive          → specs 更新，change 归档
+```
+
+如果这篇文章只让你养成一个习惯，那就是这一个：**拿不准的时候，先 explore，再 propose。**
+
+本文的论证基本站在 Solo 开发者的视角：spec 是"我和 AI 的共识"。但一旦上了团队，难点会挪位置——一个功能横跨 API 服务、Web 应用和共享库；需求由一个团队拥有、被另外几个团队消费；规划往往在任何代码存在之前就开始了。这时"spec 放在代码仓里"就不够用了，因为它天然被一个仓库的边界框住。
+
+OpenSpec 对此给出的机制叫 **Stores**：把 `openspec/` 那套熟悉的形态（specs + changes）单独放进一个自己的仓库，像共享任何代码一样用 `git push` 共享。
+
+它带来三件事：
+
+- **跨仓功能**——一次变更、一份计划，哪怕代码最终落到三个仓库；
+- **共享需求**——平台团队拥有 specs，产品团队以只读方式引用，而且就摆在各自的 coding agent 读得到的地方，不再有一份持续漂移的 wiki；
+- **先规划后写码**——计划现在就沉淀进 store，代码仓库随后跟上。
+
+需要提醒的是 Stores 目前标注为 **beta**，README 明确建议从 Stores User Guide 起步，不要直接上生产级依赖。
+
+**要点**：**Spec 降低的是"猜"的成本，但它不替你降低"想"的成本——模型与上下文仍然是变量。**
+
+官方在 README 的 Usage Notes 里给了两条很朴素但常被忽略的建议：
+
+- **模型选择**：OpenSpec 在高推理能力的模型上效果最好，官方点名推荐 Codex 5.5 和 Opus 4.7，且规划与实现两个阶段都建议用同级别的模型。这条对本文 §4 的第一层论证是个补充——spec 压缩的是"AI 猜错方向"的成本，但"AI 能不能把一份好 spec 落成好代码"仍然由模型能力决定，spec 不能补齐推理能力的差距。
+- **上下文卫生**：OpenSpec 依赖一个干净的上下文窗口。官方建议在进入实现阶段之前**清空上下文**，并在整个会话中保持上下文整洁。这一条和本文 §4 第二层"对话上下文是一次性的，spec 是持久的"正好互为表里——正因为 spec 已经把该记的都记在文件里了，你才敢放心地清上下文；反过来，如果你舍不得清，通常说明有东西只存在于聊天记录里、还没落进 spec。
+
+---
+
+::: info 📆
+
+更新记录
+**2026-08-27**
+- 基于 OpenSpec v1.10.0 权威源校对, （AI 幻觉定性、设计原则数量、Skills/Commands 投递机制）
+- 2 条「新增」（第五条设计原则、§先探索再提案）
+- 2 条「知识扩充」（Stores 团队场景、模型与上下文卫生），无「删除」类 patch
+
+:::
