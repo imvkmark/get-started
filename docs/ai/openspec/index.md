@@ -1,6 +1,6 @@
 ---
 description: 'OpenSpec 旨在需求驱动开发，通过核心工作流（创建变更、生成规划文档、审查修改、按规范实现、归档）实现订单状态重构等场景。强调长期价值、与CLAUDE.md协同及团队建议，官方入口`/opsx:onboard`，社区工具`spec-gen`逆向冷启动。'
-lastUpdated: '2026-06-22 00:52:16'
+lastUpdated: '2026-09-05 15:39:26'
 head:
   - - meta
     - name: 'og:title'
@@ -13,12 +13,12 @@ head:
       content: 'OpenSpec 旨在需求驱动开发，通过核心工作流（创建变更、生成规划文档、审查修改、按规范实现、归档）实现订单状态重构等场景。强调长期价值、与CLAUDE.md协同及团队建议，官方入口`/opsx:onboard`，社区工具`spec-gen`逆向冷启动。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//ai/openspec/index.html'
+      content: 'https://www.wulicode.com/ai/openspec/index.html'
   - - meta
     - name: 'og:image'
-      content: 'https://file.wulicode.com/feishu-images/6b2fbd853e7c3c172e5151656b3c7b9f.png'
+      content: 'https://file.wulicode.com/feishu-images/e8cc40092148c4f1a557445d41dd8cf6.png'
 ---
-# OpenSpec 简介以及学习教程
+# OpenSpec 学习路线
 
 本文主要进行基础介绍, 完整分为如下 7 个教程
 
@@ -30,7 +30,7 @@ head:
 - [⑥ 进阶：CLI 工具 &amp; 自定义](/ai/openspec/6-cli-custom.md)
 - [⑦ 实战：与 Claude Code 结合 用 SDD 开发游戏账号交易平台的&#34;账号估价&#34;功能](/ai/openspec/7-with-claude-code-sample.md)
 
-![](https://file.wulicode.com/feishu-images/6b2fbd853e7c3c172e5151656b3c7b9f.png)
+![图片是OpenSpec学习路线图，展示了其学习流程。从核心理念“编码前先对齐规格”开始，依次是安装/初始化、目录结构及核心概念、核心工作流、Delta Spec、CLI工具及自定义、实战等内容。图中还标注了多个关键步骤，如“每个change包含proposal.md、specs、design.md、tasks.md”等，以及“OPSX命令”“Delta spec语法”“Profile配置”等，还特别提到与Claude Code课程结合的实战部分。](https://file.wulicode.com/feishu-images/e8cc40092148c4f1a557445d41dd8cf6.png)
 
 ## 介绍
 
