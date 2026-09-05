@@ -4,7 +4,7 @@ lastUpdated: '2026-09-05 16:34:10'
 head:
   - - meta
     - name: 'og:title'
-      content: '⑦ 实战：与 Claude Code 结合 用 SDD 开发游戏账号交易平台的"账号估价"功能'
+      content: '7️⃣ 实战：与 Claude Code 结合 用 SDD 开发游戏账号交易平台的"账号估价"功能'
   - - meta
     - name: 'og:type'
       content: 'article'
