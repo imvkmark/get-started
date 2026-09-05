@@ -13,9 +13,9 @@ head:
       content: 'Delta Spec 是存量项目的核心变更文档，通过 ADDED、MODIFIED、REMOVED 三个区块分别描述新增、修改和删除的行为。它采用特定语法结构，避免将 GIVEN 写得太宽泛、MODIFIED 中省略 Previously，或重写整个系统现有行为，与主 spec 协同工作。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//ai/openspec/5-delta-spec.html'
+      content: 'https://www.wulicode.com/ai/openspec/5-delta-spec.html'
 ---
-# ⑤ Delta Spec — 存量项目核心
+# 5️⃣ Delta Spec — 存量项目核心
 
 只写变化的那部分
 

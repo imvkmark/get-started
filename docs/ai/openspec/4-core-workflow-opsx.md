@@ -1,10 +1,10 @@
 ---
 description: 'OPSX 是一套AI辅助开发工作流，通过提案（propose）、规范编写、任务分解、代码生成（apply）、质量验证（verify）和归档（archive）等命令，结构化地管理和实现功能变更，确保代码与规范同步、质量可预测。'
-lastUpdated: '2026-06-22 00:53:32'
+lastUpdated: '2026-09-05 16:32:08'
 head:
   - - meta
     - name: 'og:title'
-      content: '④ 核心工作流：OPSX 命令'
+      content: '4️⃣ 核心工作流：OPSX 命令'
   - - meta
     - name: 'og:type'
       content: 'article'
@@ -13,42 +13,36 @@ head:
       content: 'OPSX 是一套AI辅助开发工作流，通过提案（propose）、规范编写、任务分解、代码生成（apply）、质量验证（verify）和归档（archive）等命令，结构化地管理和实现功能变更，确保代码与规范同步、质量可预测。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//ai/openspec/4-core-workflow-opsx.html'
+      content: 'https://www.wulicode.com/ai/openspec/4-core-workflow-opsx.html'
 ---
-# ④ 核心工作流：OPSX 命令
+# 4️⃣ 核心工作流：OPSX 命令
 
 把 core 和 expanded 的所有命令放在一起，形成完整的命令地图, 方便整体理解：
 
 ```Plain Text
 思考阶段
   /opsx:explore          ← 探索想法，调查问题，不产生代码
-
 规划阶段（core）
   /opsx:propose          ← new + ff 的组合，一步到位
-
+  /opsx:update           ← 修订既有 change 的 proposal/specs/design/tasks，保持四份文件互相一致，不改代码
 规划阶段（expanded，细粒度控制）
   /opsx:new              ← 只建文件夹
   /opsx:continue         ← 逐步生成 artifact，每次一个
   /opsx:ff               ← 快进生成所有 artifact
-
 实现阶段（core）
   /opsx:apply            ← 按 tasks.md 逐条实现代码
-  /opsx:sync             ← 同步代码和 artifact 的状态
-
+  /opsx:sync             ← 把 change 里的 Delta Spec 提前合并进主 spec（不归档，不涉及代码）
 验证阶段（expanded）
   /opsx:verify           ← 检查完整性、正确性、一致性
-
 归档阶段（core）
   /opsx:archive          ← 归档单个 change
-
 归档阶段（expanded）
   /opsx:bulk-archive     ← 批量归档多个 change，处理冲突
-
 引导流程（expanded）
   /opsx:onboard          ← 存量项目的 SDD 冷启动引导
 ```
 
-最高频的路径是：遇到想不清楚的问题先 `explore`，想清楚了直接 `propose`，实现完跑 `verify`，没问题就 `archive`。`sync` 和 `bulk-archive` 是辅助工具，在出现实现和预期脱节或需要批量处理时才会用到
+最高频的路径是：遇到想不清楚的问题先 `explore`，想清楚了直接 `propose`，实现完跑 `verify`，没问题就 `archive`。`update` 用在"想改一改已有的 proposal/design 但还没开始/还没写完代码"的场景；`sync` 和 `bulk-archive` 是辅助工具，在需要提前同步 spec 或批量处理时才会用到。
 
 ## `/opsx:propose`：提案
 
@@ -340,6 +334,24 @@ OpenSpec 支持并行处理多个 change，随时可以切换。 比如你在用
 ```
 
 change 文件夹的隔离设计保证了多个并行任务互不干扰，这是它比纯对话式开发更可靠的地方——上下文不会因为临时插入一个 bug fix 而混乱。
+
+## `/opsx:update`：修订一个还在进行中的 change
+
+```Plain Text
+/opsx:update account-auto-pricing
+```
+
+如果当前只有一个活跃的 change，可以省略名称。
+
+`/opsx:update` 解决的是"`/opsx:propose`/`/opsx:ff` 已经生成了四份文件，但你发现某个决策要改"的场景——比如 review `design.md` 时发现缓存方案想换一种，或者临时冒出一个新的边界场景要塞进 `specs/`。它**只修订 change 文件夹里已有的 artifact，绝不touch 代码**。
+
+执行时 Claude 会：
+
+1. 先跑 `openspec status --change "<name>" --json`，读出当前 change 的四份文件分别处于什么状态（`done` / `ready` / `blocked`）；
+2. 理解你这次要改的是哪一处——可以是一句具体的修订（"design 现在改用 X 方案"），也可以是笼统的"帮我看看这几份文件有没有互相矛盾"（这种情况下 update 会做一次纯粹的一致性审查）；
+3. 应用这处修改之后，**双向**检查其余已有的 artifact 是否需要跟着调整——不是只有"下游 artifact 要跟着上游改"这一个方向，一个 `tasks.md` 里的新发现也可能反过来要求回去改 `design.md`。
+
+和 `/opsx:continue` 的区别是：`continue` 是从"还没生成的下一个 artifact"往后推进，`update` 是对"已经生成、需要回头改"的 artifact 做修订，两者可以在同一个 change 生命周期里交替使用——`propose`/`ff` 生成初稿，`update` 反复修订到满意，再进入 `/opsx:apply`
 
 ## `/opsx:apply`：让 AI 按图索骥地写代码
 
@@ -999,17 +1011,17 @@ Onboard 和手写主 spec 的选择标准很简单：如果你对 OpenSpec 的�
 
 ## 强力辅助
 
-### `/opsx:sync`：保持 artifact 和代码同步
+### `/opsx:sync`：把 Delta Spec 提前合并进主 spec
 
-`/opsx:sync` 属于 expanded workflow 命令集。 它解决一个在 apply 过程中常见的漂移问题：实现过程中发现原来的设计有问题，直接改了代码，但 tasks.md 或 design.md 还没更新，导致 artifact 和代码不一致。
+`/opsx:sync` 里已经是 **core** profile 自带的命令，不再属于 expanded。它的作用和原教程描述的"代码-tasks 漂移检测"不是同一件事——根据当前发行版生成的 `.claude/skills/openspec-sync-specs/SKILL.md`，它做的是：**把 change 里 `specs/` 目录下的 Delta Spec 合并进 `openspec/specs/` 主 spec，但不归档这个 change、也不动代码**。
 
 ```Plain Text
 /opsx:sync account-auto-pricing
 ```
 
-Sync 会扫描当前已实现的代码，对照 tasks.md 的勾选状态，找出"代码里已经有了但 tasks.md 没有勾选的"以及"tasks.md 里勾选了但代码里找不到对应实现的"两类不一致，输出一份同步建议报告，然后让你确认是否更新。
+这是一次"agent-driven"的合并操作：Claude 读取 Delta Spec，直接编辑主 spec 文件，可以做智能合并（比如只给某个 Requirement 追加一个新 Scenario，而不是把整条 Requirement 全文覆盖一遍），效果类似 `/opsx:archive` 里"Delta Spec 合并进主 spec"的那一半，只是提前执行、且不会把 change 移入 `archive/` 目录。
 
-典型使用场景是在 apply 执行到一半时，发现某个 task 的实现比预期复杂，拆成了两个函数而不是一个，导致 tasks.md 里的描述已经不准确了。sync 可以把实际实现状态重新反映到 artifact 里，让 verify 有准确的基准可以检查。
+典型使用场景：一个 change 的实现周期比较长，中途想让 `openspec/specs/` 主目录尽早反映出这次变更里已经确认下来的行为约束（比如让同期并行的另一个 change 在写自己的 `MODIFIED` 区块时能引用到），但这个 change 本身还没有全部 apply 完、还不到可以 archive 的程度。
 
 ---
 
@@ -1042,3 +1054,16 @@ Archive all 3? [Y/n]
 ```
 
 确认后依次归档，每个 change 的 Delta Spec 按顺序合并进对应的主 spec，保证合并结果的确定性。
+
+---
+
+::: info 📆
+
+更新记录
+**v1.1（2026年09月05日）**
+- 更正命令地图：`/opsx:update` 补入 core，`/opsx:sync` 的功能描述订正
+- 新增 `/opsx:update` 命令说明（原文完全未提及）
+- 更正 `/opsx:sync` 的实际作用（合并 Delta Spec 到主 spec，而非代码-tasks 漂移检测）
+- 知识扩充：v1.11/v1.12 中 propose/ff/explore 的"先读代码再起草"增强
+
+:::

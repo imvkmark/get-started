@@ -1,10 +1,10 @@
 ---
 description: 'openspec/目录包含`specs/`（长期规范）和`changes/`（变更工作区）。每个变更包含四个核心Artifact：`proposal.md`（为什么做）、`spec.md`（做什么）、`design.md`（怎么做）、`tasks.md`（分几步做），分别管理账号领域的需求、场景、架构设计和任务分解。'
-lastUpdated: '2026-06-22 00:53:16'
+lastUpdated: '2026-09-05 16:28:46'
 head:
   - - meta
     - name: 'og:title'
-      content: '③ 目录结构 & 核心概念'
+      content: '3️⃣ 目录结构 & 核心概念'
   - - meta
     - name: 'og:type'
       content: 'article'
@@ -13,9 +13,9 @@ head:
       content: 'openspec/目录包含`specs/`（长期规范）和`changes/`（变更工作区）。每个变更包含四个核心Artifact：`proposal.md`（为什么做）、`spec.md`（做什么）、`design.md`（怎么做）、`tasks.md`（分几步做），分别管理账号领域的需求、场景、架构设计和任务分解。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//ai/openspec/3-directory-struct-core-concept.html'
+      content: 'https://www.wulicode.com/ai/openspec/3-directory-struct-core-concept.html'
 ---
-# ③ 目录结构 & 核心概念
+# 3️⃣ 目录结构 & 核心概念
 
 ## `openspec/` 目录结构详解
 

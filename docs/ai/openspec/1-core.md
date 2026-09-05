@@ -1,10 +1,10 @@
 ---
 description: '本文阐述了在写代码前先撰写规格说明（Spec）的核心理念，从Vibe Coding现象出发，强调“先达成共识再构建”的原则，介绍了四个设计原则，并指出先写Spec与Claude Code的天然契合性，也说明了何时不需要这样做。'
-lastUpdated: '2026-09-01 19:35:21'
+lastUpdated: '2026-09-05 16:28:32'
 head:
   - - meta
     - name: 'og:title'
-      content: '① 核心理念 为什么要在写代码前先写 Spec'
+      content: '1️⃣ 核心理念 为什么要在写代码前先写 Spec'
   - - meta
     - name: 'og:type'
       content: 'article'
@@ -15,7 +15,7 @@ head:
     - name: 'og:url'
       content: 'https://www.wulicode.com/ai/openspec/1-core.html'
 ---
-# ① 核心理念 为什么要在写代码前先写 Spec
+# 1️⃣ 核心理念 为什么要在写代码前先写 Spec
 
 ## 从 Vibe Coding 说起
 

@@ -1,6 +1,6 @@
 ---
 description: '本文描述了使用规范驱动开发（SDD）结合Claude Code开发游戏账号交易平台“账号估价”功能的流程，包括提出变更、快进生成全部工件、实现、验证和归档五个步骤。其本质是通过需求规范自动化驱动代码生成与迭代，提升开发效率与一致性。'
-lastUpdated: '2026-06-22 00:54:13'
+lastUpdated: '2026-09-05 16:34:10'
 head:
   - - meta
     - name: 'og:title'
@@ -13,9 +13,9 @@ head:
       content: '本文描述了使用规范驱动开发（SDD）结合Claude Code开发游戏账号交易平台“账号估价”功能的流程，包括提出变更、快进生成全部工件、实现、验证和归档五个步骤。其本质是通过需求规范自动化驱动代码生成与迭代，提升开发效率与一致性。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//ai/openspec/7-with-claude-code-sample.html'
+      content: 'https://www.wulicode.com/ai/openspec/7-with-claude-code-sample.html'
 ---
-# ⑦ 实战：与 Claude Code 结合 用 SDD 开发游戏账号交易平台的"账号估价"功能
+# 7️⃣ 实战：与 Claude Code 结合 用 SDD 开发游戏账号交易平台的"账号估价"功能
 
 这篇文章以游戏账号交易平台为例，演示一个完整的 SDD 开发周期。选用的功能是**账号自动估价**：卖家发布账号时系统根据账号属性（游戏类型、等级、稀有道具等）给出参考价格区间。
 

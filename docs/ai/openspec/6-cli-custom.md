@@ -1,6 +1,6 @@
 ---
 description: 'OpenSpec CLI提供四把工具：`list`（项目速览）、`show`（详情查看）、`validate`（格式检查，非零退出码用于CI）、`view`（交互仪表盘）。可通过`openspec config profile`切换工作流配置（core/custom），修改后重新生成工具配置并重启Claude Code。支持自定义Schema（三种创建方式：交互式、非交互式、Fork修改），通过`schema.yaml`定义文件结构，配合`config.yaml`的rules和context控制AI生成行为。'
-lastUpdated: '2026-06-22 00:53:56'
+lastUpdated: '2026-09-05 16:34:00'
 head:
   - - meta
     - name: 'og:title'
@@ -13,13 +13,29 @@ head:
       content: 'OpenSpec CLI提供四把工具：`list`（项目速览）、`show`（详情查看）、`validate`（格式检查，非零退出码用于CI）、`view`（交互仪表盘）。可通过`openspec config profile`切换工作流配置（core/custom），修改后重新生成工具配置并重启Claude Code。支持自定义Schema（三种创建方式：交互式、非交互式、Fork修改），通过`schema.yaml`定义文件结构，配合`config.yaml`的rules和context控制AI生成行为。'
   - - meta
     - name: 'og:url'
-      content: 'https://www.wulicode.com//ai/openspec/6-cli-custom.html'
+      content: 'https://www.wulicode.com/ai/openspec/6-cli-custom.html'
 ---
-# ⑥ 进阶：CLI 工具 & 自定义
+# 6️⃣ 进阶：CLI 工具 & 自定义
 
-## OpenSpec CLI 的四把工具
+## OpenSpec CLI 工具箱
 
-这四个命令都是在终端里直接运行的，不是斜杠命令，不需要在 Claude Code 里执行。它们解决的是同一类问题：在没有打开 AI 对话的情况下，快速了解项目里 spec 和 change 的当前状态。
+这些命令都是在终端里直接运行的，不是斜杠命令，不需要在 Claude Code 里执行。顶层命令已经有 20 个：
+
+```Plain Text
+init        update       list         view
+change      archive      spec         config
+schema      store        doctor       context
+workset     validate     show         feedback
+completion  status       instructions templates
+schemas     new
+```
+
+日常学习按下面四层分：
+
+- **日常必用**（list/show/validate/view）
+- **校验与 CI**（validate 的新参数）
+- **profile/schema 配置**（config/schema/schemas/templates/instructions）
+- **进阶多仓库能力**（store/doctor/context/workset，初学阶段可以跳过）。
 
 ---
 
@@ -134,6 +150,14 @@ Requirements:
 
 同样支持 `--json` 输出：`openspec show account-auto-pricing --json`，返回包含完整 artifact 内容的 JSON 结构。
 
+**`--diff`（v1.11.0）**：
+
+```Bash
+openspec show account-auto-pricing --diff
+```
+
+`MODIFIED` 类型的 Delta Spec 按规范必须完整重述它保留的每一条 Scenario，所以肉眼看整份 Delta Spec 时，大部分内容其实和主 spec 是重复的。`--diff` 只把真正变化的行提取出来，按 Requirement 输出彩色的 unified diff：`ADDED` 显示全文，`REMOVED` 显示作者写的 Reason 和 Migration 说明，`RENAMED` 显示清晰的 FROM/TO 对照。配合 `--json --diff` 可以把同样的细节喂给脚本，`--store <id>` 可以指定要对比的 store（跨仓库场景）。
+
 ---
 
 ### `openspec validate`：检查 spec 格式的结构性问题
@@ -186,6 +210,22 @@ echo $?   # 1
 # GitHub Actions 示例
 - name: Validate OpenSpec
   run: openspec validate --changes --strict
+```
+
+**🆕 `--report findings`（v1.12.0）**
+
+批量校验（`--changes` / `--specs` / `--all`）时，默认的 `--report full` 会把完整报告都打出来；`--report findings` 只保留 errors / warnings / informational findings，同时仍然保留完整的统计数字和退出码，配合 `--json` 更适合塞进 CI 日志里只看"有没有问题"，而不是滚一屏完整报告。
+
+```Bash
+openspec validate --changes --report findings --json
+```
+
+**🆕 `--archived`（v1.10.0）**
+
+校验**已归档**变更的 tasks 是否全部完成——`/opsx:archive` 本身不会强制检查这一点，`--archived` 适合放进 pre-commit 或 CI 里，防止带着未勾选任务的 change 被静默归档。
+
+```Bash
+openspec validate --archived
 ```
 
 ---
@@ -245,28 +285,35 @@ Completed Changes
 
 ### 两个 Profile 的区别
 
-OpenSpec 提供两个 profile 选项：`core` 包含 4 个核心工作流，`custom` 让你自选任意工作流组合。
+`openspec config list`）核实，`core` 现在包含 **6** 个核心工作流，不再是 4 个；`custom` 让你在这 6 个之外自选任意工作流组合。
 
-`core` profile 激活的四个命令是日常 SDD 流程的最小集合：
+`core` profile 激活的六个命令是日常 SDD 流程的最小集合：
 
 ```Plain Text
 /opsx:propose    ← 创建变更提案（含 ff）
 /opsx:explore    ← 探索性调研
 /opsx:apply      ← 实现代码
+/opsx:update     ← 修订既有 change 的 artifact，不改代码
+/opsx:sync       ← 把 Delta Spec 提前合并进主 spec，不归档
 /opsx:archive    ← 归档变更
 ```
 
-`custom` profile（也叫 expanded）在此基础上增加了细粒度控制命令：
+`custom` profile（也叫 expanded）在 core 六条之外增加了细粒度控制命令：
 
 ```Plain Text
 /opsx:new           ← 只创建 change 文件夹
 /opsx:continue      ← 逐步生成 artifact
 /opsx:ff            ← 快进生成所有 artifact
 /opsx:verify        ← 归档前质量检查
-/opsx:sync          ← 同步 spec 状态
 /opsx:bulk-archive  ← 批量归档多个 change
 /opsx:onboard       ← 存量项目引导流程
 ```
+
+`openspec config list` 在全新全局配置下输出 `workflows: propose, explore, apply, update, sync, archive (from core profile)`；
+
+切到全选 custom 后输出 12 个工作流（`propose, explore, new, continue, apply, update, ff, sync, archive, bulk-archive, verify, onboard`）
+
+两者相减确认 expanded 相对 core 新增的正是 `new/continue/ff/verify/bulk-archive/onboard` 六条。
 
 ---
 
@@ -287,22 +334,21 @@ openspec config profile
 ❯ Change profile
   Change delivery only
   Change workflows only
-
 ? Select profile:
-❯ core     (propose, explore, apply, archive)
+❯ core     (propose, explore, apply, update, sync, archive)
   custom   (choose specific workflows)
-
 # 选择 custom 后，进入工作流多选：
 ? Select workflows:
   ◉ propose
   ◉ explore
   ◉ apply
+  ◉ update
+  ◉ sync
   ◉ archive
   ○ new
   ○ continue
 ❯ ◉ ff           ← 空格切换选中状态
   ◉ verify
-  ○ sync
   ○ bulk-archive
   ◉ onboard
 ```
@@ -619,3 +665,17 @@ rules:
 - `rules` 是每个 artifact 的额外约束，相当于给 AI 的"检查清单"——生成 proposal 时必须列出 Out of scope，生成 specs 时每条 Requirement 至少要有两个 Scenario
 
 这两个字段是对 `CLAUDE.md` 里项目规范的补充，但粒度更细：`CLAUDE.md` 是全局约束，`config.yaml` 里的 rules 是 OpenSpec 工作流里每个 artifact 的专项约束，两者不冲突，共同构成 AI 理解项目的完整上下文。
+
+---
+
+::: info 📆
+
+更新记录
+**v1.1（2026年09月05日）**
+- 更新顶层 CLI 命令清单（4 把 → 20 个顶层命令），补充 status/store/doctor/context/workset/schemas/templates/instructions 等新增命令的定位
+- 新增 `openspec show --diff`（v1.11.0）说明
+- 新增 `openspec validate --report findings`（v1.12.0）与 `--archived`（v1.10.0）说明
+- 更正 core/custom profile 的工作流数量与清单（core 4→6，新增 update/sync；custom 相对 core 的增量随之调整）
+- 知识扩充：profile/delivery/workflows 配置已迁移至全局用户配置文件，不在项目级 config.yaml 里
+
+:::
