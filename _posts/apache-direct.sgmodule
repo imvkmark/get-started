@@ -2,5 +2,5 @@
 #!desc = 解决 archive.apache.org 等域名走代理超时问题
 
 [Rule]
-DOMAIN-SUFFIX,archive.apache.org,Telegram
-DOMAIN-SUFFIX,apache.org,Telegram
+DOMAIN-SUFFIX,archive.apache.org,US
+DOMAIN-SUFFIX,apache.org,US
