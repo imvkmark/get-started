@@ -16,7 +16,7 @@ head:
       content: 'https://www.wulicode.com/front-end/javascript/npm/nvm-manage-multi-version-node.html'
   - - meta
     - name: 'og:image'
-      content: 'https://file.wulicode.com/feishu-images/5efcebd498f603c0ab7b27dd6c3a775b.png'
+      content: 'https://file.wulicode.com/feishu-images/5089576581c751979f94f33cbc2601e4.png'
 ---
 # 使用 nvm 管理多版本 Node 项目依赖
 
@@ -405,7 +405,7 @@ $ nvm ls-remote --lts
 
 如果版本号的文字有特殊颜色（不是白色字），则代表该版本的Node.js有通过nvm安装过
 
-![](https://file.wulicode.com/feishu-images/5efcebd498f603c0ab7b27dd6c3a775b.png)
+![](https://file.wulicode.com/feishu-images/5089576581c751979f94f33cbc2601e4.png)
 
 ### version / version-remote
 
@@ -467,7 +467,7 @@ nvm alias <name> <version>
 
 如下图有些版本的文字是紅色或是显示 `N/A`，就代表该版本未在电脑安装：
 
-![](https://file.wulicode.com/feishu-images/0df6b66be145782a1bbf2708783941a4.png)
+![](https://file.wulicode.com/feishu-images/9a3b0a0c2649d14fb6b2d57c2e64cbe0.png)
 
 默认别名可以取代版本号：
 
