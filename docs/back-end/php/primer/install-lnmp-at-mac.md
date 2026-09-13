@@ -1,6 +1,6 @@
 ---
 description: '本文介绍了在Mac上通过Homebrew搭建LNMP环境（Nginx、MySQL、PHP）的步骤，包括关闭Apache、配置Nginx、替换MySQL配置、安装多版本PHP、配置PHP-FPM及常见问题。'
-lastUpdated: '2026-08-30 01:10:13'
+lastUpdated: '2026-09-13 17:34:35'
 head:
   - - meta
     - name: 'og:title'
