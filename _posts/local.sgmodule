@@ -1,0 +1,5 @@
+#!name = 本地直连修复
+#!desc = 本地域名不走带来
+
+[Rule]
+DOMAIN-SUFFIX,duoli.com,DIRECT
