@@ -16,7 +16,7 @@ head:
       content: 'https://www.wulicode.com/front-end/javascript/npm/nvm-manage-multi-version-node.html'
   - - meta
     - name: 'og:image'
-      content: 'https://file.wulicode.com/feishu-images/7397f480d4e38d9d0c8b271f218e70fc.png'
+      content: 'https://file.wulicode.com/feishu-images/f8057ddf4faed7a5c12c84845eff46fe.png'
 ---
 # 使用 nvm 管理多版本 Node 项目依赖
 
@@ -405,7 +405,7 @@ $ nvm ls-remote --lts
 
 如果版本号的文字有特殊颜色（不是白色字），则代表该版本的Node.js有通过nvm安装过
 
-![图片展示了在终端中使用nvm（Node Version Manager）列出可安装的远程版本的命令执行结果。命令为`nvm ls-remote --lts`，显示了多个Node.js版本，其中v22.22.1版本被标记为“Latest LTS: Jod”，v24.14.0版本被标记为“Latest LTS: Krypton”。这些版本信息与上下文紧密相关，上下文提到可通过`ls-remote -lts`参数只列出可用的LTS版，此图直观呈现了执行该命令后的版本列表情况。](https://file.wulicode.com/feishu-images/7397f480d4e38d9d0c8b271f218e70fc.png)
+![图片展示了在终端中使用nvm（Node Version Manager）列出可安装的远程版本的命令执行结果。命令为`nvm ls-remote --lts`，显示了多个Node.js版本，其中v22.22.1版本被标记为“Latest LTS: Jod”，v24.14.0版本被标记为“Latest LTS: Krypton”。这些版本信息与上下文紧密相关，上下文提到可通过`ls-remote -lts`参数只列出可用的LTS版，此图直观呈现了执行该命令后的版本列表情况。](https://file.wulicode.com/feishu-images/f8057ddf4faed7a5c12c84845eff46fe.png)
 
 ### version / version-remote
 
@@ -467,7 +467,7 @@ nvm alias <name> <version>
 
 如下图有些版本的文字是紅色或是显示 `N/A`，就代表该版本未在电脑安装：
 
-![图片展示了nvm别名设置后的输出结果。其中，`default`别名指向`v24.11.1`版本，`iojs`别名指向`N/A`，`node`别名指向`stable`版本`v25.8.0`且为默认别名，`stable`别名也指向`v25.8.0`且为默认别名，`unstable`别名指向`N/A`。此外，还列出了多个`lts`别名对应的Node.js版本，如`lts/krypton`指向`v24.14.0`等，部分版本后标注`N/A`。该图片与上文介绍nvm别名设定的内容相关，直观呈现了别名设置后的状态。](https://file.wulicode.com/feishu-images/b491e6cf4bde7105c87216efa1549503.png)
+![图片展示了nvm别名设置后的输出结果。其中，`default`别名指向`v24.11.1`版本，`iojs`别名指向`N/A`，`node`别名指向`stable`版本`v25.8.0`且为默认别名，`stable`别名也指向`v25.8.0`且为默认别名，`unstable`别名指向`N/A`。此外，还列出了多个`lts`别名对应的Node.js版本，如`lts/krypton`指向`v24.14.0`等，部分版本后标注`N/A`。该图片与上文介绍nvm别名设定的内容相关，直观呈现了别名设置后的状态。](https://file.wulicode.com/feishu-images/d65005842ff8b8a6e735d51258b3c4e6.png)
 
 默认别名可以取代版本号：
 
