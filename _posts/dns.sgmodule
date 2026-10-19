@@ -1,0 +1,5 @@
+#!name=自定义 DNS
+#!desc=设置自定义 DNS 服务器
+
+[General]
+dns-server = 1.1.1.1, 8.8.8.8
