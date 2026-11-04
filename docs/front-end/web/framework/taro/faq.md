@@ -16,7 +16,7 @@ head:
       content: 'https://www.wulicode.com/front-end/web/framework/taro/faq.html'
   - - meta
     - name: 'og:image'
-      content: 'https://file.wulicode.com/feishu-images/ccdc6bfe4a9169b4f14e7f0dfda39bd5.png'
+      content: 'https://file.wulicode.com/feishu-images/e10e6e7e9c3308504164359399d16a90.png'
 ---
 # Taro - FAQ
 
@@ -24,7 +24,7 @@ head:
 
 在使用 事件的时候需要遵循 vue 对事件的命名
 
-![图片展示了Taro中事件的相关内容。指出事件和Web端一样，事件回调函数中第一个参数是事件对象，可调用stopPropagation阻止冒泡。Taro规范包括：使用@修饰符替代小程序事件名中的bind（支付宝小程序事件名中为on）；Vue中点击事件使用@tap；事件名称遵循组件属性规范（全部小写）；在vue@3.0.6或之后版本使用JSX时，事件名遵循onCamelcase规范，如onGetphonenumber，原因可参考#8796。](https://file.wulicode.com/feishu-images/ccdc6bfe4a9169b4f14e7f0dfda39bd5.png)
+![图片展示了Taro中事件的相关内容。指出事件和Web端一样，事件回调函数中第一个参数是事件对象，可调用stopPropagation阻止冒泡。Taro规范包括：使用@修饰符替代小程序事件名中的bind（支付宝小程序事件名中为on）；Vue中点击事件使用@tap；事件名称遵循组件属性规范（全部小写）；在vue@3.0.6或之后版本使用JSX时，事件名遵循onCamelcase规范，如onGetphonenumber，原因可参考#8796。](https://file.wulicode.com/feishu-images/e10e6e7e9c3308504164359399d16a90.png)
 
 文档 : [Taro 文档](https://docs.taro.zone/docs/vue-overall#taro-%E8%A7%84%E8%8C%83-1)
 
