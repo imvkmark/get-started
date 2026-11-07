@@ -16,7 +16,7 @@ head:
       content: 'https://www.wulicode.com/ai/claude-code/01-can.html'
   - - meta
     - name: 'og:image'
-      content: 'https://file.wulicode.com/feishu-images/ff503fd7e19a6aecf22ff895994cf7af.png'
+      content: 'https://file.wulicode.com/feishu-images/98821cb593cf2b326556db7a24cd0362.png'
 ---
 # 会用 : 命令行基础与日常协作
 
@@ -141,7 +141,7 @@ export PATH="$HOME/program:$PATH"
 
 这样可以使多个客户端同时存在, 方便在速度和费用中间做权衡
 
-![图片展示了Claude Code在不同模型下的界面。左侧显示Claude Code v2.1.81，模型为ark-code-latest，API Usage Billing为5x more room，下方有“write a test for KrTabbar.vue”等指令。右侧显示Claude Code v2.1.81，模型为Sonnet 4.6 - Claude Pro，API Usage Billing为5x more room，下方有“how does router.options.ts work?”等指令。该图片与文档中介绍Claude Code模型切换的内容相关，直观呈现了不同模型下的界面差异。](https://file.wulicode.com/feishu-images/ff503fd7e19a6aecf22ff895994cf7af.png)
+![图片展示了Claude Code在不同模型下的界面。左侧显示Claude Code v2.1.81，模型为ark-code-latest，API Usage Billing为5x more room，下方有“write a test for KrTabbar.vue”等指令。右侧显示Claude Code v2.1.81，模型为Sonnet 4.6 - Claude Pro，API Usage Billing为5x more room，下方有“how does router.options.ts work?”等指令。该图片与文档中介绍Claude Code模型切换的内容相关，直观呈现了不同模型下的界面差异。](https://file.wulicode.com/feishu-images/98821cb593cf2b326556db7a24cd0362.png)
 
 #### 配置多服务商 (使用配置文件方式)
 
