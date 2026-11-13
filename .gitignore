@@ -22,3 +22,5 @@ Pipfile.lock
 # AI
 .omc
 .claude
+# Image checker cache and reports
+.image-check/
